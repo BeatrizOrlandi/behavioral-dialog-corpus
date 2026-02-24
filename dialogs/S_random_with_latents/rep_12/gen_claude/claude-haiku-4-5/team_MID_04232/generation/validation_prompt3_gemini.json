@@ -1,0 +1,35 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "4 out of 5 threads are below the minimum message count of 15. Specifically, TH1 has 11, TH2 has 14, TH3 has 12, and TH4 has 14 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing a mandatory reference to artifact T3 from the blueprint's artifacts_to_reference list."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing a mandatory reference to artifact A4 from the blueprint's artifacts_to_reference list."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "In threads TH3, TH4, and TH5, the `thread_outcome.next_steps` incorrectly lists artifact IDs (A5, A6, A7) in the `task_id` field. This field should only contain task IDs from the backlog (T*)."
+    },
+    {
+      "severity": "LOW",
+      "code": "INCONSISTENCY",
+      "detail": "In thread TH5, message M64 indicates the music therapist (23126) will lead task T12, but the thread_outcome assigns it to the membership manager (71781). While the outcome is correct according to the project pack, it conflicts with the preceding conversation."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 5
+  }
+}

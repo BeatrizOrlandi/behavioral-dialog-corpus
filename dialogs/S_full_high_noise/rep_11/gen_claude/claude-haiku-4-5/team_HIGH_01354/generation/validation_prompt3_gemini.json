@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads have fewer messages than the expected minimum of 15 (TH1: 12, TH2: 14, TH3: 13, TH4: 14, TH5: 13). They also fall short of the blueprint target_messages_range."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M33 contains explicit mention of levels/labels ('low, medium, high' for confidence level), which is forbidden. Message M44 contains a self-evaluation of performance/ability ('I'm a bit slower with the detailed checks')."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T7 is required in TH4 but is missing from the artifact_refs of all messages in that thread."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

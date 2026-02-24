@@ -1,0 +1,1715 @@
+{
+  "channel": {
+    "channel_id": "proj-feedback-hub-mvp",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP vision, target users, and success metrics for the feedback hub.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 5463,
+            "reply_to": null,
+            "text": "Kicking off the Launch of Data-Driven Feedback Hub for New Products project. I have drafted the MVP vision, target users, and initial success metrics in the Feedback Hub MVP Vision and Success Metrics doc. This should cover most of T1 for now. The core idea: a single place where product, sales, support, and marketing can see structured feedback for new launches, starting with one region and two product lines as per constraints. Before we lock anything, I would like your reactions on whether the problem framing and primary personas (sales rep and support agent) feel right, and whether anything critical is missing from the success metrics. Please skim A1 and drop comments here so we can converge quickly and still keep MVP scope tight.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 94563,
+            "reply_to": "M1",
+            "text": "I went through A1. The problem statement around scattered feedback and slow learning loops resonates. On target users: sales rep and support agent as primary personas make sense, but I suggest we explicitly call out product manager as a secondary persona who consumes aggregated insights. That will help when we later define reporting in T10. On success metrics, I see adoption and time-to-insight. I would add one metric around how many launch decisions explicitly reference hub insights, even if we track it qualitatively at first.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 408027,
+            "reply_to": "M1",
+            "text": "I also reviewed A1. From a process and data angle, the framing is clear. For target users, I agree with adding product manager as a defined persona, mainly for prioritisation and roadmap decisions. On metrics, could we clarify the baseline for current feedback usage so that the improvement targets are realistic? For example, if we say reduction in time spent compiling feedback for launch reviews, we should note how we will measure that during the pilot.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 37423,
+            "reply_to": "M1",
+            "text": "I added a few comments in A1 as well. One question: should we include marketing manager as a persona now, or wait until we have more clarity from T2 and T8 on how they will actually use the hub? I am not sure if they will log in frequently or just receive summaries.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 156956,
+            "reply_to": "M1",
+            "text": "I read through A1 focusing on how we will explain this in training and quick-start materials for T6 and T9. The vision is clear, but I wonder if we should simplify some of the language for non-technical users. For example, instead of saying data aggregation, we could say bringing feedback from different tools into one place. That will make it easier to build the narrative later.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 5463,
+            "reply_to": "M2",
+            "text": "Thanks all, this is helpful. On personas: I propose we explicitly define three for the MVP in A1 and T1 deliverables: 1) sales rep (primary), 2) support agent (primary), 3) product manager (secondary, mainly for synthesis and decisions). For marketing, I suggest we treat them as stakeholders who receive outputs from the hub rather than core users for this first pilot, and revisit after T8. Does anyone see a strong reason to include marketing as a full persona now, given the constraint to keep MVP tight?",
+            "mentions": [
+              94563,
+              408027,
+              37423
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 94563,
+            "reply_to": "M6",
+            "text": "I support that approach. Marketing can be captured as a stakeholder group in A1 without full persona detail. That keeps the MVP focused on the teams closest to raw feedback while still acknowledging downstream users. We can always extend personas in a later phase once we have learnings from T11.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 408027,
+            "reply_to": "M6",
+            "text": "Agree, keeping marketing as stakeholders rather than core users for the MVP seems pragmatic. It will also simplify the initial data model work in T4, since we can focus on the flows that directly support sales and support workflows.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "T4",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 37423,
+            "reply_to": "M6",
+            "text": "Ok, that makes sense. I was mainly worried we might miss their needs, but if we capture them as stakeholders in A1 and plan to cover them in T8, I am fine not defining a full persona right now.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 5463,
+            "reply_to": "M7",
+            "text": "Great, sounds like we are aligned on personas. I will update A1 and mark T1 persona section as draft-complete with: sales rep, support agent, and product manager. On success metrics, we currently have: 1) weekly active users among sales and support in pilot region, 2) reduction in time spent compiling feedback for launch reviews, 3) number of feedback items tagged and triaged per week. Based on your comments, I propose we add: 4) number of launch decisions that explicitly reference hub insights, and 5) qualitative satisfaction score from pilot users. That gives us five metrics, which is still manageable. Any objections before we lock these as the initial set for the pilot?",
+            "mentions": [
+              94563,
+              408027,
+              37423,
+              156956
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 94563,
+            "reply_to": "M10",
+            "text": "No objections from my side. Those five metrics cover adoption, efficiency, throughput of feedback, decision impact, and user sentiment. For the time spent compiling feedback, I suggest we capture a simple before and after estimate via a short survey during T9 sessions, so we do not overcomplicate data collection.",
+            "mentions": [
+              5463,
+              156956
+            ],
+            "artifact_refs": [
+              "A1",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 408027,
+            "reply_to": "M10",
+            "text": "Works for me as well. I will keep these five metrics in mind when we design the KPI tracker in A6 under T10, so we have a consistent view from day one of the pilot.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 156956,
+            "reply_to": "M10",
+            "text": "From a training perspective, five metrics is still easy to explain. I can weave them into the story in A5 so users understand what success looks like and why their usage matters.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 37423,
+            "reply_to": "M10",
+            "text": "No pushback here. I will just need some guidance later on how we practically track the metric about launch decisions referencing hub insights, but we can sort that out when we get closer to T5 and T11.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "T5",
+              "T11",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 5463,
+            "reply_to": "M11",
+            "text": "Ok, summarising where we landed so we can move forward. For the MVP, we will define three personas in A1 and T1: sales rep and support agent as primary users, and product manager as a secondary user. Marketing will be treated as a key stakeholder group, not a core persona, and we will address their needs via T8. For success metrics, we will track five items: weekly active users in the pilot, reduction in time spent compiling feedback for launch reviews, number of feedback items tagged and triaged per week, number of launch decisions that explicitly reference hub insights, and qualitative satisfaction from pilot users. Unless anyone flags a major concern today, I will treat this as our approved vision and metrics set for the pilot.",
+            "mentions": [
+              94563,
+              408027,
+              37423,
+              156956
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 94563,
+            "reply_to": "M15",
+            "text": "Thanks for the recap. No further concerns from me. Once you update A1, I will reference the approved personas and metrics in my work on T2 and T4 so that the process mapping and data model align with this direction.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 5463,
+            "reply_to": "M16",
+            "text": "Perfect. I will update A1 now and mark T1 vision and metrics as complete for the MVP scope. Next step from my side will be to start outlining user journeys for T3 based on these personas so we can bring initial wireframes into the TH3 discussion.",
+            "mentions": [
+              94563,
+              156956
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 5463,
+              "when": "today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 94563,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 5463,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock MVP scope by agreeing on data sources and core workflows.",
+        "messages": [
+          {
+            "msg_id": "M18",
+            "speaker_id": 94563,
+            "reply_to": null,
+            "text": "I have completed a first pass of mapping current feedback flows for T2 and drafted a proposed MVP scope for data sources and workflows. The details are in the Current Feedback Flows and Data Sources Inventory sheet and a short summary in the same folder. For now, I have focused on three main channels: 1) sales notes from the CRM, 2) support tickets from the helpdesk tool, and 3) structured launch survey responses. I have also started outlining governance ideas that will later feed into T7 and A3. I would like your review on two points: which channels we include in the MVP, and which user workflows we must support in the first release.",
+            "mentions": [
+              5463,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 5463,
+            "reply_to": "M18",
+            "text": "Thanks for pulling this together. I reviewed A2 and the summary. Given our constraints, my initial view is that we should keep the MVP to the three channels you listed and explicitly exclude social media listening and ad-hoc spreadsheets for now to avoid scope creep. For workflows, I see at least: a) sales rep logging a key piece of feedback and seeing whether similar items exist, b) support agent tagging a ticket with a launch-related category, and c) product manager reviewing aggregated themes by product line. Can you confirm whether the current mapping in A2 supports these flows end to end?",
+            "mentions": [
+              94563
+            ],
+            "artifact_refs": [
+              "A2",
+              "A1",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 408027,
+            "reply_to": "M18",
+            "text": "I went through A2 as well. From a systems perspective, the three proposed channels are the ones with clearer ownership and better data quality notes. Social media and email feedback look much noisier and would require more transformation work in T4. I would recommend we keep them out of the MVP and maybe add a placeholder section in A2 describing them as future candidates.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 37423,
+            "reply_to": "M18",
+            "text": "Quick question on the CRM notes: are we planning to pull in all notes, or only those tagged as related to new product launches? I did not fully understand the filter logic from A2 and I want to make sure we do not overwhelm users with irrelevant items.",
+            "mentions": [
+              94563,
+              408027
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 156956,
+            "reply_to": "M18",
+            "text": "From a training angle, starting with three channels is already a lot to explain clearly in A5. If we keep the MVP to CRM notes, support tickets, and launch surveys, I can design simple examples for each in the quick-start guide under T6. If we add more sources now, I worry the story will become confusing for new users.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 94563,
+            "reply_to": "M21",
+            "text": "Good catch. For the CRM notes, the intent is to pull only notes linked to opportunities or accounts tagged with the relevant new product lines and the pilot region. I will clarify that filter logic in A2 and in the requirements for T4. That should keep the volume manageable and aligned with the pilot scope.",
+            "mentions": [
+              37423,
+              408027
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 408027,
+            "reply_to": "M19",
+            "text": "On the workflows you listed: a) and b) are straightforward from a data perspective, as long as we standardise tags in CRM and the helpdesk tool. For c), the product manager view, we will need to define a simple aggregation model in T4 and reflect it in A3 so that triage and prioritisation are consistent. I suggest we also add a fourth workflow: sales or support quickly checking whether a known issue is already being tracked before logging a new item, to reduce duplicates.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "T4",
+              "A3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 5463,
+            "reply_to": "M24",
+            "text": "I like the additional workflow. So the candidate core workflows for the MVP would be: 1) log launch-related feedback from CRM or helpdesk with standard tags, 2) review aggregated themes by product line and region, 3) triage and prioritise feedback items for action, and 4) search or browse to see if similar feedback already exists. If we agree on these four, we can use them as the backbone for T3 and A4 as well.",
+            "mentions": [
+              94563,
+              408027,
+              156956
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 37423,
+            "reply_to": "M25",
+            "text": "Those four workflows sound reasonable to me. For the triage part, will we already apply a scoring model in the MVP, or just basic categories like severity and frequency? I am asking because a full scoring model might be harder to explain to users at first.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 94563,
+            "reply_to": "M26",
+            "text": "For the MVP, I propose we keep triage simple: basic categories such as impact (low, medium, high), frequency band, and product line. We can still define a lightweight scoring model in A3 under T7, but we do not need to expose the full formula to end users. That way, the governance is structured without overloading training.",
+            "mentions": [
+              5463,
+              156956
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 156956,
+            "reply_to": "M27",
+            "text": "Keeping the scoring logic behind the scenes will definitely help. In A5 and the T6 materials, I can focus on teaching users how to tag items correctly and where to see the prioritised list, rather than explaining the full model.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 408027,
+            "reply_to": "M25",
+            "text": "On data sources, to make it explicit: I recommend we mark in A2 that the MVP includes CRM notes, helpdesk tickets, and launch survey responses only. Social media, email feedback, and NPS comments would be documented as out of scope for this phase, with a note that they may be considered after T11. That should help prevent scope creep later.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A2",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "no_entry_sign",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 5463,
+            "reply_to": "M29",
+            "text": "Agreed. To summarise the proposal so far: MVP data sources will be limited to CRM notes tagged for the pilot product lines and region, helpdesk tickets tagged as launch-related, and structured launch survey responses. Out-of-scope sources like social media and email feedback will be documented in A2 as future candidates. Core workflows for the MVP will be: logging tagged feedback, reviewing aggregated themes, triaging and prioritising items, and checking for existing similar feedback. If there are no strong objections, I would like to lock these as our MVP scope for data sources and workflows.",
+            "mentions": [
+              94563,
+              408027,
+              37423,
+              156956
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 94563,
+            "reply_to": "M30",
+            "text": "No objections from me. I will update A2 to clearly mark in-scope and out-of-scope sources and adjust the T4 requirements to reflect the four workflows. I will also start drafting the governance details in A3 under T7 based on this scope.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 5463,
+            "reply_to": "M31",
+            "text": "Great, then we will treat this as our locked MVP scope. I will use these four workflows as the basis for the user journeys and wireframes in A4 under T3. This should also make it easier for training and enablement planning in T6 and T9.",
+            "mentions": [
+              156956,
+              408027
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 94563,
+              "when": "today"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 94563,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 94563,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Review and iterate on user journeys, UX wireframes, and training approach.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 5463,
+            "reply_to": null,
+            "text": "Following our scope decisions, I have drafted initial user journeys and low-fidelity wireframes for the feedback hub in the User Journeys and UX Wireframes for Feedback Hub doc. The flows cover the four core workflows we agreed on and are aligned with the three personas from A1. In parallel, there is an outline of the main screens that we can use as a base for training materials under T6 and T9. I would like feedback on whether the journeys feel realistic for sales and support, and whether any steps are missing or too complex for the MVP.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 156956,
+            "reply_to": "M33",
+            "text": "I also put together a first draft of the training approach in the Internal Training Deck and Quick-Start Guide, focusing on a short story: why the hub exists, how to log feedback, and how to find insights. It is still rough, but it should give us a sense of the structure for T6 and T9. I would appreciate input on whether the flow of the deck matches the journeys in A4, or if I should reorder sections to better mirror the actual user steps.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "T9",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 94563,
+            "reply_to": "M33",
+            "text": "I reviewed A4. The journeys for logging feedback and reviewing themes look consistent with the process mapping in A2. One suggestion: in the sales rep journey, there is a step where they choose product line and region after writing the note. To reduce errors, could we pre-fill those fields from the CRM context where possible and only ask for confirmation? That would also help with data quality for T10.",
+            "mentions": [
+              5463,
+              408027
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 408027,
+            "reply_to": "M35",
+            "text": "Pre-filling product line and region from CRM and helpdesk context should be feasible for the pilot, as long as we keep the mapping rules simple in T4. From a UX perspective, we can show the pre-filled values with an option to adjust if needed. That would reduce friction and improve consistency for the triage model in A3.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "T4",
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 37423,
+            "reply_to": "M33",
+            "text": "Looking at A4, I am wondering if the search and browse flow might be a bit heavy for the first release. There are several filters and a separate advanced search screen. Would it be better to start with a simpler search bar and a few key filters, then add more options later once we see how people use it?",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 156956,
+            "reply_to": "M34",
+            "text": "I realised I might have front-loaded too much detail in the training deck. The first section already dives into tags and categories before explaining the basic concept of the hub. If we decide to simplify the search and filters in A4, I will also simplify that part of A5 so users are not overwhelmed in the first session.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 5463,
+            "reply_to": "M37",
+            "text": "Good point on search. For the MVP, I am comfortable reducing it to a single search bar plus a small set of filters: product line, region, and feedback type. We can drop the advanced search screen for now and keep it as a potential enhancement after T11. That should also make the journeys easier to explain in training.",
+            "mentions": [
+              37423,
+              156956
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "scissors",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 94563,
+            "reply_to": "M39",
+            "text": "Simplifying search to a core set of filters works well with the data model we have in T4. It also reduces the risk of confusing users with too many options. We can still capture search behaviour in A6 during the pilot to see which filters people actually use and inform future iterations.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "T4",
+              "A6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 156956,
+            "reply_to": "M39",
+            "text": "If we go with a simpler search, I will adjust A5 so that the main demo flow is: log feedback, see it appear in the list, and then use the basic filters to find it again. That should fit well into a 30-minute enablement session under T9.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 408027,
+            "reply_to": "M34",
+            "text": "On the training outline in A5, I like the narrative structure. One suggestion: could we add a short section that explicitly references the Data Privacy and Acceptable Use Reference, so users know what they can and cannot log in the hub? That will be important once T12 is ready.",
+            "mentions": [
+              156956,
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 156956,
+            "reply_to": "M42",
+            "text": "Yes, that makes sense. I have not started drafting A7 yet, but once we have the key points from compliance, I can add a dedicated slide in A5 and a short section in the quick-start guide under T12. I might need help validating the examples to make sure they are accurate.",
+            "mentions": [
+              408027,
+              5463
+            ],
+            "artifact_refs": [
+              "A7",
+              "A5",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 5463,
+            "reply_to": "M35",
+            "text": "On the pre-filled fields suggestion: I will update A4 so that product line and region are pre-populated from CRM or helpdesk context, with a simple confirmation step. That should reduce friction and errors. I will also adjust the wireframes to reflect the simplified search and the four core workflows we agreed on in TH2.",
+            "mentions": [
+              94563,
+              408027
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 37423,
+            "reply_to": "M44",
+            "text": "Once you update A4, could you flag which screens are definitely in scope for the MVP versus nice-to-have? I want to make sure we do not accidentally design training content for screens that will not be ready in time.",
+            "mentions": [
+              5463,
+              156956
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 5463,
+            "reply_to": "M45",
+            "text": "Good call. I will mark MVP screens clearly in A4 and share a short note in this thread once done. For now, the MVP set is: home with key filters, log feedback form, feedback list with basic filters, and a simple themes overview for product managers. Anything beyond that will be tagged as post-pilot.",
+            "mentions": [
+              37423,
+              156956
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 94563,
+            "reply_to": "M46",
+            "text": "From my side, the updated journeys and MVP screen set sound aligned with the process and data constraints. I do not see any blockers from T4 or T7 for these flows, as long as we keep the scoring model simple as discussed earlier.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 5463,
+            "reply_to": "M47",
+            "text": "Let me summarise so we can close on UX and training direction. For the pilot, we will: 1) use the simplified journeys in A4 with pre-filled product line and region, 2) limit search to a single bar plus filters for product line, region, and feedback type, and 3) focus the MVP screens on home, log feedback, feedback list, and themes overview. Training in A5 and sessions under T9 will mirror these flows, with a clear section on tagging and a short reference to A7 for privacy and acceptable use. If there are no major concerns, I would like to treat this as our approved UX for the main journeys and the agreed training format and key topics for the pilot.",
+            "mentions": [
+              156956,
+              94563,
+              408027,
+              37423
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A7",
+              "T3",
+              "T6",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 156956,
+            "reply_to": "M48",
+            "text": "No concerns from me. I will now refine A5 and the T6 materials to align exactly with the approved journeys and screen set, and I will start drafting the outline for the enablement sessions under T9 based on this flow.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 5463,
+              "when": "today"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 156956,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 156956,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Finalize pilot rollout plan, measurement framework, and governance.",
+        "messages": [
+          {
+            "msg_id": "M50",
+            "speaker_id": 5463,
+            "reply_to": null,
+            "text": "I have drafted the pilot rollout plan for T5, including objectives, scope, target user groups, and a high-level communication strategy. It is in the same folder as A1. The plan assumes one region, two product lines, and focuses on sales reps and support agents as primary users, with product managers as secondary users. I would like your feedback on the proposed timeline and whether the target groups and communication touchpoints feel realistic.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 94563,
+            "reply_to": "M50",
+            "text": "In parallel, I have set up a first version of the Pilot Measurement and KPI Tracker sheet for T10, based on the five metrics we agreed in A1. It includes weekly adoption numbers, time-to-compile estimates, volume of tagged feedback, number of decisions referencing hub insights, and a simple satisfaction score. I also added a section to capture governance metrics from A3, such as triage cadence and backlog size. Please review and let me know if any KPIs or reporting cadences are missing.",
+            "mentions": [
+              5463,
+              408027
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10",
+              "A3",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 408027,
+            "reply_to": "M51",
+            "text": "I reviewed A6. The weekly cadence looks good for most metrics. For governance, I suggest we explicitly track whether triage meetings happen as planned under T7 and whether decisions are documented. Maybe add a simple yes or no field per week for triage held and decision log updated.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 37423,
+            "reply_to": "M50",
+            "text": "On the rollout timeline in T5, I noticed that training is scheduled only one day before the pilot start. Is that enough time for people to digest the content from A5 and A7, or should we consider a short follow-up clinic during the first week of the pilot?",
+            "mentions": [
+              5463,
+              156956
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 156956,
+            "reply_to": "M53",
+            "text": "I share that concern. Given the amount of new concepts in A5 and the privacy guidance in A7, I would feel more comfortable if we had at least one optional Q and A session in the first pilot week as part of T9. That would also give us a chance to collect early feedback on the training itself.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 5463,
+            "reply_to": "M54",
+            "text": "Good suggestion. We can adjust T5 so that the main enablement session happens two days before pilot start, with a shorter Q and A clinic in the first week. That should not impact the overall deadline but will likely improve adoption.",
+            "mentions": [
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 94563,
+            "reply_to": "M52",
+            "text": "I have added the governance fields you suggested to A6: weekly triage held yes or no, and decision log updated yes or no. This will tie back nicely to the governance defined in A3 and T7.",
+            "mentions": [
+              408027
+            ],
+            "artifact_refs": [
+              "A6",
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 408027,
+            "reply_to": "M51",
+            "text": "On reporting cadence, do we want a short weekly summary for core stakeholders and a more detailed view at the end of the pilot for T11? If so, we should note in A6 which fields will feed into the weekly update versus the final retrospective.",
+            "mentions": [
+              94563,
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 94563,
+            "reply_to": "M57",
+            "text": "Yes, that makes sense. I will mark in A6 which metrics are part of the weekly snapshot and which are primarily for the end-of-pilot analysis under T11. Weekly will focus on adoption and volume, while the final view will add decision impact and satisfaction.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 5463,
+            "reply_to": "M50",
+            "text": "On pilot scope and target groups: the draft in T5 proposes 30 to 40 sales reps and 15 to 20 support agents in the pilot region, plus 3 to 5 product managers. Does that feel like the right scale to get meaningful feedback without overextending our support capacity during the pilot?",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 408027,
+            "reply_to": "M59",
+            "text": "From a data perspective, that sample size should be enough to see patterns in A6 without making the dataset unmanageable. It also aligns with the capacity assumptions we made when defining governance in A3.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 37423,
+            "reply_to": "M59",
+            "text": "I think those numbers are fine, but we should make sure the selected reps and agents are actually active on the relevant product lines. Maybe we can ask local managers to nominate participants based on recent launch involvement.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 156956,
+            "reply_to": "M59",
+            "text": "From a training logistics standpoint, that group size is manageable if we run two sessions under T9, one for sales and one for support, plus the optional clinic. We will just need to coordinate invites carefully so we do not overload any one day.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "T9",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 94563,
+            "reply_to": "M59",
+            "text": "I agree with the proposed scale. I will add a note in the rollout plan that participant selection should be coordinated with local managers, focusing on those involved in recent or upcoming launches. That will also help when we interpret the pilot results in T11.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 5463,
+            "reply_to": "M63",
+            "text": "Great. On governance, the current draft in A3 under T7 proposes a weekly triage meeting with product, sales, and support, plus a simple scoring model and a shared decision log. Are we comfortable committing to that cadence for the pilot, or should we start with bi-weekly to reduce overhead?",
+            "mentions": [
+              94563,
+              408027,
+              37423
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 408027,
+            "reply_to": "M64",
+            "text": "Given the short pilot duration, I would keep weekly triage. It will give us more touchpoints to adjust and will generate better data for A6. We can always revisit the cadence after the pilot based on workload.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 94563,
+            "reply_to": "M64",
+            "text": "I agree with weekly triage for the pilot. I will make sure A3 clearly describes roles and responsibilities and that A6 tracks whether meetings happen and decisions are logged, as we discussed.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 5463,
+            "reply_to": "M66",
+            "text": "Let me summarise so we can close this out. For the pilot rollout plan in T5, we will: 1) run in one region and two product lines, 2) target roughly 30 to 40 sales reps, 15 to 20 support agents, and a small group of product managers, selected with local manager input, and 3) schedule main training two days before pilot start plus an optional Q and A clinic in week one under T9. For measurement and governance, we will: 1) use A6 with weekly reporting on adoption and volume, 2) track governance fields for triage meetings and decision log updates, 3) hold weekly triage meetings as defined in A3 and T7, and 4) use the same KPIs for the end-of-pilot analysis in T11. If there are no objections, I would like to confirm this as our pilot scope, target groups, timeline, KPIs, reporting cadence, and governance model.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "T5",
+              "A6",
+              "A3",
+              "T7",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 94563,
+            "reply_to": "M67",
+            "text": "No objections from me. I will finalise A6 and A3 accordingly and align the T10 measurement plan with this cadence so we are ready before the pilot starts.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "A3",
+              "T10",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 5463,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 94563,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 94563,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Synthesize pilot results and align on next-phase roadmap.",
+        "messages": [
+          {
+            "msg_id": "M69",
+            "speaker_id": 5463,
+            "reply_to": null,
+            "text": "We have wrapped up the pilot for the feedback hub in the initial region and product lines. I have summarised usage, feedback, and a draft next-phase roadmap in the Pilot Retrospective and Next-Phase Roadmap Summary. The key numbers from the Pilot Measurement and KPI Tracker sheet are also referenced there. Overall adoption among target sales and support users was solid, but we saw variation across teams. I would like us to review the main findings and discuss which improvements should go into the next phase versus later.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 94563,
+            "reply_to": "M69",
+            "text": "Looking at A6 and A8, the pilot met or exceeded targets on weekly active users and volume of tagged feedback. The main gaps were around consistent tagging quality and the number of launch decisions explicitly referencing hub insights. In the roadmap section of A8, I suggested we prioritise improvements to tagging guidance and the product manager view before expanding to new regions or data sources.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 408027,
+            "reply_to": "M69",
+            "text": "From a data perspective, A6 shows that the core model held up, but we did see some inconsistencies in how tags were applied across teams. Before we add new sources like social media or NPS, I would recommend we invest in better tag defaults, clearer examples in A5 and A7, and maybe a simple validation rule or two in the logging form.",
+            "mentions": [
+              5463,
+              156956
+            ],
+            "artifact_refs": [
+              "A6",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 156956,
+            "reply_to": "M71",
+            "text": "The feedback from enablement sessions captured in A8 also points in that direction. Many users asked for more concrete examples of good and bad tagging, and clearer reminders about what not to log from a privacy standpoint. For the next phase, I can update A5 and the T6 materials to include more scenarios and a short checklist.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 37423,
+            "reply_to": "M69",
+            "text": "One thing I noticed in A8 is that some sales reps still kept their own spreadsheets even after the hub launch. Did we capture why they did that? It might influence whether we prioritise better export options or more coaching on how to use the hub in their routines.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 94563,
+            "reply_to": "M73",
+            "text": "Yes, we captured some of that in the qualitative notes in A8. The main reasons were habit and the need to share quick summaries with local managers. Some reps felt the hub view was not yet tailored enough to their specific territories. In the roadmap, I proposed adding a simple export or share function and a territory filter as near-term enhancements.",
+            "mentions": [
+              37423,
+              5463
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 5463,
+            "reply_to": "M70",
+            "text": "Given the pilot results, my current proposal for the next phase is: 1) strengthen tagging and privacy guidance, 2) improve the product manager view with clearer links between feedback and decisions, 3) add basic export and territory filters for sales, and only then 4) consider adding one new data source, likely NPS comments, for a second pilot. Does that ordering align with what you are seeing in A6 and A8?",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 408027,
+            "reply_to": "M75",
+            "text": "That ordering makes sense to me. If we add NPS comments later, we can reuse much of the existing data model and governance from T4 and T7, but we should not do it until tagging and usage patterns are more stable. Otherwise, we risk adding noise.",
+            "mentions": [
+              5463,
+              94563
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 156956,
+            "reply_to": "M75",
+            "text": "For the first two roadmap items, I can start by revising A5 and the T6 quick-start guide to include more concrete tagging examples and a clearer section on how product managers should use the hub in their decision meetings. We might also want to schedule a short refresher session similar to T9 when we roll out the updated version.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 37423,
+            "reply_to": "M75",
+            "text": "I agree with focusing on improving the existing experience before adding new sources. For the export and territory filter, we should make sure they are simple enough not to complicate the UI too much. Maybe we can prototype a basic version first and test it with a small group of reps.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A4",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 94563,
+            "reply_to": "M78",
+            "text": "We can definitely prototype a lightweight export and territory filter. I will add a note in A8 that the next-phase roadmap includes a small design and test cycle with a subset of sales users before full rollout. That will help us validate the impact without overcommitting.",
+            "mentions": [
+              5463
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 5463,
+            "reply_to": "M79",
+            "text": "Thanks all. To close this thread, I will update A8 and the T11 deliverable to reflect the agreed priorities: first, strengthen tagging and privacy guidance and refine the product manager view; second, add simple export and territory filters and test them with a subset of sales users; third, consider adding NPS comments as an additional data source once we see stable usage. We will also plan a short refresher enablement round when the updated version goes live.",
+            "mentions": [
+              94563,
+              408027,
+              156956,
+              37423
+            ],
+            "artifact_refs": [
+              "A8",
+              "T11",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T11",
+              "owner_id": 5463,
+              "when": "today"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 156956,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 contains 15 messages, which is below the expected minimum of 16 messages per thread. Furthermore, threads TH2 (17 messages), TH3 (15 messages), and TH4 (16 messages) fall below their respective blueprint target_messages_range of [22, 30], [16, 24], and [20, 28]."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The text contains forbidden terms: 'scenario' is explicitly used in M52 ('scenario-based') and M54 ('scenarios'). Additionally, explicit levels referring to attributes are used in M2 ('high-risk') and M40 ('seems low')."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 4
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Artifact A6 is mandatory for thread TH5 according to the blueprint, but it is missing from the messages and artifact_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "In message M48, the decision ID 'D5' is incorrectly included in the artifact_refs list instead of decision_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'label' is used explicitly in the text of several messages (e.g., M19, M20, M21, M23, M24)."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 15 messages, which is slightly below the blueprint target_messages_range of [16, 24]."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Thread TH4 has 15 messages, which is slightly below the blueprint target_messages_range of [17, 25]."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

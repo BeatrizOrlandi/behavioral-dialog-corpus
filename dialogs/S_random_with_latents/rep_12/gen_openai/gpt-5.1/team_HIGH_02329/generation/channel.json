@@ -1,0 +1,1630 @@
+{
+  "channel": {
+    "channel_id": "lab-sop-qc-upgrade",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current workflows and confirm scope of SOP and QC upgrade.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 500054,
+            "reply_to": null,
+            "text": "Kickoff for the Standardised Sample Handling and QC Upgrade in Core Lab. To get T1 moving, can everyone briefly outline how their shift currently handles sample reception, labelling and initial QC checks for blood and other biological samples? We already have the current state diagram in A8, but it is based mostly on day shift. I would like to validate differences across shifts and confirm what should be in scope for the first SOP version. Please call out any steps where you see frequent errors or rework.",
+            "mentions": [
+              47527,
+              58820,
+              147659,
+              526208
+            ],
+            "artifact_refs": [
+              "A8",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wave",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 47527,
+            "reply_to": "M1",
+            "text": "On late shift we receive most blood samples in bulk from the wards. Reception is manual: we check the paper request, then label tubes with patient ID and test type. Time of collection is sometimes missing, so we estimate based on the request form, which probably adds errors. For QC, we mainly check for clots and haemolysis visually before loading. I do not think we systematically log pre-analytical issues anywhere yet. For scope, I would start with blood samples only, because tissue and other fluids are handled differently and I am not sure I can map those steps accurately.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 147659,
+            "reply_to": "M1",
+            "text": "On day shift we follow a slightly different pattern. Reception staff pre-label most tubes with barcodes, but for add-on tests we still handwrite the test code and time. For bone marrow and stem cell samples we have a separate logbook and a different storage path, which is not fully reflected in A8. QC-wise, we do a visual check plus a quick spin for some urgent samples to see if there is enough volume and no obvious clotting. I would argue that for the first SOP version we include blood plus high-risk samples like bone marrow and stem cell material at least at a high level, so we do not end up with conflicting instructions later.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 526208,
+            "reply_to": "M1",
+            "text": "From the weekend shift perspective, we have fewer staff and often combine reception and bench work. We label at reception, but sometimes centrifugation is delayed because we prioritise urgent tests. Environmental and waste steps are also a bit ad hoc on weekends; sharps go into the right containers, but chemical and biological waste segregation is not always consistent. Even if the first SOP version focuses on blood, I think we should at least flag where environmental and waste handling from A3 will need to plug in later.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 58820,
+            "reply_to": "M1",
+            "text": "From the QC side, we currently do basic checks at reception but they are not standardised. Some staff record clotted or mislabelled samples in personal notebooks, others just reject and move on. There is no link yet to a central log like A5. For this first phase, I suggest we keep the scope to blood and related pre-analytical steps: reception, identification, labelling, centrifugation and initial storage. We can then align the QC checklist in T3 and the error tracking in T9 to that same scope, and add tissue and more complex samples in a second iteration.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 500054,
+            "reply_to": "M5",
+            "text": "Thanks all, this is helpful. To close T1 properly, we still need a clear list of differences between shifts. So far I see: manual vs barcode labelling, different handling for add-on tests, separate path for bone marrow and stem cell samples, and weaker environmental and waste routines on weekends. Can each of you confirm if there are any other major deviations from the flow in A8, especially around who does the identity check and when centrifugation is triggered?",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A8",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 47527,
+            "reply_to": "M6",
+            "text": "On late shift, identity check is usually done only once at reception against the request form. If there is a mismatch, we call the ward, but we do not document it anywhere. Centrifugation is batched: we wait until we have enough tubes to fill the rotor, unless the request is marked urgent. That is probably another source of variation compared with day shift.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 147659,
+            "reply_to": "M6",
+            "text": "Day shift does a double identity check for inpatients: once at reception and once at the analyser when scanning the barcode. For outpatients, it is mostly at reception only. Centrifugation is more continuous because we have more staff, so tubes are spun as they arrive. For bone marrow and stem cell samples, we also log transport time and temperature, which is missing from A8 and should be added when we work on T10.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 526208,
+            "reply_to": "M6",
+            "text": "On weekends, identity check is similar to late shift, but we sometimes skip the second check at the analyser if we are under pressure. Centrifugation is also batched, and occasionally we store unspun tubes in the fridge for short periods, which is not ideal. From an environmental point of view, we also lack a clear step for when to move full sharps containers and how to log that, which we can address later under T5.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 58820,
+            "reply_to": "M6",
+            "text": "Given these differences, I propose we define the first SOP version scope as: all blood samples from reception to initial storage, including urgent and routine, across all shifts. We explicitly note that bone marrow and stem cell samples will follow the same general framework but will be detailed in a dedicated section later under T10. QC and error tracking in T3 and T9 will align with this blood-focused scope. If everyone agrees, we can record that as our scope decision.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              500054
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 500054,
+            "reply_to": "M10",
+            "text": "Works for me: first SOP version focused on blood samples end to end, with a placeholder for bone marrow and stem cell handling that we will flesh out under T10. Next, we need to pick a pilot shift for T7. My suggestion is the day shift, because it already uses barcodes and has more staff to test the new steps and give feedback. The risk is that late and weekend shifts might feel the process was designed without them, so we would need to involve them in reviewing the pilot results.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 47527,
+            "reply_to": "M11",
+            "text": "I am ok with day shift as the pilot, as long as we get a chance to test the final version on late shift before full rollout. Some of the batching and staffing constraints we have might not show up in the day shift pilot.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 526208,
+            "reply_to": "M11",
+            "text": "Agree with using day shift for the initial pilot. For environmental and waste aspects, I would like to review the draft steps before the pilot starts, to make sure we are not creating something that is hard to follow on weekends when staffing is thin.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 147659,
+            "reply_to": "M11",
+            "text": "Day shift pilot makes sense. We can also include a small subset of bone marrow and stem cell cases during the pilot, just to see if the general reception and labelling rules hold up, even if T10 is not fully detailed yet.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "microscope",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 58820,
+            "reply_to": "M11",
+            "text": "From a QC and metrics perspective, day shift is also where we have the highest volume, so it will give us enough data for A5 and T9 during the pilot. I support that choice, with a clear plan to validate on late and weekend shifts afterwards.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 500054,
+            "reply_to": "M15",
+            "text": "Ok, capturing this: first SOP version scope is blood samples from reception to storage across all shifts, with a follow-on section for bone marrow and stem cell samples under T10. Pilot shift for T7 will be day shift, with a commitment to review late and weekend shift constraints before full rollout. I will update the working notes accordingly.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "T1",
+              "T7",
+              "T10"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 500054,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 147659,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review and finalise the unified sample handling SOP draft.",
+        "messages": [
+          {
+            "msg_id": "M17",
+            "speaker_id": 500054,
+            "reply_to": null,
+            "text": "I have uploaded Draft Unified Sample Handling SOP v0.3 (A1), which covers blood samples from reception to storage, aligned with the scope we agreed. It also references environmental and waste points from A3. This draft is linked to T2 and T8. Please focus your review on: reception steps, identity checks, labelling rules, centrifugation timing, and storage conditions. We also need to converge on a standardised labelling scheme for all incoming samples.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T2",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "paperclip",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 147659,
+            "reply_to": "M17",
+            "text": "I went through A1. Overall structure looks solid. A couple of points: 1) For urgent samples, the draft says centrifuge within 15 minutes of reception. On busy days that might be tight; maybe we should phrase it as as soon as possible with a maximum of 30 minutes, and log exceptions. 2) For bone marrow and stem cell samples, the current text just points to a future annex. I suggest we at least state that they follow the same identity and labelling rules as blood, plus additional transport and cryopreservation requirements to be detailed under T10.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A1",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 526208,
+            "reply_to": "M17",
+            "text": "From an environmental and waste angle, I checked the references to A3 in A1. The steps for sharps and biological waste are consistent, but chemical waste from cleaning spills is only mentioned briefly. We should add a line in the reception and processing sections that any spill clean-up follows the chemical waste procedure in A3, including logging if it affects sample integrity. That will also help when we update T5.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "recycle",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 47527,
+            "reply_to": "M17",
+            "text": "I have a question on the identity check step. A1 currently says double-check for all samples, but on late shift we often have only one person at reception. Should the SOP allow a single-person check with a second check at the analyser, or do we need to change our practice? I want to make sure the text is realistic for low-staff shifts.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 58820,
+            "reply_to": "M20",
+            "text": "Good point. Maybe we can define the standard as two independent checks, but allow them to happen at different points: one at reception and one at the analyser. For shifts with only one person at reception, the second check would be when loading the analyser or before manual testing. We can describe that explicitly in A1 so it works for all shifts.",
+            "mentions": [
+              500054,
+              47527
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 500054,
+            "reply_to": "M21",
+            "text": "Agreed. I will adjust the identity check section in A1 to state that two checks are required, but they can be at reception plus analyser, or reception plus manual bench verification, depending on staffing. Now on labelling: T8 proposes a scheme with patient ID, date, time, and test type encoded in the label. We need to decide if we use a fixed text format or a barcode plus minimal text. What are your views, especially considering manual add-on tests and high-risk samples?",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 147659,
+            "reply_to": "M22",
+            "text": "For consistency, I would go with barcode as primary plus minimal human-readable text: patient ID and collection time. Test type can be in the request and analyser worklist, but for bone marrow and stem cell samples I would still print the test type on the label because they often go through multiple steps and storage locations. That way T10 can build on the same scheme with a few extra fields if needed.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "barcode",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 47527,
+            "reply_to": "M22",
+            "text": "On late shift, we sometimes do not have barcode printers available in all areas. If we make barcode mandatory, we need a clear fallback. Maybe the SOP can say: barcode plus text where available, and if not, handwritten labels must include patient ID, date, time, and test type, following examples in T8. Otherwise we risk more variation.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 526208,
+            "reply_to": "M22",
+            "text": "From a waste and environmental perspective, the label content does not change much, but we should avoid re-labelling where possible, because that creates extra waste and confusion. So the SOP should emphasise getting the label right at reception, with corrections logged via the incident template in A7 rather than peeling and replacing labels.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wastebasket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 58820,
+            "reply_to": "M22",
+            "text": "For QC and data tracking, having collection time on the label is essential, especially when we start analysing pre-analytical delays in A5. Test type on the label is helpful but not strictly required if the analyser worklist is reliable. I support the approach: barcode plus patient ID and time as text, with a clear handwritten fallback as described in T8.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 500054,
+            "reply_to": "M26",
+            "text": "Summarising the labelling discussion: 1) Standard is barcode label plus human-readable patient ID and collection time. 2) For bone marrow and stem cell samples, we also print test type on the label, to be detailed in T10. 3) Where barcode printing is not available, handwritten labels must include patient ID, date, time, and test type, following examples in T8. 4) Corrections are handled via the incident template in A7, not by re-labelling. If there are no objections, I will treat this as our standard labelling scheme.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A7",
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 147659,
+            "reply_to": "M27",
+            "text": "No objections from me. With that in place, the core reception, labelling, centrifugation and storage steps in A1 look consistent. Once you adjust the identity check wording and urgent sample timing as discussed, I am comfortable saying the core workflow is ready for sign-off from our side.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 58820,
+            "reply_to": "M27",
+            "text": "Agreed. From the QC perspective, the steps in A1 align with what we need for T3 and T9. Once the minor edits are in, I consider the core reception, labelling and storage sections approved for use in the pilot.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A1",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 500054,
+            "reply_to": "M29",
+            "text": "Thanks all. I will update A1 today with: flexible urgent sample timing up to 30 minutes with logging, clarified two-step identity check across shifts, explicit reference to chemical spill handling via A3, and the agreed labelling scheme. With those edits, we can mark the core reception, labelling and storage steps as approved for the pilot. I will also flag that bone marrow and stem cell details will be added under T10 before full rollout.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T2",
+              "T10"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "checkered_flag",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 500054,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 47527,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock down QC checklist, competency checks and training approach.",
+        "messages": [
+          {
+            "msg_id": "M31",
+            "speaker_id": 58820,
+            "reply_to": null,
+            "text": "I have shared the latest Routine QC and Equipment Maintenance Checklist (A2) and the Technician Competency and Sign-off Checklist draft (A6), linked to T3 and T6. There is also a first version of the training slides and quick reference cards in A4 for T4. Please review for feasibility: are the daily, weekly and monthly QC tasks realistic for each shift, and do the competency items reflect what technicians actually do at the bench?",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              500054
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A4",
+              "T3",
+              "T4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 500054,
+            "reply_to": "M31",
+            "text": "Looking at A2, the daily QC list for analysers seems fine for day shift, but late and weekend shifts might struggle with the full weekly set if they fall on their days. Maybe we should define that weekly tasks can be done by any shift within a defined window, not tied to a specific day shift only. That way we avoid missed items when there is a public holiday or staffing issue.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 526208,
+            "reply_to": "M31",
+            "text": "For A2, I would also add a simple environmental check: verify that waste containers are not overfilled and that temperature logs for fridges and freezers are up to date. That could be a daily item, with a weekly review of any deviations. It ties in with our environmental responsibilities without adding too much workload.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thermometer",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 47527,
+            "reply_to": "M31",
+            "text": "On the competency checklist in A6, some items are quite broad, like handle all pre-analytical steps. For newer staff it might help to break that down into smaller items: reception, identity check, labelling, centrifugation, storage. That way sign-off can be more gradual and we can see where someone still needs support.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "light_bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 147659,
+            "reply_to": "M31",
+            "text": "I agree with breaking down A6. For high-risk samples like bone marrow and stem cell material, we should have separate competency items, including cryopreservation steps and transport checks, aligned with T10. That will help ensure only trained staff handle those parts.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "dna",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 58820,
+            "reply_to": "M35",
+            "text": "Good feedback. I will split the pre-analytical competency items in A6 into the main steps and add a separate section for high-risk samples, referencing T10. On QC frequency in A2, I like the idea of a weekly window rather than a fixed day. We can define that weekly tasks must be completed by any shift before the end of the week, with a sign-off field for who did it.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              500054
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 500054,
+            "reply_to": "M31",
+            "text": "On the training materials in A4, the slides explain the rationale well, but the quick reference cards might be a bit dense. For T4, could we create one card focused on sample handling steps and another on QC tasks, instead of mixing them? That might make it easier for staff to keep the right card at the right workstation.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "card_index",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 47527,
+            "reply_to": "M37",
+            "text": "I support splitting the cards. Also, during training it would help to have a simple checklist for each session: which SOP sections were covered, which QC tasks were demonstrated, and who attended. That could tie back to A6 so we can see who still needs a practical assessment.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 526208,
+            "reply_to": "M31",
+            "text": "For competency criteria, I suggest we define a minimum: for each key step, the technician must perform it correctly a certain number of times under observation, with no critical errors. For example, three consecutive correct identity checks and labelling sequences. We can document that in A6 and link it to the sign-off process in T6.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "target",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 147659,
+            "reply_to": "M39",
+            "text": "For high-risk samples, I would set a slightly higher bar, maybe five observed procedures, including at least one out-of-hours case if possible. We can note that in the high-risk section of A6 so it is clear to supervisors.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 58820,
+            "reply_to": "M40",
+            "text": "That makes sense. I will incorporate: three observed correct runs for standard steps, five for high-risk steps, with at least one outside normal hours where feasible. For the sign-off process in T6, I propose that either the laboratory manager or a designated senior technician can sign, and that we log sign-offs centrally so we can report training status later for T12.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ballot_box_with_check",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 500054,
+            "reply_to": "M41",
+            "text": "On A2, before we lock it down, can we confirm that all critical analysers are covered with daily QC items and that corrective actions are clear? For example, if a control is out of range, the checklist should say to stop releasing results, repeat the control, and escalate if still out. I see some of that in A2 but not for every analyser.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 58820,
+            "reply_to": "M42",
+            "text": "You are right, some sections in A2 only say check control results without specifying what to do if they fail. I will update each analyser section to include clear acceptance criteria and corrective actions: repeat control, check reagents, recalibrate if needed, and escalate to the on-call specialist before resuming. Once that is in, I think A2 will be ready for approval.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 47527,
+            "reply_to": "M41",
+            "text": "For the training approach in A4, could we also include a short quiz or checklist at the end of each session, just to confirm people understood the key changes? It does not need to be formal, but it might help identify where we need to repeat explanations.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 58820,
+            "reply_to": "M44",
+            "text": "Yes, we can add a short checklist at the end of each training block in A4 and link it to the competency items in A6. That will also give us a simple record to support sign-off decisions in T6.",
+            "mentions": [
+              47527
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 500054,
+            "reply_to": "M43",
+            "text": "To wrap this up: once you add the explicit corrective actions for each analyser in A2 and the environmental checks, I am comfortable saying the routine QC and equipment maintenance checklist is ready for use in the pilot. For competency, the structure we discussed for A6 and the sign-off rules in T6 look workable. If no one objects, we can record A2 as final for the pilot and A6 as our agreed competency framework.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 58820,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 47527,
+              "when": "this week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 58820,
+              "when": "before pilot start"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and monitor the pilot rollout and incident reporting.",
+        "messages": [
+          {
+            "msg_id": "M47",
+            "speaker_id": 500054,
+            "reply_to": null,
+            "text": "Pilot announcement: starting next Monday, day shift will run the new SOP from A1 and the QC checklist from A2 for one week, as part of T7. During the pilot, we will track pre-analytical errors and rejections using A5 and log any deviations with the incident template in A7. Please read the pilot section in T7 and the logging instructions in T9 and T11 before your shift.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A5",
+              "A7",
+              "T7",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 58820,
+            "reply_to": "M47",
+            "text": "For metrics, I propose we track at least: number of mislabelled samples, number of clotted or haemolysed samples, samples received without request forms, and samples rejected for other pre-analytical reasons. We will log these in A5, with a simple field to indicate whether the new SOP was followed or not. That will help us interpret the results for T12 later.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 147659,
+            "reply_to": "M47",
+            "text": "On day shift we can also tag a small number of bone marrow and stem cell cases during the pilot, just to see how well the general reception and labelling rules from A1 work for them. We can note those separately in A5 so they do not distort the main blood sample metrics.",
+            "mentions": [
+              500054,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "dna",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 47527,
+            "reply_to": "M47",
+            "text": "I will not be on day shift next week, but for late shift we can still use A7 to log any deviations we see when handling samples that were received under the new SOP. That might give extra context, especially if we notice issues with labelling or storage when we pick up the samples later.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 526208,
+            "reply_to": "M47",
+            "text": "For incident reporting in A7, do we want every small deviation logged, or only those that lead to sample rejection or delay? During the pilot, logging everything might be useful, but it could also be heavy for staff.",
+            "mentions": [
+              500054,
+              58820
+            ],
+            "artifact_refs": [
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 58820,
+            "reply_to": "M51",
+            "text": "For the pilot week, I suggest we log all deviations that either require rework or could have affected patient results, even if they were caught early. Minor things that are corrected immediately without impact can be grouped in a daily note. We can describe that in the pilot instructions for T11.",
+            "mentions": [
+              526208
+            ],
+            "artifact_refs": [
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 500054,
+            "reply_to": "M48",
+            "text": "On timing: if we start Monday, we can run the pilot through Sunday, so we capture at least one weekend day with the new SOP in place for reception. That will give us a better view of how the process behaves when staffing is thinner, even if the main focus is day shift.",
+            "mentions": [
+              58820,
+              526208
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 526208,
+            "reply_to": "M53",
+            "text": "I can coordinate with the weekend team to make sure they know how to use A5 and A7. We might need a very short refresher from A4 at the start of the shift, just to remind people of the key changes.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 147659,
+            "reply_to": "M48",
+            "text": "For metrics, should we also track turnaround time from reception to centrifugation for a sample subset? That would show whether the new SOP is causing delays or improvements. We could log that in an extra column in A5 for, say, the first 20 samples each day.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 58820,
+            "reply_to": "M55",
+            "text": "Yes, adding a simple reception-to-centrifugation time field in A5 for a sample subset is a good idea. It will help interpret any changes in haemolysis or clotting rates. I will update T9 to include that as part of the pilot metrics.",
+            "mentions": [
+              147659
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 500054,
+            "reply_to": "M47",
+            "text": "To summarise the pilot plan: start Monday, run for seven days including the weekend; use A1 and A2 on day shift as the primary pilot, with weekend and late shifts logging any downstream issues; track mislabelling, clots, haemolysis, missing forms and other pre-analytical rejections in A5; log significant deviations in A7 using the T11 process; and capture a subset of turnaround times. If everyone is aligned, we can record these as the agreed pilot dates and metrics.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A5",
+              "A7",
+              "T7",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 147659,
+              "when": "pilot week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 58820,
+              "when": "before pilot start"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 526208,
+              "when": "before pilot start"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Consolidate results, lessons learned and final rollout adjustments.",
+        "messages": [
+          {
+            "msg_id": "M58",
+            "speaker_id": 58820,
+            "reply_to": null,
+            "text": "Preliminary pilot results are in A5 for last week. Compared with the baseline month, mislabelled samples dropped from 1.8 percent to 0.9 percent, and clotted samples from 2.5 percent to 1.6 percent. Haemolysis rates are roughly unchanged. We also have a handful of incidents logged via A7. This will feed into T12, but before drafting the final report, I would like your feedback on what worked, what did not, and any adjustments we should make to the SOP or QC checklist.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 147659,
+            "reply_to": "M58",
+            "text": "From the day shift perspective, the new reception and labelling steps from A1 worked smoothly after the first day. The main friction was the extra time needed for the second identity check at the analyser, but staff adapted quickly. For bone marrow and stem cell samples, the general rules held up, but we had one incident where transport time was borderline; that is captured in A7. We should make sure T10 explicitly states maximum transport times and what to do if they are exceeded.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "microscope",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 47527,
+            "reply_to": "M58",
+            "text": "Looking at A5, I noticed that most mislabelling incidents happened on the first two pilot days. After that, the numbers dropped. That suggests the training and quick reference cards from A4 helped once people got used to them. For late shift, we still had a couple of handwritten labels missing collection time. Maybe we should highlight that field more clearly on the handwritten label examples.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 526208,
+            "reply_to": "M58",
+            "text": "From the weekend shifts, the main issue was remembering to log minor deviations in A7. People handled them correctly but sometimes forgot to record them. For environmental aspects, the added checks in A2 worked fine; we caught one fridge temperature drift early. I do not think we need major changes there, just a reminder in training to log deviations consistently.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thermometer",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 500054,
+            "reply_to": "M58",
+            "text": "On turnaround times in A5, the subset we tracked shows a slight improvement: median time from reception to centrifugation dropped by about five minutes. That is encouraging, but we should be careful not to over-interpret one week of data. I would keep the current timing targets in A1 and A2 and revisit after a month of full rollout.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 58820,
+            "reply_to": "M60",
+            "text": "Good catch on handwritten labels. I will update the examples in T8 and the cards in A4 to emphasise collection time, maybe by placing it right next to patient ID and using a bold label. That should help late and weekend shifts.",
+            "mentions": [
+              47527
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 147659,
+            "reply_to": "M59",
+            "text": "For T10, besides transport time, we should also align storage conditions with the general SOP: for example, clearly stating when bone marrow and stem cell samples go to cryopreservation versus short-term refrigerated storage. That will avoid confusion when staff move between blood and high-risk workflows.",
+            "mentions": [
+              58820,
+              500054
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "snowflake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 526208,
+            "reply_to": "M61",
+            "text": "For logging consistency, maybe we can add a small daily reminder in the shift handover checklist: review A7 entries and add any missing incidents. It is a light touch but might improve completeness without adding much work.",
+            "mentions": [
+              500054,
+              58820
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bell",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 47527,
+            "reply_to": "M60",
+            "text": "One more observation: some staff said the QC checklist in A2 felt long at first, but by midweek they were completing it faster as they got used to the order. Maybe we can slightly reorder items so that they follow the physical layout of the lab benches, which might make it more intuitive.",
+            "mentions": [
+              58820
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "arrows_clockwise",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 58820,
+            "reply_to": "M66",
+            "text": "Reordering A2 to match bench layout is a good idea. I will adjust the sequence and keep the content the same, so we do not affect the metrics. That should be a low-risk change before full rollout.",
+            "mentions": [
+              47527
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 500054,
+            "reply_to": "M58",
+            "text": "Given the improvements in mislabelling and clotting, and no negative impact on turnaround time, I think we are in a good position to move to full rollout. I propose we: 1) apply the minor adjustments discussed to A1, A2, A4 and T8; 2) complete the high-risk sample section under T10; and 3) set the full lab rollout date for two weeks from now, to allow time for final training sessions and competency sign-offs using A6.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A4",
+              "A6",
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 147659,
+            "reply_to": "M68",
+            "text": "Two weeks sounds reasonable. That gives us time to finalise T10 and run at least one focused training block on high-risk samples. I can help draft the T10 annex this week so it is ready in time.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "handshake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 526208,
+            "reply_to": "M68",
+            "text": "I am fine with a full rollout in two weeks, as long as we include a short refresher on environmental and waste points from A3 during the remaining training sessions. That will help keep those aspects visible alongside the sample handling changes.",
+            "mentions": [
+              500054,
+              58820
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "recycle",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 47527,
+            "reply_to": "M68",
+            "text": "From late shift, I agree with the plan. It would help if we schedule at least one training session per shift and make sure the competency checklist in A6 is used consistently, so we do not end up with some people fully trained and others not.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 58820,
+            "reply_to": "M68",
+            "text": "I will incorporate the pilot data from A5 and the incident summaries from A7 into the T12 report, highlighting the improvements and remaining gaps. I will also outline the plan to keep tracking error and rejection rates for at least one month after full rollout, so we can confirm the gains are sustained.",
+            "mentions": [
+              500054
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 500054,
+            "reply_to": "M72",
+            "text": "To close this out: we will make minor adjustments to A1, A2, A4 and T8 based on pilot feedback; complete the high-risk sample annex under T10; schedule training and competency sign-offs using A6 for all shifts over the next two weeks; and then move to full lab rollout on the agreed date in two weeks. We will continue tracking metrics in A5 and incidents in A7 and summarise early impact in T12. Unless there are objections, I will record this as our final adjustment and rollout decision.",
+            "mentions": [
+              47527,
+              147659,
+              526208,
+              58820
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "T8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "checkered_flag",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 58820,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 147659,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 58820,
+              "when": "after rollout month"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

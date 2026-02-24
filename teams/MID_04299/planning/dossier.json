@@ -1,0 +1,437 @@
+{
+  "affinity_band": "MID",
+  "planning_output": {
+    "project_pack": {
+      "project": {
+        "title": "Pilot Deployment of Smart Battery Monitoring System",
+        "objective": "Design, test, and commission a smart battery monitoring system for a pilot energy storage installation, validating performance, safety, and integration with existing infrastructure.",
+        "deliverables": [
+          "System architecture and technical requirements specification",
+          "Laboratory test plan and validation report for monitoring hardware and algorithms",
+          "Pilot site installation design and electrical integration drawings",
+          "Commissioning and acceptance test procedures with results",
+          "Operational guidelines and safety checklist for site technicians",
+          "Post-pilot performance and feasibility assessment report"
+        ],
+        "constraints": [
+          "Pilot system must comply with relevant electrical safety and grid interconnection standards",
+          "Hardware and sensors must be compatible with existing battery racks and BMS interfaces",
+          "Laboratory validation must be completed before any on-site installation",
+          "Pilot downtime window for installation is limited to one weekend",
+          "Budget restricts custom hardware; preference for off-the-shelf components",
+          "All documentation must be version-controlled and auditable"
+        ],
+        "stakeholders": [
+          "research engineer",
+          "electrical engineer",
+          "commissioning engineer",
+          "operations manager",
+          "safety and compliance officer"
+        ],
+        "deadline_days": 21,
+        "risks": [
+          {
+            "risk": "Laboratory test results reveal instability or inaccurate state-of-charge estimation.",
+            "mitigation": "Iterate on algorithms with additional test cycles and define fallback thresholds before field deployment."
+          },
+          {
+            "risk": "Pilot site installation conflicts with existing electrical layout or capacity limits.",
+            "mitigation": "Perform detailed feasibility study and load analysis with updated site drawings before final design freeze."
+          },
+          {
+            "risk": "Commissioning window is missed due to delays in hardware delivery or lab validation.",
+            "mitigation": "Pre-qualify alternative suppliers and stage partial pre-commissioning tests in the lab environment."
+          },
+          {
+            "risk": "Non-compliance with safety standards leads to additional approvals or rework.",
+            "mitigation": "Engage safety and compliance officer early to review requirements and sign off on designs and procedures."
+          },
+          {
+            "risk": "Data collected during pilot is insufficient to draw conclusions on long-term performance.",
+            "mitigation": "Define minimum data set and sampling strategy upfront and extend pilot duration if early data is inconclusive."
+          }
+        ]
+      },
+      "themes": [
+        {
+          "theme": "Lab validation vs. field conditions",
+          "why_relevant": "Bridges controlled test results with real-world performance and informs design margins."
+        },
+        {
+          "theme": "Safety and compliance",
+          "why_relevant": "Battery systems and monitoring must meet strict electrical and lab safety standards."
+        },
+        {
+          "theme": "System integration and interfaces",
+          "why_relevant": "Monitoring must integrate with existing BMS, SCADA, and site electrical infrastructure."
+        },
+        {
+          "theme": "Commissioning planning and execution",
+          "why_relevant": "Tight site downtime window requires precise planning and clear procedures."
+        },
+        {
+          "theme": "Data quality and analytics",
+          "why_relevant": "Reliable data is needed to evaluate feasibility and justify scaling beyond the pilot."
+        }
+      ],
+      "backlog": [
+        {
+          "task_id": "T1",
+          "task": "Define system architecture and detailed technical requirements for the smart battery monitoring pilot.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Requirements document reviewed by electrical engineer and commissioning engineer",
+            "Interfaces to existing BMS and SCADA clearly specified",
+            "Safety and compliance requirements explicitly listed",
+            "Version-controlled document stored and linked in project workspace"
+          ]
+        },
+        {
+          "task_id": "T2",
+          "task": "Develop laboratory test plan and procedures for validating sensors and monitoring algorithms.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Test matrix covers temperature, load profiles, and fault scenarios",
+            "Lab safety procedures integrated into test steps",
+            "Test plan approved by safety and compliance officer",
+            "Test plan stored in shared repository with version history"
+          ]
+        },
+        {
+          "task_id": "T3",
+          "task": "Execute laboratory tests and produce validation report for monitoring system performance.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "All planned tests executed or deviations documented",
+            "Raw data archived with clear labeling and metadata",
+            "Key performance metrics summarized with pass/fail criteria",
+            "Validation report reviewed and signed off by project team"
+          ]
+        },
+        {
+          "task_id": "T4",
+          "task": "Create electrical integration design and wiring diagrams for pilot site installation.",
+          "owner_role": "electrical engineer",
+          "definition_of_done": [
+            "Single-line diagrams and wiring schematics completed in CAD",
+            "Load and protection calculations documented",
+            "Design reviewed for compliance with site standards",
+            "Drawings released with revision control and shared with commissioning engineer"
+          ]
+        },
+        {
+          "task_id": "T5",
+          "task": "Perform feasibility study of pilot site constraints and installation options.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Existing site layout and electrical capacity assessed",
+            "Installation options compared with pros/cons",
+            "Risks and required shutdown windows identified",
+            "Feasibility summary shared and agreed with operations manager"
+          ]
+        },
+        {
+          "task_id": "T6",
+          "task": "Prepare commissioning and acceptance test procedures for the pilot system.",
+          "owner_role": "commissioning engineer",
+          "definition_of_done": [
+            "Step-by-step commissioning checklist drafted",
+            "Functional and safety tests clearly defined with expected results",
+            "Procedures reviewed by research engineer and electrical engineer",
+            "Final version stored and linked for on-site use"
+          ]
+        },
+        {
+          "task_id": "T7",
+          "task": "Coordinate and execute on-site installation and commissioning of the monitoring system.",
+          "owner_role": "commissioning engineer",
+          "definition_of_done": [
+            "Installation completed within agreed downtime window",
+            "All commissioning tests executed and logged",
+            "Any defects recorded with follow-up actions",
+            "Operations team briefed on system status and handover completed"
+          ]
+        },
+        {
+          "task_id": "T8",
+          "task": "Draft operational guidelines and safety checklist for ongoing use of the monitoring system.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Normal operation, alarms, and escalation paths documented",
+            "Safety precautions and lockout/tagout steps included",
+            "Guidelines reviewed by commissioning engineer and safety officer",
+            "Checklist formatted for easy use by site technicians"
+          ]
+        },
+        {
+          "task_id": "T9",
+          "task": "Define data collection, storage, and analysis approach for the pilot phase.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Key metrics and sampling rates defined",
+            "Data retention and access rules agreed with operations",
+            "Data schema and naming conventions documented",
+            "Plan approved by project team and referenced in pilot report"
+          ]
+        },
+        {
+          "task_id": "T10",
+          "task": "Produce post-pilot performance and feasibility assessment report with recommendations.",
+          "owner_role": "research engineer",
+          "definition_of_done": [
+            "Pilot data analyzed against success criteria",
+            "Issues, incidents, and lessons learned summarized",
+            "Recommendation on scaling or redesign clearly stated",
+            "Report shared with stakeholders and archived"
+          ]
+        },
+        {
+          "task_id": "T11",
+          "task": "Review and update electrical design based on lab findings and pilot feedback.",
+          "owner_role": "electrical engineer",
+          "definition_of_done": [
+            "Change impacts assessed and documented",
+            "Updated drawings issued with new revision",
+            "Commissioning procedures checked for alignment",
+            "Stakeholders informed of design changes"
+          ]
+        },
+        {
+          "task_id": "T12",
+          "task": "Track and resolve defects or issues identified during commissioning and early operation.",
+          "owner_role": "commissioning engineer",
+          "definition_of_done": [
+            "Issue log created and kept up to date",
+            "Root cause and corrective actions documented for each issue",
+            "High-priority issues closed or accepted with workaround",
+            "Summary shared in post-pilot assessment"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "A1",
+          "type": "doc",
+          "title": "Smart Battery Monitoring System Requirements Specification",
+          "used_for": "Captures functional, interface, and safety requirements for the pilot system."
+        },
+        {
+          "artifact_id": "A2",
+          "type": "doc",
+          "title": "Laboratory Test Plan and Validation Report",
+          "used_for": "Defines lab tests and records results to validate sensors and algorithms before deployment."
+        },
+        {
+          "artifact_id": "A3",
+          "type": "sheet",
+          "title": "Pilot Site Feasibility and Load Analysis Sheet",
+          "used_for": "Stores calculations, site constraints, and comparison of installation options."
+        },
+        {
+          "artifact_id": "A4",
+          "type": "checklist",
+          "title": "Commissioning and Acceptance Test Checklist",
+          "used_for": "Guides on-site commissioning steps and records pass/fail outcomes."
+        },
+        {
+          "artifact_id": "A5",
+          "type": "guideline",
+          "title": "Operational Guidelines and Safety Checklist for Monitoring System",
+          "used_for": "Provides daily operation steps, alarm handling, and safety precautions for technicians."
+        },
+        {
+          "artifact_id": "A6",
+          "type": "doc",
+          "title": "Post-Pilot Performance and Feasibility Assessment Report",
+          "used_for": "Summarizes pilot results, issues, and recommendations for scaling or redesign."
+        },
+        {
+          "artifact_id": "A7",
+          "type": "other",
+          "title": "Issue and Defect Tracking Log",
+          "used_for": "Tracks issues found during lab tests and commissioning with status and actions."
+        },
+        {
+          "artifact_id": "A8",
+          "type": "other",
+          "title": "Electrical Integration Drawings Package",
+          "used_for": "Contains single-line diagrams and wiring schematics for the pilot installation."
+        }
+      ]
+    },
+    "blueprint": {
+      "channel_name_hint": "proj-smart-battery-pilot",
+      "threads_plan": [
+        {
+          "thread_id": "TH1",
+          "thread_goal": "Align on system requirements, architecture, and pilot scope before lab work starts.",
+          "trigger": "Initial kick-off message sharing draft requirements and asking for feedback.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Approve the final version of the system requirements specification for the pilot."
+            },
+            {
+              "decision_id": "D2",
+              "decision": "Agree on the pilot success criteria and key performance metrics."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A1",
+            "T1",
+            "T5",
+            "A3"
+          ]
+        },
+        {
+          "thread_id": "TH2",
+          "thread_goal": "Define and refine the laboratory test plan and validation approach.",
+          "trigger": "Research engineer posts first draft of the lab test plan for review.",
+          "target_messages_range": [
+            16,
+            24
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D3",
+              "decision": "Sign off on the lab test matrix and safety procedures so testing can start."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A2",
+            "T2",
+            "T3",
+            "A7"
+          ]
+        },
+        {
+          "thread_id": "TH3",
+          "thread_goal": "Finalize electrical integration design and confirm site feasibility constraints.",
+          "trigger": "Electrical engineer shares preliminary integration drawings and asks for site feedback.",
+          "target_messages_range": [
+            15,
+            23
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D4",
+              "decision": "Confirm the selected installation option and integration approach for the pilot site."
+            },
+            {
+              "decision_id": "D5",
+              "decision": "Freeze the electrical design revision to be used for commissioning preparation."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A3",
+            "A8",
+            "T4",
+            "T11"
+          ]
+        },
+        {
+          "thread_id": "TH4",
+          "thread_goal": "Plan and coordinate on-site commissioning activities and responsibilities.",
+          "trigger": "Commissioning engineer posts draft commissioning checklist and proposed schedule.",
+          "target_messages_range": [
+            17,
+            25
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D6",
+              "decision": "Approve the commissioning and acceptance test checklist and schedule."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A4",
+            "T6",
+            "T7",
+            "T12",
+            "A7"
+          ]
+        },
+        {
+          "thread_id": "TH5",
+          "thread_goal": "Agree on operational guidelines, data collection plan, and post-pilot reporting.",
+          "trigger": "Research engineer shares draft operational guidelines and data plan near pilot start.",
+          "target_messages_range": [
+            16,
+            24
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D7",
+              "decision": "Approve operational guidelines and safety checklist for site technicians."
+            },
+            {
+              "decision_id": "D8",
+              "decision": "Confirm structure and ownership of the post-pilot assessment report."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A5",
+            "A6",
+            "T8",
+            "T9",
+            "T10"
+          ]
+        }
+      ],
+      "talk_distribution_by_role": [
+        {
+          "role": "research engineer",
+          "share": 0.46
+        },
+        {
+          "role": "electrical engineer",
+          "share": 0.2
+        },
+        {
+          "role": "commissioning engineer",
+          "share": 0.24
+        },
+        {
+          "role": "research and development manager",
+          "share": 0.05
+        },
+        {
+          "role": "higher education lecturer",
+          "share": 0.05
+        }
+      ],
+      "channel_rituals": [
+        "Daily async check-in each morning with yesterday/today/risks updates.",
+        "Twice-weekly lab and site status summary post with key findings and open issues.",
+        "Design review mini-ritual when a major document revision is shared for comments.",
+        "Post-commissioning debrief thread capturing lessons learned and improvement ideas."
+      ]
+    },
+    "participants": [
+      {
+        "_id": 9197,
+        "role": "electrical engineer"
+      },
+      {
+        "_id": 11752,
+        "role": "research engineer"
+      },
+      {
+        "_id": 478747,
+        "role": "research engineer"
+      },
+      {
+        "_id": 478887,
+        "role": "research engineer"
+      },
+      {
+        "_id": 523835,
+        "role": "commissioning engineer"
+      }
+    ]
+  }
+}

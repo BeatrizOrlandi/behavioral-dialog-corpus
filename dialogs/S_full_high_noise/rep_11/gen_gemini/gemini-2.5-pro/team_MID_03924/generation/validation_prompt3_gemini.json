@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH4 and TH5 contain 15 messages each, which is below the minimum required of 16 messages per thread. Additionally, TH4's 15 messages fall outside the blueprint's target_messages_range of [22, 30]."
+    },
+    {
+      "severity": "MID",
+      "code": "INVALID_REF",
+      "detail": "In thread TH5's thread_outcome.next_steps, 'A6' and 'A4' are incorrectly used as task_ids instead of valid backlog task IDs."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

@@ -1,0 +1,1448 @@
+{
+  "channel": {
+    "channel_id": "C-proj-field-service-workflow",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current workflows and main pain points across all service types.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Hi team, kicking off the Field Service Workflow Standardisation project. I've compiled A1 with current repair workflows across appliances, power tools, telecom, and electronics. The maps show where we are today—now we need to identify the top pain points that are driving rework and scheduling issues. Please review A1 and share your frontline observations. What's breaking down most often in your daily work?",
+            "mentions": [
+              47068,
+              61983,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 61983,
+            "reply_to": "M1",
+            "text": "Reviewed A1. For power tools, the biggest issue is that we're doing diagnostic steps in random order—sometimes we test electrical before checking for obvious mechanical damage. Wastes time and leads to misdiagnosis. Also, when a tool needs parts, we don't have a clear handoff to warehouse, so jobs sit waiting. That's a major bottleneck.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 125309,
+            "reply_to": "M1",
+            "text": "For telecom and electronics, I see two main pain points. First, we don't have a standard pre-visit checklist, so we sometimes arrive without the right tools or info about the customer's setup. Second, signal testing and logging is inconsistent—some jobs have full readings, others have none. Makes it hard to track what actually worked. Also, scheduling doesn't account for travel time between sites, so we're constantly running late.",
+            "mentions": [
+              547643,
+              319539
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 47068,
+            "reply_to": "M1",
+            "text": "Looking at A1 for appliances. The main issue I see is that we don't have a consistent intake process. Customers describe problems differently, and we end up asking the same questions multiple times during the visit. Also, we're not capturing estimated vs actual repair time, so we can't learn where we're off. And safety checks—we do them, but there's no standard order, so sometimes we miss steps when we're busy.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 319539,
+            "reply_to": "M3",
+            "text": "Agree on the scheduling issue. From a logistics side, we're also not coordinating well with technicians. Sometimes a mover and a technician show up at the same site but don't know each other's timeline. Heavy equipment moves need coordination—if the tech isn't ready, we're blocking the next job. A1 doesn't really show this dependency clearly.",
+            "mentions": [
+              125309,
+              547643
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 63344,
+            "reply_to": "M2",
+            "text": "On the power tool side, I'd add that we don't have clear criteria for when to escalate a repair vs when to scrap a tool. That leads to rework when a tool comes back from a customer still broken. Also, the parts inventory isn't linked to our diagnostics, so we order wrong parts sometimes.",
+            "mentions": [
+              61983,
+              547643
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 547643,
+            "reply_to": "M6",
+            "text": "Good points all around. Let me summarise what I'm hearing as the top three pain points:\n1. Inconsistent diagnostic and intake processes (appliances, power tools, telecom)—leads to misdiagnosis and rework.\n2. No standard handoff between technicians and warehouse/logistics—jobs stall waiting for parts or coordination.\n3. Scheduling doesn't account for travel time or technician-mover dependencies—causes late arrivals and missed appointments.\n\nDoes this capture it? Should we lock these as D1?",
+            "mentions": [
+              47068,
+              61983,
+              125309,
+              319539,
+              63344
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 61983,
+            "reply_to": "M7",
+            "text": "Yes, that's it. Those three cover what I see every day.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 125309,
+            "reply_to": "M7",
+            "text": "Agreed. And for the pilot, I'd suggest we start with appliances and power tools—those are the highest volume. Telecom can follow once we validate the diagnostic checklist approach works.",
+            "mentions": [
+              547643,
+              47068,
+              61983
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 47068,
+            "reply_to": "M9",
+            "text": "That makes sense. Appliances and power tools first, then we can expand. Gives us time to refine before adding telecom complexity.",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 547643,
+            "reply_to": "M9",
+            "text": "Perfect. So D1 is locked: top three pain points are diagnostic inconsistency, warehouse handoff, and scheduling gaps. D2 is locked: pilot scope is appliances and power tools, with telecom as phase two. Next step is drafting the diagnostic checklists. T2 and T3 owners, can you start on those this week?",
+            "mentions": [
+              47068,
+              61983
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 47068,
+              "when": "EOD this week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 61983,
+              "when": "EOD this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and iterate on diagnostic checklists for appliances and power tools.",
+        "messages": [
+          {
+            "msg_id": "M12",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Posting first drafts of A2 (appliance diagnostic checklist) and A3 (power tool checklist). These are based on T1 workflow maps and feedback from TH1. Please review for completeness, clarity, and whether the steps match what you actually do in the field. Flag anything missing or redundant.",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 47068,
+            "reply_to": "M12",
+            "text": "Reviewed A2. The intake section looks good—customer info, symptom description, safety check. But I notice the diagnostic steps jump from visual inspection straight to testing. We should add a step to verify the appliance model and check the manual for known issues first. Saves time if it's a common problem. Also, the 'parts used' field needs a link to warehouse so we can track what we ordered.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 61983,
+            "reply_to": "M12",
+            "text": "A3 is close, but I have concerns. The electrical test section assumes we have a multimeter and a load tester on every job. We don't always. Also, for battery tools, we need a separate path—battery diagnostics are different from corded. The current version mixes them. And I'd add a step to document the tool's condition before we start—photos or notes—so if a customer disputes the repair, we have proof of what we received.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 63344,
+            "reply_to": "M14",
+            "text": "I agree on the battery vs corded split. Also, A3 doesn't have a clear 'go/no-go' decision point. When do we decide a tool is beyond repair? Right now that's vague, and we end up doing rework. We need a decision tree or a cost threshold.",
+            "mentions": [
+              61983,
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 125309,
+            "reply_to": "M12",
+            "text": "Not directly on A2 or A3, but I want to flag that when we roll this out, we'll need training. The checklists look detailed, and if people don't understand why each step matters, they'll skip them under time pressure. Just a heads-up for T12.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 547643,
+            "reply_to": "M13",
+            "text": "Good catch on the model verification step for A2. I'll add that. On the warehouse link, that's part of the scheduling and handoff process (T5), so we'll tie it together. Let me revise A2 with your input.",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 547643,
+            "reply_to": "M14",
+            "text": "On A3: you're right about battery vs corded. I'll split that into two paths. On the equipment condition documentation, that's smart—I'll add a 'pre-repair photo/notes' field. For the go/no-go decision, let's add a simple rule: if repair cost exceeds 40% of replacement cost, escalate to supervisor. Does that work?",
+            "mentions": [
+              61983
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 61983,
+            "reply_to": "M18",
+            "text": "40% threshold works for most tools. There are edge cases—vintage or specialty tools where the customer wants it fixed no matter the cost—but we can handle those as exceptions in the SOP. The split between battery and corded is essential though.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 63344,
+            "reply_to": "M18",
+            "text": "The 40% rule is reasonable. I'd just add that if we escalate, we document the reason so we can learn patterns. But overall, that should reduce rework.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 547643,
+            "reply_to": "M19",
+            "text": "Revising A2 and A3 now with all feedback. I'll have updated versions by EOD tomorrow. Then we need to test them in a small pilot run—maybe 5-10 jobs each—before we lock them in for D3 and D4. Can you all commit to using the new checklists on your next jobs and logging any issues?",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 47068,
+            "reply_to": "M21",
+            "text": "Yes, I can pilot A2 on my next appliance jobs. I'll note anything that slows me down or doesn't make sense.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 61983,
+            "reply_to": "M21",
+            "text": "I'm in. I'll use A3 on the next power tool jobs and flag anything that doesn't work.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 63344,
+            "reply_to": "M21",
+            "text": "I'll pilot too. Let's see how the battery/corded split works in practice.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 547643,
+            "reply_to": "M24",
+            "text": "Great. I'll consolidate feedback in 3 days and we'll make final calls on D3 and D4. After that, these checklists feed into T11 (refinement based on full pilot results) and T8 (the master SOP document).",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T11",
+              "T8"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 47068,
+              "when": "pilot feedback in 3 days"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 61983,
+              "when": "pilot feedback in 3 days"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 61983,
+              "when": "after pilot consolidation"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on telecom/electronics visit SOP and safety/handling procedures.",
+        "messages": [
+          {
+            "msg_id": "M26",
+            "speaker_id": 125309,
+            "reply_to": null,
+            "text": "Sharing draft A4 (telecom and electronics service visit SOP) based on T4 workflow mapping. This covers pre-visit checks, installation/repair steps, and signal testing/logging. Also includes safety and regulatory compliance notes. Please review and flag gaps or unclear steps.",
+            "mentions": [
+              547643,
+              319539
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 319539,
+            "reply_to": null,
+            "text": "And I'm posting draft A6 (handling and transport safety checklist) based on T6. This covers packing, lifting, securing heavy or fragile equipment, and coordination with technicians on-site. Includes compliance with safety guidelines. Feedback welcome.",
+            "mentions": [
+              547643,
+              125309
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 547643,
+            "reply_to": "M26",
+            "text": "Reviewed A4. The pre-visit section is solid—customer contact, site survey, tool checklist. But I notice the signal testing section doesn't specify what readings to log or how to format them. That was a pain point from TH1. Can you add a standard template for signal strength, latency, and any config changes?",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 125309,
+            "reply_to": "M28",
+            "text": "Good point. I'll add a logging template. Also, I want to clarify the scope—A4 covers telecom installs and consumer electronics repairs, but they're quite different. Should we split them or keep one SOP with two sections?",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 547643,
+            "reply_to": "M29",
+            "text": "Keep them together for now—they share the pre-visit and safety steps. We can have separate diagnostic sections. Easier to maintain one document.",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 547643,
+            "reply_to": "M27",
+            "text": "Reviewed A6. The packing and lifting steps are clear. But I'm not seeing the coordination protocol with technicians. If a mover and tech are on the same job, who decides the sequence? What if the tech isn't ready when the mover arrives? Can you add a handoff checklist?",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 319539,
+            "reply_to": "M31",
+            "text": "That's a good catch. Right now we just show up and figure it out on the spot. I'll add a section on arrival protocol—who arrives first, how we communicate, and what the tech needs to do before we start moving heavy stuff. Also, I'll add a safety sign-off where both the mover and tech confirm the site is clear.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 125309,
+            "reply_to": "M32",
+            "text": "That coordination piece is critical. From my side, I need to know when the mover is arriving so I can prep the site. If we add that to A6, it should also be reflected in the scheduling rules (T5) so the system actually assigns us at compatible times.",
+            "mentions": [
+              319539,
+              547643
+            ],
+            "artifact_refs": [
+              "A6",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 547643,
+            "reply_to": "M33",
+            "text": "Noted. T5 (scheduling rules) will include a buffer for mover-technician coordination. Let me revise A4 and A6 with the logging template and coordination protocol. I'll have updated versions by tomorrow EOD.",
+            "mentions": [
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 319539,
+            "reply_to": "M34",
+            "text": "Sounds good. Once you add the coordination section, I can review it and confirm it's workable from a logistics standpoint.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 125309,
+            "reply_to": "M34",
+            "text": "I'll review the logging template once it's in A4. I want to make sure it's quick to fill out in the field—we don't have much time between jobs.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 547643,
+            "reply_to": "M36",
+            "text": "Understood. I'll keep the template minimal—just the essentials. Once I post the revisions, can you both sign off on D5 and D6 so we can move forward with T8 (master SOP) and T9 (pilot planning)?",
+            "mentions": [
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 125309,
+            "reply_to": "M37",
+            "text": "Yes, I'll review and sign off on D5 once the logging template is in place.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 319539,
+            "reply_to": "M37",
+            "text": "Same here for D6. Once the coordination protocol is clear, I can confirm A6 is ready for pilot.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 125309,
+              "when": "revisions EOD tomorrow"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 319539,
+              "when": "revisions EOD tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 547643,
+              "when": "after D5 and D6 sign-off"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Lock in scheduling rules and customer communication approach.",
+        "messages": [
+          {
+            "msg_id": "M40",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Posting draft A5 (scheduling and job allocation rules) and A7 (customer communication playbook). A5 is based on T5 workflow analysis and addresses the scheduling gaps we identified in TH1—travel time, mover-tech coordination, and load limits. A7 covers pre-visit, on-site, and post-visit communication templates. Please review and flag any issues.",
+            "mentions": [
+              47068,
+              61983,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 319539,
+            "reply_to": "M40",
+            "text": "Reviewed A5. The travel buffer and load limits look reasonable. But I'm not seeing how we handle same-day reschedules if a job runs long. If a tech is delayed, does the next mover job get pushed? Who decides? Need a clear escalation path.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 125309,
+            "reply_to": "M40",
+            "text": "A7 looks good overall. The pre-visit template is clear—arrival time, what to expect, contact number. But the on-site section assumes we always have a quote ready. Sometimes we need to diagnose first, then quote. Can we add a 'diagnosis-first' path for complex jobs?",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 47068,
+            "reply_to": "M40",
+            "text": "On A7, I like the post-visit follow-up template. But for appliances, customers often ask about warranty or next steps. Should we add a section on what we promise vs what we don't? Right now that's vague and leads to disputes.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 547643,
+            "reply_to": "M41",
+            "text": "Good point on reschedules. I'll add a rule: if a job runs over 30 minutes, the tech notifies dispatch immediately. Dispatch then decides whether to push the next job or send a second tech. For now, let's keep it simple—push the next job and notify the customer. We can refine this after the pilot.",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 547643,
+            "reply_to": "M42",
+            "text": "On the diagnosis-first path: yes, that's common. I'll add a variant template for 'diagnostic visit' where we don't quote on-site, just gather info and follow up within 24 hours. That should cover complex jobs.",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 547643,
+            "reply_to": "M43",
+            "text": "On warranty and next steps: I'll add a standard statement to the post-visit template. Something like 'We guarantee our work for 30 days. If issues arise, contact us within that window.' And for next steps, we'll note whether it's a one-time fix or if the customer should expect follow-up. Does that work?",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 47068,
+            "reply_to": "M46",
+            "text": "Yes, that's clear. 30 days is standard for us anyway.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 319539,
+            "reply_to": "M44",
+            "text": "The 30-minute rule works. But I'd add: if a job is pushed, the mover gets notified at the same time as the customer. Right now we find out last, which messes up our next stop.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 547643,
+            "reply_to": "M48",
+            "text": "Absolutely. Dispatch notifies both customer and mover simultaneously. I'll add that to A5.",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 125309,
+            "reply_to": "M45",
+            "text": "The diagnostic-visit variant is good. That covers most of my complex jobs.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 547643,
+            "reply_to": "M50",
+            "text": "Great. I'll revise A5 and A7 with all feedback by EOD tomorrow. Then we need sign-off on D7 and D8 before we can finalize T8 and move to T9 (pilot planning). Can you all review the revisions and confirm?",
+            "mentions": [
+              47068,
+              61983,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 319539,
+            "reply_to": "M51",
+            "text": "I'll review A5 revisions and sign off on D7 once the mover notification rule is in place.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 125309,
+            "reply_to": "M51",
+            "text": "I'll review A7 and sign off on D8 once the diagnostic-visit variant is clear.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 47068,
+            "reply_to": "M51",
+            "text": "I'll review both and confirm.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 547643,
+              "when": "revisions EOD tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 547643,
+              "when": "revisions EOD tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 547643,
+              "when": "after D7 and D8 sign-off"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan pilot, review results, and confirm adjustments before rollout.",
+        "messages": [
+          {
+            "msg_id": "M55",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Posting draft A8 (pilot results and recommendations report). This summarises data from T9 (pilot execution) and T10 (metrics collection). We ran the pilot for 2 weeks with appliance and power tool jobs. Key metrics: rework rate dropped from 12% to 8%, average job time increased by 6% (within our 10% constraint), and customer satisfaction improved. Full details in A8. Please review and let's discuss what worked and what needs refinement.",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 61983,
+            "reply_to": "M55",
+            "text": "Reviewed A8. The rework reduction is solid. But I noticed that the 6% time increase came mostly from the pre-repair documentation step in A3—taking photos and notes. It's valuable, but it's slowing us down. Can we streamline it? Maybe just photos for high-value tools?",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A8",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 47068,
+            "reply_to": "M55",
+            "text": "A8 looks good. The rework drop is what we wanted. On A2, the model verification step I suggested is working—it's catching common issues faster. But I'm seeing that some appliances don't have a manual available online. We need a fallback for those. Maybe a quick call to the manufacturer or a standard troubleshooting path?",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A8",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 63344,
+            "reply_to": "M55",
+            "text": "The pilot results are encouraging. But I want to flag that the 40% repair cost threshold in A3 is working, but we're getting pushback from customers on some edge cases. Vintage tools, sentimental value, etc. We need a clearer escalation process for those. Right now it's ad hoc.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A8",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 547643,
+            "reply_to": "M56",
+            "text": "On the documentation step: I hear you. Let's refine it—photos only for tools over a certain value (say, $200+), and notes for all. That should cut the time impact. I'll update A3 and we can test it on the next batch of jobs.",
+            "mentions": [
+              61983
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 547643,
+            "reply_to": "M57",
+            "text": "On the manual fallback for A2: good point. I'll add a decision tree—if manual not available, check our internal database, then call the manufacturer, then use standard troubleshooting. That should cover most cases.",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 547643,
+            "reply_to": "M58",
+            "text": "On the cost threshold edge cases: I'll add a supervisor escalation rule to A3. If a customer disputes the 40% threshold or has special circumstances, the tech documents the reason and escalates to a supervisor for approval. That gives us flexibility without losing the standard rule.",
+            "mentions": [
+              63344
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 61983,
+            "reply_to": "M59",
+            "text": "The $200+ threshold for photos makes sense. That should speed things up without losing the protection on high-value tools.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 47068,
+            "reply_to": "M60",
+            "text": "The decision tree for manuals is good. I'll test it on the next batch and let you know if there are other gaps.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 63344,
+            "reply_to": "M61",
+            "text": "Supervisor escalation works. That gives us a safety valve for edge cases.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 547643,
+            "reply_to": "M64",
+            "text": "Good. So to confirm: the top three pain points from D1 (diagnostic inconsistency, warehouse handoff, scheduling gaps) have all been addressed in the pilot. Rework is down, time is within limits, and customer satisfaction is up. I'm proposing we lock D1 as 'addressed' and D4 as 'final version of A3 approved for rollout.' Does that work?",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 61983,
+            "reply_to": "M65",
+            "text": "Yes, with the photo threshold and supervisor escalation in place, A3 is ready for rollout.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 47068,
+            "reply_to": "M65",
+            "text": "Agreed. A2 with the manual fallback is solid too.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 547643,
+            "reply_to": "M67",
+            "text": "Perfect. I'll finalize A2 and A3 with all refinements by EOD today. Then T11 (checklist refinement) is complete, and we move to T12 (rollout planning and training). I'll schedule a kickoff meeting for training materials and rollout timeline. We're on track for the 21-day deadline.",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T11",
+              "T12"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 61983,
+            "reply_to": "M68",
+            "text": "Good. Let me know when you need input on training—I can help with the power tool section.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 47068,
+            "reply_to": "M68",
+            "text": "Same here for appliances. I can help with training materials.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T11",
+              "owner_id": 61983,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 547643,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 547643,
+              "when": "final consolidation EOD today"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

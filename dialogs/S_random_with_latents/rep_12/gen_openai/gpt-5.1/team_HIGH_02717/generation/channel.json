@@ -1,0 +1,1452 @@
+{
+  "channel": {
+    "channel_id": "#moving-accounting-process-pilot",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current workflow and define target process scope",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 253807,
+            "reply_to": null,
+            "text": "Kicking off this channel for the moving unit. For this first thread, can we map how a job currently goes from first customer contact to final posting in the ledger? The idea is to get enough detail for T1 and to shape A1 later.\n\nCould each of you walk through what you actually do today, step by step, including handovers and where info is stored (paper, WhatsApp, email, system)? I will consolidate into a draft process map and highlight gaps.",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wave",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 395422,
+            "reply_to": "M1",
+            "text": "From the truck side, it usually goes like this:\n- Ops sends me the job details by message (address, date, rough volume).\n- On the day, I note start and end time on a paper sheet and sometimes add extra stops.\n- If there are special items, I write a short note, but not always.\n- At the end of the day I send a photo of the sheet to the office group chat or drop the paper at the depot.\nI do not see what happens after that in the accounts. I can try to be more systematic once we agree what you really need from us.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 483272,
+            "reply_to": "M1",
+            "text": "On the accounting side, when we receive those photos or papers, I usually:\n- Create or update the customer in the system.\n- Check the job date and hours and compare with the booking calendar.\n- Calculate the charge based on hours and any fixed fees.\n- Issue the sales invoice and email it to the customer.\n- Post the invoice to revenue and VAT accounts.\nSometimes I have to guess missing info, like distance or number of movers, which is risky for both pricing and tax. That is one of the main gaps I see today.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 476700,
+            "reply_to": "M1",
+            "text": "My steps are similar to what 483272 described, but I also try to attach any supporting notes to the transaction in the system, especially when there are special items or long-distance moves.\n\nI am not fully sure where the process should officially start and end for this project. Is it from the first customer call, or only from when the job is confirmed? And do we include debt collection steps, or stop at posting the invoice?",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 561948,
+            "reply_to": "M1",
+            "text": "Adding what I see when I cover invoicing:\n- Sometimes we get only a job nickname like 'Smith move' without a clear booking reference.\n- Hours are usually there, but distance and extra charges (packing materials, stairs, waiting time) are not always written.\n- For tax, I rely on the standard service VAT code, but if there are items like boxes sold separately, it is not obvious from the sheet.\nThis is where I think A1 will help us see where to plug in checks so we do not miss revenue or misapply tax.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 253807,
+            "reply_to": "M4",
+            "text": "Good question on scope. For this standard process, I suggest we:\n- Start at the point when a move is confirmed and a job is created in the booking calendar.\n- End when the sales invoice is posted correctly in the ledger with the right tax code and any supporting documents attached.\nDebt collection can stay in the general receivables process for now.\n\nIf no one objects, I will reflect that in the draft of A1 and T1. We can still show earlier steps (quote, enquiry) as context but not as part of the core flow.",
+            "mentions": [
+              476700,
+              483272,
+              561948,
+              395422
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 483272,
+            "reply_to": "M6",
+            "text": "I am fine with that start and end. From a practical point of view, that is where we can control data quality and compliance.\n\nOn the data we need from movers, I would list at least:\n- Job date and start/end time.\n- Customer name and address.\n- Number of movers.\n- Any extra services like packing or storage.\n- Notes on special items.\nWe can then see what is really mandatory versus nice to have.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 395422,
+            "reply_to": "M7",
+            "text": "From the truck, we can reliably give you:\n- Date, start and finish time.\n- Customer name and both addresses.\n- Number of movers and truck used.\n- Basic list of extra services (packing, boxes sold, stairs, long carry).\nIf we make the sheet clear, we can also tick if there were delays or waiting time. I would avoid anything that needs long writing on site.",
+            "mentions": [
+              483272
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 561948,
+            "reply_to": "M7",
+            "text": "For accounting and tax, I think we must insist on a few fields:\n- Clear customer identifier (name plus at least one contact detail).\n- Job date and completion time.\n- Description of service that will appear on the invoice (for example: local move, long-distance move, packing service).\n- Quantity drivers we use for pricing: hours, distance band, number of movers.\nWithout those, we either undercharge or cannot justify the invoice in case of an audit.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 476700,
+            "reply_to": "M8",
+            "text": "Would it be enough if movers always fill in:\n- Customer name and both addresses.\n- Date, start and end time.\n- Number of movers.\n- A simple code for the type of job (for example: LM for local move, LD for long distance, PK for packing only)?\nThen we can translate those codes into the right description and tax treatment when we issue the invoice.",
+            "mentions": [
+              395422,
+              253807
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 395422,
+            "reply_to": "M10",
+            "text": "Yes, codes like that are fine as long as they are on the sheet itself so we do not have to remember them. Maybe a small legend printed at the top.\n\nOne more thing: do you need us to write down tools or materials used, or will that be handled separately in the tools checklist?",
+            "mentions": [
+              476700,
+              253807
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 253807,
+            "reply_to": "M11",
+            "text": "For this main process, I would keep tools tracking in its own checklist so the job sheet does not get overloaded. We can link the two later in A1.\n\nOn mandatory data from movers for accounting, based on the comments so far I propose we lock in:\n- Customer name and at least one contact detail.\n- Job date.\n- Start and end time.\n- Number of movers.\n- Both addresses.\n- Job type code (for example LM, LD, PK) and a tick box for extra services like packing or boxes sold.\nEverything else can be optional notes.\nIf you agree, I will mark this as the minimum set we will design into T2 and reflect in A1.",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 483272,
+            "reply_to": "M12",
+            "text": "Works for me. With that minimum set, we can calculate charges, apply the right tax code, and keep a clear audit trail.\n\nOnce you have a first draft of A1, I am happy to review it against a few recent jobs to see if we missed any steps or data points.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 561948,
+            "reply_to": "M12",
+            "text": "Agree with the mandatory list. Maybe we can add a small field for internal booking reference as optional, so we can cross-check with the calendar more easily, but I would not make it blocking for movers.\n\nLooking forward to seeing the first version of the process map so we can spot where to add checks for missing data before invoicing.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 476700,
+            "reply_to": "M12",
+            "text": "I am aligned as well. Once we have A1 and the job sheet draft, it will be easier to explain the flow to both movers and the rest of the accounting team.\n\nLet us also keep in mind that T1 asks us to document at least five recent moves. I can help gather those examples from the system so we can test the process map against real cases.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 253807,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 395422,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalise the standard moving job sheet for movers",
+        "messages": [
+          {
+            "msg_id": "M16",
+            "speaker_id": 395422,
+            "reply_to": null,
+            "text": "I have put together a first draft of the moving job sheet for T2, based on what we agreed as mandatory data in the previous thread. It is in A2.\n\nLayout idea:\n- Top: customer name, contact, both addresses, booking reference.\n- Middle: date, start/end time, number of movers, truck.\n- Section with tick boxes for job type (LM, LD, PK) and extras (packing, boxes sold, stairs, waiting time).\n- Small notes area at the bottom.\nCan you check if this covers what you need for invoicing and posting, and if the layout is clear enough for use on the truck?",
+            "mentions": [
+              253807,
+              483272,
+              561948,
+              476700
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 253807,
+            "reply_to": "M16",
+            "text": "Thanks for the draft. From an accounting point of view, A2 already covers the basics.\nA few suggestions:\n- Add a field for total hours per mover or a simple way to calculate it.\n- Include a small box for internal notes like discount or special agreement.\n- Make sure the job type codes are explained on the sheet itself.\n\nWe also need to think about how this links to the tools checklist from T5 so movers do not have to fill in overlapping info twice.",
+            "mentions": [
+              395422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 483272,
+            "reply_to": "M16",
+            "text": "Looking at A2, I would also add:\n- A simple distance band (for example: up to 20 km, 20 to 100 km, over 100 km) instead of exact kilometers, so movers do not have to measure.\n- A tick box for storage involved, since that may affect tax and revenue accounts.\nOtherwise, the structure seems easy to read when we issue invoices.",
+            "mentions": [
+              395422,
+              253807
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 561948,
+            "reply_to": "M16",
+            "text": "From my side, I would just ask that the customer contact field is clearly labelled (phone or email) and that the notes area is not too small. Sometimes we need to record things like damaged items or waiting time reasons.\n\nOne question: do we expect movers to write any prices on A2, or will all pricing be done in the office?",
+            "mentions": [
+              395422,
+              253807
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 476700,
+            "reply_to": "M19",
+            "text": "I would prefer that movers do not write prices on the sheet, to avoid confusion with the final invoice. Maybe just a field for estimated hours agreed at booking, so we can compare with actual hours.\n\nAlso, should we include a signature line for the customer to confirm completion? That might help if there are disputes later.",
+            "mentions": [
+              395422,
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pen",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 395422,
+            "reply_to": "M20",
+            "text": "No problem leaving prices off. We can add a line for estimated hours and a customer signature at the bottom.\n\nOn the tools side, I suggest we keep A5 as a separate checklist but print it on the back of A2. That way we carry one sheet per job and still keep job data and tools checks distinct for T5.",
+            "mentions": [
+              253807,
+              561948
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 253807,
+            "reply_to": "M21",
+            "text": "Printing A5 on the back of A2 sounds efficient and should help movers remember the tools check without adding extra paper.\n\nBefore we freeze the layout, we also need to decide how movers will submit the completed sheets: photos, scans, or physical drop-off. That will affect how we design the header and where we place key fields.",
+            "mentions": [
+              395422,
+              483272,
+              561948,
+              476700
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 483272,
+            "reply_to": "M22",
+            "text": "From the office side, clear photos sent the same day would be ideal, so we can start invoicing without waiting for paper to come back.\n\nMaybe we can:\n- Ask movers to send a photo of A2 right after the job.\n- Keep the original paper in a folder in the truck and drop it at the depot once a week for archiving.\nThat way we have both speed and a physical backup.",
+            "mentions": [
+              395422,
+              253807
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "camera",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 395422,
+            "reply_to": "M23",
+            "text": "Photos right after the job are doable, as long as the sheet is not too crowded and the key fields are grouped at the top so they are readable in one picture.\n\nI would avoid scanning on site; that is not realistic in the truck. Paper drop-off once a week is fine for backup.",
+            "mentions": [
+              483272
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 561948,
+            "reply_to": "M22",
+            "text": "Agree that photos plus weekly paper drop-off is a good compromise. For us, the main thing is that the photo shows:\n- Customer and addresses.\n- Date and times.\n- Job type and extras.\nIf we design A2 so these are all in the top half, it will be easier to read even if the photo is not perfect.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 476700,
+            "reply_to": "M25",
+            "text": "So we are leaning towards: movers send a photo of A2 after each job, and drop off the originals weekly. No scanning requirement.\n\nIf everyone is ok with that, we can design the header of A2 to concentrate the mandatory fields there and leave the notes and signatures lower down.",
+            "mentions": [
+              253807,
+              395422,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 253807,
+            "reply_to": "M26",
+            "text": "Agreed on the submission method: photo after each job plus weekly paper drop-off.\n\nOn the fields and layout, let me summarise what we will lock into A2 for T2:\n- Header with customer name, contact, both addresses, booking reference.\n- Date, start/end time, number of movers, truck.\n- Job type codes with a printed legend, extras tick boxes, distance band, storage tick box.\n- Estimated hours, actual hours, customer signature.\n- Notes area.\n- A5 printed on the back for tools.\nUnless there are objections today, I will treat this as the final structure and move A2 into pilot-ready status.",
+            "mentions": [
+              395422,
+              483272,
+              561948,
+              476700
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T5"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 483272,
+            "reply_to": "M27",
+            "text": "No objections from me. Once you update A2, I can test it on two recent jobs as required by T2 and check that all the info we need for invoicing is there and readable from a photo.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 253807,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 395422,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on posting rules, tax treatment, and invoice templates",
+        "messages": [
+          {
+            "msg_id": "M29",
+            "speaker_id": 253807,
+            "reply_to": null,
+            "text": "I have drafted the chart of accounts and posting rules for moving services (T3) and first versions of the invoice and quote templates (T4). They are in A3 and A4.\n\nKey points:\n- Separate revenue accounts for local moves, long-distance moves, and packing-only jobs.\n- Standard VAT code for moving services, with a note to double-check any cross-border moves with the tax advisor.\n- Invoice template aligned with the data we capture on A2, including job date, description, and hours.\nCan you review and flag anything that looks unclear or risky before we confirm these for the pilot?",
+            "mentions": [
+              476700,
+              483272,
+              561948,
+              395422
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "page_facing_up",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 483272,
+            "reply_to": "M29",
+            "text": "Looking at A3, the separate revenue accounts make sense and will help with reporting.\n\nOn posting rules, I see you propose:\n- Debit trade receivables, credit the relevant moving revenue account.\n- Credit VAT payable using the standard service code.\n- For boxes sold, credit a separate goods revenue account.\nThis seems consistent with our current practice, but I wonder if we need a specific rule for jobs that include storage, since that might have different tax treatment.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 561948,
+            "reply_to": "M29",
+            "text": "On A4, the invoice template looks clean. It includes:\n- Customer details and job addresses.\n- Job date and description.\n- Quantity (hours, distance band) and unit price.\n- VAT rate and amount.\n\nFor the quote template, I like that it mirrors the invoice structure. That should reduce surprises for customers and make it easier to reconcile later as required by T4.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 476700,
+            "reply_to": "M29",
+            "text": "I have a basic question on A3: for long-distance moves, do we always treat the whole service as one line with the same VAT rate, or do we need to split transport and labour?\n\nI want to make sure we do not miss any specific rule in the legislation. Maybe we should have the tax advisor quickly confirm the approach for cross-border and long-distance jobs before we finalise T3.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 253807,
+            "reply_to": "M32",
+            "text": "Good point. For domestic moves, the standard service VAT code should apply to the full service line. For cross-border or special cases, we should not decide alone.\n\nI will send A3 to the tax advisor to confirm:\n- VAT treatment for cross-border moves.\n- Whether any part of the service needs separate treatment.\nWe will only lock those parts of T3 once we have that confirmation.",
+            "mentions": [
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "email",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 395422,
+            "reply_to": "M29",
+            "text": "From the mover side, I checked A4 to see what will show up for customers.\n\nThe description line that pulls from job type and extras on A2 looks clear. It will help if we keep the wording simple, like 'Local move with packing' instead of long technical text.\n\nNo issues from me as long as the invoice still shows the job date and both addresses, which it does.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 561948,
+            "reply_to": "M30",
+            "text": "On storage, I agree we should have a separate revenue account and possibly a different VAT rule. In A3, we could:\n- Add a storage revenue account.\n- Define a posting rule that uses the storage tick box from A2 to trigger that account.\n\nFor the pilot, we can keep it simple but at least separate storage from pure moving revenue.",
+            "mentions": [
+              253807,
+              483272
+            ],
+            "artifact_refs": [
+              "A3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "file_folder",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 253807,
+            "reply_to": "M35",
+            "text": "Agreed. I will update A3 to include:\n- Separate revenue account for storage.\n- Posting rule that uses the storage tick box from A2 to route part of the revenue there.\n\nFor VAT, I will include a note in T6 that any storage rules must follow the tax advisor guidance once we have it.",
+            "mentions": [
+              561948,
+              483272
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 483272,
+            "reply_to": "M31",
+            "text": "For T4, we also need to test A4 with sample jobs. I can take three recent moves (local, long-distance, and one with storage) and run them through the quote and invoice templates to see if totals reconcile and if the posting rules from A3 work as expected.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calculator",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 476700,
+            "reply_to": "M37",
+            "text": "I can help with the sample jobs. Maybe we should also check that the legal fields are all present on the invoice: company name, address, registration number, tax number, invoice number, date, and payment terms.\n\nFrom what I see in A4, they are there, but I would like a second check before we approve it for the pilot.",
+            "mentions": [
+              483272,
+              253807
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 253807,
+            "reply_to": "M38",
+            "text": "I have double-checked A4 against the statutory requirements: all mandatory legal fields are present.\n\nGiven the feedback so far, I propose we approve:\n- The chart of accounts and posting rules in A3 for domestic moves, boxes, and storage, subject to confirmation from the tax advisor for cross-border cases.\n- The invoice and quote templates in A4 for use in the pilot, once T4 testing with sample jobs confirms the calculations.\nIf you agree, we can mark T3 and T4 as approved for pilot scope and reflect this in T6 as the reference for the new process.",
+            "mentions": [
+              476700,
+              483272,
+              561948,
+              395422
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T3",
+              "T4",
+              "T6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 561948,
+            "reply_to": "M39",
+            "text": "I am comfortable approving A3 and A4 for the pilot under those conditions. Once we get the tax advisor feedback, we can update A3 and T6 if needed, but that should not block the initial domestic jobs.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 483272,
+            "reply_to": "M39",
+            "text": "Same here. I will proceed with the three sample jobs to complete T4 and confirm that the totals and postings match what A3 describes.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 483272,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 253807,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and coordinate the pilot and training sessions",
+        "messages": [
+          {
+            "msg_id": "M42",
+            "speaker_id": 253807,
+            "reply_to": null,
+            "text": "Now that A2, A3, and A4 are in good shape, we should plan the pilot and training.\n\nProposal:\n- Pilot scope: 5 to 7 moves over two weeks, covering at least one long-distance job and one with storage (T8).\n- Candidate jobs: the next confirmed moves that fit those types, starting next Monday.\n- Training: one joint session for movers and bookkeepers to walk through the new process, job sheet, and templates (T7).\nI have started a draft of the quick-reference guides in A7 and a simple feedback register in A8. Thoughts on which moves to include and how to run the training?",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T7",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 395422,
+            "reply_to": "M42",
+            "text": "From the schedule I saw, next week we have:\n- Two local moves on Monday.\n- One long-distance move on Wednesday.\n- One move with storage on Friday.\n\nThose four could be part of the pilot. We can add one or two more the following week if needed to reach the T8 target.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 483272,
+            "reply_to": "M42",
+            "text": "For training, I suggest a 60-minute session covering:\n- Overview of the new process using the map from A1.\n- Walkthrough of A2 and A5 from a mover perspective.\n- How we use A3 and A4 in the office.\n- Quick-reference one-pagers from A7.\nWe should have at least one mover from each truck and the bookkeepers who will issue invoices present, as required by T7.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A5",
+              "A7",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 561948,
+            "reply_to": "M44",
+            "text": "I like that agenda. Maybe we can also show how errors will be logged in A6 during the pilot, so movers see that we are not blaming but learning.\n\nOn timing, late afternoon before the first pilot job might work best, so the content is fresh.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 476700,
+            "reply_to": "M42",
+            "text": "For the pilot start date, if we use the moves 395422 listed, starting next Monday makes sense. That gives us a few days to finalise A7 and make sure A2 is printed.\n\nWe should also confirm who will be on call for questions during the first week, as part of T12.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A7",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 395422,
+            "reply_to": "M46",
+            "text": "Late afternoon training before Monday works for me. If we do it on Friday, movers can still ask questions on Monday morning before the first job.\n\nFor the pilot jobs, I confirm that I can use the new A2 and A5 on the two local moves and the long-distance one next week.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 253807,
+            "reply_to": "M46",
+            "text": "So far we have:\n- Pilot moves: two local, one long-distance, one with storage next week, plus one or two more the following week.\n- Preferred start date: next Monday.\n\nUnless there are objections, I suggest we formally set next Monday as the pilot start date and list those four moves as the initial pilot set for T8.",
+            "mentions": [
+              476700,
+              483272,
+              561948,
+              395422
+            ],
+            "artifact_refs": [
+              "A8",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 483272,
+            "reply_to": "M48",
+            "text": "No objection from me. I will mark those jobs in the calendar as pilot and make sure we use A4 and the posting rules from A3 for their invoices.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 561948,
+            "reply_to": "M44",
+            "text": "On training format, I support a single joint session in person, with a short recording or summary for anyone who cannot attend.\n\nWe should require attendance from:\n- All movers who will be on pilot jobs.\n- The bookkeepers who will issue and post the pilot invoices.\nThat should satisfy T7 and help adoption.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A7",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 476700,
+            "reply_to": "M50",
+            "text": "If we run the training on Friday at 16:00, we can have both movers and bookkeepers in the meeting room. I can help present the part on A4 and how we post in the system.\n\nWe can then share the A7 one-pagers and the link to A8 so everyone knows how to give feedback during the pilot.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A4",
+              "A7",
+              "A8",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clock4",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 253807,
+            "reply_to": "M51",
+            "text": "Great, let us lock this in:\n- Pilot start date: next Monday, with the four moves listed by 395422 as the initial pilot set.\n- Training: in-person joint session on Friday at 16:00, mandatory for movers on pilot jobs and the bookkeepers handling their invoices.\n\nI will update T7, T8, and T12 accordingly and reflect the support plan (who to contact, escalation path) in the T12 document.",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T7",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 253807,
+              "when": "by Friday"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 395422,
+              "when": "starting Monday"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 476700,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Monitor pilot progress, log issues, and refine the process",
+        "messages": [
+          {
+            "msg_id": "M53",
+            "speaker_id": 253807,
+            "reply_to": null,
+            "text": "First pilot jobs using A2, A4, and the new posting rules are now done, so let us use this thread to track progress and issues.\n\nFor each pilot move, please share:\n- Whether A2 and A5 were fully completed.\n- Any problems with photos, legibility, or missing data.\n- Any accounting errors or corrections logged in A6.\nI will capture all feedback in A8 and use it to drive T9, T10, and T11.",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "A5",
+              "A6",
+              "A8",
+              "T8",
+              "T9",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 395422,
+            "reply_to": "M53",
+            "text": "Update from the truck for the first two pilot moves:\n- Both jobs used the new A2 with A5 on the back.\n- I sent photos right after each job. The header fields were clear, but the notes area was a bit hard to read in the photo when I wrote a lot.\n- Tools checklist on the back worked fine; it fits into our loading routine.\nOne small issue: I forgot to tick the storage box on one job that included a short storage stop. I only wrote it in the notes.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 483272,
+            "reply_to": "M54",
+            "text": "From the office side on those same two jobs:\n- The photos of A2 were good enough to issue invoices using A4.\n- On the job where storage was only in the notes, I initially posted everything to moving revenue and only later realised storage was involved.\nI have logged this in A6 as an error and corrected the posting to split part of the revenue to the storage account, as per A3.\n\nThis shows we might need a more visible storage tick box or a small reminder near the notes area.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 561948,
+            "reply_to": "M53",
+            "text": "I have started filling A6 for the first few pilot invoices:\n- Two cases of missing customer contact details (phone or email).\n- One case where the job type code was left blank.\nIn all three, we could fix the issue by calling the mover or the customer, but it delayed invoicing.\n\nFor T9, I propose we add a simple check in the office: if any mandatory field from A2 is missing, we log it in A6 and send a quick message back to the mover before issuing the invoice.",
+            "mentions": [
+              253807,
+              395422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 476700,
+            "reply_to": "M56",
+            "text": "I support that idea. It will also give us data in A6 to see which fields are most often missed.\n\nOn the quick-reference guides (T11), maybe we should highlight the top three fields movers most often forget, based on the first 10 entries in A6.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 395422,
+            "reply_to": "M55",
+            "text": "If storage is easy to miss, we could:\n- Move the storage tick box closer to the job type section at the top of A2.\n- Add a short reminder text near the notes area: 'Remember to tick storage if used'.\nThat would help us remember even when we are in a hurry.",
+            "mentions": [
+              253807,
+              483272
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 253807,
+            "reply_to": "M58",
+            "text": "Good suggestion. I will log this in A8 as an improvement idea and adjust A2 accordingly for the next print run.\n\nSo far, the main themes in A8 are:\n- Storage tick box not prominent enough.\n- Occasional missing customer contact details.\n- Notes area a bit small for long comments.\nWe should aim to apply at least three concrete improvements in T10 before we roll out beyond the pilot.",
+            "mentions": [
+              395422,
+              483272,
+              561948,
+              476700
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 483272,
+            "reply_to": "M59",
+            "text": "For T10, I would propose these three concrete changes to A2:\n- Move the storage tick box next to the job type codes at the top.\n- Add a bold reminder line about mandatory fields (customer contact, job type, storage if applicable).\n- Slightly enlarge the notes area by reducing some white space.\nWe can then test the updated version on the remaining pilot jobs and see if the error rate in A6 drops.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 561948,
+            "reply_to": "M60",
+            "text": "On the quick-reference one-pagers in A7, I have drafted:\n- A mover one-pager with a simple checklist: fill header, tick job type and storage, complete times, sign, photo, tools check.\n- A bookkeeper one-pager summarising posting rules from A3 and how to use A6 for errors.\nOnce we finalise the A2 tweaks, I will update A7 so it matches the latest layout, as required by T11.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 476700,
+            "reply_to": "M61",
+            "text": "I have reviewed the first entries in A6 and they already show a pattern: missing job type and storage tick box are the most frequent.\n\nOnce we apply the A2 changes from T10 and update A7, we should see fewer of these. I suggest we keep logging at least the first 10 to 15 issues in A6 to confirm the trend, as per T9.",
+            "mentions": [
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A7",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 395422,
+            "reply_to": "M61",
+            "text": "The mover one-pager in A7 is helpful. I used it on the last job and it reminded me to send the photo before leaving the site.\n\nOnce the storage tick box is moved up, I think it will be easier to remember that too.",
+            "mentions": [
+              561948,
+              253807
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 253807,
+            "reply_to": "M60",
+            "text": "Thanks all for the input. I will implement the three A2 changes you listed in T10 and update A7 accordingly.\n\nFor T9, I will also formalise the error log workflow:\n- Any missing mandatory field or posting correction is recorded in A6.\n- The bookkeeper notes the root cause and the fix.\n- We review the first 10 entries together to decide if further template or process changes are needed.\nThis should give us a solid base to refine the process before a wider rollout.",
+            "mentions": [
+              395422,
+              476700,
+              483272,
+              561948
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A7",
+              "A8",
+              "T9",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 561948,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 253807,
+              "when": "before full rollout"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 561948,
+              "when": "after A2 update"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

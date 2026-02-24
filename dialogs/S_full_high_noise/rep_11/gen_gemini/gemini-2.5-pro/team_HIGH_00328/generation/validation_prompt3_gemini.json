@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Messages M36, M37, and M38 contain explicit mentions of levels ('Low, Medium, High') when referring to severity attributes, which violates the anti-leakage rule."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Threads TH2, TH3, and TH4 have message counts (16, 15, and 15 respectively) that fall slightly below their blueprint target ranges ([20, 30], [17, 25], and [16, 24])."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

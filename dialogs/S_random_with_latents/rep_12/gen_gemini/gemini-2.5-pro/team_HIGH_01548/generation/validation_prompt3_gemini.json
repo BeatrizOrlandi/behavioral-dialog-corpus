@@ -1,0 +1,35 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are significantly below the minimum message count of 15. TH1 has 10, TH2 has 8, TH3 has 9, TH4 has 9, and TH5 has 8 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'score' is used in message M3: '...define segments using a weighted score...'"
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'performance' is used in message M37: '...I've compiled the initial performance data...'"
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is required to reference artifact 'T5' but it is never mentioned in any message within the thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "In thread TH5, the thread_outcome.next_steps contains a task_id 'new-task-workshop' which does not exist in the project_pack backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 1,
+    "realism_1_5": 1,
+    "voice_diversity_1_5": 5
+  }
+}

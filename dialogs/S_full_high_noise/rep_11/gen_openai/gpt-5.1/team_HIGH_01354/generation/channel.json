@@ -1,0 +1,1483 @@
+{
+  "channel": {
+    "channel_id": "proj-sme-tax-review-standardisation",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current SME tax review workflow and main pain points.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 235247,
+            "reply_to": null,
+            "text": "Kickoff for the Standardised SME Tax Compliance Review Program. For T1 and the draft of A1, can each of you describe how you currently review an SME tax file, step by step? Please include: 1) where you start in the file, 2) which reconciliations you always do, 3) what you only check if something looks off. I will consolidate into a single current-state workflow in A1 once we align.",
+            "mentions": [
+              381305,
+              505737,
+              544735,
+              554843
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 544735,
+            "reply_to": "M1",
+            "text": "My usual flow for SME files: 1) Check that bookkeeping is closed for the year (trial balance, bank reconciliations done). 2) Scan the GL for unusual accounts or big swings vs prior year. 3) Reconcile revenue VAT and payroll taxes to declarations. 4) Run through my own checklist for deductible vs non-deductible expenses. 5) Calculate tax in a spreadsheet and compare to last year effective rate. 6) Prepare the tax return form and attach working papers. I do deeper checks (e.g. detailed expense sampling) only if margins or cash movements look odd.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 554843,
+            "reply_to": "M1",
+            "text": "I start from the trial balance too, but I usually go straight into the tax return draft from last year and copy the structure. Then I: 1) update revenue and main expense lines, 2) check depreciation schedules if they exist, 3) look at bank statements for any big transfers. I do not always reconcile VAT fully, only if the client had issues before. I think this is one of my weak spots and it causes rework when differences appear later.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 381305,
+            "reply_to": "M1",
+            "text": "My process is a bit more ad hoc. I open the accounting software, export the P&L and balance sheet, then: 1) check if there are any negative balances where they should not be, 2) look at the tax return from last year, 3) start filling the new return. I only go back to check details if something does not balance. I do not have a fixed order for reconciliations, which might be why I sometimes miss smaller items until review.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 505737,
+            "reply_to": "M1",
+            "text": "Similar to 381305, I rely a lot on last year return. Steps: 1) Copy last year file, 2) update revenue and main expenses, 3) check if there are new loans or assets, 4) quickly scan bank statements. I do not always reconcile payroll taxes or VAT unless the manager asks. I also do not have a written checklist, I just remember the main items.",
+            "mentions": [
+              381305
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 235247,
+            "reply_to": "M2",
+            "text": "Thanks all, this is helpful. I see two main patterns: 1) starting from the accounting records (trial balance, GL) and then moving to tax, and 2) starting from last year tax return and backfilling. For A1 under T1, I suggest we document the accounting-first flow as the base, but explicitly note where we reuse last year return as a reference. Does anyone see a strong reason to keep two separate current-state workflows instead of one consolidated version?",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 544735,
+            "reply_to": "M6",
+            "text": "I am fine with one consolidated version. Maybe we can show the reuse of last year return as a sub-step in the tax calculation phase, like 'pre-fill from prior year where stable'. That way A1 stays simple but still reflects what we actually do.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 554843,
+            "reply_to": "M6",
+            "text": "One version works for me. It would help if A1 clearly lists the order of reconciliations, because I tend to jump around. If we agree on a standard order, I can follow that.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 381305,
+            "reply_to": "M6",
+            "text": "I am ok with a single workflow too. Could we include a note that some checks are mandatory for every file and some are conditional? I sometimes skip steps because I am not sure if they are always required.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 235247,
+            "reply_to": "M9",
+            "text": "Good point. For A1 I will mark each step as 'always' or 'if triggered'. Now, can we list the main pain points you hit most often when reviewing SME files? Aim for recurring issues, not one-off mistakes. We need at least eight for T1, and later we will pick the top five to feed into the new checklist and process.",
+            "mentions": [
+              381305,
+              505737,
+              544735,
+              554843
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 544735,
+            "reply_to": "M10",
+            "text": "My recurring pain points: 1) Late or incomplete bank reconciliations. 2) VAT returns not matching the GL. 3) Payroll tax summaries missing or inconsistent. 4) No clear separation between personal and business expenses for small owners. 5) Fixed asset registers not updated. 6) Prior year adjustments not properly booked. 7) Missing supporting documents for large cash withdrawals. 8) Cut-off issues around year-end invoices.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 554843,
+            "reply_to": "M10",
+            "text": "Adding to that: 9) Clients sending documents in multiple formats and channels, so it is hard to see if we have everything. 10) Confusion on which expenses are partially deductible. 11) Time pressure near filing deadlines, so reviews get rushed. 12) I sometimes struggle to interpret new tax rules for specific deductions.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 381305,
+            "reply_to": "M10",
+            "text": "From my side: 13) I often find differences between the spreadsheet calculations and what the accounting system shows, and I am not always sure which one is right. 14) I lose time searching for last year working papers because they are not stored consistently.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 505737,
+            "reply_to": "M10",
+            "text": "I would add: 15) Not knowing when to escalate something that looks suspicious vs just asking the client. 16) Having to redo parts of the return after manager review because I missed a standard check.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "confused",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 235247,
+            "reply_to": "M14",
+            "text": "We have more than enough pain points now. For the new checklist and workflow, I suggest we prioritise these five: a) VAT and payroll reconciliations (items 2 and 3). b) Deductible vs non-deductible expenses (items 4 and 10). c) Fixed assets and prior year adjustments (items 5 and 6). d) Documentation for large cash movements and owner transactions (items 7 and 15). e) Time pressure and missed standard checks (items 11 and 16). If you agree, I will mark these as top priority in A1 and use them as key drivers for T2 and T3.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 544735,
+            "reply_to": "M15",
+            "text": "Those five cover most of the rework I see. I support using them as the main focus for the new checklist and template.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 554843,
+            "reply_to": "M15",
+            "text": "Agreed on these priorities. Especially the standard checks and documentation for cash movements will help me a lot.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 235247,
+            "reply_to": "M8",
+            "text": "To close this thread: we will document a single accounting-first current-state workflow in A1, with clear 'always' vs 'if triggered' steps and a sub-step for reusing last year return where stable. I will also highlight the five priority pain points we just agreed on. I will draft A1 under T1 today and share the link in the channel for quick comments before we move on to the new checklist.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 235247,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalise the standard review checklist and spreadsheet template.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 235247,
+            "reply_to": null,
+            "text": "I have uploaded first drafts of the Standard SME Tax Review Checklist (A2) and the SME Tax Calculation and Reconciliation Template (A3), both linked to T2 and T3. The checklist is structured by phase: bookkeeping, tax calculation, documentation, and sign-off. The spreadsheet has input, calculation, and summary tabs. Please review and comment on anything confusing or missing, especially around the five priority pain points we agreed earlier.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 544735,
+            "reply_to": "M19",
+            "text": "I went through A2. Overall it flows well. A few comments: 1) In the bookkeeping section, can we explicitly require a check that VAT and payroll tax balances reconcile to filed returns? That would address two of our pain points. 2) In the expenses section, maybe add a line for partial deductibility rules with a reference to the tax legislation summary. 3) For documentation, I suggest a separate block for owner-related transactions and large cash movements.",
+            "mentions": [
+              235247
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 381305,
+            "reply_to": "M19",
+            "text": "On A3, I am a bit unsure about the calculation tab. There are several formula cells that I do not fully understand, especially the effective tax rate and reconciliation to accounting profit. Could we add short comments in the header row explaining what each section is doing? That would help me avoid changing formulas by mistake.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 505737,
+            "reply_to": "M19",
+            "text": "I like that A2 has checkboxes for each step. One thing I am missing is a reminder to save the working papers in the right folder with a standard name. I often lose time searching for last year files. Could we add a final step in the sign-off section about storing A3 and supporting documents consistently?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 554843,
+            "reply_to": "M19",
+            "text": "In the expenses part of A2, I am not sure when to tick the line about partially deductible expenses. Is it for every file, or only when we see specific categories like cars or representation costs? Maybe we can add examples in brackets so it is clearer.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 235247,
+            "reply_to": "M20",
+            "text": "Thanks for the feedback. I will update A2 to: 1) Add explicit VAT and payroll reconciliation checks under bookkeeping. 2) Add a line for partial deductibility with examples and a pointer to the tax legislation summary. 3) Create a separate block for owner transactions and large cash movements, including a link to the fraud indicators we will define in A4. For A3, I will add comments to the calculation tab headers and lock formula cells so they are harder to change accidentally.",
+            "mentions": [
+              544735,
+              381305,
+              554843,
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hammer_and_wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 544735,
+            "reply_to": "M24",
+            "text": "On A3, I tested the template with one anonymised file. The input and calculation tabs worked as expected, but the summary tab did not pick up one of the adjustments for prior year corrections. I think the formula range in the reconciliation section is missing the last row. Could you check that before we lock the structure for the pilot?",
+            "mentions": [
+              235247
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bug",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 235247,
+            "reply_to": "M25",
+            "text": "Good catch. I will fix the range on the summary tab and rerun tests on three anonymised sample files as required by T3. Once that passes, we can consider the structure of A3 stable for the pilot, and only allow minor cosmetic tweaks later if needed.",
+            "mentions": [
+              544735
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 381305,
+            "reply_to": "M24",
+            "text": "For the checklist A2, could we add a small section at the top that says which parts are mandatory for every file and which are conditional? I am worried I might skip something that should always be done.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 235247,
+            "reply_to": "M27",
+            "text": "Yes, I will add a legend at the top of A2 and mark each item as 'all files' or 'if applicable'. That should make it clearer. After I apply all these edits, I will post a short summary and ask for a final yes or no so we can approve the first usable version of the checklist and lock the spreadsheet structure for the pilot.",
+            "mentions": [
+              381305
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 235247,
+            "reply_to": "M19",
+            "text": "I have now updated A2 and A3 based on your comments: 1) Added explicit VAT and payroll reconciliations, partial deductibility examples, and owner transaction checks in A2. 2) Added mandatory vs conditional markers and a final step to store A3 and working papers in the standard folder. 3) Fixed the summary tab range in A3, added header comments, and tested formulas on three anonymised files as per T3. Unless anyone objects by tomorrow morning, I propose we treat this as version 1.0 of A2 and lock the structure of A3 for the pilot.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 544735,
+            "reply_to": "M29",
+            "text": "I rechecked A2 and A3. The new items and the fixed summary range look good to me. I am comfortable using these versions in the pilot.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 554843,
+            "reply_to": "M29",
+            "text": "Same here, the examples for partially deductible expenses in A2 help a lot. No further comments from my side.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 235247,
+            "reply_to": "M30",
+            "text": "Thanks for reviewing. With no objections and confirmations from you, we will consider A2 version 1.0 approved for use and A3 structure locked for the pilot. Any future changes before the pilot ends should be limited to clarifications, not structural changes, so that T2 and T3 stay stable.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 235247,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 544735,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define fraud indicators, escalation rules, and incident logging approach.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 235247,
+            "reply_to": null,
+            "text": "I have drafted an initial list of fraud indicators and escalation steps in A4 under T4, plus a first version of the incident log template for T11. The indicators are grouped into revenue, expenses, cash and owner transactions, and documentation. Please review and suggest concrete examples or thresholds where you have seen issues in real files. We also need to agree when to create an incident log entry vs just adding a note in A3.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 544735,
+            "reply_to": "M33",
+            "text": "Looking at A4, I suggest we add more detail on cash and owner transactions. For example: 1) Repeated large cash withdrawals near year-end without clear business purpose. 2) Owner current account with big swings that do not match declared drawings or salaries. 3) Payments to personal credit cards booked as business expenses. For thresholds, maybe we can say that any single cash movement above a certain percentage of annual revenue should at least trigger a discussion.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 381305,
+            "reply_to": "M33",
+            "text": "I am not always sure when something is suspicious enough to escalate. For example, if a client has missing invoices but explains that they lost them, should that go into the incident log, or is a note in A3 enough? It would help me if A4 had a simple rule like 'log an incident when...' with 2 or 3 clear conditions.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 505737,
+            "reply_to": "M33",
+            "text": "On the incident log template for T11, I see fields for client ID, description, and actions taken. Should we also include who we informed (e.g. manager, compliance officer) and the date of escalation? That would make it easier to track follow-up.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 554843,
+            "reply_to": "M33",
+            "text": "Some of the fraud indicators in A4 are a bit abstract for me, like 'unusual margin patterns'. Could we add examples, such as 'sudden jump in gross margin without change in business model' or 'negative margins in a stable business'? That would help me recognise them in practice.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 235247,
+            "reply_to": "M35",
+            "text": "Good questions. I propose we define in A4 that an incident log entry is required when: 1) There is a pattern of missing or altered documents, not just a one-off. 2) Amounts involved are material for the client (for example above a certain share of annual profit or revenue). 3) The explanation from the client is inconsistent or contradicts other evidence. For isolated missing invoices with a plausible explanation, a note in A3 and the checklist should be enough, but we can still consult the compliance officer if in doubt.",
+            "mentions": [
+              381305
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 544735,
+            "reply_to": "M38",
+            "text": "I like that rule. Maybe we can also say that any suspected intentional misstatement, even if small, should be logged, because of the potential pattern. That could be another bullet in A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 235247,
+            "reply_to": "M36",
+            "text": "Agree on the extra fields. I will update the incident log template in T11 to include: who raised it, who it was escalated to, date of escalation, and current status. That will also help when we do post-incident mini-reviews in this channel.",
+            "mentions": [
+              505737
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 381305,
+            "reply_to": "M38",
+            "text": "That rule makes it much clearer for me. If we write it in A4 as a short checklist, I can follow it step by step. I would still prefer to double-check borderline cases with the manager or compliance officer, but at least I will know when to open an incident log.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 554843,
+            "reply_to": "M37",
+            "text": "Also, could we add a few examples for documentation issues, like 'invoices with rounded amounts only' or 'suppliers with no contact details'? Those are things I have seen but was not sure how serious they were.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 235247,
+            "reply_to": "M34",
+            "text": "I have now updated A4 to: 1) Expand cash and owner transaction indicators with your examples. 2) Add concrete examples for unusual margins and documentation issues. 3) Include a simple rule for when to log an incident, including suspected intentional misstatements. I also aligned the escalation steps with roles: first to the accounting manager, then to the compliance officer, and external auditor only if requested by them. Next, we should confirm that this list and the escalation flow are final enough for the pilot.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 544735,
+            "reply_to": "M43",
+            "text": "From my side, the updated A4 covers the main fraud indicators I encounter and gives clear escalation steps. I am comfortable using this version in the pilot.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 505737,
+            "reply_to": "M40",
+            "text": "The incident log template now looks complete to me with the added fields. I think it will be straightforward to fill in when something comes up.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 235247,
+            "reply_to": "M44",
+            "text": "Great. To summarise: 1) We confirm the current list of fraud indicators and escalation steps in A4 as the version to use in the pilot. 2) We will use the incident log template under T11 whenever the conditions in A4 are met, including patterns of missing documents, material amounts, inconsistent explanations, or suspected intentional misstatements. I will send A4 to the compliance officer for validation before we start logging real incidents, as required by T4.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 235247,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 505737,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and monitor the 30-file pilot execution and workload impact.",
+        "messages": [
+          {
+            "msg_id": "M47",
+            "speaker_id": 235247,
+            "reply_to": null,
+            "text": "I have created the Pilot SME File Register and Review Log (A6) and added a first draft list of anonymised client IDs for T6. It includes columns for industry, size, complexity, assigned clerk, and status. We also need to apply the anonymisation rules from A5 for any examples we share. Please check the draft list, volunteer for files, and flag any workload constraints so we can agree on a realistic schedule for T7.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T5",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 544735,
+            "reply_to": "M47",
+            "text": "I can take on 10 of the pilot files, preferably a mix of low and medium complexity. Looking at A6, I suggest we tag a few files as high complexity and maybe schedule those earlier in the pilot so we have time to adjust if needed.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 554843,
+            "reply_to": "M47",
+            "text": "I can handle around 8 files within the timebox, but I need to avoid the last week of the month because of regular deadlines. Medium complexity is fine, but I would prefer not to take the most complex ones for this first round.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 381305,
+            "reply_to": "M47",
+            "text": "I am a bit concerned about workload. I think I can commit to 6 files if we spread them over the three weeks. I would feel more comfortable starting with simpler cases while I get used to A2 and A3.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 505737,
+            "reply_to": "M47",
+            "text": "I can also take 6 files, ideally low to medium complexity. I will need some guidance on the first one to make sure I am using A2 and A3 correctly.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 235247,
+            "reply_to": "M48",
+            "text": "Thanks all. That gives us coverage for 30 files: 10 for 544735, 8 for 554843, 6 for 381305, 6 for 505737. I will update A6 with these assignments and mark complexity levels. For anonymisation under T5, please remember to use the client ID codes from A6 only, and remove names and direct identifiers from any screenshots or examples we share.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 544735,
+            "reply_to": "M52",
+            "text": "For scheduling, given the 21-day deadline, maybe we can aim for each of us to complete about half of our files in the first 10 days and the rest in the final 11 days. That way we can adjust if we see that A2 or A3 need tweaks.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 235247,
+            "reply_to": "M53",
+            "text": "That sounds reasonable. How about this concrete plan for T7: 1) Days 1–7: each of you completes 3 files. 2) Days 8–14: another 3–4 files each, focusing on medium and high complexity. 3) Days 15–21: remaining files and any rework. We will do short async check-ins in this channel each morning to track progress and blockers.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 554843,
+            "reply_to": "M54",
+            "text": "This schedule works for me as long as my heavier week is not the last week of the month. I will plan my 8 files accordingly and update A6 with target dates.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 381305,
+            "reply_to": "M54",
+            "text": "I can follow that plan. I will start with the simpler files in days 1–7 and then move to medium ones. I will post in the daily check-in if I get stuck on A2 or A3.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 505737,
+            "reply_to": "M54",
+            "text": "Works for me too. I will block time in my calendar for the first three files next week and update A6 once I know which client IDs I have.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 235247,
+            "reply_to": "M47",
+            "text": "I have now finalised the list of 30 anonymised client IDs in A6 and confirmed that source documents are available for all of them, meeting the definition of done for T6. We will treat this list as frozen for the pilot, and any additional files will be outside the formal sample. The schedule we just discussed will be our baseline to complete T7 before the 21-day deadline.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "lock",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 235247,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 544735,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on adjustments and rollout approach.",
+        "messages": [
+          {
+            "msg_id": "M59",
+            "speaker_id": 235247,
+            "reply_to": null,
+            "text": "I have drafted the Pilot Findings and Process Improvement Report (A7) under T8, based on the 30 files logged in A6. It summarises error patterns, time spent per file, and how often A2 and A3 caught issues early. There is also a section with proposed process changes and a draft QC checklist A8 plus ideas for the training brief in T9 and a simple sampling rule for T10. Please review and comment so we can agree on final adjustments and the rollout approach.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "A6",
+              "A2",
+              "A3",
+              "T8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 544735,
+            "reply_to": "M59",
+            "text": "From my pilot files, the main pattern was that VAT and payroll reconciliations in A2 helped catch discrepancies earlier, but they also added some time. I agree with your suggestion in A7 to keep these checks mandatory but streamline the documentation by using standard notes in A3. For process changes, I support your proposal to move owner transaction checks earlier in the workflow.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 554843,
+            "reply_to": "M59",
+            "text": "I found the updated A2 much clearer, especially with the examples. One thing I noticed is that I still sometimes forgot to tick the final storage step. Maybe we can add a small reminder in A3 summary tab as well, as you suggest in A7. For the training brief in T9, I think including screenshots of a completed checklist and spreadsheet would help new colleagues.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 381305,
+            "reply_to": "M59",
+            "text": "For me, the main challenge was getting used to the calculation tab in A3, but after a few files it became easier. The QC checklist A8 looks manageable, but I am not sure about the sampling rule you propose in T10. Reviewing 10 percent of files each month might be heavy in busy periods. Could we consider a lower percentage or a risk-based approach?",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 505737,
+            "reply_to": "M59",
+            "text": "I agree with 381305 that the QC sampling might be a bit high. Maybe we can start with a smaller sample and increase later if needed. For the training brief, I would appreciate a simple step-by-step example from one of the pilot files, showing how an issue was detected and resolved using A2, A3, and A4.",
+            "mentions": [
+              381305
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 235247,
+            "reply_to": "M62",
+            "text": "Good point on sampling. To keep T10 feasible, I suggest we adjust the rule in A7 and A8 to: 1) Review 5 percent of SME tax files each month by default. 2) Increase to 10 percent for clients with higher risk indicators (e.g. frequent adjustments, complex structures, or recent incidents logged in T11). That way we focus extra effort where it matters most.",
+            "mentions": [
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 544735,
+            "reply_to": "M64",
+            "text": "I like the risk-based sampling. It should keep the workload under control while still giving us visibility on higher risk files. For process changes in A7, I also support your proposal to add a short pre-review step where we quickly scan for missing key documents before doing detailed work.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 554843,
+            "reply_to": "M63",
+            "text": "For the training brief T9, I can help draft an example based on one of my pilot files where we found a VAT discrepancy. It would show the checklist step, the spreadsheet reconciliation, and how we documented the resolution.",
+            "mentions": [
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 381305,
+            "reply_to": "M64",
+            "text": "The adjusted sampling rule sounds more realistic. I am comfortable with 5 percent baseline and 10 percent for higher risk clients. The QC checklist A8 is short enough that it should not add too much time per sampled file.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 235247,
+            "reply_to": "M60",
+            "text": "Based on your feedback, I will update A7 to: 1) Confirm VAT and payroll reconciliations as mandatory, but standardise documentation notes in A3. 2) Move owner transaction checks earlier in the workflow. 3) Add a pre-review document completeness step. 4) Adjust the QC sampling rule to 5 percent baseline and 10 percent for higher risk clients. Once updated, this will be our set of key process changes for rollout.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A7",
+              "A3",
+              "A8",
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 544735,
+            "reply_to": "M68",
+            "text": "With those updates, I think A7 reflects well what we learned from the pilot. I am fine with adopting these process changes going forward.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 554843,
+            "reply_to": "M68",
+            "text": "Agreed. The changes will help me structure my work better, especially the pre-review step and the clearer owner transaction checks.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 235247,
+            "reply_to": "M59",
+            "text": "For the training brief T9, I propose the following structure: 1) Overview of the end-to-end workflow with the new pre-review and owner transaction steps. 2) How to use A2 and A3, with screenshots and one or two examples from the pilot. 3) Summary of fraud indicators and escalation using A4 and the incident log. 4) Explanation of the QC sampling approach and A8. Once we agree, I will draft the brief and send it to the accounting manager for approval as required.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4",
+              "A7",
+              "A8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 505737,
+            "reply_to": "M71",
+            "text": "That structure works for me. The examples from the pilot will be especially useful for new colleagues.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 381305,
+            "reply_to": "M71",
+            "text": "I agree as well. Including the QC sampling explanation in the training will help set expectations from the start.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 235247,
+            "reply_to": "M69",
+            "text": "To close this thread: 1) We approve the key process changes documented in the updated A7 based on the pilot findings. 2) We confirm the QC sampling approach using A8 with a 5 percent baseline and 10 percent for higher risk clients. 3) We agree on the content outline for the training brief in T9, which I will now draft and send to the accounting manager for sign-off, together with the integration points for T12.",
+            "mentions": [
+              544735,
+              554843,
+              381305,
+              505737
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T8",
+              "T9",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [
+              "D9",
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 235247,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 235247,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 544735,
+              "when": "next week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 235247,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

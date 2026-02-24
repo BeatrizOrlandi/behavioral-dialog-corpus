@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH1 (14 msgs), TH3 (12 msgs), TH4 (12 msgs), and TH5 (13 msgs) are below the absolute min_msgs_per_thread of 15. Additionally, all threads fall short of their specific target_messages_range minimums defined in the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH5 is missing a reference to mandatory artifact T6 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Thread TH4 thread_outcome.next_steps contains artifact IDs (A3, A8, A1) instead of valid task IDs from the backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

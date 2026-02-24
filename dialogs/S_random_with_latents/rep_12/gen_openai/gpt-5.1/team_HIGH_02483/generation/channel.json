@@ -1,0 +1,1564 @@
+{
+  "channel": {
+    "channel_id": "proj-analytics-mvp-platform",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, metrics, and event tracking spec before implementation starts.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 96134,
+            "reply_to": null,
+            "text": "Kicking off the Unified Analytics Platform MVP for Product Usage Insights. For scope: we are focusing on two flagship products and top 10 events each, aligned with the project_pack_ref Unified Analytics Platform MVP for Product Usage Insights. For metrics and dashboards, the current proposal is in A2, and the first draft of the tracking spec is in A1, which will drive T1. Please review both and comment on: 1) are the MVP KPIs in A2 enough for product and growth to make decisions in the next quarter, 2) any missing or redundant events in A1 for the top 10 per product, 3) anything that looks risky given our infra and privacy constraints. Once we converge, we will lock the metrics list and sign off the tracking spec.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 155243,
+            "reply_to": "M1",
+            "text": "I went through A2. For MVP, the daily active users, feature adoption, and retention views look reasonable. One concern: we have a lot of feature-level metrics for Product A but fewer for Product B. For consistency, I suggest we align the top 10 events per product in A1 so that both products cover: sign up, activation, core feature use, upgrade, and churn-related events. That will also simplify downstream models later. I can propose a concrete list for Product B based on the current event catalog if that helps.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 92214,
+            "reply_to": "M1",
+            "text": "On the implementation side for T1, the current A1 spec has naming conventions but is a bit light on validation rules. For example, we should define required properties for session and user identifiers, and acceptable ranges for numeric properties like session duration. That will help us catch inconsistent tracking early. Also, do we want to enforce a single timestamp field per event, or allow both client and server timestamps with clear semantics?",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 30972,
+            "reply_to": "M1",
+            "text": "I have a question on the MVP metrics in A2. For retention, are we standardising on weekly cohorts only, or do we also need monthly for launch? The matrix lists both, but I am not sure if that is still in scope given the deadline. From a modeling perspective, weekly only would simplify the first version.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 8323,
+            "reply_to": "M1",
+            "text": "I reviewed A1 and A2 quickly. For the top 10 events, I am not entirely sure how strict we need to be about property naming. For example, some existing events use user_id and others use uid. Should we plan to support both in the MVP and normalise later in the pipeline, or should T1 enforce a single convention and require product teams to update their tracking?",
+            "mentions": [
+              96134,
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 96134,
+            "reply_to": "M4",
+            "text": "On retention in A2: given the 21-day deadline, I suggest we keep weekly retention in scope for MVP and move monthly retention to the v2 parking lot. Weekly cohorts should be enough for initial product decisions, and we can derive monthly later once the core models are stable. If no one objects, we will update A2 to mark monthly retention as post-MVP.",
+            "mentions": [
+              30972,
+              155243
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 155243,
+            "reply_to": "M3",
+            "text": "For timestamps in A1, I recommend we keep both client and server timestamps but define a clear rule: server timestamp is the primary one for ordering and aggregations, client timestamp is optional and used only for debugging latency or offline scenarios. We can add that to the spec and make sure T1 includes validation that at least one of them is present. That should keep the ingestion logic simpler later.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 96134,
+            "reply_to": "M5",
+            "text": "On property naming (user_id vs uid): for the MVP, I strongly prefer we standardise at the tracking layer instead of adding complexity in transformations. If we allow both now, we will carry that inconsistency into T2 and T3. My proposal: A1 defines user_id as the canonical property, and T1 includes a migration note for product teams to update their instrumentation. For legacy events, we can support a temporary mapping in the ingestion pipeline, but new events should follow the convention.",
+            "mentions": [
+              8323,
+              92214
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 30972,
+            "reply_to": "M6",
+            "text": "Weekly-only retention for MVP sounds good to me. That will simplify the cohort logic in the transformations for T3 and reduce the number of dashboard views we need to support initially. We can still design the models so that adding monthly later is mostly a matter of adding another aggregation layer.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 8323,
+            "reply_to": "M8",
+            "text": "Ok, standardising on user_id in A1 makes sense. I will adjust the draft spec for T1 to: 1) rename uid to user_id in the examples, 2) add a short section on migration expectations for product teams, and 3) call out the temporary mapping for legacy events so we do not break existing data during the transition.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 92214,
+            "reply_to": "M3",
+            "text": "I can take a pass on the validation rules in A1 for T1. I will propose: required fields for event_name, user_id, server_timestamp; type checks for numeric and boolean properties; and a small set of allowed values for key enums like plan_type. That should give us enough guardrails without blocking teams on edge cases.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 155243,
+            "reply_to": "M2",
+            "text": "I drafted a candidate top 10 event list for Product B based on the structure in A1 and the metrics in A2: sign_up, onboarding_completed, first_core_action, core_action_repeat, feature_X_used, feature_Y_used, upgrade_started, upgrade_completed, cancellation_started, cancellation_completed. This mirrors Product A fairly closely and should keep the dashboards comparable across products.",
+            "mentions": [
+              96134,
+              30972
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "raised_hands",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 96134,
+            "reply_to": "M12",
+            "text": "Thanks for the concrete list. Unless anyone sees a blocker, I suggest we adopt that top 10 for Product B and update A1 accordingly. That will give us symmetry across products and keep the MVP dashboards in A2 focused on comparable KPIs.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 30972,
+            "reply_to": "M13",
+            "text": "No objections from me. The proposed Product B events cover the main lifecycle and feature usage points we need for the MVP metrics in A2. From a modeling standpoint, having parallel events across products will simplify the semantic layer later.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 8323,
+            "reply_to": "M13",
+            "text": "Works for me as well. I will incorporate the Product B list into A1 and adjust the examples in the spec so that T1 has a clear reference when we start implementation.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 96134,
+            "reply_to": "M1",
+            "text": "To summarise where we landed: 1) MVP metrics and dashboards in A2 are approved with weekly retention only for launch and monthly retention moved to post-MVP, 2) A1 will define a unified event schema with user_id as the canonical identifier, both client and server timestamps with clear semantics, and stricter validation rules, 3) the top 10 events per product are aligned across Product A and B as proposed above. I am marking this as our agreement on the MVP metrics list and the unified tracking spec so we can proceed with T1 and downstream work.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 8323,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on architecture and pipeline design for ingestion and transformations.",
+        "messages": [
+          {
+            "msg_id": "M17",
+            "speaker_id": 96134,
+            "reply_to": null,
+            "text": "I have uploaded the initial architecture proposal to A3 for the ingestion and transformation layers. It covers: 1) streaming ingestion from product event streams into raw storage for T2, 2) batch transformations to clean analytics tables for T3, and 3) semantic models for T4. Key open questions: a) do we go with a simple daily batch for MVP or aim for near-real-time refresh, b) do we centralise transformations in one job per domain or multiple smaller jobs, c) any concerns about maintainability on our current cloud stack. Please review A3 and share feedback so we can lock the pattern and refresh frequency.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 92214,
+            "reply_to": "M17",
+            "text": "From an implementation standpoint, I lean toward daily batch refresh for MVP. It keeps T2 and T3 simpler and aligns with the project constraint of at least daily refresh. We can still design T2 so that moving to more frequent runs later is mostly a scheduling change. For ingestion, I suggest we land events into partitioned raw tables by date and product, then have T3 read from those partitions for sessions, users, and feature usage.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 155243,
+            "reply_to": "M17",
+            "text": "I agree with starting with daily refresh. Given our current infra, near-real-time would require more monitoring and tuning than we can comfortably do in this MVP. For T4, I would like us to keep the semantic models fairly narrow: user, feature, and time dimensions plus a couple of fact tables for events and sessions. That should be enough to support the metrics in A2 without overcomplicating A3.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 30972,
+            "reply_to": "M17",
+            "text": "I have a question on the transformation jobs in T3. In A3, we have a single job that builds sessions, users, and feature usage in one pass. Would it be safer to split that into separate jobs with clear dependencies, so that a failure in feature usage does not block user-level tables? I am not fully sure about the trade-offs on scheduling overhead.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 8323,
+            "reply_to": "M17",
+            "text": "Looking at A3, I am trying to understand how T2 will handle schema changes from A1. If a new property is added to an event, do we plan to auto-add columns in the raw tables, or will we require a manual migration step? I want to make sure we do not break T3 when product teams extend events.",
+            "mentions": [
+              96134,
+              92214
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 96134,
+            "reply_to": "M20",
+            "text": "Good point on splitting T3. My suggestion: we create three separate transformation jobs: 1) sessions, 2) users, 3) feature usage. We orchestrate them so that sessions run first, then users and feature usage can run in parallel. That way, a failure in feature usage does not block user-level metrics, and we get clearer logging. The overhead on scheduling is small compared to the operational clarity.",
+            "mentions": [
+              30972,
+              92214
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 92214,
+            "reply_to": "M21",
+            "text": "For schema changes in T2, I would avoid auto-adding columns for now. Instead, we can store raw events in a semi-structured column and have a thin mapping layer in T3 that selects the properties we care about for MVP. When we add new properties that matter for analytics, we update T3 and T4 explicitly. That keeps the warehouse schema stable while still allowing some flexibility in A1.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "light_bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 155243,
+            "reply_to": "M22",
+            "text": "Splitting T3 into three jobs also helps with data quality checks. We can add row count and null checks per table and surface them in monitoring. For T4, I will design the semantic models assuming those three base tables exist, so the dashboards and API can rely on a consistent structure.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 30972,
+            "reply_to": "M22",
+            "text": "Splitting T3 as you described sounds good to me. For refresh frequency, if we go with daily, do we want to fix a specific time window, like early morning UTC, so stakeholders know when to expect fresh data? That might also help with scheduling any heavier backfill jobs later.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 96134,
+            "reply_to": "M25",
+            "text": "Yes, I propose we run the daily pipeline once per day at 03:00 UTC. That should avoid peak usage hours and still give product teams fresh data by the start of their day in most regions. We can document that in A3 and in the runbook later.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "alarm_clock",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 8323,
+            "reply_to": "M23",
+            "text": "Got it on the semi-structured raw storage for T2. That makes sense and should reduce the risk of breaking T3 when events evolve. I will keep that in mind when we implement the ingestion code and logging.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 92214,
+            "reply_to": "M18",
+            "text": "Given the agreement on daily refresh, I will start sketching the CI/CD hooks for T2 and T3 so we can deploy changes safely. We can reuse some of our existing pipeline tooling and just add tests for the new transformations.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 155243,
+            "reply_to": "M26",
+            "text": "03:00 UTC works for me. For T4, I will assume that the semantic models are refreshed right after the core tables, so the dashboards and API always see a consistent snapshot. I will reflect that dependency in the design notes in A3.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 96134,
+            "reply_to": "M17",
+            "text": "To wrap this up: 1) we are going with the architecture pattern in A3 that uses daily batch refresh for MVP, with raw semi-structured storage in T2 and three separate transformation jobs in T3 (sessions, users, feature usage), 2) semantic models in T4 will be built on top of those tables and kept narrow to support the MVP metrics, 3) the daily pipeline will run at 03:00 UTC. I will update A3 to reflect this and treat it as our final architecture and refresh decision for the MVP.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 92214,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 30972,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define dashboard layout, KPIs, and performance expectations for the UI.",
+        "messages": [
+          {
+            "msg_id": "M31",
+            "speaker_id": 96134,
+            "reply_to": null,
+            "text": "I have shared the latest dashboard wireframes in A8, aligned with the metrics matrix in A2. The MVP dashboard for T5 currently includes: 1) overview with daily active users per product, 2) feature adoption view for the top 10 events, 3) weekly retention cohorts. Filters: date range, product, and plan type. We also need to confirm performance expectations for T11: target is under 5 seconds load time for standard filters and data freshness aligned with the daily pipeline. Please review A8 and A2 and comment on: a) any missing or redundant views, b) must-have filters for launch, c) whether the performance targets are realistic on our infra.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 92214,
+            "reply_to": "M31",
+            "text": "From a front-end and query perspective, the 5-second target for standard filters on T5 is achievable if we keep the number of heavy aggregations per view limited. For T11, I suggest we pre-aggregate daily metrics in the semantic layer so the dashboard mostly reads from summary tables instead of raw events. That should keep query times predictable.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 155243,
+            "reply_to": "M31",
+            "text": "Looking at A8, I think the overview and feature adoption tabs are enough for MVP. One addition I would consider is a simple funnel widget on the overview page for sign up to activation, since that is a key question in A2. We can keep it lightweight: just a three-step funnel using the events already in the top 10 list.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 30972,
+            "reply_to": "M31",
+            "text": "I have a question on filters. Do we need segment filters like country or device type for MVP, or is that out of scope? A2 mentions them as nice-to-have, but I am not sure if we have reliable tracking for those properties yet.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 8323,
+            "reply_to": "M31",
+            "text": "On the UI side for T5, I want to confirm: are we building this as a single-page app with tabs as in A8, or separate pages per view? A single-page layout might help with perceived performance, but I want to be sure we do not overload the initial load with too many queries.",
+            "mentions": [
+              96134,
+              92214
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 96134,
+            "reply_to": "M34",
+            "text": "For MVP, I suggest we keep filters to date range, product, and plan type only. Country and device type are not consistently tracked yet, and adding them would increase query complexity for T11. We can list those as candidates for v2 in A2.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A2",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 92214,
+            "reply_to": "M35",
+            "text": "I would go with a single-page app with lazy-loaded tabs for T5. We can load the overview tab first and defer queries for feature adoption and retention until the user clicks those tabs. That should help us stay within the 5-second target for the initial view while still keeping navigation simple.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 155243,
+            "reply_to": "M33",
+            "text": "If we add the simple funnel widget, we should make sure it reuses the same pre-aggregated tables we plan for T11. That way, we do not introduce extra heavy queries. I can help define the query pattern for that funnel so it stays within the performance budget.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 30972,
+            "reply_to": "M36",
+            "text": "Limiting filters to date range, product, and plan type for MVP sounds reasonable. That should also make it easier to validate the outputs against A2 with stakeholders, since we will have fewer combinations to test.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 8323,
+            "reply_to": "M37",
+            "text": "Single-page with lazy-loaded tabs works for me. I will keep the initial overview tab light and make sure we only trigger the necessary queries on tab change. For T11, we can instrument basic timing logs so we can see if any view is consistently above the 5-second target.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 96134,
+            "reply_to": "M33",
+            "text": "I like the idea of a simple sign up to activation funnel on the overview page, as long as we keep it to three steps and reuse existing aggregations. That feels like a high-value addition that still fits within MVP scope.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 92214,
+            "reply_to": "M32",
+            "text": "On the performance side for T11, I propose we define standard filters as: last 7 days, all products, all plans. We can then benchmark each dashboard view under those conditions and record the results. If any view exceeds 5 seconds, we either simplify the query or add an index or summary table.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 155243,
+            "reply_to": "M42",
+            "text": "Defining standard filters explicitly for T11 is a good idea. I will make sure the semantic models in T4 expose the right aggregates so those standard queries are as efficient as possible.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 30972,
+            "reply_to": "M31",
+            "text": "One last question: for retention, do we need both a heatmap and a line chart in A8, or is the heatmap enough for MVP? The line chart might be nice, but it could add extra complexity to T5.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 96134,
+            "reply_to": "M44",
+            "text": "For MVP, I would keep only the retention heatmap. It gives a compact view of cohort behaviour and keeps T5 simpler. We can add a line chart later if stakeholders ask for it after launch.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 96134,
+            "reply_to": "M31",
+            "text": "Summarising the dashboard decisions: 1) MVP will ship with three main views in T5: overview (including a simple three-step funnel), feature adoption, and weekly retention heatmap, 2) filters for launch are date range, product, and plan type only, 3) we will implement the UI as a single-page app with lazy-loaded tabs, 4) performance target for T11 is under 5 seconds for standard filters (last 7 days, all products, all plans) with daily data freshness aligned to the 03:00 UTC pipeline run. I will update A8 and A2 to reflect this and treat it as the locked MVP dashboard scope and performance targets.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 8323,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 92214,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Agree on access control, anonymisation, and compliance requirements.",
+        "messages": [
+          {
+            "msg_id": "M47",
+            "speaker_id": 96134,
+            "reply_to": null,
+            "text": "Security has shared the latest Data Access and Anonymisation Policy in A5, which we need to align with for the analytics MVP. This impacts T8 and T9, and the operational guidance in A6. Key points from A5: 1) only anonymised and aggregated user data in analytics layers, 2) role-based access for dashboards and warehouse schemas, 3) stricter controls for any dataset that could be re-identified. We need to confirm: a) which roles get access to which dashboards and tables, b) how we anonymise or remove PII fields in the pipeline, c) how we document incident handling in A6. Please review A5 and share any concerns before we confirm the access model.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8",
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 155243,
+            "reply_to": "M47",
+            "text": "From a data modeling perspective for T8, I suggest we completely exclude direct identifiers like email and full name from the analytics warehouse. Instead, we use a hashed user_id that is stable per user but not reversible. For any fields that could be sensitive but needed for analysis, like country, we can keep them as-is but ensure they are not combined with low-cardinality identifiers that could lead to re-identification.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 92214,
+            "reply_to": "M47",
+            "text": "For access control in T8, I propose three main roles: 1) dashboard_viewer: can access only the curated dashboards and aggregated tables, 2) analyst: can query curated semantic models but not raw events, 3) engineer: can access raw events for debugging but only in a restricted environment. We can map these roles to our existing identity provider groups and document them in A6.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 30972,
+            "reply_to": "M47",
+            "text": "I have a question on anonymisation. For T8, do we need to apply hashing at ingestion time in T2, or can we do it in the transformation layer in T3? I am not sure which option is preferred from a compliance standpoint.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 8323,
+            "reply_to": "M47",
+            "text": "On T9 and A6, I can start drafting the incident response section, but I will need guidance on what escalation path security expects. For example, if we detect that a dashboard is exposing more detail than allowed by A5, who should be paged first and what is the expected response time?",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T9",
+              "A6",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 96134,
+            "reply_to": "M50",
+            "text": "Given the constraints in A5, I think we should apply hashing or removal of direct identifiers as early as possible. My recommendation: we strip or hash PII in the ingestion pipeline (T2) before data lands in the analytics storage, and T3 only works with already anonymised identifiers. I will confirm this approach with the security officer, but it aligns with their usual guidance.",
+            "mentions": [
+              30972,
+              92214
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 92214,
+            "reply_to": "M49",
+            "text": "For the engineer role, we should also enforce that access to raw events is logged and time-bound. That way, if there is an incident, we can audit who accessed what. I will add that to the T8 implementation notes and to A6 under monitoring.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 155243,
+            "reply_to": "M48",
+            "text": "On the hashing scheme, we should use a salted hash managed by security so that even if someone gets access to the warehouse, they cannot easily link user_id back to real identities. We can document the high-level approach in A5, but the actual salt management should stay with security.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "lock",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 30972,
+            "reply_to": "M52",
+            "text": "Applying anonymisation in T2 makes sense. That way, even if someone misconfigures access to raw tables, they still do not see direct identifiers. We should call this out clearly in T9 and A6 so on-call engineers know what to check during incidents.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "T2",
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 8323,
+            "reply_to": "M51",
+            "text": "I will draft the incident flow in A6 for T9 as: 1) on-call engineer investigates and mitigates by disabling or restricting the offending dashboard or query, 2) they notify the security officer and product owner, 3) we run a short post-incident review within 24 hours. I will leave placeholders for security to confirm the exact timelines.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 96134,
+            "reply_to": "M49",
+            "text": "On roles, I like the three-role model you proposed. We should also ensure that dashboard_viewer is the default for most internal users, and analyst or engineer roles are granted only on request and with security approval. I will run this by the security officer for sign-off.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 155243,
+            "reply_to": "M47",
+            "text": "We should also make sure that any exports from the dashboards (like CSV downloads) respect the same anonymisation rules. For T8, that means we never expose raw identifiers in exports, only aggregated or hashed fields.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "T8",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 92214,
+            "reply_to": "M53",
+            "text": "I will add logging for role changes and access to sensitive schemas as part of T8. That should give security enough visibility to audit access patterns if needed.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 96134,
+            "reply_to": "M47",
+            "text": "I have just walked through the proposed approach with the security officer. They are comfortable with: 1) stripping or hashing direct identifiers in T2 before data reaches analytics storage, 2) using a salted hash for user_id managed by security, 3) the three-role access model with logging and time-bound access for engineers, 4) the incident flow drafted in A6 for T9. Based on that, I am marking the access roles and anonymisation rules in A5 as approved for the MVP.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8",
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 92214,
+              "when": "this week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 8323,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan launch, validate readiness, and capture follow-ups after MVP go-live.",
+        "messages": [
+          {
+            "msg_id": "M61",
+            "speaker_id": 96134,
+            "reply_to": null,
+            "text": "We are approaching the end of the 21-day window for the Unified Analytics Platform MVP for Product Usage Insights. I have linked the MVP Launch Readiness Checklist in A4, which covers T10, T12, and operational items from A6 and A7. Proposal: target launch on Thursday next week, assuming A4 is green by end of day Tuesday. We need to confirm: 1) status of historical backfill in T10 and A7, 2) any open issues on dashboards and API, 3) who will run the demo and comms for T12. Please share quick updates and any blockers so we can decide on go or no-go.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10",
+              "T12",
+              "A7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 155243,
+            "reply_to": "M61",
+            "text": "On T10 and A7: the historical backfill for the last 6 months is loaded for Product A and about 70 percent complete for Product B. Data completeness checks against source counts look good so far. I expect to finish Product B by Monday, then we will run a final validation pass and update A7 with the results.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 92214,
+            "reply_to": "M61",
+            "text": "From the platform side, ingestion (T2), transformations (T3), and semantic models (T4) are deployed to staging and passing basic checks. Dashboards for T5 are live in staging and meeting the 5-second target under standard filters per T11. The metrics API for T6 is also up in staging with authentication and logging. Remaining work is mostly polishing and adding a few more tests in the CI/CD pipeline.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3",
+              "T4",
+              "T5",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 30972,
+            "reply_to": "M61",
+            "text": "I have been running spot checks on the dashboards against A2 using the staging environment. So far, DAU, feature adoption, and weekly retention numbers look consistent with our expectations and with a couple of manual queries. I will continue testing after the backfill for Product B is complete to make sure historical trends look reasonable.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 8323,
+            "reply_to": "M61",
+            "text": "On T9 and A6, the runbook draft is in place with monitoring dashboards, alert responses, and the incident flow we discussed. I still need to add a short section on how to handle partial backfill failures for T10, but that should not block launch if we agree on a simple retry and rollback procedure.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T9",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 96134,
+            "reply_to": "M62",
+            "text": "Thanks for the update. For launch, we need at least 6 months of historical data for both products, so finishing Product B by Monday still fits the proposed timeline. Please make sure A7 clearly documents any assumptions or gaps so stakeholders know what they are looking at.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 92214,
+            "reply_to": "M63",
+            "text": "I will also run a small load test on the dashboards and API early next week to confirm T11 under slightly heavier usage. It will not be exhaustive, but it should catch any obvious bottlenecks before we go live.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T5",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 30972,
+            "reply_to": "M65",
+            "text": "For partial backfill failures in T10, I suggest we document in A6 that we either: 1) rerun the affected date range, or 2) if that is not possible before launch, clearly flag the impacted dates in the dashboards so stakeholders do not misinterpret the data.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "T10",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 155243,
+            "reply_to": "M64",
+            "text": "Once I finish the Product B backfill for T10, I will ping you so you can rerun your checks on retention and feature adoption. I will also add a short summary of validation results to A7.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 8323,
+            "reply_to": "M68",
+            "text": "Sounds good. I will add that decision to the runbook in A6 under the T10 section: rerun the affected range when possible, otherwise flag the dates in the dashboards and communicate to stakeholders.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 92214,
+            "reply_to": "M61",
+            "text": "For T12, I can handle the technical demo of the platform: walk through the architecture from A3, show the main dashboards, and a couple of API calls. It would be good if someone else could cover the product narrative and how the metrics in A2 tie back to decisions.",
+            "mentions": [
+              96134,
+              30972
+            ],
+            "artifact_refs": [
+              "T12",
+              "A3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "microphone",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 30972,
+            "reply_to": "M71",
+            "text": "I can support on T12 with the product narrative: explain the key questions from A2, how the dashboards answer them, and what teams should look at in the first weeks after launch. We can record the session and capture Q and A as required.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "T12",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 96134,
+            "reply_to": "M61",
+            "text": "Quick check on A4: current status is mostly green, with yellow on T10 completion for Product B and final runbook updates in T9. Given the updates above, I am comfortable proceeding with the proposed launch date as long as we close those items by Tuesday end of day. If anything slips, we can still adjust by a day or two, but I would like to avoid pushing beyond next week.",
+            "mentions": [
+              8323,
+              155243
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 155243,
+            "reply_to": "M73",
+            "text": "I am confident we can finish T10 by Monday and update A7 the same day. That should give enough time for validation and any small fixes before Thursday.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 8323,
+            "reply_to": "M73",
+            "text": "I will finalise the remaining pieces of T9 in A6 by Tuesday noon: add the partial backfill handling, double-check alert descriptions, and link the runbook from the channel topic as required by the definition of done.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 96134,
+            "reply_to": "M61",
+            "text": "Given the current status: 1) T10 backfill is on track to complete by Monday with validation captured in A7, 2) dashboards, API, and pipelines are meeting functional and performance expectations, 3) T9 runbook updates in A6 will be done by Tuesday, and 4) A4 is effectively green pending those last checks. I am confirming Thursday next week as the MVP launch date, with a go decision contingent on A4 being fully green by end of day Tuesday. We will run the demo for T12 on launch day and record it for wider teams.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              155243
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10",
+              "T12",
+              "A7",
+              "A6"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 155243,
+              "when": "Monday"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 8323,
+              "when": "Tuesday"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 92214,
+              "when": "launch day"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

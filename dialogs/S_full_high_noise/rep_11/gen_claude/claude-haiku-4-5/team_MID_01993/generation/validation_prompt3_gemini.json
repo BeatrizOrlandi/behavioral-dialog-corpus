@@ -1,0 +1,40 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH4 contains 14 messages, which is below the expected minimum of 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T5 is listed in artifacts_to_reference for TH2 but does not appear in the artifact_refs of any message in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T2 is listed in artifacts_to_reference for TH3 but does not appear in the artifact_refs of any message in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T10 is listed in artifacts_to_reference for TH4 but does not appear in the artifact_refs of any message in that thread."
+    },
+    {
+      "severity": "MID",
+      "code": "INVALID_REF",
+      "detail": "In TH5 thread_outcome.next_steps, 'A8' is used as a task_id, but it is an artifact_id."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants frequently use repetitive and similar phrasing (e.g., 'I've reviewed...', 'All set on...'), lacking distinct voices."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

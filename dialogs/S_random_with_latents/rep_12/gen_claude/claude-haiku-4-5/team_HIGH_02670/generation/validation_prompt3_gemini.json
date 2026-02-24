@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "LOW",
+      "code": "INCONSISTENCY",
+      "detail": "In thread TH2, the number of messages is 17, which is below the target range of [20, 30] specified in the blueprint. However, it is still within the global expected range of [16, 30]."
+    },
+    {
+      "severity": "LOW",
+      "code": "INVALID_REF",
+      "detail": "In thread TH3, message M36 references artifact T2, which is not listed in the blueprint's `artifacts_to_reference` for that specific thread. The reference is contextually plausible but technically a deviation."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 4
+  }
+}

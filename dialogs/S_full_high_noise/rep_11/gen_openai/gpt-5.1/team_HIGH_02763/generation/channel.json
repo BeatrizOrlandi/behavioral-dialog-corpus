@@ -1,0 +1,1653 @@
+{
+  "channel": {
+    "channel_id": "proj-unified-retail-advisory",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, segments, and core advisory workflow for the new program.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 239050,
+            "reply_to": null,
+            "text": "Kicking off the unified retail client advisory work for project_pack_ref: Launch of a Unified Retail Client Financial Advisory Program.\nWe need to align on two things this week: 1) which client segments we cover in the initial rollout, and 2) the high-level advisory workflow we want every branch to follow.\nFor segments, my starting point for T3 and A3 is:\n- Mass retail: existing current / savings clients with lower balances\n- Emerging affluent: higher income or growing balances\n- Small business / self-employed: using personal accounts but with business needs\nFor the workflow linked to A1, I am thinking of a simple sequence: pre-meeting data check, discovery, analysis, recommendation, documentation, and follow-up.\nSharing this as a strawman so we can refine and then lock D1 and D2 once we are comfortable.",
+            "mentions": [
+              123706,
+              3561,
+              7338,
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 123706,
+            "reply_to": "M1",
+            "text": "Thanks for framing this.\nOn segments for T3 and A3, I would suggest we explicitly call out:\n- Mass retail\n- Emerging affluent\n- Small business owners using retail channels\nThis keeps it to three, which will help with training and KPI cuts later.\nOn the workflow tied to A1 and T1, I would add a quick suitability check step before recommendations, so we can later map it cleanly to product rules and compliance.\nBefore we close D1 and D2, I would like to hear if this covers the main branch realities you see.",
+            "mentions": [
+              239050,
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 411661,
+            "reply_to": "M1",
+            "text": "From what I see in branches, three segments as you both outlined for T3 and A3 are workable.\nI would just clarify that small business owners here are those without dedicated business banking coverage, otherwise we risk overlap.\nFor the workflow, I like the sequence, but we should be explicit about time: for a standard 45-minute slot, we probably need a light version of A1 for simple mass retail cases, and a fuller version for emerging affluent and small business.\nWe can detail that in T1 and T3, but it affects how advisors will use the template day to day.",
+            "mentions": [
+              239050,
+              123706
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 7338,
+            "reply_to": "M1",
+            "text": "On the branch side, I often see clients who are just asking about a small loan or a simple savings product.\nWould those still fall under the mass retail segment, or do we need a separate quick-service group?\nAlso, for the workflow, in practice advisors sometimes start with the product the client asks for and only then go into broader questions.\nDo we want to force the full discovery every time, or can we define when the light version of A1 is enough?",
+            "mentions": [
+              239050,
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 239050,
+            "reply_to": "M4",
+            "text": "Good point.\nI would keep those clients inside mass retail but define two visit types in T3: quick need and full advisory.\nQuick need: we capture only a minimal subset of A1, mainly income range, existing products, and the specific request, and we still run a short suitability check.\nFull advisory: we use the complete A1 template.\nThis way we do not create a new segment but we do reflect how branches actually work.",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 3561,
+            "reply_to": "M1",
+            "text": "I have a question on the workflow.\nWhen we say discovery, do we already include questions about tax situation and existing loans, or is that part of analysis?\nI am asking because for T1 and A1 we need to know which data points are mandatory in the first meeting.\nIf we try to cover too much in discovery, we might run out of time in the standard slot.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 123706,
+            "reply_to": "M6",
+            "text": "I would keep discovery focused on:\n- Income, expenses, assets, liabilities\n- Goals and time horizon\n- Basic tax status and existing loans at a high level\nThen, in analysis, we use that data plus system information to shape the plan.\nFor T1 and A1, we can mark some fields as essential for all segments and some as optional for the quick-need visits.\nWe can test the timing later when T7 mock sessions run, but this gives us a clear structure now.",
+            "mentions": [
+              3561,
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 411661,
+            "reply_to": "M2",
+            "text": "On the suitability step you mentioned, I suggest we explicitly place it between analysis and recommendation in the standard workflow.\nThat way, when we later align with product rules in T8, we can map each recommendation to eligibility and risk checks.\nSo the high-level flow would be: pre-meeting review, discovery, analysis, suitability check, recommendation, documentation, follow-up.\nIf no one objects, this could be the baseline for D2.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 7338,
+            "reply_to": "M8",
+            "text": "From a training perspective, that sequence is easy to explain.\nIn branches, we can show it as a simple flow on one page and then link each step to the relevant part of A1 and the playbooks in A3.\nFor quick-need visits, we can say that discovery and analysis are lighter, but the suitability and documentation steps still happen.\nThis should also help when we prepare T5 and T12 later.",
+            "mentions": [
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T5",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 239050,
+            "reply_to": "M8",
+            "text": "Let me summarize where we are so we can close the open points.\nSegments for T3 and A3:\n1) Mass retail (including quick-need visits)\n2) Emerging affluent\n3) Small business owners served through retail, without separate business coverage\nWorkflow for T1 and A1:\n- Pre-meeting data review\n- Discovery\n- Analysis\n- Suitability check\n- Recommendation\n- Documentation\n- Follow-up\nWith a light and full version of A1 depending on visit type.\nIf there are no strong objections, I propose we confirm this as our baseline for D1 and D2 for the pilot.",
+            "mentions": [
+              123706,
+              411661,
+              3561,
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 123706,
+            "reply_to": "M10",
+            "text": "The summary matches my understanding.\nFrom a data and KPI angle, three segments and a single standard workflow with light vs full variants will be manageable for T4 and A4.\nI support locking D1 and D2 as you described, and we can refine details inside T1 and T3 without changing the overall structure.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "T1",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 3561,
+            "reply_to": "M10",
+            "text": "I am aligned with the three segments and the workflow steps.\nFor T1, I will start drafting the template fields in A1 using this structure and mark which ones are essential for all segments.\nI might need a later review from you on the tax-related fields, but this gives me enough direction to begin.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 411661,
+            "reply_to": "M10",
+            "text": "I am also good with this.\nFor T3 and A3, I will shape the playbooks around these three segments and the agreed workflow, including clear examples of quick-need vs full advisory visits.\nWe can test them with the pilot branches once T5 and A6 are in place.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 7338,
+            "reply_to": "M10",
+            "text": "No objections from my side.\nThe distinction between quick-need and full advisory will be important when we plan the mock sessions in T7 and the onboarding notes in A8.\nI will keep using these three segments when I talk to branch managers about T5 and T12.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 239050,
+            "reply_to": "M11",
+            "text": "Great, then we will proceed with these as our baseline.\nNext step is to translate this into concrete fields in A1 and segment-specific flows in A3 so that branches see something tangible.\nWe will revisit after the first draft of T1 and T3 is ready, but D1 and D2 are now set for the pilot scope.",
+            "mentions": [
+              3561,
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 3561,
+              "when": "this week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 411661,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock down tax, compliance, and documentation standards for advisors.",
+        "messages": [
+          {
+            "msg_id": "M16",
+            "speaker_id": 3561,
+            "reply_to": null,
+            "text": "I am sharing a first draft of the tax and compliance guidelines for the pilot branches, linked to A2 and T2.\nThe document covers:\n- What advisors can and cannot say about tax benefits of savings, loans, and protection products\n- When to refer clients to specialized tax advice\n- Basic disclosure requirements for fees and risks\nI have also started a list of mandatory documents per client file that could feed into A5 and T9, but it is still rough.\nI would appreciate your review and help to make sure this is complete enough for D3 and D4 later.",
+            "mentions": [
+              123706,
+              239050,
+              411661
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 123706,
+            "reply_to": "M16",
+            "text": "Thanks for putting this together.\nI went through the A2 draft and have a few comments:\n- We should be clearer on the boundary between general tax information and individual tax advice, to avoid advisors stepping into personal tax planning.\n- For lending, we need a short section on how interest deductibility may vary and that clients should confirm with their own tax advisor.\nOn the documentation side for A5 and T9, I suggest we structure the list by segment and visit type, but keep a core set of documents that is always required.\nOnce we refine these points, I will be comfortable supporting D3 and D4 for the pilot.",
+            "mentions": [
+              3561
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 239050,
+            "reply_to": "M16",
+            "text": "I have a practical question.\nIn branches, advisors often explain tax aspects of savings and insurance in simple terms.\nIn A2, can we include a short list of standard phrases that are allowed, and a list of phrases to avoid?\nThat would make it easier to train and to audit.\nFor A5 and T9, I agree with having a core set of documents for all segments, then add-ons for small business owners where needed.",
+            "mentions": [
+              3561,
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 7338,
+            "reply_to": "M18",
+            "text": "From what I see in client conversations, having those standard phrases in A2 would really help.\nAdvisors sometimes improvise when explaining tax points, which can create risk.\nOn the documentation list in A5, could we also include a simple checklist that advisors can tick during the meeting, so they do not forget to collect signatures or disclosures?",
+            "mentions": [
+              3561
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 411661,
+            "reply_to": "M16",
+            "text": "Looking at the draft, I think we should also link the documentation standards to the workflow we agreed in TH1.\nFor example, during the recommendation and documentation steps, A5 should clearly state which forms, disclosures, and evidence are mandatory for each product type.\nThis will help when we later run T7 mock sessions and when audit reviews sample files.\nMaybe we can add a small table in A5 that maps each workflow step to the required documents.",
+            "mentions": [
+              3561,
+              123706
+            ],
+            "artifact_refs": [
+              "A5",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 3561,
+            "reply_to": "M17",
+            "text": "Thanks for the feedback.\nI will adjust A2 to:\n- Clarify that advisors provide general information only and must not give personal tax advice\n- Add a note on lending interest deductibility and the need for clients to confirm with their own tax advisor\nFor A5 and T9, I will reorganize the list into core documents plus segment-specific items, and I will add a simple checklist format as suggested.\nOnce I have that version, I will share again so we can see if it is ready for D3 and D4.",
+            "mentions": [
+              123706,
+              239050,
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 123706,
+            "reply_to": "M21",
+            "text": "That sounds good.\nOne more point: for T9, we should ensure the mandatory documents list in A5 is feasible for all branches.\nMaybe we can mark a small subset as absolutely required for every advisory file, and the rest as recommended where applicable.\nThis will also make it easier to define audit sampling criteria later.\nIf you can reflect that in the next draft, I think we will be close to ready for D3 and D4.",
+            "mentions": [
+              3561
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 239050,
+            "reply_to": "M21",
+            "text": "When you update A2, could you also add a short section on how to handle clients who insist on specific tax outcomes?\nFor example, advisors should be instructed to repeat that they cannot guarantee tax treatment and to suggest the client consults a tax professional.\nThis will be important for training materials in A6 and A8 and for consistent messaging across branches.",
+            "mentions": [
+              3561,
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A8",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 7338,
+            "reply_to": "M23",
+            "text": "Agree.\nIn training sessions under T5, we can role-play those situations using the standard phrases from A2.\nIf A5 also has the checklist you mentioned, advisors will have both the right words and the right paperwork in front of them.",
+            "mentions": [
+              239050,
+              3561
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 3561,
+            "reply_to": "M22",
+            "text": "I have now updated A2 and A5 based on your comments:\n- A2: clearer boundary on general vs personal tax information, standard phrases to use and avoid, and guidance for clients seeking specific tax outcomes\n- A5: core mandatory documents for all advisory files, plus segment-specific and product-specific items, all in checklist format\nFor T9, I marked the absolutely required items and the recommended ones.\nCan you confirm if this is sufficient to approve A2 for the pilot and agree on the mandatory documents list for D3 and D4?",
+            "mentions": [
+              123706,
+              239050,
+              411661
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 123706,
+            "reply_to": "M25",
+            "text": "I reviewed the updated A2 and A5.\nThe clarifications and the checklist structure address the main concerns from a tax and control perspective.\nFor the pilot, I am comfortable approving A2 as the tax and compliance guideline and confirming the mandatory documents list in A5 as defined in T9.\nWe can still fine-tune wording after the pilot, but for now I support closing D3 and D4.",
+            "mentions": [
+              3561
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T2",
+              "T9"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 239050,
+            "reply_to": "M25",
+            "text": "From a branch and client perspective, the updated A2 and A5 are clear enough to use in training and in daily work.\nThe standard phrases and the checklist will make it easier for advisors to stay within the rules.\nI agree with moving forward with these versions for the pilot and treating any further changes as post-pilot improvements.",
+            "mentions": [
+              3561,
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 411661,
+            "reply_to": "M25",
+            "text": "Aligned here as well.\nWe will integrate the A2 guidance and the A5 checklist into the playbooks in A3 and the training plan in A6.\nFor the pilot, D3 and D4 are clear enough to brief branch managers and advisors.",
+            "mentions": [
+              3561,
+              239050
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 3561,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 3561,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define KPIs, data sources, and expectations for pilot performance tracking.",
+        "messages": [
+          {
+            "msg_id": "M29",
+            "speaker_id": 123706,
+            "reply_to": null,
+            "text": "I have drafted the KPI and reporting specification in A4 for the pilot, linked to T4 and T10.\nProposed KPIs:\n- Number of advisory sessions per segment\n- Share of sessions using full vs light template A1\n- Conversion to at least one recommended product per session\n- Average session duration\n- Documentation completeness rate based on A5\nFor each, A4 lists the data fields, calculation logic, and source systems.\nBefore we finalize D5 and D6, I need your view on whether this set is both useful and realistic for branches and for the pilot timeline.",
+            "mentions": [
+              239050,
+              411661,
+              7338,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "A5",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 239050,
+            "reply_to": "M29",
+            "text": "The list looks solid.\nFrom a business angle, I would add one more KPI: proportion of sessions where the advisor captured at least the core data fields in A1.\nThis will show whether the new workflow is really being followed.\nOn feasibility, I am not fully sure if we can easily distinguish full vs light template usage in the system.\nDo we have a flag for that in the current setup, or would that require changes?",
+            "mentions": [
+              123706
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "T1",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 7338,
+            "reply_to": "M29",
+            "text": "From what I see in branches, tracking average session duration and documentation completeness will be very helpful.\nAdvisors often worry about time and paperwork.\nFor the pilot, will branches see these KPIs in a simple dashboard, or will they only be used centrally?\nIf we want them to act on the numbers, a basic view per branch would be useful, even if it is just a monthly summary from A4.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 3561,
+            "reply_to": "M29",
+            "text": "On documentation completeness based on A5, how exactly will we measure it?\nWill it be a manual audit sample, or can the system check if all required documents are attached?\nFor T9, we defined mandatory items, but I am not sure if all of them are captured in a way that the system can read.",
+            "mentions": [
+              123706
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4",
+              "T4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 123706,
+            "reply_to": "M30",
+            "text": "On the full vs light template question: we do not currently have a dedicated flag in the system.\nHowever, for the pilot we can approximate it by checking whether a defined set of extended fields in A1 is filled.\nIn A4, I have marked those fields and proposed a rule: if at least X of them are populated, we count it as full; otherwise, light.\nThis keeps us within existing data structures and supports D6.\nI also like your suggestion of a KPI on core data capture; I will add that to A4 and T4.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "T1",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 123706,
+            "reply_to": "M32",
+            "text": "For documentation completeness, we have two options:\n- System-based: check if required document types are attached in the digital file\n- Sample-based: audit team reviews a sample using the A5 checklist\nFor the pilot, I propose we use a hybrid: system-based checks for a few key items, plus a small manual sample.\nIn A4 and T10, I have described this approach so that we can refine it with the audit team later.",
+            "mentions": [
+              3561
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "T4",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 411661,
+            "reply_to": "M29",
+            "text": "Looking at the KPIs, I think they cover both adoption and client outcomes reasonably well for a pilot.\nOne thing we might add is a simple client satisfaction indicator from the feedback survey in T10, even if it is just a basic rating.\nThat will help when we later prepare A7 and T11.\nOn feasibility, as long as we stay within existing core systems and a simple survey tool, I do not see major blockers.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "A7",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "smiley",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 123706,
+            "reply_to": "M31",
+            "text": "For the pilot, the plan in T10 is to provide a simple monthly summary per pilot branch, based on A4.\nWe will not have a real-time dashboard yet, but we can share a short report with the key KPIs and a few comments.\nIf the pilot goes well, we can then work with the IT reporting specialist on a more automated view.\nFor now, this should be enough to let branches see their own numbers and react.",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 7338,
+            "reply_to": "M36",
+            "text": "A monthly summary per branch will work.\nWe can use it in the pilot review meetings with branch managers and advisors.\nIf A4 clearly shows which KPIs are per segment and which are overall, it will be easier to explain the results.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 239050,
+            "reply_to": "M33",
+            "text": "The approximation for full vs light template usage makes sense for the pilot.\nAs long as A4 documents the rule clearly, we can explain any limitations when we present the results in A7.\nI support including the core data capture KPI and the simple client satisfaction indicator mentioned earlier.\nWith those, the set feels balanced for D5.",
+            "mentions": [
+              123706,
+              411661
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "A7",
+              "T4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 123706,
+            "reply_to": "M38",
+            "text": "I have now updated A4 and T4 to:\n- Add the core data capture KPI\n- Include a simple client satisfaction rating from the T10 survey\n- Clarify the rule for full vs light template usage based on A1 fields\n- Describe the hybrid approach for documentation completeness using A5\nAll KPIs rely only on existing core systems plus a basic survey tool, so they are feasible for the pilot.\nFrom my side, this is ready to lock for D5 and D6.",
+            "mentions": [
+              239050,
+              411661,
+              7338,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "A5",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 411661,
+            "reply_to": "M39",
+            "text": "The updated set in A4 looks good to me.\nIt gives us enough insight into adoption, quality, and client perception without overloading branches.\nI agree with closing D5 and D6 based on this definition for the pilot.",
+            "mentions": [
+              123706
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 3561,
+            "reply_to": "M39",
+            "text": "From a documentation and control angle, the KPIs tied to A5 and T9 are clear enough.\nThe hybrid completeness measure will also give us useful feedback on whether the checklist is working.\nI am comfortable with the KPI set as defined for the pilot.",
+            "mentions": [
+              123706
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4",
+              "T4",
+              "T9"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 7338,
+            "reply_to": "M39",
+            "text": "No concerns from the branch side.\nThe KPIs are understandable and can be explained easily in training and in the pilot review meetings.\nLet us proceed with this set for the pilot.",
+            "mentions": [
+              123706,
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T4",
+              "T10"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 123706,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 123706,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and confirm the branch rollout, training sessions, and mock runs.",
+        "messages": [
+          {
+            "msg_id": "M43",
+            "speaker_id": 7338,
+            "reply_to": null,
+            "text": "I am sharing the proposed branch rollout and training plan in A6, linked to T5, T7, and T12.\nProposal:\n- Pilot branches: two in Region A and two in Region B, each with a mix of mass retail and small business clients\n- Training: two half-day sessions per branch, covering the workflow, A1, A2, A3, and A5\n- Mock sessions under T7: at least three per branch, using real-life scenarios\nOn T12, I have drafted updates to onboarding notes in A8 so new advisors understand the unified program.\nPlease review so we can confirm pilot branches, dates, and the training agenda for D7 and D8.",
+            "mentions": [
+              239050,
+              411661,
+              123706,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A5",
+              "A6",
+              "A8",
+              "T5",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 239050,
+            "reply_to": "M43",
+            "text": "Thanks for pulling this together.\nOn pilot branches, I suggest we confirm one urban and one more rural branch in each region, to see different client mixes.\nFor training, two half-days per branch seems reasonable, but we might need a short follow-up Q and A session after the first week of the pilot.\nOn T7, can you clarify how we will record session duration and bottlenecks during the mock runs?",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A6",
+              "T5",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 411661,
+            "reply_to": "M43",
+            "text": "Looking at A6, I like the idea of mixing client profiles across branches.\nFor the training agenda, I would structure it around the workflow steps we agreed in TH1, and then plug in A1, A2, A3, and A5 at the relevant points.\nFor example, discovery and analysis with A1 and A3, recommendation and documentation with A2 and A5.\nThis will make it easier for advisors to connect the materials to their daily work.",
+            "mentions": [
+              7338,
+              239050
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A5",
+              "A6",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 123706,
+            "reply_to": "M43",
+            "text": "From a KPI and data perspective, the proposed plan in A6 works.\nFor T7, if we can capture start and end times of the mock sessions and note any steps that consistently cause delays, that will help us validate the assumptions behind A4.\nWe should also ensure that at least some mock sessions cover each of the three segments defined in A3.",
+            "mentions": [
+              7338,
+              239050
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 3561,
+            "reply_to": "M43",
+            "text": "On the training content, could we include a short section on the key tax and documentation points from A2 and A5?\nAdvisors often ask where the line is on tax explanations and which documents are absolutely required.\nIf we cover that clearly in A6, it should reduce questions later.",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 7338,
+            "reply_to": "M44",
+            "text": "On T7, my idea was to:\n- Use a simple form during each mock session to record start and end time\n- Ask the advisor and observer to note any steps where they felt rushed or stuck\n- Tag each mock session by segment and visit type (full vs light template)\nWe can then summarize this in A6 and share the findings so we can adjust the process if needed.",
+            "mentions": [
+              239050,
+              123706
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 239050,
+            "reply_to": "M48",
+            "text": "That approach for T7 works for me.\nIt will give us both timing data and qualitative feedback.\nOn pilot branches, I propose we confirm:\n- Region A: Branch A1 (urban), Branch A2 (rural)\n- Region B: Branch B1 (urban), Branch B2 (rural)\nIf no one sees an issue with these, we can lock them in A6 for D7.",
+            "mentions": [
+              7338,
+              411661
+            ],
+            "artifact_refs": [
+              "A6",
+              "T5",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 411661,
+            "reply_to": "M49",
+            "text": "Those branch choices give us a good spread of client types.\nFor the training agenda in A6, I suggest we break the two half-days into:\nDay 1: workflow overview, A1 and A3, basic scenarios\nDay 2: A2 and A5, documentation checklist, and mock sessions under T7\nPlus a short virtual Q and A one week into the pilot.\nIf we agree on this structure, we can treat it as the baseline for D8.",
+            "mentions": [
+              239050,
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A5",
+              "A6",
+              "T5",
+              "T7"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 123706,
+            "reply_to": "M50",
+            "text": "The agenda you outlined aligns well with the KPI and control needs.\nIf we run the mock sessions on Day 2 and capture the timing and bottlenecks as planned, we will have early data to compare with the assumptions in A4.\nI support confirming both the branch list and the training structure for D7 and D8.",
+            "mentions": [
+              411661,
+              239050,
+              7338
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T5",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 7338,
+            "reply_to": "M50",
+            "text": "I have updated A6 to reflect:\n- Pilot branches: A1, A2, B1, B2 as listed\n- Training agenda split across two half-days plus a virtual Q and A\n- Mock session approach for T7, including timing and bottleneck notes\nOn T12 and A8, I also added a short section explaining that new advisors will be trained using the same structure.\nUnless there are objections, I will treat D7 and D8 as confirmed and start aligning dates with branch managers.",
+            "mentions": [
+              239050,
+              411661,
+              123706,
+              3561
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8",
+              "T5",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 3561,
+            "reply_to": "M52",
+            "text": "No issues from my side.\nThe updated A6 and A8 give enough space to cover the tax and documentation topics from A2 and A5.\nI will be available to support those parts of the training if needed.",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 7338,
+              "when": "this week"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 7338,
+              "when": "next week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 7338,
+              "when": "before pilot start"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on adjustments before wider rollout.",
+        "messages": [
+          {
+            "msg_id": "M54",
+            "speaker_id": 239050,
+            "reply_to": null,
+            "text": "I have uploaded the pilot evaluation and feedback report in A7, based on T11 and the KPIs from A4.\nHeadline results:\n- Advisory sessions increased by 25 percent in pilot branches, with good uptake in mass retail and emerging affluent segments\n- Full template A1 was used in about 60 percent of sessions; light version in 40 percent\n- Documentation completeness based on A5 improved over the pilot, but still shows gaps in small business cases\n- Client satisfaction scores from T10 are positive, especially where advisors followed the full workflow\nI would like us to review the findings and agree on what we keep, change, or drop before scaling beyond the pilot regions.",
+            "mentions": [
+              411661,
+              123706,
+              7338,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "A5",
+              "A7",
+              "T10",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 123706,
+            "reply_to": "M54",
+            "text": "Looking at A7 and A4, the overall trends are encouraging.\nTwo points stand out:\n- The gap in documentation completeness for small business cases suggests we may need clearer guidance or simpler checklists in A5.\n- Session duration is slightly above the standard slot when using the full template A1, especially in the first weeks.\nMy suggestion is to keep the current KPI set, but refine the process and materials rather than adding more metrics at this stage.",
+            "mentions": [
+              239050,
+              3561
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 411661,
+            "reply_to": "M54",
+            "text": "From the branch feedback in A7, advisors appreciate the structure but find some parts of A1 too detailed for simple mass retail visits.\nI propose we slightly reduce the mandatory fields for the light version and move a few items to optional.\nFor small business cases, we might need an extra example in A3 and a clearer section in A5 to address the gaps you mentioned.",
+            "mentions": [
+              239050,
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A5",
+              "A7",
+              "T1",
+              "T3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 7338,
+            "reply_to": "M54",
+            "text": "In the debriefs with pilot branches, advisors said the training in A6 and the onboarding notes in A8 were helpful, but they would like more practice on small business scenarios.\nFor the wider rollout, we could add one extra mock session focused on small business owners and update A3 with a few more examples.\nAlso, some advisors suggested a quick reference card summarizing the key steps and documents from A5.",
+            "mentions": [
+              239050,
+              411661
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "A6",
+              "A8",
+              "A7",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 3561,
+            "reply_to": "M55",
+            "text": "On the documentation gaps for small business cases, I can review A5 and T9 to see where we can simplify or clarify.\nMaybe we can group some items and highlight the absolutely essential ones more clearly.\nIf we also add a small business-specific example in A5, that might help advisors understand what a complete file looks like.",
+            "mentions": [
+              123706,
+              411661
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 239050,
+            "reply_to": "M56",
+            "text": "I agree with trimming the light version of A1 for simple mass retail visits.\nWe should keep the core data fields that feed the KPIs in A4 and the suitability checks, but we can relax some of the more detailed items.\nFor small business, let us add at least two concrete scenarios in A3 and align them with the product mapping in T8.",
+            "mentions": [
+              411661,
+              123706
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A4",
+              "A7",
+              "T1",
+              "T3",
+              "T8",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 123706,
+            "reply_to": "M59",
+            "text": "If we adjust the light version of A1, I will update A4 to ensure the core data capture KPI still works as intended.\nWe should avoid changing the definition too often, but a one-time refinement after the pilot is reasonable.\nOn session duration, the A7 data shows improvement over time, so I would not change the workflow steps, just the amount of detail in the light template.",
+            "mentions": [
+              239050,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "A7",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 411661,
+            "reply_to": "M57",
+            "text": "On training, I support adding a dedicated small business mock session in T7 and updating A6 accordingly.\nWe can also incorporate the quick reference card idea, maybe as an annex to A5 and A8.\nThat should help advisors during the first weeks of the wider rollout.",
+            "mentions": [
+              7338,
+              3561
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "A8",
+              "A7",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 7338,
+            "reply_to": "M61",
+            "text": "I will adjust A6 and T7 to include that extra small business mock session and work with branches to schedule it.\nFor the quick reference card, I can draft a one-page summary using the key points from A5 and A2 and then share it for review.",
+            "mentions": [
+              411661,
+              3561
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "A7",
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 3561,
+            "reply_to": "M62",
+            "text": "When you have the draft of the reference card, I can check that the tax and documentation parts are consistent with A2 and A5.\nI will also update A5 with a clearer small business example and a stronger highlight of the essential items.",
+            "mentions": [
+              7338
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A7",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 239050,
+            "reply_to": "M60",
+            "text": "To wrap up the adjustments before wider rollout, here is what I am hearing from A7 and this thread:\n- Keep the overall workflow and KPI set from A4 as is\n- Simplify the light version of A1 for mass retail, keeping core fields intact\n- Strengthen small business guidance in A3 and A5, plus extra training and mock sessions in A6 and T7\n- Introduce a quick reference card aligned with A2 and A5, to be included in A8 and onboarding under T12\nIf everyone agrees, we will treat these as the main changes to implement before scaling.",
+            "mentions": [
+              123706,
+              411661,
+              7338,
+              3561
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "T1",
+              "T3",
+              "T4",
+              "T7",
+              "T9",
+              "T11",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 123706,
+            "reply_to": "M64",
+            "text": "That summary matches my understanding of the pilot findings in A7.\nOnce the template and playbook changes are in place, I will refresh A4 and T4 where needed and prepare a short note for the IT reporting specialist so they know what stays stable for the wider rollout.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A4",
+              "A7",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 411661,
+            "reply_to": "M64",
+            "text": "Aligned.\nI will take the lead on updating A1 and A3 under T1 and T3, focusing on the light template adjustments and the new small business scenarios.\nWe can then share the updated materials with pilot branches for a quick sanity check before rolling out more broadly.",
+            "mentions": [
+              239050,
+              7338
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A7",
+              "T1",
+              "T3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 7338,
+            "reply_to": "M64",
+            "text": "I will update A6 and A8 and adjust T7 and T12 to reflect the new training elements and the reference card.\nOnce the materials are ready, I will coordinate with branch managers to schedule the additional mock sessions and briefings.",
+            "mentions": [
+              239050,
+              3561
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8",
+              "A7",
+              "T7",
+              "T12",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 3561,
+            "reply_to": "M64",
+            "text": "I will focus on refining A5 and supporting the reference card content so that the documentation standards remain clear as we scale.\nIf we see new issues in the first wave after the pilot, we can capture them in a follow-up update to A7.",
+            "mentions": [
+              239050
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 411661,
+              "when": "next week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 411661,
+              "when": "next week"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 123706,
+              "when": "after template updates"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 7338,
+              "when": "before wider rollout"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 3561,
+              "when": "before wider rollout"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 7338,
+              "when": "before wider rollout"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (13 messages), TH3 (14 messages), TH4 (14 messages), and TH5 (15 messages) are below the minimum required message count of 16."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Multiple mandatory artifacts were not referenced as required by the blueprint: A2 in TH1; T1 and T6 in TH2; A6 and T3 in TH3; T4 and T8 in TH4; T5 and T10 in TH5."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Forbidden or leaky terms were found: 'score' in messages M58 and M62 ('compliance score'), and 'productivity' in M71 ('staff productivity')."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

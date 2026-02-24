@@ -1,0 +1,1818 @@
+{
+  "channel": {
+    "channel_id": "proj-self-service-portal-mvp",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, success metrics, and responsibilities.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 59590,
+            "reply_to": null,
+            "text": "Welcome to the Self-Service Portal MVP project kickoff. We have 30 days to launch a unified portal that reduces inbound calls and improves customer experience. Let's start by aligning on what we're building and what we're explicitly parking. I've drafted an initial scope in A1 with feature list and success metrics. Please review and share your thoughts on what should be in the MVP versus post-launch backlog.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 472507,
+            "reply_to": "M1",
+            "text": "Thanks for the kickoff. I've looked at A1 and have a few questions on the technical side. The integration with existing auth and CRM systems is critical here. Before we lock scope, I want to make sure we understand the integration complexity. Should we plan a technical spike early to validate assumptions?",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 561463,
+            "reply_to": "M1",
+            "text": "I've reviewed the scope. From a content perspective, I'm concerned about the timeline for creating 25+ FAQs and how-to articles. We'll need clear ownership and a solid workflow. The governance piece in A8 will be essential. Should we define content templates and approval process as part of the MVP scope?",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 75507,
+            "reply_to": "M1",
+            "text": "Looking at the scope, the UX and accessibility requirements are clear. I can work on the IA and wireframes in parallel with the feature definition. One thing to confirm: are we treating mobile-first as a hard requirement for the MVP, or is responsive design sufficient?",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 6370,
+            "reply_to": "M1",
+            "text": "I've been through the scope and it looks solid. The key for adoption will be making sure the FAQ topics actually match what customers ask about. I can pull the top 20 call reasons from our logs this week and map them to the proposed topics. That should help us validate the scope is customer-focused.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 448709,
+            "reply_to": "M1",
+            "text": "I've reviewed A1. The front-end scope looks manageable. I'll need clarity on the search and filtering requirements though. Are we building a custom search or integrating with an existing tool? That affects the dev timeline.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 59590,
+            "reply_to": "M2",
+            "text": "Good point on the technical spike. Let's add that as a pre-build activity. I'll work with you to scope it out. The auth and CRM integration is a dependency we need to de-risk early. Can you draft a quick technical architecture outline by EOD tomorrow?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 59590,
+            "reply_to": "M3",
+            "text": "Content governance is definitely in scope. Let's treat the workflow definition and templates as part of T6. I'll coordinate with you and the call centre agent to lock that in. We can iterate on templates as we start drafting content.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 59590,
+            "reply_to": "M4",
+            "text": "Mobile-first is the requirement. Responsive design is the baseline, but we need to optimize for mobile-first interaction patterns. That's a hard constraint from the stakeholders.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 59590,
+            "reply_to": "M6",
+            "text": "Good question. We're integrating with the existing knowledge base system. The search will be a custom implementation on top of that. I'll clarify the exact API and data structure in the technical architecture doc.",
+            "mentions": [
+              448709
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 6370,
+            "reply_to": "M5",
+            "text": "I'll have the top 20 call reasons and initial FAQ mapping ready by tomorrow EOD. That should give us a solid foundation to validate the scope against real customer needs.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 472507,
+            "reply_to": "M7",
+            "text": "I'll get the architecture outline done. I'm thinking we should also document the integration risks and assumptions upfront. I'll include that in the doc.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 75507,
+            "reply_to": "M9",
+            "text": "Understood. Mobile-first it is. I'll design the IA and wireframes with that constraint. I'll have the initial site map and user flows ready by end of week.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 561463,
+            "reply_to": "M8",
+            "text": "Sounds good. I'll work with the call centre agent on the FAQ topics and start drafting templates. We should also define the tone and style guidelines early so content is consistent.",
+            "mentions": [
+              59590,
+              6370
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 59590,
+            "reply_to": "M14",
+            "text": "Exactly. A3 will cover tone, style, and accessibility rules. Let's lock that in by mid-week. Now, let me propose the MVP feature list for final approval. Based on the discussion, here's what I'm recommending for D1: home page with search, FAQ section with filters, how-to articles, contact form, and basic analytics. Everything else goes to post-launch. Does this align with everyone?",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 6370,
+            "reply_to": "M15",
+            "text": "That scope looks right. The search and filters will help customers find answers quickly, which should drive adoption. I'm confident the top 20 call reasons will map well to this structure.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 448709,
+            "reply_to": "M15",
+            "text": "The scope is clear. I can build the front-end for this. The search and filters will need some backend work, but it's doable in the timeline.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 75507,
+            "reply_to": "M15",
+            "text": "Scope is solid. I can design around this. The IA will support search, FAQ browsing, and article reading. That's a clean set of user flows.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 472507,
+            "reply_to": "M15",
+            "text": "The scope is reasonable from a technical perspective. The integration points are clear. I'll validate feasibility in the architecture spike.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 561463,
+            "reply_to": "M15",
+            "text": "Scope is good. I can manage content creation and governance for this set of deliverables. The workflow will be straightforward.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 59590,
+            "reply_to": "M20",
+            "text": "Great. D1 is approved: MVP feature list locked. Now for D2, the success metrics. I'm proposing: (1) 30% reduction in inbound calls within 60 days post-launch, (2) 70% of customers who visit the portal find an answer without contacting support, (3) portal usage reaches 500+ unique visitors per week by week 4. Thoughts?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 6370,
+            "reply_to": "M21",
+            "text": "Those metrics make sense. The 30% call reduction is ambitious but achievable if we get the FAQ topics right. The self-service success rate of 70% is realistic based on what I see in similar portals.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 472507,
+            "reply_to": "M21",
+            "text": "The metrics are clear. I'll make sure the analytics setup captures the right events to measure these. We'll need to track search queries, article views, and contact form submissions.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 561463,
+            "reply_to": "M21",
+            "text": "The metrics are good. They give us clear targets for content quality and coverage. I'll make sure the FAQ set supports these goals.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 59590,
+            "reply_to": "M24",
+            "text": "Excellent. D2 is approved: success metrics locked. Let me summarize the next steps. Call centre agent will pull top 20 call reasons by tomorrow. Software architect will draft technical architecture by EOD tomorrow. Digital media designer will create initial IA and wireframes by end of week. Web content manager will draft content templates and governance workflow by mid-week. Let's reconvene in TH2 once we have the call driver analysis.",
+            "mentions": [
+              6370,
+              472507,
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 59590,
+              "when": "today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 6370,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 472507,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 75507,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 561463,
+              "when": "mid-week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Prioritise top call drivers and confirm initial FAQ set.",
+        "messages": [
+          {
+            "msg_id": "M26",
+            "speaker_id": 6370,
+            "reply_to": null,
+            "text": "I've pulled the top 20 call reasons from our support logs over the last 90 days. I've mapped them to proposed FAQ topics in A2. The top drivers are: account access issues (18%), billing questions (15%), order status (12%), password resets (10%), and product features (9%). The rest are scattered across technical issues and general inquiries. I've drafted initial FAQ topics that should cover 80% of inbound volume.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 561463,
+            "reply_to": "M26",
+            "text": "This is really helpful. The mapping is clear. I can see how to structure the FAQ sections around these topics. One question: for the account access and password reset topics, should we include step-by-step guides with screenshots, or just link to the existing help docs?",
+            "mentions": [
+              6370
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 6370,
+            "reply_to": "M27",
+            "text": "Good question. Step-by-step guides with screenshots will be much more effective. Customers often get stuck on the exact steps, so visual guides reduce follow-up calls. That's where the how-to articles come in. We should have at least 5-6 how-to guides for the most common tasks.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 75507,
+            "reply_to": "M26",
+            "text": "The call driver breakdown is useful for the IA. I can structure the FAQ section to match these categories. The navigation should make it easy to find answers for the top issues. I'll incorporate this into the wireframes.",
+            "mentions": [
+              6370
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 59590,
+            "reply_to": "M26",
+            "text": "Excellent work pulling this data. The 80% coverage target is solid. Now let's lock in the initial FAQ set for the MVP. Based on the call drivers, I'm proposing we include FAQs for: account access, password reset, billing, order status, and product features. That's 5 core topics. We can add 2-3 more based on feedback. Does this feel right for D3?",
+            "mentions": [
+              6370
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 6370,
+            "reply_to": "M30",
+            "text": "That's a good starting set. Those 5 topics will cover the majority of calls. I'd add 'Technical Issues' as a catch-all for the 9% of miscellaneous technical questions. That gives us 6 core topics.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 561463,
+            "reply_to": "M30",
+            "text": "I agree with the 6 topics. That's manageable for content creation in the timeline. I can draft 4-5 FAQs per topic, so we'll have 24-30 FAQs total. That should be enough for the MVP.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 448709,
+            "reply_to": "M30",
+            "text": "The 6 topics are clear. From a dev perspective, the search and filtering will need to support these categories. I'll make sure the front-end can handle the topic structure.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 59590,
+            "reply_to": "M32",
+            "text": "Perfect. D3 is approved: 6 core FAQ topics locked. Now for D4, content ownership. I'm proposing: call centre agent owns account access and password reset (you know these inside out), web content manager owns billing and order status (these need clear, accurate language), and we'll assign product features and technical issues to a shared ownership model. Does this work?",
+            "mentions": [
+              6370,
+              561463
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 6370,
+            "reply_to": "M34",
+            "text": "I'm happy to own account access and password reset. I can draft those FAQs based on the most common customer questions I see. I'll also review all the other FAQs for accuracy and clarity.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 561463,
+            "reply_to": "M34",
+            "text": "I'll own billing and order status. Those need to be accurate and up-to-date. I'll coordinate with the backend team to make sure the information is current. For product features and technical issues, I can draft those and get review from the call centre agent and product team.",
+            "mentions": [
+              59590,
+              6370
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 59590,
+            "reply_to": "M36",
+            "text": "Great. D4 is approved: content ownership assigned. Let me document this in A2. Next steps: call centre agent will draft account access and password reset FAQs by end of week. Web content manager will draft billing and order status FAQs by end of week. Both will review each other's work and incorporate feedback. We'll have the full FAQ set ready for review by next Monday. Sound good?",
+            "mentions": [
+              6370,
+              561463
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 6370,
+            "reply_to": "M37",
+            "text": "I'll have the account access and password reset FAQs ready by Friday. I'll make sure they're clear and include step-by-step instructions.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 561463,
+            "reply_to": "M37",
+            "text": "I'll have billing and order status FAQs ready by Friday as well. I'll coordinate with the backend team to get the latest information on billing cycles and order processing.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 75507,
+            "reply_to": "M37",
+            "text": "This is helpful for the IA. I'll make sure the navigation supports these 6 topics and the content structure. I'll have the wireframes ready by end of week.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 59590,
+            "reply_to": "M40",
+            "text": "Perfect. Let's reconvene in TH3 once we have the IA and wireframes. That will help us lock in the UX approach and visual design.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 6370,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 6370,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 561463,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 75507,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock in information architecture, UX approach, and visual style.",
+        "messages": [
+          {
+            "msg_id": "M42",
+            "speaker_id": 75507,
+            "reply_to": null,
+            "text": "I've completed the initial IA and wireframes for the portal. The site map includes: home page with search, FAQ section organized by the 6 topics we defined, how-to articles, and a contact form. The navigation is clean and mobile-first. I've also drafted key user flows for search, FAQ browsing, and article reading. The wireframes are in A4. Please review and share feedback.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 6370,
+            "reply_to": "M42",
+            "text": "I've reviewed the wireframes. The structure looks good. The FAQ organization by topic will make it easy for customers to find answers. One suggestion: can we add a 'Most Viewed' section on the home page to highlight the most popular FAQs? That could drive quick wins.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 75507,
+            "reply_to": "M43",
+            "text": "Good idea. I can add a 'Most Viewed' section on the home page. That will help customers find popular answers quickly. I'll update the wireframes.",
+            "mentions": [
+              6370
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 561463,
+            "reply_to": "M42",
+            "text": "The IA is solid. The content structure aligns well with the FAQ topics we defined. One question: how are we handling the how-to articles? Should they be separate from FAQs or integrated into the FAQ sections?",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 75507,
+            "reply_to": "M45",
+            "text": "Good question. I've designed them as separate but linked. FAQs are short answers, how-to articles are step-by-step guides. From the FAQ, users can click through to the full how-to if they need more detail. That keeps the FAQ section clean while providing depth for users who need it.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 448709,
+            "reply_to": "M42",
+            "text": "The wireframes are clear. The user flows make sense from a dev perspective. The search and filtering will work well with this structure. I can build the front-end to match these wireframes.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 59590,
+            "reply_to": "M42",
+            "text": "Excellent work. The IA is clean and user-focused. Now let's lock in D5: the navigation structure and key user flows. Based on the wireframes, I'm approving the proposed structure: home with search and most viewed, FAQ section by topic, how-to articles, and contact form. The user flows for search, FAQ browsing, and article reading are solid. Any objections?",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 6370,
+            "reply_to": "M48",
+            "text": "The structure is good. It will work well for customers trying to find answers.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 561463,
+            "reply_to": "M48",
+            "text": "Approved. The structure supports the content we're creating.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 448709,
+            "reply_to": "M48",
+            "text": "Approved. I can build this.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 59590,
+            "reply_to": "M51",
+            "text": "Great. D5 is locked. Now for D6: accessibility and mobile responsiveness. The requirement is mobile-first design with full accessibility compliance (WCAG 2.1 AA). The portal must be usable on all devices and screen sizes. All interactive elements must be keyboard accessible. Color contrast must meet accessibility standards. Is everyone aligned on these requirements?",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 75507,
+            "reply_to": "M52",
+            "text": "I'm aligned. I'll design with accessibility in mind from the start. I'll use the accessibility checklist from A3 to validate the design. Mobile-first is already built into the wireframes.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 448709,
+            "reply_to": "M52",
+            "text": "I'll build with accessibility in mind. I'll test keyboard navigation and screen reader compatibility as I develop.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 561463,
+            "reply_to": "M52",
+            "text": "I'll make sure all content follows accessibility guidelines. Clear language, proper heading structure, and alt text for images.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 59590,
+            "reply_to": "M55",
+            "text": "Perfect. D6 is approved: accessibility and mobile-first requirements locked. Now let's move to visual design. Digital media designer, can you draft a style guide with colors, typography, and component patterns? We need this to ensure consistency across the portal.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 75507,
+            "reply_to": "M56",
+            "text": "I'll draft the style guide by mid-week. I'll include color palette, typography, button styles, form elements, and interactive patterns. I'll also create interactive prototypes for the key flows so we can validate the design before dev starts.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 59590,
+            "reply_to": "M57",
+            "text": "Great. Let's plan a design review for Thursday to validate the style guide and prototypes. We'll get feedback from the team and finalize the visual direction. Once that's locked, we can move into full development.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 75507,
+            "reply_to": "M58",
+            "text": "Thursday works. I'll have the style guide and prototypes ready for review.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 59590,
+            "reply_to": "M59",
+            "text": "Excellent. Let's summarize: D5 and D6 are locked. The IA, wireframes, and user flows are approved. Digital media designer will have the style guide and prototypes ready by Thursday. We'll do a design review Thursday to finalize the visual direction. Then we move into full development. Next thread will cover technical architecture and analytics setup.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 75507,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 75507,
+              "when": "mid-week"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 448709,
+              "when": "after design review"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Confirm technical architecture, integrations, and analytics setup.",
+        "messages": [
+          {
+            "msg_id": "M61",
+            "speaker_id": 472507,
+            "reply_to": null,
+            "text": "I've completed the technical architecture and integration plan. The portal will be built as a web application that integrates with our existing authentication system and CRM. The knowledge base will be stored in a separate database with a search API. I've documented the architecture, integration points, and technical risks in A5. Please review and share feedback.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 448709,
+            "reply_to": "M61",
+            "text": "I've reviewed the architecture. The integration approach is clear. One question: what's the expected latency for the search API? We need to make sure search results return quickly for a good user experience.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 472507,
+            "reply_to": "M62",
+            "text": "Good question. The search API should return results in under 500ms for a good user experience. I've documented the performance requirements in A5. We'll need to optimize the knowledge base queries and potentially add caching.",
+            "mentions": [
+              448709
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 59590,
+            "reply_to": "M61",
+            "text": "The architecture looks solid. The integration with existing auth and CRM is clean. I have one concern: what are the risks if the CRM integration fails? Do we have a fallback?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 472507,
+            "reply_to": "M64",
+            "text": "Good point. I've documented the risks in A5. If the CRM integration fails, the portal will still be accessible for reading FAQs and how-to articles. The contact form will queue messages locally and retry when the CRM is back online. That's a reasonable fallback for the MVP.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 561463,
+            "reply_to": "M61",
+            "text": "The architecture is clear. From a content perspective, I need to understand how content updates will be published. Is there a content management system, or will we be updating the knowledge base directly?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 472507,
+            "reply_to": "M66",
+            "text": "Good question. We'll use a simple content management interface for the knowledge base. Content managers can create, edit, and publish articles through a web interface. The articles are stored in the knowledge base database and indexed for search. I'll work with you to define the exact workflow.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 59590,
+            "reply_to": "M61",
+            "text": "The architecture is solid. Now let's lock in D7: the technical architecture and integration approach. Based on the documentation, I'm approving the proposed architecture: web application with auth and CRM integration, knowledge base with search API, and fallback for CRM failures. Any objections?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 448709,
+            "reply_to": "M68",
+            "text": "Approved. I can build the front-end to work with this architecture.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 561463,
+            "reply_to": "M68",
+            "text": "Approved. The content management approach will work for our team.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 59590,
+            "reply_to": "M70",
+            "text": "Great. D7 is locked. Now for D8: analytics and reporting. We need to track portal usage, search behavior, and call deflection. Software architect, can you outline the analytics events and reporting cadence?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 472507,
+            "reply_to": "M71",
+            "text": "I've drafted the analytics plan in A7. Key events to track: portal visits, search queries, FAQ views, article views, contact form submissions, and estimated call deflection. We'll generate weekly reports showing usage trends and deflection metrics. The dashboard will be accessible to the support team for monitoring.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 6370,
+            "reply_to": "M72",
+            "text": "The analytics plan looks good. Tracking search queries will help us understand what customers are looking for. That feedback will be valuable for improving the FAQ set over time.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 59590,
+            "reply_to": "M72",
+            "text": "Perfect. D8 is approved: analytics events and weekly reporting cadence locked. The dashboard will give us visibility into portal performance and call deflection. Now let's move into development. Web developer, you can start building the front-end based on the approved wireframes and style guide. Software architect, you'll set up the backend and integrations. Web content manager, you'll continue drafting content. Let's reconvene in TH5 for the pre-launch checklist.",
+            "mentions": [
+              448709,
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 448709,
+            "reply_to": "M74",
+            "text": "I'll start building the front-end. I'll implement the home page, FAQ section, search, and contact form based on the wireframes.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 472507,
+            "reply_to": "M74",
+            "text": "I'll set up the backend, integrations, and analytics. I'll also implement the search functionality and knowledge base API.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 561463,
+            "reply_to": "M74",
+            "text": "I'll continue drafting content and setting up the content management workflow. I'll have the initial FAQ and how-to articles ready for review by next week.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 59590,
+            "reply_to": "M77",
+            "text": "Excellent. Let's plan a daily standup to track progress and identify blockers. We're at day 10 of the 30-day timeline, so we need to move quickly. I'll send out the standup schedule.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 472507,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 448709,
+              "when": "this week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 448709,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 472507,
+              "when": "this week"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 561463,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan pre-launch checks, training, and go-live date.",
+        "messages": [
+          {
+            "msg_id": "M79",
+            "speaker_id": 561463,
+            "reply_to": null,
+            "text": "We're at day 20 of the 30-day timeline. I've prepared the pre-launch checklist in A6 to ensure we're ready for go-live. The checklist covers content accuracy, UX walkthrough, accessibility validation, and technical testing. I've also drafted the content governance workflow in A8 to ensure content stays current after launch. Let's review the checklist and confirm our readiness.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6",
+              "A8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 59590,
+            "reply_to": "M79",
+            "text": "Good timing. Let's walk through the checklist. First, content accuracy: are all FAQs and how-to articles reviewed and approved?",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 561463,
+            "reply_to": "M80",
+            "text": "Yes. All 28 FAQs and 8 how-to articles have been drafted and reviewed by the call centre agent. We've incorporated feedback and made corrections. The content is accurate and ready for publication.",
+            "mentions": [
+              59590,
+              6370
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 6370,
+            "reply_to": "M81",
+            "text": "I've reviewed all the content. It's accurate and clear. The step-by-step guides are helpful. I'm confident customers will find the answers they need.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 59590,
+            "reply_to": "M82",
+            "text": "Great. Next, UX walkthrough: has the portal been tested for usability?",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 75507,
+            "reply_to": "M83",
+            "text": "I've completed a UX walkthrough with the call centre agent and web content manager. We tested the search, FAQ browsing, and article reading flows. The navigation is intuitive and the design is clean. A few minor tweaks were made, but the portal is ready for launch.",
+            "mentions": [
+              59590,
+              6370,
+              561463
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 59590,
+            "reply_to": "M84",
+            "text": "Excellent. Next, accessibility validation: have we confirmed WCAG 2.1 AA compliance?",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 448709,
+            "reply_to": "M85",
+            "text": "I've run accessibility checks on all pages. Color contrast is compliant, keyboard navigation works, and screen reader testing passed. The portal meets WCAG 2.1 AA standards.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M87",
+            "speaker_id": 59590,
+            "reply_to": "M86",
+            "text": "Perfect. Next, technical testing: have we validated the integrations and search functionality?",
+            "mentions": [
+              448709
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M88",
+            "speaker_id": 472507,
+            "reply_to": "M87",
+            "text": "I've tested the auth integration, CRM integration, and search functionality. All integrations are working correctly. Search returns relevant results in under 500ms. The analytics dashboard is tracking events correctly. The portal is technically ready for launch.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M89",
+            "speaker_id": 59590,
+            "reply_to": "M88",
+            "text": "Excellent. All checklist items are complete. Now let's confirm D1 again: MVP scope and go-live readiness. Based on the checklist, I'm confirming that the MVP scope is complete and the portal is ready for launch. The feature set matches what we approved, and all quality checks have passed. Any concerns?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M90",
+            "speaker_id": 6370,
+            "reply_to": "M89",
+            "text": "No concerns. The portal is ready. The content is accurate, the UX is solid, and the technical implementation is sound. I'm confident this will drive call deflection.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M91",
+            "speaker_id": 561463,
+            "reply_to": "M89",
+            "text": "Ready to go. The content governance workflow is in place. We have clear ownership and review processes to keep content current after launch.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M92",
+            "speaker_id": 448709,
+            "reply_to": "M89",
+            "text": "The front-end is solid. All pages are responsive and accessible. Ready for launch.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M93",
+            "speaker_id": 472507,
+            "reply_to": "M89",
+            "text": "The backend and integrations are stable. Analytics are tracking correctly. Ready for launch.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M94",
+            "speaker_id": 59590,
+            "reply_to": "M93",
+            "text": "Perfect. D1 is reconfirmed: MVP scope complete and go-live readiness confirmed. Now for D4: content ownership and maintenance. We need to ensure content owners are ready to maintain articles after launch. Web content manager, can you confirm the governance workflow and content owner responsibilities?",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M95",
+            "speaker_id": 561463,
+            "reply_to": "M94",
+            "text": "Yes. I've documented the governance workflow in A8. Content owners are assigned for each topic. We have a weekly review cadence to check for outdated content. The approval process is clear. Call centre agent will review content for accuracy, and I'll handle publishing. We're ready to maintain content after launch.",
+            "mentions": [
+              59590,
+              6370
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M96",
+            "speaker_id": 6370,
+            "reply_to": "M95",
+            "text": "I'm ready to review content weekly. I'll flag any inaccuracies or outdated information. The workflow is clear and manageable.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M97",
+            "speaker_id": 59590,
+            "reply_to": "M96",
+            "text": "Excellent. D4 is reconfirmed: content owners are ready to maintain articles after launch. Now let's finalize the training materials. Assistant lecturer, can you confirm the training plan and quick-reference guides are ready?",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M98",
+            "speaker_id": 59590,
+            "reply_to": "M97",
+            "text": "I've prepared the training deck and quick-reference guide for the support team. The materials cover how to use the portal, how to promote it to customers, and how to handle escalations. I've reviewed the materials with the call centre agent for practicality. The training is scheduled for tomorrow, and we'll do a final walkthrough before launch.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M99",
+            "speaker_id": 6370,
+            "reply_to": "M98",
+            "text": "The training materials are practical and clear. The support team will be ready to promote the portal and handle customer questions.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M100",
+            "speaker_id": 59590,
+            "reply_to": "M99",
+            "text": "Perfect. Let's set the go-live date for tomorrow at 9 AM. We'll do a final sanity check this evening and then launch. The support team will be trained and ready. The analytics dashboard will be monitoring usage and call deflection. Let's make this launch successful. Thank you all for the excellent work over the past 30 days.",
+            "mentions": [
+              6370
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              },
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 561463,
+              "when": "today"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 59590,
+              "when": "today"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 561463,
+              "when": "today"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

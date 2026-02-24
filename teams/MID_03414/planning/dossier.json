@@ -1,0 +1,440 @@
+{
+  "affinity_band": "MID",
+  "planning_output": {
+    "project_pack": {
+      "project": {
+        "title": "Secure Facilities Service Management Platform Rollout",
+        "objective": "Design and deploy a secure internal platform to manage facilities housekeeping requests, tracking, and reporting across departments.",
+        "deliverables": [
+          "Requirements specification for facilities service management platform",
+          "Secure system architecture and data flow design",
+          "MVP implementation of web-based request and tracking portal",
+          "Integration with identity management and access controls",
+          "Housekeeping operating procedures and cleaning checklists in the system",
+          "User training materials and pilot rollout report"
+        ],
+        "constraints": [
+          "All data must comply with internal security and privacy policies",
+          "MVP must support only internal network access initially",
+          "Go-live for pilot within 30 days from project start",
+          "Solution must integrate with existing identity provider",
+          "Housekeeping staff require simple, mobile-friendly interface",
+          "Minimal disruption to current manual request process during transition"
+        ],
+        "stakeholders": [
+          "Facilities management",
+          "Housekeeping staff",
+          "Information security management",
+          "IT operations",
+          "Department managers",
+          "Internal audit"
+        ],
+        "deadline_days": 30,
+        "risks": [
+          {
+            "risk": "Platform introduces new security vulnerabilities in internal network.",
+            "mitigation": "Perform threat modeling, security review, and penetration testing before pilot; enforce hardening guidelines."
+          },
+          {
+            "risk": "Housekeeping staff struggle to adopt the new digital workflow.",
+            "mitigation": "Co-design simple UI, provide training sessions, keep paper fallback during pilot, gather feedback for iteration."
+          },
+          {
+            "risk": "Integration with identity provider is delayed or more complex than expected.",
+            "mitigation": "Define minimal viable integration scope, prototype early, and agree on clear interface with IT operations."
+          },
+          {
+            "risk": "Requirements creep from multiple departments extends scope beyond MVP.",
+            "mitigation": "Prioritize core use cases, maintain a backlog for post-MVP features, and get sign-off on MVP scope."
+          },
+          {
+            "risk": "Insufficient logging and audit trails for compliance.",
+            "mitigation": "Define logging requirements upfront and validate against internal audit expectations before go-live."
+          }
+        ]
+      },
+      "themes": [
+        {
+          "theme": "Security-by-design",
+          "why_relevant": "Security roles must ensure the new platform is compliant and resilient from the start."
+        },
+        {
+          "theme": "User-centric housekeeping workflows",
+          "why_relevant": "Housekeeping staff need practical, efficient digital workflows that match real-world tasks."
+        },
+        {
+          "theme": "Requirements and scope management",
+          "why_relevant": "Analyst and manager roles must align stakeholders on MVP scope and priorities."
+        },
+        {
+          "theme": "System architecture and integration",
+          "why_relevant": "Developers and administrators must design a robust, maintainable, integrated solution."
+        },
+        {
+          "theme": "Change management and training",
+          "why_relevant": "Successful rollout depends on clear communication, training, and gradual process transition."
+        }
+      ],
+      "backlog": [
+        {
+          "task_id": "T1",
+          "task": "Gather and document functional and non-functional requirements for the facilities service platform",
+          "owner_role": "ICT system analyst",
+          "definition_of_done": [
+            "Workshops held with facilities, housekeeping, and IT stakeholders",
+            "Requirements document reviewed and approved by facilities management",
+            "Security and compliance requirements explicitly captured",
+            "MVP scope clearly marked and agreed"
+          ]
+        },
+        {
+          "task_id": "T2",
+          "task": "Design secure system architecture and data flows for the platform",
+          "owner_role": "ICT system developer",
+          "definition_of_done": [
+            "High-level architecture diagram created and stored in shared repository",
+            "Data flow diagrams including authentication and authorization paths completed",
+            "Architecture reviewed with ICT system administrator and security stakeholders",
+            "Identified security controls mapped to each component"
+          ]
+        },
+        {
+          "task_id": "T3",
+          "task": "Define housekeeping service categories, SLAs, and digital workflows",
+          "owner_role": "domestic housekeeper",
+          "definition_of_done": [
+            "List of service categories (cleaning, maintenance support, special requests) documented",
+            "Target response and completion times agreed with facilities management",
+            "Step-by-step workflows for each category described in plain language",
+            "Workflows validated by at least two housekeeping team members"
+          ]
+        },
+        {
+          "task_id": "T4",
+          "task": "Implement MVP web application for request submission and tracking",
+          "owner_role": "ICT application developer",
+          "definition_of_done": [
+            "Users can submit, view, and update housekeeping requests",
+            "Housekeeping staff can see assigned tasks and update status",
+            "Basic reporting view for facilities management implemented",
+            "Code committed to version control and passes automated tests"
+          ]
+        },
+        {
+          "task_id": "T5",
+          "task": "Configure secure hosting environment and access controls",
+          "owner_role": "ICT system administrator",
+          "definition_of_done": [
+            "Application environment provisioned in line with IT standards",
+            "Firewall and network rules configured for internal-only access",
+            "Role-based access control integrated with identity provider",
+            "System hardening checklist completed and signed off"
+          ]
+        },
+        {
+          "task_id": "T6",
+          "task": "Create digital cleaning checklists and standard operating procedures",
+          "owner_role": "domestic housekeeper",
+          "definition_of_done": [
+            "Room-type specific cleaning checklists drafted",
+            "Checklists reviewed with facilities management for completeness",
+            "Checklists uploaded or configured in the platform",
+            "Housekeeping team briefed on new digital checklists"
+          ]
+        },
+        {
+          "task_id": "T7",
+          "task": "Define logging, monitoring, and incident response procedures for the platform",
+          "owner_role": "ICT system administrator",
+          "definition_of_done": [
+            "Logging requirements documented for key events",
+            "Monitoring dashboards or alerts configured",
+            "Incident response runbook drafted and shared with IT operations",
+            "Test incident drill executed and lessons captured"
+          ]
+        },
+        {
+          "task_id": "T8",
+          "task": "Plan and coordinate pilot rollout with selected departments",
+          "owner_role": "ICT system analyst",
+          "definition_of_done": [
+            "Pilot scope and participating departments agreed",
+            "Pilot timeline and communication plan documented",
+            "Success criteria for pilot defined and approved",
+            "Feedback channels for pilot users established"
+          ]
+        },
+        {
+          "task_id": "T9",
+          "task": "Optimize UI and workflows based on housekeeping feedback",
+          "owner_role": "ICT application developer",
+          "definition_of_done": [
+            "Feedback from at least three housekeeping staff collected",
+            "Usability issues prioritized and addressed in the UI",
+            "Updated version deployed to test environment",
+            "Housekeeping confirms improved usability in follow-up session"
+          ]
+        },
+        {
+          "task_id": "T10",
+          "task": "Document end-user training materials and quick reference guides",
+          "owner_role": "ICT system analyst",
+          "definition_of_done": [
+            "Step-by-step guides for requesters and housekeeping created",
+            "Short FAQ covering common issues compiled",
+            "Materials reviewed by facilities management and IT operations",
+            "Training content uploaded to internal knowledge base"
+          ]
+        },
+        {
+          "task_id": "T11",
+          "task": "Conduct security review and approve platform for pilot",
+          "owner_role": "ICT system administrator",
+          "definition_of_done": [
+            "Vulnerability scan and basic penetration test completed",
+            "Security findings documented and critical issues resolved",
+            "Access control and logging verified against requirements",
+            "Formal sign-off for pilot recorded"
+          ]
+        },
+        {
+          "task_id": "T12",
+          "task": "Implement integration hooks for future analytics and reporting",
+          "owner_role": "ICT system developer",
+          "definition_of_done": [
+            "Data model for requests and completion times documented",
+            "API or export mechanism for analytics implemented",
+            "Sample report generated using test data",
+            "Facilities management validates that data meets reporting needs"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "A1",
+          "type": "doc",
+          "title": "Facilities Service Platform Requirements Specification",
+          "used_for": "Capturing and aligning all functional, non-functional, and security requirements for the MVP."
+        },
+        {
+          "artifact_id": "A2",
+          "type": "doc",
+          "title": "Secure System Architecture and Data Flow Diagrams",
+          "used_for": "Describing components, integrations, and data flows to guide development and security review."
+        },
+        {
+          "artifact_id": "A3",
+          "type": "guideline",
+          "title": "Housekeeping Digital Workflows and SOPs",
+          "used_for": "Standardizing how housekeeping requests are handled and documented in the platform."
+        },
+        {
+          "artifact_id": "A4",
+          "type": "checklist",
+          "title": "Room and Area Cleaning Checklists",
+          "used_for": "Ensuring consistent cleaning tasks and enabling digital tracking of completion."
+        },
+        {
+          "artifact_id": "A5",
+          "type": "guideline",
+          "title": "Platform Security and Access Control Standard",
+          "used_for": "Defining required security controls, roles, and access rules for the platform."
+        },
+        {
+          "artifact_id": "A6",
+          "type": "sheet",
+          "title": "Pilot Rollout Plan and Success Metrics",
+          "used_for": "Planning pilot departments, timelines, and tracking success criteria and feedback."
+        },
+        {
+          "artifact_id": "A7",
+          "type": "doc",
+          "title": "User Training Pack and Quick Reference Guides",
+          "used_for": "Supporting training sessions and self-service learning for all user groups."
+        },
+        {
+          "artifact_id": "A8",
+          "type": "incident",
+          "title": "Security and Availability Incident Log",
+          "used_for": "Recording and tracking any incidents during testing and pilot phases."
+        }
+      ]
+    },
+    "blueprint": {
+      "channel_name_hint": "proj-facilities-platform-rollout",
+      "threads_plan": [
+        {
+          "thread_id": "TH1",
+          "thread_goal": "Align on MVP scope, key requirements, and success criteria for the platform.",
+          "trigger": "Kickoff message announcing the project and requesting input on requirements and MVP scope.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Agree on the final MVP feature set and explicitly defer non-MVP items to a later phase."
+            },
+            {
+              "decision_id": "D2",
+              "decision": "Approve the initial success criteria documented in the pilot rollout plan."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A1",
+            "A6",
+            "T1",
+            "T8"
+          ]
+        },
+        {
+          "thread_id": "TH2",
+          "thread_goal": "Converge on secure architecture, hosting approach, and access control model.",
+          "trigger": "ICT system developer shares draft architecture diagrams for review and comments.",
+          "target_messages_range": [
+            20,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D3",
+              "decision": "Select the hosting environment and confirm internal-only access for the pilot."
+            },
+            {
+              "decision_id": "D4",
+              "decision": "Approve the role-based access control model and logging requirements."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A2",
+            "A5",
+            "T2",
+            "T5",
+            "T7",
+            "T11"
+          ]
+        },
+        {
+          "thread_id": "TH3",
+          "thread_goal": "Define and refine housekeeping workflows, categories, and digital checklists.",
+          "trigger": "Domestic housekeeper posts draft service categories and workflows for feedback.",
+          "target_messages_range": [
+            15,
+            23
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D5",
+              "decision": "Confirm the final list of housekeeping service categories and SLAs for MVP."
+            },
+            {
+              "decision_id": "D6",
+              "decision": "Approve the initial set of digital cleaning checklists to be configured in the system."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A3",
+            "A4",
+            "T3",
+            "T6"
+          ]
+        },
+        {
+          "thread_id": "TH4",
+          "thread_goal": "Coordinate development progress, usability feedback, and UI adjustments.",
+          "trigger": "ICT application developer shares a link to the MVP prototype and asks for usability feedback.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D7",
+              "decision": "Decide which usability issues must be fixed before pilot and which can wait."
+            }
+          ],
+          "artifacts_to_reference": [
+            "T4",
+            "T9",
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "thread_id": "TH5",
+          "thread_goal": "Plan pilot rollout, training, and go/no-go decision for the pilot launch.",
+          "trigger": "ICT system analyst posts draft pilot plan and training approach for review.",
+          "target_messages_range": [
+            20,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D8",
+              "decision": "Confirm pilot departments, start date, and go/no-go based on security review results."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A6",
+            "A7",
+            "A8",
+            "T8",
+            "T10",
+            "T11"
+          ]
+        }
+      ],
+      "talk_distribution_by_role": [
+        {
+          "role": "ICT system analyst",
+          "share": 0.26
+        },
+        {
+          "role": "ICT application developer",
+          "share": 0.24
+        },
+        {
+          "role": "ICT system developer",
+          "share": 0.2
+        },
+        {
+          "role": "ICT system administrator",
+          "share": 0.18
+        },
+        {
+          "role": "domestic housekeeper",
+          "share": 0.12
+        }
+      ],
+      "channel_rituals": [
+        "Twice-weekly async standup where each role posts yesterday-today-blockers updates.",
+        "Weekly architecture and security checkpoint to review changes and open risks.",
+        "Pilot readiness review one week before planned pilot start to confirm go/no-go.",
+        "Post-pilot retrospective summarizing feedback, incidents, and next-phase priorities."
+      ]
+    },
+    "participants": [
+      {
+        "_id": 62399,
+        "role": "domestic housekeeper"
+      },
+      {
+        "_id": 410536,
+        "role": "ICT system administrator"
+      },
+      {
+        "_id": 430520,
+        "role": "ICT system developer"
+      },
+      {
+        "_id": 494954,
+        "role": "ICT system analyst"
+      },
+      {
+        "_id": 525316,
+        "role": "ICT application developer"
+      }
+    ]
+  }
+}

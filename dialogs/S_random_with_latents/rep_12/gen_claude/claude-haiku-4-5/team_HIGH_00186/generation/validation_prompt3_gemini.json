@@ -1,0 +1,45 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH1 has 12 messages, which is below the minimum of 14."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 13 messages, which is below the minimum of 14."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH5 has 13 messages, which is below the minimum of 14."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH1, the mandatory artifact T2 is never referenced in any message."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH4, the mandatory artifact T10 is never referenced in any message."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'performance' appears in messages M52, M54, M63, and M65."
+    },
+    {
+      "severity": "MID",
+      "code": "COUNT",
+      "detail": "The message count for all threads is below their specified target_messages_range from the blueprint. For example, TH1 has 12 messages while the target is [18, 26]."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 4
+  }
+}

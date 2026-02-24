@@ -1,0 +1,30 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (14 messages), TH3 (14 messages), and TH4 (12 messages) fall below the minimum required 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Multiple threads are missing mandatory artifact references: TH2 is missing T3 and T4; TH3 is missing A4, A12, and T6; TH4 is missing T7; TH5 is missing A4, T8, and T11."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Forbidden terms found in message text: 'performance' in M34 and M45, and 'score' in M46."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants use highly repetitive and similar phrasing (e.g., 'I've reviewed X', 'Good point', 'Agreed'), lacking distinct professional voices."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 3,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 2
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Four out of five threads are below the minimum message count. TH1 has 12 messages (min 16), TH2 has 15 (min 16), TH3 has 14 (min 16), and TH5 has 14 (min 16)."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH3 is missing a reference to artifact T9 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing references to artifacts A6, A8, and T11 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH5 is missing a reference to artifact T9 in its messages."
+    },
+    {
+      "severity": "LOW",
+      "code": "INCONSISTENCY",
+      "detail": "In the thread_outcome for TH5, a next_step is created for task T6 ('Prepare PR launch plan'), which is out of context for a pilot review. Additionally, the owner is assigned as 8267 (business consultant), while the project backlog specifies the owner should be the public relations manager."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 3,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

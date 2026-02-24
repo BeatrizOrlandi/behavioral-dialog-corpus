@@ -1,0 +1,159 @@
+{
+  "predictions": [
+    {
+      "_id": 8323,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "A solid team member who contributes useful suggestions and helps summarize discussions. However, their contributions are less frequent and less critical in identifying risks or driving major decisions compared to the more proactive members of the group.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M3",
+          "snippet": "Custom properties can go into a flexible JSON field with validation rules. That way we don't break the schema later."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M19",
+          "snippet": "So to summarize: batch ingestion with 2-hour grace period, daily transformation refresh, star schema models."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M24",
+          "snippet": "can we add a 'compare periods' filter? Product team asked about comparing this month vs last month."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M36",
+          "snippet": "what's the incident response procedure if someone accesses data they shouldn't? We should document that."
+        }
+      ]
+    },
+    {
+      "_id": 30972,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Consistently provides insightful feedback, identifies key technical risks like late-arriving data and monitoring needs, and proactively helps validate work and drive decisions. Their contributions are sophisticated and significantly improve the project's quality.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "The tracking spec in A1 needs to be tight to avoid downstream validation headaches."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M9",
+          "snippet": "I've cross-checked A2 against the business questions from product... I'd say we're ready to lock this down."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "One thing I want to flag: the transformation logic in T3 needs to handle late-arriving data."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M21",
+          "snippet": "I'll review A3 first thing tomorrow and flag any gaps. Also, we should think about monitoring and alerting for the pipelines."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M42",
+          "snippet": "I've been tracking progress on T2 and T3. We're on track for completion by day 18."
+        }
+      ]
+    },
+    {
+      "_id": 92214,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Leverages specific DevOps expertise to make concrete, experience-based recommendations that shape the architecture. They are proactive in taking ownership of tasks, identifying performance risks, and raising important operational considerations like on-call procedures.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M5",
+          "snippet": "I can handle the product stakeholder outreach. Just need the final event list from A1."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M13",
+          "snippet": "I've worked with similar pipelines before. For MVP, batch is the right call. Streaming adds complexity and we don't have the ops maturity yet."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M26",
+          "snippet": "On the performance side (D6), 5 seconds is tight. We'll need to optimize the queries and maybe add materialized views or caching."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M43",
+          "snippet": "T7 (CI/CD pipeline) is straightforward. I can have that done by day 16."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M51",
+          "snippet": "One last thing: post-launch, who's on-call for incidents? Should we rotate or have a dedicated person?"
+        }
+      ]
+    },
+    {
+      "_id": 96134,
+      "productivity_level": "LOW",
+      "ability_level": "LOW",
+      "performance_level": "LOW",
+      "justification": "Contributions are infrequent and primarily consist of basic clarifying questions rather than proactive suggestions or risk identification. Their participation is more reactive and less impactful in shaping the project compared to the rest of the team.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M7",
+          "snippet": "Quick question: are we tracking user IDs or session IDs or both? Need to know for the anonymisation piece later."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "What about the semantic models in T4? Are we using a star schema or something else?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M38",
+          "snippet": "I can start T8 once D7 is locked. I'll need to coordinate with the cloud platform team for RBAC setup."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M45",
+          "snippet": "T10 should take 2-3 days once the pipelines are stable. I'll need to coordinate with the data team to get historical event exports."
+        }
+      ]
+    },
+    {
+      "_id": 155243,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Acts as the clear project lead, initiating all discussions, creating key artifacts, driving decisions, and demonstrating deep domain expertise across all aspects of the project. Their productivity, ability, and performance are consistently and significantly above the group average.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M1",
+          "snippet": "Hey team, kicking off the Unified Analytics Platform MVP. We need to lock down scope... I've prepared A2... and A1..."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M12",
+          "snippet": "Sharing the initial architecture proposal in A3... We're looking at: event ingestion from product streams -> raw storage -> transformation jobs..."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M25",
+          "snippet": "That's a good feature, but it's scope creep for MVP. Let's add it to the v2 backlog."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M46",
+          "snippet": "So timeline: T1–T4 by day 18, T5–T9 by day 19, T10 by day 19... That's tight but doable."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "channel": {
+    "channel_id": "proj-dental-prod-line",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Finalize the initial layout of the production line and confirm power/ventilation requirements.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "Hi team, please review the preliminary layout for the new production line. I've based it on the official floor plan from the lease pack. My main goal was to create a logical flow from raw materials to finished appliance packaging. @49409, does this workflow make sense from a technician's perspective? @255537, can you double-check the machine placements against their power and ventilation needs? All feedback is welcome.",
+            "mentions": [
+              49409,
+              255537
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 518065,
+            "reply_to": "M1",
+            "text": "Looks good from a real estate perspective. The layout doesn't seem to require any major structural changes, which is good. Just a reminder that any core drilling or significant electrical work will need to be submitted to building management for approval. I can handle that process once we have the final specs.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 255537,
+            "reply_to": "M1",
+            "text": "I've reviewed the layout against the spec sheet for the 3D-P450 printer. The current placement in the center of the room is problematic for ventilation. That unit requires a dedicated exhaust duct, per the manufacturer. I suggest we move it against the west wall, which will make the ducting run shorter and cheaper. I already confirmed during the site survey that we have a viable knockout panel on that wall. Power-wise, it needs a dedicated 220V circuit, which is also feasible in that location. The other equipment is fine.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 49409,
+            "reply_to": "M1",
+            "text": "The overall flow from printing to finishing seems right. Thanks for asking. One question, have we planned for specialized lighting at the finishing and quality check stations? It's really important for spotting small defects in the appliances.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 526084,
+            "reply_to": "M1",
+            "text": "Hi, sorry for the delay. Did we check if we are allowed to make these kinds of changes to the space?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 48820,
+            "reply_to": "M1",
+            "text": "Excellent points, everyone. @255537, great catch on the ventilation for the 3D-P450. Moving it to the west wall makes perfect sense. Let's proceed with that change. @49409, you're right about the lighting. I'll add 'task lighting for finishing stations' to the fit-out requirements. @526084, yes, @518065 confirmed earlier that as long as we avoid major structural changes, we just need to submit plans for approval, which he will manage.",
+            "mentions": [
+              255537,
+              49409,
+              526084,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 48820,
+            "reply_to": "M6",
+            "text": "Okay, to summarize and lock this in: We are approving the general zoning of the production area with the modification of moving the main printer to the west wall. And with that change, we have confirmation that the power and HVAC requirements are feasible. This clears the main technical hurdles for the layout.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 48820,
+            "reply_to": "M7",
+            "text": "Next steps: I will update the layout drawing to reflect this change. @255537, can you please draft the technical request for the dedicated 220V circuit and the ventilation ducting for @518065 to submit to building management?",
+            "mentions": [
+              255537,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 48820,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 255537,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

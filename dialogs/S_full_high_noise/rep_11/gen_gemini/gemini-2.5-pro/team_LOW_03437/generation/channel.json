@@ -1,0 +1,800 @@
+{
+  "channel": {
+    "channel_id": "proj-assembly-cell-launch",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on target layout, workstation sequence, and material flow for the cell.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 558542,
+            "reply_to": null,
+            "text": "Team, here is the first draft of the new cell layout as per T1. Please review the 'Assembly Cell Layout and Material Flow Sheet' (A1) and share your feedback on the workstation sequence and flow.",
+            "mentions": [
+              557389,
+              416835,
+              55482,
+              49338,
+              89646
+            ],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 416835,
+            "reply_to": "M1",
+            "text": "Thanks. The layout in A1 looks solid. The U-shape is efficient. I've cross-referenced it with my initial thoughts for T5 and T10. Two points: 1) The buffer space between mechanical sub-assembly and final test seems tight for a full cart. Can we expand it by half a meter? 2) We need to confirm the final list of machines to be moved for T10 to finalize the 'Equipment Relocation and Downtime Plan' (A7).",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [
+              "A1",
+              "T5",
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 558542,
+            "reply_to": "M2",
+            "text": "Good catch on the buffer space. Yes, we can shift the test bench to make that room. I'll update A1. For the machine list, my assumption was all existing stations minus the old manual press. @557389 and @55482, can you confirm the equipment list for T2?",
+            "mentions": [
+              416835,
+              557389,
+              55482
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 557389,
+            "reply_to": "M3",
+            "text": "Yes, that's correct. We'll be moving the pneumatic driver, the torque station, the PCB soldering station, and the small conveyor. The old press is being decommissioned. I've already checked the power and air requirements for T2, and we're clear. No issues there.",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 49338,
+            "reply_to": "M1",
+            "text": "where is the mechanical sub-assembly station on the map? i see the pcb one but not that one.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 558542,
+            "reply_to": "M5",
+            "text": "Hi @49338, it's labeled 'MECH-SUB'. It's the station right after the PCB assembly, before the main conveyor.",
+            "mentions": [
+              49338
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 49338,
+            "reply_to": "M6",
+            "text": "ok thanks",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 55482,
+            "reply_to": "M4",
+            "text": "Confirming what @557389 said. That's the full list. I'll update the T2 documentation to reflect this is the final list.",
+            "mentions": [
+              557389
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 558542,
+            "reply_to": "M8",
+            "text": "Great. So we are aligned on the flow and the equipment. I'll make the buffer space adjustment and re-upload A1. With that, I think we can approve the general layout. Decision: Approve the initial workstation order and material flow for the assembly cell.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 416835,
+            "reply_to": "M9",
+            "text": "Agreed. Now that D2 is confirmed, I can finalize the move plan in A7. I'll have a draft ready for review by tomorrow morning.",
+            "mentions": [],
+            "artifact_refs": [
+              "D2",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 558542,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 55482,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 416835,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and refine standard work and quality checks for each station.",
+        "messages": [
+          {
+            "msg_id": "M11",
+            "speaker_id": 89646,
+            "reply_to": null,
+            "text": "Here are the steps for T3, the PCB assembly. I put them in the A3 guide. Please check if it is ok.",
+            "mentions": [
+              558542,
+              49338
+            ],
+            "artifact_refs": [
+              "T3",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 558542,
+            "reply_to": "M11",
+            "text": "Thanks @89646. I've reviewed the steps in A3. It's a good start. I've added a specific check for solder joint integrity under magnification, as per IPC-A-610 Class 2, and a verification step for component polarity. These are critical for the final test in T7. Can you confirm those additions?",
+            "mentions": [
+              89646
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 89646,
+            "reply_to": "M12",
+            "text": "ok i see the comments. i will add them. thank you.",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 49338,
+            "reply_to": "M11",
+            "text": "I can write the steps for T4 for the mechanical part. It is mostly just putting the case together and adding the screws.",
+            "mentions": [],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 558542,
+            "reply_to": "M14",
+            "text": "Thanks @49338. For T4, please also include the specific torque value for the housing screws (it's 1.2 Nm) and a visual inspection point to check for case alignment and gaps before passing it to the next station. Let's add those to A3 as well.",
+            "mentions": [
+              49338
+            ],
+            "artifact_refs": [
+              "T4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 49338,
+            "reply_to": "M15",
+            "text": "ok i will add that.",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 558542,
+            "reply_to": "M16",
+            "text": "Perfect. So, to summarize, we agree on the standard work steps for both stations with the added quality checks. Decision: Agree on final standard work steps for PCB and mechanical stations. And Decision: Select the in-process and final quality checks to include in the guide. These are the ones we just discussed.",
+            "mentions": [
+              89646,
+              49338
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 89646,
+            "reply_to": "M17",
+            "text": "Now I need to do the visual guides for T9. Should I just take pictures of the steps in A3?",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [
+              "T9",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 558542,
+            "reply_to": "M18",
+            "text": "Yes, that's the idea for T9. Let's focus on photos for the most critical steps, especially the quality checks we just added. A good photo with a 'green check' for correct assembly and a 'red X' for a common mistake works really well. Let me know if you need help with the photos.",
+            "mentions": [
+              89646
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 89646,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 49338,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 89646,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Plan equipment installation, safety measures, and maintenance routines.",
+        "messages": [
+          {
+            "msg_id": "M20",
+            "speaker_id": 557389,
+            "reply_to": null,
+            "text": "All, I've created the draft 'Equipment Commissioning and Maintenance Checklist' (A2). It covers the main steps for installation, testing, and the PM schedule for T6. Please review.",
+            "mentions": [
+              558542,
+              55482,
+              416835
+            ],
+            "artifact_refs": [
+              "A2",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 558542,
+            "reply_to": "M20",
+            "text": "Thanks @557389. The checklist A2 looks comprehensive. For the test run section, let's add a step to verify the emergency stop circuit on each machine after it's powered up in the new location. It's a critical safety check.",
+            "mentions": [
+              557389
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "safety_vest",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 557389,
+            "reply_to": "M21",
+            "text": "Good point, I'll add that in. I've also started the 'Safety and Lockout/Tagout Instructions' (A4) for T8. I'll share that document shortly for review.",
+            "mentions": [
+              558542
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 416835,
+            "reply_to": "M22",
+            "text": "Regarding A4 and T8, please make sure the lockout/tagout instructions are very clear about isolating the main electrical and pneumatic feeds *before* we start the physical move. My team will need to sign off on that before we rig any equipment.",
+            "mentions": [
+              557389
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 55482,
+            "reply_to": "M20",
+            "text": "The PM schedule in A2 looks fine. I don't have anything to add. When are we planning to do the installation and tests?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 416835,
+            "reply_to": "M24",
+            "text": "The move is planned for this weekend to minimize downtime. So, installation and commissioning would happen Monday morning. We should have everything powered and tested by Monday EOD. Does that timeline work for everyone?",
+            "mentions": [
+              557389,
+              55482,
+              558542
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 557389,
+            "reply_to": "M25",
+            "text": "Monday works for me. I'll make sure the final A4 instructions are posted and reviewed by Friday. So, decision: Confirm the sequence and timing for equipment installation and test runs for this coming Monday.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 558542,
+            "reply_to": "M26",
+            "text": "Works for me. Once A4 is ready, please tag me for review. Once we've all reviewed and agreed, we can mark D6 as complete. Decision: Approve safety and lockout/tagout instructions for the new cell, pending final review of A4 on Friday.",
+            "mentions": [
+              557389
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 557389,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 557389,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 55482,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate relocation of equipment and material staging with minimal downtime.",
+        "messages": [
+          {
+            "msg_id": "M28",
+            "speaker_id": 416835,
+            "reply_to": null,
+            "text": "Team, as promised, here is the draft 'Equipment Relocation and Downtime Plan' (A7). It details the sequence for T10 and material staging for T5. The goal is to have all equipment moved over Saturday, with zero impact on Friday/Monday production shifts. Please review and confirm your team's availability.",
+            "mentions": [
+              557389,
+              55482,
+              558542
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 558542,
+            "reply_to": "M28",
+            "text": "This is an excellent plan, @416835. Very detailed. I've checked the placement locations against the final layout in A1, and everything matches. I'll be available on-site Saturday morning to supervise the final positioning and ensure clearances are respected.",
+            "mentions": [
+              416835
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 557389,
+            "reply_to": "M28",
+            "text": "The plan in A7 looks good. I will be there Saturday with @55482 to handle the machine disconnects and prepare them for the move. We'll be ready to start reconnects first thing Monday morning as planned.",
+            "mentions": [
+              55482
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 55482,
+            "reply_to": "M30",
+            "text": "Yes, I am confirmed for Saturday.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 416835,
+            "reply_to": "M30",
+            "text": "Perfect. With everyone's confirmation, we can lock this in. Decision: Agree on final move schedule and responsibilities for equipment relocation. The plan in A7 is now final. I'll send out calendar invites to the confirmed personnel.",
+            "mentions": [
+              558542,
+              557389,
+              55482
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 416835,
+              "when": "Saturday"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 416835,
+              "when": "Saturday"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot run results and decide on go-live readiness.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 558542,
+            "reply_to": null,
+            "text": "Morning all. We completed the pilot run yesterday (T11). I've uploaded the 'Pilot Run Performance Log' (A5) with all the data. Overall, throughput is close to target, but we saw a few quality issues and minor stoppages. Please review the log and share your thoughts.",
+            "mentions": [
+              557389,
+              416835,
+              55482,
+              49338,
+              89646
+            ],
+            "artifact_refs": [
+              "T11",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 416835,
+            "reply_to": "M33",
+            "text": "Looking at A5, the stoppages at the mechanical station seem to be caused by waiting for PCB sub-assemblies. The buffer we added is working, but maybe the cart of parts isn't being replenished proactively. We can tweak the material handling route to fix that easily.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 89646,
+            "reply_to": "M33",
+            "text": "Some of the bad pcbs were from me. The visual guide was a little confusing on the polarity for one of the capacitors. I think a better picture would help.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 558542,
+            "reply_to": "M35",
+            "text": "Thanks for the feedback, @89646. That's an easy fix. We can take a better photo this afternoon and update the guide. That should resolve the quality issue. I've added this to the 'Operator Training Session Notes' (A8) as a follow-up action.",
+            "mentions": [
+              89646
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 557389,
+            "reply_to": "M33",
+            "text": "The pneumatic driver stalled twice according to the log. I checked it this morning and adjusted the pressure regulator. It should be more consistent now. I've updated the setup notes in our maintenance checklist.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 49338,
+            "reply_to": "M33",
+            "text": "it felt a little fast but i think i can keep up.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 55482,
+            "reply_to": "M33",
+            "text": "I need to consolidate the 'Go-Live Readiness Checklist' (A6) for T12. Based on this, it sounds like we have clear actions for all the issues found. Are there any other blockers before I recommend we go live?",
+            "mentions": [],
+            "artifact_refs": [
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 558542,
+            "reply_to": "M39",
+            "text": "I don't see any blockers. The issues are all minor and have clear fixes that don't require another pilot. My vote is to proceed. Decision: Decide whether to proceed with full go-live or run another pilot with adjustments. I propose we go-live after implementing these small fixes.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 416835,
+            "reply_to": "M40",
+            "text": "Agreed. Let's go live. I'll adjust the material replenishment route today.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 55482,
+            "reply_to": "M40",
+            "text": "Ok, I will finalize the go-live report T12 with the recommendation to proceed. I'll mark all items on the A6 checklist as complete once you all confirm your fixes are done.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 55482,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 558542,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 416835,
+              "when": "today"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (10 messages), TH3 (14 messages), TH4 (12 messages), and TH5 (13 messages) fall below the expected minimum of 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Artifact A7 is required in TH4 according to the blueprint, but it is never referenced in the thread's messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'performance' is used in the text of messages M17 and M58. The forbidden term 'score' is used in messages M5 and M54."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants exhibit very similar and repetitive phrasing, particularly during the confirmation phases at the end of threads (e.g., multiple participants replying with 'Confirmed. I'll...')."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 2
+  }
+}

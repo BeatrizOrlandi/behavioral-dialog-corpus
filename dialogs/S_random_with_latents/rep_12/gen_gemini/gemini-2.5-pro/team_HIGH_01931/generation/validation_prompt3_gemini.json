@@ -1,0 +1,25 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All 5 threads are below the minimum message count of 16. Thread TH1 has 13 messages, TH2 has 14, TH3 has 11, TH4 has 13, and TH5 has 13."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M4 contains the forbidden term 'scores' in the phrase 'client satisfaction scores'."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "In the thread_outcome for thread TH5, the next_steps list contains items where the 'task_id' is an artifact ID ('A3', 'A7') instead of a valid task ID from the backlog (e.g., 'T1')."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 1,
+    "voice_diversity_1_5": 5
+  }
+}

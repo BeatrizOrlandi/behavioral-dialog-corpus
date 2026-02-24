@@ -1,0 +1,35 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads have fewer messages than the minimum required (16). TH1 has 14, TH2 has 13, TH3 has 13, TH4 has 14, and TH5 has 9 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task 'T7' is required to be referenced in TH2 but is missing from all artifact_refs in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Artifact 'A8' is required to be referenced in TH5 but is missing from all artifact_refs in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'score' was found in the text of messages M2 ('Client satisfaction score...') and M55 ('...avg 9/10 score...')."
+    },
+    {
+      "severity": "MID",
+      "code": "INVALID_REF",
+      "detail": "In TH5 thread_outcome.next_steps, 'A3' is listed as a task_id, but it is an artifact_id."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

@@ -1,0 +1,832 @@
+{
+  "channel": {
+    "channel_id": "C_FLEET_MAINT_STD",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope and pick which vehicles join the initial pilot",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 108987,
+            "reply_to": null,
+            "text": "Hi team, we're kicking off the Fleet Maintenance and Workshop Safety Standardisation project. The goal is to reduce breakdowns and incidents by standardising our daily checks and safety routines across the fleet. We have 21 days to deliver checklists, hazardous substance handling guides, a maintenance schedule board, incident logging, and training materials. First decision: which vehicles should we pilot the new routines on? I'm thinking we start with a small subset—maybe 5 vehicles—to test the process before rolling out to everyone. What types do you think would be good candidates? We need to pick this today so we can start next week.",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "T10",
+              "A3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 109283,
+            "reply_to": "M1",
+            "text": "Good timing. I'd suggest we include at least two of the high-usage collection vehicles—they get the most wear and we'll see real issues quickly. Maybe add a couple of the smaller vans and one of the compactors. That gives us a mix of vehicle types and usage patterns. The high-usage ones will show us if the routine slows down turnaround times, which is one of the risks we need to watch. I can help map out which specific vehicles are in that category if needed.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 156061,
+            "reply_to": "M2",
+            "text": "That makes sense. I'd add one more thing—we should pick vehicles that are currently in decent shape, not ones with known issues. Otherwise we'll be fixing problems instead of testing the routine itself. Also, one week might be tight for a pilot. Can we do two weeks? That gives us time to spot patterns and adjust before full rollout.",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 38857,
+            "reply_to": "M3",
+            "text": "Two weeks sounds better. I'm not sure which vehicles are in the best shape right now though. Should we check the maintenance log first? Also, I want to make sure the new checklist doesn't take too long—we can't have vehicles sitting idle during peak hours.",
+            "mentions": [
+              156061,
+              108987
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 108987,
+            "reply_to": "M4",
+            "text": "Good point. Let me pull the current status and we'll pick the five vehicles by EOD tomorrow. Two weeks for the pilot—starting Monday next week—works for me. That means we need the draft checklist and routine ready by Friday this week. I'll get started on that and post it in TH2 for feedback. Does everyone agree on the pilot scope: five vehicles, two weeks, starting Monday?",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 203126,
+            "reply_to": "M5",
+            "text": "Yes, that works. I'll help with the checklist review once you post the draft. Just want to make sure it covers everything we actually do, not just what we think we should do.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 109283,
+            "reply_to": "M5",
+            "text": "Agreed. I'll document the current steps we take on the high-usage vehicles so we can spot any redundant actions. That should help us keep the routine lean and avoid slowing things down. I'll have that ready by Thursday.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 108987,
+              "when": "Monday next week"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 109283,
+              "when": "Thursday"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 108987,
+              "when": "Friday"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Draft and finalise the daily inspection checklist and weekly routine",
+        "messages": [
+          {
+            "msg_id": "M8",
+            "speaker_id": 108987,
+            "reply_to": null,
+            "text": "Here's the first draft of the daily vehicle inspection checklist for A1. It covers exterior (lights, mirrors, bodywork), interior (seats, controls, gauges), fluids (oil, coolant, brake fluid), tyres (pressure, tread, damage), and safety equipment (fire extinguisher, first aid, warning triangles). I've kept it to about 15 items so it doesn't take more than 10 minutes per vehicle. Please review and flag anything missing or anything that takes too long. Also, I've separated out the weekly deep-check items—those go in T2. Let me know your thoughts.",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 109283,
+            "reply_to": "M8",
+            "text": "Good start. I'd add a check for the brake pad wear—we've had a couple of close calls with that. Also, the interior section should include checking the mirrors are adjusted properly; I've seen drivers miss that and it causes issues. One thing: the current checklist we use has a step for checking the spare tyre, but honestly, we never use it. Can we drop that? It'll save time.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 156061,
+            "reply_to": "M9",
+            "text": "I agree on the brake pads and mirrors. On the spare tyre—I'd keep it but maybe just a visual check that it's there and not damaged, not a full pressure check. You never know when you'll need it. Also, I notice the checklist doesn't mention checking the fuel level. That's pretty basic but I've seen vehicles sent out on low fuel.",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 38857,
+            "reply_to": "M10",
+            "text": "Fuel level makes sense. I'm a bit confused about the weekly checks though—what exactly goes in there? Is that stuff we do instead of the daily checks, or on top of them?",
+            "mentions": [
+              156061,
+              108987
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 109283,
+            "reply_to": "M11",
+            "text": "Good question. The weekly checks are in addition to the daily ones, but only for the high-usage vehicles. Things like checking the suspension, belts, hoses, and doing a more thorough fluid check. We do those on top of the daily routine, but only once a week. I've documented the time estimate—about 30 minutes per vehicle for the deep check. That's in T2.",
+            "mentions": [
+              38857,
+              108987
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 203126,
+            "reply_to": "M12",
+            "text": "So the daily checklist is for all vehicles, every day, and the weekly deep-check is just for the high-usage ones? That's clear. I think the daily checklist looks good with the additions—brake pads, mirrors, fuel, and spare tyre visual check. Should we add anything else or are we ready to move forward?",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 108987,
+            "reply_to": "M13",
+            "text": "I think that covers it. Let me update A1 with those additions and post the revised version by EOD today. Once everyone confirms it looks good, we'll have D3 locked in. For D4, I'm proposing: daily checks are the 15 items we just agreed on, and weekly deep-checks for high-usage vehicles include suspension, belts, hoses, and detailed fluid inspection. Does that split make sense?",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 156061,
+            "reply_to": "M14",
+            "text": "Yes, that works. One last thing—we should make sure the checklist is easy to use in the field. Maybe a laminated card or a simple form? Something that doesn't get lost or damaged.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 108987,
+            "reply_to": "M15",
+            "text": "Good idea. I'll create a laminated card version and a digital form option. That way people can use whichever works best for them. I'll have both ready by tomorrow morning.",
+            "mentions": [
+              156061
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 108987,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 109283,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on hazardous substances handling rules and workshop standards",
+        "messages": [
+          {
+            "msg_id": "M17",
+            "speaker_id": 109283,
+            "reply_to": null,
+            "text": "Let's talk about how we handle chemicals and oils in the workshop. Right now, things are a bit scattered—bottles in different places, labels fading, and I'm not always sure what PPE to use with what. I've drafted some initial ideas for A2: a list of all the chemicals and oils we use, required PPE for each, storage location rules, and spill response steps. I've also started thinking about workshop organisation—zones for tools, waste, and chemicals. That would be A6. Can we go through these and agree on what makes sense?",
+            "mentions": [
+              38857,
+              108987,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 156061,
+            "reply_to": "M17",
+            "text": "This is important. I've had a couple of near-misses with chemical spills because I wasn't sure about the right PPE. For the storage zones, I'd suggest: one locked cabinet for the hazardous stuff, a separate area for tools with clear labelling, and a designated waste bin for contaminated rags and materials. We should also have a spill kit easily accessible—maybe near the chemical storage?",
+            "mentions": [
+              109283
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 38857,
+            "reply_to": "M18",
+            "text": "Locked cabinet sounds good. I want to make sure the labels are really clear though—sometimes I can't read the old ones. Also, what about the end-of-shift cleaning? Should we have a checklist for that too?",
+            "mentions": [
+              156061,
+              109283
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 109283,
+            "reply_to": "M19",
+            "text": "Yes, end-of-shift cleaning is part of A6. I'm thinking: wipe down work surfaces, put tools back in their zones, sweep up debris, and check that all chemical containers are sealed and in the right place. Takes about 10 minutes if we do it properly. We can post the steps visibly in the workshop so everyone knows what to do.",
+            "mentions": [
+              38857
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 203126,
+            "reply_to": "M20",
+            "text": "That makes sense. For the chemical list in A2, should we include disposal instructions? Some of these oils and solvents can't just go in the regular waste.",
+            "mentions": [
+              109283
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 109283,
+            "reply_to": "M21",
+            "text": "Good catch. Yes, I'll add disposal instructions for each chemical. I'll also include the safety data sheet reference so people can look up more details if needed. Let me revise A2 and A6 with all these points and post them by tomorrow. Then we need sign-off from the health and safety officer before we lock these in. Does everyone agree on the approach: locked cabinet, clear labelling, designated zones, end-of-shift cleaning checklist, and disposal instructions?",
+            "mentions": [
+              38857,
+              108987,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 156061,
+            "reply_to": "M22",
+            "text": "Yes. One more thing—we should do a spot-check once a week to make sure people are actually following the standards. Maybe during the weekly review? That way we catch issues early.",
+            "mentions": [
+              109283
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 109283,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 109283,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define how incidents, near-misses and 'do not use' vehicles are flagged",
+        "messages": [
+          {
+            "msg_id": "M24",
+            "speaker_id": 156061,
+            "reply_to": null,
+            "text": "I had a small incident yesterday—spilled some brake fluid on my boot. It wasn't serious, but I wasn't sure how to log it. Should I have written it down somewhere? I'm thinking we need a simple way to record incidents and near-misses so we can spot patterns. Also, what do we do if a vehicle has a problem that means it can't leave the yard? How do we flag that so the next person knows?",
+            "mentions": [
+              108987,
+              109283,
+              38857,
+              203126
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 108987,
+            "reply_to": "M24",
+            "text": "Good questions. For the incident log, I'm thinking we keep it simple: date, time, location, what happened, and any injury or damage. We store it in a notebook in the workshop so it's always accessible. For the 'do not use' vehicles, we could use a red tag or a notice on the windscreen. Something visible so no one misses it.",
+            "mentions": [
+              156061
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 109283,
+            "reply_to": "M25",
+            "text": "I like the red tag idea. We should also have a rule: if a vehicle gets a 'do not use' tag, the person who tagged it has to note why in the incident log or in a separate 'vehicle status' section. That way we know what the issue is and when it was fixed.",
+            "mentions": [
+              108987,
+              156061
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 38857,
+            "reply_to": "M26",
+            "text": "What if someone forgets to remove the tag after fixing the vehicle? Should there be a process for that?",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 109283,
+            "reply_to": "M27",
+            "text": "Good point. The person who fixes the issue should remove the tag and note the fix in the log. We can review the log weekly to make sure tags are being removed promptly. I'll draft the full process for T11 and post it by tomorrow. For now, let's agree on the basics: incident log with date, time, location, description; red tag for 'do not use' vehicles; and a note in the log explaining why the tag was applied.",
+            "mentions": [
+              38857,
+              108987,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 203126,
+            "reply_to": "M28",
+            "text": "That works. I'll help test the process once you have the draft. We can use a real example to make sure it's clear.",
+            "mentions": [
+              109283
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 109283,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 109283,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan training, shift handovers and weekly review cadence",
+        "messages": [
+          {
+            "msg_id": "M30",
+            "speaker_id": 108987,
+            "reply_to": null,
+            "text": "We need to think about how we onboard new staff and how we keep everyone aligned on the new routines. I'm proposing: a short training brief (A7) that covers the checklist, the schedule board, and the incident log. For shift handovers, we should have a standard template (A5) so people know what to communicate. And we should run a weekly review meeting to look at the schedule board, review incidents, and agree on actions. What do you think? Who should attend the weekly review?",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T6",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 109283,
+            "reply_to": "M30",
+            "text": "I like this. For the training brief, keep it simple and visual—maybe two pages max with pictures of the checklist and the board. For the handover template, I'd suggest: vehicle status, any open issues, parts needed, and priority actions for the next shift. We should fill it out at the end of each shift, not just when there's a problem.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 156061,
+            "reply_to": "M31",
+            "text": "For the weekly review, I think all the maintenance attendants should attend if possible. Maybe 30 minutes, same time each week so people can plan around it. We can review the incident log, check the schedule board for overdue services, and talk about any patterns we're seeing.",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 38857,
+            "reply_to": "M32",
+            "text": "What day and time? I want to make sure I can make it.",
+            "mentions": [
+              156061,
+              108987
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 108987,
+            "reply_to": "M33",
+            "text": "How about Thursdays at 10 AM? That's mid-week so we have time to act on any issues before the weekend. Does that work for everyone?",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 109283,
+            "reply_to": "M34",
+            "text": "Works for me. I'll draft the handover template and the training brief by tomorrow. For the weekly review, I'll set up a recurring slot and send out a calendar invite. We can do the first review next Thursday after the pilot starts, so we have something to review.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 203126,
+            "reply_to": "M35",
+            "text": "Sounds good. So to confirm: handover template filled out at end of each shift, training brief for new staff, and weekly review on Thursdays at 10 AM with all attendants. Should we also document what we discuss in the review?",
+            "mentions": [
+              109283,
+              108987
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 108987,
+            "reply_to": "M36",
+            "text": "Yes, good idea. I'll keep notes on what we discuss and any actions we agree on. That becomes part of A8—the pilot feedback summary. So to lock in D9 and D10: handover template filled out at end of shift, covering vehicle status, open issues, parts needed, and priorities. Weekly review on Thursdays at 10 AM with all maintenance attendants, reviewing the schedule board, incident log, and agreeing on actions. Does everyone agree?",
+            "mentions": [
+              38857,
+              109283,
+              156061,
+              203126
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [
+              "D9",
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 156061,
+            "reply_to": "M37",
+            "text": "Yes. I'll help with the first review and make sure we capture any feedback on the pilot routines.",
+            "mentions": [
+              108987
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 108987,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 108987,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 108987,
+              "when": "next Thursday"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

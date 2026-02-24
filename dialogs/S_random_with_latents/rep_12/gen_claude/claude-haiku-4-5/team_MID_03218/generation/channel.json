@@ -1,0 +1,1215 @@
+{
+  "channel": {
+    "channel_id": "C-proj-churn-model-dashboard",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on churn definition, KPIs, and initial project scope.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Hi team, welcome to the churn prediction project kickoff. We have 21 days to deliver an MVP that helps our commercial teams identify at-risk customers. I've started a draft of the problem definition in A1 and outlined the roadmap in A8. Before we dive into data and modelling, we need alignment on three things: (1) what exactly counts as churn for our business, (2) the prediction horizon we're targeting, and (3) which KPIs will tell us if the model is actually useful. Let's use this thread to lock those in. Thoughts?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T1",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 138753,
+            "reply_to": "M1",
+            "text": "Good framing. From a business perspective, I'd suggest we define churn as a customer who hasn't renewed or made a purchase in 90 days, assuming that's when we'd want to intervene. But I want to check: are we looking at all customer segments or focusing on high-value accounts first? That changes the scope significantly.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 16404,
+            "reply_to": "M2",
+            "text": "The 90-day window makes sense. For KPIs, I'd propose we track precision and recall on a holdout test set, but also measure business impact—like how many at-risk customers we correctly identify versus false positives that waste sales time. We should probably set a minimum threshold, maybe 70% precision to start?",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 122466,
+            "reply_to": "M3",
+            "text": "70% precision is reasonable for MVP. Let me add that to A1 along with the 90-day definition. One question though: should we also track retention rate lift once the model is live? That's what the Head of Customer Success will care about most.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 138753,
+            "reply_to": "M4",
+            "text": "Absolutely. Retention lift is the ultimate business metric. I'd suggest we define it as: 'Percentage of flagged at-risk customers who renew within 30 days of outreach.' That gives us a clear success measure and ties directly to revenue impact.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 80886,
+            "reply_to": "M5",
+            "text": "I agree with the direction. Just want to flag: we'll need clean subscription and purchase history data to calculate that 90-day window reliably. I'm planning to profile our data sources this week in T2. Should I focus on specific tables or cast a wider net initially?",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 122466,
+            "reply_to": "M6",
+            "text": "Good question. Start with the core customer and subscription tables, then expand if we find gaps. We'll review your findings in TH2 and decide which sources to prioritise. For now, let's lock in D1 and D2: churn = no activity in 90 days, and we measure success by precision (70%+), recall, and retention lift. Does everyone agree?",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 16404,
+            "reply_to": "M7",
+            "text": "Agreed. I'll be ready to start feature engineering once we have the clean dataset from T3. Should I begin thinking about baseline algorithms now, or wait for the data profiling to finish?",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 138753,
+            "reply_to": "M8",
+            "text": "You can start sketching out a baseline approach—logistic regression or a simple tree model would be good starting points. But hold off on implementation until we've validated the data quality. No point building on a shaky foundation.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 568638,
+            "reply_to": "M9",
+            "text": "I'll support the data profiling effort. Once we have the inventory, I can help with the data dictionary and quality checks. Should I start documenting assumptions about what 'clean' means for each field?",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 122466,
+            "reply_to": "M10",
+            "text": "Yes, please. That will feed into A2 and help us prioritise fixes. Alright, I think we have alignment on the problem definition and KPIs. Let me update A1 and A8 with these decisions and share them by EOD. Next thread will be data inventory review. Thanks all.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 80886,
+              "when": "EOD this week"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 122466,
+              "when": "EOD today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review data inventory and decide on data sources and quality fixes.",
+        "messages": [
+          {
+            "msg_id": "M12",
+            "speaker_id": 80886,
+            "reply_to": null,
+            "text": "Data profiling is done. I've uploaded the initial inventory to A2 with findings from our core tables: customers, subscriptions, and transactions. The good news: we have 18 months of clean transaction history. The bad news: subscription table has ~15% missing renewal dates, and customer attributes are scattered across three systems. I've flagged the top issues. What should we prioritise for the MVP?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 568638,
+            "reply_to": "M12",
+            "text": "Thanks for the detailed report. The 15% missing renewal dates is concerning—that directly impacts our churn definition. Can we backfill those from transaction history, or do we need to exclude those records? I'm asking because it affects how many customers we can model.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 80886,
+            "reply_to": "M13",
+            "text": "Good catch. We can infer renewal dates from transaction timestamps in most cases. I'd estimate we can recover ~80% of the missing values. The remaining 20% we'd have to exclude, which reduces our dataset by maybe 3-4%. Acceptable?",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 122466,
+            "reply_to": "M14",
+            "text": "3-4% loss is fine for MVP. Let's go with the backfill approach. What about the customer attributes scattered across three systems? Can we consolidate those into a single view, or do we need to pick one source?",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 80886,
+            "reply_to": "M15",
+            "text": "We can consolidate with a priority order: CRM system first, then billing, then support. That gives us a complete customer profile for ~95% of records. The remaining 5% we'd fill with defaults or exclude. I'd recommend consolidating—it's cleaner for modelling.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 138753,
+            "reply_to": "M16",
+            "text": "Consolidation makes sense. But I want to flag a risk: if we're pulling from three systems with different update frequencies, we might have stale data. Should we add a 'data freshness' check to the pipeline? That could affect model reliability.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 568638,
+            "reply_to": "M17",
+            "text": "Good point. I can add freshness checks to T3 when we build the data prep pipeline. We'll flag records where attributes are older than 30 days and either exclude them or mark them as lower confidence. That way we're transparent about data quality.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 122466,
+            "reply_to": "M18",
+            "text": "Perfect. So to summarise: we're consolidating customer attributes from three sources with freshness checks, backfilling renewal dates from transactions, and accepting a 3-5% data loss. That's D3—our scope for MVP data sources. Now, D4: which quality issues should we fix before modelling? I see missing values, duplicates, and outliers in the report.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 80886,
+            "reply_to": "M19",
+            "text": "Prioritise in this order: (1) duplicates in customer table—those break our churn definition, (2) missing values in key fields like contract value and industry, (3) outliers in transaction amounts. The rest we can handle in feature engineering.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 16404,
+            "reply_to": "M20",
+            "text": "Agreed. Duplicates and missing values in key fields are blockers. Once those are fixed, I can start designing features. Should I wait for the full clean dataset, or can I start with a sample?",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 568638,
+            "reply_to": "M21",
+            "text": "Start with a sample—I'll have a clean 10k-record subset ready by tomorrow EOD. That's enough to prototype features and validate the pipeline. Full dataset will follow once we've resolved the duplicates.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 138753,
+            "reply_to": "M22",
+            "text": "Great. So D4 is locked: fix duplicates and missing values in key fields first, then handle outliers. I'll update A2 with the prioritised list. 80886, can you start the deduplication work today? We're on a tight timeline.",
+            "mentions": [
+              568638,
+              80886
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 80886,
+            "reply_to": "M23",
+            "text": "Starting now. I'll have a deduplication report by EOD tomorrow. Then 568638 can build the clean sample for 16404 to use for feature engineering. Sound good?",
+            "mentions": [
+              122466,
+              568638,
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 80886,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 568638,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Discuss baseline model results and choose the model to take forward.",
+        "messages": [
+          {
+            "msg_id": "M25",
+            "speaker_id": 16404,
+            "reply_to": null,
+            "text": "Baseline model is ready. I've trained a logistic regression on the clean sample and logged results in A5. Performance: 68% precision, 72% recall on the holdout set. Not quite at our 70% precision target, but close. I also tested a random forest and a gradient boosting model—both perform better but are more complex. Should we iterate on features first, or jump to a more sophisticated algorithm?",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 138753,
+            "reply_to": "M25",
+            "text": "68% is close. Before we jump to complex models, let's understand what the logistic regression is missing. Can you share feature importance? That might tell us which signals we're underutilising.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 16404,
+            "reply_to": "M26",
+            "text": "Feature importance shows: contract value (0.32), days since last purchase (0.28), customer tenure (0.18), industry (0.12), and others below 0.05. The model is heavily reliant on recency and contract value. That makes sense, but it means we might be missing behavioural signals.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 122466,
+            "reply_to": "M27",
+            "text": "Behavioural signals like support tickets, product usage, or engagement metrics could help. Do we have access to those in our data sources, or would we need to add new integrations?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 568638,
+            "reply_to": "M28",
+            "text": "We have support ticket counts and basic product usage logs. I can engineer those into features—things like 'tickets per month' and 'days since last login.' That might push us over the 70% threshold without needing a complex model.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 16404,
+            "reply_to": "M29",
+            "text": "Good idea. Let me retrain with those features and see if we hit 70% precision. If we do, we stick with logistic regression for simplicity and explainability. If not, I'll test the gradient boosting model. Timeline: I can have updated results by tomorrow EOD.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 138753,
+            "reply_to": "M30",
+            "text": "That's a solid plan. But I want to flag something: even if we hit 70% precision, we need to validate that the model is stable. Can you test it on a different time period to make sure it's not just fitting the sample?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 16404,
+            "reply_to": "M31",
+            "text": "Good catch. I'll do a time-based split: train on months 1-12, validate on months 13-15, and test on month 16. That way we're testing on truly unseen data and checking for temporal stability.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 80886,
+            "reply_to": "M32",
+            "text": "One more thing: once you pick a model, we'll need to document it for compliance. A3 should include the methodology, feature list, and any assumptions. Can you start drafting that while you're iterating?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 16404,
+            "reply_to": "M33",
+            "text": "Will do. I'll include the rationale for each feature and any data transformations. Should I also document why we excluded certain features, like sensitive attributes?",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 138753,
+            "reply_to": "M34",
+            "text": "Absolutely. That's important for audit. Alright, let's reconvene tomorrow with updated results. If we hit 70% precision with the behavioural features and the model is stable, we lock in D5 and D6: minimum performance threshold met, and logistic regression is our model for the dashboard.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 122466,
+            "reply_to": "M35",
+            "text": "Sounds good. 16404, once we have the final model, I'll start working on T6 to define risk bands and thresholds. That will feed into the dashboard design. Let's sync tomorrow EOD.",
+            "mentions": [
+              16404,
+              138753
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 16404,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 122466,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define churn risk bands, dashboard layout, and user journeys.",
+        "messages": [
+          {
+            "msg_id": "M37",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Model is locked in—logistic regression with 72% precision and stable across time periods. Now let's define how we present this to the business. I've drafted risk bands in A4: Low (score 0-0.3), Medium (0.3-0.7), High (0.7-1.0). Each band has recommended actions for sales and customer success. I've also sketched dashboard wireframes in A6. Let me know if the segmentation makes sense or if we need to adjust thresholds.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 138753,
+            "reply_to": "M37",
+            "text": "The bands look reasonable, but I want to validate them with business impact. What's the expected volume of customers in each band? If 'High' is only 2% of the customer base, the sales team might not take it seriously. If it's 40%, they'll be overwhelmed.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 16404,
+            "reply_to": "M38",
+            "text": "Good question. Let me check the distribution on the full dataset. Based on the sample, I'd estimate: Low ~60%, Medium ~30%, High ~10%. That seems actionable—10% is a manageable number for targeted outreach.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 138753,
+            "reply_to": "M39",
+            "text": "10% is good. That's roughly 500-1000 customers per month depending on your base. Sales can handle that. But I want to make sure the 'High' band is truly high-risk. Can we add a secondary metric—like contract value—so we prioritise high-value customers at risk?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 122466,
+            "reply_to": "M40",
+            "text": "Great idea. I'll add a 'priority score' that combines churn risk with contract value. High-risk + high-value customers get flagged as 'Critical.' That gives sales a clear action hierarchy. I'll update A4 with that logic.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 568638,
+            "reply_to": "M41",
+            "text": "For the dashboard, I'm thinking we need: (1) a summary card showing total customers by risk band, (2) a list view where sales can filter and drill down, (3) a trend chart showing how many customers are moving between bands over time. Does that match your wireframe?",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 122466,
+            "reply_to": "M42",
+            "text": "Exactly. I've sketched those in A6. I also added a 'recommended action' column in the list view—things like 'Schedule check-in call' or 'Offer renewal discount.' That ties directly to T9, the playbook for commercial teams.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 80886,
+            "reply_to": "M43",
+            "text": "The dashboard design looks solid. One technical question: how often will the model scores refresh? Daily? Weekly? That affects how we structure the data pipeline and what we promise to users.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 122466,
+            "reply_to": "M44",
+            "text": "Good question. I'd propose daily refresh—that way sales sees the latest signals. But let me check with the data platform owner to make sure that's feasible. For now, let's assume daily and adjust if needed.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 138753,
+            "reply_to": "M45",
+            "text": "Daily is good. Now, let's lock in D7: the risk bands and priority logic. Low (0-0.3), Medium (0.3-0.7), High (0.7-1.0), with a 'Critical' flag for high-risk + high-value customers. Does everyone agree?",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 16404,
+            "reply_to": "M46",
+            "text": "Agreed. I'll make sure the model outputs are calibrated to those thresholds. One thing: should we allow sales to adjust thresholds over time, or lock them in for the MVP?",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 122466,
+            "reply_to": "M47",
+            "text": "Lock them in for MVP. We can add threshold tuning in a future release once we have feedback from the pilot. Now, D8: dashboard layout. I'm proposing the summary card, list view with filters, and trend chart. Any objections?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 568638,
+            "reply_to": "M48",
+            "text": "Looks good. I'll start building the dashboard in our BI tool. I'll need the model scores exported daily—can 16404 set up an automated export?",
+            "mentions": [
+              122466,
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 16404,
+            "reply_to": "M49",
+            "text": "Will do. I'll create a daily batch job that scores all customers and exports to a table that the dashboard can query. Should be ready by end of week.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 122466,
+            "reply_to": "M50",
+            "text": "Perfect. So D7 and D8 are locked. I'll update A4 and A6 with the final definitions. Next, we need to build the playbook (T9) and set up monitoring (T10). Let's tackle those in the final push.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 568638,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Close out MVP, confirm monitoring plan, and plan training rollout.",
+        "messages": [
+          {
+            "msg_id": "M52",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "We're in the final stretch—10 days to go-live. Let me check status on the remaining deliverables. Dashboard is built and tested (A6 checklist complete). Model documentation is in A3. Playbook is drafted in A4. What's left: finalise monitoring (T10), validate the data refresh process (T12), and prepare training materials. Let's make sure we're on track.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "A6",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 16404,
+            "reply_to": "M52",
+            "text": "Model documentation is done. I've included methodology, feature list, assumptions, and rationale for excluded features. It's in A3 and ready for compliance review. I've also set up the daily batch scoring job—it's been running for 3 days without errors.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 80886,
+            "reply_to": "M53",
+            "text": "Good. I'm working on T10—the monitoring plan. I've defined key metrics: model precision, recall, and feature drift. I'm also setting up alerts for when precision drops below 65% or when data freshness issues occur. Should I include a manual review cadence, or just automated alerts?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 138753,
+            "reply_to": "M54",
+            "text": "Both. Automated alerts for urgent issues, but also a weekly review where someone checks the monitoring dashboard and looks for trends. That way we catch slow degradation before it becomes a problem.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 80886,
+            "reply_to": "M55",
+            "text": "Makes sense. I'll add a weekly review step to A7. Who should own that—data science or data platform?",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 16404,
+            "reply_to": "M56",
+            "text": "I can own the weekly review. I'll check the monitoring dashboard every Monday and flag any issues to the team. If there's a problem, we escalate to the data platform owner for infrastructure support.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 568638,
+            "reply_to": "M57",
+            "text": "I'm testing the data refresh process now (T12). The daily refresh is working—dashboard updates within 2 hours of the batch job completing. I've validated that the scores match the model output. One thing: should we add a 'data as of' timestamp to the dashboard so users know how fresh the data is?",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 122466,
+            "reply_to": "M58",
+            "text": "Absolutely. That's important for transparency. Add it to the dashboard header. Now, let's talk about training. I've drafted the playbook with scenarios and recommended actions. I'm planning a 1-hour training session for sales and customer success teams. Should we do it live or record it?",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 138753,
+            "reply_to": "M59",
+            "text": "Do it live first with a pilot group—maybe 10-15 people from sales and customer success. Get their feedback, refine the playbook, then record it for the broader rollout. That way you catch issues early.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 122466,
+            "reply_to": "M60",
+            "text": "Good idea. I'll schedule the pilot training for day 18—that gives us time to incorporate feedback before the full rollout. I'll also prepare a quick reference guide and FAQ to go with the playbook.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 80886,
+            "reply_to": "M61",
+            "text": "One more thing: we should document the monitoring plan in A7 and share it with the data platform owner so they know what to expect. Can I send them a summary by EOD tomorrow?",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 122466,
+            "reply_to": "M62",
+            "text": "Yes, please. Also, let's schedule a final stakeholder update for day 19 to review the MVP, confirm go-live readiness, and outline the monitoring and training plan. I'll send a calendar invite.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 16404,
+            "reply_to": "M63",
+            "text": "Sounds good. I'll have the final model documentation and monitoring setup ready by then. One last thing: should we plan a post-launch review—like 30 days after go-live—to measure actual business impact and gather feedback?",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 138753,
+            "reply_to": "M64",
+            "text": "Absolutely. That's critical for understanding if the model is actually driving retention lift. Let's plan a 30-day review with sales, customer success, and the Head of Customer Success. We'll measure adoption, model accuracy in production, and business impact.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 122466,
+            "reply_to": "M65",
+            "text": "Perfect. Let me summarise the final status: Model is production-ready with documentation (A3). Dashboard is built and tested (A6). Monitoring plan is defined (A7). Playbook is drafted (A4). Data refresh is validated (T12). We're on track for go-live on day 21. Final checklist: 16404 confirms model is ready, 568638 confirms dashboard is ready, 80886 confirms monitoring is ready. Then we're good to launch.",
+            "mentions": [
+              16404,
+              568638,
+              80886
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "A6",
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 16404,
+            "reply_to": "M66",
+            "text": "Model is ready. Batch scoring is stable, documentation is complete, and monitoring is set up.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 568638,
+            "reply_to": "M67",
+            "text": "Dashboard is ready. All views are built, filters are working, and the 'data as of' timestamp is in place. Usability testing with two end users is complete—no major issues.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 80886,
+            "reply_to": "M68",
+            "text": "Monitoring is ready. Alerts are configured, weekly review process is documented, and the data platform owner has been briefed. We're good to go.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 122466,
+            "reply_to": "M69",
+            "text": "Excellent. We're ready for launch. I'll send the final stakeholder update and schedule the 30-day review. Thanks everyone for the effort—this was a solid sprint. Let's make sure the commercial teams get real value from this.",
+            "mentions": [
+              16404,
+              568638,
+              80886
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              },
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 16404,
+              "when": "day 19"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 80886,
+              "when": "day 19"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "day 18"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

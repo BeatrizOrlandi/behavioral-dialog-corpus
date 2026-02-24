@@ -1,0 +1,144 @@
+{
+  "predictions": [
+    {
+      "_id": 9197,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "9197 demonstrates exceptional technical depth and proactive problem-solving. Consistently identifies critical design dependencies (polling intervals, thermal constraints, power budgets, protection device sizing) before they become issues. Delivers detailed electrical integration drawings with multiple design options and clear technical rationale. Responds quickly with precise specifications and maintains design coherence across threads. Asks sophisticated questions that reveal deep understanding of system interactions.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "The interface spec to the BMS mentions a 500ms polling interval—do we have confirmation that the existing hardware can support that without impacting battery management cycles?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M37",
+          "snippet": "I've prepared preliminary electrical integration drawings (A8) based on the requirements and the site layout from 478747's feasibility study (A3). The design includes single-line diagrams, wiring schematics, and protection calculations."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M42",
+          "snippet": "I'll finalize A8 for Option B by end of week. The diagrams will include all protection calculations, cable sizing, and grounding details."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "I want to confirm the test setup includes validation of the power conditioning circuit under the fault scenarios. Specifically, what happens if the 24V supply drops to 18V during a fault?"
+        }
+      ]
+    },
+    {
+      "_id": 11752,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "11752 demonstrates exceptional technical leadership and responsiveness. Proactively develops comprehensive test matrices, incorporates feedback from multiple stakeholders, and iteratively refines plans based on critical input. Identifies gaps (rapid discharge scenarios, voltage sag tolerance, system integration validation) and immediately commits to addressing them. Maintains detailed documentation (A2, A5, A6) and coordinates across disciplines. Shows strong ability to synthesize requirements and translate them into actionable test procedures.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M19",
+          "snippet": "I've drafted the lab test plan (A2) with a comprehensive test matrix covering temperature ranges (-5 to 50°C), load profiles (constant, ramp, pulse), and fault scenarios (sensor dropout, BMS communication loss)."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M21",
+          "snippet": "Good catch. I have rapid discharge in the load profile section, but I should add a dedicated test case with specific discharge rates and measure the estimation lag."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M27",
+          "snippet": "I'll have the updated A2 ready by EOD tomorrow with all the new test cases and safety procedures reviewed. The expanded matrix brings us to about 60 cycles total."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M76",
+          "snippet": "The data plan (T9) includes: state-of-charge estimation accuracy (compared to ground truth), sensor response time, Modbus communication latency, system uptime, and any fault events."
+        }
+      ]
+    },
+    {
+      "_id": 478747,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "478747 provides necessary feasibility analysis and site coordination but with less technical depth and initiative than peers. Delivers required artifacts (A3 with three installation options) and confirms site logistics (network infrastructure, panel capacity, installation window). However, contributions are largely responsive to requests rather than proactive. Provides factual information but limited analysis or risk identification. Coordination role is competent but not exceptional.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M3",
+          "snippet": "I've been working through the site feasibility (A3) and the battery room runs 15-30°C depending on season. The existing electrical layout has some space constraints near the main rack, but I've identified three installation options."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M40",
+          "snippet": "I've already checked the panel capacity—we have a spare 20A breaker available, which is more than enough for the monitoring system. The load analysis in A3 shows the system will draw about 8A at full load."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M9",
+          "snippet": "I'll check with operations on the network setup. That's part of the feasibility assessment I'm wrapping up. Should have confirmation by tomorrow morning."
+        }
+      ]
+    },
+    {
+      "_id": 478887,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "478887 demonstrates exceptional project leadership and decision-making. Initiates requirements specification with clear scope and success criteria. Proactively clarifies ambiguities (success thresholds, communication protocols, rollback plans) and translates them into actionable decisions. Synthesizes input from multiple disciplines and drives convergence. Maintains clear ownership of decisions (D1-D8) and ensures dependencies are tracked. Provides timely summaries and next-step clarity that keeps the team aligned and moving forward.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M1",
+          "snippet": "I've prepared a draft of the system requirements specification (A1) and wanted to get your feedback before we lock it in. The doc covers functional requirements, interfaces to the existing BMS and SCADA, and safety/compliance constraints."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M6",
+          "snippet": "Let me clarify the success criteria in A1. For state-of-charge estimation, we're targeting ±5% accuracy under normal operating conditions and ±10% under fault scenarios. Minimum uptime is 99% during the pilot window."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M13",
+          "snippet": "Perfect. Let me summarize where we are: A1 is being finalized with explicit success criteria (D2 confirmed). 9197 is proceeding with electrical design once sensor specs are locked. 11752 will develop the lab test plan (T2) with 50-cycle matrix."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M53",
+          "snippet": "One thing I want to confirm: do we have a rollback plan if something goes wrong during commissioning? For example, if the monitoring system causes issues with the battery management, can we quickly disconnect and restore the site to normal operation?"
+        }
+      ]
+    },
+    {
+      "_id": 523835,
+      "productivity_level": "HIGH",
+      "ability_level": "MID",
+      "performance_level": "HIGH",
+      "justification": "523835 demonstrates strong execution and proactive planning in commissioning and operational domains. Rapidly develops comprehensive checklists (A4) and operational guidelines (A5) that address practical concerns (quick disconnect, escalation paths, technician training). Identifies gaps and incorporates feedback quickly. Maintains issue tracking (A7) and coordinates with operations. However, technical depth is more limited compared to 9197 and 11752—contributions are more procedural and operational than analytical. Strong performance in assigned domain but less sophisticated technical reasoning.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M52",
+          "snippet": "I've drafted the commissioning and acceptance test checklist (A4) with a step-by-step plan for the installation weekend. The checklist covers pre-installation verification, electrical connections, sensor calibration, Modbus communication testing, and functional acceptance tests."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M54",
+          "snippet": "I've included a 'quick disconnect' procedure in A4 that allows us to isolate the monitoring system in under 5 minutes if needed. The procedure is documented with clear steps and safety precautions."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M63",
+          "snippet": "I'll maintain A7 during commissioning with real-time logging of any issues. Each entry will include the issue description, severity, and initial assessment."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M61",
+          "snippet": "I'll add a communication protocol section to A4 that specifies who talks to whom and what information needs to be shared. That will keep everyone coordinated during the installation window."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1330 @@
+{
+  "channel": {
+    "channel_id": "C-proj-branch-queue-pilot",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state mapping and confirm scope of the pilot branches.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Hi team, kicking off the Branch Queue & Service Experience Optimization Pilot. We need to lock down scope and current-state data collection this week. The goal is to understand where we're losing time and where customers are getting frustrated.\n\nI'm thinking we start with three pilot branches—let's confirm which ones make sense. We also need to agree on what we're measuring: wait times, transaction types, peak hours, complaint patterns.\n\nT1 is about mapping current state. T5 will set up our daily logging. Can we align on the minimum data set we need to capture? A1 will be our reference doc once we've gathered this.",
+            "mentions": [
+              73292,
+              167703,
+              252240,
+              268564
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 73292,
+            "reply_to": "M1",
+            "text": "I can help with the mapping. I've been at the teller desk long enough to know the pain points. We get backed up most around 10–11 AM and 2–3 PM. Transaction types vary—some folks just need a quick withdrawal, others want to discuss investments or complaints.\n\nFor data capture, I'd suggest we log: transaction type, time in queue, time at window, and whether the customer seemed satisfied or frustrated. We can do this on paper if needed.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 252240,
+            "reply_to": "M1",
+            "text": "I'm newer to the teller role, but I can help with observations. Which branches are we looking at? I want to make sure I understand what counts as a 'quick' transaction versus something that needs more time.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 455770,
+            "reply_to": "M3",
+            "text": "Good question. Let's define it now: quick = withdrawals, deposits, balance checks, card requests. Complex = loan discussions, investment advice, complaints, account changes. We'll refine this once we see the data.\n\nFor pilot branches, I'm proposing: Downtown, Westside, and Central Mall locations. They represent different customer mixes and traffic patterns. Does that work for everyone?",
+            "mentions": [
+              73292,
+              252240,
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 167703,
+            "reply_to": "M4",
+            "text": "Those branches sound okay. From the call centre side, I'm wondering—if we redirect more calls from branches, how will we know which ones are coming from the pilot? We'll need to tag them somehow in our system.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 455770,
+            "reply_to": "M5",
+            "text": "Good catch. We'll add a 'pilot branch' flag to any callback or referral. That way we can track volume and outcomes separately. I'll coordinate with IT on that.\n\nBack to data capture: 73292 suggested paper logs. I think that's practical for week 1. We'll use A5—the daily log template—to standardize what we record. Can someone draft that template by EOD tomorrow?",
+            "mentions": [
+              73292,
+              167703
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 73292,
+            "reply_to": "M6",
+            "text": "I can draft the template. I'll include columns for: time in, transaction type, time out, queue length at that moment, and a notes field for complaints or redirects. Should I add a field for whether we offered any products or services?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 268564,
+            "reply_to": "M7",
+            "text": "Yes, include that. We'll want to see if there's any correlation between transaction type and cross-sell opportunity. That feeds into T7 later.\n\nAlso, I'd suggest adding a 'customer sentiment' quick check—thumbs up, neutral, thumbs down. Doesn't need to be formal, just a gut read from the teller. Helps us spot friction early.",
+            "mentions": [
+              73292,
+              455770
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 252240,
+            "reply_to": "M8",
+            "text": "That makes sense. So to confirm—we're collecting data for two full days at each of the three branches? And we're looking at both teller and service desk queues?",
+            "mentions": [
+              455770,
+              268564
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 455770,
+            "reply_to": "M9",
+            "text": "Yes, exactly. Two full days per branch, both teller and service desk. That gives us a decent sample without disrupting operations. Once we have that data, we'll create A1—the current-state map—and share it back with everyone.\n\nSo to lock this down: D1 is the three pilot branches (Downtown, Westside, Central Mall). D2 is the data set: transaction type, queue time, service time, sentiment, redirects, and cross-sell notes. Does everyone agree?",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 73292,
+            "reply_to": "M10",
+            "text": "Agreed. I'll start observations at Downtown tomorrow. 252240, can you take Westside? And we'll coordinate on Central Mall.",
+            "mentions": [
+              252240,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 252240,
+            "reply_to": "M11",
+            "text": "Yes, I can do Westside. I'll follow the template once 73292 sends it over.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 455770,
+            "reply_to": "M12",
+            "text": "Perfect. 73292, can you send the A5 template by EOD today? Then we'll have it ready for observations to start tomorrow.\n\nOnce we have the two-day data from all three branches, we'll reconvene to review A1 and plan the triage redesign. That should be by end of week.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 73292,
+            "reply_to": "M13",
+            "text": "Will do. I'll have it ready by 5 PM today.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 73292,
+              "when": "tomorrow and next day"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 252240,
+              "when": "tomorrow and next day"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 73292,
+              "when": "EOD today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalise the new triage and queue process for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M15",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Now that we have current-state data coming in, let's design the new triage flow. T2 is about creating a decision checklist for staff to separate quick transactions from complex ones.\n\nHere's my draft thinking: quick transactions go to a dedicated teller line with a 5-minute SLA. Complex requests get triaged to a service desk or offered a callback via the call centre. This keeps the main queue moving.\n\nA2 will be our process guide once finalized. But first, we need to think through edge cases and make sure we're not breaking any controls. A7 will document the compliance review.\n\nWho wants to take a first pass at the triage checklist?",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7",
+              "T2",
+              "T11"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 73292,
+            "reply_to": "M15",
+            "text": "I can draft it. Based on what we observed, I'd suggest:\n\nQuick: withdrawal, deposit, balance check, card request, statement request.\nComplex: loan inquiry, investment advice, account changes, complaints, foreign exchange.\n\nBut there's a gray area—what about someone who wants to deposit AND ask about a savings product? Do we route them to complex, or handle the deposit quick and offer a callback for the product chat?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 268564,
+            "reply_to": "M16",
+            "text": "Good question. I'd say: handle the deposit quick, then offer a callback for the product discussion. That way we don't extend the queue, and the customer gets proper attention from someone who can really help them. Plus, it's a warm handoff—they're already interested.\n\nFor the checklist, I'd add a prompt: 'Is this primarily a transaction, or does it need advice?' That's the key decision point.",
+            "mentions": [
+              73292,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 455770,
+            "reply_to": "M17",
+            "text": "I like that. So the rule is: if it's primarily transactional, process it quick and offer a callback for any advisory component. If it's primarily advisory, route to service desk or callback from the start.\n\n73292, can you build that into the checklist? And we need to think about segregation of duties—are there any transactions that shouldn't be handled by a teller without a supervisor sign-off?",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 252240,
+            "reply_to": "M18",
+            "text": "I'm not sure about all the control rules. In my previous role, we had strict approval chains for certain things. Should we check with compliance before we finalize this?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 455770,
+            "reply_to": "M19",
+            "text": "Absolutely right. We need to loop in compliance before we lock this down. T11 is about documenting control checks. Let me reach out to the compliance officer and ask them to review the draft checklist once 73292 has it ready.\n\nFor now, let's assume standard teller authorities apply—anything outside that gets escalated or routed to service desk. We'll refine once compliance weighs in.",
+            "mentions": [
+              252240,
+              73292
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 73292,
+            "reply_to": "M20",
+            "text": "I'll draft the checklist with the decision tree: 'Is this primarily transactional?' If yes, process quick. If no, route to service desk or callback. I'll also add a note: 'Escalate to supervisor if unsure or if transaction exceeds teller authority.'\n\nI'll have it ready by tomorrow EOD.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 167703,
+            "reply_to": "M21",
+            "text": "One thing from the call centre perspective—if we're routing complex requests to callbacks, we need to know what we're getting. Can the triage checklist include a field for 'reason for callback'? That way we can prioritize and route to the right agent.",
+            "mentions": [
+              73292,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 73292,
+            "reply_to": "M22",
+            "text": "Good idea. I'll add a field: 'Callback reason: loan inquiry / investment / complaint / account change / other.' That way the call centre knows what they're handling.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 455770,
+            "reply_to": "M23",
+            "text": "Perfect. So the flow is: teller uses checklist to decide quick vs complex. If complex, they note the reason and offer a callback. Call centre gets the reason and can route accordingly.\n\nOnce 73292 sends the checklist, I'll send it to compliance for review. We need their sign-off before we can say D3 is locked—the triage rules are approved. And D4—how we handle edge cases—is also in that checklist.\n\nTimeline: checklist by tomorrow EOD, compliance review by end of week, then we can finalize A2.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 252240,
+            "reply_to": "M24",
+            "text": "Should we also think about physical layout? Like, do we need separate queues for quick vs complex, or can we manage it with just the checklist?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 455770,
+            "reply_to": "M25",
+            "text": "Good question. The constraint is that we can't do major physical changes—they have to be low-cost and reversible. I'm thinking we use signage and staff guidance rather than separate queues. Tellers can direct customers based on the checklist. We'll test this in the pilot and see if it works.\n\nIf we need separate queues, we can add simple barriers or tape on the floor. But let's start simple and adjust based on feedback.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 73292,
+            "reply_to": "M26",
+            "text": "Makes sense. I'll include a note in the checklist about how to communicate the triage to customers—something like, 'We have a quick line for simple transactions and a service desk for more complex needs. Which can I help you with today?'",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 455770,
+            "reply_to": "M27",
+            "text": "Perfect. That's customer-friendly and clear. Alright, let's lock this down: 73292 sends the triage checklist by tomorrow EOD. I'll get compliance review by end of week. Once they sign off, we'll have D3 and D4 confirmed, and we can finalize A2 and A7.\n\nNext step after that is T6—training staff on the new process. But we'll tackle that once the checklist is approved.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 73292,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 455770,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define scripts and communication for customers and cross-sell prompts.",
+        "messages": [
+          {
+            "msg_id": "M29",
+            "speaker_id": 268564,
+            "reply_to": null,
+            "text": "I've drafted a customer-facing script for the new queue process. The goal is to explain what's happening without making it sound like we're pushing them around.\n\nHere's version 1:\n\n'Welcome to [Branch]. We've redesigned our service to get you helped faster. If you need a quick transaction—deposit, withdrawal, or balance check—we have a dedicated line. If you need advice or have a more complex request, our service desk team can help, or we can call you back at a time that works for you.'\n\nT4 is about getting this right. I also need to think about T7—light cross-sell prompts. What do you think of the script? Too long? Too salesy?",
+            "mentions": [
+              455770,
+              73292
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 73292,
+            "reply_to": "M29",
+            "text": "I like it. It's clear and not pushy. One thing—should we mention that the callback is free and there's no obligation? Some customers might worry they're being sold something.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 268564,
+            "reply_to": "M30",
+            "text": "Good point. Let me revise:\n\n'Welcome to [Branch]. We've redesigned our service to get you helped faster. If you need a quick transaction—deposit, withdrawal, or balance check—we have a dedicated line. If you need advice or have a more complex request, our service desk team can help, or we can arrange a free callback at a time that works for you.'\n\nBetter?",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 455770,
+            "reply_to": "M31",
+            "text": "Much better. Now, for T7—cross-sell prompts. We want to offer products, but not extend the queue. What are you thinking?",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 268564,
+            "reply_to": "M32",
+            "text": "I've been thinking about this. For quick transactions, we keep it really light. After we process the transaction, something like:\n\n'By the way, we have a new savings account with a competitive rate. Would you like to hear about it, or should I send you information?'\n\nThat's under 20 seconds, and it gives the customer a choice—they can say yes, no, or ask for info later. No pressure.\n\nFor the service desk, we can be a bit more conversational since they're already in an advisory conversation.\n\nI'd suggest three prompts: savings account, credit card, and investment options. Does that feel right?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 252240,
+            "reply_to": "M33",
+            "text": "I like that approach. It's not aggressive. But I'm wondering—should we track which prompts actually lead to interest? That way we know what's working.",
+            "mentions": [
+              268564,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 268564,
+            "reply_to": "M34",
+            "text": "Good idea. We can add a simple note in the daily log: 'Cross-sell prompt offered: yes/no. Customer interest: yes/no/maybe.' That gives us data without adding much overhead.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 455770,
+            "reply_to": "M35",
+            "text": "Perfect. So D5 is the customer-facing script—the revised version with 'free callback.' D6 is the three cross-sell prompts: savings account, credit card, investment options. Both need compliance review before we finalize A4.\n\n268564, can you send the final script and prompts to me by tomorrow? I'll get them to compliance for a quick review—mainly to make sure the wording is compliant and not misleading.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 268564,
+            "reply_to": "M36",
+            "text": "Will do. I'll also test the script informally with a few colleagues to make sure it sounds natural when spoken aloud. Sometimes what reads well doesn't flow in conversation.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 73292,
+            "reply_to": "M37",
+            "text": "Good idea. I can be one of your test listeners if you want. I can tell you if it sounds natural from a teller's perspective.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 268564,
+            "reply_to": "M38",
+            "text": "Perfect. I'll reach out to you and a couple others tomorrow. Then I'll send the final version to 455770 by EOD.",
+            "mentions": [
+              73292,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 455770,
+            "reply_to": "M39",
+            "text": "Great. Once compliance signs off, we'll print the script and distribute it to all pilot branches. We'll also integrate the cross-sell prompts into the teller and call centre scripts.\n\nTimeline: 268564 sends final script by tomorrow EOD, compliance review by end of week, then we can finalize A4 and move to training.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 268564,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 268564,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Set up call centre triage, callbacks, and staffing adjustments.",
+        "messages": [
+          {
+            "msg_id": "M41",
+            "speaker_id": 167703,
+            "reply_to": null,
+            "text": "Okay, so we're going to be getting branch referrals for callbacks. I need to think through how we handle these.\n\nT3 is about creating a playbook—standard scripts and rules for the types of calls we'll get. T9 is about adjusting our staffing schedule to handle the extra volume.\n\nBased on what we've discussed, I'm expecting callbacks for: loan inquiries, investment advice, complaints, account changes, and general product questions.\n\nA3 will be our playbook once we finalize it. But first, I need to understand: what's the expected volume? And what's our SLA for callbacks?",
+            "mentions": [
+              455770,
+              73292
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 455770,
+            "reply_to": "M41",
+            "text": "Good questions. Volume is hard to estimate until we see the pilot data, but based on current branch patterns, I'd guess 20–30 callbacks per day across the three pilot branches. That's a rough estimate.\n\nFor SLA, I'm thinking: callbacks within 24 hours for non-urgent (product questions, general inquiries), and same-day for urgent (complaints, account issues). Does that work for your team?",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 167703,
+            "reply_to": "M42",
+            "text": "24 hours for non-urgent is doable. Same-day for urgent is tight, but we can manage it if we prioritize. I'll need to adjust our schedule to front-load urgent callbacks in the morning.\n\nFor the playbook, I'm thinking: each callback type gets a standard opening, a set of questions to ask, and a clear next step. For example:\n\nLoan inquiry: 'Hi, thanks for calling back. I see you're interested in a loan. Can you tell me what you're looking to borrow for?' Then we ask about amount, timeline, and current financial situation. Then we either process or schedule a branch visit.\n\nDoes that structure work?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 455770,
+            "reply_to": "M43",
+            "text": "That structure is solid. Can you draft the playbook with those five callback types? And include escalation rules—when do we escalate to a supervisor or back to the branch?",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 167703,
+            "reply_to": "M44",
+            "text": "I'll draft it. But I want to be honest—I'm not sure about all the product details or escalation rules. Can I work with someone from the product team or compliance to make sure I'm not missing anything?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 455770,
+            "reply_to": "M45",
+            "text": "Absolutely. I'll loop in the product manager and compliance officer. They can review your draft and make sure it's accurate and compliant.\n\nFor now, draft the structure and the five callback types with basic questions. We'll refine the details with the product and compliance teams.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 167703,
+            "reply_to": "M46",
+            "text": "Okay, I'll have a draft by tomorrow EOD. Now, for T9—staffing. If we're getting 20–30 callbacks a day, and each call takes about 10–15 minutes, that's roughly 3–4 hours of call time per day. We have a team of 8 agents.\n\nI'm thinking: shift one agent to focus on callbacks in the morning (9 AM–1 PM), and another in the afternoon (1 PM–5 PM). That gives us dedicated capacity without overloading anyone.\n\nBut I need to check: does that fit within our working hour limits and break rules?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 455770,
+            "reply_to": "M47",
+            "text": "That sounds reasonable. You'll need to confirm with your supervisor that it doesn't breach any labor rules. But the concept is solid—dedicated callback agents during peak hours.\n\nCan you document the proposed schedule and share it with me by end of week? That's part of D8—confirming the staffing plan.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 167703,
+            "reply_to": "M48",
+            "text": "Will do. I'll also add a note about overflow—what happens if we get more than 30 callbacks in a day? Do we queue them for the next day, or do we have a cap?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 455770,
+            "reply_to": "M49",
+            "text": "Good question. The constraint is that the call centre can't be overloaded. I'd say: if we hit 30 callbacks in a day, we cap new referrals and queue them for the next day. We'll monitor this in the pilot and adjust if needed.\n\nI'll add that to the playbook as an overflow rule. 167703, can you include that in A3?",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 167703,
+            "reply_to": "M50",
+            "text": "Yes, I'll add it. So to summarize: D7 is the playbook with five callback types, standard scripts, and escalation rules. D8 is the staffing schedule with dedicated callback agents and overflow rules. Both need to be finalized by end of week.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 455770,
+            "reply_to": "M51",
+            "text": "Exactly. 167703, draft the playbook by tomorrow EOD. I'll get product and compliance to review by end of week. Once they sign off, we'll have D7 and D8 locked, and we can finalize A3.\n\nThen we move to training—making sure your team knows how to handle these callbacks smoothly.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 167703,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 167703,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Monitor pilot progress, review metrics, and agree on final recommendations.",
+        "messages": [
+          {
+            "msg_id": "M53",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Alright, we're at the end of week 1 of the pilot. Time to review how things are going.\n\nI've compiled the data from A5 (daily logs) and created a first pass at A6 (performance dashboard). Here's what I'm seeing:\n\nWait times: Down about 15% on average at the quick transaction line. Service desk wait times are up slightly, but that's expected—we're routing more complex requests there.\n\nComplaints: A few customers confused about the new process, but nothing major. Staff are handling the triage okay, though there's some hesitation.\n\nCallbacks: We've had about 18 callbacks so far—mostly loan inquiries and product questions. Call centre is handling them smoothly.\n\nT8 is about collecting feedback. T10 is the dashboard. T12 will be the final report.\n\nLet's discuss: are we on track? Any issues we need to address?",
+            "mentions": [
+              73292,
+              167703,
+              252240,
+              268564
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [
+              "D1",
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 73292,
+            "reply_to": "M53",
+            "text": "The triage is working, but I'm seeing some edge cases that don't fit neatly into quick or complex. For example, someone came in wanting to close an account and open a new one. That's technically two transactions, but it took longer than a quick transaction.\n\nAlso, some customers are asking questions while in the quick line, which slows things down. We might need to adjust the script or add a pre-queue question.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 268564,
+            "reply_to": "M54",
+            "text": "That's useful feedback. For the account close/open scenario, maybe we add that to the 'complex' category? Or we could offer a callback for the new account setup after closing the old one.\n\nFor the pre-queue questions, I can revise the script to be clearer upfront: 'Do you need a quick transaction, or do you have questions about your account or products?' That way we triage before they get in line.",
+            "mentions": [
+              73292,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 455770,
+            "reply_to": "M55",
+            "text": "Good ideas. So we're refining D3—the triage rules—based on week 1 feedback. Let's add: account close/open = complex. And we'll update the customer-facing script to include a pre-queue question.\n\n268564, can you revise the script by tomorrow? And 73292, can you test it with a few customers to make sure it works?",
+            "mentions": [
+              268564,
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 252240,
+            "reply_to": "M56",
+            "text": "I've noticed that some staff are still reverting to old habits—not offering callbacks, just telling customers to come back. Is that something we should address in training?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 455770,
+            "reply_to": "M57",
+            "text": "Good catch. That's a common issue with process changes. We need to reinforce the callback option in week 2. I'll do a quick refresher session at each branch—just 15 minutes to remind staff why we're doing this and how to offer callbacks naturally.\n\nT8 is about capturing this feedback and making quick adjustments. That's exactly what we're doing now.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 167703,
+            "reply_to": "M58",
+            "text": "From the call centre side, the callbacks are going well. Customers seem to appreciate being called back rather than waiting in the branch. We've had a couple of escalations, but nothing we couldn't handle.\n\nOne thing: we're getting some callbacks that could have been handled in the branch. Maybe we need to refine the triage checklist to avoid unnecessary callbacks?",
+            "mentions": [
+              455770,
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 73292,
+            "reply_to": "M59",
+            "text": "That's fair. I think some staff are being overly cautious—routing things to callbacks when they could handle them. I'll add a note to the checklist: 'If you're confident you can handle this, do it. Only route to callback if you need more time or expertise.'",
+            "mentions": [
+              167703,
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 455770,
+            "reply_to": "M60",
+            "text": "Good. So we're refining the triage rules and the script based on week 1 feedback. That's part of revisiting D3.\n\nLet's also look at the metrics. A6 shows wait times are down, complaints are minimal, and callbacks are manageable. That's positive. But we need to make sure we're not sacrificing quality for speed.\n\n73292, are customers satisfied with the service they're getting? Any feedback on that?",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 73292,
+            "reply_to": "M61",
+            "text": "From what I'm seeing, customers are happy with the quick line—they get in and out fast. For the service desk, customers seem to appreciate the more personalized attention. The callback option is new, so some are skeptical, but once they experience it, they like it.\n\nI'd say overall sentiment is positive. The daily logs show mostly thumbs up or neutral.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 455770,
+            "reply_to": "M62",
+            "text": "Excellent. So we're on track. Let me summarize week 1:\n\nPositives: Wait times down, callbacks working, customer sentiment positive, staff adapting.\n\nAdjustments needed: Refine triage rules (account close/open = complex), update customer script with pre-queue question, reinforce callback option in training, avoid unnecessary callbacks.\n\nWe're not changing D1 (pilot scope) or D3 (triage rules fundamentally), but we're refining them based on feedback. That's exactly what we should be doing.\n\nFor week 2: 268564 revises script, 73292 tests it, I do refresher training, and we continue monitoring. By end of week 2, we'll have enough data to start thinking about the final report (T12).",
+            "mentions": [
+              268564,
+              73292
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 252240,
+            "reply_to": "M63",
+            "text": "Should we also think about what success looks like for the final report? Like, what metrics would make us say 'yes, roll this out wider'?",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 455770,
+            "reply_to": "M64",
+            "text": "Great question. T12 is the final report. I'm thinking success criteria are:\n\n1. Wait times reduced by at least 10% (we're already at 15%, so good).\n2. Customer satisfaction maintained or improved (looks good so far).\n3. Staff adoption rate above 80% (we're working on this with refresher training).\n4. No compliance or control breaches (A7 confirms this).\n5. Call centre can handle callback volume without overload (167703 says yes so far).\n\nIf we hit those, we recommend wider rollout. If not, we identify what needs to change.\n\nDoes that sound right?",
+            "mentions": [
+              252240,
+              167703
+            ],
+            "artifact_refs": [
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 73292,
+            "reply_to": "M65",
+            "text": "That makes sense. I'd add one more: transaction handling time at teller windows doesn't increase. That's a constraint we need to meet.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 455770,
+            "reply_to": "M66",
+            "text": "Absolutely right. That's in the constraints. We're tracking that in A5 and A6. So far, quick transaction times are actually down, which is good.\n\nAlright, let's lock this down for week 2:\n\n1. 268564 revises script with pre-queue question by tomorrow.\n2. 73292 tests script and refines triage checklist by tomorrow.\n3. I do refresher training at each branch by mid-week.\n4. We continue daily monitoring and weekly metrics review.\n5. By end of week 2, we'll have enough data to draft the final report.\n\nEveryone good with that?",
+            "mentions": [
+              268564,
+              73292
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 167703,
+            "reply_to": "M67",
+            "text": "Sounds good. I'll continue monitoring callbacks and flag any issues. We're on track from the call centre side.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 252240,
+            "reply_to": "M68",
+            "text": "I'll keep collecting feedback from staff at Westside. Let me know if you need anything specific.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 455770,
+            "reply_to": "M69",
+            "text": "Perfect. Thanks everyone. We're on track for a successful pilot. Let's reconvene at the end of week 2 to review final metrics and start drafting the rollout recommendation.",
+            "mentions": [
+              73292,
+              167703,
+              252240,
+              268564
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D3"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 455770,
+              "when": "ongoing"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 455770,
+              "when": "weekly"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 455770,
+              "when": "end of week 2"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

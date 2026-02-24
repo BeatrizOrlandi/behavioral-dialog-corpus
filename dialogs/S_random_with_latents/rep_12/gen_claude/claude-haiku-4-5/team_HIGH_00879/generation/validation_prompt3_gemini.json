@@ -1,0 +1,35 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are below the minimum message count of 15. TH1 has 10, TH2 has 11, TH3 has 8, TH4 has 12, and TH5 has 12 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing required references to artifacts T8 and T9 from its blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH3 is missing a required reference to artifact T10 from its blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing required references to artifacts T4, T5, T6, T7, and T11 from its blueprint."
+    },
+    {
+      "severity": "LOW",
+      "code": "INCONSISTENCY",
+      "detail": "Thread TH1 contains references to artifacts A2 and A6, which were not specified in the blueprint's artifacts_to_reference for that thread."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

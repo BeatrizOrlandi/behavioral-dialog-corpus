@@ -1,0 +1,40 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "SCHEMA",
+      "detail": "Message M51 has an invalid reply_to value 'M82217', which is a speaker_id, not a valid msg_id."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 has 12 messages, which is below the expected minimum of 15 messages per thread and the blueprint target range of 20-30."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing mandatory references to artifacts A1 and T10 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH3 is missing mandatory reference to artifact T4 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH5 is missing mandatory reference to artifact T9 in its messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "DECISION_MISSING",
+      "detail": "Thread TH5 is missing mandatory decision D1 in the decision_refs of its messages."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

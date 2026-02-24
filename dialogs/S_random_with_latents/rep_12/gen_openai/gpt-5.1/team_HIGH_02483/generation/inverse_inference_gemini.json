@@ -1,0 +1,164 @@
+{
+  "predictions": [
+    {
+      "_id": 8323,
+      "productivity_level": "MID",
+      "ability_level": "LOW",
+      "performance_level": "MID",
+      "justification": "Contributes by executing assigned tasks, particularly around documentation and implementing decisions made by others. However, their questions are often more basic compared to the rest of the group, suggesting a need for more guidance on technical solutions and architectural patterns.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M5",
+          "snippet": "I am not entirely sure how strict we need to be about property naming. For example, some existing events use user_id and others use uid."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M21",
+          "snippet": "I am trying to understand how T2 will handle schema changes from A1. If a new property is added to an event, do we plan to auto-add columns...?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M10",
+          "snippet": "Ok, standardising on user_id in A1 makes sense. I will adjust the draft spec for T1..."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M75",
+          "snippet": "I will finalise the remaining pieces of T9 in A6 by Tuesday noon: add the partial backfill handling, double-check alert descriptions..."
+        }
+      ]
+    },
+    {
+      "_id": 30972,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "A solid contributor who helps the team by asking clarifying questions about scope, trade-offs, and requirements. Their participation ensures alignment and reduces ambiguity, but they are less likely to propose novel technical solutions compared to the high-performers in the group.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M4",
+          "snippet": "For retention, are we standardising on weekly cohorts only, or do we also need monthly for launch?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M20",
+          "snippet": "Would it be safer to split that into separate jobs with clear dependencies, so that a failure in feature usage does not block user-level tables?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M64",
+          "snippet": "I have been running spot checks on the dashboards against A2 using the staging environment."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M72",
+          "snippet": "I can support on T12 with the product narrative: explain the key questions from A2, how the dashboards answer them..."
+        }
+      ]
+    },
+    {
+      "_id": 92214,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "A high-impact technical contributor who consistently identifies implementation risks and proposes robust, practical solutions. They demonstrate deep expertise in platform engineering, performance, and security, and proactively take ownership of critical technical tasks.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M3",
+          "snippet": "On the implementation side for T1, the current A1 spec has naming conventions but is a bit light on validation rules."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M23",
+          "snippet": "we can store raw events in a semi-structured column and have a thin mapping layer in T3 that selects the properties we care about for MVP."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M37",
+          "snippet": "I would go with a single-page app with lazy-loaded tabs for T5. We can load the overview tab first and defer queries..."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M28",
+          "snippet": "Given the agreement on daily refresh, I will start sketching the CI/CD hooks for T2 and T3 so we can deploy changes safely."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M11",
+          "snippet": "I can take a pass on the validation rules in A1 for T1."
+        }
+      ]
+    },
+    {
+      "_id": 96134,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Acts as the clear project lead, demonstrating exceptional performance by consistently driving the project forward. They initiate all key discussions, provide clear context, make decisive recommendations, and effectively summarize complex conversations into actionable decisions and next steps.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M1",
+          "snippet": "Kicking off the Unified Analytics Platform MVP for Product Usage Insights. For scope: we are focusing on two flagship products..."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M16",
+          "snippet": "To summarise where we landed: 1) MVP metrics and dashboards in A2 are approved... 2) A1 will define a unified event schema..."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M6",
+          "snippet": "I suggest we keep weekly retention in scope for MVP and move monthly retention to the v2 parking lot."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M8",
+          "snippet": "I strongly prefer we standardise at the tracking layer instead of adding complexity in transformations. If we allow both now, we will carry that inconsistency..."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "My suggestion: we create three separate transformation jobs... The overhead on scheduling is small compared to the operational clarity."
+        }
+      ]
+    },
+    {
+      "_id": 155243,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "A proactive and high-impact contributor who demonstrates deep data modeling and analytics expertise. They consistently identify key issues, propose concrete and well-reasoned solutions that get adopted, and take initiative to draft artifacts that move the project forward.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M2",
+          "snippet": "One concern: we have a lot of feature-level metrics for Product A but fewer for Product B. For consistency, I suggest we align the top 10 events..."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M12",
+          "snippet": "I drafted a candidate top 10 event list for Product B based on the structure in A1 and the metrics in A2..."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M7",
+          "snippet": "I recommend we keep both client and server timestamps but define a clear rule: server timestamp is the primary one for ordering and aggregations..."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M48",
+          "snippet": "I suggest we completely exclude direct identifiers like email and full name from the analytics warehouse. Instead, we use a hashed user_id..."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M62",
+          "snippet": "the historical backfill for the last 6 months is loaded for Product A and about 70 percent complete for Product B."
+        }
+      ]
+    }
+  ]
+}

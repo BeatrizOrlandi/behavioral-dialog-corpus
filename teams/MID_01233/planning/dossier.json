@@ -1,0 +1,446 @@
+{
+  "affinity_band": "MID",
+  "planning_output": {
+    "project_pack": {
+      "project": {
+        "title": "Cross-Plant Predictive Maintenance Rollout for Production Lines",
+        "objective": "Design and roll out a standardized predictive maintenance program to reduce unplanned downtime and maintenance costs across key production assets.",
+        "deliverables": [
+          "Standardized asset criticality and maintenance strategy matrix",
+          "Predictive maintenance process and escalation workflow",
+          "Sensor and data collection specification for priority equipment",
+          "Cross-functional training plan and materials for maintenance and operations staff",
+          "KPI dashboard definition for downtime, MTBF, and maintenance compliance",
+          "Pilot implementation report with lessons learned and rollout plan"
+        ],
+        "constraints": [
+          "Pilot must go live within 21 days with at least two production lines",
+          "No disruption to committed production volumes during installation",
+          "Use existing CMMS and data infrastructure where possible",
+          "Comply with plant safety and lockout/tagout procedures",
+          "Limited capex budget for new sensors and instrumentation",
+          "Maintenance windows restricted to scheduled off-peak shifts"
+        ],
+        "stakeholders": [
+          "Plant operations management",
+          "Maintenance and reliability team",
+          "Production planning team",
+          "Health and safety officer",
+          "IT and data infrastructure team"
+        ],
+        "deadline_days": 21,
+        "risks": [
+          {
+            "risk": "Insufficient data quality from existing sensors to support predictive models.",
+            "mitigation": "Run a short data quality assessment, prioritize a subset of assets, and define minimum sensor upgrade list for the pilot."
+          },
+          {
+            "risk": "Operations teams resist changes to existing maintenance routines.",
+            "mitigation": "Involve line supervisors early, co-design procedures, and run a limited pilot with clear benefits and quick feedback loops."
+          },
+          {
+            "risk": "Installation work overruns maintenance windows and impacts production.",
+            "mitigation": "Create detailed installation checklists, pre-stage materials, and schedule contingency windows with production planning."
+          },
+          {
+            "risk": "Budget constraints limit sensor and tooling purchases.",
+            "mitigation": "Rank assets by criticality, focus on high-impact equipment first, and reuse existing hardware where feasible."
+          },
+          {
+            "risk": "Lack of alignment between maintenance, operations, and aftersales service on priorities.",
+            "mitigation": "Set up weekly cross-functional check-ins and publish a shared priority list and status board."
+          }
+        ]
+      },
+      "themes": [
+        {
+          "theme": "Asset criticality and equipment selection",
+          "why_relevant": "Determines which machines enter the pilot and where to focus limited budget and effort."
+        },
+        {
+          "theme": "Standardizing maintenance workflows",
+          "why_relevant": "Ensures operations, maintenance, and garage teams follow consistent procedures across sites."
+        },
+        {
+          "theme": "Data collection and sensor strategy",
+          "why_relevant": "Defines what data is needed, from where, and how it will be used for predictive insights."
+        },
+        {
+          "theme": "Production impact and scheduling",
+          "why_relevant": "Aligns maintenance work with production plans to avoid missed delivery commitments."
+        },
+        {
+          "theme": "Training and change management",
+          "why_relevant": "Helps staff adopt new processes, tools, and KPIs without confusion or resistance."
+        },
+        {
+          "theme": "Customer and aftersales implications",
+          "why_relevant": "Links improved reliability to fewer field failures and better service outcomes."
+        }
+      ],
+      "backlog": [
+        {
+          "task_id": "T1",
+          "task": "Define asset criticality criteria and select pilot equipment on two production lines",
+          "owner_role": "industrial production manager",
+          "definition_of_done": [
+            "Criticality criteria document approved by operations and maintenance",
+            "List of pilot assets for two lines finalized and shared",
+            "Risks of including each asset briefly documented"
+          ]
+        },
+        {
+          "task_id": "T2",
+          "task": "Map current maintenance workflows and identify standardization gaps",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "As-is maintenance workflow diagrams created for at least two plants",
+            "Key differences and pain points summarized",
+            "List of standardization opportunities agreed with maintenance leads"
+          ]
+        },
+        {
+          "task_id": "T3",
+          "task": "Design predictive maintenance process and escalation paths",
+          "owner_role": "industrial engineer",
+          "definition_of_done": [
+            "To-be process flow documented from alert to resolution",
+            "Escalation thresholds and roles defined for each asset class",
+            "Process validated with operations manager and garage manager"
+          ]
+        },
+        {
+          "task_id": "T4",
+          "task": "Specify sensor and data requirements for selected pilot assets",
+          "owner_role": "electrical engineer",
+          "definition_of_done": [
+            "List of required signals and sampling frequencies per asset created",
+            "Gap analysis between current and required instrumentation completed",
+            "Low-level wiring and installation notes drafted for maintenance teams"
+          ]
+        },
+        {
+          "task_id": "T5",
+          "task": "Align maintenance windows with production planning for pilot rollout",
+          "owner_role": "industrial production manager",
+          "definition_of_done": [
+            "Maintenance windows agreed for each pilot line",
+            "No conflict with confirmed customer orders for the pilot period",
+            "Shared calendar created and communicated to stakeholders"
+          ]
+        },
+        {
+          "task_id": "T6",
+          "task": "Develop training materials for operators, maintenance, and garage staff",
+          "owner_role": "industrial engineer",
+          "definition_of_done": [
+            "Role-specific training outlines created",
+            "Slide deck and quick reference guides drafted",
+            "Training plan with dates and target attendees approved"
+          ]
+        },
+        {
+          "task_id": "T7",
+          "task": "Define KPIs and dashboard requirements for downtime and maintenance performance",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "List of KPIs with clear definitions and formulas agreed",
+            "Data sources for each KPI identified",
+            "Dashboard wireframe or layout documented"
+          ]
+        },
+        {
+          "task_id": "T8",
+          "task": "Prepare installation checklist and safety procedures for sensor deployment",
+          "owner_role": "garage manager",
+          "definition_of_done": [
+            "Step-by-step installation checklist drafted",
+            "Safety and lockout/tagout steps clearly included",
+            "Checklist reviewed by health and safety officer"
+          ]
+        },
+        {
+          "task_id": "T9",
+          "task": "Coordinate pilot implementation on shop floor and in garage area",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Implementation schedule confirmed with all teams",
+            "Daily status updates captured during installation week",
+            "Pilot go-live confirmed with no unplanned downtime incidents"
+          ]
+        },
+        {
+          "task_id": "T10",
+          "task": "Document pilot results, issues, and recommendations for scale-up",
+          "owner_role": "industrial production manager",
+          "definition_of_done": [
+            "Pilot performance data collected for agreed period",
+            "Key issues and root causes summarized",
+            "Scale-up recommendations and next steps documented"
+          ]
+        },
+        {
+          "task_id": "T11",
+          "task": "Validate electrical safety and integration with existing control systems",
+          "owner_role": "electrical engineer",
+          "definition_of_done": [
+            "Compatibility with existing control panels verified",
+            "Load and interference checks completed and documented",
+            "Sign-off from plant electrical safety representative obtained"
+          ]
+        },
+        {
+          "task_id": "T12",
+          "task": "Capture customer-facing impact and aftersales service feedback",
+          "owner_role": "garage manager",
+          "definition_of_done": [
+            "Aftersales and service teams interviewed on failure trends",
+            "Any change in warranty claims or service incidents noted",
+            "Summary of customer impact included in pilot report"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "A1",
+          "type": "sheet",
+          "title": "Asset Criticality and Pilot Equipment Matrix",
+          "used_for": "Ranking equipment by criticality and selecting assets for the predictive maintenance pilot."
+        },
+        {
+          "artifact_id": "A2",
+          "type": "doc",
+          "title": "Standardized Predictive Maintenance Process and Escalation Guide",
+          "used_for": "Describing the new maintenance workflow, roles, and escalation thresholds."
+        },
+        {
+          "artifact_id": "A3",
+          "type": "checklist",
+          "title": "Sensor Installation and Safety Checklist",
+          "used_for": "Guiding technicians through safe installation of sensors during maintenance windows."
+        },
+        {
+          "artifact_id": "A4",
+          "type": "guideline",
+          "title": "Data Collection and Integration Specification",
+          "used_for": "Detailing required signals, sampling, and integration with existing systems."
+        },
+        {
+          "artifact_id": "A5",
+          "type": "doc",
+          "title": "Training Pack for Operators and Maintenance Staff",
+          "used_for": "Supporting training sessions and as a reference for new procedures and KPIs."
+        },
+        {
+          "artifact_id": "A6",
+          "type": "sheet",
+          "title": "Pilot KPI and Downtime Tracking Sheet",
+          "used_for": "Tracking downtime, MTBF, and maintenance compliance during the pilot period."
+        },
+        {
+          "artifact_id": "A7",
+          "type": "doc",
+          "title": "Pilot Implementation and Lessons Learned Report",
+          "used_for": "Summarizing pilot outcomes, issues, and recommendations for wider rollout."
+        },
+        {
+          "artifact_id": "A8",
+          "type": "other",
+          "title": "Cross-Functional Rollout Roadmap",
+          "used_for": "Planning phases, responsibilities, and timelines for scaling predictive maintenance."
+        }
+      ]
+    },
+    "blueprint": {
+      "channel_name_hint": "proj-predictive-maintenance-rollout",
+      "threads_plan": [
+        {
+          "thread_id": "TH1",
+          "thread_goal": "Align on pilot scope, asset selection, and success criteria.",
+          "trigger": "Kickoff message announcing the predictive maintenance initiative and asking for input on pilot scope.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Approve the list of pilot assets and lines from the asset criticality matrix."
+            },
+            {
+              "decision_id": "D2",
+              "decision": "Agree on 3–5 primary KPIs to track during the pilot."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A1",
+            "A6",
+            "T1",
+            "T7"
+          ]
+        },
+        {
+          "thread_id": "TH2",
+          "thread_goal": "Design and finalize the standardized predictive maintenance workflow.",
+          "trigger": "Operations manager shares draft of the to-be maintenance process for review.",
+          "target_messages_range": [
+            20,
+            28
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D3",
+              "decision": "Sign off on the standardized predictive maintenance process and escalation paths."
+            },
+            {
+              "decision_id": "D4",
+              "decision": "Confirm which roles are responsible for triaging and responding to alerts."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A2",
+            "T2",
+            "T3"
+          ]
+        },
+        {
+          "thread_id": "TH3",
+          "thread_goal": "Lock down sensor specs, installation plan, and safety procedures.",
+          "trigger": "Electrical engineer posts proposed sensor list and asks for feasibility feedback.",
+          "target_messages_range": [
+            17,
+            25
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D5",
+              "decision": "Approve the final sensor and data collection specification for the pilot assets."
+            },
+            {
+              "decision_id": "D6",
+              "decision": "Agree on the installation schedule and safety checklist to use on site."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A3",
+            "A4",
+            "T4",
+            "T8",
+            "T11"
+          ]
+        },
+        {
+          "thread_id": "TH4",
+          "thread_goal": "Coordinate pilot go-live, training, and daily status updates.",
+          "trigger": "Week before go-live, operations manager opens coordination thread for rollout.",
+          "target_messages_range": [
+            22,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D7",
+              "decision": "Confirm pilot go-live date and maintenance windows for all lines."
+            },
+            {
+              "decision_id": "D8",
+              "decision": "Agree on training dates and which teams must attend each session."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A5",
+            "A6",
+            "T5",
+            "T6",
+            "T9"
+          ]
+        },
+        {
+          "thread_id": "TH5",
+          "thread_goal": "Review pilot results, customer impact, and decide on rollout roadmap.",
+          "trigger": "After pilot period, industrial production manager shares draft lessons learned.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Reconfirm or adjust pilot asset scope based on performance data for scale-up."
+            },
+            {
+              "decision_id": "D4",
+              "decision": "Revisit and finalize long-term ownership of alert triage and escalation."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A6",
+            "A7",
+            "A8",
+            "T10",
+            "T12"
+          ]
+        }
+      ],
+      "talk_distribution_by_role": [
+        {
+          "role": "operations manager",
+          "share": 0.24
+        },
+        {
+          "role": "industrial production manager",
+          "share": 0.26
+        },
+        {
+          "role": "industrial engineer",
+          "share": 0.18
+        },
+        {
+          "role": "electrical engineer",
+          "share": 0.16
+        },
+        {
+          "role": "garage manager",
+          "share": 0.12
+        },
+        {
+          "role": "industrial production manager",
+          "share": 0.04
+        }
+      ],
+      "channel_rituals": [
+        "Daily async check-in where each role posts yesterday's progress, today's plan, and blockers for the pilot.",
+        "Weekly cross-functional sync thread to review KPIs, incidents, and adjust priorities.",
+        "Pre-maintenance window checklist post to confirm readiness and responsibilities before each installation slot.",
+        "Post-go-live review thread after major milestones to capture quick wins and issues.",
+        "End-of-pilot retrospective thread to gather feedback and agree on improvements for rollout."
+      ]
+    },
+    "participants": [
+      {
+        "_id": 18383,
+        "role": "electrical engineer"
+      },
+      {
+        "_id": 36422,
+        "role": "operations manager"
+      },
+      {
+        "_id": 53841,
+        "role": "industrial production manager"
+      },
+      {
+        "_id": 55217,
+        "role": "industrial production manager"
+      },
+      {
+        "_id": 237177,
+        "role": "garage manager"
+      },
+      {
+        "_id": 560411,
+        "role": "industrial engineer"
+      }
+    ]
+  }
+}

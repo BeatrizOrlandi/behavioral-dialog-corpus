@@ -1,0 +1,1778 @@
+{
+  "channel": {
+    "channel_id": "proj-click-collect-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on overall click-and-collect process and role responsibilities.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 403118,
+            "reply_to": null,
+            "text": "Kicking off the Retail Click-and-Collect Service Rollout for project_pack_ref: Retail Click-and-Collect Service Rollout.\nI have a first draft of the end-to-end process for T1 mapped into our main SOP doc A1. Flow covers: order intake at the counter or phone, payment in existing POS, staging in the back or dedicated shelves, pickup at the desk, and a simple path for returns.\nRoles in the draft:\n- office clerk: order intake, POS registration, tracking sheet updates, final pickup confirmation\n- sales assistant: picking items from the floor, labeling, staging, customer handover support\n- mover: internal transport of bulky or fragile items to staging and pickup\n- specialised sellers: product-specific staging rules (flowers, bakery, electronics) and checks\nCan you all review this structure and call out anything that looks off, especially around who does what at pickup and returns?",
+            "mentions": [
+              140484,
+              27468,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 140484,
+            "reply_to": "M1",
+            "text": "Thanks for structuring this.\nFrom the office side, the sequence in A1 for T1 matches how we already handle special orders, just with the extra staging step.\nOne question: for returns, do you see movers involved only when the item is bulky, or always when it was originally moved by them? That affects how we log it in the tracking sheet later.\nAlso, on final pickup confirmation, I can take that on from the office desk, but we need to be clear what happens when the customer goes straight to the sales counter instead of the office.",
+            "mentions": [
+              403118,
+              128135
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 128135,
+            "reply_to": "M1",
+            "text": "From the moving side, the steps in A1 look workable.\nFor returns, I suggest movers get involved only when the item is too heavy or awkward for the counter team. If we tie mover involvement to every return we handled before, it may slow things down.\nOn pickup, I would like a clear handover point: once I drop a bulky order in the staging area, responsibility should move to sales or office. Otherwise we risk confusion if something goes missing between staging and pickup.",
+            "mentions": [
+              403118,
+              27468
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 27468,
+            "reply_to": "M1",
+            "text": "Looking at the draft in A1, I am not fully sure about the pickup part.\nRight now, customers often come to the sales counter first. In the flow, it seems they should go to the office desk for pickup confirmation.\nDo we want sales assistants to check the order in the POS and then send them to the office, or should we be able to complete the pickup from the counter as well?",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 213765,
+            "reply_to": "M1",
+            "text": "From the flower and garden side, the overall flow in A1 makes sense.\nFor plants and bouquets, I just need to know at which step we do the final quality check. I assume it is before staging, but if the pickup is late, we may need a quick recheck at pickup.\nThat might affect who is called when the customer arrives: office or sales may need to ping us if the order has been waiting for a while.",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 403118,
+            "reply_to": "M2",
+            "text": "On returns: I agree with 128135. Movers step in only when the item is bulky or fragile enough that moving it through the store is a risk. We can reflect that in A1 as a conditional step.\nOn pickup confirmation: my proposal is that the office clerk is the one who closes the order in the system and marks it as picked up. Sales assistants can still hand over the goods, but they would call or message the office to close it if the customer did not pass by the office desk first.\nIf we go this way, we will need a simple signal between counter and office, which we can later tie into the tracking sheet in A2.",
+            "mentions": [
+              140484,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 140484,
+            "reply_to": "M6",
+            "text": "I am comfortable with office closing the order and updating the status in A2.\nFor the signal, we can keep it simple: sales calls the office with the order ID, or uses a short message in our internal chat. I can then mark the order as picked up and file the paperwork.\nThis also helps with T5 later, since we will have a single point of truth for pickup status.",
+            "mentions": [
+              403118,
+              27468
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 27468,
+            "reply_to": "M6",
+            "text": "If office is closing the order, at the counter we will need a quick way to find the order ID.\nSometimes customers only know their name or phone number. Will T5 allow us to search by name as well, or should we always ask them to bring the printed confirmation?",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 403118,
+            "reply_to": "M8",
+            "text": "Good point. In T5 I will include customer name and phone as fields in A2, so office can look up the order even if the customer does not have the order ID at hand.\nFor the process in A1, we can state that the preferred identifier is the order ID from the confirmation, but name and phone are acceptable fallbacks.",
+            "mentions": [
+              27468,
+              140484
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 128135,
+            "reply_to": "M3",
+            "text": "On the handover point: can we write in A1 that once movers place the order in the staging area and tick the staging checklist A8, responsibility moves to sales and office?\nThat way, if something is missing at pickup, we know whether to look at staging or at the pickup desk for the gap.",
+            "mentions": [
+              403118,
+              27468
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 213765,
+            "reply_to": "M5",
+            "text": "For plants and flowers, I suggest we add in A1 that specialised sellers do a quick visual check at staging time, and sales or office call us only if the pickup is more than one day after staging.\nWe can detail the timing in T6 and A4, but the main flow can stay simple.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 140484,
+            "reply_to": "M10",
+            "text": "Agree on using A8 as the handover point. Once movers complete the checklist and place the order in the zone, sales and office take over.\nI will keep that in mind when we define the issue escalation paths in A7 later, so we know who to contact first if something is not where it should be.",
+            "mentions": [
+              128135,
+              403118
+            ],
+            "artifact_refs": [
+              "A8",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 403118,
+            "reply_to": "M7",
+            "text": "To summarise what we have so far on the flow in A1:\n- Order intake and payment: office clerk at the desk, using existing POS\n- Picking and staging: sales assistant picks from floor, movers support bulky or fragile items, specialised sellers advise on special handling\n- Handover: sales assistant or office hands goods to customer, movers only if needed for large items\n- Final pickup confirmation: office clerk closes the order and updates A2\n- Returns: office handles POS side, movers help only when the item is too heavy or risky to move through the store\nIf no one sees gaps, I suggest we confirm this as our high-level process so we can move on to the detailed tasks.",
+            "mentions": [
+              140484,
+              27468,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 128135,
+            "reply_to": "M13",
+            "text": "From my side this summary works. The mover steps are clear and limited to where we add real value.\nI am ok with office doing the final pickup confirmation, as long as we keep the signal simple.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 27468,
+            "reply_to": "M13",
+            "text": "Works for me too.\nAt the counter we will just need a short reminder of when to call the office for pickup confirmation, but that can go into the training checklist later.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 213765,
+            "reply_to": "M13",
+            "text": "No objections from flower and garden. The main flow is clear, and we can handle the product-specific details in T6 and A4.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 140484,
+            "reply_to": "M13",
+            "text": "I am aligned with the summary and with office being responsible for final pickup confirmation.\nI will reflect this in the next iteration of A1 and in the structure of A2 for T5.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 403118,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 140484,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define practical staging, storage, and handling rules for different product types.",
+        "messages": [
+          {
+            "msg_id": "M18",
+            "speaker_id": 27468,
+            "reply_to": null,
+            "text": "I put together an initial idea for labeling and storage for staged orders for T2.\nProposal:\n- One paper label per order with customer name, order ID, and pickup deadline\n- Color mark on the label for fragile, bulky, or perishable items, based on the handling rules in A3\n- Use one shelf for small orders and a floor zone for bulky ones, with simple zone names like A, B, C\nThis is just a starting point, so please tell me what needs to change, especially for flowers, bakery goods, and electronics.",
+            "mentions": [
+              403118,
+              140484,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "T2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 403118,
+            "reply_to": "M18",
+            "text": "Thanks for kicking this off.\nOn the label format for T2, I suggest we align it with the fields in A2: order ID, customer name, phone, and a short item description. That way, if a label falls off or is hard to read, we can still match it quickly.\nFor the color marks, we can reuse the categories from A3: one color for fragile, one for bulky, one for perishable. We just need to be careful not to create too many variations that are hard to remember.",
+            "mentions": [
+              27468,
+              140484
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 128135,
+            "reply_to": "M18",
+            "text": "From the moving side, the zoning idea is good, but we should be more specific for bulky items.\nIf we just say zone A, B, C, we might end up blocking aisles. For T3 and T9, I would propose:\n- A dedicated bulky zone near the back door, marked on the floor\n- Clear path from that zone to the pickup point, as we will define in A8\nAlso, for fragile bulky items, A3 should say whether we stack them or keep them single layer.",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 213765,
+            "reply_to": "M18",
+            "text": "For flowers and plants, we need to be careful with where we place the zones.\nIn T6 and A4 we will define watering and light rules, but for now I would avoid putting floral orders on high shelves or in dark corners.\nMaybe we can have a small floral staging rack near the garden area, with labels that also show a watering symbol so staff know if they need to water while it waits.",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "seedling",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 140484,
+            "reply_to": "M18",
+            "text": "On perishable items like bakery goods, A3 should state that we keep them away from heat sources and not under direct sunlight.\nFor labels, I would add a clear pickup deadline time, not just the date, so we know when to start calling customers if the order is still on the shelf.\nWe also need to think about how we handle mixed orders: for example, flowers plus electronics in the same order. Do we split the staging location or keep everything together?",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 403118,
+            "reply_to": "M22",
+            "text": "For mixed orders, I would suggest we keep a single label per order but allow split physical locations when needed.\nExample: the label stays with the main part of the order in the general staging zone, and we add a small note on the label like '1 box electronics in cabinet' or 'flowers in floral rack'.\nWe can document this in A8 so that the staging checklist forces us to confirm all parts are present before pickup.",
+            "mentions": [
+              140484,
+              27468
+            ],
+            "artifact_refs": [
+              "A8",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 128135,
+            "reply_to": "M20",
+            "text": "On stacking rules for T3, my suggestion for A3 is:\n- Fragile: no stacking, single layer only\n- Bulky but not fragile: stacking allowed up to a safe height, depending on packaging\n- Perishable: no heavy items on top, and keep off the floor\nThis should keep it simple enough for daily use.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "T3",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 213765,
+            "reply_to": "M21",
+            "text": "For T6 and A4, I can draft rules like:\n- Keep plants in a zone with natural light but not direct midday sun\n- Water only if the order is staged for more than one day, and note it on the label\n- Use open crates instead of closed boxes so the plants can breathe\nWe can then align these with the general rules in A3 so we do not create conflicts.",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 27468,
+            "reply_to": "M19",
+            "text": "I can update the label template in T2 to include phone and a short item description, and add a line for pickup deadline time.\nFor the colors, maybe we can use:\n- Red dot for fragile\n- Blue dot for bulky\n- Green dot for perishable\nDoes that work, or is it too much to remember?",
+            "mentions": [
+              403118,
+              128135
+            ],
+            "artifact_refs": [
+              "T2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 403118,
+            "reply_to": "M26",
+            "text": "Those three colors are fine, as long as we keep it to just those.\nWe can add a small legend in A8 and in the training checklist A6 so new staff can learn it quickly.\nFor T2, please also add a field on the label for zone code, so we can see at a glance where the order should be.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [
+              "T2",
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 128135,
+            "reply_to": "M20",
+            "text": "On the zoning approach, I propose we standardise it as:\n- S shelves for small orders (S1, S2, S3)\n- B floor zones for bulky orders (B1, B2)\n- F rack for floral and garden orders\nThis way, when we plan routes in T9, movers know exactly where to drop items, and sales know where to look.",
+            "mentions": [
+              403118,
+              27468
+            ],
+            "artifact_refs": [
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 140484,
+            "reply_to": "M22",
+            "text": "For perishable bakery items, I will add into A3 that we avoid placing them near heaters or in direct sunlight, and that we prioritise earlier pickup windows.\nOn the labels, having the pickup deadline time will also help us decide when to start calling customers, which we can later reflect in A5 for reminder messages.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 403118,
+            "reply_to": "M28",
+            "text": "Let me try to summarise the proposed standard so we can confirm it.\nLabel format for T2:\n- Fields: order ID, customer name, phone, short item description, pickup deadline date and time, zone code\n- Color dots: red for fragile, blue for bulky, green for perishable, based on A3\nStorage zoning:\n- S1, S2, S3 shelves for small orders\n- B1, B2 floor zones for bulky orders near the back, with clear paths\n- F rack for floral and garden orders, aligned with A4 and T6\nHandling rules from A3 and A4:\n- Fragile: no stacking, single layer\n- Bulky: stacking allowed only when packaging supports it\n- Perishable: no heavy items on top, away from heat and direct sun\n- Floral: light but not harsh sun, watering rules defined in T6\nIf everyone is ok with this, we can lock it in and I will help document it in A3, A4, and A8.",
+            "mentions": [
+              27468,
+              128135,
+              213765,
+              140484
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3",
+              "T6",
+              "A3",
+              "A4",
+              "A8"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 128135,
+            "reply_to": "M30",
+            "text": "This summary works for me. The zoning and stacking rules are clear enough for daily work.\nI am ok to proceed with this as our standard.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 213765,
+            "reply_to": "M30",
+            "text": "Agreed from flower and garden. The F rack and the light rules fit what we need.\nI will make sure T6 and A4 match this.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "seedling",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 27468,
+            "reply_to": "M30",
+            "text": "I am fine with this setup.\nI will adjust the label template in T2 to match the fields and colors you listed.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 140484,
+            "reply_to": "M30",
+            "text": "No objections from office. The label fields align with A2, and the zones will make it easier to find orders quickly.\nI will reference these zones when we build the issue quick reference A7.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 27468,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 128135,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 213765,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Finalize order tracking and documentation workflow for office clerks.",
+        "messages": [
+          {
+            "msg_id": "M35",
+            "speaker_id": 140484,
+            "reply_to": null,
+            "text": "I have a first draft of the order tracking sheet for T5 in A2, plus a simple proposal for filing rules for T12.\nTracking sheet A2 fields:\n- Order ID\n- Customer name\n- Phone\n- Items summary\n- Status (codes below)\n- Pickup deadline date and time\n- Zone code (S1, B1, F, etc.)\n- Notes\nStatus codes proposal:\n- NEW: order taken, not yet picked\n- PICKING: items being collected\n- STAGED: ready in staging area\n- READY: confirmed and ready for pickup\n- PICKED: customer collected\n- CANCELLED\nFor T12, I suggest we keep paper receipts in daily folders and scan them weekly into a digital folder structure by month and then by order ID.\nPlease review and tell me what is missing or unclear.",
+            "mentions": [
+              403118,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 403118,
+            "reply_to": "M35",
+            "text": "The structure in A2 looks solid.\nTwo suggestions:\n1) Add a field for payment method, so we can quickly see if a refund should go back to card or cash when we work on T8.\n2) For status codes, maybe we can merge READY and STAGED into one, or clearly define the difference. Otherwise staff may not use them consistently.\nOn T12, we should also define a retention period for the digital files, in line with our existing rules.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 27468,
+            "reply_to": "M35",
+            "text": "From the sales counter, the status codes NEW and PICKING are clear.\nI am not sure when we should move from STAGED to READY. Is READY only after office has checked the order and label, or as soon as we place it in the zone?",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 128135,
+            "reply_to": "M35",
+            "text": "For movers, it would help if A2 shows at what time we are expected to move bulky items.\nMaybe we can use the Notes field to add a time slot, or add a simple 'Mover slot' column.\nAlso, for T12, if we scan delivery notes, we should make sure the scanned file name includes the order ID so we can find it quickly.",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 140484,
+            "reply_to": "M36",
+            "text": "Good points.\nOn status codes, I propose we keep both STAGED and READY but define them clearly in A7:\n- STAGED: items are in the staging area but not yet checked against the checklist A8\n- READY: items checked, label confirmed, and customer can be called\nThis way we can use READY as the trigger for customer communication in A5.\nFor T12, I will check with our existing retention rules, but I expect we will need to keep digital files for several years.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "A5",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 403118,
+            "reply_to": "M39",
+            "text": "I like that distinction.\nWe can also add a short description of each status directly in A2, so staff do not need to open A7 every time.\nOn T12, I suggest we define:\n- Paper: kept for one year in store\n- Digital: kept for the legal retention period in the central drive\nWe will still need management to confirm the exact number of years, but we can document the structure now.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 27468,
+            "reply_to": "M39",
+            "text": "With that definition, at the counter we will know that once we finish picking and movers have dropped bulky items, we set the status to STAGED.\nThen office can move it to READY after checking A8.\nThat seems clear enough for us.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 128135,
+            "reply_to": "M38",
+            "text": "On the mover slot, maybe we can avoid another column and just use a simple code in Notes like 'Mover 10:00' or 'Mover 15:00'.\nThat should be enough for planning T9 without making A2 too wide.",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "A2",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 140484,
+            "reply_to": "M38",
+            "text": "Agreed. I will keep the Notes field and use it for mover time slots.\nFor T12, I will define the digital naming convention as 'OrderID_CustomerName_Date', so we can search by any of those.\nWe will also test retrieval of three sample orders as required by T12.",
+            "mentions": [
+              128135
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 403118,
+            "reply_to": "M35",
+            "text": "One more detail: for T5 we should test A2 with at least five mock orders, including one cancellation and one late pickup.\nThat will help us see if the status codes and fields cover the main cases, especially when we link them to the issue guide A7.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "test_tube",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 27468,
+            "reply_to": "M35",
+            "text": "For us at the counter, the key is that we can quickly see if an order is READY or not.\nAs long as A2 is easy to filter by status and customer name, we will be able to answer customers without calling the office every time.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 140484,
+            "reply_to": "M44",
+            "text": "I will set up simple filters in A2 so we can sort by status and search by name or phone.\nLet me summarise the final structure and rules so we can confirm them:\nFields in A2 for T5:\n- Order ID\n- Customer name\n- Phone\n- Items summary\n- Payment method\n- Status (NEW, PICKING, STAGED, READY, PICKED, CANCELLED)\n- Pickup deadline date and time\n- Zone code\n- Notes (including mover time slots)\nStatus definitions will be documented in A2 and A7.\nArchiving rules for T12:\n- Paper: daily folders in store, kept for one year\n- Digital: scanned weekly, stored by month and order ID, with file names 'OrderID_CustomerName_Date', kept for the legal retention period in the central drive (exact years to be confirmed by management).\nIf this works for everyone, we can treat it as our standard.",
+            "mentions": [
+              403118,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7",
+              "T5",
+              "T12"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 403118,
+            "reply_to": "M46",
+            "text": "This summary covers what we need.\nI am ok to approve these fields and codes for A2 and the archiving approach for T12, pending the final retention period confirmation from management.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 128135,
+            "reply_to": "M46",
+            "text": "Works for movers as well. The Notes field and zone code will be enough for planning our daily runs.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 27468,
+            "reply_to": "M46",
+            "text": "No issues from the counter side. The statuses and fields are clear.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 140484,
+              "when": "today"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 140484,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Align on customer communication templates and exception handling.",
+        "messages": [
+          {
+            "msg_id": "M50",
+            "speaker_id": 140484,
+            "reply_to": null,
+            "text": "I drafted initial customer communication templates for T4 and a basic procedure for cancellations and partial pickups for T8.\nIn A5 we have three main templates:\n1) Order confirmation: thanks the customer, lists items summary, pickup location, and standard pickup window (for example, within 3 days), plus what documents to bring.\n2) Ready for pickup: confirms that the order status in A2 is READY, repeats pickup location and deadline.\n3) Delay notice: explains that one or more items are delayed, gives a new expected date, and offers options (wait, partial pickup, or cancellation).\nFor T8, the draft procedure is:\n- Partial pickup: office updates A2 to show which items were picked, keeps the order open for the remaining items, and notes it on the paper receipt.\n- Cancellation: office sets status to CANCELLED in A2, processes refund in POS according to existing rules, and files documents per T12.\nPlease review the wording and the steps, especially from the sales and mover side, to see if anything is missing for real conversations with customers.",
+            "mentions": [
+              403118,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T4",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 403118,
+            "reply_to": "M50",
+            "text": "The structure in A5 looks good.\nI would add a short line in the confirmation and ready messages about how long we will keep the order before we cancel it, to set expectations.\nOn T8, for cancellations we should also mention in the template that refunds follow our standard store policy, so staff do not promise anything outside existing POS rules.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 27468,
+            "reply_to": "M50",
+            "text": "At the counter, customers often ask if someone else can pick up for them.\nShould we add in A5 what they need to bring if a friend or family member comes instead, like the order confirmation and an ID?",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 128135,
+            "reply_to": "M50",
+            "text": "From the moving side, the main impact is when there is a delay or partial pickup for bulky items.\nIt would help if the delay notice in A5 includes a short explanation that large items may need extra time to be moved to the staging area, so customers understand why they might wait a bit longer.\nFor T8, when a partial pickup involves a bulky item, we should note clearly in A2 which part was taken, so we do not move the same item twice.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 140484,
+            "reply_to": "M52",
+            "text": "Good point.\nI will add a line in the confirmation and ready templates in A5 explaining that a third person can pick up the order if they bring the order confirmation and an ID that matches the name on the order, or a simple authorisation note if our policy allows it.\nWe will need management to confirm the exact rule, but we can prepare the wording now.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 403118,
+            "reply_to": "M50",
+            "text": "On partial pickups for T8, I suggest we standardise how we write it in A2 and on the paper receipt.\nExample: in A2 Notes we write 'Customer picked 2 of 4 items on date, remaining 2 pending', and on the receipt we circle the items taken.\nThis will make it easier to resolve issues later and to document them in A7.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 27468,
+            "reply_to": "M55",
+            "text": "That helps.\nAt the counter we can follow that pattern when someone only takes part of the order, and then call the office to update A2.",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 128135,
+            "reply_to": "M53",
+            "text": "For bulky items, maybe the delay notice in A5 can say something like 'Large items may require extra preparation time in the store'.\nThat keeps it honest without going into too much detail.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 140484,
+            "reply_to": "M51",
+            "text": "Let me summarise the key points to include in A5 and T8 based on the feedback:\n- All templates will clearly state the pickup window and how long we keep the order before cancellation.\n- Confirmation and ready messages will explain what documents are needed, including rules for third-party pickup (to be validated by management).\n- Delay notice will mention that large items may need extra preparation time.\n- For cancellations, templates will say that refunds follow our standard store policy.\n- For partial pickups, we will document in A2 Notes which items were taken and mark them on the paper receipt.\nDoes this cover the main needs from sales and movers?",
+            "mentions": [
+              403118,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 403118,
+            "reply_to": "M58",
+            "text": "From my side this is complete.\nOnce management signs off on the templates in A5, we can treat them as the standard for launch.\nFor T8, we should also add a short escalation note in A7 for complex cases, like repeated delays or disputes about refunds.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 27468,
+            "reply_to": "M58",
+            "text": "This works for the counter.\nHaving clear wording in A5 will make it easier to answer questions without improvising.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 128135,
+            "reply_to": "M58",
+            "text": "No further comments from movers. The mention of extra preparation time for large items is enough for us.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 140484,
+            "reply_to": "M59",
+            "text": "Given the feedback, I propose we:\n- Approve the structure of the three main templates in A5 for launch, subject to final wording approval by store management.\n- Confirm the process in T8 for handling partial pickups, cancellations, and delays, including how we update A2 and file documents under T12.\nI will send A5 and the T8 procedure to management for formal approval, but for our work here we can treat them as final.",
+            "mentions": [
+              403118,
+              27468,
+              128135
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T4",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 403118,
+            "reply_to": "M62",
+            "text": "Agreed. From an office perspective, we can go ahead with these as our standard, pending management sign-off.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 27468,
+            "reply_to": "M62",
+            "text": "Ok for me. The steps for partial pickups and cancellations are clear enough to follow at the counter with office support.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 128135,
+            "reply_to": "M62",
+            "text": "No objections. The process for delays and partial pickups is clear from the mover side.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 140484,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 140484,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan training, daily routines, and go-live readiness check.",
+        "messages": [
+          {
+            "msg_id": "M66",
+            "speaker_id": 27468,
+            "reply_to": null,
+            "text": "I drafted a first version of the training checklist for T7 in A6 and wanted to propose a go-live date.\nTraining checklist A6 sections:\n- Sales floor: how to look up orders in A2, how to read labels from T2, when to call office, basic answers for customers.\n- Office: how to update statuses in A2, use templates in A5, handle T8 cases.\n- Movers: how to follow A3 and A8, where to drop bulky items, and how to plan daily runs from T9.\n- Specialised sellers: key points from A4 and T6.\nI was thinking we could aim for go-live in about two weeks, if we can finish the trainings by then.\nDoes this timing sound realistic, and what should we add to the checklist?",
+            "mentions": [
+              403118,
+              140484,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "A6",
+              "A2",
+              "A5",
+              "A3",
+              "A4",
+              "A8",
+              "T2",
+              "T7",
+              "T8",
+              "T9",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 403118,
+            "reply_to": "M66",
+            "text": "Two weeks for go-live fits within the 21-day constraint of the project, as long as we complete the key tasks.\nFor A6, I would add a short section on common issues from A7, so each role knows how to react when something goes wrong.\nWe should also plan a quick readiness check two days before go-live, using A1 and A8 as a checklist: labels printed, zones marked, A2 tested, and A5 templates approved.",
+            "mentions": [
+              27468,
+              140484
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "A1",
+              "A8",
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 140484,
+            "reply_to": "M66",
+            "text": "From the office side, two weeks is tight but doable if we lock in A2, A5, T8, and T12 in the next few days.\nFor A6, I suggest we include short practice exercises: for example, each trainee processes one mock order from NEW to READY in A2, and one cancellation.\nWe should also schedule two short sessions per group rather than one long one, so staff can practice between sessions.",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 128135,
+            "reply_to": "M66",
+            "text": "For movers, we will need at least one focused session on A3, A8, and T9.\nKey points to cover:\n- How to read the labels and zone codes\n- Safe routes through the store\n- Time slots for daily runs\nTwo weeks is fine for us if we can schedule that session early, so we can adjust routes if needed.",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 213765,
+            "reply_to": "M66",
+            "text": "For flower and garden, we will need to walk through A4 and T6 with the team.\nI think one short session is enough, plus a printed copy of the key rules near the floral staging rack.\nTwo weeks should be ok, as long as we get the final version of A4 in time.",
+            "mentions": [
+              27468,
+              403118
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "seedling",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 27468,
+            "reply_to": "M67",
+            "text": "I can add a section in A6 for common issues from A7, like missing labels or customers arriving before the order is READY.\nFor the readiness check, should we create a small checklist in A6 or just reuse A8 and A1?",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "A8",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 403118,
+            "reply_to": "M71",
+            "text": "I would keep it simple and reuse what we have.\nFor the pre-go-live check, we can:\n- Use A1 to confirm each step has an owner\n- Use A8 to verify staging and handover steps\n- Use A2 to run a few mock orders\nWe can add a short 'Go-live checklist' section in A6 that just points to these artifacts.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 140484,
+            "reply_to": "M68",
+            "text": "For scheduling, I propose:\n- This week: finalise A2, A5, T8, T12\n- Early next week: run training sessions using A6 for sales, office, movers, and specialised sellers\n- Two days before go-live: run the readiness check using A1, A2, A8\nIf we start now, a go-live date at the end of the second week should be realistic.",
+            "mentions": [
+              27468,
+              403118,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "A1",
+              "A8",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 128135,
+            "reply_to": "M73",
+            "text": "This schedule works for movers.\nFor T9, I will draft the daily time slots and routes this week, then adjust after our training session if we see any issues on the floor.",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 213765,
+            "reply_to": "M73",
+            "text": "I am fine with that timeline.\nI will finalise T6 and A4 this week so we can include them in the training sessions.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 27468,
+            "reply_to": "M73",
+            "text": "Ok, I will update A6 with:\n- The extra issues section from A7\n- The go-live checklist pointers to A1, A2, A8\n- A note about two short sessions per group instead of one long one.",
+            "mentions": [
+              140484,
+              403118
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "A1",
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 403118,
+            "reply_to": "M66",
+            "text": "One more suggestion: after go-live, we should use A7 and A2 to run a short weekly retro, looking at any incidents logged and adjusting A1 or A6 if needed.\nWe can add this as a final point in the training so people know we will keep improving the process.",
+            "mentions": [
+              27468,
+              140484
+            ],
+            "artifact_refs": [
+              "A7",
+              "A2",
+              "A1",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "repeat",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 140484,
+            "reply_to": "M77",
+            "text": "Agreed. We can schedule a 15-minute weekly slot for that and capture any changes needed in A1, A6, or A7.\nFor now, I suggest we stick with the go-live date at the end of the second week, assuming we complete the trainings and readiness check as planned.",
+            "mentions": [
+              403118,
+              27468
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 128135,
+            "reply_to": "M78",
+            "text": "From movers, we are aligned with that go-live date and the weekly retro idea.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 213765,
+            "reply_to": "M78",
+            "text": "Same here. Flower and garden team will be ready if we follow this plan.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 27468,
+            "reply_to": "M78",
+            "text": "Ok, I will finalise A6 with all these points and share it for a quick review before we start the sessions.",
+            "mentions": [
+              403118,
+              140484
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 27468,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 128135,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 27468,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

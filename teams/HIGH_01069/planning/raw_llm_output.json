@@ -1,0 +1,402 @@
+{
+  "participants": [
+    {
+      "_id": 6869,
+      "role": "call centre agent"
+    },
+    {
+      "_id": 109718,
+      "role": "software developer"
+    },
+    {
+      "_id": 337175,
+      "role": "software developer"
+    },
+    {
+      "_id": 377231,
+      "role": "web developer"
+    },
+    {
+      "_id": 561396,
+      "role": "web developer"
+    }
+  ],
+  "project_pack": {
+    "project": {
+      "title": "Unified Customer Support Portal and Knowledge Base",
+      "objective": "Design and implement a unified web portal and knowledge base to streamline customer support workflows and reduce call handling time.",
+      "deliverables": [
+        "Requirements and UX specification for the support portal",
+        "Responsive web portal for customers and agents",
+        "Integrated searchable knowledge base with role-based access",
+        "Call centre workflows and scripts aligned with the portal",
+        "Security and compliance checklist for the new platform"
+      ],
+      "constraints": [
+        "Must integrate with existing ticketing and telephony systems via APIs only",
+        "Comply with ICT security legislation and internal security guidelines",
+        "Initial MVP must be ready for pilot within 21 days",
+        "Portal must support modern browsers and mobile devices",
+        "Knowledge base content must be maintainable by non-technical staff"
+      ],
+      "stakeholders": [
+        "Customer support manager",
+        "IT security officer",
+        "Product owner",
+        "Software development lead",
+        "Web design lead"
+      ],
+      "deadline_days": 21,
+      "risks": [
+        {
+          "risk": "Integration with legacy ticketing and telephony systems takes longer than expected.",
+          "mitigation": "Define minimal integration scope for MVP and stub non-critical endpoints."
+        },
+        {
+          "risk": "Call centre agents do not adopt the new portal and keep using old tools.",
+          "mitigation": "Involve agents in requirements, run pilot training, and collect feedback for quick iterations."
+        },
+        {
+          "risk": "Security review identifies non-compliance close to launch.",
+          "mitigation": "Apply security checklist from the start and schedule early security review on prototype."
+        },
+        {
+          "risk": "Knowledge base content becomes outdated quickly after launch.",
+          "mitigation": "Define ownership, review cadence, and simple content update workflow for support staff."
+        }
+      ]
+    },
+    "themes": [
+      {
+        "theme": "MVP scope and prioritisation",
+        "why_relevant": "Keeps the team focused on what must be in the first pilot vs later iterations."
+      },
+      {
+        "theme": "Integration with existing systems",
+        "why_relevant": "Portal must work with current ticketing and telephony without major rewrites."
+      },
+      {
+        "theme": "Agent workflow and UX",
+        "why_relevant": "Call centre agents need fast, intuitive flows to reduce handling time."
+      },
+      {
+        "theme": "Security and access control",
+        "why_relevant": "Portal handles customer data and must comply with ICT security legislation."
+      },
+      {
+        "theme": "Knowledge base structure and governance",
+        "why_relevant": "Content must be easy to search, maintain, and keep up to date."
+      }
+    ],
+    "backlog": [
+      {
+        "task_id": "T1",
+        "task": "Gather and document requirements from call centre for the unified support portal",
+        "owner_role": "call centre agent",
+        "definition_of_done": [
+          "List of current pain points and desired features captured",
+          "Top 10 call types and workflows documented",
+          "Requirements doc reviewed by at least one software developer and one web developer"
+        ]
+      },
+      {
+        "task_id": "T2",
+        "task": "Design information architecture and navigation for the customer-facing portal",
+        "owner_role": "web developer",
+        "definition_of_done": [
+          "Site map and main navigation flows defined",
+          "Wireframes for key pages shared with team",
+          "Call centre agent confirms flows cover top call types"
+        ]
+      },
+      {
+        "task_id": "T3",
+        "task": "Implement MVP backend services for ticket search and creation",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "API endpoints for ticket search and creation implemented",
+          "Endpoints integrated with existing ticketing system sandbox",
+          "Basic error handling and logging in place",
+          "Unit tests cover main flows"
+        ]
+      },
+      {
+        "task_id": "T4",
+        "task": "Build responsive front-end for agent dashboard",
+        "owner_role": "web developer",
+        "definition_of_done": [
+          "Dashboard shows ticket list, customer details, and knowledge base suggestions",
+          "Layout works on desktop and tablet screen sizes",
+          "Connected to MVP backend services",
+          "Accessibility basics checked (keyboard navigation, contrast)"
+        ]
+      },
+      {
+        "task_id": "T5",
+        "task": "Define and document standard call handling scripts aligned with the portal",
+        "owner_role": "call centre agent",
+        "definition_of_done": [
+          "Scripts for top 10 call types drafted",
+          "Scripts reference specific portal pages and flows",
+          "Reviewed by at least one software developer for feasibility"
+        ]
+      },
+      {
+        "task_id": "T6",
+        "task": "Set up knowledge base data model and search functionality",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Data model for articles, categories, and tags implemented",
+          "Search API with relevance ranking available",
+          "Performance acceptable for typical query load in test environment"
+        ]
+      },
+      {
+        "task_id": "T7",
+        "task": "Implement knowledge base management UI for support staff",
+        "owner_role": "web developer",
+        "definition_of_done": [
+          "UI allows create, edit, publish, and archive of articles",
+          "Role-based access enforced for editors vs viewers",
+          "Call centre agent validates usability with sample content"
+        ]
+      },
+      {
+        "task_id": "T8",
+        "task": "Create security and compliance checklist for the support portal",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Checklist covers authentication, authorisation, logging, and data protection",
+          "Aligned with ICT security legislation references",
+          "Reviewed with internal security contact"
+        ]
+      },
+      {
+        "task_id": "T9",
+        "task": "Prepare pilot training plan and quick-start guide for agents",
+        "owner_role": "call centre agent",
+        "definition_of_done": [
+          "Training agenda and objectives defined",
+          "Quick-start guide with screenshots drafted",
+          "Pilot group of agents identified and informed"
+        ]
+      },
+      {
+        "task_id": "T10",
+        "task": "Set up staging environment and deployment pipeline for the portal",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Staging environment accessible to team",
+          "Automated build and deploy pipeline configured",
+          "Basic rollback procedure documented"
+        ]
+      },
+      {
+        "task_id": "T11",
+        "task": "Implement customer self-service portal pages for FAQs and ticket status",
+        "owner_role": "web developer",
+        "definition_of_done": [
+          "FAQ page connected to knowledge base",
+          "Ticket status page integrated with ticketing system",
+          "Mobile responsiveness verified",
+          "Content placeholders ready for go-live"
+        ]
+      },
+      {
+        "task_id": "T12",
+        "task": "Run pilot feedback collection and prioritise improvements",
+        "owner_role": "call centre agent",
+        "definition_of_done": [
+          "Feedback from pilot agents collected via survey or interviews",
+          "Top 5 improvement items identified",
+          "Improvement list shared with developers and agreed for next iteration"
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "A1",
+        "type": "doc",
+        "title": "Support Portal Requirements and Agent Workflows",
+        "used_for": "Capturing detailed requirements and current vs target workflows from the call centre."
+      },
+      {
+        "artifact_id": "A2",
+        "type": "guideline",
+        "title": "Standard Call Handling Scripts and Portal Usage Guide",
+        "used_for": "Guiding agents on how to handle common calls using the new portal."
+      },
+      {
+        "artifact_id": "A3",
+        "type": "sheet",
+        "title": "MVP Scope and Backlog Tracking",
+        "used_for": "Tracking tasks T1-T12, owners, status, and priorities for the MVP."
+      },
+      {
+        "artifact_id": "A4",
+        "type": "checklist",
+        "title": "Security and Compliance Review Checklist",
+        "used_for": "Ensuring the portal implementation complies with ICT security legislation."
+      },
+      {
+        "artifact_id": "A5",
+        "type": "doc",
+        "title": "Information Architecture and Wireframes",
+        "used_for": "Documenting site map, navigation, and key page wireframes for the portal."
+      },
+      {
+        "artifact_id": "A6",
+        "type": "guideline",
+        "title": "Knowledge Base Content Governance Rules",
+        "used_for": "Defining how articles are created, reviewed, and retired by support staff."
+      },
+      {
+        "artifact_id": "A7",
+        "type": "sheet",
+        "title": "Pilot Agent Feedback Log",
+        "used_for": "Recording pilot feedback, issues, and suggested improvements."
+      },
+      {
+        "artifact_id": "A8",
+        "type": "ticket",
+        "title": "Integration Issues and Bug Tracker",
+        "used_for": "Logging and tracking technical issues found during integration and testing."
+      }
+    ]
+  },
+  "blueprint": {
+    "channel_name_hint": "proj-support-portal-mvp",
+    "threads_plan": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, key workflows, and initial backlog for the support portal.",
+        "trigger": "Kickoff message announcing the project and asking for MVP scope proposals.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D1",
+            "decision": "Agree on the list of core MVP features for the portal and knowledge base."
+          },
+          {
+            "decision_id": "D2",
+            "decision": "Confirm ownership and deadlines for tasks T1-T4 in the initial sprint."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A1",
+          "A3",
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ]
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock in information architecture, UX flows, and agent scripts.",
+        "trigger": "Web developer shares first draft of site map and wireframes for review.",
+        "target_messages_range": [
+          15,
+          22
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D3",
+            "decision": "Approve the initial information architecture and main navigation flows."
+          },
+          {
+            "decision_id": "D4",
+            "decision": "Agree on the final list of standard call scripts to prepare for pilot."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A1",
+          "A2",
+          "A5",
+          "T2",
+          "T4",
+          "T5"
+        ]
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Resolve technical integration and security approach for MVP.",
+        "trigger": "Software developer posts update on API integration progress and open questions.",
+        "target_messages_range": [
+          17,
+          25
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D5",
+            "decision": "Choose which ticketing and telephony integrations are in scope for MVP."
+          },
+          {
+            "decision_id": "D6",
+            "decision": "Approve the security checklist as the baseline for go-live readiness."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A3",
+          "A4",
+          "A8",
+          "T3",
+          "T6",
+          "T8",
+          "T10"
+        ]
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Prepare and confirm the pilot plan, training, and feedback loop.",
+        "trigger": "Call centre agent shares draft training plan and asks for pilot timeline confirmation.",
+        "target_messages_range": [
+          16,
+          24
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D7",
+            "decision": "Confirm pilot start date and participating agent group."
+          },
+          {
+            "decision_id": "D8",
+            "decision": "Agree on how pilot feedback will be collected and prioritised."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A2",
+          "A6",
+          "A7",
+          "T7",
+          "T9",
+          "T11",
+          "T12"
+        ]
+      }
+    ],
+    "talk_distribution_by_role": [
+      {
+        "role": "software developer",
+        "share": 0.4
+      },
+      {
+        "role": "web developer",
+        "share": 0.35
+      },
+      {
+        "role": "call centre agent",
+        "share": 0.25
+      }
+    ],
+    "channel_rituals": [
+      "Daily async standup where each role posts yesterday/today/blockers in one thread.",
+      "Twice-weekly MVP scope check to confirm priorities and adjust backlog.",
+      "Weekly integration and security review update with open risks and mitigations.",
+      "Post-pilot retrospective thread to capture learnings and next-iteration priorities."
+    ]
+  }
+}

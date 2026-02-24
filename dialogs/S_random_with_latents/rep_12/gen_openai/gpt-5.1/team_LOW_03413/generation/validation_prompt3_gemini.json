@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are below the minimum message count of 15. TH1 has 14, TH2 has 12, TH3 has 14, TH4 has 14, and TH5 has 9 messages. The expected range is [15, 28]."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Thread TH3 contains forbidden terms. Message M28 suggests a severity scale with 'low, medium, high impact', and M32 defines 'Level 1 (low)', 'Level 2 (medium)', and 'Level 3 (high)'. This violates the rule against using these terms to refer to attributes."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 5
+  }
+}

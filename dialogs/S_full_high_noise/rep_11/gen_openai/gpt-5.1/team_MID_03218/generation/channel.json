@@ -1,0 +1,1345 @@
+{
+  "channel": {
+    "channel_id": "proj-churn-model-dashboard",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on churn definition, KPIs, and initial project scope.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Kicking off the Customer Churn Prediction and Insights Dashboard project. Goal is to get aligned on what we mean by churn, how we will measure success, and the initial scope so we can move on T1 and T11.  Proposal for churn definition: 1) Event: a paying customer who fully cancels all subscriptions or is inactive for 90 consecutive days. 2) Prediction horizon: flag customers at risk of churning in the next 60 days.  For KPIs, I suggest: - Model: ROC AUC, precision/recall at chosen threshold, and lift in top decile. - Business: reduction in churn rate vs baseline and incremental retained revenue.  I will capture the agreed framing in A1 and reflect it in the roadmap in A8. Can you all react with questions or concerns before we lock this as our working definition?",
+            "mentions": [
+              16404,
+              80886,
+              138753,
+              568638
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T11",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 80886,
+            "reply_to": "M1",
+            "text": "Thanks for framing this. From a modelling and integration angle, a 60-day prediction horizon is workable, but I want to check data availability before we confirm. Specifically: 1) Do we have a clear flag for full cancellation vs downgrade? 2) For inactivity, is 90 days consistent with how Customer Success currently reports churn?  On KPIs, I would add: - Calibration check (eg predicted vs actual churn by decile). - A simple threshold-based metric like recall at fixed precision so Sales can understand trade-offs.  Once we agree on the operational definition, I can align T3 and T4 around it and make sure A3 reflects the rationale.",
+            "mentions": [
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 568638,
+            "reply_to": "M1",
+            "text": "On the data side, I can check how cancellation and inactivity are currently tracked as part of T2. My initial understanding is: - Cancellations are stored as subscription status changes with an end date. - Inactivity is based on last login and last usage events, but I need to confirm consistency across products.  Before we finalise the 90-day inactivity rule, I will pull a quick view of how many customers fall into 60, 90, and 120-day no-activity buckets and share in A2. That should help us see if 90 days matches current reporting practice.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 138753,
+            "reply_to": "M1",
+            "text": "I have a small doubt on the churn event. Should we also consider customers who reduce their spend significantly as churn, like if they downgrade from annual to monthly or cut their seats in half? In some projects I worked on, that was treated as partial churn.  Maybe we could define churn as any revenue drop above a certain percentage, not only full cancellation or inactivity. That might change the KPIs a bit, since we would be tracking revenue impact more than just count of lost customers.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 122466,
+            "reply_to": "M4",
+            "text": "Good point on partial churn. To keep the MVP focused and the story simple for Sales and Customer Success, I suggest: - Primary churn definition for this phase: full cancellation or 90 days of inactivity. - Secondary metric: revenue contraction above a threshold, which we can track but not model in the first iteration.  I will document partial churn as out of scope for the first model in A1, but we can still show revenue impact in the dashboard later via T7. Does that sound acceptable for the initial 21-day window?",
+            "mentions": [
+              138753,
+              568638
+            ],
+            "artifact_refs": [
+              "A1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 16404,
+            "reply_to": "M1",
+            "text": "From a modelling perspective, I am comfortable with a 60-day prediction horizon and the primary churn event being full cancellation or 90 days of inactivity, as long as we can derive a clear binary target for T3 and T4.  For KPIs, I would also like to track: - F1 score at the chosen operating point. - A simple confusion matrix at that threshold to share with stakeholders in A1 and A3.  Once we confirm the definition, I can start sketching the feature list and data preparation approach for T3.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "A1",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 568638,
+            "reply_to": "M3",
+            "text": "Quick update: I ran a first pass on subscription status and activity logs for T2. Early findings going into A2: - Cancellation events are well structured for the last 18 months; older data is patchier. - Inactivity: 90 days aligns with how Customer Success currently flags dormant accounts in their reports.  Given this, I think using 90 days of no activity as part of the churn event is consistent with existing practice. I will refine the counts, but I do not expect this to change the conclusion.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 122466,
+            "reply_to": "M7",
+            "text": "Thanks for checking that. Based on the data check and the need to keep the story clear for stakeholders, I propose we lock in: - Churn event: customer with all subscriptions cancelled OR no activity for 90 consecutive days. - Prediction horizon: 60 days ahead.  Unless there are strong objections today, I will record this as our operational definition in A1 and reflect it in the roadmap in A8 under T1 and T11.",
+            "mentions": [
+              16404,
+              80886,
+              138753
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T1",
+              "T11"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 80886,
+            "reply_to": "M8",
+            "text": "No objections from my side. With that definition, I will set up the labelling logic in the data prep for T3 so that both T4 and T5 use the same target.  On KPIs, I suggest we confirm: - Primary model metric: ROC AUC, with a minimum bar of 0.75 for MVP. - Operational metric: recall at a precision level that Sales is comfortable with, likely around 0.6–0.7 precision. - Business metric: relative reduction in churn rate for contacted high-risk customers vs control, to be tracked post-launch.  If we agree, we can capture these in A1 and A3 and surface the key ones in the dashboard via T7.",
+            "mentions": [
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "T5",
+              "A1",
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 138753,
+            "reply_to": "M9",
+            "text": "I am ok with ROC AUC as a main metric, but I am not fully sure how to explain recall at a given precision to Sales. Maybe we could translate it into something like: out of 100 customers we contact, how many are actually at risk.  Could we also track a simpler metric like accuracy, or is that less useful here? I am asking so that we can keep the stakeholder updates in A8 easy to follow.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 16404,
+            "reply_to": "M10",
+            "text": "Accuracy can be misleading when churn is relatively rare, so I would not highlight it as a primary metric. Instead, we can translate recall and precision into plain language in A1 and A3, for example: - Precision: out of 100 customers flagged as high risk, how many actually churn. - Recall: out of all customers who churn, how many we flagged.  For the business view, we can focus on: - Change in churn rate for contacted vs non-contacted customers. - Retained revenue from saved accounts. Those will be easier to show in the dashboard via T7 and in the playbook via T9.",
+            "mentions": [
+              138753,
+              122466
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 122466,
+            "reply_to": "M9",
+            "text": "Summarising the KPI discussion so we can move forward: - Model: ROC AUC as the main metric, with a minimum bar of 0.75 for MVP; recall at a chosen precision level as the operational metric; calibration checks for governance. - Business: reduction in churn rate for contacted high-risk customers vs baseline; incremental retained revenue.  I will document these as the primary KPIs in A1 and A3 and include them in the roadmap and comms plan in A8 under T11. Unless anyone disagrees, we can treat this as our agreed KPI set.",
+            "mentions": [
+              80886,
+              16404,
+              568638
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A8",
+              "T11"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 568638,
+            "reply_to": "M12",
+            "text": "Works for me. I will make sure that the data profiling in A2 highlights any gaps that could affect those KPIs, especially around the time windows for churn and the activity logs, so that T2 feeds cleanly into T3 and T4.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 122466,
+            "reply_to": "M12",
+            "text": "Great, I will update A1 today with: - Churn event: full cancellation or 90 days of inactivity. - Prediction horizon: 60 days. - Primary KPIs: ROC AUC, recall at chosen precision, reduction in churn rate, retained revenue.  I will also add these to the high-level roadmap in A8 under T1 and T11 so stakeholders see how they connect to the MVP timeline.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T1",
+              "T11"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 122466,
+              "when": "today"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 122466,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review data inventory and decide on data sources and quality fixes.",
+        "messages": [
+          {
+            "msg_id": "M15",
+            "speaker_id": 568638,
+            "reply_to": null,
+            "text": "I have uploaded the first version of the Customer Data Inventory and Quality Report to A2 as part of T2. Summary: - Core sources: subscription billing system, CRM, product usage logs, and support tickets. - Key tables: customer master, subscription plans, invoices, login events, feature usage, and ticket history. - Main issues: missing customer IDs in some usage logs, inconsistent country codes, and a few gaps in historical subscription status before 18 months ago.  I would like feedback on which sources we should include for the MVP dataset for T3 and which data quality issues we must fix before modelling.",
+            "mentions": [
+              80886,
+              16404,
+              122466
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 80886,
+            "reply_to": "M15",
+            "text": "Thanks for pulling this together. For the MVP, I suggest we prioritise: - Subscription billing system for the target label and monetary features. - CRM for account attributes and lifecycle dates. - Product usage logs for engagement features, but only where we have reliable customer IDs.  Support tickets are useful but can be added in a second iteration if needed. For T3 and T4, I would rather have fewer, cleaner sources than try to stitch everything at once.  On quality fixes, the missing customer IDs in usage logs are a blocker for engagement features. Can you estimate how many records are affected and whether we can backfill via email or another key, and capture that in A2?",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 16404,
+            "reply_to": "M15",
+            "text": "Looking at A2, I agree with focusing on billing, CRM, and usage logs for the first pass of T3. For the historical subscription gaps before 18 months, I suggest we limit the modelling window to the last 18 months for T4 and T5, and clearly document that in A3.  For data quality priorities, my view is: 1) Resolve or quantify missing customer IDs in usage logs. 2) Standardise country codes, since they may be used for segmentation and risk patterns. 3) Accept the historical gaps as a known limitation for now, as long as we are transparent about it.",
+            "mentions": [
+              80886,
+              568638
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3",
+              "T4",
+              "T5",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 138753,
+            "reply_to": "M15",
+            "text": "From a business view, I would like to keep support tickets in scope if possible, because they often signal dissatisfaction before churn. But I understand it might complicate things. Maybe we can at least track a simple feature like number of tickets in the last 90 days, even if we do not go deeper yet.  Also, for the CRM data, can we confirm that the industry and company size fields are reliable enough? They will be important for segmentation later in T6 and T9.",
+            "mentions": [
+              568638,
+              122466
+            ],
+            "artifact_refs": [
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 568638,
+            "reply_to": "M16",
+            "text": "I checked the missing customer IDs in the usage logs. Rough numbers now in A2: - About 8 percent of usage events have no direct customer ID. - For half of those, we can recover the customer via email or account name. - The rest would require more complex matching, which might not be worth it for MVP.  For CRM, industry and company size are present for around 90 percent of active customers, with some free-text variations. I can standardise the most common values as part of T2 so that T3 has cleaner categories.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 80886,
+            "reply_to": "M19",
+            "text": "That breakdown helps. For MVP, I suggest: - We backfill what we can via email or account name. - We drop the remaining events without a reliable customer ID from the feature engineering in T3.  The 8 percent loss in raw events is acceptable if it keeps the joins clean. We can revisit more advanced matching later.  On support tickets, I am open to including a simple aggregate like ticket count in the last 90 days, as long as the join to customer is straightforward. If that is low effort in T2, it will give us a useful signal in T4 and T5.",
+            "mentions": [
+              568638,
+              16404
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 568638,
+            "reply_to": "M20",
+            "text": "Understood. I will: - Implement the backfill for usage events where we can match via email or account name. - Exclude events that still have no reliable customer ID. - Add a simple ticket count per customer for the last 90 days, since the join is straightforward.  I will update A2 with these decisions and mark the fields that will feed into the modelling dataset for T3.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 122466,
+            "reply_to": "M18",
+            "text": "On the business side, I am comfortable with the MVP focusing on: - Billing, CRM, and usage logs as core sources. - Support tickets included only as a simple recent ticket count, as discussed.  This should be enough to start seeing patterns by industry, size, and engagement, which we can later translate into segments in T6 and actions in T9. I will reflect this scope in A1 and A8 so stakeholders know which data is in the first release.",
+            "mentions": [
+              138753,
+              568638
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 16404,
+            "reply_to": "M15",
+            "text": "To make this explicit for T3 and T4, I propose we formally set the MVP data sources as: - Subscription billing system. - CRM. - Product usage logs with reliable customer IDs. - Support tickets as a simple aggregate.  For data quality priorities before modelling, I suggest we agree on: 1) Backfilling and cleaning customer IDs in usage logs as far as feasible. 2) Standardising country codes and key CRM fields like industry and company size. 3) Accepting the 18-month historical limit and documenting it in A3.  If everyone is aligned, we can treat this as our selection and move ahead.",
+            "mentions": [
+              80886,
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 80886,
+            "reply_to": "M23",
+            "text": "Aligned from my side. I will design the data preparation pipeline in T3 around those sources and assumptions, and I will make sure A3 clearly lists: - In-scope systems and tables. - The 18-month window. - The handling of missing IDs and standardised fields.  That will keep T4 and T5 focused and avoid surprises later.",
+            "mentions": [
+              16404,
+              568638
+            ],
+            "artifact_refs": [
+              "T3",
+              "T4",
+              "T5",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 568638,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 80886,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Discuss baseline model results and choose the model to take forward.",
+        "messages": [
+          {
+            "msg_id": "M25",
+            "speaker_id": 80886,
+            "reply_to": null,
+            "text": "I have uploaded the first set of modelling results to the Model Experiment Tracking Log in A5, covering T4 and the first iteration of T5. Summary: - Baseline model: regularised logistic regression using the agreed dataset from T3. - Alternative 1: gradient boosted trees. - Alternative 2: random forest.  On the validation set: - Logistic regression: ROC AUC 0.77, decent calibration, easier to explain. - Gradient boosted trees: ROC AUC 0.82, better recall at the same precision, more complex. - Random forest: ROC AUC 0.80, similar to boosted trees but heavier and less interpretable.  I would like to discuss the minimum acceptable performance for MVP and which model we should integrate into the dashboard for T7, keeping A3 in mind for documentation and compliance.",
+            "mentions": [
+              16404,
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4",
+              "T5",
+              "T3",
+              "T7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 16404,
+            "reply_to": "M25",
+            "text": "Thanks for the summary. Looking at A5, the uplift from logistic regression to gradient boosted trees seems meaningful, especially in the top decile lift and recall at the operating point we tested.  Given our earlier discussion in TH1, I would propose: - Setting the minimum acceptable ROC AUC for MVP at 0.75, which all three models meet. - Focusing on recall at a precision around 0.65 for the high-risk band, where the boosted trees clearly outperform the baseline.  The main trade-off is explainability. We can mitigate that by using feature importance and partial dependence plots, and by documenting them clearly in A3.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 122466,
+            "reply_to": "M25",
+            "text": "From a business perspective, the key question is whether the extra complexity of the boosted trees translates into a noticeable difference in who we contact. In A5, the top decile lift for the boosted model looks significantly higher than for logistic regression. That should mean more true churners in the high-risk list for the same number of outreach slots.  For the minimum bar, I am comfortable with 0.75 ROC AUC as the floor, but I would like us to commit to using the model that gives the best recall at the agreed precision, as long as we can explain the main drivers clearly in A3 and in the playbook in A4.",
+            "mentions": [
+              80886,
+              16404
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 138753,
+            "reply_to": "M25",
+            "text": "I have a question on the numbers in A5. The ROC AUC values are clear, but I am not sure how big the difference is in practical terms between 0.77 and 0.82. Could we translate that into something like: how many more churners we catch in the top risk band if we use the boosted trees instead of logistic regression?  That would help when we explain the choice to stakeholders later in A8.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 80886,
+            "reply_to": "M28",
+            "text": "Good question. Based on the current validation results in A5: - With logistic regression, the top 10 percent of customers by risk score capture about 35 percent of actual churners. - With gradient boosted trees, the top 10 percent capture about 45 percent of churners.  So for the same outreach capacity, the boosted model surfaces roughly 10 percentage points more churners in the high-risk list. That is a tangible gain for Sales and Customer Success. I can add this comparison to A3 and to the stakeholder summary in A8.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 568638,
+            "reply_to": "M25",
+            "text": "From the data side, I checked that the features used in the boosted model are all coming from the sources we agreed in TH2 and are documented in A2. There are no additional joins or exotic fields, which is good for stability.  For T7, it would be helpful if we can keep the number of features we expose in the dashboard limited to the top drivers, so that the visuals stay clear. Once we pick the model, I can start drafting how to surface feature importance in the dashboard.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A2",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 16404,
+            "reply_to": "M27",
+            "text": "Given the numbers and the business impact, I support using the gradient boosted trees as the primary model, provided we: - Keep logistic regression as a benchmark in A5. - Document the main drivers and example explanations in A3 and A4. - Monitor for drift and stability in T10.  For the minimum performance threshold, I suggest we formalise: - ROC AUC must be at least 0.75. - At the chosen operating point, recall in the high-risk band should be at least 0.4, with precision around 0.6 or higher.  This gives us a clear bar for future iterations in T5.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3",
+              "A4",
+              "T10",
+              "T5"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 122466,
+            "reply_to": "M31",
+            "text": "I like that framing. It gives us a clear bar and a story we can share with stakeholders: we chose the model that finds more at-risk customers for the same outreach effort, while still being transparent about how it works.  For the playbook in A4, I will need: - A ranked list of top features with plain-language descriptions. - A few example customer profiles showing why they are high risk.  Once we confirm the model choice, I will start drafting those narratives.",
+            "mentions": [
+              80886,
+              16404
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 80886,
+            "reply_to": "M31",
+            "text": "Given the discussion, I propose we formally: - Set the MVP performance threshold as ROC AUC at or above 0.75, with recall in the high-risk band at or above 0.4 and precision around 0.6 or higher. - Select the gradient boosted trees model as the version to integrate with the dashboard in T7, keeping logistic regression as a benchmark in A5.  I will update A5 with this decision and start preparing the model artefacts and documentation for A3 so that integration and compliance review can proceed.",
+            "mentions": [
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "A5",
+              "T7",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 138753,
+            "reply_to": "M33",
+            "text": "No objections from me. It will be important that we explain in simple terms why the boosted model is better, using the top-decile example you shared. That will help when we present the results in stakeholder updates and in A8.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 80886,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 568638,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define churn risk bands, dashboard layout, and user journeys.",
+        "messages": [
+          {
+            "msg_id": "M35",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "I have drafted a proposal for churn risk segmentation and dashboard wireframes, which I will capture in A4 and align with the checklist in A6. For T6 and T7, here is the initial idea: 1) Risk bands based on the selected model scores: - High risk: top 10 percent of customers by score. - Medium risk: next 20 percent. - Low risk: remaining 70 percent. 2) Dashboard layout: - Overview page: overall churn rate, distribution by risk band, and trend over time. - Segment view: breakdown by industry, company size, and region. - Account list: filterable table of high and medium-risk accounts with key drivers.  I would like feedback on the thresholds, the main views, and how this ties into the playbook in T9.",
+            "mentions": [
+              80886,
+              16404,
+              568638,
+              138753
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T6",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 80886,
+            "reply_to": "M35",
+            "text": "From the modelling side, the top 10 percent as high risk aligns with the operating point we used when evaluating the boosted model in A5. That band captures about 45 percent of churners, which is a good focus area for proactive outreach.  One suggestion: we might want to define the thresholds by score values rather than fixed percentiles, so that we can keep them stable over time and monitor drift in T10. For example, high risk could be score above 0.7, medium between 0.4 and 0.7, and low below 0.4, based on the current calibration. We can refine the exact cut-offs after a quick calibration check.",
+            "mentions": [
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "A5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 568638,
+            "reply_to": "M35",
+            "text": "On the dashboard layout for T7, I like the three main views. A few practical points: - Overview: we can use a stacked bar to show the share of customers and churn events by risk band, plus a line for overall churn rate. - Segment view: filters for industry, company size, region, and CSM owner should be easy to implement with our BI tool, and we can reuse the fields from A2. - Account list: we should limit the number of columns to keep it readable, focusing on score, band, MRR, tenure, and top 3 drivers.  I will map this against A6 to ensure we cover usability and performance checks.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T7",
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 138753,
+            "reply_to": "M35",
+            "text": "I like the idea of three bands, but I am wondering if 10 percent for high risk is too small for some segments. For example, in smaller regions, that might be just a handful of accounts. Should we consider a slightly larger high-risk band, like 15 percent, so that local teams have enough accounts to work on?  Also, for the playbook in T9, it might be easier to define actions if the bands are tied to clear score ranges, as mentioned, rather than just percentiles.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 16404,
+            "reply_to": "M36",
+            "text": "Using score thresholds makes sense, especially for monitoring in T10. We can choose cut-offs that roughly correspond to the 10 and 30 percent percentiles now, and then keep them fixed.  Based on the current calibration plots, a tentative mapping could be: - High risk: score 0.7 and above. - Medium risk: 0.4 to 0.7. - Low risk: below 0.4.  We can validate these thresholds by checking how many accounts and churn events fall into each band and share that in A4 before we finalise.",
+            "mentions": [
+              80886,
+              122466
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 122466,
+            "reply_to": "M38",
+            "text": "Good point on smaller regions. If we use score thresholds like 0.7 and 0.4, the exact share of high-risk accounts will vary by segment, which is actually helpful: teams in higher-risk portfolios will see more high-risk accounts, and vice versa.  For the playbook in A4 and T9, we can define actions such as: - High risk: proactive outreach within 7 days, tailored retention offers, and escalation rules. - Medium risk: check-in during the next regular touchpoint, review product adoption. - Low risk: monitor only, focus on upsell opportunities.  I will draft these actions and align them with the dashboard views in T7.",
+            "mentions": [
+              138753,
+              568638
+            ],
+            "artifact_refs": [
+              "A4",
+              "T9",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 568638,
+            "reply_to": "M39",
+            "text": "I can run a quick analysis using the current scores to see: - How many customers fall into each proposed band by score threshold. - What share of historical churners each band captures.  I will add the results to A4 so we can confirm that the 0.7 and 0.4 cut-offs give a reasonable distribution across regions and segments before we lock them in for T6.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 80886,
+            "reply_to": "M37",
+            "text": "On the account list view for T7, we should also think about how to surface the main drivers in a compact way. One option is to show a short text like: 'High risk due to low recent usage and multiple support tickets' based on the top contributing features.  I can work with you to define a small set of driver templates and add them to A3 and A4 so that the explanations are consistent between the dashboard and the playbook.",
+            "mentions": [
+              568638,
+              122466
+            ],
+            "artifact_refs": [
+              "T7",
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 122466,
+            "reply_to": "M41",
+            "text": "Assuming the analysis confirms that the 0.7 and 0.4 thresholds give us a sensible distribution, I propose we formally define the risk bands for T6 as: - High risk: score 0.7 and above. - Medium risk: score from 0.4 up to 0.7. - Low risk: score below 0.4.  These thresholds will be used consistently in the dashboard (T7), the playbook (T9), and the monitoring plan (T10). I will record this in A4 and A6 once we confirm the counts look reasonable.",
+            "mentions": [
+              80886,
+              568638,
+              16404
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T6",
+              "T7",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 568638,
+            "reply_to": "M43",
+            "text": "I ran the counts and added them to A4. The thresholds at 0.7 and 0.4 give us: - High risk: around 12 percent of accounts, capturing about 50 percent of churners. - Medium risk: around 25 percent of accounts, capturing another 30 percent of churners. - Low risk: the rest, with relatively few churners.  This looks balanced across regions, so I am comfortable implementing these bands in the dashboard filters and visuals for T7.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 16404,
+            "reply_to": "M35",
+            "text": "On the dashboard layout, I would add one more element to the overview page: a simple chart showing model performance over time, such as ROC AUC by month, to support monitoring in T10. It does not need to be prominent, but it will help when we review drift.  Otherwise, the three main views you proposed cover the key user journeys: - Leadership: overview and segment view. - CSMs and Sales: account list with filters and drivers.  We should check A6 to ensure we include a quick usability test with a couple of CSMs before go-live.",
+            "mentions": [
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "T10",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 122466,
+            "reply_to": "M45",
+            "text": "Agreed. I will update the wireframes in A4 to include: - On the overview page: overall churn metrics, distribution by risk band, and a small panel for model performance over time. - On the segment view: filters for industry, size, region, and CSM owner. - On the account list: high and medium-risk accounts with key drivers and links to recommended actions from the playbook in T9.  Once we validate the prototype with two end users, we can mark the layout as approved in A6.",
+            "mentions": [
+              568638,
+              80886
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 122466,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 568638,
+              "when": "this week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Close out MVP, confirm monitoring plan, and plan training rollout.",
+        "messages": [
+          {
+            "msg_id": "M47",
+            "speaker_id": 80886,
+            "reply_to": null,
+            "text": "We are approaching the 21-day deadline for the MVP of the Customer Churn Prediction and Insights Dashboard. Quick status from my side on the model and monitoring tasks: - T4 and T5: final model (gradient boosted trees) is trained and documented in A3 and A5. - T8: draft model documentation and data lineage are in A3, ready for review. - T10: initial monitoring metrics and scripts are drafted, aligned with the thresholds we set in TH3 and the risk bands from TH4.  We need to confirm: 1) The monitoring plan and alerting process, referencing A7. 2) The data refresh and dashboard update schedule for T12. 3) The training and rollout plan for commercial teams, based on A4 and T9.  Sharing this so we can close any gaps before stakeholder sign-off in A8.",
+            "mentions": [
+              16404,
+              122466,
+              568638
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5",
+              "A3",
+              "A5",
+              "T8",
+              "T10",
+              "A7",
+              "T12",
+              "A4",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 16404,
+            "reply_to": "M47",
+            "text": "I reviewed the draft monitoring plan in A7 and the scripts for T10. The current proposal is to track: - Model performance: ROC AUC and recall in the high-risk band monthly. - Data drift: distribution of key features and score distribution by segment. - Volume checks: number of scored customers and share in each risk band.  For alerting, we suggest: - Warning if ROC AUC drops by more than 0.05 from the baseline. - Warning if the share of high-risk accounts changes by more than 5 percentage points without a known business reason.  I think this is a solid starting point, but we should confirm with the data platform owner and capture their feedback in A7.",
+            "mentions": [
+              80886,
+              568638
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 568638,
+            "reply_to": "M47",
+            "text": "On T12, I have tested a daily data refresh from the warehouse and a corresponding dashboard update. The test run completed without errors, and the dashboard now reflects the latest scores after each refresh.  Proposal: - Data refresh: daily on weekdays, overnight. - Dashboard update: shortly after the data refresh, with a timestamp visible on the overview page.  I will document this schedule in the monitoring plan in A7 and in the dashboard notes, and I can adjust if stakeholders prefer a different cadence.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T12",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 122466,
+            "reply_to": "M47",
+            "text": "For the training and rollout plan in T9, I have drafted the playbook and slides in A4, focusing on: - How to interpret risk bands and scores. - How to prioritise accounts using the dashboard views from T7. - Example outreach scripts and retention offers for each band.  I propose: - One 60-minute training session for Sales and Customer Success, recorded for later viewing. - A follow-up Q and A session after two weeks of usage.  I will summarise this in A8 for the stakeholder update and confirm the dates with the Head of Customer Success and Sales manager.",
+            "mentions": [
+              568638,
+              80886
+            ],
+            "artifact_refs": [
+              "T9",
+              "A4",
+              "T7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 138753,
+            "reply_to": "M50",
+            "text": "In the training, could we also include a short section on what not to do with the scores, for example not using them to deny support or change pricing? That might help avoid misunderstandings and align with the compliance notes in A3.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 122466,
+            "reply_to": "M51",
+            "text": "Good suggestion. I will add a slide on appropriate and inappropriate uses of churn scores, aligned with the constraints in A3 and A7. That will also reassure the compliance officer that we are guiding teams to use the model responsibly.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 80886,
+            "reply_to": "M48",
+            "text": "On the alerting process for T10, I suggest we define: - Owner: data science team to review alerts weekly. - Escalation: if we confirm a material drop in performance or a major drift, we inform the data platform owner and the Head of Customer Success, and we agree on mitigation steps.  I will add this flow to A7 and A3 so that it is clear who does what when an alert triggers. We should also confirm that the data platform owner is comfortable with the monitoring queries running on the agreed schedule.",
+            "mentions": [
+              16404
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 16404,
+            "reply_to": "M53",
+            "text": "I will reach out to the data platform owner to validate the monitoring schedule and resource impact, and I will capture any adjustments in A7. If they request changes to frequency or thresholds, we can update T10 accordingly before go-live.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 568638,
+            "reply_to": "M49",
+            "text": "One more detail on T12: I have added a small banner on the dashboard overview page showing the last refresh time and date, so users know how recent the scores are. This is also listed in the dashboard checklist in A6.  If we later change the refresh frequency, we will only need to update the schedule in A7 and the ETL, the banner will pick up the new timestamp automatically.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "T12",
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 122466,
+            "reply_to": "M47",
+            "text": "To prepare for stakeholder sign-off in A8, I will compile a short summary covering: - What the model does, its performance, and limitations (from A3 and A5). - What the dashboard shows and how often it updates (from T7, T12, and A6). - How teams should use the scores and what actions are recommended (from A4 and T9). - How we will monitor and respond to issues (from A7 and T10).  Once that is ready, we can share it ahead of the go-live meeting so stakeholders have time to review.",
+            "mentions": [
+              80886,
+              568638
+            ],
+            "artifact_refs": [
+              "A8",
+              "A3",
+              "A5",
+              "T7",
+              "T12",
+              "A6",
+              "A4",
+              "T9",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 80886,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 16404,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 568638,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

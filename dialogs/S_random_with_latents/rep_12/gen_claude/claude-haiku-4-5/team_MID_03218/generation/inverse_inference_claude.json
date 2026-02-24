@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "_id": 16404,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Consistently delivers on time with high-quality outputs. Demonstrates strong technical expertise in model development, proactively identifies risks (temporal stability, feature importance), and takes ownership of complex tasks. Provides clear documentation and communicates reasoning effectively.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M8",
+          "snippet": "I'll be ready to start feature engineering once we have the clean dataset from T3."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M27",
+          "snippet": "Feature importance shows: contract value (0.32), days since last purchase (0.28), customer tenure (0.18), industry (0.12)"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M32",
+          "snippet": "I'll do a time-based split: train on months 1-12, validate on months 13-15, and test on month 16."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M53",
+          "snippet": "Model documentation is done. I've included methodology, feature list, assumptions, and rationale for excluded features."
+        }
+      ]
+    },
+    {
+      "_id": 80886,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Delivers detailed technical work on schedule with strong problem-solving. Proactively identifies data quality issues, proposes practical solutions (backfill strategy, consolidation approach), and takes ownership of monitoring setup. Communicates findings clearly and anticipates downstream dependencies.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M12",
+          "snippet": "Data profiling is done. I've uploaded the initial inventory to A2 with findings from our core tables."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M14",
+          "snippet": "We can infer renewal dates from transaction timestamps in most cases. I'd estimate we can recover ~80% of the missing values."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M20",
+          "snippet": "Prioritise in this order: (1) duplicates in customer table, (2) missing values in key fields, (3) outliers in transaction amounts."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M54",
+          "snippet": "I've defined key metrics: model precision, recall, and feature drift. I'm also setting up alerts for when precision drops below 65%."
+        }
+      ]
+    },
+    {
+      "_id": 122466,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Excellent project leadership with clear problem framing, decision closure, and stakeholder alignment. Consistently synthesizes input from team members, locks decisions with precision, and maintains momentum. Proactively manages scope and timelines while ensuring business value.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M1",
+          "snippet": "I've started a draft of the problem definition in A1 and outlined the roadmap in A8. Before we dive into data and modelling, we need alignment on three things."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M7",
+          "snippet": "For now, let's lock in D1 and D2: churn = no activity in 90 days, and we measure success by precision (70%+), recall, and retention lift."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M41",
+          "snippet": "Great idea. I'll add a 'priority score' that combines churn risk with contract value. High-risk + high-value customers get flagged as 'Critical.'"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M66",
+          "snippet": "Model is production-ready with documentation (A3). Dashboard is built and tested (A6). Monitoring plan is defined (A7). Playbook is drafted (A4)."
+        }
+      ]
+    },
+    {
+      "_id": 138753,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Strong business acumen with ability to identify risks and validate assumptions. Asks probing questions that improve solution quality (data freshness, business impact validation, temporal stability). Contributes strategic insights while supporting team execution.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "From a business perspective, I'd suggest we define churn as a customer who hasn't renewed or made a purchase in 90 days."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "If we're pulling from three systems with different update frequencies, we might have stale data. Should we add a 'data freshness' check to the pipeline?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M31",
+          "snippet": "Even if we hit 70% precision, we need to validate that the model is stable. Can you test it on a different time period?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M40",
+          "snippet": "Can we add a secondary metric—like contract value—so we prioritise high-value customers at risk?"
+        }
+      ]
+    },
+    {
+      "_id": 568638,
+      "productivity_level": "HIGH",
+      "ability_level": "MID",
+      "performance_level": "HIGH",
+      "justification": "Reliable executor who delivers on commitments and supports team needs. Proactively identifies practical solutions (freshness checks, feature engineering, dashboard design) and completes tasks on schedule. Demonstrates solid technical competence in data preparation and visualization, though less sophisticated problem-solving than senior data scientists.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M22",
+          "snippet": "Start with a sample—I'll have a clean 10k-record subset ready by tomorrow EOD."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M18",
+          "snippet": "I can add freshness checks to T3 when we build the data prep pipeline. We'll flag records where attributes are older than 30 days."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M58",
+          "snippet": "The daily refresh is working—dashboard updates within 2 hours of the batch job completing. I've validated that the scores match the model output."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M29",
+          "snippet": "We have support ticket counts and basic product usage logs. I can engineer those into features—things like 'tickets per month' and 'days since last login.'"
+        }
+      ]
+    }
+  ]
+}

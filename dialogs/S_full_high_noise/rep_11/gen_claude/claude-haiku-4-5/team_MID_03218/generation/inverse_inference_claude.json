@@ -1,0 +1,124 @@
+{
+  "predictions": [
+    {
+      "_id": 16404,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Consistently delivers ahead of schedule with high-quality outputs. Demonstrates strong analytical thinking, proactively identifies risks (e.g., ID mapping stability), and takes ownership of complex tasks (feature engineering, monitoring setup). Provides sophisticated reasoning and anticipates downstream dependencies.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M9",
+          "snippet": "I'll also start sketching out the roadmap and milestones in A8 so we have a clear timeline for stakeholder updates."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "One question: are we confident the ID mapping will be stable going forward? Maybe we should add a validation step to the pipeline?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M25",
+          "snippet": "Feature importance from the random forest: days since last login (0.35), usage frequency (0.28), support ticket count (0.22), subscription tenure (0.15)."
+        }
+      ]
+    },
+    {
+      "_id": 80886,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Delivers consistently and rapidly with high technical precision. Proactively solves data quality issues, provides concrete recommendations grounded in data constraints, and executes complex tasks (data profiling, pipeline design, model versioning) with minimal oversight. Demonstrates strong systems thinking and practical problem-solving.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M10",
+          "snippet": "I'll start the data profiling immediately. Expect a first cut of A2 by tomorrow EOD."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "From a data perspective, I'd suggest we define churn as 'no active subscription or zero usage for 30+ days' rather than something looser. That's measurable and repeatable in our systems."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M23",
+          "snippet": "Using the test set (~90k customers), the random forest model would flag ~8500 as high-risk. Of those, ~6375 would actually churn (precision 0.75)."
+        }
+      ]
+    },
+    {
+      "_id": 122466,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Orchestrates the project with clear structure and decision discipline. Consistently synthesizes input from team members, closes decisions with precision, and maintains alignment across stakeholders. Demonstrates strong business acumen by connecting technical outputs to business impact (time-to-action, capacity constraints, playbook scenarios).",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M8",
+          "snippet": "So to summarize where we are: (1) churn = no active subscription or zero usage for 30+ days, (2) prediction horizon = next 30 days, (3) KPIs = precision, recall, and time-to-action..."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "The question is: what's the business impact? If we flag 1000 customers as high-risk, how many will actually churn? Can you break that down in terms of actual customer counts?"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M49",
+          "snippet": "Let me summarize the go-live checklist: (1) model documentation complete and compliance-approved ✓, (2) monitoring set up and tested ✓, (3) data refresh validated ✓..."
+        }
+      ]
+    },
+    {
+      "_id": 138753,
+      "productivity_level": "LOW",
+      "ability_level": "LOW",
+      "performance_level": "MID",
+      "justification": "Participates minimally with basic, clarifying questions that are often answered by others or already addressed in prior discussion. Does not demonstrate domain expertise or proactive contribution. Asks about decisions already made (M17, M46) and suggests ideas that are deferred to later phases (M35), indicating limited engagement with project context.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M5",
+          "snippet": "I think we should also consider... um, maybe we need to look at different customer types? Like, enterprise vs. SMB might churn differently."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M17",
+          "snippet": "So... we're using all the data sources then? Or are we excluding some? I'm not sure which ones we decided on."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M46",
+          "snippet": "So... everything is done? Are we ready to launch?"
+        }
+      ]
+    },
+    {
+      "_id": 568638,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Contributes competently in specific domains (compliance coordination, data engineering liaison, dashboard building) but operates within defined scope. Executes assigned tasks reliably and provides practical input on data quality and dashboard design. Does not demonstrate initiative beyond assigned responsibilities or sophisticated cross-functional reasoning.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M7",
+          "snippet": "On compliance: yes, we'll need to review the feature list with the compliance officer before we finalize. I can help coordinate that once we have a draft feature set."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M12",
+          "snippet": "For usage_last_30_days, if it's missing for inactive accounts, that's actually informative (no usage = churn signal). I'd suggest we code that as zero rather than impute."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M39",
+          "snippet": "I'll generate the scores and band assignments by EOD today. You'll have everything you need to build the dashboard."
+        }
+      ]
+    }
+  ]
+}

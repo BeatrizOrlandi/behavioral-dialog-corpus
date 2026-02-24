@@ -1,0 +1,1099 @@
+{
+  "channel": {
+    "channel_id": "proj-field-service-workflow",
+    "project_pack_ref": "Field Service Workflow Standardisation for Repair Operations",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current workflows and main pain points across all service types.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Team, welcome to the project channel. To kick things off, I've mapped the current repair workflows as we understand them today. Please take a look at the doc and share your thoughts. The goal of T1 is to make sure we haven't missed anything and to identify the biggest bottlenecks.",
+            "mentions": [
+              47068,
+              61983,
+              63344,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 125309,
+            "reply_to": "M1",
+            "text": "Thanks for putting this together. The flow for telecom in A1 looks mostly right, but it misses the pre-visit equipment check we do. That's a major source of delays – showing up without the right signal repeater or cable type. I'd say that's our biggest pain point.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 47068,
+            "reply_to": "M1",
+            "text": "The appliance repair map seems ok. A big problem for us is scheduling. Sometimes the movers are late and the customer gets upset before I even start.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 319539,
+            "reply_to": "M3",
+            "text": "Yeah, the coordination is tricky. From our side, we sometimes don't know if a technician needs help with a heavy appliance until we get there. Having that info upfront would make scheduling smoother.",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 63344,
+            "reply_to": "M1",
+            "text": "The power tool workflow is fine.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 547643,
+            "reply_to": "M2",
+            "text": "Good point, I'll add the pre-visit check to the telecom map. That sounds like a critical gap.",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 61983,
+            "reply_to": "M5",
+            "text": "I'd add that for power tools, the biggest issue is inconsistent diagnosis. One tech will replace a motor when only the brushes are worn. We waste parts and time because there's no standard procedure for testing components in sequence. That's the number one cause of rework for us.",
+            "mentions": [
+              63344
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "point_up",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 547643,
+            "reply_to": "M7",
+            "text": "Excellent, specific feedback. That's exactly what we need to capture.",
+            "mentions": [
+              61983
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 547643,
+            "reply_to": "M8",
+            "text": "Based on this, it sounds like our top three pain points are:\n1. Inconsistent diagnosis leading to rework (especially for power tools).\n2. Lack of pre-visit equipment checks causing delays (telecom).\n3. Poor coordination between movers and technicians on job requirements.\n\nDoes everyone agree on focusing on these for the first version of the SOP?",
+            "mentions": [
+              47068,
+              61983,
+              63344,
+              125309,
+              319539
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 125309,
+            "reply_to": "M9",
+            "text": "Works for me. That covers the big issues.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 319539,
+            "reply_to": "M9",
+            "text": "Yes, that list is good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 47068,
+            "reply_to": "M9",
+            "text": "Sounds good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 61983,
+            "reply_to": "M9",
+            "text": "Agreed. Number 1 is critical.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 547643,
+            "reply_to": "M9",
+            "text": "Great. Decision D1 is locked. Now for the pilot. To keep it manageable, I propose we scope the initial pilot to include household appliances, power tools, and telecom services. We can bring in others later. Any concerns with that?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 125309,
+            "reply_to": "M14",
+            "text": "Telecom is ready. We have a good mix of standard install and repair jobs to test this on.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 61983,
+            "reply_to": "M14",
+            "text": "Power tools are fine for the pilot.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 47068,
+            "reply_to": "M14",
+            "text": "Yes, appliances can be in.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 547643,
+            "reply_to": "M14",
+            "text": "Perfect. We'll confirm that scope. Decision D2 is made. I'll update the project plan. Next up, we'll start drafting the checklists and procedures to address the pain points we identified.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 47068,
+              "when": "this week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 61983,
+              "when": "this week"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 125309,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and iterate on diagnostic checklists for appliances and power tools.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Hi team, following up on our discussion about inconsistent diagnosis. I've created first drafts of the diagnostic checklists for appliances (A2) and power tools (A3). These are based on the initial info for T2 and T3. Appreciate your expert review to make sure they're practical for the field.",
+            "mentions": [
+              47068,
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 47068,
+            "reply_to": "M19",
+            "text": "Looking at A2 for appliances. It seems to cover the main things. Should we add a section for the customer to sign off on the diagnosis before we start the repair?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 63344,
+            "reply_to": "M19",
+            "text": "A3 looks ok. Maybe a bit long.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 547643,
+            "reply_to": "M20",
+            "text": "That's an interesting idea. It could help with quote approvals. Let's think about the workflow impact. Does it require a second visit if they aren't home?",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 61983,
+            "reply_to": "M21",
+            "text": "I've reviewed A3. It's a good start, but it's missing critical steps that will help us avoid rework. For battery tools, we need a mandatory load test on the battery and a check on the charger output. For corded tools, we need to check for continuity from the plug all the way to the switch. I can write up the exact steps.",
+            "mentions": [
+              63344
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 47068,
+            "reply_to": "M22",
+            "text": "Oh, good point. Maybe not a signature then. Maybe just a checkbox that we 'verbally confirmed quote with customer'.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 547643,
+            "reply_to": "M23",
+            "text": "That would be fantastic, thank you. Your expertise here is key. Please add those steps directly as comments in the doc for A3.",
+            "mentions": [
+              61983
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 547643,
+            "reply_to": "M24",
+            "text": "I like that. It's a simple confirmation without adding process overhead. Let's add that. So for A2, the minimum required steps will be: Intake, Safety Check, Diagnostic Steps, Parts Needed, and 'Verbal Quote Confirmation'. Everyone ok with that?",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 47068,
+            "reply_to": "M26",
+            "text": "Yes, that works.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 61983,
+            "reply_to": "M25",
+            "text": "OK, I've added my comments to A3 with the specific tests for battery and corded tools. Those should be considered mandatory steps.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 547643,
+            "reply_to": "M28",
+            "text": "Just reviewed them. They are clear and directly address the rework issue. So, for A3, we'll approve the checklist with the mandatory steps for: Visual Inspection, Electrical Tests (including continuity/load testing), and Functional Tests. Agreed?",
+            "mentions": [
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 61983,
+            "reply_to": "M29",
+            "text": "Agreed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 63344,
+            "reply_to": "M29",
+            "text": "ok",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 547643,
+            "reply_to": "M29",
+            "text": "Excellent. We have sign-off on the core requirements for both checklists (D3, D4). I'll update the documents. We will refine these further based on pilot feedback as part of T11.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 547643,
+              "when": "EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on telecom/electronics visit SOP and safety/handling procedures.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 125309,
+            "reply_to": null,
+            "text": "Hi all, I've drafted the standard procedure for telecom and electronics visits as A4, which should complete T4. It includes the pre-visit checks we discussed, steps for signal testing, and logging requirements. Feedback is welcome.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 319539,
+            "reply_to": "M33",
+            "text": "On a related note, for T6, I've put together some notes for the handling and transport procedure, A6. It's mostly about safe lifting and how to coordinate hand-offs with technicians on-site for heavy items like servers or large displays.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 547643,
+            "reply_to": "M33",
+            "text": "This is great, proactive work from both of you. I'm reviewing A4 now. Did you ensure it aligns with the latest regulatory requirements for signal strength?",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 125309,
+            "reply_to": "M35",
+            "text": "Yes, I've included the acceptable dBm range and the requirement to log the final reading in the job notes, which covers our compliance needs.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 547643,
+            "reply_to": "M34",
+            "text": "Thanks. For A6, are the lifting guidelines consistent with our company's general safety policy? Just want to avoid any conflicts.",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 319539,
+            "reply_to": "M37",
+            "text": "I based it on the standard safety training we get. I think it's aligned but it would be good if someone from operations could double check.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 47068,
+            "reply_to": "M38",
+            "text": "When I was in ops, we had a rule about two-person lifts for anything over 50 lbs. Is that in there?",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 319539,
+            "reply_to": "M39",
+            "text": "Yes, the two-person lift rule is included. Thanks for checking.",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 547643,
+            "reply_to": "M38",
+            "text": "Good. I'll run it by the Operations Manager for a final check, but it looks solid for the pilot. A4 also looks ready to go. Shall we sign off on using A4 and A6 for the pilot?",
+            "mentions": [
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 125309,
+            "reply_to": "M41",
+            "text": "Ready from my end.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 319539,
+            "reply_to": "M41",
+            "text": "Sounds good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 61983,
+            "reply_to": "M41",
+            "text": "Looks fine.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 547643,
+            "reply_to": "M41",
+            "text": "Great, we have our decisions. D5 and D6 are approved for the pilot. I'll formalize these documents and add them to our central SOP.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 547643,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Lock in scheduling rules and customer communication approach.",
+        "messages": [
+          {
+            "msg_id": "M46",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Team, let's tackle scheduling and customer communication. Based on the pain points from T1, I've drafted proposals for Scheduling Rules (A5) and a Customer Communication Playbook (A7). These are meant to address T5 and T7. Please review and share your feedback.",
+            "mentions": [
+              47068,
+              61983,
+              63344,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T5",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 319539,
+            "reply_to": "M46",
+            "text": "In A5, the 30-minute travel buffer between jobs seems a bit tight for rush hour. We could end up being late for afternoon appointments.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 125309,
+            "reply_to": "M47",
+            "text": "I agree. Could we make the buffer dynamic? For example, 30 mins for jobs between 10am-2pm, but 45-60 mins for jobs at the start and end of the day. It's more complex to schedule but reflects reality.",
+            "mentions": [
+              319539
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 47068,
+            "reply_to": "M46",
+            "text": "For the communication playbook A7, the templates are good. It would be helpful to have a standard line for what to say when we find out a repair will cost more than the initial estimate.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 547643,
+            "reply_to": "M48",
+            "text": "A dynamic buffer is a smart suggestion. Let's try that for the pilot routes. I'll update A5 to reflect a 45-minute buffer for jobs before 10am and after 3pm.",
+            "mentions": [
+              125309
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 547643,
+            "reply_to": "M49",
+            "text": "Good catch. That's a critical scenario. I'll add a section to A7 on 'Handling Quote Revisions' with a clear script for technicians to follow. Thanks for flagging that.",
+            "mentions": [
+              47068
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 63344,
+            "reply_to": "M46",
+            "text": "Who is supposed to send the 'on my way' text?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 547643,
+            "reply_to": "M52",
+            "text": "The playbook A7 specifies that the technician sends it when they are leaving their previous job. It's in the 'Pre-Visit Communication' section.",
+            "mentions": [
+              63344
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 547643,
+            "reply_to": "M53",
+            "text": "With those changes incorporated, are we ready to approve the scheduling rules in A5 and the communication playbook in A7 for the pilot?",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 125309,
+            "reply_to": "M54",
+            "text": "Yes, approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 319539,
+            "reply_to": "M54",
+            "text": "The dynamic buffer is a good change. I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 47068,
+            "reply_to": "M54",
+            "text": "Yes, looks good now.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 547643,
+            "reply_to": "M54",
+            "text": "Excellent. That's D7 and D8 confirmed. I'll publish the final versions for our pilot group. We're getting very close to being ready for T9.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 547643,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan pilot, review results, and confirm adjustments before rollout.",
+        "messages": [
+          {
+            "msg_id": "M59",
+            "speaker_id": 547643,
+            "reply_to": null,
+            "text": "Hi all, the pilot (T9) has concluded, and I've compiled the results and recommendations in A8. A huge thank you to everyone who participated. Please review the report. The main goals now are to validate our findings (T10) and plan the full rollout (T12).",
+            "mentions": [
+              47068,
+              61983,
+              63344,
+              125309,
+              319539
+            ],
+            "artifact_refs": [
+              "A8",
+              "T9",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 125309,
+            "reply_to": "M59",
+            "text": "The data in A8 matches my experience. The pre-visit check from A4 cut my 'wrong part' visits to zero. Rework is down significantly. This process works.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 47068,
+            "reply_to": "M59",
+            "text": "The appliance checklist A2 was helpful. Sometimes it felt like there were too many boxes to tick when the fix was simple, but it did catch a couple of things I might have missed.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 63344,
+            "reply_to": "M59",
+            "text": "The pilot was ok. The new checklist for power tools is a bit different.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 61983,
+            "reply_to": "M62",
+            "text": "The power tool checklist A3 worked well, but I have some refinements. The continuity test can be simplified to two steps instead of four. Also, for the XR series tools, we need to add a check for the electronic clutch sensor, which wasn't on the list. I've already updated the draft of A3 with these suggestions.",
+            "mentions": [
+              547643
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 547643,
+            "reply_to": "M63",
+            "text": "This is exactly the kind of feedback we need. Proactive and precise. Thank you. I'll review the updated A3 right away.",
+            "mentions": [
+              61983
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 547643,
+            "reply_to": "M59",
+            "text": "Let's revisit our initial goals. Do we feel the pilot addressed the top three pain points we identified in D1? (Inconsistent diagnosis, pre-visit checks, and mover/tech coordination). The data in A8 suggests we made a positive impact on all three.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 125309,
+            "reply_to": "M65",
+            "text": "Yes, definitely for pre-visit checks.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 319539,
+            "reply_to": "M65",
+            "text": "The coordination was better. Knowing the job details ahead of time made a difference.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 61983,
+            "reply_to": "M65",
+            "text": "Diagnosis is more consistent. The checklist is the key.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 547643,
+            "reply_to": "M65",
+            "text": "Great. We'll confirm D1 as addressed. Now, for the power tool checklist A3. I've reviewed the changes from @61983 and they are excellent. Any objections to approving this revised version as the final one for full rollout?",
+            "mentions": [
+              61983,
+              63344
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 61983,
+            "reply_to": "M69",
+            "text": "I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 63344,
+            "reply_to": "M69",
+            "text": "sure",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 547643,
+            "reply_to": "M69",
+            "text": "Perfect. D4 is confirmed. That's the last piece we needed. I will now finalize the training materials and schedule for the full rollout as part of T12. I'll post the schedule here by end of week. Great work, everyone.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 547643,
+              "when": "EOW"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 14 messages, which is below the minimum of 16 required by the 'expected' limits."
+    },
+    {
+      "severity": "MID",
+      "code": "COUNT",
+      "detail": "The number of messages in some threads is outside the blueprint's target_messages_range. TH2 has 16 messages (target [20, 28]). TH3 has 14 messages (target [17, 24])."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Mandatory artifact T1 was not referenced in any message in thread TH1."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Mandatory artifact T6 was not referenced in any message in thread TH4."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 3,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

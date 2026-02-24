@@ -1,0 +1,1107 @@
+{
+  "channel": {
+    "channel_id": "proj-connected-monitoring-module",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope and system requirements across all roles.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 81818,
+            "reply_to": null,
+            "text": "Team, kicking off the Connected Industrial Monitoring Module project. I've created the initial draft of the MVP Requirements in A1, which will guide T1. Please review by EOD tomorrow so we can finalize our scope. Key areas for feedback are the supported sensor types and the alert conditions. @here",
+            "mentions": [
+              29405,
+              59849,
+              219209,
+              249439
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 219209,
+            "reply_to": "M1",
+            "text": "Thanks @81818. Document looks solid. The power supply and voltage monitoring requirements are clear from my side. I'm good to approve.",
+            "mentions": [
+              81818
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 59849,
+            "reply_to": "M1",
+            "text": "Got it. Reading through A1 now. On section 4.2, 'Data Interface', it mentions PLC/SCADA integration. To start on A4, can we define the minimal data set for the pilot? Just the raw sensor values and a timestamp, or do we need pre-calculated metrics like averages?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 249439,
+            "reply_to": "M1",
+            "text": "ok i will look at it. what are the dimensions for the enclosure? is that decided?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 81818,
+            "reply_to": "M3",
+            "text": "Great question, @59849. For the pilot, let's stick to raw values, a device ID, and a timestamp. We can handle aggregations on the backend. This keeps the edge logic simple and meets the core requirement. Let's make that a formal decision.",
+            "mentions": [
+              59849
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 81818,
+            "reply_to": "M4",
+            "text": "@249439 The max dimensions and mounting requirements are in section 3.1 of A1. The final size will depend on the board layout and component selection from @219209 and yourself.",
+            "mentions": [
+              249439,
+              219209
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 29405,
+            "reply_to": "M1",
+            "text": "I've read the doc. It seems ok, but we should be careful about component choices to avoid assembly problems later.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 249439,
+            "reply_to": "M6",
+            "text": "oh ok i see it now. thanks",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 59849,
+            "reply_to": "M5",
+            "text": "Perfect, that works for me. Raw values it is. I'll reflect that in the draft of A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 81818,
+            "reply_to": "M7",
+            "text": "Good point, @29405. That's a key consideration for T6 and T8. For now, let's focus on freezing the functional scope in A1. Any objections to the feature list as written?",
+            "mentions": [
+              29405
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 29405,
+            "reply_to": "M10",
+            "text": "No, the features are fine.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 249439,
+            "reply_to": "M10",
+            "text": "no objections",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 59849,
+            "reply_to": "M10",
+            "text": "Looks good to me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 219209,
+            "reply_to": "M10",
+            "text": "All good here.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 81818,
+            "reply_to": "M10",
+            "text": "Excellent. We have alignment. Decision: The MVP feature list is approved and the initial scope is frozen as documented in A1. I'll update the document status to 'Approved'. This completes T1.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 81818,
+            "reply_to": "M15",
+            "text": "Summary of decisions from this thread:\n1. MVP scope in A1 is approved and frozen (D1).\n2. The minimal data set for the pilot will be raw sensor values, device ID, and timestamp (D2).",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 81818,
+            "reply_to": "M16",
+            "text": "This unblocks the core design tasks. @249439 you can start on the detailed mechanical design for T2, and @219209 you can finalize schematics for T3. @59849, you can proceed with the data architecture in A4 for T4.",
+            "mentions": [
+              249439,
+              219209,
+              59849
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3",
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 219209,
+            "reply_to": "M17",
+            "text": "Roger that. I'll have draft schematics ready for review tomorrow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 249439,
+              "when": "this week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 219209,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 59849,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on hardware, enclosure, and electrical design choices.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 249439,
+            "reply_to": null,
+            "text": "hi all, here is the first pass of the enclosure design for T2. i attached the 3d model file. feedback welcome @219209 @29405",
+            "mentions": [
+              219209,
+              29405
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 219209,
+            "reply_to": "M19",
+            "text": "Thanks @249439. I'm looking at the model now. I see a potential issue: the clearance for the main power connector is extremely tight. It will be difficult to wire and might not pass the strain relief checks in A2. We need at least another 15mm of clearance there.",
+            "mentions": [
+              249439
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 29405,
+            "reply_to": "M19",
+            "text": "From a manufacturing side for T6, the number of fasteners seems high. It will increase assembly time. Can we use a snap-fit design for the lid instead?",
+            "mentions": [],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 249439,
+            "reply_to": "M20",
+            "text": "ok i can add more clearance. a snap fit might not meet the IP67 rating from the requirements though. i used screws to be sure.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 81818,
+            "reply_to": "M22",
+            "text": "IP67 is a hard requirement, so we can't compromise on that. @249439, can you investigate alternative sealing methods or IP-rated snap-fit enclosures? If not, we stick with screws but let's see if we can reduce the count. @29405, what's an acceptable target assembly time per unit?",
+            "mentions": [
+              249439,
+              29405
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 29405,
+            "reply_to": "M23",
+            "text": "I'm not sure yet, I need to work on the full process flow for T6. But fewer is better. Maybe we can use 4 screws instead of 8?",
+            "mentions": [],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 249439,
+            "reply_to": "M23",
+            "text": "i will check on other options. 4 screws might work if we use a better gasket. i will update the model with the extra clearance for @219209 and see about the screws.",
+            "mentions": [
+              219209
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 219209,
+            "reply_to": "M25",
+            "text": "Sounds good. Let me know when the model is updated. In the meantime, my schematics for T3 are complete and I've run them against the A2 checklist. No critical gaps found. They are ready for review.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 81818,
+            "reply_to": "M26",
+            "text": "Great progress, @219209. Let's formally confirm that. Decision: The electrical schematics for T3 are approved as they meet the safety requirements outlined in A2 and are ready for the prototype build.",
+            "mentions": [
+              219209
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 249439,
+            "reply_to": "M25",
+            "text": "ok updated model is attached. it has 15mm more clearance and uses 4 screws with a groove for a silicone gasket. this should meet IP67.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 219209,
+            "reply_to": "M28",
+            "text": "The clearance looks good now. I approve this version.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 29405,
+            "reply_to": "M28",
+            "text": "This is much better for assembly. I'm good with this. We just need to factor the gasket cost into T8.",
+            "mentions": [],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 81818,
+            "reply_to": "M28",
+            "text": "Perfect. We have a path forward. Decision: We are proceeding with the revised enclosure concept (4-screw with gasket) which meets mounting, IP, and assembly requirements.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 81818,
+            "reply_to": "M31",
+            "text": "To summarize: Enclosure concept is selected (D3) and electrical schematics are approved (D4). @249439, please finalize the technical drawings for T2. @29405, please start the manufacturability plan for T6.",
+            "mentions": [
+              249439,
+              29405
+            ],
+            "artifact_refs": [
+              "T2",
+              "T6"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 249439,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 29405,
+              "when": "this week"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 29405,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define and validate the data architecture and edge software plan.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 59849,
+            "reply_to": null,
+            "text": "Hi team, I've documented the initial data architecture and API spec in A4, which covers T4. It outlines the data model, security tokens, and the MQTT protocol for communication. Please take a look and provide feedback. @81818 @219209",
+            "mentions": [
+              81818,
+              219209
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 81818,
+            "reply_to": "M33",
+            "text": "Thanks, @59849. Reading it now. The architecture seems straightforward. One question: how will the device handle intermittent network connectivity? We need to ensure no data is lost if the connection drops for a few hours, which is common on factory floors.",
+            "mentions": [
+              59849
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 59849,
+            "reply_to": "M34",
+            "text": "Good point. The edge software (T5) will include a local buffer or queue. It will store data points on the device's flash memory and send them once the connection is restored. I've made a note to add that detail to A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 219209,
+            "reply_to": "M33",
+            "text": "From an electrical standpoint, what is the expected power draw for the edge processing and data transmission? We need to ensure the power supply unit is sized correctly. Also, does the MQTT library have any specific hardware requirements?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 59849,
+            "reply_to": "M36",
+            "text": "The library is lightweight and has no special hardware needs. I'll need to run some benchmarks on the dev board to get a precise power draw figure, but initial estimates are well within the spec from A1. I can get you that data by end of week.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 219209,
+            "reply_to": "M37",
+            "text": "Okay, that works. Just keep me posted.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 81818,
+            "reply_to": "M35",
+            "text": "The local buffering is critical. For the pilot, what's the minimum set of features we need in the edge software for T5? I propose: 1) Read from configured sensors, 2) Buffer data locally on connection loss, 3) Transmit data via MQTT when connected. Anything else?",
+            "mentions": [],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 59849,
+            "reply_to": "M39",
+            "text": "That's the core functionality. We should also add a basic heartbeat or status message so we know the device is online. But otherwise, that list covers the MVP for the pilot. It's achievable within the timeline.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 81818,
+            "reply_to": "M40",
+            "text": "Agreed, the status message is a good addition. Okay team, let's lock this in. Any objections to approving the data architecture and the edge software scope?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 219209,
+            "reply_to": "M41",
+            "text": "None from me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 29405,
+            "reply_to": "M41",
+            "text": "I'm fine with it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 81818,
+            "reply_to": "M41",
+            "text": "Great. Let's formalize it. \nDecision: The data architecture and communication protocol described in A4 (with the addition of local buffering) is approved. (D5)\nDecision: The minimal edge software capabilities for T5 will be sensor reading, local buffering, MQTT transmission, and a status message. (D6)",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 59849,
+            "reply_to": "M44",
+            "text": "Understood. I'll finalize A4 and begin implementation of T5.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 59849,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and coordinate lab tests and customer pilot installation.",
+        "messages": [
+          {
+            "msg_id": "M46",
+            "speaker_id": 81818,
+            "reply_to": null,
+            "text": "Team, now that the designs are firming up, we need to plan our testing phase. I propose we schedule integrated lab tests (T7) for the week of the 15th. This will be our go/no-go gate for the customer pilot (T11). I've started the test plan in A7. @249439, we'll need the test procedures from T10 to flesh this out.",
+            "mentions": [
+              249439
+            ],
+            "artifact_refs": [
+              "T7",
+              "T11",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 29405,
+            "reply_to": "M46",
+            "text": "The 15th is tight. Do we have all the prototype components ordered? And is the lab space reserved?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 219209,
+            "reply_to": "M47",
+            "text": "All electronic components have been ordered, most have arrived already. I'm ready for the electrical safety portion of the tests as soon as we have an assembled unit.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 81818,
+            "reply_to": "M47",
+            "text": "I've already reserved the lab space. The critical path is getting the enclosures and PCBs assembled. @249439, what's the ETA on the prototype enclosures?",
+            "mentions": [
+              249439
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 249439,
+            "reply_to": "M49",
+            "text": "the 3d prints should be ready in 2 days. i am still working on the test procedures for T10.",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 81818,
+            "reply_to": "M50",
+            "text": "Okay, we need T10 urgently to finalize the lab test plan in A7. Please prioritize that and share a draft by tomorrow EOD. The acceptance criteria must be clear and measurable.",
+            "mentions": [],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 59849,
+            "reply_to": "M46",
+            "text": "I'll be ready with the edge software for T7. I can create a test harness to simulate sensor inputs for the lab environment.",
+            "mentions": [],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 249439,
+            "reply_to": "M51",
+            "text": "ok i will send it tomorrow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 81818,
+            "reply_to": "M53",
+            "text": "Thanks. Once we have that, we can lock the plan. Let's tentatively agree on the acceptance criteria: successful completion of all functional, environmental, and safety checks listed in A7 with no priority-1 bugs. This will be our gate for the pilot. Any concerns?",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 219209,
+            "reply_to": "M54",
+            "text": "Works for me. The safety checks are pass/fail, so that's clear.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 29405,
+            "reply_to": "M54",
+            "text": "Sounds reasonable.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 81818,
+            "reply_to": "M54",
+            "text": "Decision: The lab test plan and acceptance criteria, to be finalized in A7, are locked. (D7). Now for the pilot itself. I have verbal confirmation from our two primary customers for installation during the last week of the month. I've drafted the installation checklist in A5. I will take responsibility for coordinating the on-site work for T11.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7",
+              "A5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 81818,
+            "reply_to": "M57",
+            "text": "Let's also decide on roles. I will be the on-site lead. @219209, I'll need you on call for any electrical issues, and @59849 for software/data validation. Is that feasible?",
+            "mentions": [
+              219209,
+              59849
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 59849,
+            "reply_to": "M58",
+            "text": "Yes, I'll be available.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 219209,
+            "reply_to": "M58",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 81818,
+            "reply_to": "M58",
+            "text": "Perfect. Decision: We confirm the two pilot customer sites, installation dates for the last week of the month, and on-site/on-call responsibilities as documented in A5. (D8)",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 249439,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 81818,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on next-iteration and rollout plan.",
+        "messages": [
+          {
+            "msg_id": "M62",
+            "speaker_id": 29405,
+            "reply_to": null,
+            "text": "Hello team, the pilots are complete. I have put together the draft pilot feedback report in A8 for task T12. Please review and add your comments.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 81818,
+            "reply_to": "M62",
+            "text": "Thanks for putting this together, @29405. I've just added my detailed notes from the customer debriefs. Key takeaway: both customers loved the real-time data but found the alert configuration confusing. This needs to be a priority for the next iteration. I also added a section on deployment challenges we faced, which should inform the A6 playbook.",
+            "mentions": [
+              29405
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 59849,
+            "reply_to": "M62",
+            "text": "From a technical side, data transmission was 99.8% reliable. We had one instance of data loss due to a buffer overflow on a prolonged outage. We should increase the buffer size in the next software release. I've added the logs to the A8 appendix.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 219209,
+            "reply_to": "M62",
+            "text": "The hardware performed flawlessly in both environments, even with significant electrical noise at one of the sites. No resets or failures. Power consumption was also within our projected limits.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "muscle",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 29405,
+            "reply_to": "M62",
+            "text": "Also, I have finalized the BOM cost in A3 for T8. We are about 5% over our target cost, mainly due to the IP67 connectors. We should look for alternatives if we want to hit the target for full production.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 81818,
+            "reply_to": "M66",
+            "text": "Thanks for that update. 5% is not a dealbreaker, but it's good to flag. @219209 and @249439, can you two sync up to explore alternative connectors or suppliers for the next build?",
+            "mentions": [
+              219209,
+              249439
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 219209,
+            "reply_to": "M67",
+            "text": "Will do. We can likely find a more cost-effective option without sacrificing compliance.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 249439,
+            "reply_to": "M67",
+            "text": "ok i will look with @219209",
+            "mentions": [
+              219209
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 81818,
+            "reply_to": "M62",
+            "text": "Okay, great input everyone. It sounds like the core product is solid, and we have clear action items for the next iteration: improve alert configuration UI, increase the data buffer, and optimize the connector cost. @29405, can you please incorporate these points into the final A8 report?",
+            "mentions": [
+              29405
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 29405,
+            "reply_to": "M70",
+            "text": "Yes, I will update the report with all this feedback.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 81818,
+            "reply_to": "M71",
+            "text": "Excellent. Once A8 is finalized, we'll share it with leadership to get approval for the next phase. This officially concludes the pilot. Great work, everyone!",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 29405,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 29405,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

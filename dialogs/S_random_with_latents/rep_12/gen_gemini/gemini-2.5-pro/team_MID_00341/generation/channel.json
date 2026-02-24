@@ -1,0 +1,256 @@
+{
+  "channel": {
+    "channel_id": "proj-dental-prod-line",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Agree on the process for creating the facility layout plan.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 526084,
+            "reply_to": null,
+            "text": "Team, let's kick off the planning for the new production line facility. The main priority is getting an approved layout and fit-out plan. Given the 30-day deadline for the pilot batch, we need to move quickly. I've attached the leased space floor plan (A1). We'll also need a consolidated equipment list (A2) to inform the layout. @48820 @49409 @255537 @518065 what are your initial thoughts on the process?",
+            "mentions": [
+              48820,
+              49409,
+              255537,
+              518065
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wave",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 518065,
+            "reply_to": "M1",
+            "text": "Thanks for starting this. Before we get too deep into the layout, I'll review the lease agreement for any clauses on structural alterations, HVAC modifications, or waste disposal requirements. That could impact where we can place certain equipment.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 255537,
+            "reply_to": "M1",
+            "text": "I can go to the site tomorrow morning. I need to check the actual locations of power mains, water hookups, and ventilation ducts. The floor plan (A1) is good, but we need to verify what's physically there before we decide where a machine goes.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 49409,
+            "reply_to": "M1",
+            "text": "Good point on the equipment list (A2). We need to factor in not just the production machines but also the quality control station. It requires specialized lighting, ventilation for material fumes, and an anti-static environment. Its placement is critical and can't be an afterthought.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "lightbulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 48820,
+            "reply_to": "M1",
+            "text": "I agree. I will start thinking about the process flow from raw material intake to the final product packaging. We should try to make the flow logical to avoid issues later.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 526084,
+            "reply_to": "M1",
+            "text": "Excellent points all around. Let's formalize this. @255537, your on-site survey is the perfect first step, let's track that as T1. @518065, great catch on the lease, please proceed. @49409 and @48820, please collaborate to produce a final equipment requirements list, including those QC details. We'll call that T2. Once we have the survey results and the equipment list, I can draft the initial layout plan, which we'll call A3.",
+            "mentions": [
+              255537,
+              518065,
+              49409,
+              48820
+            ],
+            "artifact_refs": [
+              "T1",
+              "T2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 526084,
+            "reply_to": "M6",
+            "text": "To confirm the decisions here: I will lead the creation of the layout plan (A3) once inputs are ready (D1). The immediate first step is the technical site survey (T1) (D2).",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 255537,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 49409,
+              "when": "EOD Friday"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Establish the quality criteria for the pilot batch.",
+        "messages": [
+          {
+            "msg_id": "M8",
+            "speaker_id": 49409,
+            "reply_to": null,
+            "text": "Hi @48820, to build on our discussion about the QC station, we should define the quality standards for the pilot batch now. This will impact the 'End-to-end production process and quality control workflow' deliverable. I've started a draft document (A4). I propose we align our criteria with the ISO 13485 standard for medical devices as a baseline. It's the most relevant framework for these types of appliances.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 48820,
+            "reply_to": "M8",
+            "text": "Yes, quality is very important. ISO 13485 is a good starting point. What specific tests and checks do you think we need to include in our workflow?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 49409,
+            "reply_to": "M9",
+            "text": "For these appliances, the critical-to-quality characteristics are dimensional accuracy to the micron, material purity to avoid contamination, and surface finish. I can draft an initial QC checklist (A5) detailing the specific parameters, measurement methods, and pass/fail tolerances for each. I should have a first draft ready for you to look at by tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 48820,
+            "reply_to": "M10",
+            "text": "Ok, that sounds like a good plan. Please send over the draft checklist (A5) when it's ready and I will review it against our planned production process.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 49409,
+            "reply_to": "M11",
+            "text": "Perfect. So, we are aligned. Decision: The quality criteria will be based on ISO 13485 standards (D3). And I will draft the initial QC checklist (A5) for the pilot batch (D4). I'll create T3 for this.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 49409,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 48820,
+              "when": "day after tomorrow"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (14 messages), TH3 (13 messages), and TH5 (11 messages) fall below the minimum expected 16 messages per thread. Additionally, they do not meet the blueprint target_messages_range."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T7 is listed in artifacts_to_reference for TH3 in the blueprint, but it is never referenced in the artifact_refs of any message in TH3."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

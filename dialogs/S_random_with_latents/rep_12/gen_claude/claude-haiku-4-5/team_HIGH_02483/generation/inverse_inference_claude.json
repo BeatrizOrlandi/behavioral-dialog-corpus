@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "_id": 96134,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant 96134 consistently initiates threads, prepares comprehensive artifacts before discussions, drives decisions to closure, and owns critical path tasks. Demonstrates strategic thinking (e.g., validation at ingestion, schema versioning, batch vs. streaming trade-offs), anticipates dependencies, and translates discussions into actionable next steps. Closes all major decisions and unblocks downstream work.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M1",
+          "snippet": "I've prepared A2 and A1 as starting points. Let's align on what we're shipping in 21 days."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M3",
+          "snippet": "I think we should validate at ingestion—it's cleaner and catches bad data early. We can add a schema validation step in the pipeline before it hits raw storage."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M11",
+          "snippet": "D1 approved—we're shipping with the metrics in A2. D2 approved—event tracking schema in A1 with snake_case, versioning, and validation rules. T1 is now unblocked."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "D3 is also locked: we're going with option 1 from A3—batch ingestion, SQL transforms, star schema, daily refresh. T2, T3, and T4 are now unblocked."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M45",
+          "snippet": "D8 is locked: we confirm launch on day 21 if A4 checklist is green. All tasks are on track. Let's ship this."
+        }
+      ]
+    },
+    {
+      "_id": 92214,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant 92214 asks precise technical questions that uncover design gaps (event validation timing, monitoring requirements, performance targets), synthesizes discussions into clear summaries, and owns critical implementation tasks (T3, T11). Demonstrates strong systems thinking and proactively identifies operational concerns (monitoring, alerting, performance benchmarking).",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "are we handling event validation at ingestion time or downstream in the transformation layer? That'll affect how we structure T2."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M10",
+          "snippet": "So to summarize: snake_case properties, top 5 events first, schema versioning, validation at ingestion. Are we ready to lock D1 and D2?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "I want to make sure we have monitoring and alerting from day one. T2 needs to include basic checks: did events land? Are there any schema mismatches?"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M21",
+          "snippet": "Alright, I think we're aligned. So: option 1 (batch daily), SQL transformations, star schema, monitoring from day one. That leaves one question: D4—what's our refresh frequency?"
+        }
+      ]
+    },
+    {
+      "_id": 155243,
+      "productivity_level": "MID",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant 155243 identifies critical architectural concerns (backwards compatibility, data freshness, access control procedures, on-call rotation) and owns important documentation tasks (T9, T4). Demonstrates strong foresight and risk awareness. However, contributions are more reactive/clarifying than proactive; does not initiate threads or prepare artifacts upfront.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M8",
+          "snippet": "we need to think about backwards compatibility early. If we change the schema later, how do we handle old events? Should we version the events or the entire schema?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M28",
+          "snippet": "If we're refreshing daily at 2 AM, the dashboard will show yesterday's data. Is that acceptable, or do we need more frequent updates?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M35",
+          "snippet": "I want to make sure we document this in A6. T9 should include a section on access control procedures and incident response if someone accesses data they shouldn't."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M42",
+          "snippet": "do we have an on-call rotation set up for the first week after launch? Someone needs to monitor for issues."
+        }
+      ]
+    },
+    {
+      "_id": 30972,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant 30972 participates consistently with reasonable questions (event prioritization, cardinality constraints, transformation tool selection, performance feasibility, rollback criteria) but does not demonstrate exceptional depth or proactive leadership. Contributions are clarifying and incremental rather than strategic or risk-anticipating. Participates in discussions but does not drive decisions or own critical path items.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M6",
+          "snippet": "Are all 10 events per product equally important, or should we sequence implementation? Also, do we need to worry about event cardinality or dimensionality constraints?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "for T3, are we using SQL, Python, or a framework like dbt? That affects how we structure the code and dependencies."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M26",
+          "snippet": "Is that realistic given the data volume? What's our expected row count in the fact table?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M40",
+          "snippet": "do we have a rollback plan if something goes wrong at launch? What's our go/no-go criteria?"
+        }
+      ]
+    },
+    {
+      "_id": 8323,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant 8323 asks focused technical questions (naming conventions, dimensional modeling) and participates in discussions but contributes less frequently and with less strategic depth than peers. Does not initiate threads, prepare artifacts, or drive decisions. Contributions are narrow and reactive rather than comprehensive or forward-looking.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M4",
+          "snippet": "Looking at A1, I have a question on the property naming conventions. Are we using snake_case or camelCase?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M19",
+          "snippet": "For T4, I want to make sure we're thinking about the dimensional model upfront. Should we use a star schema or something simpler for MVP?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M44",
+          "snippet": "Everything seems in order. One last thing: after launch, what's our plan for v2? Should we start capturing feedback now?"
+        }
+      ]
+    }
+  ]
+}

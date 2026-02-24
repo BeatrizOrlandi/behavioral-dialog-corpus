@@ -1,0 +1,1720 @@
+{
+  "channel": {
+    "channel_id": "proj-packaging-uptime-waste",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, baseline approach, and responsibilities for the project.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 33287,
+            "reply_to": null,
+            "text": "Kicking off the Packaging Line Uptime and Food Waste Reduction Initiative for project_pack_ref: Packaging Line Uptime and Food Waste Reduction Initiative.\nProposal for scope so we can lock it in:\n- Line: main flow-wrapped packaging line after cooling tunnel\n- Shifts: all three shifts on weekdays, plus Saturday day shift only\nWe will use A7 as the central view for dates and responsibilities.\nFor responsibilities, my suggestion:\n- T1 (mapping machines and failure history): led by 33287 with support from 11000 and 386277\n- T2 (baseline downtime and waste logging): led by 95118, with mechanics helping clarify fault codes when needed\nBefore we confirm, can you all check if this scope matches how you see the line and shifts, and if the task split is workable within the 21-day window",
+            "mentions": [
+              11000,
+              95118,
+              386277,
+              533175
+            ],
+            "artifact_refs": [
+              "A7",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 95118,
+            "reply_to": "M1",
+            "text": "From the operator side, the described line matches what I run most of the week.\nOn shifts: I cover late shift and some nights. Including all three weekday shifts plus Saturday day shift sounds ok, but I want to flag that Sunday clean-down sometimes has unusual stoppages that might distort T2 if we mix it in.\nFor T2, I am fine to own the baseline logging using A1, but I will need a very simple layout and clear categories for downtime and waste so all shifts can use it consistently. I can also help keep A7 updated with what we see on the floor.\nI agree with you leading T1. I will need a quick walk-through of the fault codes so I can log them correctly.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A1",
+              "A7",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 386277,
+            "reply_to": "M1",
+            "text": "On the scope: focusing on the main flow-wrapped line and the weekday plus Saturday day shifts makes sense to me. Sunday is mostly deep cleaning and odd jobs, so I agree with keeping that out of the baseline.\nFor T1, I can support by pulling the last 3 months of breakdown logs from maintenance records and grouping the main mechanical and electrical issues. I will also check if we have any notes on food waste spikes linked to specific faults.\nFor T2, I suggest we align the downtime reasons with the codes we already use in the maintenance system so we do not create a parallel language. I can help 95118 with a short list of codes and examples.",
+            "mentions": [
+              95118,
+              33287
+            ],
+            "artifact_refs": [
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 11000,
+            "reply_to": "M1",
+            "text": "I can help on T1, but I am not fully sure about all the machine names on the line.\nMaybe we can walk the line together and you point out which ones are critical for uptime and waste. I can then take pictures and note basic specs like model plates.\nFor shifts, I mostly cover early shift. If we are including all weekday shifts, I can start noting any unplanned stops and visible waste in a simple sheet until A1 is ready, then we can transfer it.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 533175,
+            "reply_to": "M1",
+            "text": "Scope sounds reasonable to me as well. Keeping Sunday out of the baseline will avoid mixing in atypical cleaning-related downtime.\nOn responsibilities:\n- T1: I can support 33287 and 386277 by checking which machines are already tagged as critical in our maintenance system and by validating the top 5 failure modes once we have the data.\n- T2: happy to review the first version of A1 from a practical point of view, to make sure the categories are easy for operators to use during busy periods.\nOne question: do we want to include minor micro-stops in T2, or only events above a certain duration",
+            "mentions": [
+              33287,
+              386277,
+              95118
+            ],
+            "artifact_refs": [
+              "T1",
+              "T2",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 33287,
+            "reply_to": "M5",
+            "text": "Good question on micro-stops.\nProposal:\n- For T2, we log any stop above 2 minutes as downtime with a reason code.\n- Micro-stops under 2 minutes are only logged if they clearly cause visible waste or repeated jams.\nThis keeps A1 manageable while still capturing the main drivers.\nOn scope: I am hearing alignment on main flow-wrapped line and weekday plus Saturday day shifts, excluding Sunday cleaning.\nUnless anyone objects by this afternoon, I will record that as our agreed scope in A7 and move ahead with the task split as proposed.",
+            "mentions": [
+              533175,
+              95118,
+              386277,
+              11000
+            ],
+            "artifact_refs": [
+              "A1",
+              "A7",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 95118,
+            "reply_to": "M6",
+            "text": "The 2-minute rule works for me. It is simple enough to remember on the line.\nFor waste, I will make sure we note any product that has to be thrown away due to jams or mispacks, even if the stop is short.\nI am ok with the scope and with owning T2. I will start drafting a simple version of A1 and share it here before we roll it out to all shifts.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 386277,
+            "reply_to": "M6",
+            "text": "No objections from me.\nI will block some time tomorrow morning to walk the line with 33287 and 11000 for T1, so we can list all key machines and note their basic specs.\nAfter that, I will pull the last 3 months of breakdown history and start grouping the main failure modes so we can identify the top 5 by frequency and impact.",
+            "mentions": [
+              33287,
+              11000
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_calendar_pad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 11000,
+            "reply_to": "M8",
+            "text": "Tomorrow morning works for me for the line walk.\nI will bring a notebook and note down the machine names and any obvious issues we see, like leaks or loose guards, so we can feed that into T1 and later into the maintenance planning.",
+            "mentions": [
+              386277,
+              33287
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 533175,
+            "reply_to": "M7",
+            "text": "Sounds good.\nOnce you have the first draft of A1, I can quickly test it on a short shift and see if the categories and the 2-minute rule are practical. We can then adjust before asking all shifts to use it for the full 7-day baseline for T2.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 33287,
+            "reply_to": "M1",
+            "text": "Summarising where we landed so we can close the open points:\n- Scope: main flow-wrapped packaging line after cooling tunnel.\n- Shifts in scope: all three weekday shifts plus Saturday day shift; Sunday cleaning excluded from baseline.\n- Baseline rules for T2: log stops above 2 minutes as downtime with a reason code; log shorter events only if they clearly cause waste.\n- Responsibilities: T1 led by 33287 with support from 11000, 386277, and 533175; T2 led by 95118 with support from mechanics on codes and testing A1.\nI will update A7 with this scope and ownership so we have a single reference.",
+            "mentions": [
+              11000,
+              95118,
+              386277,
+              533175
+            ],
+            "artifact_refs": [
+              "A7",
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 33287,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 386277,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 11000,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 95118,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and finalise preventive maintenance schedule and checklists.",
+        "messages": [
+          {
+            "msg_id": "M12",
+            "speaker_id": 33287,
+            "reply_to": null,
+            "text": "Sharing the first draft of the preventive maintenance schedule and checklists for the main packaging line.\nKey points from T3 and T5:\n- Critical components identified: infeed conveyor drives, film unwind, sealing jaws, cutters, and main gearbox.\n- Proposed service intervals: daily visual checks and cleaning, weekly lubrication and safety checks, monthly deeper inspections and test runs.\n- Draft A2 checklist is split into daily, weekly, and monthly sections, and I have cross-checked it with A8 to avoid any conflict with environmental and waste handling rules.\nBefore we lock this in, I would like feedback on:\n1) Whether the intervals fit the current production calendar.\n2) If any steps are missing or too heavy for the planned downtime windows.",
+            "mentions": [
+              386277,
+              533175,
+              11000,
+              95118
+            ],
+            "artifact_refs": [
+              "T3",
+              "T5",
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 386277,
+            "reply_to": "M12",
+            "text": "Thanks for putting this together.\nFrom what I see, the daily section in A2 looks realistic for operators and mechanics to complete during normal changeovers.\nOn the weekly tasks, I am slightly concerned about fitting all lubrication and safety checks into the current Friday afternoon window. We often get last-minute orders.\nMaybe we can split some of the weekly items across two shorter windows, for example half on Wednesday and half on Friday, while still meeting the T3 requirement to fit the schedule into the production calendar.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 11000,
+            "reply_to": "M12",
+            "text": "I went through the daily part of A2.\nSome of the checks are clear, like looking for leaks or loose guards. But I am not sure how to properly check the sealing jaws without risking burns or touching the wrong parts.\nCould we add a short note or picture in the checklist to show where to look and when the machine must be stopped and locked out before checking",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 533175,
+            "reply_to": "M12",
+            "text": "On the schedule from T3, I agree with 386277 that the weekly block might be tight.\nWe could try this pattern:\n- Wednesday: lubrication of infeed conveyors and film unwind, plus quick safety checks.\n- Friday: sealing jaws, cutters, and main gearbox checks.\nThat way, if Friday gets squeezed, at least half of the weekly work is already done.\nOn A8, I checked the waste handling parts. The proposed cleaning and lubrication steps do not seem to create extra risk, as long as we keep the used rags and any waste oil in the designated containers listed in A8.",
+            "mentions": [
+              386277,
+              33287
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "oil_drum",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 95118,
+            "reply_to": "M12",
+            "text": "From the operator side, the daily checklist in A2 is ok, but we need to keep it short enough so it does not delay start-up.\nIf we add pictures or notes as 11000 suggested, it will help new operators understand what to look for.\nFor weekly and monthly tasks, I just want to confirm that any work that affects guards or safety devices will be done by mechanics, not operators, and that we keep alignment with A8 on waste handling and cleaning chemicals.",
+            "mentions": [
+              33287,
+              11000
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 33287,
+            "reply_to": "M13",
+            "text": "Good points.\nI can rework the T3 schedule so that:\n- Wednesday: conveyor and film unwind lubrication and quick safety checks.\n- Friday: sealing jaws, cutters, and gearbox.\nThis should reduce the risk of missing weekly tasks when Friday is busy.\nOn A2, I will also mark clearly which items are mechanic-only, especially anything involving guards, safety devices, or live electrical parts, to avoid confusion for operators.",
+            "mentions": [
+              386277,
+              95118
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 33287,
+            "reply_to": "M14",
+            "text": "On the sealing jaws check: you are right to be cautious.\nI will update A2 so that the daily check is only visual from a safe distance while the machine is running, and any close inspection is done during a stop with lockout applied by a mechanic.\nWe can also add a small sketch or photo to show the safe viewing points. I will ask quality and health and safety to quickly review that part to make sure it aligns with our rules and A8.",
+            "mentions": [
+              11000
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "fire_extinguisher",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 386277,
+            "reply_to": "M17",
+            "text": "The split schedule sounds workable.\nI can test the Wednesday and Friday pattern next week and see how long each block actually takes in practice. That will give us data to fine-tune T3 before we call it final.\nFor A2, I can also run through the weekly checklist on one full cycle and note any steps that feel redundant or unclear.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 11000,
+            "reply_to": "M18",
+            "text": "Thanks for clarifying.\nIf the close checks on the sealing jaws are mechanic-only and done with lockout, that makes it much clearer for me.\nOnce you add the sketch to A2, I will try the daily visual check and let you know if anything is still confusing.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 533175,
+            "reply_to": "M19",
+            "text": "I can join the first Wednesday and Friday runs to time the tasks and check that we are not creating bottlenecks around changeovers.\nAlso, for T11, I will quickly review how we handle used lubricants and cleaning materials during these PM activities against A8, and document any small gaps so we can close them before we roll out the final schedule and checklists.",
+            "mentions": [
+              386277,
+              33287
+            ],
+            "artifact_refs": [
+              "T11",
+              "A8",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "recycle",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 33287,
+            "reply_to": "M12",
+            "text": "Quick update after the feedback:\n- T3 schedule now uses the split weekly pattern (Wednesday and Friday) and keeps monthly checks in the planned longer downtime.\n- A2 has been updated to mark mechanic-only tasks and to clarify the sealing jaw checks, with a visual-only daily check for operators.\n- T11 review is in progress to confirm that the way we handle lubricants and cleaning waste during PM is aligned with A8.\nIf there are no further concerns by tomorrow, I suggest we treat this PM schedule as approved for the pilot week, and the current A2 checklist as the version we will use in that pilot.",
+            "mentions": [
+              386277,
+              533175,
+              11000,
+              95118
+            ],
+            "artifact_refs": [
+              "T3",
+              "T5",
+              "T11",
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 95118,
+            "reply_to": "M22",
+            "text": "No further concerns from me.\nFrom an operator perspective, the daily part of A2 is clear enough now, and the split weekly pattern should reduce clashes with production.\nI am ok to start using this version during the pilot week.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 386277,
+            "reply_to": "M22",
+            "text": "Same here, I am comfortable piloting the updated T3 schedule and A2 checklist.\nI will capture any issues or delays during the first week so we can adjust before calling it final.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 533175,
+            "reply_to": "M22",
+            "text": "I have completed a quick T11 check against A8 for the PM activities. No major gaps, just a reminder to always use the labelled waste containers near the line.\nFrom my side, I am fine to treat the current T3 schedule and A2 checklist as the baseline for the pilot.\nAfter the pilot week, we can freeze the content and format unless we find something significant.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T11",
+              "A8",
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 33287,
+            "reply_to": "M12",
+            "text": "Thanks all.\nBased on the feedback and the quick T11 review, we will:\n- Use the updated preventive maintenance schedule from T3 (with split weekly pattern) as the approved plan for critical machines on the main packaging line.\n- Use the current A2 checklist format and content, including the clarified safety notes and mechanic-only tasks, as the standard for daily, weekly, and monthly checks.\nWe will still collect feedback during the pilot week, but for this project phase we can treat the schedule and checklists as approved.",
+            "mentions": [
+              386277,
+              533175,
+              11000,
+              95118
+            ],
+            "artifact_refs": [
+              "T3",
+              "T5",
+              "T11",
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 386277,
+              "when": "next week"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 33287,
+              "when": "next week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 533175,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Standardise operator SOPs and quality/waste checks across shifts.",
+        "messages": [
+          {
+            "msg_id": "M27",
+            "speaker_id": 95118,
+            "reply_to": null,
+            "text": "I am sharing the draft SOP for start-up, changeover, shutdown, and cleaning of the main packaging line, plus a first version of the operator quality and waste quick guide.\nHighlights:\n- A3 covers step-by-step start-up, including basic checks from A2, and a simple shutdown and cleaning sequence that respects GMP.\n- A5 focuses on visual checks for raw materials, packaging quality, and main waste points on the line.\nThese drafts are linked to T4, T8, and will feed into T9 for training.\nI would appreciate feedback on:\n1) Any missing steps that you see in your shift routines.\n2) Parts that are unclear or too detailed for a quick reference.",
+            "mentions": [
+              33287,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "page_facing_up",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 33287,
+            "reply_to": "M27",
+            "text": "I went through A3 and A5.\nFrom a mechanical point of view, the start-up sequence in A3 is consistent with the PM checks in A2, which is good.\nOne suggestion: in the start-up section, maybe add a short note to wait for the temperature of the sealing jaws to stabilise before running product, to avoid early mispacks and waste.\nOn A5, the waste checks around the infeed and discharge look fine. We might want to add a quick reminder to call mechanics if the same jam repeats more than twice in a short period, so we can look for a deeper cause.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "A2",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 386277,
+            "reply_to": "M27",
+            "text": "On A3, I like that you separated normal shutdown from cleaning shutdown.\nFor cleaning, could we emphasise that any removal of guards or covers must be done by mechanics, and that operators should not bypass safety devices even for quick rinses\nOn A5, maybe we can add a simple traffic-light style for packaging quality: green for ok, amber for watch, red for stop and escalate. That might help operators decide when to stop the line versus when to keep running and monitor.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "traffic_light",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 11000,
+            "reply_to": "M27",
+            "text": "I read through A3.\nSome of the steps are very detailed, and I am not sure in which order to do the checks when we are under time pressure.\nCould we maybe highlight the absolutely must-do steps in bold or in a short checklist at the top, and keep the extra explanations below for those who need more detail",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 533175,
+            "reply_to": "M27",
+            "text": "On A5, I like the focus on visual checks.\nMaybe we can add one more check at the film unwind: if the film is tracking off-centre or has visible damage, operators should stop and correct it before it leads to a lot of mispacks.\nFor T9, once A3 and A5 are final, I suggest we run short 15-minute briefings at the start of each shift, using real examples of good and bad packs to make the guide more concrete.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8",
+              "T9",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 95118,
+            "reply_to": "M28",
+            "text": "Thanks for the comments.\nI will update A3 to include a short wait for sealing jaw temperature stabilisation before running product, and add a note in A5 about calling mechanics if the same jam repeats more than twice.\nThat should help reduce early waste and make sure we do not just keep clearing the same issue without looking deeper.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 95118,
+            "reply_to": "M29",
+            "text": "Good point on cleaning.\nI will make it explicit in A3 that any removal of guards or covers is mechanic-only, and that operators must not bypass safety devices.\nFor A5, I like the traffic-light idea. I will add a simple green/amber/red section with examples so operators know when to stop the line and escalate.",
+            "mentions": [
+              386277
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 95118,
+            "reply_to": "M30",
+            "text": "I see what you mean.\nI will reformat A3 so that each section starts with a short checklist of the essential steps, and the detailed explanations follow below. That way, in a rush you can follow the short list, and when training new staff we can use the full text.\nWe will also keep the language as simple as possible so all shifts can follow it.",
+            "mentions": [
+              11000
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 95118,
+            "reply_to": "M31",
+            "text": "I will add the film tracking check at the unwind into A5, with a clear instruction to stop and correct if the film is off-centre or damaged.\nOn T9, I agree with short 15-minute briefings. Once A3 and A5 are final, I can prepare a simple slide or printout with photos of good and bad packs to use in those sessions.",
+            "mentions": [
+              533175
+            ],
+            "artifact_refs": [
+              "A5",
+              "T9",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "projector",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 33287,
+            "reply_to": "M27",
+            "text": "One more small suggestion: in A3, during shutdown, maybe add a reminder to leave the line in a safe state for maintenance, for example clearing product from the sealing area and switching off the main isolator if mechanics are expected.\nThis will help us start T3 and T5 tasks more smoothly.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "electric_plug",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 95118,
+            "reply_to": "M36",
+            "text": "Good idea.\nI will add a short section at the end of the shutdown part in A3 about leaving the line safe for maintenance, including clearing product and switching off the main isolator when mechanics are planned.\nOnce I have all these edits in, I will share a near-final version for a last check.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 386277,
+            "reply_to": "M37",
+            "text": "When the updated A3 and A5 are ready, I can do a quick run-through on the line with one operator from each shift to see if any steps are confusing in practice.\nThat will also give us early feedback for T9 before we schedule the full briefings.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "walking",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 95118,
+            "reply_to": "M27",
+            "text": "I have now applied all the feedback:\n- A3: clearer essential checklists, explicit notes on sealing jaw warm-up, guard and safety rules, and leaving the line safe for maintenance.\n- A5: added jam escalation rule, traffic-light packaging quality section, and film tracking check.\nFrom my side, these versions are ready to share with quality for a quick review, and then to use as the standard across shifts once approved.\nUnless there are strong objections, I suggest we treat these as the final drafts for sign-off.",
+            "mentions": [
+              33287,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 33287,
+            "reply_to": "M39",
+            "text": "From a mechanical and safety perspective, I am comfortable with the updated A3 and A5.\nAs long as quality confirms that the cleaning and product handling steps are aligned with GMP, I support rolling these out as the standard for the main packaging line.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 533175,
+            "reply_to": "M39",
+            "text": "Same here, I am ok with these versions.\nOnce quality signs off, we can print A5 and post it at the line, and use A3 as the reference in T9 training sessions.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "printer",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 11000,
+            "reply_to": "M39",
+            "text": "The new layout of A3 with the short checklists at the top is much easier to follow.\nI am happy to use this version on my shift once quality has approved it.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 95118,
+            "reply_to": "M27",
+            "text": "Quality has now reviewed and approved both A3 and A5.\nSo to summarise:\n- A3 is our standard start-up, changeover, shutdown, and cleaning SOP for the main packaging line.\n- A5 is our final operator quick guide for quality and waste checks, to be posted at the line.\nI will schedule the T9 briefings using these documents and make sure all shifts are covered.",
+            "mentions": [
+              33287,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 95118,
+              "when": "next week"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 95118,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 95118,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Discuss recurring faults, root causes, and corrective actions.",
+        "messages": [
+          {
+            "msg_id": "M44",
+            "speaker_id": 33287,
+            "reply_to": null,
+            "text": "I have pulled together preliminary findings from T6 on the top 3 recurring mechanical faults on the main packaging line.\nSummary in A4 draft:\n1) Infeed conveyor jams leading to product pile-ups and waste.\n2) Film tracking issues causing misaligned seals and rework.\n3) Sealing jaw temperature instability leading to open or crushed packs.\nFor each, A4 lists suspected root causes, evidence from logs and operator feedback, and some candidate corrective actions. Some of these link to T7, where we might adjust machine settings to reduce product damage and waste.\nI would like your input on:\n- Whether the described patterns match what you see on shifts.\n- Which corrective actions we should prioritise within the remaining project time.",
+            "mentions": [
+              386277,
+              533175,
+              11000,
+              95118
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 386277,
+            "reply_to": "M44",
+            "text": "The three faults you listed match what I have seen.\nOn infeed jams, I noticed that they often happen when product spacing from the upstream process is inconsistent. That might mean we need both a mechanical tweak and a small change in how operators manage the upstream flow.\nFor film tracking, I suspect worn rollers and occasional contamination on the film path. A4 mentions cleaning, but maybe we should also look at replacing a couple of worn parts.\nGiven the timebox, I would prioritise actions that reduce waste quickly, probably starting with film tracking and sealing jaw stability.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 95118,
+            "reply_to": "M44",
+            "text": "From the operator side, the list in A4 feels accurate.\nFilm tracking and sealing issues are the ones that create the most visible waste and rework on my shifts.\nFor infeed jams, I agree with 386277 that upstream spacing is a big factor. If we can add a simple operator rule in A3 or A5 about when to slow down or stop upstream when we see early signs of pile-up, that might help alongside any mechanical changes.",
+            "mentions": [
+              33287,
+              386277
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 11000,
+            "reply_to": "M44",
+            "text": "I have seen the infeed jams a lot, but I am not always sure what to adjust.\nSometimes I try to clear the jam and restart, but it comes back quickly.\nIf we change settings under T7, will there be a simple guide for what operators can adjust and what should be left to mechanics",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 533175,
+            "reply_to": "M44",
+            "text": "Looking at A4, I agree that film tracking and sealing jaw temperature are strong candidates for T7 pilots.\nWe could:\n- Define safe parameter ranges for film tension and tracking, and test a slightly lower tension to reduce film damage.\n- Stabilise sealing jaw temperature by tightening the control band and checking the sensors.\nWe will need quality to approve any parameter ranges before we run pilots, to make sure we do not compromise seal integrity.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 33287,
+            "reply_to": "M45",
+            "text": "Thanks for the input.\nBased on what you and 95118 said, I suggest we prioritise:\n1) Film tracking and tension adjustments under T7, with a focus on reducing misaligned seals and film waste.\n2) Sealing jaw temperature stability, by checking sensors and control settings.\n3) For infeed jams, a mix of small mechanical tweaks and an operator rule in A3 or A5 about managing upstream flow.\nWe can still document the infeed root causes in A4, but the heavier mechanical changes might fall outside this project window.",
+            "mentions": [
+              386277,
+              95118,
+              533175
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 386277,
+            "reply_to": "M49",
+            "text": "That order makes sense.\nI can help define the safe parameter ranges for film tension and tracking, and run a short test on one shift to see how the line behaves.\nFor sealing jaw temperature, I will check the sensors and wiring first, then we can adjust the control band if everything is in good condition.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 95118,
+            "reply_to": "M49",
+            "text": "I support that focus.\nIf we can reduce film and sealing-related waste, it will be very visible in the daily numbers.\nFor infeed jams, I can help draft a simple operator rule for A3 and A5, like when to slow upstream or call mechanics, based on early signs of pile-up.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 33287,
+            "reply_to": "M47",
+            "text": "On your question about settings:\nFor T7, we will clearly separate what operators can adjust and what is mechanic-only.\nOperators will have simple rules in A3 and A5, for example when to slow the line or stop and call mechanics.\nMechanic-only adjustments, like changing film tension setpoints or control parameters, will be documented in our internal maintenance notes and not in the operator SOP.",
+            "mentions": [
+              11000
+            ],
+            "artifact_refs": [
+              "T7",
+              "A3",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "information_source",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 533175,
+            "reply_to": "M50",
+            "text": "I can join the T7 pilot runs to monitor product quality and waste.\nWe should plan at least one full shift for each parameter set, using A6 later to compare waste and downtime against the baseline from A1.\nI will also keep quality in the loop so they can sign off on the safe ranges before we start.",
+            "mentions": [
+              386277,
+              33287
+            ],
+            "artifact_refs": [
+              "T7",
+              "A6",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 386277,
+            "reply_to": "M44",
+            "text": "One more thought: for sealing jaw temperature issues, A4 mentions occasional sensor drift.\nIf we find a sensor that is clearly unreliable, we might need to replace it even though the project avoids major replacements. I think a sensor swap counts as minor and should be ok, but we should still flag it to production and quality before doing it.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thermometer",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 33287,
+            "reply_to": "M44",
+            "text": "To summarise the discussion so far:\n- The three main recurring faults in A4 (infeed jams, film tracking, sealing jaw temperature) match what we see on shifts.\n- For this project, we will prioritise corrective actions that reduce waste quickly: film tracking and tension adjustments, and sealing jaw temperature stability under T7.\n- Infeed jams will be addressed partly through small mechanical tweaks and partly through operator rules in A3 and A5, but larger upstream changes may be out of scope for now.\nIf everyone agrees, we can treat this as our priority list for implementation within the timebox.",
+            "mentions": [
+              386277,
+              533175,
+              95118,
+              11000
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T7",
+              "A3",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 95118,
+            "reply_to": "M55",
+            "text": "I am aligned with that priority list.\nFrom the floor, film and sealing issues are the most painful, so focusing on them first makes sense.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 533175,
+            "reply_to": "M55",
+            "text": "Agreed.\nLet us lock in film tracking and sealing jaw stability as the main T7 pilots, and treat infeed improvements as secondary actions that we do if time allows.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 33287,
+            "reply_to": "M44",
+            "text": "Thanks all for the input.\nWe will proceed as follows:\n- Treat film tracking and tension adjustments, plus sealing jaw temperature stability, as the primary corrective actions to implement under T7 within this project.\n- Capture infeed jam root causes and smaller mitigations in A4 and the operator documents, but leave any larger upstream changes for a later phase.\nI will update A4 to reflect this prioritisation and start planning the T7 pilot runs with 386277 and 533175.",
+            "mentions": [
+              386277,
+              533175,
+              95118,
+              11000
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7",
+              "T6"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 386277,
+              "when": "next week"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 533175,
+              "when": "next week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 33287,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review post-implementation performance and close the project.",
+        "messages": [
+          {
+            "msg_id": "M59",
+            "speaker_id": 33287,
+            "reply_to": null,
+            "text": "We now have post-implementation data from T10 for the main packaging line, captured in A6 and compared to the baseline in A1.\nHeadline results:\n- Unplanned downtime on the line is down by about 18 percent versus baseline.\n- Recorded food waste on the line is down by about 22 percent.\nThese improvements line up with the new PM schedule (T3, T5), the SOP and quick guide (A3, A5), and the T7 setting adjustments.\nI would like to:\n1) Confirm that these numbers match what you are seeing on shifts.\n2) Discuss whether we should extend these practices to other lines or shifts beyond the current scope.",
+            "mentions": [
+              95118,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "T10",
+              "A6",
+              "A1",
+              "A3",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 95118,
+            "reply_to": "M59",
+            "text": "On my shifts, the numbers feel realistic.\nWe have fewer long stops for film and sealing issues, and when they do happen, the SOP in A3 and the checks in A5 help us react faster.\nOperators are also more aware of waste points now, and the quick guide is used regularly.\nIf we extend anything, I would start with making sure all weekend shifts use the same SOP and quick guide, since they sometimes still follow older habits.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A3",
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 386277,
+            "reply_to": "M59",
+            "text": "From the maintenance side, we see fewer repeat faults on the main line, especially around film tracking and sealing.\nThe PM schedule from T3 and the A2 checklist are being followed more consistently, which probably contributes to the downtime reduction you see in A6.\nI think the approach is mature enough to extend to at least one similar packaging line, but we should be careful to adapt the details to the specific machines.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T3",
+              "A2",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 11000,
+            "reply_to": "M59",
+            "text": "I noticed that we spend less time clearing the same jams over and over.\nThe daily checks and the quick guide help me spot issues earlier.\nIf we roll this out to other lines, I would need a bit of support at the start to understand any differences in the machines.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "smiley",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 533175,
+            "reply_to": "M59",
+            "text": "The T7 pilots clearly helped. On the shifts where we used the adjusted settings, A6 shows lower waste without new quality issues.\nQuality has confirmed that seal integrity remains within spec.\nI agree with extending the practices, but I would suggest a phased approach: first include the weekend shifts on the same line, then consider one additional line as a second phase.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T7",
+              "A6",
+              "A3",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 33287,
+            "reply_to": "M60",
+            "text": "Good point on weekend shifts.\nWe can use T12 to coordinate a simple timeline for extending A3, A5, and the PM checks to weekend teams on the same line.\nFor other lines, we will need to check with production and quality to confirm priorities and any machine-specific constraints.",
+            "mentions": [
+              95118
+            ],
+            "artifact_refs": [
+              "T12",
+              "A3",
+              "A5",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_calendar_pad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 95118,
+            "reply_to": "M64",
+            "text": "I can take the lead on T12 for the communication part.\nPlan would be:\n- Share a short summary of the results from A6 and the key changes (A3, A5, A2) on the noticeboard and in this channel.\n- Brief weekend shift leads and capture any feedback.\n- Adjust the timeline if they flag any major conflicts with their current routines.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T12",
+              "A6",
+              "A3",
+              "A5",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 386277,
+            "reply_to": "M63",
+            "text": "For extending to another line, I suggest we first map the differences in equipment and existing PM routines.\nWe can then copy the structure of T3, T5, and A2, but adjust the details.\nGiven current workload, I would prefer to start that in a separate mini-project once this one is officially closed.",
+            "mentions": [
+              533175,
+              33287
+            ],
+            "artifact_refs": [
+              "T3",
+              "T5",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 533175,
+            "reply_to": "M66",
+            "text": "Agreed, a separate mini-project for another line makes sense.\nFor now, we can document in the final report that the approach is transferable, but actual rollout will depend on capacity and priorities.",
+            "mentions": [
+              386277,
+              33287
+            ],
+            "artifact_refs": [
+              "T10",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 33287,
+            "reply_to": "M59",
+            "text": "So far, I am hearing support for:\n- Keeping the new practices as standard on the main packaging line.\n- Extending them to weekend shifts on the same line via T12.\n- Considering other lines later via a separate initiative.\nIf there are no objections, I will reflect this in the final T10 summary and in A7 as the closure note for this project.",
+            "mentions": [
+              95118,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "T10",
+              "T12",
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 95118,
+            "reply_to": "M68",
+            "text": "No objections from me.\nExtending to weekend shifts on the same line is a good next step, and we can share the results with the rest of the site as an example.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "T12",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 386277,
+            "reply_to": "M68",
+            "text": "I am aligned with that plan.\nWe can keep monitoring the main line using A6 for a while to make sure the gains are stable, and then revisit the idea of extending to other lines.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 533175,
+            "reply_to": "M68",
+            "text": "Same here, I support keeping the practices on the main line and extending to weekend shifts.\nWe can propose the second-line rollout to leadership as a follow-up once we have a few more weeks of stable data.",
+            "mentions": [
+              33287
+            ],
+            "artifact_refs": [
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 33287,
+            "reply_to": "M59",
+            "text": "Thanks everyone.\nWe will close this project with the following decision:\n- The new PM schedule, SOP, and operator guides remain in place as standard on the main packaging line.\n- We extend these practices to weekend shifts on the same line via T12.\n- We do not immediately extend to other lines, but we will recommend a follow-up project based on the positive results in A6.\nI will finalise the T10 report and update A7 accordingly.",
+            "mentions": [
+              95118,
+              386277,
+              533175,
+              11000
+            ],
+            "artifact_refs": [
+              "T10",
+              "T12",
+              "A6",
+              "A7",
+              "A3",
+              "A5",
+              "A2"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 95118,
+              "when": "next week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 33287,
+              "when": "today"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

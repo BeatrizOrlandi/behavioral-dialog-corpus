@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 has 13 messages, which is below the minimum required count of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Multiple threads fail to reference mandatory task IDs from the blueprint. The conversation consistently references the output artifacts (A*) but omits the corresponding backlog tasks (T*). Missing references include: T8 in TH1; T1 in TH2; T2, T3, T12 in TH3; T5, T6, T7 in TH4; T7, T9 in TH5."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

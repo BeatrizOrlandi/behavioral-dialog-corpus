@@ -1,0 +1,139 @@
+{
+  "predictions": [
+    {
+      "_id": 29405,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant consistently delivers ahead of schedule with concrete outputs (BOM, cost estimates, manufacturing plans). Demonstrates proactive problem-solving (PCB vendor outreach, cost optimization analysis, pilot feedback compilation). Identifies dependencies early and drives decisions forward with precision. Shows strong technical depth in manufacturing and supply chain considerations.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M7",
+          "snippet": "I'm seeing the sensor list now—looks like 4 temperature, 2 vibration, 1 power sensor. That's manageable for BOM. But I want to confirm: are we doing custom PCB or using off-the-shelf modules?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "From manufacturing perspective, I need clarity on sensor count and types early—that drives BOM and assembly complexity. Also, we should lock the enclosure form factor and IP rating now so design can move forward without rework."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M26",
+          "snippet": "We should outsource the PCB. I've already reached out to two vendors who can turn around a prototype in 5 days. Cost is reasonable and it frees up our team to focus on assembly and testing."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M63",
+          "snippet": "I've reviewed the BOM. We can save about 12% by switching to a lower-cost compute module and using a smaller storage capacity. That brings us closer to the target."
+        }
+      ]
+    },
+    {
+      "_id": 59849,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant delivers detailed technical specifications and architecture designs on schedule. Demonstrates sophisticated reasoning about data buffering, power management, and edge software design. Proactively identifies risks (connectivity, sensor failures) and proposes robust solutions. Shows ability to work in parallel (simulator setup) to unblock dependencies.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M35",
+          "snippet": "Let me run the math: at 5-second intervals with 7 sensors, we're about 100KB per minute. 512MB gives us ~85 hours, which is actually okay. I'll propose 1GB as a compromise—gives us 170 hours of buffer."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M37",
+          "snippet": "Yes, I'll build in sensor health checks and graceful degradation. If a sensor fails, we log an error and continue collecting from others. That's part of the edge software design."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M43",
+          "snippet": "Great. I'll set up a dev environment with a simulator for the sensors so I can start coding the edge software in parallel. That way, I'm not blocked waiting for hardware."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M5",
+          "snippet": "From the data side, I'll need to understand what sensors we're collecting from and how frequently. I'm working on the architecture spec (A4) but want to make sure we align on latency and buffering requirements."
+        }
+      ]
+    },
+    {
+      "_id": 81818,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant initiates and drives the entire project with clear vision and structured decision-making. Consistently synthesizes input from multiple disciplines, closes decisions decisively, and maintains momentum. Demonstrates strategic thinking (MVP scope, pilot site coordination, rollout planning). Owns critical path items and coordinates across teams effectively.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M10",
+          "snippet": "Yes, let's sync tomorrow. I want to lock down the MVP feature list by EOD tomorrow so we can move forward in parallel. Here's what I'm proposing for D1: we freeze the sensor set (4 temp, 2 vibration, 1 power), enclosure form factor (compact, IP65), and data sync interval (every 15 min or on-demand)."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M15",
+          "snippet": "Good. So for D2, we're saying: timestamp, sensor ID, raw value, quality flag. That's our minimal data interface for the pilot. I'll update A1 and A4 to reflect this. Let's confirm both D1 and D2 in tomorrow's sync and move forward."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M50",
+          "snippet": "Perfect. I'll incorporate those into T10. Now, for the pilot sites, I've been in touch with two customers who are ready to participate. Site A is a food processing plant, Site B is a pharmaceutical manufacturer. Both have committed to a 2-week pilot window starting in 3 weeks."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M59",
+          "snippet": "Okay, so D7 is locked: lab test plan includes functional, environmental, electrical safety, and data validation checks. D8 is locked: installation responsibilities are clear, and we have two pilot sites confirmed with 2-week windows starting in 3 weeks."
+        }
+      ]
+    },
+    {
+      "_id": 249439,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant contributes competently to mechanical design and enclosure decisions with reasonable technical input. Delivers on assigned tasks (CAD concepts, technical drawings) within expected timelines. However, contributions are more reactive to others' requirements rather than proactive risk identification. Lacks the depth of analysis or strategic foresight shown by higher performers.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M3",
+          "snippet": "I've been thinking about the mechanical constraints. The enclosure needs to fit in tight spaces on production lines, so compact form factor is critical. I'll sketch a few concepts this week and share CAD outlines for feedback."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M21",
+          "snippet": "Here are the three enclosure concepts I promised. Option A is aluminum with passive cooling—compact, robust, but heavier. Option B is plastic with aluminum heat sink insert—lighter, cheaper, but thermal margin is tighter. Option C is hybrid: plastic body with aluminum top plate for sensor mounting."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M13",
+          "snippet": "Compact IP65 is tight but doable. I'll have three enclosure concepts sketched by tomorrow morning. Aluminum will be my baseline for thermal, but I'll also show plastic option for cost comparison. Electrical, can you confirm the heat dissipation budget so I can size the enclosure properly?"
+        }
+      ]
+    },
+    {
+      "_id": 219209,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant provides competent electrical engineering input and meets assigned deliverables (schematics, safety checklist review, PCB layout). Demonstrates adequate technical knowledge of safety standards and electrical design. However, contributions are largely responsive to others' requests rather than proactive. Does not show the strategic depth or risk anticipation of higher performers.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M4",
+          "snippet": "On electrical side, I'll need to see the sensor specs and power budget before I finalize the schematics. Also, we need to confirm which safety standards apply—IEC 61010 or IEC 61508 depending on the control function."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M22",
+          "snippet": "I've finalized the schematics and run them against the safety checklist (A2). No critical gaps—all grounding, surge protection, and isolation requirements are met. I prefer Option C: hybrid design gives us good thermal performance without the weight penalty."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M14",
+          "snippet": "Heat dissipation should be minimal—maybe 2-3W max from the PCB. I'll have the preliminary schematic by tomorrow EOD. That will give you the component footprint and power distribution layout."
+        }
+      ]
+    }
+  ]
+}

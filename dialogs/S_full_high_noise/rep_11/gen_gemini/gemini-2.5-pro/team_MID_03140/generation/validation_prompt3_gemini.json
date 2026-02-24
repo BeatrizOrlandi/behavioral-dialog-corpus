@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH3, TH4, and TH5 contain 14 messages each, which is below the global minimum of 16 messages per thread. Additionally, TH2, TH3, TH4, and TH5 fall below their respective blueprint target_messages_range minimums."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Messages contain explicit mentions of levels/labels referring to attributes, such as 'high staff turnover' (M8), 'mid-range' (M11), 'low-risk' (M35), and 'high-impact' (M41)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

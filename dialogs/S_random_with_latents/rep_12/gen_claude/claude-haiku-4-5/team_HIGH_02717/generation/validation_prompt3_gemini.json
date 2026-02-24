@@ -1,0 +1,35 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All 5 threads are below the minimum message count of 18. Thread TH1 has 13 messages, TH2 has 12, TH3 has 12, TH4 has 12, and TH5 has 16."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing a reference to artifact A8, which is mandatory in the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH5 is missing mandatory references to artifacts A5, A8, and T8 from the blueprint."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "The four participants with the 'bookkeeper' role (253807, 476700, 483272, 561948) have very similar voices and writing styles, making them difficult to distinguish from one another."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "In thread TH1, message M13, the speaker (253807) refers to themselves in the third person in the text: 'And 253807 here—I'll start documenting...'. This is unrealistic for a Slack conversation."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 2
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (12 messages), TH3 (14 messages), and TH4 (14 messages) fall below the minimum required 17 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "DECISION_MISSING",
+      "detail": "In TH5, mandatory decisions D1 and D6 are missing from the decision_refs of all messages in the thread, despite being required by the blueprint and listed in the thread_outcome."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants share a very similar, overly formal and structured tone (e.g., 'Perfect. So here's the plan...', 'Excellent. So to confirm...'), lacking distinct personas or realistic casual Slack dynamics."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 2
+  }
+}

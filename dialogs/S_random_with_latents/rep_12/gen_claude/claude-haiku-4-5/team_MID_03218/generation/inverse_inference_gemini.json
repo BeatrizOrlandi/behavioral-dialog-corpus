@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "_id": 16404,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This data scientist demonstrates high productivity by delivering models and updates quickly. Their ability is high, shown by suggesting robust validation techniques and proactively thinking about post-launch reviews. Their performance is high as they take ownership of key processes like monitoring and deliver high-quality, well-documented work.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M30",
+          "snippet": "Let me retrain with those features and see if we hit 70% precision. ... I can have updated results by tomorrow EOD."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M32",
+          "snippet": "I'll do a time-based split: train on months 1-12, validate on months 13-15, and test on month 16."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M57",
+          "snippet": "I can own the weekly review. I'll check the monitoring dashboard every Monday and flag any issues to the team."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M64",
+          "snippet": "should we plan a post-launch review—like 30 days after go-live—to measure actual business impact and gather feedback?"
+        }
+      ]
+    },
+    {
+      "_id": 80886,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This data scientist shows high productivity by rapidly completing data profiling and starting on fixes immediately. Their ability is high, demonstrated by their deep understanding of data issues and practical solutions for consolidation and backfilling. Their performance is high as they provide the critical data foundation for the project and effectively prioritize technical work.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M12",
+          "snippet": "Data profiling is done. I've uploaded the initial inventory to A2 with findings from our core tables"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M14",
+          "snippet": "We can infer renewal dates from transaction timestamps in most cases. I'd estimate we can recover ~80% of the missing values."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M20",
+          "snippet": "Prioritise in this order: (1) duplicates in customer table—those break our churn definition, (2) missing values in key fields"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M24",
+          "snippet": "Starting now. I'll have a deduplication report by EOD tomorrow."
+        }
+      ]
+    },
+    {
+      "_id": 122466,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This business analyst acts as the project lead, demonstrating high productivity by consistently driving discussions, summarizing outcomes, and keeping the project on a tight schedule. Their ability is high, shown by their excellent project framing and ability to translate business needs into technical requirements. Their performance is exceptional, as they effectively manage the entire project lifecycle and ensure alignment across the team.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M1",
+          "snippet": "Hi team, welcome to the churn prediction project kickoff. We have 21 days to deliver an MVP that helps our commercial teams"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M7",
+          "snippet": "For now, let's lock in D1 and D2: churn = no activity in 90 days, and we measure success by precision (70%+), recall, and retention lift."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M41",
+          "snippet": "I'll add a 'priority score' that combines churn risk with contract value. High-risk + high-value customers get flagged as 'Critical.'"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M66",
+          "snippet": "Perfect. Let me summarise the final status: Model is production-ready with documentation (A3). Dashboard is built and tested (A6)."
+        }
+      ]
+    },
+    {
+      "_id": 138753,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This business analyst consistently provides high-impact strategic input that steers the project, which constitutes high productivity. Their ability is exceptionally high, as they repeatedly identify critical business risks and strategic considerations that others miss, such as model stability and operational impact. Their performance is high because their interventions significantly improve the quality and business relevance of the final solution.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "But I want to flag a risk: if we're pulling from three systems with different update frequencies, we might have stale data."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M31",
+          "snippet": "But I want to validate that the model is stable. Can you test it on a different time period to make sure it's not just fitting the sample?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M38",
+          "snippet": "What's the expected volume of customers in each band? If 'High' is only 2% of the customer base, the sales team might not take it seriously."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M60",
+          "snippet": "Do it live first with a pilot group—maybe 10-15 people from sales and customer success. Get their feedback, refine the playbook"
+        }
+      ]
+    },
+    {
+      "_id": 568638,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "This data analyst is a reliable contributor, showing solid productivity by delivering samples and building artifacts as requested. Their ability is at a mid-level; they ask good clarifying questions and make useful suggestions but do not drive strategy or identify major risks. Their performance is mid-level as they effectively fulfill their supporting role, meeting expectations without demonstrating the exceptional, project-shaping impact of other team members.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M22",
+          "snippet": "Start with a sample—I'll have a clean 10k-record subset ready by tomorrow EOD."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M13",
+          "snippet": "The 15% missing renewal dates is concerning—that directly impacts our churn definition. Can we backfill those from transaction history"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M18",
+          "snippet": "I can add freshness checks to T3 when we build the data prep pipeline. We'll flag records where attributes are older than 30 days"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M49",
+          "snippet": "Looks good. I'll start building the dashboard in our BI tool."
+        }
+      ]
+    }
+  ]
+}

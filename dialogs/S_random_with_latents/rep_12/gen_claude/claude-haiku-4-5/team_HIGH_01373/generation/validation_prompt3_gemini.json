@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All 5 threads are below the minimum required message count of 15. The counts are: TH1 (10), TH2 (12), TH3 (9), TH4 (9), TH5 (10)."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH4, the mandatory artifact 'A8' was not referenced in any message's artifact_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "In thread TH2, the `thread_outcome.next_steps` contains an invalid reference. The `task_id` is listed as 'A4', which is an artifact ID, not a valid task ID from the backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 2,
+    "voice_diversity_1_5": 5
+  }
+}

@@ -1,0 +1,1584 @@
+{
+  "channel": {
+    "channel_id": "proj-branch-queue-pilot",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state mapping and confirm scope of the pilot branches.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Kicking off the Branch Queue and Service Experience Optimization Pilot for our network. For this first step, we need to align on current-state mapping and confirm which branches and service areas are in scope. I am proposing we focus on three pilot branches: Central, Riverside, and Northside, covering both teller windows and the service desk areas. That would give us a good mix of traffic patterns without stretching the team too thin. For current-state, we will build out the map in project_title using A1 as the base doc. To get there, we need structured observations and a simple daily log. T1 and T5 are our key tasks here. @73292 and @252240, can you confirm what queue data you already capture today at your branches, and what is missing? Also, from your perspective, is limiting the pilot to teller and service desks enough, or do we need to include the lobby greeter flow as well?",
+            "mentions": [
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 73292,
+            "reply_to": "M1",
+            "text": "At Central we currently track customer counts per hour and a rough sense of peak times, but we do not log individual wait times. Complaints are only captured if they escalate to the supervisor, so we are missing a lot of softer feedback. For T1, I can start logging actual arrival and service start times for at least two full days so we can estimate average and peak waits. For T5, a simple paper log at each window would probably work best to start. On scope, teller and service desks cover most of the queue pain, but the lobby greeter is often the first touchpoint. I would suggest we include the greeter interactions in the mapping in A1, even if we do not change their staffing yet.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 252240,
+            "reply_to": "M1",
+            "text": "At Riverside we have a similar situation. We know when the line is out the door, but we do not have consistent numbers on how long people actually wait. I can help with T1 by logging transaction types and approximate volumes over two days. For T5, I would like to test a very short checklist style log so tellers can tick boxes instead of writing long notes. On scope, I agree teller and service desks should be the core. Our lobby greeter is part time and mostly directs people to the right line, so maybe we just document that in A1 without changing their routine in the first round.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 167703,
+            "reply_to": "M1",
+            "text": "From the call centre side, when branches are busy we get more follow up calls, but we do not always know how long people waited in branch before calling. For the current-state view in A1, it would help if T1 and T5 capture redirected cases and any notes on customers being told to call us later. That way we can see the full journey. On scope, I am fine with focusing on teller and service desks plus how they hand off to us, rather than trying to cover every lobby interaction right away.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 268564,
+            "reply_to": "M1",
+            "text": "From a customer communication angle, the lobby greeter and the first teller contact are where expectations get set. Even if we do not change the greeter schedule, I would like us to note what they currently say and do in A1. That will help later when we work on scripts under T4 and T7. For the pilot scope, I am comfortable with Central, Riverside, and Northside as long as we have at least one branch with heavier sales activity in the mix.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A1",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 455770,
+            "reply_to": "M2",
+            "text": "Thanks for the detail from Central. For T1, let us standardise on logging arrival time, service start time, transaction type, and whether the customer was redirected or asked to call later. That should give us enough to estimate wait times and see patterns without overloading you. For T5, I will draft a one page log template and share it here for quick review before we print it. We will also add a simple field for complaints or visible frustration so we can track that systematically.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 455770,
+            "reply_to": "M3",
+            "text": "Good call on the checklist style log. For T5, let us keep it to a few tick boxes for transaction type and a short code for queue experience, for example calm, neutral, frustrated. We can then summarise that into A1 as part of the current-state picture. I will align the template so Central and Riverside use the same format, and we will ask Northside to do the same once we confirm they are in scope.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 73292,
+            "reply_to": "M6",
+            "text": "That data set works for us. One question on T1 and T5: do you want us to log every single customer during the two observation days, or just peak periods like 11 to 2 and late afternoon? Logging everyone might slow us down at the window if we are not careful.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 455770,
+            "reply_to": "M8",
+            "text": "Let us focus on full coverage during peak periods and sampling during quieter times. For example, log every customer from 11 to 2 and from 4 to close, and then every third customer outside those windows. That should keep T1 and T5 manageable while still giving us a solid view for A1. If you notice that logging is interfering with service, flag it and we will adjust.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 252240,
+            "reply_to": "M7",
+            "text": "The calm, neutral, frustrated codes are easy enough to apply. I will test the draft T5 template at Riverside for one afternoon and share any issues. For T1, I will also note when we have to move someone from teller to service desk mid-queue, since that often causes confusion and extra waiting.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 167703,
+            "reply_to": "M4",
+            "text": "On redirected cases, could we add a simple field in T5 for whether the customer was given our number or a specific callback time? That would help when we later build the playbook in A3 and the related tasks T3 and T9. Right now we only see the call when it arrives, not the branch context.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5",
+              "A3",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 455770,
+            "reply_to": "M11",
+            "text": "Yes, let us add a simple field in T5 for how the handoff was framed, for example told to call now, told to expect a callback, or given a generic number. That will feed into A1 and later into A3. We will keep it to short codes so it does not slow down the line.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "T5",
+              "A1",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 268564,
+            "reply_to": "M5",
+            "text": "For the minimum data set, can we also capture whether the customer is doing a quick transaction or something more complex? Even a simple quick or complex flag in T1 and T5 would help later when we design the triage rules in T2 and the scripts in A4.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "T2",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 455770,
+            "reply_to": "M13",
+            "text": "Agreed, we will add a quick or complex flag to the T1 and T5 templates. We can define quick as single, straightforward transactions like cash deposits or withdrawals, and complex as anything involving forms, multiple products, or investigations. We will refine that in more detail when we work on T2, but for now the flag will give us a baseline in A1.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "T2",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 73292,
+            "reply_to": "M9",
+            "text": "Central can start the structured logging for T1 and T5 tomorrow. I will brief the team at the morning huddle and make sure everyone understands the codes. We will run the first full day and share a quick summary so you can see if the format works before we lock it for the pilot.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 252240,
+            "reply_to": "M10",
+            "text": "Riverside can align timing with Central and start T1 and T5 logging the same day. I will also note any confusion customers have about which line to join so we can reflect that in A1. If we see patterns, we can feed them into the later triage design.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T1",
+              "T5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 455770,
+            "reply_to": "M1",
+            "text": "To close this loop: we will include Central, Riverside, and Northside branches in the pilot, focusing on teller windows and service desks, and we will document lobby greeter interactions in A1 without changing their staffing in this first phase. For the minimum data set under T1 and T5, we have agreed on logging arrival time, service start time, transaction type, quick or complex flag, redirection or callback info, and a simple customer mood code during defined peak periods plus sampling off peak. I will document this in A1 and share the T5 template shortly.",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T5"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 73292,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 252240,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 455770,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalise the new triage and queue process for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M18",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Sharing the first draft of the triage flow for the pilot branches. This will sit in A2 and is driven by T2. The idea is to separate quick transactions from complex service requests right at the lobby or first contact, then route quick items to a dedicated teller line and complex items to a service queue. I have also started a simple decision checklist for frontline staff. Before we lock anything, I need feedback from the branch team and a view on control and compliance impacts so we can later capture them in A7 and T11. @73292 and @252240, can you walk through the draft and call out any steps that look unrealistic at the window? @167703, from your side, do the proposed handoff points to the call centre make sense, or are we pushing too much to callbacks?",
+            "mentions": [
+              73292,
+              252240,
+              167703
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 73292,
+            "reply_to": "M18",
+            "text": "Looking at the draft in A2, the quick lane definition mostly matches what we see: cash deposits and withdrawals, simple balance inquiries, and card PIN changes. One concern is that cheque deposits with holds can look quick but often trigger questions. I would keep those in the complex lane. For the checklist under T2, it would help to have a short set of yes or no questions, for example does this involve opening or changing an account, does it require forms, does it involve more than one product. That way the greeter or first teller can decide quickly without guessing.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 252240,
+            "reply_to": "M18",
+            "text": "From Riverside, the main friction is when customers start with a quick request and then add a complex one at the window. The draft A2 flow sends them to the quick lane first, but we need a clear rule for when to move them to the service queue without making them feel they are starting over. Maybe the checklist in T2 can include a prompt to ask if they have any other requests today before finalising the lane choice.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 167703,
+            "reply_to": "M18",
+            "text": "On the handoffs to the call centre, the draft suggests routing non urgent card disputes and statement copies to callbacks. That is fine as long as we set clear expectations at the branch. For T2 and later T3, we should define which issues must stay in branch for control reasons and which can safely move to us. I will need guidance from compliance so we do not accidentally take on something that requires in person verification.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 268564,
+            "reply_to": "M18",
+            "text": "For the customer, the triage has to feel simple. In A2, could we phrase the quick versus complex explanation in plain language, like short visit versus longer discussion, and mirror that in the scripts we will build in A4 under T4 and T7? That might reduce pushback when we direct someone to the service queue.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 455770,
+            "reply_to": "M19",
+            "text": "Good point on cheque deposits with holds. Let us explicitly classify those as complex in the T2 checklist and A2 flow, so they go to the service queue. I will add the yes or no questions you suggested and keep the list short so it can be used at the lobby or window without slowing things down.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 455770,
+            "reply_to": "M20",
+            "text": "On customers who add extra requests mid interaction, I propose we handle it this way in A2 and T2: if the additional request is quick, we complete it in the same interaction. If it is complex, we give the option of moving to the service queue or scheduling a callback, depending on the topic. We will need to define a few examples in the checklist so staff know when to offer which option.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 73292,
+            "reply_to": "M24",
+            "text": "That approach works as long as we are clear on which complex items can go to callback. For example, address changes and adding signatories should probably stay in branch for control reasons. Maybe we can mark those in the T2 checklist as branch only and later reflect that in A7 and T11.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T2",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 455770,
+            "reply_to": "M21",
+            "text": "Agreed, we need a clear boundary. I will set up a quick review with compliance to walk through the A2 flow and the draft T2 checklist, and we will document their feedback in A7 and T11. For now, we will assume that anything involving identity verification, address changes, account opening, and adding or removing signatories stays in branch. Non urgent card disputes, statement copies, and general product questions can be candidates for callbacks, to be confirmed with compliance.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 252240,
+            "reply_to": "M24",
+            "text": "For edge cases, like a customer who starts with a cash withdrawal but then wants to dispute a fee, I suggest we finish the withdrawal in the quick lane and then either move them to service or offer a callback for the dispute. That keeps the quick lane moving while still addressing the issue. We should spell that out in A2 so staff have a reference.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 167703,
+            "reply_to": "M21",
+            "text": "From the call centre view, having those examples will help us too. If A2 and T2 clearly mark which topics are callback eligible, we can mirror that in A3 and T3. For edge cases that still slip through, we can have a rule that we either warm transfer back to the branch or schedule a branch appointment instead of trying to solve everything over the phone.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 268564,
+            "reply_to": "M22",
+            "text": "On the customer explanation, I can draft a short script for the greeter and first teller that matches the A2 flow, for example one line for the quick lane and one for the service lane. We can then refine it in A4 under T4 and T7 once the triage rules are final. That should help with consistency across branches.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 73292,
+            "reply_to": "M25",
+            "text": "One more edge case: foreign currency exchanges. They can be quick if the amount is small and straightforward, but they sometimes involve extra checks. I would lean toward treating them as complex by default in T2, to avoid surprises at the window.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 252240,
+            "reply_to": "M30",
+            "text": "Agree on foreign currency. Given the extra checks and limits, it is safer to route them to the service queue. We can still process them at teller when it is quiet, but the default lane in A2 should be complex.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 455770,
+            "reply_to": "M30",
+            "text": "Let us lock that in: foreign currency exchanges will be classified as complex in the T2 checklist and routed to the service queue in A2. That keeps the quick lane focused on truly short transactions and reduces the risk of long conversations at those windows.",
+            "mentions": [
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "money_with_wings",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 455770,
+            "reply_to": "M18",
+            "text": "To summarise the triage rules for the pilot: quick transactions will include straightforward cash deposits and withdrawals, simple balance inquiries, and similar single step items. Complex transactions will include cheque deposits with holds, foreign currency exchanges, address changes, account opening or changes, adding or removing signatories, and any request involving multiple products or forms. Edge cases where a quick request turns into a complex one will be handled by completing the quick part and then either moving the customer to the service queue or offering a callback, depending on the topic and control requirements. These rules will be captured in A2 and the T2 checklist, with compliance feedback documented in A7 and T11. Unless there are strong objections today, we will treat this as the approved triage decision set for the pilot.",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 455770,
+              "when": "today"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 73292,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define scripts and communication for customers and cross-sell prompts.",
+        "messages": [
+          {
+            "msg_id": "M34",
+            "speaker_id": 268564,
+            "reply_to": null,
+            "text": "I have put together a first version of the customer explanation and cross sell scripts for the pilot, which will live in A4 and are tied to T4 and T7. For the queue explanation, the lobby greeter or first teller would say a short greeting, explain that we now have a quick lane for short visits and a service lane for longer discussions, and reassure customers that the goal is to reduce waiting. For cross sell, I drafted a few light prompts linked to everyday products, each under 20 seconds, to use only after the main transaction is complete. Before we move to compliance review, I would like feedback from the branch and call centre teams on clarity, tone, and where these scripts might slow things down.",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              455770
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 73292,
+            "reply_to": "M34",
+            "text": "The explanation script is clear and matches the triage flow in A2. One suggestion: emphasise that customers will not lose their place if we move them from quick to service, to avoid frustration. On the cross sell prompts under T7, we need to be careful not to extend the interaction. If we keep it to one short question that links to the customers transaction, it should be manageable. Anything more and we risk backing up the quick lane.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 252240,
+            "reply_to": "M34",
+            "text": "At Riverside, customers respond better when we explain what is in it for them. Maybe the script in A4 can add a line about how the new lanes help them get served faster. For cross sell, I would avoid prompts that require long explanations. Simple reminders about digital channels or basic savings options could work, but anything involving detailed product terms might be better handled at the service desk.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 167703,
+            "reply_to": "M34",
+            "text": "From the call centre side, it would help if the branch scripts in A4 set expectations about possible callbacks. For example, if the service lane is very busy, the script could mention that some topics can be handled by phone later the same day. That way when we call, customers are not surprised. For cross sell, if we are going to mirror any prompts in A3 and T3, we should pick ones that are easy to explain over the phone as well.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 455770,
+            "reply_to": "M34",
+            "text": "We also need to make sure the wording in A4 passes compliance review and does not sound like we are pushing products too hard, especially in the quick lane. For T4 and T7, let us prioritise prompts that are informational and optional, and avoid anything that could be seen as tying service to sales. Once we agree on the final set, I will send A4 to compliance for sign off.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 268564,
+            "reply_to": "M35",
+            "text": "Good call on reassuring customers about their place in line. I will add a short line in the explanation script in A4 that says we will keep their spot even if we redirect them to the service lane or a callback. For cross sell under T7, I will trim the prompts down to one short question per interaction, linked to the transaction type, for example asking about digital banking after a balance inquiry.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 268564,
+            "reply_to": "M36",
+            "text": "I like the idea of highlighting the benefit. I will adjust the opening in A4 to say that the new lanes are designed to help customers get served faster and with fewer handoffs. For cross sell, I will focus on simple prompts like asking if they have activated mobile banking or if they want information on a basic savings option, and leave more complex products to the service lane.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 268564,
+            "reply_to": "M37",
+            "text": "On callbacks, I will add a short line in the service lane script in A4 that explains some topics can be handled by phone later the same day, and that the branch may offer that option when the queue is long. We can then align the wording with A3 and T3 so customers hear the same message when you call.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 73292,
+            "reply_to": "M39",
+            "text": "One practical point: the greeting and explanation need to be short enough to use during busy periods. If we can keep the whole message under 20 seconds, including the reassurance about their place in line, it should fit into the natural flow at the window.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 252240,
+            "reply_to": "M40",
+            "text": "For the cross sell prompts, could we limit them to one or two specific products for the pilot, like digital banking and a simple savings account? That would make it easier for tellers to remember and for compliance to review. We can always expand later if the pilot goes well.",
+            "mentions": [
+              268564,
+              455770
+            ],
+            "artifact_refs": [
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 167703,
+            "reply_to": "M37",
+            "text": "If we pick digital banking and basic savings as the main prompts, we can easily mirror those in A3 and T3 for the call centre. They are straightforward to explain and do not require long disclosures on the phone.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 455770,
+            "reply_to": "M43",
+            "text": "I agree with narrowing the cross sell focus for the pilot. Let us limit T7 to prompts about digital banking enrolment and a simple savings product, both of which are already well documented and easier for compliance to review. We will capture the final wording in A4 and ensure it stays under the 20 second guideline so we do not impact queue times.",
+            "mentions": [
+              268564,
+              252240,
+              167703
+            ],
+            "artifact_refs": [
+              "T7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 268564,
+            "reply_to": "M42",
+            "text": "Understood. I will time the scripts and adjust the wording in A4 so that the greeting plus explanation stays under 20 seconds, and the cross sell prompt is a single short question after the transaction is complete. I will also test the phrasing informally with a few colleagues as required by T4.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 73292,
+            "reply_to": "M46",
+            "text": "Once you have the updated A4 draft, Central can pilot the scripts for a day and give feedback on how customers react and whether it affects handling time. That should help us fine tune before we roll out to all pilot branches.",
+            "mentions": [
+              268564,
+              455770
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 252240,
+            "reply_to": "M47",
+            "text": "Riverside can do the same. We tend to have more walk in traffic for complex issues, so it will be useful to see how the service lane explanation lands with those customers.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 455770,
+            "reply_to": "M34",
+            "text": "To close this out: for the pilot we will use a single, short customer facing explanation script in A4 that introduces the quick and service lanes, highlights that the goal is faster service, and reassures customers they will not lose their place if we redirect them or offer a callback. For cross sell under T7, we will limit prompts to digital banking enrolment and a simple savings product, delivered as one short, optional question after the main transaction is complete, keeping each prompt under 20 seconds. I will send the updated A4 to compliance for review once @268564 incorporates the feedback.",
+            "mentions": [
+              268564,
+              73292,
+              252240,
+              167703
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 268564,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 268564,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Set up call centre triage, callbacks, and staffing adjustments.",
+        "messages": [
+          {
+            "msg_id": "M50",
+            "speaker_id": 167703,
+            "reply_to": null,
+            "text": "I have drafted the call centre triage and callback playbook for the pilot, which will be stored in A3 and is linked to T3 and T9. It outlines which issues can be handled directly by us, which should be callbacks from branch referrals, and when we must direct customers back to the branch. It also includes standard callback scripts for common scenarios and a first pass at escalation rules and SLAs. Alongside that, I have a proposal for small schedule tweaks to cover expected callback demand. Before we finalise, I would like feedback from branches on the handoff rules and from operations on whether the staffing changes look realistic.",
+            "mentions": [
+              455770,
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 455770,
+            "reply_to": "M50",
+            "text": "Thanks for pulling this together. Looking at A3, the list of issues suitable for callbacks aligns with the triage rules in A2 and T2, but we need to be sure we are not taking on anything that requires in person verification. I will ask compliance to review the A3 categories alongside A7 and T11. On T9, the proposed schedule changes look modest, but we should double check that we are not breaching maximum working hours or break rules.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "A2",
+              "T2",
+              "A7",
+              "T11",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 73292,
+            "reply_to": "M50",
+            "text": "From the branch side, the callback option in A3 will be helpful when the service queue is long, especially for statement copies and non urgent card questions. We just need to make sure the SLAs in T3 are realistic so customers actually get called back when promised. If we say same day, we should define a cut off time for requests that come in late afternoon.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 252240,
+            "reply_to": "M50",
+            "text": "At Riverside, customers sometimes prefer to wait rather than get a callback, especially older clients. The A3 script should make it clear that callback is an option, not mandatory. Also, for sensitive topics like disputes, we should be careful about discussing details over the phone unless we are sure about identification steps.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 167703,
+            "reply_to": "M52",
+            "text": "On SLAs, I can adjust T3 so that same day callbacks apply to requests logged before 3 pm, and anything after that is next business day. I will reflect that in A3 and make sure the script sets the right expectation. For T9, I will check with our supervisor that the proposed shifts can cover that pattern without breaking hour or break rules.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T3",
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 167703,
+            "reply_to": "M53",
+            "text": "Good point on choice. I will update the A3 scripts so branch staff present callback as an option, and the call centre script will confirm that the customer is still comfortable discussing the topic by phone. For identification, I will add a simple verification step to the T3 procedures, and we can have compliance confirm it in A7.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 455770,
+            "reply_to": "M54",
+            "text": "The 3 pm cut off for same day callbacks sounds reasonable. Let us document that clearly in A3 and T3 so branches know what to promise. For T9, please share the estimated daily callback volume you used for the schedule so we can cross check it against the pilot scope and the data we are collecting under T5.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T9",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 167703,
+            "reply_to": "M56",
+            "text": "For the estimate, I assumed that a small percentage of complex branch interactions would convert to callbacks, based on current call volumes. I will refine the numbers using the early T5 logs once they are available and update T9 accordingly. For now, the schedule tweaks in A3 and T9 are conservative so we can adjust up if needed.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T9",
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 73292,
+            "reply_to": "M52",
+            "text": "At Central, we can start flagging which complex interactions would be good candidates for callbacks, for example non urgent card questions and statement copies, and note that in T5. That should help validate the assumptions in A3 and T9.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "T5",
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 252240,
+            "reply_to": "M53",
+            "text": "Riverside can do the same. We will also note any customer pushback when we offer callbacks so we can adjust the A3 script if needed.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 455770,
+            "reply_to": "M51",
+            "text": "I have walked through the A3 categories with compliance, and they are comfortable with the list as long as we keep identity verification steps as drafted in T3 and do not move address changes, account opening, or signatory changes to callbacks. We will document this in A7 and T11 so branches and the call centre have a clear reference.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 167703,
+            "reply_to": "M60",
+            "text": "I have updated A3 and T3 to reflect those boundaries and added the verification steps. The escalation rules now send any out of scope topics back to the branch with a clear explanation to the customer. For T9, I have also confirmed with our supervisor that the proposed shift tweaks respect working hour and break rules.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 455770,
+            "reply_to": "M61",
+            "text": "Great. With the categories, scripts, SLAs, and staffing checks in place, I am comfortable treating the current A3 and T9 drafts as the pilot baseline. We will still monitor actual callback volumes and customer feedback in the first week and adjust if needed, but we can move ahead with training on this version.",
+            "mentions": [
+              167703,
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9",
+              "T3"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 167703,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 167703,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Monitor pilot progress, review metrics, and agree on final recommendations.",
+        "messages": [
+          {
+            "msg_id": "M63",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "We have completed the first week of the pilot, so I am sharing the initial dashboard and feedback summary. The metrics are captured in A6 and come from the T5 logs and the T10 dashboard template. Overall, average wait times in the quick lane are down, while the service lane is roughly flat. Complaints about confusion in the queue have dropped after the first two days, once the A4 scripts bedded in. Callback volumes are slightly below the T9 estimates, and the call centre is meeting the SLAs defined in A3 and T3. I would like to use this thread to review what is working, what needs adjustment, and whether we keep the current pilot scope and triage rules as is or tweak them before week two.",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A6",
+              "T5",
+              "T10",
+              "A4",
+              "A3",
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 73292,
+            "reply_to": "M63",
+            "text": "From Central, the quick lane is clearly helping. Customers with simple cash transactions are moving through faster, and the T5 logs show fewer frustrated reactions in that lane. The main issue we saw was some confusion on day one about the difference between quick and service, but once we tightened the A4 explanation, complaints dropped. I do not see a need to change the pilot scope; the three branches and current service areas feel manageable.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 252240,
+            "reply_to": "M63",
+            "text": "At Riverside, the service lane is still busy, but the queue feels more orderly. The T5 data shows that complex interactions are taking about the same time as before, but customers seem more accepting because they see the quick lane moving. We had a few edge cases where customers started in quick and then needed complex help, but following the A2 rules and offering callbacks worked reasonably well. I would keep the current triage rules for now and see how week two looks.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 167703,
+            "reply_to": "M63",
+            "text": "On the call centre side, the callback volumes are slightly lower than we planned in T9, but we are meeting the SLAs from A3 and T3. Most callbacks are for statement copies and non urgent card questions, as expected. We have had a few calls where customers were not fully aware a callback was coming, which suggests we still need to tighten the branch script in A4 in some cases.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T9",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 268564,
+            "reply_to": "M63",
+            "text": "Feedback on the scripts in A4 has been mostly positive. The quick and service lane explanation seems to land well when staff use the full wording. The cross sell prompts under T7 are being used cautiously, mainly for digital banking, and we have not seen any noticeable impact on handling time in the T5 logs. A few colleagues mentioned they would like a bit more flexibility in phrasing, as long as the key points stay the same.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 455770,
+            "reply_to": "M64",
+            "text": "Good to hear that the quick lane is delivering the expected impact at Central. On scope, unless Northside is seeing something very different, I am inclined to keep the pilot limited to the three branches and the current service areas for the remaining two weeks. That will give us a clean before and after comparison for T12.",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 455770,
+            "reply_to": "M65",
+            "text": "The fact that complex handling times are stable but perceived fairness is better is encouraging. It suggests the triage rules in A2 and T2 are doing their job. We should still watch for any patterns in the T5 logs where customers are repeatedly moved between lanes or decline callbacks, as that might signal a need to refine the rules.",
+            "mentions": [
+              252240
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 73292,
+            "reply_to": "M69",
+            "text": "Looking at the first week T5 data, the main friction points are cheque deposits with holds and foreign currency, which we already marked as complex in A2. When we explain that clearly at the start, customers accept the longer wait. The few complaints we logged were mostly about not understanding why they were moved from quick to service, which improved once we used the updated A4 wording.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5",
+              "A2",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 252240,
+            "reply_to": "M69",
+            "text": "Riverside saw similar patterns. The edge cases where customers started in quick and then needed complex help were manageable once we followed the A2 guidance and offered either a move to service or a callback. I do not see a strong case to change the triage rules at this point, but we should keep monitoring in week two.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 167703,
+            "reply_to": "M66",
+            "text": "On the callbacks where customers were surprised, it usually turned out that they had spoken to someone during a very busy period and the explanation was rushed. Maybe we can remind branches to use the full A4 wording when offering callbacks, and we can add a short confirmation line in the T3 script to restate why we are calling.",
+            "mentions": [
+              455770,
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 268564,
+            "reply_to": "M72",
+            "text": "I can tweak the A4 callback wording slightly to make it more natural and easier to remember, while keeping the key points. I will also add a short reminder in the script that staff should confirm the customers preferred contact time, which should help with the T3 SLAs.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 455770,
+            "reply_to": "M66",
+            "text": "Given that callback volumes are slightly below the T9 estimate and SLAs are being met, I do not see a need to change the staffing schedule mid pilot. We can revisit after week two if volumes shift. For now, let us focus on tightening the scripts and ensuring consistent use across branches and the call centre.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "T9",
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 73292,
+            "reply_to": "M67",
+            "text": "On script flexibility, Central staff have found that sticking to the structure in A4 but using their own natural phrasing works best. As long as we cover the key points about the lanes and do not add extra sales pressure, customers respond well.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 252240,
+            "reply_to": "M67",
+            "text": "Riverside is seeing the same. The cross sell prompts under T7 are being used sparingly, mostly when there is a clear link to the transaction. I would keep the current prompts for the rest of the pilot and then review their impact in T12.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "T7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 455770,
+            "reply_to": "M63",
+            "text": "Based on the first week data in A6 and the feedback here, my proposal is to keep the pilot scope as originally defined, with Central, Riverside, and Northside branches and the current service areas, and to maintain the triage rules in A2 and T2 without changes for week two. We will continue to monitor T5 logs, callback performance from A3 and T3, and script usage from A4, and then make any structural adjustments after we have a full three week view for T12.",
+            "mentions": [
+              73292,
+              252240,
+              167703,
+              268564
+            ],
+            "artifact_refs": [
+              "A6",
+              "A2",
+              "T2",
+              "T5",
+              "A3",
+              "T3",
+              "A4",
+              "T12"
+            ],
+            "decision_refs": [
+              "D1",
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 73292,
+            "reply_to": "M77",
+            "text": "Central is aligned with keeping the current scope and triage rules for week two. We will keep logging under T5 and share any new patterns we see, especially around edge cases and callbacks.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 252240,
+            "reply_to": "M77",
+            "text": "Riverside agrees as well. The process is starting to feel natural for staff and customers, so it makes sense to let it run and gather more data before making bigger changes.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 167703,
+            "reply_to": "M77",
+            "text": "Call centre is on board. We will keep tracking callback performance against the A3 and T3 SLAs and flag any spikes or issues so they can be reflected in A6 and later in T12.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 268564,
+            "reply_to": "M77",
+            "text": "I will make the small wording tweaks to A4 we discussed and then leave the scripts stable for the rest of the pilot. That should give us a clean read on their impact when we compile T12.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A4",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D3"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 455770,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 455770,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 455770,
+              "when": "end of pilot"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

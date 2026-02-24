@@ -1,0 +1,30 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads have fewer messages than the expected minimum of 15. TH1 has 9, TH2 has 9, TH3 has 6, TH4 has 8, and TH5 has 9 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Several mandatory artifacts are missing from the artifact_refs in their respective threads: T10 is missing in TH3; T8 and T10 are missing in TH4; A8 is missing in TH5."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Messages M26 and M28 contain the forbidden term 'probability'."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "All participants speak in the exact same robotic, agreeable tone with identical sentence structures (e.g., 'Confirmed', 'Sounds good', 'I agree'), lacking distinct voices or personalities."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 2,
+    "voice_diversity_1_5": 1
+  }
+}

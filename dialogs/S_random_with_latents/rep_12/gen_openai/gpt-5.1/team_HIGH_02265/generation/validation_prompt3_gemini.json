@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "The number of messages in some threads is outside the expected range. Thread TH4 has 14 messages and thread TH5 has 13 messages, both below the minimum requirement of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The text of messages contains multiple forbidden terms and patterns. This includes 'score' (e.g., M1, M5), 'scenario' (e.g., M21, M23), 'label' (e.g., M22, M30), and explicit level descriptions like 'low, medium, high' (e.g., M3, M4)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

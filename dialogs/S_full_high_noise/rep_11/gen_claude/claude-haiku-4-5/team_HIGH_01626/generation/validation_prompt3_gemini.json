@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads fall below the minimum message count of 16. TH1 has 15, TH2 has 13, TH3 has 12, TH4 has 12, and TH5 has 13 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Mandatory artifacts are missing from artifact_refs in their respective threads: A5 is missing in TH2; T11 is missing in TH4; T7, T9, and T12 are missing in TH5."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants use highly repetitive and formulaic phrasing across all threads (e.g., 'Once X is locked, we can move to Y', 'Confirmed. D# is locked')."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 3
+  }
+}

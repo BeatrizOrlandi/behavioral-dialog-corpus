@@ -1,0 +1,1671 @@
+{
+  "channel": {
+    "channel_id": "proj-tiered-membership-launch",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on final tier structure, benefits, and pricing before documentation freeze.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 117598,
+            "reply_to": null,
+            "text": "Kicking off the tier structure alignment for the tiered membership launch project_title. I have uploaded a draft of the Tiered Membership Design Specification in A1, based on the initial work under T1 and the flows we sketched for T3 and A3. Current proposal: three tiers with working names: Essential, Plus, and Premium. Each tier has a different bundle of benefits, eligibility rules, and a pricing band. Before we freeze A1, I need us to confirm both the number of tiers and the naming, and then the final list of core benefits and pricing ranges. Can you review the A1 draft and share any concerns on complexity, margin risk, or sales clarity?",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T3",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 61232,
+            "reply_to": "M1",
+            "text": "I went through the A1 draft. From a sales perspective, three tiers feels manageable and lines up with the risk note about avoiding complexity. The Essential, Plus, Premium naming is intuitive for reps and members. On benefits, I like that Essential keeps it lean and margin safe, while Premium concentrates the higher cost perks. My main question is around the mid tier: Plus currently has a long list of benefits that might blur the difference vs Premium when we pitch. Could we tighten Plus to 3 to 4 headline benefits and keep the rest as add ons? That would also make T2 easier when we finalize the pitch structure.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 30302,
+            "reply_to": "M1",
+            "text": "I had a first read of A1 as well. Three tiers works for me, and the names sound aligned with what we use in other programs. I am a bit unsure about the eligibility rules though. For Essential, we say all existing members can move in, but for Plus and Premium we mention both spend thresholds and tenure. I want to be sure this is something we can actually check in the current system without changing the billing platform. Maybe we should simplify eligibility to just spend thresholds for now, and we can add tenure later if needed.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 285875,
+            "reply_to": "M3",
+            "text": "On eligibility, I checked quickly with how we tag members today for campaigns. We can reliably pull spend over the last 12 months, but tenure is a bit messy in the database. That matches the concern in the project risks about data quality. For T1 and later T4, I suggest we define eligibility only on spend and maybe a simple activity flag, and we document that clearly in A1 and A3 so sales and service do not promise anything we cannot verify.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 61232,
+            "reply_to": "M3",
+            "text": "Agree on simplifying eligibility. If we keep it to spend thresholds, we can turn that into a very clear line in the sales script and avoid confusion. For example, Essential for everyone, Plus above a certain annual spend, Premium above a higher spend band. That also helps when we define sales targets in T9 later. I do not see a strong need to bring tenure into the first launch, especially with the 21 day timeline.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 117598,
+            "reply_to": "M2",
+            "text": "Thanks for the feedback on Plus. I can trim the Plus tier in A1 so that we highlight only three core benefits: priority support, extended access to selected services, and a modest discount band. The rest can move into an optional add on section. That should create a clearer step up to Premium, which keeps the highest value perks and the strongest discount. I will also rework the comparison table in A1 so it is easier to translate into T2 and A3.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 472865,
+            "reply_to": "M1",
+            "text": "I am looking at the pricing bands in A1 and I am not fully sure how we landed on the Premium price. It looks quite a bit higher than current average membership fees. Do we already have a margin check from finance, or is that still pending? I want to avoid a situation where we push a price that later needs to be rolled back. Maybe we should keep a slightly wider band in A1 until finance confirms.",
+            "mentions": [
+              117598,
+              30302
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 117598,
+            "reply_to": "M7",
+            "text": "Good catch on pricing. The current Premium band in A1 is based on a rough benchmark, not yet on a full margin model. To stay within the constraint that benefits must be margin positive within six months, I propose we define pricing as ranges in A1 for now and mark Premium as subject to finance validation. I will reach out to finance offline to run a quick scenario check before we lock the exact numbers.",
+            "mentions": [
+              472865,
+              30302
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 30302,
+            "reply_to": "M8",
+            "text": "I agree we should not fix the exact Premium price until finance has looked at it. But for the purpose of T1 and the documentation freeze, we do need to agree on the structure and the relative positioning between tiers. From what I see, Essential is the entry, Plus is mid, Premium is top. If everyone is comfortable with three tiers and the Essential, Plus, Premium naming, I suggest we confirm that now so A1 can move forward, and we treat the exact price points as a follow up with finance.",
+            "mentions": [
+              61232,
+              117598,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 61232,
+            "reply_to": "M9",
+            "text": "From my side, I am comfortable confirming three tiers with the Essential, Plus, Premium naming. It is simple enough for the field and matches how we usually talk about good, better, best offers. As long as we keep the Plus benefits trimmed as discussed and make the Premium perks clearly differentiated, I think this structure will be easy to sell and explain.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 285875,
+            "reply_to": "M9",
+            "text": "I am aligned as well. Three tiers with those names will also make it easier to brief customer service when we update A3 and later A8. They can quickly see which benefits belong where. I will keep an eye on how members react during the pilot so we can adjust if there is confusion, but for now I support locking this structure.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 117598,
+            "reply_to": "M9",
+            "text": "Noted. I will update A1 to reflect three tiers with the Essential, Plus, Premium naming as final. I will also adjust the eligibility rules to rely on spend thresholds only, as discussed, and simplify the Plus benefits list. Once finance confirms the margin checks, I will plug in the final price points within the agreed bands.",
+            "mentions": [
+              30302,
+              61232
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 61232,
+            "reply_to": "M6",
+            "text": "On the core benefits per tier, can we list them explicitly here so we are sure we are aligned before you finalize A1? My understanding after your edits would be: Essential: basic access plus standard support. Plus: Essential benefits plus priority support, extended access to selected services, and a modest discount band. Premium: all Plus benefits plus highest discount band, exclusive events, and a small set of high touch perks. If that is correct, I can already start shaping T2 around these bundles.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 117598,
+            "reply_to": "M13",
+            "text": "Your summary is almost exactly what I had in mind. The only tweak I would add is that Essential also includes access to the standard online portal, which we should call out so members do not feel they are losing anything compared to today. I will capture the core benefits per tier in a dedicated table in A1 and mark the rest as optional add ons. With that, we can say we have a final list of core benefits and pricing bands, pending only the exact Premium price point from finance.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 30302,
+            "reply_to": "M14",
+            "text": "I am fine with that benefits breakdown. It keeps Essential close to what members know today, which should help with retention, and it makes the step ups clear. For pricing, as long as we keep the bands in A1 and confirm with finance before launch, I am comfortable saying we have agreed the structure and ranges now so T1 can move to done.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 472865,
+            "reply_to": "M14",
+            "text": "Works for me too. From a field view, having those clear bundles will make it easier to explain upgrades and downgrades, and we can mirror the same structure in the objection handling part of T2. I will just need the final wording from A1 once you freeze it so we do not improvise different names for the same perks.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 285875,
+            "reply_to": "M14",
+            "text": "I will also reflect the final tier benefits in the draft of A3 so that onboarding, upgrades, and downgrades are consistent with what we promise in A1. That should help reduce confusion for front line teams when they handle changes between Essential, Plus, and Premium.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A3",
+              "A1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 117598,
+            "reply_to": "M1",
+            "text": "To close this thread: we have agreed on three tiers named Essential, Plus, and Premium, with eligibility based on spend thresholds only, and a clear list of core benefits per tier and pricing bands captured in A1. I will update A1 and share a short summary once finance confirms the Premium margin check, but the structure and core benefits are now fixed for the documentation freeze.",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 117598,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 285875,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock sales pitch, objection handling, and training approach for launch.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 61232,
+            "reply_to": null,
+            "text": "Starting a new thread to align on the sales pitch, objection handling, and training plan for the tiered membership launch project_title. I have drafted the Sales Pitch and Objection Handling Guide in A2 based on the final tier structure from A1 and the work under T2. I also added a first pass at the training outline for T5 into A5 so we can see how the pitch flows into training. Key questions: 1) Are we comfortable using a single standard pitch framework across all teams, with small local tweaks only? 2) Which training sessions should be mandatory vs optional, given the 21 day timeline?",
+            "mentions": [
+              30302,
+              117598,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 117598,
+            "reply_to": "M19",
+            "text": "I reviewed A2 and A5. The structure of the pitch looks solid: open with member goals, introduce the three tiers, then guide to the right fit. I like that you kept the Essential, Plus, Premium naming consistent with A1. For objection handling, the top 10 list covers most of what we hear today. I would just add one more around members worrying about being forced to upgrade. On training, my instinct is that at least one core session should be mandatory for all sales and membership staff, with optional deep dives for those handling complex accounts.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 30302,
+            "reply_to": "M19",
+            "text": "I am still going through A2, but one thing I noticed is that the pitch assumes we always lead with Plus as the recommended option. I wonder if that might confuse members who are currently on a basic plan and just want to stay where they are. Maybe we should have two variants in A2: one for new members where we lead with Plus, and one for existing members where we start from Essential and then show the step ups. That might also impact how we structure the training in T5.",
+            "mentions": [
+              61232,
+              117598
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 472865,
+            "reply_to": "M21",
+            "text": "From the field side, I agree that having two pitch variants would help. When we talk to new prospects, leading with Plus works well, but with existing members we usually start from what they have today. Could we structure A2 so that the core framework is the same, but we have two short scripts: one labelled new and one labelled existing? That way we still keep a standard approach but give reps a clear path.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 61232,
+            "reply_to": "M21",
+            "text": "Good point. I can adjust A2 so that the framework is one standard flow, but we include two example scripts: one for new members, one for existing. The steps stay the same: understand needs, explain tiers, recommend, handle objections, close. Only the starting point changes. That should still qualify as a single standard framework for D3, while giving enough guidance for different situations.",
+            "mentions": [
+              30302,
+              472865
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 285875,
+            "reply_to": "M19",
+            "text": "Looking at A5 and T5, I see three types of sessions: overview of tiers and benefits, detailed pitch and objection handling, and tools and process walk through. Given the time constraint, I would suggest we make the overview plus a short pitch practice mandatory for all, and keep the detailed objection handling and tools sessions as optional for those who need more depth. That would also reduce scheduling pressure on membership teams.",
+            "mentions": [
+              61232,
+              117598
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 117598,
+            "reply_to": "M24",
+            "text": "I like that split. For membership staff, the overview plus pitch practice is essential so they can answer basic questions, but they may not all need the full objection handling deep dive. We can record the optional sessions and share the link in A5 so people can watch later if needed. That should help us keep T5 realistic within the 21 day window.",
+            "mentions": [
+              285875
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 472865,
+            "reply_to": "M24",
+            "text": "For the sales teams, I would still push for the objection handling part to be mandatory for at least the core reps. Maybe we can define mandatory as: all front line sales and membership staff attend the overview plus pitch session, and all quota carrying reps attend the objection handling deep dive. The tools session can stay optional and be covered in team huddles.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "muscle",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 61232,
+            "reply_to": "M26",
+            "text": "That sounds like a good compromise. I will update T5 and A5 to reflect: 1) mandatory overview plus pitch session for all sales and membership staff, 2) mandatory objection handling deep dive for quota carrying reps, 3) optional tools and process session, recorded and shared. We will also include attendance tracking in T5 so we can report coverage before launch.",
+            "mentions": [
+              472865,
+              117598,
+              285875
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 30302,
+            "reply_to": "M23",
+            "text": "On the standard framework question, I am comfortable saying that what you described counts as one framework. The steps are the same, and the two scripts are just examples. That should help us keep consistency across teams and avoid each region inventing their own approach. As long as A2 clearly marks the core steps as non negotiable, I can support approving it as the standard.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 117598,
+            "reply_to": "M28",
+            "text": "Agreed. The structure in A2 is clear enough that we can roll it out as the standard. I would just ask that we add a short section linking the pitch to the operations flows in A3, so reps know what happens after a member agrees to upgrade or downgrade. That will also help when we brief customer service later.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "link",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 61232,
+            "reply_to": "M28",
+            "text": "Thanks for the confirmation. I will mark the five core steps in A2 as required and keep the two scripts as examples. I will also add a short handoff section pointing to A3 so the flow from pitch to onboarding or changes is clear. Once that is done, we can treat A2 as the standard framework for all teams.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 285875,
+            "reply_to": "M27",
+            "text": "For scheduling, I can help coordinate with team leads so the mandatory sessions fit around existing commitments. Once you update A5 with the final session list and durations, I will propose time slots and share a simple calendar overview so we can track who has attended what.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 472865,
+            "reply_to": "M19",
+            "text": "One more point on objections: in A2 we cover price, confusion about tiers, and fear of losing benefits. In the field we also hear concerns about data use when members move tiers. Could we add a short answer that reassures them we stay within data protection and consent rules? That will avoid reps improvising answers.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 61232,
+            "reply_to": "M32",
+            "text": "Good call. I will add a data and privacy objection to the top 10 list in A2, with a short, compliant response aligned with our existing policies. I will also flag that in the objection handling deep dive so reps know exactly what they can and cannot say.",
+            "mentions": [
+              472865
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 61232,
+            "reply_to": "M19",
+            "text": "To wrap this up: we will use the A2 framework as the standard pitch for all teams, with two example scripts for new and existing members, and a clear handoff to A3. Training under T5 and A5 will include one mandatory overview plus pitch session for all sales and membership staff, a mandatory objection handling deep dive for quota carrying reps, and an optional tools and process session. I will update A2, T2, T5, and A5 accordingly and share the final versions for reference.",
+            "mentions": [
+              30302,
+              117598,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 61232,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 61232,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on data fields, tagging rules, and pre-launch data clean-up scope.",
+        "messages": [
+          {
+            "msg_id": "M35",
+            "speaker_id": 117598,
+            "reply_to": null,
+            "text": "Opening the data and tagging thread for the tiered membership launch project_title. I have shared an initial Membership Data Fields and Tagging Matrix in A4, based on T4, and a short summary of the current data audit from T8. The matrix lists required fields for member identity, contact, consent, spend, tenure, and the new tier tags. The audit shows gaps mainly in tenure and some missing consent flags. We need to confirm the final set of required fields for A4 and decide which clean up actions from T8 we must complete before launch, given the 21 day deadline.",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 285875,
+            "reply_to": "M35",
+            "text": "Looking at A4, I see we marked both spend and tenure as required for tier eligibility. Given what we discussed in TH1 and the audit results in T8, I would suggest we keep spend as required but move tenure to recommended. That way we do not block launch on cleaning up tenure for everyone, but we still capture it when available for future analysis.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 61232,
+            "reply_to": "M35",
+            "text": "From a sales reporting angle, the must have fields for launch are: member ID, segment, tier, annual spend band, and consent status. If those are reliable, we can track uptake and avoid contacting members without proper consent. I would be careful about adding too many required fields that reps need to fill manually, as that tends to create friction. Maybe we can keep the required list tight in A4 and treat the rest as optional for now.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 30302,
+            "reply_to": "M35",
+            "text": "I am a bit worried about the missing consent flags you mentioned from T8. Do we know how many members are affected? If it is a small group, we might be able to fix it before launch, but if it is large, we may need to accept some limitations in targeting for the first wave.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 117598,
+            "reply_to": "M38",
+            "text": "The T8 audit shows that around 15 percent of active members have missing or inconsistent consent flags. That is too high to fix manually before launch. My proposal is: we define consent status as required in A4, but for launch we only target members with clear consent, and we plan a separate clean up and re permissioning campaign later. I will also add a note in A6 so this is visible in the readiness checklist.",
+            "mentions": [
+              30302
+            ],
+            "artifact_refs": [
+              "T8",
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 472865,
+            "reply_to": "M35",
+            "text": "On tagging rules, A4 currently has separate tags for tier and for campaign segment. In the field, people sometimes mix those up. Could we standardize the format, for example tier codes like T Essential, T Plus, T Premium, and segment codes like S1, S2, S3, and document that clearly in A4? That would reduce errors when reps update records.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "label",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 117598,
+            "reply_to": "M40",
+            "text": "Yes, we can do that. I will update A4 so that tier tags follow a simple T Essential, T Plus, T Premium pattern, and segments use S codes. I will also add examples of valid combinations and a short do and do not list to avoid mixing tier and segment tags.",
+            "mentions": [
+              472865
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 285875,
+            "reply_to": "M39",
+            "text": "For the pre launch clean up scope, I think we should focus on three things from T8: 1) fix obviously invalid email addresses for members we plan to target, 2) correct any missing tier tags for high value members, and 3) make sure consent flags are present and correct for the pilot cohort. The rest can be handled after launch.",
+            "mentions": [
+              117598,
+              30302
+            ],
+            "artifact_refs": [
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 61232,
+            "reply_to": "M42",
+            "text": "That prioritization makes sense. For sales, the most critical is that the pilot cohort and top spenders have clean data so we can measure impact. I would add that we should also check that the new tier tags are correctly applied for any members we move into Plus or Premium before launch, so reporting is accurate from day one.",
+            "mentions": [
+              285875
+            ],
+            "artifact_refs": [
+              "T8",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 30302,
+            "reply_to": "M36",
+            "text": "I am ok with moving tenure from required to recommended in A4, as long as we keep spend and consent as required. That should reduce the amount of clean up we need to do now. For the pre launch scope, I support focusing on consent and tier tags for the pilot and high value members, and leaving the rest for later waves.",
+            "mentions": [
+              117598,
+              285875
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 117598,
+            "reply_to": "M44",
+            "text": "Understood. I will update A4 so that the final required fields for launch are: member ID, segment, tier tag, annual spend band, and consent status. Tenure and some additional profile fields will be marked as recommended. I will also document the pre launch clean up scope in T8 and A6: focus on consent and tier tags for the pilot cohort and top spenders, plus obvious email fixes.",
+            "mentions": [
+              30302
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 61232,
+            "reply_to": "M45",
+            "text": "Once A4 is updated, please share a short summary for sales so we can brief teams on what they must fill in and what is optional. That will help avoid confusion and keep data quality from slipping again after launch.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 285875,
+            "reply_to": "M42",
+            "text": "I can coordinate with the data team to run the specific clean up queries defined in T8. We will start with the pilot cohort and top spenders list, then move to obvious email corrections. I will track progress against the A6 checklist so we know where we stand before go live.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 117598,
+            "reply_to": "M35",
+            "text": "To close: we have agreed the final set of required fields in A4 for launch and the limited pre launch clean up scope from T8. Required fields are member ID, segment, tier tag, annual spend band, and consent status, with tenure as recommended. Pre launch clean up will focus on consent and tier tags for the pilot cohort and top spenders, plus obvious email fixes, tracked via A6.",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 117598,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 285875,
+              "when": "EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define pilot scope, success criteria, and adjustments before full rollout.",
+        "messages": [
+          {
+            "msg_id": "M49",
+            "speaker_id": 30302,
+            "reply_to": null,
+            "text": "Starting the pilot planning thread for the tiered membership launch project_title. I have drafted a proposal for T10 with a pilot cohort of 500 existing members across two key segments, running for four weeks. The idea is to use the new tiers and processes from A3 with this group first, then capture feedback and results in A7 before full rollout. We need to agree on the pilot cohort size, duration, and segments, and also which changes from the pilot results in A7 must be applied before full launch.",
+            "mentions": [
+              117598,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "T10",
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 117598,
+            "reply_to": "M49",
+            "text": "Thanks for putting the first draft together. A cohort of 500 over four weeks feels reasonable from an operations standpoint, but I wonder if we should shorten the duration to three weeks to leave more time between the pilot and the full launch within the 21 day window. On segments, I would prioritize our two largest existing segments so we get enough signal on both Essential and Plus, not just Premium.",
+            "mentions": [
+              30302
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 61232,
+            "reply_to": "M49",
+            "text": "From a sales perspective, 500 members is a good sample, but I would like to make sure we have enough members in the higher spend band to test Premium uptake as well. Maybe we can split the 500 into 350 in the mid segment and 150 in the top segment. On duration, three weeks should be enough if we monitor closely and have clear success criteria.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 472865,
+            "reply_to": "M49",
+            "text": "On success criteria, A7 currently lists uptake rate, upgrade rate, and complaint volume. I would add one more: clarity of scripts and processes from the reps point of view. We can capture that via a short internal survey at the end of the pilot. If reps find A2 and A3 easy to use, that is a good sign for scaling.",
+            "mentions": [
+              61232,
+              30302
+            ],
+            "artifact_refs": [
+              "A7",
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 285875,
+            "reply_to": "M49",
+            "text": "Operationally, a three week pilot with 500 members is manageable if we stagger the outreach. We should also define clear escalation paths in A3 for pilot issues, so front line teams know how to handle unexpected cases. I can help set up a simple log for pilot incidents that will feed into A7.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 30302,
+            "reply_to": "M50",
+            "text": "I am ok to adjust the duration to three weeks. For the cohort split, I like the idea of 350 mid segment and 150 top segment members. That should give us enough data on Plus and Premium without overloading the teams. Unless there are strong objections, I suggest we confirm that as the pilot scope for T10.",
+            "mentions": [
+              61232,
+              117598,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 61232,
+            "reply_to": "M54",
+            "text": "No objections from me. Three weeks, 500 members split 350 mid and 150 top segment works. We just need to make sure the data team can tag the cohort correctly using the A4 rules and that consent is clear, as discussed in TH3.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "T10",
+              "A4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 117598,
+            "reply_to": "M54",
+            "text": "Aligned. I will update T10 with the three week duration and the 350 plus 150 split across the two key segments. I will also coordinate with the data team to pull the list based on the A4 tagging rules and the consent filters we agreed in TH3.",
+            "mentions": [
+              30302
+            ],
+            "artifact_refs": [
+              "T10",
+              "A4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 285875,
+            "reply_to": "M53",
+            "text": "For the escalation paths in A3, I will add a specific pilot section that clarifies who to contact for pricing questions, eligibility disputes, and system issues. That way we can respond quickly during the three weeks and capture patterns for A7.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 472865,
+            "reply_to": "M52",
+            "text": "On the internal survey, I can draft a short set of questions for reps covering clarity of A2, ease of using A3, and member reactions. We can include that as an appendix in A7 so the qualitative feedback sits next to the numbers.",
+            "mentions": [
+              61232
+            ],
+            "artifact_refs": [
+              "A7",
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 61232,
+            "reply_to": "M49",
+            "text": "We should also be clear on which types of changes from A7 we commit to make before full launch. My suggestion: any changes that affect member facing promises, like benefit descriptions or eligibility, must be applied before launch. Smaller internal tweaks, like minor script wording or internal routing, can wait for a later iteration.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "A7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 117598,
+            "reply_to": "M59",
+            "text": "I agree. For A7, we can categorize findings into must fix before launch and can wait. Must fix would include anything that risks mis selling, margin issues, or major member confusion. Can wait would be things like small layout changes in A2 or minor process refinements in A3. We will flag the must fix items clearly in A7 so we can act on them before go live.",
+            "mentions": [
+              61232,
+              30302
+            ],
+            "artifact_refs": [
+              "A7",
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "triangular_flag_on_post",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 30302,
+            "reply_to": "M60",
+            "text": "That categorization works for me. We will commit to applying all must fix items from A7 that touch member promises or margin assumptions before full launch, and we will schedule the rest for the first post launch review cycle. I will make sure this is reflected in the T10 definition of done.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 285875,
+            "reply_to": "M60",
+            "text": "I will also add a line in A6 so that before we move from pilot to full launch, we check that all must fix items from A7 are implemented in A1, A2, and A3 where relevant.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "A3"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 30302,
+            "reply_to": "M49",
+            "text": "To summarize: we will run a three week pilot with 500 existing members, split 350 in the mid segment and 150 in the top segment, as defined in T10. Success criteria will include uptake, upgrade rate, complaint volume, and internal feedback on A2 and A3, all captured in A7. Before full launch, we will apply all must fix changes from A7 that affect member promises or margins, and track completion via A6.",
+            "mentions": [
+              117598,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7",
+              "A6",
+              "A3"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 117598,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 285875,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Finalize cross-team launch timeline, KPIs, and review cadence.",
+        "messages": [
+          {
+            "msg_id": "M64",
+            "speaker_id": 117598,
+            "reply_to": null,
+            "text": "Final thread to align on the cross team launch timeline, KPIs, and review cadence for the tiered membership launch project_title. I have drafted an integrated plan under T11 and added it into A5, including key milestones for design, training, pilot, and full launch. For T12, I proposed a weekly performance review for the first eight weeks post launch, with a core KPI set. Please review and share any gaps or conflicts, especially around training dates and sales targets.",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "T11",
+              "T12",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_calendar_pad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 61232,
+            "reply_to": "M64",
+            "text": "Looking at T11 in A5, the overall sequence makes sense: finalize A1 to A4, run training, start pilot, then full launch. One concern: the current dates have the last training session ending only two days before pilot start. That might be tight for teams to absorb the content. Could we bring the mandatory overview plus pitch session forward by a couple of days, even if the optional tools session stays closer to pilot?",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T11",
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 285875,
+            "reply_to": "M65",
+            "text": "I can adjust the training schedule. If we move the mandatory overview plus pitch session earlier by two days, we still stay within the 21 day window and give teams more time to practice. The optional tools session can remain closer to pilot start, as you suggested.",
+            "mentions": [
+              61232,
+              117598
+            ],
+            "artifact_refs": [
+              "T5",
+              "T11",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 30302,
+            "reply_to": "M64",
+            "text": "On KPIs in T12, I see we have tier uptake, upgrade rate, and churn as the main metrics. I would also like to track the share of members with complete required data fields, based on A4, as a quality indicator. That will help us see if the new processes are being followed.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T12",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 472865,
+            "reply_to": "M64",
+            "text": "For the weekly performance review cadence in T12, I suggest we keep the meetings short and focused. Maybe 45 minutes with a standard agenda: KPIs, member feedback highlights, operational issues, and decisions. That will make it easier for sales leaders to commit to attending every week.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "T12",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 61232,
+            "reply_to": "M67",
+            "text": "Agree on adding a data completeness KPI. We can define it as the percentage of active members with all required fields from A4 populated. That will also give us an early warning if data quality starts to slip as volumes grow.",
+            "mentions": [
+              30302,
+              117598
+            ],
+            "artifact_refs": [
+              "T12",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 117598,
+            "reply_to": "M68",
+            "text": "I can update T12 to reflect a 45 minute weekly review with a fixed agenda: KPIs, member feedback, operational issues, and actions. I will also schedule the first two review dates before launch, as per the definition of done, and include them in A5 so everyone has them in their calendars.",
+            "mentions": [
+              472865,
+              61232
+            ],
+            "artifact_refs": [
+              "T12",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 285875,
+            "reply_to": "M64",
+            "text": "On dependencies in T11, we should make sure that the pilot start date is after the key items in A6 are checked off for the pilot cohort, especially data clean up and training completion. I will add those dependencies explicitly in the timeline so we do not accidentally start the pilot before we are ready.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T11",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "link",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 30302,
+            "reply_to": "M71",
+            "text": "Good point. Please also flag in T11 that full launch is conditional on closing the must fix items from A7, as we agreed in the pilot thread. That way the timeline reflects both data and process readiness.",
+            "mentions": [
+              285875,
+              117598
+            ],
+            "artifact_refs": [
+              "T11",
+              "A7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 61232,
+            "reply_to": "M64",
+            "text": "On sales targets and incentives in T9, we should align the timing so that targets linked to the new tiers only kick in after full launch, not during the pilot. I will adjust T9 accordingly and make sure the communication plan in A5 reflects that, so reps are not confused about when the new incentives apply.",
+            "mentions": [
+              117598
+            ],
+            "artifact_refs": [
+              "T9",
+              "A5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "moneybag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 117598,
+            "reply_to": "M65",
+            "text": "I will rework T11 so that: 1) mandatory overview plus pitch training happens earlier, 2) pilot starts after training and key A6 items for the pilot cohort are complete, and 3) full launch follows after we implement must fix items from A7. I will also add the data completeness KPI and the weekly review cadence details into T12.",
+            "mentions": [
+              61232,
+              285875,
+              30302
+            ],
+            "artifact_refs": [
+              "T11",
+              "T12",
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 472865,
+            "reply_to": "M69",
+            "text": "For the weekly reviews, I can take the lead on pulling a simple dashboard that covers the agreed KPIs: tier uptake, upgrades, churn, and data completeness. We can iterate on the format after the first couple of sessions.",
+            "mentions": [
+              61232,
+              117598
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 30302,
+            "reply_to": "M64",
+            "text": "From my side, the updated plan in T11 and T12 covers the main needs: clear milestones, dependencies on A6 and A7, and a structured review cadence. As long as we keep the weekly reviews focused and stick to the agreed KPIs, I think we are in a good place for launch.",
+            "mentions": [
+              117598,
+              61232
+            ],
+            "artifact_refs": [
+              "T11",
+              "T12",
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 117598,
+            "reply_to": "M64",
+            "text": "To close this thread: we will finalize T11 with an integrated timeline that brings mandatory training slightly forward, starts the pilot only after key A6 items are complete for the pilot cohort, and moves to full launch once must fix items from A7 are implemented. T12 will define weekly 45 minute performance reviews for the first eight weeks post launch, with KPIs covering tier uptake, upgrades, churn, and data completeness based on A4. The first two review dates will be scheduled and added to A5 before launch.",
+            "mentions": [
+              30302,
+              61232,
+              285875,
+              472865
+            ],
+            "artifact_refs": [
+              "T11",
+              "T12",
+              "A5",
+              "A6",
+              "A7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T11",
+              "owner_id": 117598,
+              "when": "today"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 472865,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

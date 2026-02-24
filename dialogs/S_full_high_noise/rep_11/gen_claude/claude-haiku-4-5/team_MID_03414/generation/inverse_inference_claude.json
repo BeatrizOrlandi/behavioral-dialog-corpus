@@ -1,0 +1,144 @@
+{
+  "predictions": [
+    {
+      "_id": 62399,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant contributes domain expertise on housekeeping workflows and validates designs with end-users, meeting baseline expectations for their role. Delivers artifacts on schedule (A3, A4, checklists by stated deadlines) and coordinates team feedback. However, contributions are primarily reactive to requests from the project lead rather than proactive problem-solving or risk identification. No evidence of exceptional speed, depth of analysis, or autonomous initiative beyond assigned scope.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M3",
+          "snippet": "From the housekeeping side, the main issue is that requests come in via email and phone, and there's no clear tracking"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M26",
+          "snippet": "I've drafted the housekeeping service categories and workflows for the platform with three main categories"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M28",
+          "snippet": "For SLAs: Standard Cleaning should be completed within 24 hours, Maintenance Support within 48 hours"
+        }
+      ]
+    },
+    {
+      "_id": 410536,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant demonstrates exceptional security expertise and proactive risk management. Consistently identifies gaps (secrets management, logging architecture, RBAC details, penetration testing, audit validation) before they become problems. Proposes concrete solutions with technical depth (SIEM integration, OAuth 2.0, role definitions, security review checklist). Commits to aggressive timelines and delivers on them. Drives security checkpoints and escalation planning. Stands out as the most thorough in identifying dependencies and ensuring compliance—qualitatively different from baseline participation.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "How are we handling secrets management for the identity provider integration? What's the logging architecture—are we sending logs to a centralized SIEM?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M11",
+          "snippet": "I'd add one more: all audit logging requirements validated against internal compliance standards before go-live"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M20",
+          "snippet": "I'll now focus on T5—configuring the hosting environment and access controls. Both should be ready for review by mid-week"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M25",
+          "snippet": "For T11, I want to include a basic penetration test of the authentication and API endpoints and validate that all audit logging is working correctly"
+        }
+      ]
+    },
+    {
+      "_id": 430520,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant leads architecture design with sophisticated technical reasoning, identifying integration points, data models, and security controls early. Proposes concrete solutions (REST API with OAuth 2.0, secrets vault, SIEM logging, role-based access control, threat modeling). Responds quickly to questions with detailed answers and proactively schedules working sessions. Commits to deliverables and follows through. Demonstrates systems thinking by connecting architecture to security, scalability, and compliance requirements. Stands out as the most technically comprehensive contributor.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M14",
+          "snippet": "The design includes a web application tier, an API layer for request and tracking operations, integration with our identity provider for authentication, and a database tier with encryption at rest"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M16",
+          "snippet": "For secrets, I'm planning to use our internal secrets vault. For logging, yes, we should send all application and system logs to the centralized SIEM"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M13",
+          "snippet": "I'll start on T2 today. I'll need input from 410536 on security controls and from 525316 on the application architecture. Let me set up a working session for tomorrow"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M18",
+          "snippet": "REST API with OAuth 2.0 for API authentication. Rate limiting will be enforced at the API gateway level. For concurrent requests, the database is designed to handle the expected pilot load"
+        }
+      ]
+    },
+    {
+      "_id": 494954,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant acts as project lead with exceptional convergence and decision-making. Consistently synthesizes input from multiple stakeholders, identifies gaps, and closes decisions with clear summaries (D1, D2, D3, D4, D5, D6, D7, D8). Proposes concrete success criteria, timelines, and go/no-go gates. Proactively schedules sessions, assigns owners, and tracks dependencies. Demonstrates strategic thinking by deferring non-MVP items and building in security gates. Moves the project forward decisively while maintaining alignment—qualitatively different from baseline participation.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M5",
+          "snippet": "Let me summarize what I'm hearing for the MVP scope: (1) Request submission with basic categories, (2) Status tracking, (3) Simple dashboard, (4) Mobile-friendly interface, (5) Role-based access control and audit logging"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M7",
+          "snippet": "For T1, I'll coordinate workshops with facilities, housekeeping, and IT this week and have a draft requirements document by EOD Friday"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M10",
+          "snippet": "Perfect. So D1 is confirmed: MVP includes request submission, status tracking, simple dashboard, mobile-friendly web interface, RBAC, and audit logging"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M42",
+          "snippet": "Let me summarize the usability feedback and prioritization: (1) Task list grouping by status—critical, fix today, (2) Button size for mobile—critical, fix today"
+        }
+      ]
+    },
+    {
+      "_id": 525316,
+      "productivity_level": "HIGH",
+      "ability_level": "MID",
+      "performance_level": "HIGH",
+      "justification": "Participant delivers working prototypes rapidly and commits to aggressive timelines with follow-through. Deploys prototype early (M36), responds quickly to feedback, and prioritizes fixes (critical items same day, others next day). Demonstrates practical development thinking (REST vs GraphQL, rate limiting, concurrent load, edge case handling). However, ability is MID because contributions are primarily implementation-focused without the architectural depth or risk identification shown by 430520 or 410536. Productivity and performance are HIGH due to speed of delivery and responsiveness to feedback.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M21",
+          "snippet": "I'll start implementing the API layer and authentication flow based on the architecture. I'll have a working prototype of the login and basic request submission by end of week"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M38",
+          "snippet": "I'll reorganize the task list to group by status—that's a quick fix. I'll increase the button size for mobile usability. These are all usability improvements that should go into the next iteration"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M43",
+          "snippet": "Yes, I can commit to those timelines. I'll have the critical fixes deployed to test by EOD today. The other improvements by EOD tomorrow"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "One thing I want to confirm: for the API layer, are we using REST or GraphQL? And what about rate limiting and API authentication?"
+        }
+      ]
+    }
+  ]
+}

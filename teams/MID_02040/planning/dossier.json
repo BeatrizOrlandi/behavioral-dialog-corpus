@@ -1,0 +1,448 @@
+{
+  "affinity_band": "MID",
+  "planning_output": {
+    "project_pack": {
+      "project": {
+        "title": "Branch Queue & Service Experience Optimization Pilot",
+        "objective": "Reduce in-branch wait times and improve customer experience by redesigning queue processes, triage, and cross-channel handoffs for a pilot branch network.",
+        "deliverables": [
+          "Current-state branch queue and service mapping",
+          "Redesigned queue and triage process for teller and service desks",
+          "Call centre triage and callback playbook",
+          "Cross-sell and information script for frontline staff",
+          "Operational performance dashboard for pilot branches",
+          "Pilot rollout and training report with recommendations"
+        ],
+        "constraints": [
+          "Pilot must run within existing branch opening hours and staffing levels",
+          "All changes must comply with banking regulations and internal audit requirements",
+          "No new core banking system; only configuration and process changes allowed",
+          "Customer data handling must follow data protection and privacy policies",
+          "Pilot must not increase average transaction handling time at teller windows",
+          "Any physical layout changes must be low-cost and reversible"
+        ],
+        "stakeholders": [
+          "Branch operations manager",
+          "Bank teller team lead",
+          "Call centre supervisor",
+          "Retail banking product manager",
+          "Compliance officer",
+          "Customer experience analyst"
+        ],
+        "deadline_days": 21,
+        "risks": [
+          {
+            "risk": "Queue changes confuse customers and temporarily increase complaints.",
+            "mitigation": "Use clear signage, staff guidance, and a short customer-facing FAQ; monitor complaints daily and adjust scripts."
+          },
+          {
+            "risk": "Staff resist new triage and scripting, reverting to old habits.",
+            "mitigation": "Involve staff in design, run short training sessions, and collect feedback in week 1 and 2 for quick tweaks."
+          },
+          {
+            "risk": "Process changes inadvertently breach internal controls or segregation of duties.",
+            "mitigation": "Have compliance and internal control review all new flows and approvals before pilot launch."
+          },
+          {
+            "risk": "Call centre cannot absorb additional triage or callback workload.",
+            "mitigation": "Limit pilot volume, define caps per day, and create overflow rules back to branches."
+          },
+          {
+            "risk": "Data for the performance dashboard is incomplete or inconsistent across branches.",
+            "mitigation": "Standardise simple logging templates and run a 2-day data capture test before full pilot."
+          }
+        ]
+      },
+      "themes": [
+        {
+          "theme": "Queue management and triage",
+          "why_relevant": "Core to reducing wait times and balancing teller vs service workloads."
+        },
+        {
+          "theme": "Cross-channel handoff (branch to call centre)",
+          "why_relevant": "Enables moving non-urgent issues off the branch floor while keeping service quality."
+        },
+        {
+          "theme": "Customer communication and scripting",
+          "why_relevant": "Consistent, clear messaging reduces confusion and complaints during changes."
+        },
+        {
+          "theme": "Operational controls and compliance",
+          "why_relevant": "Banking processes must remain compliant while changing workflows."
+        },
+        {
+          "theme": "Performance measurement and feedback loops",
+          "why_relevant": "Needed to judge pilot success and refine processes quickly."
+        },
+        {
+          "theme": "Sales and service balance",
+          "why_relevant": "Must improve experience without turning interactions into hard-sell moments."
+        }
+      ],
+      "backlog": [
+        {
+          "task_id": "T1",
+          "task": "Map current branch queue, transaction types, and average wait times for pilot branches",
+          "owner_role": "bank teller",
+          "definition_of_done": [
+            "At least two full days of observations logged per pilot branch",
+            "List of top 10 transaction types with approximate volumes created",
+            "Average and peak wait times estimated for teller and service queues",
+            "Summary shared with operations manager and call centre agent"
+          ]
+        },
+        {
+          "task_id": "T2",
+          "task": "Design new triage flow separating quick transactions from complex service requests",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Draft triage flow diagram created and reviewed with two bank tellers",
+            "Compliance confirms no control breaches in proposed flow",
+            "Simple decision checklist for frontline staff written",
+            "Flow approved for pilot by branch operations manager"
+          ]
+        },
+        {
+          "task_id": "T3",
+          "task": "Create call centre triage and callback playbook for branch referrals",
+          "owner_role": "call centre agent",
+          "definition_of_done": [
+            "List of issues suitable for call centre handling agreed with operations manager",
+            "Standard callback script drafted for at least five common scenarios",
+            "Escalation rules and SLAs documented",
+            "Playbook shared with pilot call centre team and acknowledged"
+          ]
+        },
+        {
+          "task_id": "T4",
+          "task": "Develop customer-facing explanation script for new queue process",
+          "owner_role": "commercial sales representative",
+          "definition_of_done": [
+            "Short greeting and explanation script drafted for lobby use",
+            "Script tested informally with at least three colleagues for clarity",
+            "Compliance reviews script for regulatory wording",
+            "Final version printed and shared with all pilot branch staff"
+          ]
+        },
+        {
+          "task_id": "T5",
+          "task": "Set up simple daily log for wait times, complaints, and redirected cases",
+          "owner_role": "bank teller",
+          "definition_of_done": [
+            "Paper or digital log template created and agreed with operations manager",
+            "Staff briefed on how to record entries consistently",
+            "Test run completed for one day with sample data",
+            "Template adjusted based on feedback and locked for pilot"
+          ]
+        },
+        {
+          "task_id": "T6",
+          "task": "Train pilot branch staff on new triage, scripts, and logging",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Training agenda and materials prepared",
+            "At least 90% of pilot staff attend a session or receive 1:1 briefing",
+            "Attendance recorded and questions captured",
+            "Follow-up FAQ shared in writing after training"
+          ]
+        },
+        {
+          "task_id": "T7",
+          "task": "Define light cross-sell and information prompts for quick transactions",
+          "owner_role": "commercial sales representative",
+          "definition_of_done": [
+            "List of 3–5 suitable prompts aligned with key products created",
+            "Prompts kept under 20 seconds to avoid extending queues",
+            "Compliance and product teams review and approve prompts",
+            "Prompts integrated into teller and call centre scripts"
+          ]
+        },
+        {
+          "task_id": "T8",
+          "task": "Monitor first week of pilot and collect staff feedback on issues",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Daily check-in notes captured for each pilot branch",
+            "Top 5 recurring issues identified and prioritised",
+            "Quick fixes agreed with tellers and call centre",
+            "Summary shared with stakeholders at end of week 1"
+          ]
+        },
+        {
+          "task_id": "T9",
+          "task": "Adjust call centre staffing schedule to cover new callback demand",
+          "owner_role": "call centre agent",
+          "definition_of_done": [
+            "Estimate of expected daily callback volume produced",
+            "Proposed shift tweaks documented and shared with supervisor",
+            "No breach of maximum working hours or break rules",
+            "Schedule changes approved and communicated to team"
+          ]
+        },
+        {
+          "task_id": "T10",
+          "task": "Prepare pilot performance dashboard with key indicators",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Metrics defined (wait time, complaints, callbacks, redirected cases)",
+            "Data sources mapped to each metric",
+            "Simple weekly dashboard template created",
+            "Stakeholders agree on format and review cadence"
+          ]
+        },
+        {
+          "task_id": "T11",
+          "task": "Document compliance and control checks for new processes",
+          "owner_role": "bank teller",
+          "definition_of_done": [
+            "List of control points in old vs new process drafted",
+            "Compliance feedback incorporated into final checklist",
+            "Checklist shared with all pilot branches",
+            "Evidence storage approach agreed (e.g., logs, sign-offs)"
+          ]
+        },
+        {
+          "task_id": "T12",
+          "task": "Compile final pilot report with recommendations for wider rollout",
+          "owner_role": "operations manager",
+          "definition_of_done": [
+            "Before/after metrics summarised for all pilot branches",
+            "Staff and customer feedback themes included",
+            "Clear go/no-go and improvement recommendations listed",
+            "Report circulated to senior stakeholders and archived"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "A1",
+          "type": "doc",
+          "title": "Current-State Branch Queue and Service Map",
+          "used_for": "Reference for understanding existing flows and pain points before changes."
+        },
+        {
+          "artifact_id": "A2",
+          "type": "guideline",
+          "title": "Pilot Branch Triage and Queue Process Guide",
+          "used_for": "Step-by-step instructions for staff on new triage and queue handling."
+        },
+        {
+          "artifact_id": "A3",
+          "type": "guideline",
+          "title": "Call Centre Triage and Callback Playbook",
+          "used_for": "Standard scripts and rules for handling branch-referred calls and callbacks."
+        },
+        {
+          "artifact_id": "A4",
+          "type": "guideline",
+          "title": "Customer-Facing Queue Explanation and Cross-Sell Scripts",
+          "used_for": "Consistent messaging to customers about new process and light cross-sell prompts."
+        },
+        {
+          "artifact_id": "A5",
+          "type": "checklist",
+          "title": "Daily Queue, Complaint, and Redirect Log Template",
+          "used_for": "Recording wait times, complaints, and redirected cases during the pilot."
+        },
+        {
+          "artifact_id": "A6",
+          "type": "sheet",
+          "title": "Pilot Performance Dashboard Template",
+          "used_for": "Aggregating weekly metrics and visualising pilot performance."
+        },
+        {
+          "artifact_id": "A7",
+          "type": "doc",
+          "title": "Compliance and Control Check Summary for Pilot Processes",
+          "used_for": "Evidence that new workflows meet regulatory and internal control requirements."
+        },
+        {
+          "artifact_id": "A8",
+          "type": "doc",
+          "title": "Pilot Results and Rollout Recommendation Report",
+          "used_for": "Final summary of outcomes and decision basis for scaling or adjusting the pilot."
+        }
+      ]
+    },
+    "blueprint": {
+      "channel_name_hint": "#proj-branch-queue-pilot",
+      "threads_plan": [
+        {
+          "thread_id": "TH1",
+          "thread_goal": "Align on current-state mapping and confirm scope of the pilot branches.",
+          "trigger": "Operations manager posts initial project brief and asks for confirmation of current issues and data gaps.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Agree on which branches and service areas are included in the pilot scope."
+            },
+            {
+              "decision_id": "D2",
+              "decision": "Confirm the minimum data set to capture for current-state mapping."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A1",
+            "T1",
+            "T5"
+          ]
+        },
+        {
+          "thread_id": "TH2",
+          "thread_goal": "Design and finalise the new triage and queue process for the pilot.",
+          "trigger": "Draft triage flow and checklist are shared for feedback and compliance considerations.",
+          "target_messages_range": [
+            20,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D3",
+              "decision": "Approve the triage decision rules for quick vs complex transactions."
+            },
+            {
+              "decision_id": "D4",
+              "decision": "Decide how to handle edge cases that do not clearly fit quick or complex categories."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A2",
+            "A7",
+            "T2",
+            "T11"
+          ]
+        },
+        {
+          "thread_id": "TH3",
+          "thread_goal": "Define scripts and communication for customers and cross-sell prompts.",
+          "trigger": "Commercial sales representative posts first version of customer explanation and cross-sell scripts.",
+          "target_messages_range": [
+            17,
+            25
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D5",
+              "decision": "Select the final customer-facing explanation script for use in branches."
+            },
+            {
+              "decision_id": "D6",
+              "decision": "Agree on which cross-sell prompts are allowed during quick transactions."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A4",
+            "T4",
+            "T7"
+          ]
+        },
+        {
+          "thread_id": "TH4",
+          "thread_goal": "Set up call centre triage, callbacks, and staffing adjustments.",
+          "trigger": "Call centre agent shares draft playbook and proposed schedule changes for callbacks.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D7",
+              "decision": "Approve the call centre triage and callback playbook for the pilot."
+            },
+            {
+              "decision_id": "D8",
+              "decision": "Confirm the adjusted staffing schedule to support pilot callbacks."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A3",
+            "T3",
+            "T9"
+          ]
+        },
+        {
+          "thread_id": "TH5",
+          "thread_goal": "Monitor pilot progress, review metrics, and agree on final recommendations.",
+          "trigger": "Operations manager posts first week dashboard and feedback summary for discussion.",
+          "target_messages_range": [
+            20,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Reconfirm or adjust pilot scope based on early results."
+            },
+            {
+              "decision_id": "D3",
+              "decision": "Revisit triage rules if metrics or feedback show issues."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A5",
+            "A6",
+            "A8",
+            "T8",
+            "T10",
+            "T12"
+          ]
+        }
+      ],
+      "talk_distribution_by_role": [
+        {
+          "role": "operations manager",
+          "share": 0.3
+        },
+        {
+          "role": "bank teller",
+          "share": 0.28
+        },
+        {
+          "role": "call centre agent",
+          "share": 0.18
+        },
+        {
+          "role": "commercial sales representative",
+          "share": 0.16
+        },
+        {
+          "role": "gaming inspector",
+          "share": 0.08
+        }
+      ],
+      "channel_rituals": [
+        "Daily async check-in during pilot with quick update on queues and issues",
+        "Twice-weekly metrics post with short commentary from operations manager",
+        "Weekly feedback round-up from tellers and call centre on what to adjust",
+        "Pre-pilot readiness checklist review before go-live",
+        "Post-pilot retrospective discussion to capture lessons learned"
+      ]
+    },
+    "participants": [
+      {
+        "_id": 73292,
+        "role": "bank teller"
+      },
+      {
+        "_id": 167703,
+        "role": "call centre agent"
+      },
+      {
+        "_id": 252240,
+        "role": "bank teller"
+      },
+      {
+        "_id": 268564,
+        "role": "commercial sales representative"
+      },
+      {
+        "_id": 455770,
+        "role": "operations manager"
+      }
+    ]
+  }
+}

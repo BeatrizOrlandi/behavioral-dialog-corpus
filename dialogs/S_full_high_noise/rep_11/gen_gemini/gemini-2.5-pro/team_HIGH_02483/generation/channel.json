@@ -1,0 +1,880 @@
+{
+  "channel": {
+    "channel_id": "proj-analytics-mvp-platform-451",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, metrics, and event tracking spec before implementation starts.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Team, let's kick off the Unified Analytics Platform MVP. The main goal is to centralize product usage data for internal teams. Before we start building, we need to align on the core requirements. Please review the two key documents I've prepared:\n1. The event tracking spec: A1\n2. The proposed MVP metrics: A2\nLet's get sign-off on these by EOD tomorrow so we can start T1.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 30972,
+            "reply_to": "M1",
+            "text": "Thanks for putting these together. I've given them a quick look and they seem solid. Ready to get started on the implementation for T1.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 96134,
+            "reply_to": "M1",
+            "text": "ok looking now. for A2, why dont we add a chart for user location? i think that would be useful.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 8323,
+            "reply_to": "M1",
+            "text": "Docs look good. On A1, for the 'feature_used' event, should we include a 'source_page' property? It could help understand user flows better. What do you think?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 155243,
+            "reply_to": "M3",
+            "text": "Good idea, but let's stick to the agreed MVP scope for now to avoid scope creep. We can add user location to the v2 parking lot. The goal is to ship the core metrics in A2 first.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 155243,
+            "reply_to": "M4",
+            "text": "That's a great suggestion. It's a small addition that adds a lot of value. I've updated A1 to include 'source_page' as an optional property for that event. Thanks for catching that.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 92214,
+            "reply_to": "M1",
+            "text": "The spec in A1 looks clear. How will we enforce this schema? Should we add automated validation checks in the CI pipeline to prevent bad events from being merged?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 96134,
+            "reply_to": "M5",
+            "text": "ok makes sense. A1 and A2 look good to me then.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 155243,
+            "reply_to": "M7",
+            "text": "Excellent point. Yes, that's part of the plan for T7. For now, let's focus on getting the definition right in T1. We need to agree on the spec itself before we automate it.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 8323,
+            "reply_to": "M6",
+            "text": "Perfect, thanks. With that change, I'm good with both docs.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 155243,
+            "reply_to": "M1",
+            "text": "Great, it sounds like we have consensus. Let's formalize the decisions:\n1. We are approving the list of MVP metrics and dashboards as defined in A2. (D1)\n2. We are signing off on the unified event tracking schema in A1, including the recent addition. (D2)\n\nI'll consider these approved. @30972 you can now officially start on T1.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 30972,
+            "reply_to": "M11",
+            "text": "Got it. I've already started drafting the detailed documentation based on A1. Will share a link by end of day.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 30972,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on architecture and pipeline design for ingestion and transformations.",
+        "messages": [
+          {
+            "msg_id": "M13",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Alright team, I've put together a draft of the architecture and data flow in A3. It outlines a standard ETL approach using our existing cloud tools: event streams -> raw storage -> transformation jobs -> curated data models. Please take a look and share your feedback, especially on the ingestion (T2) and transformation (T3) stages.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 96134,
+            "reply_to": "M13",
+            "text": "Why not just use a real-time streaming service for everything? We could get dashboards updated instantly.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 30972,
+            "reply_to": "M13",
+            "text": "The design in A3 looks straightforward. I can start building the ingestion pipeline for T2 right away. Daily refresh is fine for the MVP.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 155243,
+            "reply_to": "M14",
+            "text": "A full streaming architecture adds significant complexity and cost, which is against our MVP constraints. The current requirement from stakeholders is for daily reports. We can evolve to near-real-time in v2 if needed. Let's stick to a daily batch model for now. (D4)",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 92214,
+            "reply_to": "M13",
+            "text": "The architecture in A3 makes sense. My main question is about operations. How are we planning to handle job failures and retries for T3? We should ensure the transformation jobs are idempotent and have solid monitoring from day one.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 8323,
+            "reply_to": "M13",
+            "text": "I've reviewed A3. The plan for the curated models in T4 seems right. Using a dimensional model is a good practice. Will the transformation logic in T3 handle late-arriving data from the event streams?",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 155243,
+            "reply_to": "M17",
+            "text": "Good call. I've added a section to A3 on idempotency and error handling. We'll use our standard cloud scheduler's retry mechanism and configure alerts for persistent failures. This will be part of the definition of done for T3.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 155243,
+            "reply_to": "M18",
+            "text": "Yes, the design accounts for that. We'll process data based on event timestamps and use a lookback window of a few hours in our daily T3 runs to include any delayed events.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 96134,
+            "reply_to": "M16",
+            "text": "ok daily is fine then.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 155243,
+            "reply_to": "M13",
+            "text": "Okay, seems we're aligned on the path forward. With the feedback incorporated into A3, I'm marking the architecture pattern as approved. (D3). To recap:\n- We're going with the batch ETL architecture in A3.\n- Pipelines will have a daily refresh frequency for the MVP. (D4)\n\nI'll take ownership of T3 and T4. @30972, you can proceed with T2.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 30972,
+            "reply_to": "M22",
+            "text": "Great. I've already set up the raw storage bucket and the ingestion function. Should have events flowing into the dev environment by tomorrow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 30972,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 155243,
+              "when": "this week"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 155243,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define dashboard layout, KPIs, and performance expectations for the UI.",
+        "messages": [
+          {
+            "msg_id": "M24",
+            "speaker_id": 8323,
+            "reply_to": null,
+            "text": "Hi team, I've put together some initial wireframes for the dashboard based on the metrics in A2. You can find them in A8. The idea is a simple layout with filters for date range and product. Let me know your thoughts on the views and KPIs presented.",
+            "mentions": [
+              155243,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 30972,
+            "reply_to": "M24",
+            "text": "Looks great! Very clean. I can start building this out for T5.",
+            "mentions": [],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 96134,
+            "reply_to": "M24",
+            "text": "Can we add a way to compare metrics week-over-week directly on the chart? And maybe a data export to CSV button?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 155243,
+            "reply_to": "M26",
+            "text": "Let's keep the first version simple and focused on the core KPIs listed in A2. Both of those are great ideas for v2, but let's park them for now to ensure we can deliver the MVP on time. Our main goal is to lock in the initial views and filters. (D5)",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 92214,
+            "reply_to": "M24",
+            "text": "The layout in A8 is clear. We need to be mindful of performance. The project constraints mention dashboards must load in under 5 seconds. Is that our official target? We should probably start thinking about T11 (performance tuning) early.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 155243,
+            "reply_to": "M28",
+            "text": "Yes, that's a critical requirement. Let's formally confirm that performance target: dashboards must load in under 5 seconds for standard queries, and the data should be refreshed daily. (D6). The data models I'm building for T4 will be pre-aggregated to help meet this goal.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "stopwatch",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 96134,
+            "reply_to": "M27",
+            "text": "ok, no problem. the views in A8 are fine for the start.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 8323,
+            "reply_to": "M24",
+            "text": "Great, sounds like we're aligned. To summarize:\n- We're locking the dashboard views and filters as shown in A8 for the MVP. (D5)\n- We're confirming the performance target of <5s load time with daily data freshness. (D6)\n\n@30972, you're clear to proceed with T5 based on this.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 30972,
+            "reply_to": "M31",
+            "text": "Perfect. I'll get the frontend shell set up today.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 30972,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Agree on access control, anonymisation, and compliance requirements.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 92214,
+            "reply_to": null,
+            "text": "Team, as we handle user data, we need to be proactive about security and privacy. I've started a draft of the Data Access and Anonymisation Policy in A5, based on our standard company guidelines. It outlines role-based access and a proposal for anonymising PII. Could everyone please review this so we can get sign-off from the security officer? This is critical for T8.",
+            "mentions": [
+              155243,
+              8323,
+              30972,
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 96134,
+            "reply_to": "M33",
+            "text": "what fields are considered PII? just email and name?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 155243,
+            "reply_to": "M34",
+            "text": "It's defined in the company guidelines linked from A5, but for this project, it's primarily user ID, email, name, and IP address. My plan for T8 is to use a one-way hash for the user ID in the analytics models and completely drop the other fields during the initial transformation stage.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 8323,
+            "reply_to": "M33",
+            "text": "The policy in A5 looks reasonable. Two roles: 'analyst' (read-only on curated models) and 'engineer' (read/write on all schemas) seems like a good starting point. This should be easy to implement in the data warehouse.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 30972,
+            "reply_to": "M33",
+            "text": "Looks good to me. Just let me know the final list of fields to drop and I'll add it to the ingestion script.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 92214,
+            "reply_to": "M35",
+            "text": "That approach sounds solid and aligns with the policy. Once we all agree, I'll forward A5 to the security officer for their official approval.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 155243,
+            "reply_to": "M33",
+            "text": "The policy and implementation plan look correct. We should also document this clearly in the operational runbook A6 as part of T9, so it's clear how we're handling sensitive data.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 92214,
+            "reply_to": "M33",
+            "text": "Okay, we seem to have a consensus. Let's approve the data access roles and anonymisation rules as described in A5, pending the final check from security. (D7). I'll take the action item to send it over to them today. @155243, you can proceed with the implementation for T8 based on this.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "lock",
+                "count": 2
+              },
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 155243,
+            "reply_to": "M40",
+            "text": "Will do. I'll start working on the anonymisation scripts for the transformation jobs.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 155243,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan launch, validate readiness, and capture follow-ups after MVP go-live.",
+        "messages": [
+          {
+            "msg_id": "M42",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Team, we're getting close to the MVP launch. I've created the MVP Launch Readiness Checklist in A4. Please go through it and update the status for the items you own. I'm proposing we launch this Friday, EOD, assuming everything is green. What do you think?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 30972,
+            "reply_to": "M42",
+            "text": "My items on A4 are all done. The dashboard (T5) and API (T6) have been deployed to staging and are ready.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 92214,
+            "reply_to": "M42",
+            "text": "CI/CD (T7) is green and the operational runbook (A6) is complete. I've tested the rollback procedure in staging and it works as expected. I'm good for a Friday launch.",
+            "mentions": [],
+            "artifact_refs": [
+              "T7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 8323,
+            "reply_to": "M42",
+            "text": "Looks good. What's the status of the historical data backfill (T10)? I see the ticket A7 is still open. Will that be done before Friday?",
+            "mentions": [],
+            "artifact_refs": [
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 96134,
+            "reply_to": "M42",
+            "text": "I still need to finish the data quality checks for T3. I found some nulls where I didnt expect them. I think I can fix it by tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 155243,
+            "reply_to": "M45",
+            "text": "Good question. The backfill for T10 is running now. It's a large job but I expect it to complete by tomorrow evening. I've been monitoring it and the data looks correct so far. I'll update A7 and A4 once it's fully validated.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "T10",
+              "A7",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 155243,
+            "reply_to": "M46",
+            "text": "Thanks for the update. Let me know if you need help with the nulls issue. That's a blocker for launch, so please prioritize it. We need all checks in A4 to be green by Thursday EOD to stick to the Friday launch plan.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 96134,
+            "reply_to": "M48",
+            "text": "ok i will. i think i know what the problem is.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 155243,
+            "reply_to": "M42",
+            "text": "Okay team, let's plan for a final go/no-go check on Thursday afternoon. If A4 is all green by then, we will confirm the Friday launch date. (D8). After launch, our main task will be the handover and demo session tracked in T12.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 96134,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 155243,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

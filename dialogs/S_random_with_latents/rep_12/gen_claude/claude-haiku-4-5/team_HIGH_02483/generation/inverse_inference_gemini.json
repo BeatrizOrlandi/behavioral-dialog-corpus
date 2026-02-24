@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "_id": 8323,
+      "productivity_level": "LOW",
+      "ability_level": "LOW",
+      "performance_level": "LOW",
+      "justification": "Participant contributes less frequently than others and asks questions that are more tactical (e.g., naming conventions) rather than strategic or risk-oriented. The impact of their contributions is lower compared to the group average.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M4",
+          "snippet": "I have a question on the property naming conventions. Are we using snake_case or camelCase?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M19",
+          "snippet": "For T4 (create curated semantic data models), I want to make sure we're thinking about the dimensional model upfront."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M44",
+          "snippet": "One last thing: after launch, what's our plan for v2? Should we start capturing feedback now?"
+        }
+      ]
+    },
+    {
+      "_id": 30972,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "Participant is a consistent contributor, asking relevant clarifying questions in each phase of the project. Their engagement is typical for a team member, ensuring implementation details are understood without significantly altering the project's direction.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M6",
+          "snippet": "Are all 10 events per product equally important, or should we sequence implementation?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "are we using SQL, Python, or a framework like dbt? That affects how we structure the code and dependencies."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M26",
+          "snippet": "I'm wondering about the performance target—5 seconds for all queries. Is that realistic given the data volume?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M40",
+          "snippet": "do we have a rollback plan if something goes wrong at launch? What's our go/no-go criteria?"
+        }
+      ]
+    },
+    {
+      "_id": 92214,
+      "productivity_level": "MID",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant consistently raises critical, high-impact points related to system robustness, such as validation, monitoring, and data backfill strategies. They also help drive the team to consensus, demonstrating a high level of ability and performance.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "are we handling event validation at ingestion time or downstream in the transformation layer?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "I want to make sure we have monitoring and alerting from day one."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M10",
+          "snippet": "Alright, I think we're converging. So to summarize: snake_case properties, top 5 events first, schema versioning, validation at ingestion."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M21",
+          "snippet": "Alright, I think we're aligned. So: option 1 (batch daily), SQL transformations, star schema, monitoring from day one."
+        }
+      ]
+    },
+    {
+      "_id": 96134,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant is the clear project lead, initiating every discussion, preparing all initial artifacts, and driving decisions. They demonstrate deep domain expertise by proactively addressing questions and unblocking the team, showing exceptional productivity, ability, and performance.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M1",
+          "snippet": "I've prepared A2 (Analytics MVP Metrics and Dashboards Matrix) and A1 (Unified Event Tracking Specification v1) as starting points."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M11",
+          "snippet": "I'll start the spec refinement today."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M9",
+          "snippet": "For MVP, we'll version at the schema level—each event gets a version field."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M22",
+          "snippet": "D4 locked: daily refresh at 2 AM UTC... D3 is also locked: we're going with option 1 from A3... T2, T3, and T4 are now unblocked."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M45",
+          "snippet": "D8 is locked: we confirm launch on day 21 if A4 checklist is green. All tasks are on track. Let's ship this."
+        }
+      ]
+    },
+    {
+      "_id": 155243,
+      "productivity_level": "MID",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Participant consistently asks insightful, forward-looking questions that address long-term system health, such as backward compatibility, handling of late data, and operational readiness. These contributions significantly improve the robustness of the plan, indicating high ability and performance.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M8",
+          "snippet": "we need to think about backwards compatibility early. If we change the schema later, how do we handle old events?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M13",
+          "snippet": "My concern: if we go batch, how do we handle late-arriving events? Do we re-run the entire day's transforms?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M35",
+          "snippet": "T9 (create operational runbook) should include a section on access control procedures and incident response"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M42",
+          "snippet": "do we have an on-call rotation set up for the first week after launch? Someone needs to monitor for issues."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "participants": [
+    {
+      "_id": 8323,
+      "role": "software developer"
+    },
+    {
+      "_id": 30972,
+      "role": "software developer"
+    },
+    {
+      "_id": 92214,
+      "role": "software developer"
+    },
+    {
+      "_id": 96134,
+      "role": "software developer"
+    },
+    {
+      "_id": 155243,
+      "role": "software developer"
+    }
+  ],
+  "project_pack": {
+    "project": {
+      "title": "Unified Analytics Platform MVP for Product Usage Insights",
+      "objective": "Design and ship an MVP analytics platform that centralises product usage data and exposes reliable dashboards and APIs for internal teams.",
+      "deliverables": [
+        "Event tracking schema and instrumentation guidelines for core products",
+        "Data ingestion and transformation pipelines into a central warehouse",
+        "Curated analytics data models for product and growth teams",
+        "Internal web dashboard for key product usage KPIs",
+        "Service API for programmatic access to aggregated metrics",
+        "Technical runbook for operations, monitoring and incident response"
+      ],
+      "constraints": [
+        "MVP must be deployable on existing cloud infrastructure and tooling",
+        "Only anonymised and aggregated user data allowed; comply with privacy policies",
+        "Initial scope limited to two flagship products and top 10 events each",
+        "Dashboards must load in under 5 seconds for standard queries",
+        "Pipelines must support at least daily refresh with automated monitoring",
+        "All components must be maintainable by the existing engineering team"
+      ],
+      "stakeholders": [
+        "product manager",
+        "software developer",
+        "data engineer",
+        "DevOps engineer",
+        "data analyst",
+        "security officer"
+      ],
+      "deadline_days": 21,
+      "risks": [
+        {
+          "risk": "Event tracking is inconsistent across products, breaking downstream models.",
+          "mitigation": "Define strict tracking spec, add validation checks, and run a pilot on one product first."
+        },
+        {
+          "risk": "Pipeline performance issues cause delayed dashboards and stale data.",
+          "mitigation": "Start with incremental loads, benchmark early, and add basic workload monitoring and alerts."
+        },
+        {
+          "risk": "Privacy or security non-compliance in data handling.",
+          "mitigation": "Involve security officer in design reviews and implement anonymisation and access controls by default."
+        },
+        {
+          "risk": "Scope creep on dashboard requirements from multiple teams.",
+          "mitigation": "Lock MVP metrics list, maintain a parking lot for v2, and get sign-off from product stakeholders."
+        }
+      ]
+    },
+    "themes": [
+      {
+        "theme": "Event tracking standardisation",
+        "why_relevant": "Consistent events are critical for reliable analytics and reduce rework in pipelines and dashboards."
+      },
+      {
+        "theme": "Data pipeline design and reliability",
+        "why_relevant": "Robust ingestion and transformation ensure timely, trustworthy metrics for decision-making."
+      },
+      {
+        "theme": "Schema and model versioning",
+        "why_relevant": "Versioned schemas and models avoid breaking changes for downstream consumers and APIs."
+      },
+      {
+        "theme": "Performance and cost optimisation",
+        "why_relevant": "Cloud resources and queries must be efficient to keep latency low and costs predictable."
+      },
+      {
+        "theme": "Access control and privacy",
+        "why_relevant": "Only authorised users should access sensitive data while complying with privacy constraints."
+      },
+      {
+        "theme": "MVP scoping and iteration",
+        "why_relevant": "Clear MVP boundaries enable shipping on time and planning follow-up improvements."
+      }
+    ],
+    "backlog": [
+      {
+        "task_id": "T1",
+        "task": "Define and document unified event tracking schema for two flagship products",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Tracking spec doc covers top 10 events per product with properties and examples",
+          "Event naming and property conventions agreed with product stakeholders",
+          "Validation rules for events defined and shared with implementation teams"
+        ]
+      },
+      {
+        "task_id": "T2",
+        "task": "Implement data ingestion pipeline from product event streams into central storage",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Pipeline code deployed to cloud environment with automated runs",
+          "Events from both products land in raw storage within 15 minutes of emission",
+          "Basic monitoring and alerting configured for ingestion failures"
+        ]
+      },
+      {
+        "task_id": "T3",
+        "task": "Design and build core transformation jobs to create clean analytics tables",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Transformation logic implemented for sessions, users, and feature usage tables",
+          "Jobs scheduled with dependency management and logging",
+          "Data quality checks (row counts, null checks) implemented and passing"
+        ]
+      },
+      {
+        "task_id": "T4",
+        "task": "Create curated semantic data models for product and growth analytics",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Dimensional models for users, features, and time created and documented",
+          "Models validated with sample queries from data analyst",
+          "Versioning approach for models agreed and recorded in runbook"
+        ]
+      },
+      {
+        "task_id": "T5",
+        "task": "Develop internal web dashboard for key product usage KPIs",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Dashboard shows daily active users, feature adoption, and retention for both products",
+          "Filters for date range and product work within performance targets",
+          "At least two stakeholders review and accept dashboard views"
+        ]
+      },
+      {
+        "task_id": "T6",
+        "task": "Expose metrics API for programmatic access to aggregated analytics",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "REST endpoints for core KPIs implemented with authentication",
+          "API returns correct data aligned with dashboard metrics",
+          "Rate limiting and basic logging enabled for all endpoints"
+        ]
+      },
+      {
+        "task_id": "T7",
+        "task": "Set up CI/CD pipeline for analytics platform components",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Automated tests run on each commit for pipelines and services",
+          "Deployments to staging and production are reproducible and documented",
+          "Rollback procedure tested at least once in staging"
+        ]
+      },
+      {
+        "task_id": "T8",
+        "task": "Implement access control and anonymisation for analytics data",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "PII fields identified and either removed or anonymised in analytics layers",
+          "Role-based access configured for dashboards and warehouse schemas",
+          "Security officer signs off on access model and anonymisation approach"
+        ]
+      },
+      {
+        "task_id": "T9",
+        "task": "Create operational runbook for monitoring, incidents, and on-call",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Runbook describes key components, dashboards, and alert responses",
+          "Incident classification and escalation paths documented",
+          "Runbook stored in shared repository and linked from channel topic"
+        ]
+      },
+      {
+        "task_id": "T10",
+        "task": "Load historical backfill for last 6 months of product events",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Historical data loaded for both products without breaking daily loads",
+          "Data completeness validated against source counts",
+          "Stakeholders confirm historical trends look reasonable"
+        ]
+      },
+      {
+        "task_id": "T11",
+        "task": "Performance tuning for heavy queries and dashboards",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "Top slow queries identified and optimised via indexes or model changes",
+          "Dashboard load times under 5 seconds for standard filters",
+          "Performance benchmarks recorded and shared with team"
+        ]
+      },
+      {
+        "task_id": "T12",
+        "task": "MVP launch review and handover to wider engineering and analytics teams",
+        "owner_role": "software developer",
+        "definition_of_done": [
+          "MVP scope checklist completed and all critical issues resolved",
+          "Demo session held with recording and Q&A captured",
+          "Follow-up backlog for v2 created and prioritised"
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "A1",
+        "type": "guideline",
+        "title": "Unified Event Tracking Specification v1",
+        "used_for": "Defines standard event names, properties, and validation rules for all instrumented products."
+      },
+      {
+        "artifact_id": "A2",
+        "type": "sheet",
+        "title": "Analytics MVP Metrics and Dashboards Matrix",
+        "used_for": "Maps business questions to specific metrics, dashboards, and owners for the MVP scope."
+      },
+      {
+        "artifact_id": "A3",
+        "type": "doc",
+        "title": "Analytics Platform Architecture and Data Flow Design",
+        "used_for": "Describes ingestion, storage, transformation, and serving layers with diagrams and SLAs."
+      },
+      {
+        "artifact_id": "A4",
+        "type": "checklist",
+        "title": "MVP Launch Readiness Checklist",
+        "used_for": "Ensures all technical, monitoring, and documentation items are complete before launch."
+      },
+      {
+        "artifact_id": "A5",
+        "type": "guideline",
+        "title": "Data Access and Anonymisation Policy",
+        "used_for": "Outlines who can access which datasets and how sensitive fields are anonymised."
+      },
+      {
+        "artifact_id": "A6",
+        "type": "doc",
+        "title": "Operational Runbook for Analytics Platform",
+        "used_for": "Provides procedures for monitoring, incident handling, and routine maintenance."
+      },
+      {
+        "artifact_id": "A7",
+        "type": "ticket",
+        "title": "Historical Data Backfill Implementation Task",
+        "used_for": "Tracks work, assumptions, and validation steps for loading historical events."
+      },
+      {
+        "artifact_id": "A8",
+        "type": "other",
+        "title": "Dashboard Prototype and UX Wireframes",
+        "used_for": "Visual reference for layout and interactions of the internal analytics dashboards."
+      }
+    ]
+  },
+  "blueprint": {
+    "channel_name_hint": "#proj-analytics-mvp-platform",
+    "threads_plan": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, metrics, and event tracking spec before implementation starts.",
+        "trigger": "Kickoff message announcing the analytics MVP project and asking for agreement on scope and events.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D1",
+            "decision": "Approve the final list of MVP metrics and dashboards to support at launch."
+          },
+          {
+            "decision_id": "D2",
+            "decision": "Sign off on the unified event tracking schema and conventions in A1."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A1",
+          "A2",
+          "T1"
+        ]
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on architecture and pipeline design for ingestion and transformations.",
+        "trigger": "Proposal message sharing initial architecture doc and asking for feedback on ingestion and modeling.",
+        "target_messages_range": [
+          20,
+          28
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D3",
+            "decision": "Choose the final architecture pattern for ingestion and transformation as documented in A3."
+          },
+          {
+            "decision_id": "D4",
+            "decision": "Agree on refresh frequency (daily vs near-real-time) for MVP pipelines."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A3",
+          "T2",
+          "T3",
+          "T4"
+        ]
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define dashboard layout, KPIs, and performance expectations for the UI.",
+        "trigger": "Post sharing dashboard wireframes and asking for comments on layout and KPI selection.",
+        "target_messages_range": [
+          15,
+          22
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D5",
+            "decision": "Lock the initial set of dashboard views and filters for the MVP release."
+          },
+          {
+            "decision_id": "D6",
+            "decision": "Confirm performance targets for dashboard load times and data freshness."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A2",
+          "A8",
+          "T5",
+          "T11"
+        ]
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Agree on access control, anonymisation, and compliance requirements.",
+        "trigger": "Message from security stakeholder requesting review of access model and anonymisation policy.",
+        "target_messages_range": [
+          16,
+          24
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D7",
+            "decision": "Approve the data access roles and anonymisation rules described in A5."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A5",
+          "T8",
+          "T9",
+          "A6"
+        ]
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan launch, validate readiness, and capture follow-ups after MVP go-live.",
+        "trigger": "Pre-launch message linking readiness checklist and proposing launch date and comms plan.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D8",
+            "decision": "Confirm MVP launch date and go/no-go based on A4 checklist status."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A4",
+          "T10",
+          "T12",
+          "A7",
+          "A6"
+        ]
+      }
+    ],
+    "talk_distribution_by_role": [
+      {
+        "role": "software developer",
+        "share": 1.0
+      }
+    ],
+    "channel_rituals": [
+      "Daily async standup thread with yesterday/today/blockers updates focused on T1–T12.",
+      "Twice-weekly architecture and data modeling review thread for open design questions.",
+      "Weekly dashboard and metrics review to validate outputs against stakeholder expectations.",
+      "Pre-launch readiness review using A4 checklist two days before any planned release.",
+      "Post-incident mini postmortem thread whenever a major data or availability issue occurs."
+    ]
+  }
+}

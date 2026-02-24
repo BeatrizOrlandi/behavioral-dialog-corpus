@@ -1,0 +1,40 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All 5 threads are below the minimum message count of 15. TH1 has 9, TH2 has 15, TH3 has 12, TH4 has 11, and TH5 has 15 messages. The expected range is [15, 30]."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are significantly below their target_messages_range from the blueprint. For example, TH1 has 9 messages where the target was [18, 26], and TH2 has 15 where the target was [20, 30]."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing required artifact references for T3 and T4."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH3 is missing required artifact references for A4, A12, and T6."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing a required artifact reference for T8."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH5 is missing required artifact references for A4, T8, and T11."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 1,
+    "realism_1_5": 1,
+    "voice_diversity_1_5": 5
+  }
+}

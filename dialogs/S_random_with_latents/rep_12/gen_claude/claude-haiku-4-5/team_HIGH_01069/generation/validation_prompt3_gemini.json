@@ -1,0 +1,55 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "PARTICIPATION_MISSING",
+      "detail": "Participant with _id 337175 (software developer) does not have any messages in the entire channel."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are below the minimum message count of 15. Thread TH1 has 14 messages, TH2 has 11, TH3 has 13, and TH4 has 13."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH1 is missing a reference to the mandatory artifact A1."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing references to the mandatory artifacts A1 and T4."
+    },
+    {
+      "severity": "HIGH",
+      "code": "DECISION_MISSING",
+      "detail": "Thread TH2 fails to make the mandatory decision D4. It is referenced in messages but not included in the thread_outcome.decisions_made list."
+    },
+    {
+      "severity": "HIGH",
+      "code": "DECISION_MISSING",
+      "detail": "Thread TH3 fails to make the mandatory decision D6. It is referenced in messages but not included in the thread_outcome.decisions_made list, as it is left pending."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "Participant 377231 is assigned the role 'web developer' but exclusively discusses backend topics (API endpoints, integration, JWT tokens, CI/CD), which are typical for a 'software developer'."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "In thread TH4, the next_steps array incorrectly lists an artifact ID ('A2') in a 'task_id' field. Only task IDs (T*) should be used here."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "Message M51 in thread TH4 incorrectly references decisions (D1-D8) from all other threads in its decision_refs, which is illogical for a single message concluding one thread."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 1,
+    "realism_1_5": 2,
+    "voice_diversity_1_5": 3
+  }
+}

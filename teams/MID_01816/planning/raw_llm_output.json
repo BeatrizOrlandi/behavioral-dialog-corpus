@@ -1,0 +1,425 @@
+{
+  "participants": [
+    {
+      "_id": 29405,
+      "role": "production engineer"
+    },
+    {
+      "_id": 59849,
+      "role": "computer scientist"
+    },
+    {
+      "_id": 81818,
+      "role": "application engineer"
+    },
+    {
+      "_id": 219209,
+      "role": "electrical engineer"
+    },
+    {
+      "_id": 249439,
+      "role": "design engineer"
+    }
+  ],
+  "project_pack": {
+    "project": {
+      "title": "Launch of Connected Industrial Monitoring Module",
+      "objective": "Design, build, and pilot a connected monitoring module for industrial equipment that integrates hardware and software to reduce unplanned downtime for key customers.",
+      "deliverables": [
+        "Functional hardware design and production-ready prototype of monitoring module",
+        "Embedded electronics and wiring schematics with safety and compliance documentation",
+        "Edge software and backend integration spec for data collection and alerts",
+        "Pilot installation and test report at two customer production lines",
+        "Sales and application engineering deployment playbook",
+        "Costed manufacturing and rollout plan with ROI assumptions"
+      ],
+      "constraints": [
+        "Pilot-ready prototype must be available within 30 days",
+        "Hardware must comply with relevant industrial electrical safety standards",
+        "Solution must integrate with existing customer PLC/SCADA interfaces",
+        "Target bill of materials must not exceed agreed cost ceiling",
+        "Limited access to customer sites for testing and installation windows"
+      ],
+      "stakeholders": [
+        "production engineer",
+        "design engineer",
+        "electrical engineer",
+        "application engineer",
+        "computer scientist",
+        "sales engineer"
+      ],
+      "deadline_days": 30,
+      "risks": [
+        {
+          "risk": "Hardware prototype fails environmental or electrical safety tests late in the schedule.",
+          "mitigation": "Run early bench tests against safety checklist and schedule an interim design review before finalizing PCB and enclosure."
+        },
+        {
+          "risk": "Software integration with customer systems takes longer than expected.",
+          "mitigation": "Define minimal viable data interface upfront and validate with customer IT using a sandbox before full integration."
+        },
+        {
+          "risk": "Manufacturing cost exceeds target, making the module commercially unattractive.",
+          "mitigation": "Production engineer and design engineer run early cost estimation and identify alternative components and design-to-cost options."
+        },
+        {
+          "risk": "Pilot customers are not available for on-site tests within the timebox.",
+          "mitigation": "Secure written pilot commitments and backup pilot sites, and prepare remote test procedures where possible."
+        },
+        {
+          "risk": "Cross-functional misalignment on feature scope leads to rework.",
+          "mitigation": "Agree on a frozen MVP feature list and change control process documented and shared with all stakeholders."
+        }
+      ]
+    },
+    "themes": [
+      {
+        "theme": "Hardware-software co-design",
+        "why_relevant": "Tight coordination is needed so electronics, firmware, and data interfaces align with real-world constraints."
+      },
+      {
+        "theme": "Industrial safety and compliance",
+        "why_relevant": "The module operates in industrial environments and must meet electrical and safety standards to be deployable."
+      },
+      {
+        "theme": "Manufacturability and cost control",
+        "why_relevant": "Design choices must support scalable production and keep BOM within target to ensure commercial viability."
+      },
+      {
+        "theme": "Customer integration and pilot feedback",
+        "why_relevant": "Pilot sites validate technical fit, usability, and value; feedback will drive iteration and rollout decisions."
+      },
+      {
+        "theme": "Data architecture and reliability",
+        "why_relevant": "Collected data must be accurate, secure, and reliably transmitted for monitoring and alerting to be trusted."
+      },
+      {
+        "theme": "Go-to-market enablement",
+        "why_relevant": "Sales and application teams need clear playbooks and technical collateral to position and deploy the module."
+      }
+    ],
+    "backlog": [
+      {
+        "task_id": "T1",
+        "task": "Define MVP feature set and system requirements for the monitoring module",
+        "owner_role": "application engineer",
+        "definition_of_done": [
+          "Requirements document approved by production engineer, design engineer, electrical engineer, and computer scientist",
+          "MVP feature list frozen with clear in-scope and out-of-scope items",
+          "Assumptions and open questions logged and assigned"
+        ]
+      },
+      {
+        "task_id": "T2",
+        "task": "Create mechanical and enclosure design for industrial monitoring module",
+        "owner_role": "design engineer",
+        "definition_of_done": [
+          "3D CAD models and technical drawings completed and reviewed",
+          "Enclosure meets IP and mounting requirements defined in requirements",
+          "Design signed off by electrical engineer and production engineer for fit and manufacturability"
+        ]
+      },
+      {
+        "task_id": "T3",
+        "task": "Develop electrical schematics and wiring plans for sensors and power",
+        "owner_role": "electrical engineer",
+        "definition_of_done": [
+          "Complete set of schematics and wiring diagrams produced",
+          "Compliance and safety checklist completed with no critical gaps",
+          "Schematics reviewed with design engineer and application engineer"
+        ]
+      },
+      {
+        "task_id": "T4",
+        "task": "Design data architecture and edge-to-cloud communication protocol",
+        "owner_role": "computer scientist",
+        "definition_of_done": [
+          "Architecture diagram and interface specification documented",
+          "Data model and API endpoints defined and shared",
+          "Latency, security, and reliability requirements captured and agreed"
+        ]
+      },
+      {
+        "task_id": "T5",
+        "task": "Implement edge software for data acquisition and local buffering",
+        "owner_role": "computer scientist",
+        "definition_of_done": [
+          "Edge software prototype runs on target hardware or dev board",
+          "Supports configured sensors and basic buffering logic",
+          "Passes initial functional tests defined in test plan"
+        ]
+      },
+      {
+        "task_id": "T6",
+        "task": "Plan and validate manufacturability and assembly process",
+        "owner_role": "production engineer",
+        "definition_of_done": [
+          "Preliminary process flow and work instructions drafted",
+          "Cycle time and capacity estimates documented",
+          "Pilot build plan with required tooling and resources approved"
+        ]
+      },
+      {
+        "task_id": "T7",
+        "task": "Run integrated prototype tests in lab environment",
+        "owner_role": "application engineer",
+        "definition_of_done": [
+          "Test plan executed covering functional, environmental, and safety checks",
+          "Issues logged with owners and priorities",
+          "Go/no-go recommendation for customer pilot documented"
+        ]
+      },
+      {
+        "task_id": "T8",
+        "task": "Estimate BOM cost and identify cost optimization options",
+        "owner_role": "production engineer",
+        "definition_of_done": [
+          "BOM with supplier quotes compiled",
+          "Total cost compared against target and gaps highlighted",
+          "List of alternative components or design changes proposed"
+        ]
+      },
+      {
+        "task_id": "T9",
+        "task": "Prepare sales and deployment playbook for pilot customers",
+        "owner_role": "application engineer",
+        "definition_of_done": [
+          "Playbook covers value proposition, technical overview, and deployment steps",
+          "Includes standard configuration templates and FAQs",
+          "Reviewed by sales engineer and updated based on feedback"
+        ]
+      },
+      {
+        "task_id": "T10",
+        "task": "Define test procedures and acceptance criteria for customer pilots",
+        "owner_role": "design engineer",
+        "definition_of_done": [
+          "Pilot test procedures documented with clear steps and metrics",
+          "Acceptance criteria aligned with MVP requirements",
+          "Approved by application engineer and production engineer"
+        ]
+      },
+      {
+        "task_id": "T11",
+        "task": "Coordinate on-site pilot installation and data validation",
+        "owner_role": "application engineer",
+        "definition_of_done": [
+          "Pilot installation schedule agreed with customer",
+          "Module installed and connected to customer systems",
+          "Initial data validated and sample reports shared with stakeholders"
+        ]
+      },
+      {
+        "task_id": "T12",
+        "task": "Consolidate pilot learnings and recommend next iteration scope",
+        "owner_role": "production engineer",
+        "definition_of_done": [
+          "Feedback from all stakeholders and customers summarized",
+          "Key technical and commercial findings documented",
+          "Proposal for next iteration scope and rollout plan shared"
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "A1",
+        "type": "doc",
+        "title": "MVP Requirements and System Specification",
+        "used_for": "Captures agreed functional and non-functional requirements for the monitoring module."
+      },
+      {
+        "artifact_id": "A2",
+        "type": "guideline",
+        "title": "Electrical Safety and Compliance Checklist",
+        "used_for": "Ensures electrical design and wiring meet industrial safety and regulatory standards."
+      },
+      {
+        "artifact_id": "A3",
+        "type": "sheet",
+        "title": "BOM and Cost Estimation Workbook",
+        "used_for": "Tracks components, supplier quotes, and compares total cost against targets."
+      },
+      {
+        "artifact_id": "A4",
+        "type": "doc",
+        "title": "Data Architecture and API Specification",
+        "used_for": "Defines data model, interfaces, and communication protocols between edge and backend."
+      },
+      {
+        "artifact_id": "A5",
+        "type": "checklist",
+        "title": "Pilot Installation and Commissioning Checklist",
+        "used_for": "Guides on-site installation steps and validation during customer pilots."
+      },
+      {
+        "artifact_id": "A6",
+        "type": "guideline",
+        "title": "Sales and Deployment Playbook",
+        "used_for": "Provides positioning, configuration patterns, and rollout steps for sales and application teams."
+      },
+      {
+        "artifact_id": "A7",
+        "type": "doc",
+        "title": "Integrated Test Plan and Results Log",
+        "used_for": "Documents planned tests, execution status, and issues for lab and pilot testing."
+      },
+      {
+        "artifact_id": "A8",
+        "type": "other",
+        "title": "Pilot Feedback and Next Steps Report",
+        "used_for": "Summarizes pilot outcomes and recommended scope for next iteration and rollout."
+      }
+    ]
+  },
+  "blueprint": {
+    "channel_name_hint": "proj-connected-monitoring-module",
+    "threads_plan": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope and system requirements across all roles.",
+        "trigger": "Kickoff message announcing the project and requesting input on the draft MVP requirements.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D1",
+            "decision": "Approve the MVP feature list and freeze the initial scope documented in A1."
+          },
+          {
+            "decision_id": "D2",
+            "decision": "Agree on the minimal data set and interfaces to be supported in the first pilot."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A1",
+          "A4",
+          "T1"
+        ]
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on hardware, enclosure, and electrical design choices.",
+        "trigger": "Design engineer shares first pass of mechanical design and requests feedback from electrical and production.",
+        "target_messages_range": [
+          20,
+          30
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D3",
+            "decision": "Select the enclosure concept and confirm mounting and IP requirements."
+          },
+          {
+            "decision_id": "D4",
+            "decision": "Confirm that electrical schematics meet safety checklist A2 and are ready for prototype build."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A2",
+          "T2",
+          "T3",
+          "T6",
+          "T8"
+        ]
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define and validate the data architecture and edge software plan.",
+        "trigger": "Computer scientist posts the initial data architecture and API spec for review.",
+        "target_messages_range": [
+          17,
+          25
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D5",
+            "decision": "Approve the data architecture and communication protocol described in A4."
+          },
+          {
+            "decision_id": "D6",
+            "decision": "Agree on the minimal edge software capabilities to implement in T5 for the pilot."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A4",
+          "T4",
+          "T5",
+          "T7"
+        ]
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and coordinate lab tests and customer pilot installation.",
+        "trigger": "Application engineer proposes a timeline for lab integration tests and pilot deployment.",
+        "target_messages_range": [
+          19,
+          27
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D7",
+            "decision": "Lock the lab test plan and acceptance criteria for moving to customer pilot."
+          },
+          {
+            "decision_id": "D8",
+            "decision": "Confirm pilot customer sites, installation dates, and responsibilities using A5."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A5",
+          "A7",
+          "T7",
+          "T10",
+          "T11"
+        ]
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on next-iteration and rollout plan.",
+        "trigger": "Production engineer shares the draft pilot feedback report and asks for comments.",
+        "target_messages_range": [
+          16,
+          24
+        ],
+        "mandatory_decisions": [],
+        "artifacts_to_reference": [
+          "A3",
+          "A6",
+          "A8",
+          "T8",
+          "T12"
+        ]
+      }
+    ],
+    "talk_distribution_by_role": [
+      {
+        "role": "application engineer",
+        "share": 0.26
+      },
+      {
+        "role": "production engineer",
+        "share": 0.22
+      },
+      {
+        "role": "computer scientist",
+        "share": 0.2
+      },
+      {
+        "role": "design engineer",
+        "share": 0.17
+      },
+      {
+        "role": "electrical engineer",
+        "share": 0.15
+      }
+    ],
+    "channel_rituals": [
+      "Daily async standup where each role posts yesterday-today-blockers in one thread.",
+      "Twice-weekly design and integration checkpoint to review open decisions and risks.",
+      "Weekly pilot readiness review summarizing test status and open issues against A7.",
+      "Post-pilot retrospective to capture learnings and update A8 and future practices."
+    ]
+  }
+}

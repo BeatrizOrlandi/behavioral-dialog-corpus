@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH5 contains 13 messages, which is below the expected global minimum of 15 messages per thread. Additionally, thread TH2 contains 15 messages, which is noticeably below its target range of 20-28 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'ability' was found in the text of messages M22 ('mixed-ability') and M51 ('physical ability')."
+    },
+    {
+      "severity": "LOW",
+      "code": "INVALID_REF",
+      "detail": "In thread TH5, the next_steps array contains 'A7' as a task_id, which is an artifact_id rather than a valid task_id from the backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

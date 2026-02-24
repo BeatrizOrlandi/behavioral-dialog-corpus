@@ -1,0 +1,30 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 has 12 messages and TH3 has 10 messages, both falling below the expected minimum of 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T12 is listed in the blueprint's artifacts_to_reference for TH5, but it does not appear in the artifact_refs of any message in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The explicitly forbidden term 'scenario' appears in the text of message M45 ('That's a common scenario in medical intake.')."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants exhibit highly repetitive and robotic phrasing across all threads, lacking distinct voices. Examples include repeated structures like 'I've reviewed the [document]. It looks [adjective]' and 'Confirmed. [Sector] pilot is ready. Success criteria: ...'."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 1
+  }
+}

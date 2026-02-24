@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads have fewer messages than the expected minimum of 15. TH1 has 10, TH2 has 12, TH3 has 10, TH4 has 12, and TH5 has 11 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing the mandatory artifact reference 'T2' in its messages' artifact_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing the mandatory artifact reference 'T5' in its messages' artifact_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M25 explicitly uses labels for categorization ('easy', 'medium', 'hard'), which violates the anti-leakage rule against using explicit levels/labels."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

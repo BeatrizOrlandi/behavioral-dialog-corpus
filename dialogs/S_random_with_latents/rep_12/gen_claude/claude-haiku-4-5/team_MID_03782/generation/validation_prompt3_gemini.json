@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (13 messages), TH3 (14 messages), TH4 (14 messages), and TH5 (12 messages) are below the minimum required 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 is missing a reference to artifact T12 in its messages, which is required by the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'score' appears in messages M5 ('feedback score') and M59 ('average score')."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'scenario' appears multiple times throughout the conversation (e.g., M11, M18, M22, M23, M24, M40, M59, M60, M63, M67)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

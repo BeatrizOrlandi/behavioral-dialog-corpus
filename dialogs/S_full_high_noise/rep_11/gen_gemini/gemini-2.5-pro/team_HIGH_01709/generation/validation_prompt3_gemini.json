@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH1, TH2, TH3, and TH4 contain 15 messages each, which is below the expected minimum of 16 messages per thread and falls short of the target_messages_range specified in the blueprint."
+    },
+    {
+      "severity": "MID",
+      "code": "INVALID_REF",
+      "detail": "In thread_outcome.next_steps, invalid task_ids are used: TH1 uses 'A8' (which is an artifact_id, not a task_id) and TH2 uses 'Schedule Training' (which is an invented task not present in the backlog)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

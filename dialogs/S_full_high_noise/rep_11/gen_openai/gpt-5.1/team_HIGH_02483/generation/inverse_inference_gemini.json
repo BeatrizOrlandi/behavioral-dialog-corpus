@@ -1,0 +1,159 @@
+{
+  "predictions": [
+    {
+      "_id": 8323,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This participant is highly proactive, consistently identifying potential risks and proposing concrete solutions that refine the technical implementation. They take ownership of complex tasks like stakeholder communication and demos, demonstrating a high degree of autonomy and impact.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M3",
+          "snippet": "We could treat onboarding steps as a subset of feature usage and keep the count under control."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M13",
+          "snippet": "I will add a note in A1 and adjust the wording in A2 so that daily active users is always tied to session or feature activity, not just authentication."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "One thing I want to clarify is how we handle late arriving events."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M68",
+          "snippet": "I can host the demo on Tuesday so we have a day to react before the proposed Wednesday launch."
+        }
+      ]
+    },
+    {
+      "_id": 30972,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This participant consistently bridges the gap between business requirements and technical specifications, asking insightful questions that expose ambiguity and prevent future rework. They actively propose robust solutions and help drive discussions to a clear conclusion, demonstrating strong analytical ability and high performance.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M8",
+          "snippet": "I would like to confirm how we define daily active users. Are we going with at least one qualifying event per day per anonymised user...?"
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M14",
+          "snippet": "From my side, this is enough to start T1 and downstream work. Unless anyone sees a blocker, I suggest we mark the metrics list and tracking schema as approved for the MVP."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M21",
+          "snippet": "If we try to do near real time now, we might complicate T3 and T4 with more complex dependency management."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M57",
+          "snippet": "For T9, we can extend A6 with a specific playbook for access incidents: immediately revoke the affected role or account, capture logs of the access..."
+        }
+      ]
+    },
+    {
+      "_id": 92214,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This participant consistently demonstrates a proactive, implementation-focused mindset, thinking ahead to identify and mitigate future risks related to data quality, performance, and operations. They take clear ownership of critical technical tasks and provide timely updates, showing high productivity and ability.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M5",
+          "snippet": "Would it be better to use a shared naming pattern like feature_clicked with a product_id property, so that T1 does not diverge per product?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M10",
+          "snippet": "I am thinking ahead to T2 and T3, where bad data could cause issues in the transformations and dashboards."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M16",
+          "snippet": "I will start sketching how the ingestion code in T2 can validate against the A1 schema so we keep the data clean from day one."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M67",
+          "snippet": "Barring surprises, I am confident we can mark T10 as done by tomorrow."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M77",
+          "snippet": "One more thing from A4: we should run a quick rollback test in staging before launch, as part of T7..."
+        }
+      ]
+    },
+    {
+      "_id": 96134,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "This participant contributes effectively by asking relevant clarifying questions that help refine the project's details and identify edge cases. While they are a solid and necessary contributor, their participation is more reactive compared to others who more frequently drive the design and propose solutions, placing them at the group's typical level.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M6",
+          "snippet": "If we use a shared event name like feature_clicked, would we still be able to tell which product and which feature it was in the warehouse?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M45",
+          "snippet": "For filters, should we also support a quick preset like last 7 days and last 30 days, instead of only a free date range picker?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M56",
+          "snippet": "In A6, the runbook mentions incident classification for data access issues, but it is a bit high level."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M61",
+          "snippet": "For T9, I can help draft the incident escalation steps in A6, including who to notify and how to record the incident."
+        }
+      ]
+    },
+    {
+      "_id": 155243,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "This participant acts as the clear lead, initiating all major workstreams, providing foundational documents, and driving discussions to closure. They demonstrate high ability by proposing robust architectural solutions and high performance by consistently summarizing decisions, ensuring alignment, and unblocking the team.",
+      "evidence": [
+        {
+          "attribute": "productivity",
+          "msg_id": "M1",
+          "snippet": "Kicking off the Unified Analytics Platform MVP for Product Usage Insights... I have drafted Unified Event Tracking Specification v1 in A1..."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M15",
+          "snippet": "Summarising where we landed: metrics for the MVP are daily and weekly active users... Funnels and more advanced views are explicitly out of scope for now."
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M23",
+          "snippet": "Yes, we should design T3 to be idempotent and to process a sliding window, for example the last two days of data, so that late events are incorporated."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M33",
+          "snippet": "To wrap up: we are choosing the architecture in A3... I will treat this as our final architecture and refresh plan."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M81",
+          "snippet": "I propose we confirm next Wednesday as the MVP launch date and mark A4 as go once those items are done."
+        }
+      ]
+    }
+  ]
+}

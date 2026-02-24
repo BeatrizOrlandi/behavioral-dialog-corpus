@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH1 (13 messages), TH2 (14 messages), and TH3 (12 messages) are below the expected minimum of 16 messages per thread. They also fall short of the blueprint's target_messages_range."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Several mandatory artifacts are missing from the artifact_refs in their respective threads: TH2 is missing T2 and T3; TH3 is missing T4 and T12; TH4 is missing T5, T8, and T11."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'scenario' (or 'scenarios') is explicitly used in the text of messages M41, M45, M46, M47, M51, and M52."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

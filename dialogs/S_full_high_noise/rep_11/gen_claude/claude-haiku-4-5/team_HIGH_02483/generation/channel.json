@@ -1,0 +1,1084 @@
+{
+  "channel": {
+    "channel_id": "C_ANALYTICS_MVP_001",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, metrics, and event tracking spec before implementation starts.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Hey team, kicking off the Unified Analytics Platform MVP. We need to lock down scope, metrics, and event tracking before we start building. I've prepared A2 (Analytics MVP Metrics and Dashboards Matrix) and A1 (Unified Event Tracking Specification v1) as starting points. Let's align on what we're shipping in 21 days and what goes to v2. Key question: are we all comfortable with the two flagship products + top 10 events per product constraint?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 30972,
+            "reply_to": "M1",
+            "text": "Good framing. I've reviewed A2 and the metrics look reasonable for MVP. One thing to clarify: are we including custom event properties or sticking to a minimal set? The tracking spec in A1 needs to be tight to avoid downstream validation headaches.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 8323,
+            "reply_to": "M2",
+            "text": "I think we should keep properties minimal for MVP. Custom properties can go into a flexible JSON field with validation rules. That way we don't break the schema later. Should we document this in A1 or create a separate conventions doc?",
+            "mentions": [
+              30972,
+              155243
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 155243,
+            "reply_to": "M3",
+            "text": "Good point. Let's add that to A1 as a section on extensibility. I'll also need sign-off from product stakeholders on the final event list. Can someone reach out to them? We need D2 locked by EOD tomorrow so we can start T1 implementation.",
+            "mentions": [
+              8323,
+              30972
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 92214,
+            "reply_to": "M4",
+            "text": "I can handle the product stakeholder outreach. Just need the final event list from A1. Also, should we version the tracking spec from day one, or wait until we have feedback?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 155243,
+            "reply_to": "M5",
+            "text": "Version it from day one. We'll call this v1 and any breaking changes go to v2. That's part of the schema versioning theme. Let me finalize A1 by end of day and share for review. Once we have stakeholder sign-off, we can mark D2 as done.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 96134,
+            "reply_to": "M6",
+            "text": "Quick question: are we tracking user IDs or session IDs or both? Need to know for the anonymisation piece later.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 155243,
+            "reply_to": "M7",
+            "text": "Both, but anonymised. Session IDs are ephemeral, user IDs are hashed. That's part of A5 (Data Access and Anonymisation Policy) which we'll review in TH4. For now, A1 just needs to specify the field names and types. We'll handle the anonymisation rules separately.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 30972,
+            "reply_to": "M1",
+            "text": "On D1 (MVP metrics approval): I've cross-checked A2 against the business questions from product. The daily active users, feature adoption, and retention metrics cover the main use cases. I'd say we're ready to lock this down. Any objections?",
+            "mentions": [
+              155243,
+              8323,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 8323,
+            "reply_to": "M9",
+            "text": "Looks good to me. The metrics align with what I've seen in the product roadmap. Let's mark D1 as approved.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 155243,
+            "reply_to": "M10",
+            "text": "Great. D1 is locked. Now we're waiting on stakeholder sign-off for D2 (event tracking schema). I'll have A1 finalized by EOD today. Once 92214 gets confirmation from product, we can move forward with T1. Let's reconvene tomorrow morning to confirm both decisions.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 92214,
+              "when": "EOD today (stakeholder outreach)"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Converge on architecture and pipeline design for ingestion and transformations.",
+        "messages": [
+          {
+            "msg_id": "M12",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Sharing the initial architecture proposal in A3 (Analytics Platform Architecture and Data Flow Design). We're looking at: event ingestion from product streams -> raw storage -> transformation jobs -> semantic models -> dashboards and API. Key decision points: (1) do we go with batch or streaming ingestion for MVP, and (2) how often do we refresh the transformation layers? Let me know your thoughts on the design and the trade-offs.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 92214,
+            "reply_to": "M12",
+            "text": "I've worked with similar pipelines before. For MVP, batch is the right call. Streaming adds complexity and we don't have the ops maturity yet. I'd suggest daily refresh for transformations. That keeps things simple and meets the 'at least daily' constraint. What's the latency requirement for the dashboards?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 155243,
+            "reply_to": "M13",
+            "text": "Good point. Daily batch is cleaner for MVP. Dashboards need to load in under 5 seconds, so we'll need to optimize queries and maybe add caching. That's T11 (performance tuning). For now, let's lock D4 as daily refresh. Does that work for everyone?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T11"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 30972,
+            "reply_to": "M14",
+            "text": "Daily works. One thing I want to flag: the transformation logic in T3 needs to handle late-arriving data. If an event comes in after the daily job runs, we need a way to backfill or re-run. Should we build that into the initial design or defer to v2?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 155243,
+            "reply_to": "M15",
+            "text": "Good catch. Let's add a 'grace period' to T2 (ingestion pipeline) so we wait 2 hours after the daily cutoff before running transformations. That gives us a buffer for late events. We'll document this in A3 and the runbook.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 96134,
+            "reply_to": "M16",
+            "text": "What about the semantic models in T4? Are we using a star schema or something else?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 155243,
+            "reply_to": "M17",
+            "text": "Star schema for MVP. Fact tables for events, dimensions for users and features. Simple and performant. I'll detail this in A3. The models need to be versioned (part of the schema versioning theme), so we'll include a version column and document the approach in the runbook.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 8323,
+            "reply_to": "M18",
+            "text": "Makes sense. So to summarize: batch ingestion with 2-hour grace period, daily transformation refresh, star schema models. That covers D3 and D4. Should we document the full architecture in A3 and get sign-off, or are we good to move forward?",
+            "mentions": [
+              155243,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 155243,
+            "reply_to": "M19",
+            "text": "Let me finalize A3 with all the details we discussed. I'll have it ready by tomorrow morning. Once everyone reviews and confirms, we can mark D3 and D4 as locked. That unblocks T2, T3, and T4 implementation.",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 30972,
+            "reply_to": "M20",
+            "text": "I'll review A3 first thing tomorrow and flag any gaps. Also, we should think about monitoring and alerting for the pipelines. That's part of T2 definition of done. Should we add a separate task for that or fold it into T2?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 155243,
+            "reply_to": "M21",
+            "text": "Good question. Let's fold basic monitoring into T2 (ingestion pipeline). We'll set up alerts for failures and latency. More sophisticated monitoring can go to v2. That keeps MVP focused.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 155243,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define dashboard layout, KPIs, and performance expectations for the UI.",
+        "messages": [
+          {
+            "msg_id": "M23",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "Sharing dashboard wireframes in A8 (Dashboard Prototype and UX Wireframes). We have three main views: (1) daily active users by product, (2) feature adoption trends, (3) retention cohorts. Each view has filters for date range and product. Performance target: under 5 seconds load time. Questions: does the layout work for you? Any KPIs missing from A2 that should be on the dashboard?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 8323,
+            "reply_to": "M23",
+            "text": "The layout looks clean. One thing: can we add a 'compare periods' filter? Product team asked about comparing this month vs last month. I know it's not in A2, but it's a quick add.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 155243,
+            "reply_to": "M24",
+            "text": "That's a good feature, but it's scope creep for MVP. Let's add it to the v2 backlog. For now, users can manually compare by looking at two date ranges. We need to lock D5 (dashboard views) to avoid this kind of drift. Let's stick with the three views in A8.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 92214,
+            "reply_to": "M25",
+            "text": "Agreed. Scope lock is important. On the performance side (D6), 5 seconds is tight. We'll need to optimize the queries and maybe add materialized views or caching. T11 should cover that. What's our data freshness requirement? Can dashboards show yesterday's data, or do we need same-day?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A8",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 155243,
+            "reply_to": "M26",
+            "text": "Yesterday's data is fine for MVP. That aligns with our daily refresh cadence. So D6 is: dashboards load in under 5 seconds, data is refreshed daily by 2 AM. Let's lock that.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 30972,
+            "reply_to": "M27",
+            "text": "I'll review the wireframes more carefully and validate that the queries we're planning for T4 (semantic models) can support these views efficiently. Should have feedback by tomorrow.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A8",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 96134,
+            "reply_to": "M28",
+            "text": "One more thing: who's going to do the actual dashboard implementation in T5? Is that a separate person or part of the main dev work?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 155243,
+            "reply_to": "M29",
+            "text": "I'll handle T5 (dashboard development). Once T4 (semantic models) is done and we have the data available, I can build the UI. That's probably week 2 of the project. For now, let's confirm D5 and D6 are locked so we can move forward.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 155243,
+              "when": "week 2"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 155243,
+              "when": "week 2"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Agree on access control, anonymisation, and compliance requirements.",
+        "messages": [
+          {
+            "msg_id": "M31",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "We need to lock down access control and anonymisation before we start handling data. I've drafted A5 (Data Access and Anonymisation Policy) which outlines: (1) role-based access for dashboards and warehouse, (2) PII anonymisation rules, (3) audit logging. This ties to T8 (access control and anonymisation implementation). Can someone from security review this? Also, what's our compliance baseline?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 92214,
+            "reply_to": "M31",
+            "text": "I've reviewed A5. The anonymisation approach looks solid: hashing user IDs, removing email addresses, aggregating at the session level. One question: are we logging all access to the warehouse, or just dashboard queries?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 155243,
+            "reply_to": "M32",
+            "text": "Good question. For MVP, we'll log dashboard access. Warehouse access logging can be v2. We need to keep the scope tight. Let me update A5 to clarify that.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 30972,
+            "reply_to": "M33",
+            "text": "What about the roles? Are we doing product team, analytics team, and admin? Or something more granular?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 155243,
+            "reply_to": "M34",
+            "text": "Three roles for MVP: (1) viewer (read-only dashboard access), (2) analyst (dashboard + warehouse query access), (3) admin (full access + user management). We'll implement this in T8 using the cloud platform's native RBAC. That's part of D7.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 8323,
+            "reply_to": "M35",
+            "text": "Sounds reasonable. One thing to add to the runbook (A6): what's the incident response procedure if someone accesses data they shouldn't? We should document that.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 155243,
+            "reply_to": "M36",
+            "text": "Good point. I'll add an 'access incident' section to A6. For now, let's confirm D7: we approve the three-role model and anonymisation rules in A5. Once we have that, T8 can move forward.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 96134,
+            "reply_to": "M37",
+            "text": "I can start T8 once D7 is locked. I'll need to coordinate with the cloud platform team for RBAC setup. Should I reach out to them now or wait for formal approval?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 155243,
+            "reply_to": "M38",
+            "text": "Wait for D7 approval. Once we have that, you can reach out. Should be by EOD today. Let me finalize A5 and get it reviewed.",
+            "mentions": [
+              96134
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 30972,
+            "reply_to": "M39",
+            "text": "I'll do a final review of A5 and confirm D7 by EOD. Looks good to me so far.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 96134,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 155243,
+              "when": "week 2"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan launch, validate readiness, and capture follow-ups after MVP go-live.",
+        "messages": [
+          {
+            "msg_id": "M41",
+            "speaker_id": 155243,
+            "reply_to": null,
+            "text": "We're at day 14 of the 21-day sprint. Time to think about launch. I've prepared A4 (MVP Launch Readiness Checklist) which covers all the critical items: T1–T12 completion, documentation, monitoring, and stakeholder sign-off. Current status: T1, T2, T3, T4 are in progress. T5, T6, T7, T8, T9 are queued. T10 (historical backfill) and T12 (launch review) are final steps. Question: can we hit day 21 for launch, or do we need to slip?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A4",
+              "T1",
+              "T2",
+              "T3",
+              "T4",
+              "T5",
+              "T6",
+              "T7",
+              "T8",
+              "T9",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 30972,
+            "reply_to": "M41",
+            "text": "I've been tracking progress on T2 and T3. We're on track for completion by day 18. T4 (semantic models) is the critical path. Once that's done, T5 and T6 can run in parallel. I think day 21 is achievable if we stay focused.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3",
+              "T4",
+              "T5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 92214,
+            "reply_to": "M42",
+            "text": "T7 (CI/CD pipeline) is straightforward. I can have that done by day 16. T11 (performance tuning) might be tight, but if we start early, we should be fine.",
+            "mentions": [
+              30972
+            ],
+            "artifact_refs": [
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 155243,
+            "reply_to": "M43",
+            "text": "Good. Let me check A4 for any blockers. T10 (historical backfill) is the wildcard. That depends on data availability and validation. 96134, can you estimate how long T10 will take?",
+            "mentions": [
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 96134,
+            "reply_to": "M44",
+            "text": "T10 should take 2-3 days once the pipelines are stable. I'll need to coordinate with the data team to get historical event exports. If we start that on day 16, we should be done by day 19. That leaves buffer for validation.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 155243,
+            "reply_to": "M45",
+            "text": "That works. So timeline: T1–T4 by day 18, T5–T9 by day 19, T10 by day 19, T11 by day 20, T12 (launch review) on day 21. That's tight but doable. For D8, I'm proposing: launch on day 21 if A4 checklist is 100% complete. Any concerns?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A4",
+              "T1",
+              "T2",
+              "T3",
+              "T4",
+              "T5",
+              "T6",
+              "T7",
+              "T8",
+              "T9",
+              "T10",
+              "T11",
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 8323,
+            "reply_to": "M46",
+            "text": "Looks good. One thing: we should plan the launch comms. Who's announcing to the wider team? And should we do a demo session?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 155243,
+            "reply_to": "M47",
+            "text": "Good point. T12 includes a demo session. I'll record it and share with the team. We'll also send a launch announcement with links to the dashboard, API docs, and runbook. That's part of the handover to the wider team.",
+            "mentions": [
+              8323
+            ],
+            "artifact_refs": [
+              "A4",
+              "T12",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 30972,
+            "reply_to": "M48",
+            "text": "I'll help with the demo. Also, we should capture any feedback or feature requests during the demo and add them to the v2 backlog. That's part of the post-launch process.",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 155243,
+            "reply_to": "M49",
+            "text": "Perfect. So D8 is locked: launch on day 21 if A4 checklist is complete. We'll do a demo, capture feedback, and hand off to the wider team. Let me update A4 with the final timeline and comms plan. Everyone good with this?",
+            "mentions": [
+              8323,
+              30972,
+              92214,
+              96134
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 92214,
+            "reply_to": "M50",
+            "text": "One last thing: post-launch, who's on-call for incidents? Should we rotate or have a dedicated person?",
+            "mentions": [
+              155243
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 155243,
+            "reply_to": "M51",
+            "text": "That's in A6 (runbook). For MVP, we'll have a rotating on-call schedule. I'll document the escalation paths and incident response procedures. We can refine that after launch based on real incidents.",
+            "mentions": [
+              92214
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 96134,
+              "when": "day 16"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 155243,
+              "when": "day 21"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 155243,
+              "when": "day 19"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

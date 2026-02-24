@@ -1,0 +1,1169 @@
+{
+  "channel": {
+    "channel_id": "proj-support-portal-mvp",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, key workflows, and initial backlog for the support portal.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 337175,
+            "reply_to": null,
+            "text": "Team, let's get started on the Unified Support Portal. The main goal is to have a working MVP ready for pilot in 21 days. First step is to define the core features. I've created a basic tracking sheet in A3 to keep us aligned. My focus will be on the backend services, starting with T3.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 561396,
+            "reply_to": "M1",
+            "text": "Great to start! For the front-end, I think a simple agent dashboard and a customer FAQ page are the most important parts. I can start putting together some initial wireframes for T2 and T4 right away.",
+            "mentions": [],
+            "artifact_refs": [
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 6869,
+            "reply_to": "M2",
+            "text": "Hi everyone. Before we jump into solutions, it's critical we map out the agent workflows. The biggest issue today is having to switch between three different screens to get a full picture of a customer's issue. The MVP must solve this. I'll start documenting these requirements for T1 in A1.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "point_up",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 109718,
+            "reply_to": "M3",
+            "text": "That's a good point, @6869. For T3, I'll need to know exactly which customer data fields are required for that main dashboard view. Also, do we know which of the existing ticketing system APIs are stable enough to use for the MVP?",
+            "mentions": [
+              6869
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 337175,
+            "reply_to": "M4",
+            "text": "I've already done a quick check of their sandbox environment. The 'get_ticket_by_id' and 'create_ticket' endpoints look solid. Let's stick to just those for now to minimize risk. I can take ownership of T3.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 377231,
+            "reply_to": "M2",
+            "text": "@561396, I suggest we wait for the core workflows from A1 before starting on wireframes. We need to make sure the information architecture in T2 properly supports the main agent tasks. The agent dashboard is the highest priority and we need to get it right.",
+            "mentions": [
+              561396
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 6869,
+            "reply_to": "M6",
+            "text": "Exactly, @377231. I'll have the top 5 call workflows documented in A1 by the end of the day. The key view needs to show ticket history, customer contact info, and suggested knowledge base articles all at once.",
+            "mentions": [
+              377231
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 561396,
+            "reply_to": "M6",
+            "text": "Oh, right. That makes sense. Sorry, I got a bit ahead of myself. I'll hold off and wait for A1. Once that's ready, I can take a first pass at T2.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 337175,
+            "reply_to": "M7",
+            "text": "Okay, let's formalize the MVP features based on this. Proposal for D1: 1. A unified agent dashboard showing customer and ticket history. 2. Basic ticket creation from within the portal. 3. A panel with searchable knowledge base suggestions. Does that sound right for our 21-day target?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 109718,
+            "reply_to": "M9",
+            "text": "That scope sounds achievable for the backend work in T3. I'm good with it.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 6869,
+            "reply_to": "M9",
+            "text": "Yes, that covers the most critical agent needs. I approve that scope.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 377231,
+            "reply_to": "M9",
+            "text": "I agree with the proposed scope. It's focused and addresses the core problem.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 561396,
+            "reply_to": "M9",
+            "text": "Me too! Sounds great.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 337175,
+            "reply_to": "M13",
+            "text": "Great, D1 is settled. Now for ownership and deadlines for the initial tasks. Let's confirm D2. I'll take T3 and can have the core endpoints ready for testing in 3 days.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 6869,
+            "reply_to": "M14",
+            "text": "I'll own T1 and will have the draft requirements in A1 ready for review tomorrow morning.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 377231,
+            "reply_to": "M14",
+            "text": "I can take the lead on T2, the Information Architecture. I'll need the output of T1 first. I can deliver wireframes for review 2 days after A1 is stable.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1",
+              "T2",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 561396,
+            "reply_to": "M14",
+            "text": "I can take T4 and start building the dashboard shell while the wireframes are being finalized. I can have a basic responsive layout ready in 3 days.",
+            "mentions": [],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 109718,
+            "reply_to": "M14",
+            "text": "I can support @337175 on T3 and start looking into the logging and error handling requirements.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 337175,
+            "reply_to": "M18",
+            "text": "Perfect. So to confirm D2: T1 owner is @6869 (due tomorrow AM). T2 owner is @377231 (due 2 days after T1). T3 owner is me, with support from @109718 (due in 3 days). T4 owner is @561396 (due in 3 days). Everyone agree?",
+            "mentions": [
+              6869,
+              377231,
+              109718,
+              561396
+            ],
+            "artifact_refs": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 6869,
+            "reply_to": "M19",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 561396,
+            "reply_to": "M19",
+            "text": "Yep, sounds good!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 377231,
+            "reply_to": "M19",
+            "text": "Agreed. I'll update the tracking sheet A3 with these assignments now.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 6869,
+              "when": "tomorrow morning"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 377231,
+              "when": "2 days after T1 completion"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 337175,
+              "when": "in 3 days"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 561396,
+              "when": "in 3 days"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock in information architecture, UX flows, and agent scripts.",
+        "messages": [
+          {
+            "msg_id": "M23",
+            "speaker_id": 377231,
+            "reply_to": null,
+            "text": "Hi team, I've uploaded the first draft of the information architecture and key wireframes to A5. This is based on the requirements in A1. Please take a look and provide feedback, especially on the main agent dashboard flow. This covers the design work for T2.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 6869,
+            "reply_to": "M23",
+            "text": "Thanks, @377231. Looking at it now. The main flow for handling an incoming call looks great. It correctly prioritizes customer history and open tickets, which matches our top workflow perfectly.",
+            "mentions": [
+              377231
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 561396,
+            "reply_to": "M23",
+            "text": "This looks awesome! Really clean. I can start building the components for T4 right away. Quick question: the 'Suggested KB Articles' widget - is that a simple list or should it have filtering?",
+            "mentions": [],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 337175,
+            "reply_to": "M25",
+            "text": "We can provide a ranked list from the search API we're building for T6. Filtering on the front-end should be straightforward. The wireframes look feasible from a data perspective.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 377231,
+            "reply_to": "M25",
+            "text": "@561396, for the MVP, let's stick to a simple ranked list as shown in A5. We can add more complex features like filtering in a later iteration. Let's focus on getting the core flow approved first. Is everyone ready to approve this IA? D3",
+            "mentions": [
+              561396
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 6869,
+            "reply_to": "M27",
+            "text": "I agree with the proposed IA and navigation. It's a huge improvement for agents. I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 109718,
+            "reply_to": "M27",
+            "text": "The flow makes sense to me from a technical standpoint. Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 337175,
+            "reply_to": "M27",
+            "text": "Looks good. D3 is a go from me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 561396,
+            "reply_to": "M27",
+            "text": "Okay, simple list it is. I approve the IA too!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 377231,
+            "reply_to": "M31",
+            "text": "Great, D3 is confirmed. I'll mark T2 as ready for implementation. @561396, you should be unblocked for T4 now.",
+            "mentions": [
+              561396
+            ],
+            "artifact_refs": [
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 6869,
+            "reply_to": "M32",
+            "text": "Now that the UI flow is locked, I can finalize the call scripts for T5. I've drafted the top 3 scripts in A2. They reference the new dashboard components from A5. Can everyone take a quick look to ensure they make sense?",
+            "mentions": [],
+            "artifact_refs": [
+              "T5",
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 109718,
+            "reply_to": "M33",
+            "text": "Reading A2 now. The script for 'Password Reset' says 'Click the Customer Details tab'. Just confirming that tab will be available on first load.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 377231,
+            "reply_to": "M34",
+            "text": "Yes, the wireframe in A5 shows that as the default active tab on the agent dashboard.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 6869,
+            "reply_to": "M35",
+            "text": "Thanks for checking. I'll continue drafting the other 7 scripts. The goal is to have a standard list of 10 for the pilot. Any objections to the current list of 10 call types outlined in A1?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 337175,
+            "reply_to": "M36",
+            "text": "The list looks comprehensive for an MVP. No objections from me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 6869,
+            "reply_to": "M37",
+            "text": "Okay, then let's lock in that list of 10 scripts to prepare for the pilot. D4. I'll finish writing them all in A2 by tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 377231,
+            "reply_to": "M38",
+            "text": "Sounds like a plan. D4 confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 561396,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 6869,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Resolve technical integration and security approach for MVP.",
+        "messages": [
+          {
+            "msg_id": "M40",
+            "speaker_id": 337175,
+            "reply_to": null,
+            "text": "Quick update on backend progress. The basic ticket search and creation endpoints for T3 are up and running against the sandbox. I've also got a prototype of the KB search for T6. I've started on the security checklist for T8 and have a draft in A4 for review.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3",
+              "T6",
+              "T8",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "fast_forward",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 109718,
+            "reply_to": "M40",
+            "text": "While testing the ticketing integration, I found an issue. The 'get_customer_history' endpoint is very slow and sometimes times out. It's also not well-documented. I've logged this in our tracker A8.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 337175,
+            "reply_to": "M41",
+            "text": "I saw that. Thanks for logging it in A8. Given the 21-day timeline, we might need to reduce scope here. The telephony CTI integration for screen-pops is also looking more complex than we initially thought.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 6869,
+            "reply_to": "M42",
+            "text": "The customer history is a must-have for the MVP. Without it, agents still have to switch screens, which defeats a major purpose of the portal. The CTI screen-pop is a nice-to-have, we can live without it for the pilot.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 109718,
+            "reply_to": "M43",
+            "text": "What if we only pull the last 5 tickets instead of the full history? That might be faster. We'd have to check if the API supports pagination or a limit parameter.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 377231,
+            "reply_to": "M44",
+            "text": "From a UX perspective, showing only 5 tickets with a 'view more' link that might be slow is better than showing nothing. We just need to be transparent with a loading indicator and manage agent expectations.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 561396,
+            "reply_to": "M45",
+            "text": "So should I build a loading spinner for that panel? What error message should I show if it times out completely?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 337175,
+            "reply_to": "M46",
+            "text": "Let's make a decision to keep moving. For the MVP, we need to be strict about scope. Proposal for D5: Ticketing integration is limited to ticket search/create and fetching the 5 most recent tickets for a customer. All telephony integration is out of scope for the MVP. Thoughts?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 6869,
+            "reply_to": "M47",
+            "text": "That's a reasonable compromise. The 5 most recent tickets will cover 80% of cases. I agree with that scope for D5.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 109718,
+            "reply_to": "M47",
+            "text": "Agreed. That's technically feasible and reduces our risk significantly.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 377231,
+            "reply_to": "M47",
+            "text": "Works for me. We can design the UI to handle that gracefully.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 561396,
+            "reply_to": "M47",
+            "text": "Ok, I'll build it that way.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 337175,
+            "reply_to": "M51",
+            "text": "Great, D5 is decided. I'll update the backlog in A3. Now, about security. Please review the checklist in A4 for T8. It covers the main points from the ICT security legislation: auth, data protection, logging.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 109718,
+            "reply_to": "M52",
+            "text": "The checklist A4 looks solid. It covers the OWASP top 10 basics. We should schedule a review with the IT security officer next week to get their early feedback.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 6869,
+            "reply_to": "M52",
+            "text": "I see role-based access is mentioned. That's critical for the KB content management. Looks good to me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 377231,
+            "reply_to": "M52",
+            "text": "The checklist seems thorough. It will be our guide for implementation.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 337175,
+            "reply_to": "M55",
+            "text": "Okay, can we agree to use A4 as our baseline for go-live readiness? Any security-related work must align with this checklist. D6.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 109718,
+            "reply_to": "M56",
+            "text": "Yes, I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "lock",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 6869,
+            "reply_to": "M56",
+            "text": "Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 337175,
+            "reply_to": "M58",
+            "text": "Excellent. I'm also starting on T10 to get the staging environment ready so we can deploy and test everything together soon.",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 337175,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 337175,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Prepare and confirm the pilot plan, training, and feedback loop.",
+        "messages": [
+          {
+            "msg_id": "M60",
+            "speaker_id": 6869,
+            "reply_to": null,
+            "text": "Hi all, I've put together a draft pilot training plan and a quick-start guide for agents, which covers T9. The goal is to get a small group of agents using the portal for their daily work to give us feedback. I'm proposing we start the pilot one week from today.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 337175,
+            "reply_to": "M60",
+            "text": "One week sounds achievable from a backend perspective. The staging environment is up, and the core APIs are stable.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 561396,
+            "reply_to": "M60",
+            "text": "The front-end for the agent dashboard and the customer self-service pages (T11) should be ready. I'm just finishing up the UI for the KB management (T7). I can get it done by then.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 377231,
+            "reply_to": "M62",
+            "text": "Is the UI for T7 usable enough for the pilot? We need to make sure the agents who will be managing content can actually do it. Have you tested it against the governance rules in A6?",
+            "mentions": [],
+            "artifact_refs": [
+              "T7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 561396,
+            "reply_to": "M63",
+            "text": "Uh, I followed the wireframes. I haven't looked at A6 yet. I can do a quick check now.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 6869,
+            "reply_to": "M64",
+            "text": "Good catch, @377231. @561396, let's sync up for 15 mins today. I can walk you through the key workflow for content editors from A6. For the pilot group, I've identified 5 senior agents from the morning shift. They are experienced and give good, constructive feedback.",
+            "mentions": [
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 337175,
+            "reply_to": "M65",
+            "text": "That group sounds good. So, can we confirm the pilot start date and the group of 5 agents? D7.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 6869,
+            "reply_to": "M66",
+            "text": "Yes, let's lock that in. Pilot starts next Monday with the 5 senior agents.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 109718,
+            "reply_to": "M66",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 377231,
+            "reply_to": "M66",
+            "text": "Agreed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 561396,
+            "reply_to": "M66",
+            "text": "Okay!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 6869,
+            "reply_to": "M67",
+            "text": "Great. Now for feedback collection (T12). I've set up a simple sheet A7 to log all feedback. I was thinking of having a 30-minute daily debrief with the pilot group to gather thoughts, and I'll populate A7.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 377231,
+            "reply_to": "M71",
+            "text": "A daily debrief is a great idea. It ensures feedback is fresh. How will we prioritize it? We should probably distinguish between bugs, usability issues, and new feature ideas in A7.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 109718,
+            "reply_to": "M72",
+            "text": "We can add a 'type' and 'priority' column to A7. Critical bugs should probably be copied into our main technical tracker, A8.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 6869,
+            "reply_to": "M73",
+            "text": "Good idea. I'll add those columns to A7. So, the process will be: daily debriefs, I log everything in A7, and we triage it together to move critical bugs to A8. Does that work for everyone? D8.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 337175,
+            "reply_to": "M74",
+            "text": "Works for me. This gives us a structured way to handle the feedback for T12. I approve.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 377231,
+            "reply_to": "M74",
+            "text": "Yes, that's a solid process. Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 561396,
+            "reply_to": "M74",
+            "text": "Sounds good!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 6869,
+            "reply_to": "M77",
+            "text": "Perfect. I'll finalize the training guide (which is part of A2) with screenshots from the latest build and share it with the pilot group by Friday. Thanks everyone!",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 6869,
+              "when": "EOW"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 561396,
+              "when": "before pilot start"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 6869,
+              "when": "starting next Monday"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

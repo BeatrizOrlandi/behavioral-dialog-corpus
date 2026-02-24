@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH2 (13 messages), TH3 (12 messages), and TH4 (14 messages) fall below the minimum required 15 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Several mandatory artifacts are missing from their respective threads: A3 and A4 are missing in TH2; A7 and T5 are missing in TH3; A7 and T4 are missing in TH4."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The text contains forbidden terms explicitly restricted by the prompt: 'label' (used in M19, M21, M25, M28, M29) and 'scenario' (used in M51, M54)."
+    },
+    {
+      "severity": "MID",
+      "code": "INCONSISTENCY",
+      "detail": "In thread_outcome.next_steps for TH2, TH3, and TH4, artifact IDs (A8, A2, A5) are used instead of valid task IDs from the backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 3
+  }
+}

@@ -1,0 +1,1348 @@
+{
+  "channel": {
+    "channel_id": "proj-predictive-maintenance-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on pilot scope, asset selection, and success criteria.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Team, let's kick off the Cross-Plant Predictive Maintenance Rollout project. The main goal is to reduce unplanned downtime. First step is defining the pilot scope. I've started populating the Asset Criticality Matrix (A1) as per T1. My initial proposal is to focus on the CNC milling machines on Line 3 and the primary stamping press on Line 5. They have the highest impact on our production targets. Please review and share your thoughts.",
+            "mentions": [
+              36422,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 36422,
+            "reply_to": "M1",
+            "text": "Thanks for kicking this off. The choice of Line 3 and 5 makes sense from an operational standpoint. Before we lock it in, can we confirm that the maintenance teams at both plants have recent experience with the sensor types we're likely to use on that press? Don't want any surprises during installation.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 560411,
+            "reply_to": "M1",
+            "text": "Good choices. I've checked the historical data logs, and both asset types have fairly consistent data streams, which will be great for our predictive models. This directly supports the data quality assessment risk mitigation strategy. I've added a column to A1 with a data quality score for each proposed asset.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 237177,
+            "reply_to": "M2",
+            "text": "I can check with the garage supervisors. What kind of sensors are we talking about?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 55217,
+            "reply_to": "M1",
+            "text": "I agree with the lines. Are we sure we have the budget for both? Some of that equipment is pretty old.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 36422,
+            "reply_to": "M4",
+            "text": "Likely vibration and thermal sensors. Standard stuff, but the press housing is custom. Let's assume for now the skills are there and focus on finalizing the asset list. We can validate technician readiness as part of T8.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 53841,
+            "reply_to": "M5",
+            "text": "Good point on budget. The project constraints mention limited capex. By focusing on these two high-impact assets, we're aligning with the risk mitigation plan. If there are no other major objections, I'd like to finalize this list.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 18383,
+            "reply_to": "M7",
+            "text": "Sorry for the delay. The list is fine for me. I will need to check the electrical panels for space and power draw once we have the sensor specs.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 53841,
+            "reply_to": "M8",
+            "text": "Great. Let's make that official then. DECISION: The pilot will include the CNC milling machines on Line 3 and the primary stamping press on Line 5, as detailed in A1.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 36422,
+            "reply_to": "M9",
+            "text": "Excellent. Now for success criteria. As per T7, we need to define the KPIs. I propose we track them in A6. My suggestion for the top 3 are: 1. Reduction in unplanned downtime hours, 2. Improvement in Mean Time Between Failures (MTBF), and 3. Maintenance schedule compliance.",
+            "mentions": [],
+            "artifact_refs": [
+              "T7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 560411,
+            "reply_to": "M10",
+            "text": "Those are solid outcome KPIs. I'd suggest adding a process KPI as well, like 'Time to Acknowledge Alert'. It will help us measure how quickly the teams are adopting the new workflow.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 55217,
+            "reply_to": "M10",
+            "text": "What about cost? Shouldn't we track maintenance cost savings?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 53841,
+            "reply_to": "M12",
+            "text": "Cost savings is a great long-term goal, but it might be hard to measure accurately within a 21-day pilot. Let's stick to operational metrics for now and add cost to the roadmap for the full rollout. I like the 'Time to Acknowledge' suggestion.",
+            "mentions": [
+              55217,
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 36422,
+            "reply_to": "M13",
+            "text": "Agreed. Let's finalize the list. DECISION: The primary KPIs for the pilot are: 1. Unplanned Downtime, 2. MTBF, 3. Maintenance Compliance, and 4. Time to Acknowledge Alert. I will set up the tracking sheet A6 accordingly.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 53841,
+            "reply_to": "M14",
+            "text": "Perfect. That concludes our kickoff alignment. I will finalize the documentation for T1 by EOD.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 237177,
+            "reply_to": "M14",
+            "text": "Ok, thanks.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 18383,
+            "reply_to": "M14",
+            "text": "Understood.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 55217,
+            "reply_to": "M14",
+            "text": "Sounds good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 53841,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 36422,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalize the standardized predictive maintenance workflow.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "Hi team, following up on our alignment, I've drafted the new standardized workflow in A2, which covers T2 and T3. The goal is to have a clear process from alert generation to resolution. I'd appreciate your feedback, especially on the escalation paths defined in section 3. Does the proposed triage process make sense?",
+            "mentions": [
+              560411,
+              53841,
+              237177,
+              18383
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 560411,
+            "reply_to": "M19",
+            "text": "Thanks for sharing this so quickly. The flow is very clear. I have one suggestion regarding the escalation from a Level 1 (Operator) alert to Level 2 (Maintenance Tech). The current draft says 'if unresolved in 30 mins'. I'd propose we add a condition based on alert severity. A high-severity alert, like a critical temperature spike, should be escalated immediately, regardless of the 30-minute window. This will prevent potential damage.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 53841,
+            "reply_to": "M19",
+            "text": "This looks like a solid improvement over our current ad-hoc process. My main question is about communication. How do we ensure the production supervisor is kept in the loop when an asset is being investigated by maintenance? We can't afford to have them discover a machine is offline by surprise.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 237177,
+            "reply_to": "M19",
+            "text": "When does the garage get involved in this process?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 36422,
+            "reply_to": "M20",
+            "text": "Excellent point, that's a critical refinement. I'll add severity-based immediate escalation. That's a much more robust approach.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 36422,
+            "reply_to": "M21",
+            "text": "Good question. I'll add a step for the Maintenance Tech to notify the Production Supervisor via radio call as soon as they begin investigating on the floor. We can formalize that in the procedure.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 36422,
+            "reply_to": "M22",
+            "text": "The garage is the Level 3 escalation, for issues that require specialized tooling or major component replacement that can't be done on the line. It's detailed in section 3.2 of A2.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 55217,
+            "reply_to": "M19",
+            "text": "Who decides if it's a Level 3 issue?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 560411,
+            "reply_to": "M26",
+            "text": "The process doc suggests the on-shift Maintenance Lead makes that call, which seems right. They have the best context on available resources and repair complexity.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 18383,
+            "reply_to": "M19",
+            "text": "I've read the document. It seems ok. Is there a process for when an alert might be a sensor failure instead of a machine failure?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 36422,
+            "reply_to": "M28",
+            "text": "That's a good point. The L2 Maintenance Tech's first step should be to validate the reading. I'll make that explicit in the checklist within A2. Thanks for catching that.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 36422,
+            "reply_to": "M29",
+            "text": "Okay, with these refinements, let's lock down the roles. DECISION: For alerts, Line Operators are responsible for L1 triage, and on-shift Maintenance Techs are responsible for L2 investigation and response.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 53841,
+            "reply_to": "M30",
+            "text": "Works for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 237177,
+            "reply_to": "M30",
+            "text": "Understood.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 36422,
+            "reply_to": "M30",
+            "text": "Great. And for the overall process: DECISION: The standardized predictive maintenance process and escalation paths documented in A2 are approved, pending the discussed revisions.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 560411,
+            "reply_to": "M33",
+            "text": "Happy to help with the final wording if you need another pair of eyes.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 36422,
+            "reply_to": "M34",
+            "text": "Thanks, I'll share the final version tomorrow morning. That completes T2 and T3.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 55217,
+            "reply_to": "M33",
+            "text": "Looks good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 18383,
+            "reply_to": "M33",
+            "text": "OK.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 53841,
+            "reply_to": "M33",
+            "text": "Solid progress.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D4",
+            "D3"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 560411,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 36422,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock down sensor specs, installation plan, and safety procedures.",
+        "messages": [
+          {
+            "msg_id": "M39",
+            "speaker_id": 18383,
+            "reply_to": null,
+            "text": "Hello. I have created the draft for the sensor specifications for the pilot assets. This is for T4. You can see it in A4. I listed the vibration and temperature sensors I think we need. Can you please check if this is feasible?",
+            "mentions": [
+              36422,
+              560411,
+              237177,
+              53841
+            ],
+            "artifact_refs": [
+              "T4",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 560411,
+            "reply_to": "M39",
+            "text": "Thanks for putting this together. I've reviewed A4. The sensor models you've selected are good, but the sampling frequency for the vibration sensors on the CNC mills is a bit low. To catch early-stage bearing wear, we'll need at least 20 kHz. I've added a comment in the doc with a link to the recommended specs.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 36422,
+            "reply_to": "M39",
+            "text": "From an operations perspective, my main concern is installation time. How long will it take per machine? We need to make sure it fits within the planned maintenance windows.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 237177,
+            "reply_to": "M39",
+            "text": "My team will be doing the installation. We need a clear checklist. Is that something you are making?",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 18383,
+            "reply_to": "M40",
+            "text": "Ok, I can update the frequency. That might change the cost, I will have to check.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 18383,
+            "reply_to": "M41",
+            "text": "I think maybe 2-3 hours per machine? It depends on the wiring.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 53841,
+            "reply_to": "M44",
+            "text": "2-3 hours is workable if we plan it carefully. We have a 4-hour window scheduled. Let's make sure we have everything staged beforehand to avoid delays. This is critical for T5.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 36422,
+            "reply_to": "M42",
+            "text": "The installation checklist is T8, which is your responsibility. However, it should be based on the final specs from T4 and T11. Let's get the specs locked down first.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "T8",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 237177,
+            "reply_to": "M46",
+            "text": "Ok, I will wait for the final specs then.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 18383,
+            "reply_to": "M43",
+            "text": "I have updated A4 with the new frequency. The cost increase is minimal. I also added some notes for the wiring as part of T11 to check compatibility with the existing control panels.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 560411,
+            "reply_to": "M48",
+            "text": "The updated spec in A4 looks perfect now. It meets all the technical requirements for our models. I think we can approve this.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 36422,
+            "reply_to": "M49",
+            "text": "I agree. Let's make the call. DECISION: The final sensor and data collection specification is approved as documented in A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 237177,
+            "reply_to": "M50",
+            "text": "Ok, now I can start T8. I will make a draft of the checklist A3 and share it.",
+            "mentions": [],
+            "artifact_refs": [
+              "T8",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 53841,
+            "reply_to": "M51",
+            "text": "Great. Please include the lockout/tagout procedures and have the Health and Safety Officer review it before we finalize. Let's target having the installation schedule and checklist ready for review by end of week.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 237177,
+            "reply_to": "M52",
+            "text": "Will do.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 36422,
+            "reply_to": "M52",
+            "text": "Let's formalize that. DECISION: The installation will follow the schedule defined in the shared calendar for T5, using the safety checklist A3, which must be approved by EOW.",
+            "mentions": [],
+            "artifact_refs": [
+              "T5",
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 18383,
+            "reply_to": "M54",
+            "text": "I will complete the final checks for T11 tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 237177,
+              "when": "EOW"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 18383,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate pilot go-live, training, and daily status updates.",
+        "messages": [
+          {
+            "msg_id": "M56",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "Team, we are one week away from the pilot go-live. This thread is for coordinating all activities for T9. The maintenance windows are confirmed as per T5. Let's use this space for daily updates once installation begins.",
+            "mentions": [
+              53841,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "T9",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 53841,
+            "reply_to": "M56",
+            "text": "Thanks for setting this up. I've confirmed with production planning that there are no critical orders scheduled during the installation windows. We are clear from that side.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 560411,
+            "reply_to": "M56",
+            "text": "I've finalized the training materials for T6. The deck and quick reference guides are in the A5 folder. We need to schedule the sessions for the operators and maintenance staff. I can lead the training.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 237177,
+            "reply_to": "M56",
+            "text": "My team has the installation checklist and all the tools are ready.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 36422,
+            "reply_to": "M58",
+            "text": "Great work on the materials. Let's schedule two separate sessions to accommodate shifts. How about Tuesday at 10am for the maintenance team and Wednesday at 2pm for the line operators? Attendance is mandatory for the pilot lines.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 55217,
+            "reply_to": "M60",
+            "text": "Will the training cover the new KPIs? The operators need to understand what we're measuring.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 560411,
+            "reply_to": "M61",
+            "text": "Yes, section 4 of the training in A5 is dedicated to the new KPIs from A6, explaining what they mean and how they're measured. The dates work for me.",
+            "mentions": [
+              55217,
+              36422
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 53841,
+            "reply_to": "M60",
+            "text": "Those times should work. I'll inform the line supervisors to ensure their teams are available.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 36422,
+            "reply_to": "M63",
+            "text": "Perfect. Let's lock that in. DECISION: Training for maintenance staff is on Tuesday at 10am, and for operators on Wednesday at 2pm. Attendance is mandatory for all pilot team members.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 18383,
+            "reply_to": "M56",
+            "text": "I will be on site during the installation to provide support if there are any electrical issues.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 36422,
+            "reply_to": "M65",
+            "text": "Appreciate that. Having you there will be a great help.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 53841,
+            "reply_to": "M64",
+            "text": "So to confirm, the go-live is still set for next Monday, correct? All installations will happen in the maintenance windows this week on Thursday and Friday.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 36422,
+            "reply_to": "M67",
+            "text": "That is correct. Let's make it official. DECISION: The pilot go-live date is confirmed for next Monday. Installations will occur during the pre-approved maintenance windows on Thursday and Friday.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 237177,
+            "reply_to": "M68",
+            "text": "My team is ready.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 55217,
+            "reply_to": "M68",
+            "text": "Great news.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 36422,
+            "reply_to": "M68",
+            "text": "Excellent. I will post a daily check-in message here starting Thursday morning to track progress on T9.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 560411,
+            "reply_to": "M68",
+            "text": "I'll be monitoring the data streams as soon as the sensors come online.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 53841,
+            "reply_to": "M68",
+            "text": "Looking forward to a smooth rollout.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 18383,
+            "reply_to": "M68",
+            "text": "Noted.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 55217,
+            "reply_to": "M71",
+            "text": "I will keep an eye on the channel.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8",
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 560411,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 36422,
+              "when": "Thursday"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results, customer impact, and decide on rollout roadmap.",
+        "messages": [
+          {
+            "msg_id": "M76",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Team, the 21-day pilot period has concluded. Thank you all for your hard work. I've compiled the initial findings and recommendations in the Lessons Learned report (A7) as part of T10. The data from A6 shows a 15% reduction in unplanned downtime on the pilot lines, which is a fantastic result. Please review the report and let's discuss the path forward for a wider rollout (A8).",
+            "mentions": [
+              36422,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10",
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 36422,
+            "reply_to": "M76",
+            "text": "This is a great outcome. The MTBF also improved significantly. One key learning for me was the alert response time. It was slow initially but improved dramatically after the first week. This highlights the importance of hands-on training for the next phase.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 560411,
+            "reply_to": "M76",
+            "text": "The data quality from the new sensors was excellent. We caught two potential failures before they happened, saving an estimated 8 hours of downtime. For the scale-up, I recommend we keep the same asset types. The CNC mills and stamping presses are clearly good candidates. We should stick with them for Phase 2.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 53841,
+            "reply_to": "M78",
+            "text": "I agree. The results speak for themselves. Let's re-confirm our scope for the next phase. DECISION: For the initial scale-up, we will continue to focus on CNC milling machines and primary stamping presses across other production lines.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 237177,
+            "reply_to": "M76",
+            "text": "I talked to the aftersales team for T12. They said they haven't seen any change in calls for those machines yet, but it's probably too soon to tell.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 53841,
+            "reply_to": "M80",
+            "text": "Thanks for checking. That's expected. Let's continue to monitor this as part of T12 as we roll out further.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 55217,
+            "reply_to": "M76",
+            "text": "Did we have any issues with the installations?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 36422,
+            "reply_to": "M82",
+            "text": "The first installation on Line 5 ran about 30 minutes over, but we made up the time. The checklist in A3 was a huge help. We've already updated it with some notes for the next round.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 18383,
+            "reply_to": "M76",
+            "text": "The electrical integration was smooth. No issues with power or interference. The specs we decided on worked well.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 36422,
+            "reply_to": "M77",
+            "text": "One thing to revisit for the full rollout is the alert ownership. The Operator/Maintenance Tech split worked for the pilot, but as we scale, we might need a dedicated reliability engineer to analyze trends and manage the system. What are your thoughts?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 560411,
+            "reply_to": "M85",
+            "text": "I strongly agree. Having a dedicated role to manage the model performance, tune thresholds, and perform root cause analysis on complex alerts would be a huge benefit. The current L1/L2 model is great for immediate response, but not for strategic improvement.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M87",
+            "speaker_id": 53841,
+            "reply_to": "M85",
+            "text": "That's a great point for the long-term roadmap. For now, let's stick with the current model for the next 2-3 lines and build the business case for a new role based on more data. DECISION: We will revisit and finalize the long-term ownership of alert triage after the next phase of the rollout, with a proposal to create a dedicated reliability role.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M88",
+            "speaker_id": 36422,
+            "reply_to": "M87",
+            "text": "Sounds like a plan. I'll work with you on drafting the rollout roadmap A8.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M89",
+            "speaker_id": 53841,
+            "reply_to": "M88",
+            "text": "Excellent. I'll finalize T10 and we can present the results and the plan to leadership next week.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M90",
+            "speaker_id": 237177,
+            "reply_to": "M87",
+            "text": "Ok.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M91",
+            "speaker_id": 55217,
+            "reply_to": "M87",
+            "text": "Good plan.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 53841,
+              "when": "EOW"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 237177,
+              "when": "ongoing"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

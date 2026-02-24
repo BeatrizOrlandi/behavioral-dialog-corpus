@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH3, the mandatory artifacts T7 and T11 are missing from the artifact_refs of the messages."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Thread TH5 has 16 messages, which is slightly below the blueprint target range of 17-25."
+    },
+    {
+      "severity": "LOW",
+      "code": "INVALID_REF",
+      "detail": "In threads TH3 and TH4, the next_steps array contains artifact IDs (A7, A6) in the task_id field, which should only contain valid task IDs from the backlog."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

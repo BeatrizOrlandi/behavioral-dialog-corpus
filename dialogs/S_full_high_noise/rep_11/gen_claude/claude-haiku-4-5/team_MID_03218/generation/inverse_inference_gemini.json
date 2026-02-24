@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "_id": 16404,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Consistently demonstrates high technical ability, proactive productivity, and high-impact contributions throughout the project, from defining KPIs and building the model to identifying risks and planning for post-launch monitoring.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M3",
+          "snippet": "On KPIs: I'd propose we track (1) model precision at the high-risk band (we want to avoid false alarms), (2) recall on actual churners"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M15",
+          "snippet": "One question: are we confident the ID mapping will be stable going forward? If we're refreshing this data monthly, we need to make sure the mapping doesn't break."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M21",
+          "snippet": "Baseline model is trained and results are in A5 (Model Experiment Tracking Log)."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M43",
+          "snippet": "On monitoring, I've drafted A7 (Model Monitoring and Data Drift Procedure). We'll track: (1) model performance metrics... (2) data drift... (3) prediction distribution shifts."
+        }
+      ]
+    },
+    {
+      "_id": 80886,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Exhibits exceptional productivity with rapid delivery on all technical tasks. Demonstrates high ability in data engineering, practical modeling, and translating technical details into business impact. Performance is consistently high, driving the project's technical execution forward at a fast pace.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M2",
+          "snippet": "From a data perspective, I'd suggest we define churn as 'no active subscription or zero usage for 30+ days' rather than something looser."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M10",
+          "snippet": "I'll start the data profiling immediately. Expect a first cut of A2 (Customer Data Inventory and Quality Report) by tomorrow EOD."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M27",
+          "snippet": "For MVP, I'd stick with random forest—it's interpretable, stable, and performs well. We can experiment with other algorithms in phase 2 if we have time."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M29",
+          "snippet": "Done. Model, scaler, and feature list are all versioned in the repo. Ready for dashboard integration."
+        }
+      ]
+    },
+    {
+      "_id": 122466,
+      "productivity_level": "HIGH",
+      "ability_level": "HIGH",
+      "performance_level": "HIGH",
+      "justification": "Acts as the de facto project lead, demonstrating high performance by consistently driving the project forward, synthesizing discussions, and closing decisions. Shows high productivity through constant coordination and artifact creation. Exhibits high ability in translating business needs into technical requirements and ensuring the project remains aligned with its goals.",
+      "evidence": [
+        {
+          "attribute": "performance",
+          "msg_id": "M1",
+          "snippet": "Welcome to the churn prediction project kickoff! We're here to build a model and dashboard... Before we dive into data and modelling, we need to lock in our problem framing."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M8",
+          "snippet": "Perfect. So to summarize where we are: (1) churn = no active subscription or zero usage for 30+ days... Does everyone agree?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M22",
+          "snippet": "The question is: what's the business impact? If we flag 1000 customers as high-risk, how many will actually churn?"
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M49",
+          "snippet": "Good catch. That's a quick win. Once that's done, I think we're ready. Let me summarize the go-live checklist..."
+        }
+      ]
+    },
+    {
+      "_id": 138753,
+      "productivity_level": "LOW",
+      "ability_level": "LOW",
+      "performance_level": "LOW",
+      "justification": "Contributions are infrequent and consistently demonstrate a need for clarification on topics already discussed. The questions asked suggest a lower grasp of the project's context and decisions, indicating low ability and resulting in low performance and productivity compared to the rest of the team.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M5",
+          "snippet": "I think we should also consider... um, maybe we need to look at different customer types?"
+        },
+        {
+          "attribute": "ability",
+          "msg_id": "M17",
+          "snippet": "So... we're using all the data sources then? Or are we excluding some? I'm not sure which ones we decided on."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M26",
+          "snippet": "So the model is... ready? Or do we need to test it more? I'm not sure if 0.75 precision is good enough."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M46",
+          "snippet": "So... everything is done? Are we ready to launch?"
+        }
+      ]
+    },
+    {
+      "_id": 568638,
+      "productivity_level": "MID",
+      "ability_level": "MID",
+      "performance_level": "MID",
+      "justification": "A reliable and competent contributor who provides valuable, practical solutions in their area of expertise (data quality, dashboarding). Their productivity and performance are aligned with the project's needs, but not as exceptionally proactive or driving as the highest performers. Their ability is solid and meets the expectations for their role.",
+      "evidence": [
+        {
+          "attribute": "ability",
+          "msg_id": "M12",
+          "snippet": "On missing values: for usage_last_30_days, if it's missing for inactive accounts, that's actually informative... I'd suggest we code that as zero rather than impute."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M16",
+          "snippet": "Good point. I'll add a reconciliation check to the pipeline—if the ID mapping fails or produces unexpected results, it'll flag an alert."
+        },
+        {
+          "attribute": "performance",
+          "msg_id": "M36",
+          "snippet": "That's a good idea for phase 2, but for MVP I'd keep it focused on current risk scores."
+        },
+        {
+          "attribute": "productivity",
+          "msg_id": "M44",
+          "snippet": "On the data refresh side, I've validated the pipeline (T12). We're running a daily refresh at 2 AM UTC. The test run completed without errors"
+        }
+      ]
+    }
+  ]
+}

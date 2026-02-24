@@ -1,0 +1,1696 @@
+{
+  "channel": {
+    "channel_id": "#proj-lean-cleaning-ops",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state findings and prioritize main bottlenecks to tackle first.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 181683,
+            "reply_to": null,
+            "text": "Morning all, I have pulled together a first draft of the current-state diagnostic for the cleaning line based on last month data and shop floor walks. It is in A1 under the project_pack_ref Lean Cleaning Ops. This should close most of T1, but I am not fully confident on a couple of data points. Key points I am seeing: 1) frequent changeovers on small batch SKUs, 2) unplanned micro-stops around the filling station, 3) waiting time before packaging due to missing labels. Before we lock anything, can you all take a look and tell me if this matches what you see on the floor and in the numbers",
+            "mentions": [
+              261854,
+              538904,
+              472928,
+              504611,
+              405215
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 538904,
+            "reply_to": "M1",
+            "text": "Thanks for kicking this off. I went through A1 and cross-checked with last 8 weeks of production logs. Overall structure looks good, but a few clarifications: 1) For changeovers, the average duration in the doc seems to mix planned and unplanned cleaning. We should split those, otherwise we will overestimate the improvement potential. 2) For the filling micro-stops, I can pull more granular downtime codes from the line PLC to refine root causes. 3) On label shortages, the waiting time is accurate, but the frequency is understated. I suggest we use A6 as the single source for baseline KPIs once we align on definitions. I can help clean up the data set this afternoon.",
+            "mentions": [
+              181683,
+              472928
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 261854,
+            "reply_to": "M1",
+            "text": "I also reviewed A1 and walked the line again yesterday. I agree with the three issues listed, but I would add two more candidates: 4) cleaning and sanitization between perfume variants, and 5) end-of-shift overtime spikes when we try to catch up on backorders. For prioritization, my initial view is that we should focus on: a) changeover frequency and duration, b) label availability and kitting, c) filling micro-stops. These three seem to drive most of the lost hours and late orders. Before we call them the top three, can we validate against OTIF and OEE trends in A6 so we are not missing a hidden constraint upstream in mixing",
+            "mentions": [
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 472928,
+            "reply_to": "M1",
+            "text": "From a company-wide view, the main pain we hear from sales is late deliveries on multi-fragrance orders, not so much on bulk SKUs. That lines up with what you are seeing on changeovers and label issues. For KPIs, I propose we standardize on: OTIF by product family, OEE on the main filling line, and material cost per unit as in T6. Finance has already validated last quarter OTIF and material cost, but OEE is still rough. If we agree, we can treat A6 as the baseline dashboard and refine OEE in the next two days. Does anyone see a critical metric missing for this first phase",
+            "mentions": [
+              261854,
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 405215,
+            "reply_to": "M1",
+            "text": "From the purchasing side, the main signal I see is that label and bottle deliveries are quite stable on lead time, but we have several small emergency orders because forecasts change late. That suggests the bottleneck is more in internal planning and kitting than in supplier reliability. In A1, the section on supplier-related delays might overemphasize external causes. I would suggest we rephrase that part so we do not trigger unnecessary renegotiations in T4 and T5 later. For KPIs, I am fine with OTIF and OEE as long as we also track rush purchase count as a supporting metric in A6.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T4",
+              "T5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 504611,
+            "reply_to": "M2",
+            "text": "I checked yesterday shift notes and they mention a lot of waiting for quality checks after filling, which I did not see highlighted in A1. Could that be another bottleneck We sometimes have pallets sitting before release, and operators complain that they cannot start the next batch. Maybe we should add that as a candidate too, unless the impact is small in A6. I do not have the exact numbers, so I would need help pulling them.",
+            "mentions": [
+              538904,
+              261854
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 538904,
+            "reply_to": "M6",
+            "text": "Good catch on quality release. I did a quick check in A6 using last month timestamps. Waiting for QC release accounts for roughly 6 percent of total line time, while changeovers plus cleaning are closer to 22 percent and label-related waiting is around 11 percent. So QC is relevant but not in the same order of magnitude. I suggest we keep QC as a secondary improvement opportunity and focus the first wave on the three bigger ones, unless someone sees a regulatory risk that forces us to tackle QC first.",
+            "mentions": [
+              504611,
+              261854
+            ],
+            "artifact_refs": [
+              "A6",
+              "A1",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 181683,
+            "reply_to": "M3",
+            "text": "I realize I may have mixed some of the cleaning time with changeovers in A1. I will go back to the raw logs and separate: 1) product-to-product changeovers, 2) fragrance-only changeovers, 3) mandatory sanitization cycles. That should make the improvement levers clearer. On KPIs, I am ok to use OTIF, OEE, and material cost per unit as proposed, but I am not sure how to calculate OEE correctly for our line. Could someone share the formula we want to use so I can apply it consistently in A6",
+            "mentions": [
+              538904,
+              261854
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 261854,
+            "reply_to": "M8",
+            "text": "For OEE, let us keep it simple and consistent: Availability times Performance times Quality. For this project, I suggest we define: Availability as scheduled time minus all downtime, Performance as actual output versus theoretical at standard speed, and Quality as good units over total produced. I can set up the calculation template directly in A6 and backfill the last 8 weeks so we have a clean baseline for T6. Then you can just feed in the raw data going forward.",
+            "mentions": [
+              181683,
+              472928
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 472928,
+            "reply_to": "M3",
+            "text": "Let me try to summarize where we are heading so we can close on the first decisions. Based on A1 and the checks in A6, the main loss drivers are: 1) frequent and long changeovers and cleaning between SKUs and fragrances, 2) label and packaging availability causing waiting before packing, 3) micro-stops at the filling station. QC release and end-of-shift overtime are relevant but smaller in impact. On KPIs, there seems to be alignment on OTIF by product family, OEE on the main line using the definition that was just shared, and material cost per unit, with rush purchase count as a supporting metric. If no one objects in the next couple of messages, I propose we lock these as the top three bottlenecks and the baseline KPI set for phase one.",
+            "mentions": [
+              261854,
+              538904,
+              405215
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 405215,
+            "reply_to": "M10",
+            "text": "No objection from my side. The three focus areas you listed are also where we see the most noise from suppliers and internal stakeholders. For the supporting metric, I will add rush purchase count and emergency freight cost into A6 so we can see if planning improvements reduce those over time. That will also help later when we work on T4 and T5.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A6",
+              "T4",
+              "T5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 538904,
+            "reply_to": "M10",
+            "text": "Aligned here as well. I will adjust the downtime coding so that changeovers, cleaning, and micro-stops are clearly separated in A1 and feed the updated numbers into A6. That will make it easier to track improvements once we start implementing T2 and T8.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T2",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 504611,
+            "reply_to": "M10",
+            "text": "Works for me. Once the updated A1 is ready, I will share it with the line supervisors so they understand why we are focusing on those three areas first. That should help when we start changing the schedule under T2.",
+            "mentions": [
+              181683,
+              538904
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "raised_hands",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 181683,
+            "reply_to": "M10",
+            "text": "I am ok with that focus as well. I will rework the diagnostic in A1 to reflect: 1) changeovers and cleaning, 2) label and packaging availability, 3) filling micro-stops as the main bottlenecks, and move QC release and overtime to a secondary section. Once A6 is updated with the OEE calculation, I will stop using my local spreadsheet and rely only on A6 for T1 and T6 reporting.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 472928,
+            "reply_to": "M14",
+            "text": "Great, then let us record it explicitly so we can move on to schedule design. Decision: for phase one we will target three bottlenecks: 1) changeovers and cleaning between SKUs and fragrances, 2) label and packaging availability before packing, 3) micro-stops at the filling station. Decision: baseline KPIs for A6 and T6 are OTIF by product family, OEE on the main filling line using the agreed formula, and material cost per unit, with rush purchase count as a supporting metric. Any further refinements will be treated as additions, not changes to this baseline.",
+            "mentions": [
+              181683,
+              261854,
+              538904,
+              405215
+            ],
+            "artifact_refs": [
+              "A6",
+              "A1",
+              "T1",
+              "T6"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 261854,
+            "reply_to": "M15",
+            "text": "With that set, I will start drafting the new weekly schedule scenarios in A2 focusing on those three constraints and test them against the last 8 weeks of demand as required in T2. I will also make sure the schedule view pulls KPIs directly from A6 so we see the impact on OTIF and OEE as we iterate.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T2",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 405215,
+            "reply_to": "M16",
+            "text": "Once A2 is ready, please flag where label and bottle demand becomes more stable. That will help me later when we segment suppliers in A4 and define negotiation priorities under T4 and T5.",
+            "mentions": [
+              261854
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 538904,
+            "reply_to": "M16",
+            "text": "I will support by validating that the new schedule scenarios in A2 do not create new bottlenecks upstream in mixing. I will cross-check against the updated A1 and A6 once your first draft is in.",
+            "mentions": [
+              261854
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A6",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 181683,
+              "when": "today"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 472928,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 261854,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock the new production schedule design and related SOP changes.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 261854,
+            "reply_to": null,
+            "text": "Following up on the diagnostic, I have uploaded a draft of the optimized weekly schedule in A2 for the cleaning line. It is built to reduce changeovers, stabilize label demand, and smooth filling micro-stops, as per T2. Key elements: 1) grouping SKUs by base formula and fragrance to minimize full washdowns, 2) fixed label kitting windows per shift, 3) a simple rotation pattern that we tested against the last 8 weeks of demand with no simulated stockouts. I also outlined the main SOP changes we would need in A3, but they are still high level. Can you review and flag any operational or safety concerns before we finalize",
+            "mentions": [
+              181683,
+              538904,
+              504611,
+              472928,
+              405215
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 538904,
+            "reply_to": "M19",
+            "text": "I went through the A2 tabs. The grouping logic makes sense and the demand back-test looks solid. One point to watch: the proposed pattern increases run length for some high-volume SKUs, which may push cleaning intervals. We need to make sure the SOPs in A3 clearly state when mandatory sanitization must happen, even if the schedule suggests longer runs. Also, for operators, the rotation pattern might be easier to follow if we add a visual daily board linked to A2. I can help translate the schedule into a simple shift-level view once we lock the template.",
+            "mentions": [
+              261854,
+              181683
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 181683,
+            "reply_to": "M19",
+            "text": "I like the idea of grouping by base formula, but I am a bit worried about how the new pattern will affect shift handovers. In A2, some SKUs start near the end of the shift, which could create confusion if the next team is not fully briefed. In A3, could we add a standard step for handover checks when a batch is mid-run at shift change I am not entirely sure how to phrase the safety parts, especially around cleaning industry regulations, so I might need support there.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 472928,
+            "reply_to": "M19",
+            "text": "From a business standpoint, the new schedule in A2 reduces overtime in the simulation by about 18 percent and keeps OTIF above 97 percent in the back-test, which is in line with our targets in A6. That said, we cannot compromise on safety. Before we sign off, I want to be sure that the SOP changes in A3 are fully aligned with the health and safety checklist in A7 and the work planned under T12. We should not move to go-live without a clear validation path.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A6",
+              "A7",
+              "T2",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 504611,
+            "reply_to": "M19",
+            "text": "I walked through the schedule with one of the line leads. They like the reduced changeovers, but they are concerned about the fixed label kitting windows. If labels arrive late or there is a last-minute order, they fear they will not have flexibility. Maybe in A3 we can describe an exception process for urgent orders, so operators know when they are allowed to break the pattern. I am not sure how that would impact T2 metrics though.",
+            "mentions": [
+              261854,
+              181683
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 405215,
+            "reply_to": "M23",
+            "text": "On the label kitting concern, from the purchasing side I can commit to sharing a more stable label delivery plan once the A2 pattern is approved. That should reduce the need for exceptions. For truly urgent orders, we can define a small buffer of generic labels and a fast-track process, but that should be clearly limited in A3 so it does not become the norm. This will also tie into T11 later when we define escalation rules with suppliers.",
+            "mentions": [
+              504611,
+              261854
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4",
+              "T3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 538904,
+            "reply_to": "M21",
+            "text": "On shift handovers, we can standardize a simple checklist in A3: confirm batch status, remaining volume, next cleaning step, and any open deviations. We can also align this with A7 so that any pending safety checks are explicitly handed over. I can draft that section and share for review. It should not change the A2 pattern, just make it safer to operate.",
+            "mentions": [
+              181683,
+              261854
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 261854,
+            "reply_to": "M23",
+            "text": "On exceptions for urgent orders, I suggest we define in A3 a clear rule: the planner can authorize breaking the pattern only if OTIF risk is above a certain threshold and if we log the deviation in A6. That way we keep flexibility but can see the impact on changeovers and overtime. It should not affect the core T2 design, but it will show up in execution metrics.",
+            "mentions": [
+              504611,
+              472928
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A6",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 472928,
+            "reply_to": "M22",
+            "text": "Let us clarify the scope of SOP changes so we can plan the validation work. From what I see in A3, we need at least: 1) new standard for sequence and timing of changeovers and cleaning, 2) label kitting and exception handling, 3) shift handover checks, 4) integration with the health and safety checklist in A7 for any layout or process changes. Are we missing any major area that should be in scope for T3 and T12",
+            "mentions": [
+              261854,
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 181683,
+            "reply_to": "M27",
+            "text": "Maybe we should also include a short SOP section on how to read the new schedule in A2, especially for operators who are not used to weekly patterns. Things like where to find their shift plan, what to do if the board and A2 do not match, and who to call. I can draft a first version, but I would appreciate a review to make sure I am not missing any safety wording.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 538904,
+            "reply_to": "M27",
+            "text": "Agree with the list and with adding a section on reading the schedule. I will also make sure A3 references A7 explicitly wherever there is a safety-critical step, for example when handling concentrated chemicals during cleaning. For T12, we can use the checklist in A7 to validate at least one pilot change before full rollout, as required.",
+            "mentions": [
+              472928,
+              181683
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 405215,
+            "reply_to": "M27",
+            "text": "From my side, the only addition would be a brief note in A3 on how urgent supplier issues are escalated, so operators know not to improvise if labels or bottles are missing. That can link to the process we will define in T11. It does not change the schedule in A2, but it clarifies who does what when something goes wrong.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 261854,
+            "reply_to": "M22",
+            "text": "Given the feedback, I propose we keep the current A2 template as the target weekly schedule for T2, with two adjustments: 1) mark mandatory cleaning intervals explicitly, and 2) add a column for planner-approved exceptions. The SOP scope in A3 would then cover the five areas we listed: changeovers and cleaning, label kitting and exceptions, shift handovers, reading the schedule, and safety-critical steps linked to A7 and T12. If everyone is comfortable with that, we can call the schedule template approved and move into detailed SOP drafting.",
+            "mentions": [
+              472928,
+              538904,
+              181683,
+              405215
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A7",
+              "T2",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 472928,
+            "reply_to": "M31",
+            "text": "I am comfortable with that proposal. To make it explicit: we approve the current A2 weekly schedule template for T2, with the two adjustments you mentioned, as the target pattern for the cleaning line. We also confirm that the SOP work in A3 under T3 and T12 will cover the five areas you summarized, with validation against A7 before go-live. Unless there are strong objections, we can record these as our decisions for this thread.",
+            "mentions": [
+              261854,
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A7",
+              "T2",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 538904,
+            "reply_to": "M32",
+            "text": "No objections here. I will start turning the SOP outline in A3 into detailed step-by-step instructions, including references to A7 where needed. I will also coordinate with the health and safety officer for the formal review and sign-off required in T3 and T12.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A3",
+              "A7",
+              "T3",
+              "T12"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 181683,
+            "reply_to": "M32",
+            "text": "I will brief the line supervisors on the approved A2 template and gather any practical questions they have so we can address them in A3. I will avoid changing the pattern and instead capture issues for the pilot phase.",
+            "mentions": [
+              261854
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 405215,
+            "reply_to": "M32",
+            "text": "Once the SOPs in A3 are stable, please flag any changes that affect supplier delivery windows so I can align contracts and communication. That will help avoid confusion when we start the pilot and later phases.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 261854,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 538904,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 261854,
+              "when": "before pilot start"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Agree on supplier segmentation and negotiation priorities.",
+        "messages": [
+          {
+            "msg_id": "M36",
+            "speaker_id": 405215,
+            "reply_to": null,
+            "text": "I have uploaded a first draft of the supplier segmentation matrix in A4, covering bottles, labels, surfactants, fragrances, and packaging. This is to advance T4. Suppliers are scored on cost, quality, lead time, and risk, using the data we have so far. I grouped them into three categories: strategic, preferred, and backup, but the thresholds are still open for discussion. I also sketched a list of candidates for early renegotiation under T5. Please review and let me know if the scoring and categories make sense from your side.",
+            "mentions": [
+              472928,
+              261854,
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 261854,
+            "reply_to": "M36",
+            "text": "Looking at A4, the structure is clear. One comment: some of the bottle suppliers marked as preferred have caused short-notice rescheduling on the line, which shows up as label and bottle waiting time in A1 and A6. Their lead time score might be a bit generous. Maybe we should tighten the threshold for the top category so that only suppliers with both stable lead time and low quality issues are considered strategic.",
+            "mentions": [
+              405215,
+              538904
+            ],
+            "artifact_refs": [
+              "A4",
+              "A1",
+              "A6",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 538904,
+            "reply_to": "M36",
+            "text": "I agree with that. From the production logs, two of the label suppliers in A4 that are currently in the preferred group have caused several small delays that forced us to break the A2 pattern during the test weeks. I would suggest we set a minimum OTIF from supplier side, maybe 95 percent, as a requirement for strategic status. Anything below that should be preferred or backup, even if cost is attractive.",
+            "mentions": [
+              405215,
+              261854
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "A6",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 181683,
+            "reply_to": "M36",
+            "text": "I am still getting used to reading A4, but one thing I noticed is that some fragrance suppliers with long lead times are marked as strategic because of quality. Does that mean we accept the long lead time as a constraint Or should we consider developing a backup even if quality is slightly lower I am not sure how much room we have in T5 to push them.",
+            "mentions": [
+              405215,
+              472928
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 472928,
+            "reply_to": "M36",
+            "text": "From a risk perspective, I would like A4 to reflect both business criticality and substitution options. For example, a single-source fragrance supplier with long lead time and no qualified backup is a high risk, even if quality is excellent. In T11 we will need clear monitoring and escalation rules for those. For segmentation thresholds, I propose: strategic suppliers must meet minimum cost and service levels and be critical to our core SKUs; preferred suppliers meet standards but are easier to substitute; backup suppliers are either higher risk or used for contingency only.",
+            "mentions": [
+              405215
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 405215,
+            "reply_to": "M39",
+            "text": "Good question. For some fragrances, we are indeed constrained by existing contracts and regulatory approvals, so T5 will have limited room to change lead times in the short term. That is why I marked them as strategic in A4 despite the long lead time. However, I agree with 472928 that we should flag them as high risk in T11 and start qualifying backups where possible. For now, I can adjust the segmentation so that strategic suppliers must meet a minimum service level, and those that do not will be marked as strategic-high-risk with a clear note.",
+            "mentions": [
+              181683,
+              472928
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 261854,
+            "reply_to": "M40",
+            "text": "To make this concrete, I suggest we define in A4 the following thresholds: strategic suppliers must have cost score above 3 out of 5, quality above 4, and lead time reliability above 95 percent OTIF; preferred suppliers meet at least 3 on all three dimensions; backup suppliers are those below that or used only for contingency. We can then overlay the risk notes you mentioned for single-source items. This will make it easier later to pick the top candidates for T5 negotiations.",
+            "mentions": [
+              405215,
+              472928
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 538904,
+            "reply_to": "M42",
+            "text": "I like those thresholds. They align with what we see operationally. If we apply them, two of the current preferred label suppliers in A4 would drop to backup, which is consistent with the disruptions they caused to the A2 schedule. That would also clarify which suppliers we should prioritize for renegotiation or replacement under T5.",
+            "mentions": [
+              261854,
+              405215
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 181683,
+            "reply_to": "M42",
+            "text": "I am ok with those thresholds. It will also help me explain to the line why we might stop using some suppliers they are used to, if they fall into the backup group in A4. For T11, it would be helpful to have a simple traffic-light view so production can see which suppliers are at risk without going into all the scoring details.",
+            "mentions": [
+              405215
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "traffic_light",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 405215,
+            "reply_to": "M42",
+            "text": "Understood. I will update A4 with the thresholds you proposed and reclassify suppliers accordingly. For T5, my suggestion for the first negotiation wave is: 1) top two bottle suppliers that are close to strategic but need better lead time terms, 2) the main label supplier that is strategic but has room on cost, and 3) one surfactant supplier where we can push for lower minimum order quantities to support the new A2 schedule. Does that sound like the right focus for the first round",
+            "mentions": [
+              472928,
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 261854,
+            "reply_to": "M45",
+            "text": "From the production side, that list makes sense. Improving bottle and label reliability will directly support the new schedule in A2 and reduce the waiting time we saw in A1 and A6. On surfactants, lower minimum order quantities will help us avoid excess inventory when we group SKUs differently.",
+            "mentions": [
+              405215
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "A1",
+              "A6",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 538904,
+            "reply_to": "M45",
+            "text": "I would just add that for the label supplier, we should prioritize lead time reliability and flexibility on small rush orders over pure unit price. That will support the exception process we defined in A3 and reduce the need to break the A2 pattern. Maybe we can include those as explicit levers in T5.",
+            "mentions": [
+              405215,
+              261854
+            ],
+            "artifact_refs": [
+              "A4",
+              "A2",
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 472928,
+            "reply_to": "M45",
+            "text": "Let me summarize so we can close the loop. For A4 and T4, we will use the thresholds proposed by 261854: strategic suppliers must meet minimum cost, quality, and lead time reliability levels, with risk notes for single-source items; preferred and backup are defined accordingly. For T5, the first negotiation wave will target: two key bottle suppliers, the main label supplier, and one surfactant supplier, with a focus on lead time reliability, minimum order quantities, and cost where feasible. If there are no objections, I suggest we record these as our decisions.",
+            "mentions": [
+              405215,
+              261854,
+              538904,
+              181683
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 405215,
+            "reply_to": "M48",
+            "text": "Agreed. I will finalize A4 with the approved thresholds and mark the four suppliers for the first T5 negotiation wave. I will also start drafting the monitoring and escalation rules for T11, using a simple traffic-light view as suggested.",
+            "mentions": [
+              472928,
+              181683
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 181683,
+            "reply_to": "M48",
+            "text": "Once A4 is updated, please share a short summary I can use with the line supervisors so they understand why some suppliers are changing. That will help manage expectations when deliveries or packaging change during the pilot.",
+            "mentions": [
+              405215
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 405215,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 405215,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 405215,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Finalize implementation roadmap, pilot scope, and risk mitigations.",
+        "messages": [
+          {
+            "msg_id": "M51",
+            "speaker_id": 472928,
+            "reply_to": null,
+            "text": "I have posted a draft of the implementation roadmap and communication plan in A5, covering the next 30 days, to advance T7. It includes a pilot phase for the new schedule in A2 and SOPs in A3, alignment with warehouse changes under T8, and the business case updates for T10. The open points are: 1) which product family we choose for the pilot, 2) pilot duration and success criteria, 3) how we will use A8 to track issues. Please review and share your views so we can converge and sign off.",
+            "mentions": [
+              261854,
+              538904,
+              181683,
+              405215,
+              504611
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A3",
+              "A8",
+              "T7",
+              "T8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 261854,
+            "reply_to": "M51",
+            "text": "Looking at A5, my recommendation for the pilot product family is the multi-fragrance all-purpose cleaner line. It is high enough volume to show impact, but not so critical that any small hiccup would hurt our biggest customers. The A2 schedule is already optimized for that family, and the SOP changes in A3 are most relevant there. For duration, I suggest two full weeks so we cover different demand patterns and at least one full cleaning cycle.",
+            "mentions": [
+              472928,
+              538904
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A3",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 538904,
+            "reply_to": "M51",
+            "text": "I support that choice. The multi-fragrance family is where we saw most of the changeover and label issues in A1 and A6, so it is a good test. For success criteria, I would propose: 1) no missed customer deliveries for that family, 2) at least 10 percent reduction in changeover and cleaning time versus baseline in A6, 3) no safety incidents or checklist failures in A7, and 4) operator feedback not showing major usability issues with the new SOPs in A3.",
+            "mentions": [
+              261854,
+              472928
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A6",
+              "A7",
+              "A5",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 181683,
+            "reply_to": "M51",
+            "text": "I am ok with that product family, but I am a bit concerned about running the pilot for two weeks without a buffer. Could we start with a soft launch for a few days where we keep the old schedule as a backup in case something goes wrong Or would that create too much confusion for operators I do not want to risk OTIF during the first days.",
+            "mentions": [
+              261854,
+              538904
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A6",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 504611,
+            "reply_to": "M51",
+            "text": "From the shop floor side, the multi-fragrance family is a good candidate because the team knows it well. For the pilot, we will need clear daily instructions and quick feedback loops. A5 mentions A8 for issue logging, but I am not fully sure how operators should use it. Will they log issues directly, or will supervisors collect and enter them I want to avoid extra admin work that slows them down.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8",
+              "A3",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 405215,
+            "reply_to": "M51",
+            "text": "From purchasing, I can confirm that for the multi-fragrance family we have enough label and bottle stock to support a two-week pilot without extra risk, assuming the A2 pattern holds. For T8, we will need to align warehouse reorder points so that any improvement in changeover time does not create stock imbalances. I do not see supplier-related blockers for this pilot.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A4",
+              "T7",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 261854,
+            "reply_to": "M54",
+            "text": "On the soft launch idea, I would avoid running two schedules in parallel for the same family, as that could confuse operators and make it hard to interpret results in A6 and A8. Instead, we could build a small safety stock before the pilot and use that as a buffer while we run the new A2 pattern for two weeks. That way we protect OTIF without mixing approaches.",
+            "mentions": [
+              181683,
+              472928
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "A8",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 538904,
+            "reply_to": "M55",
+            "text": "For A8, my suggestion is that supervisors own the logging. Operators flag issues verbally or on a simple paper form, and supervisors enter them into A8 at the end of each shift. That keeps the burden off the line while still giving us structured data for T9 and T7. We can define a few standard categories: schedule, SOP clarity, material availability, equipment, and safety.",
+            "mentions": [
+              504611,
+              472928
+            ],
+            "artifact_refs": [
+              "A8",
+              "A3",
+              "A5",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 472928,
+            "reply_to": "M53",
+            "text": "Let me try to frame the pilot proposal. Product family: multi-fragrance all-purpose cleaners. Duration: two weeks, with a small safety stock built beforehand. Success criteria: no missed deliveries for that family, at least 10 percent reduction in changeover and cleaning time versus baseline in A6, no safety incidents or checklist failures in A7, and acceptable operator feedback on A3. Issues will be logged daily in A8 by supervisors. If we agree on this, we can formalize it as the scope for T9.",
+            "mentions": [
+              261854,
+              538904,
+              181683,
+              504611
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A3",
+              "A6",
+              "A7",
+              "A8",
+              "T7",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 181683,
+            "reply_to": "M59",
+            "text": "With the safety stock buffer and clear criteria, I am comfortable with that pilot plan. I will work with the supervisors to make sure they understand how to collect issues for A8 and how to brief operators on the new A2 schedule and A3 SOPs.",
+            "mentions": [
+              472928,
+              261854
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A5",
+              "A8",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 504611,
+            "reply_to": "M59",
+            "text": "Works for me as well. I will coordinate the daily standup with supervisors during the pilot so we can review A8 entries and adjust quickly if something is not working.",
+            "mentions": [
+              538904
+            ],
+            "artifact_refs": [
+              "A8",
+              "A5",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 405215,
+            "reply_to": "M59",
+            "text": "I will make sure warehouse and suppliers are aligned with the pilot dates in A5 so that T8 changes on reorder points and safety stock are in place beforehand. I will also monitor any rush orders during the pilot and log them in A8 so we can see if the new schedule reduces those.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4",
+              "A8",
+              "T7",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "truck",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 261854,
+            "reply_to": "M51",
+            "text": "On the broader roadmap in A5, the sequence looks reasonable: finalize SOPs and safety checklist, adjust warehouse policies under T8, run the two-week pilot for T9, then update the business case in T10. The only adjustment I would suggest is adding a short stabilization period after the pilot before we roll out to all product families, to incorporate learnings from A8.",
+            "mentions": [
+              472928,
+              538904
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8",
+              "T7",
+              "T8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_calendar_pad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 538904,
+            "reply_to": "M63",
+            "text": "Agree on adding a stabilization step. We can define in A5 that we will only extend the new A2 schedule to other families once the pilot meets the success criteria and we have closed any critical actions from A8. That will also give time to adjust T8 parameters if needed.",
+            "mentions": [
+              261854,
+              472928
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A8",
+              "T7",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 472928,
+            "reply_to": "M63",
+            "text": "Noted. I will update A5 to include a one-week stabilization and review phase after the pilot, during which we analyze A8, refresh A6, and finalize the T10 business case. After that, we move to full rollout if the criteria are met. This keeps us within the 30-day window while reducing risk.",
+            "mentions": [
+              261854,
+              405215
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "A8",
+              "T7",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 405215,
+            "reply_to": "M65",
+            "text": "With that adjustment, the roadmap in A5 looks coherent from my side. It gives enough time to adjust supplier terms from T5 and risk monitoring from T11 before full rollout, without delaying the go-live.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4",
+              "T5",
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 472928,
+            "reply_to": "M66",
+            "text": "To close this thread, let us state the decisions clearly. Decision: for T9, we will run a two-week pilot on the multi-fragrance all-purpose cleaner family, using the new A2 schedule and A3 SOPs, with a safety stock buffer, success criteria based on OTIF, changeover reduction in A6, safety compliance via A7, and issue logging in A8. Decision: we approve the implementation roadmap and communication plan in A5 under T7, including the stabilization phase, alignment with T8 and T10, and the use of A8 for daily pilot reviews. I will present this summary to the broader leadership team.",
+            "mentions": [
+              261854,
+              538904,
+              181683,
+              405215,
+              504611
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "A3",
+              "A6",
+              "A7",
+              "A8",
+              "T7",
+              "T8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 261854,
+            "reply_to": "M67",
+            "text": "All clear. I will finalize the pilot schedule in A2, coordinate with warehouse on T8, and prepare the templates we need in A8 so we can start logging from day one.",
+            "mentions": [
+              472928,
+              538904
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A8",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 181683,
+            "reply_to": "M67",
+            "text": "I will brief the line supervisors on the roadmap in A5 and make sure they understand the pilot scope, success criteria, and how we will use A8. I will also collect any concerns they have ahead of the start date.",
+            "mentions": [
+              472928
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 261854,
+              "when": "next week"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 472928,
+              "when": "today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 405215,
+              "when": "before pilot start"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 472928,
+              "when": "after pilot stabilization"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

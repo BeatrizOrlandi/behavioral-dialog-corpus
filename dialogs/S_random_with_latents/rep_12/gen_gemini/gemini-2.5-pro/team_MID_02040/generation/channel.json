@@ -1,0 +1,805 @@
+{
+  "channel": {
+    "channel_id": "proj-branch-queue-pilot-7845",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state mapping and confirm scope of the pilot branches.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Team, welcome to the Branch Queue & Service Experience Optimization Pilot. The goal is to reduce wait times and improve the customer experience. Before we design any new processes, we need to be aligned on the current state. I've attached the initial doc for our mapping, A1. Can our tellers confirm the main pain points you see daily? And let's confirm the pilot branches.",
+            "mentions": [
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 73292,
+            "reply_to": "M1",
+            "text": "Thanks. The biggest issue is definitely the single queue. We have customers waiting 15 minutes for a simple cash withdrawal behind someone opening a new account. It clogs everything up. For T1, we absolutely need to track transaction types vs. time taken. That's the core problem.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 252240,
+            "reply_to": "M2",
+            "text": "I agree. Also, customers get confused about where to go for different services. There's no clear guidance when they walk in. We spend a lot of time just directing people.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 167703,
+            "reply_to": "M1",
+            "text": "So for the data, are we just looking at how long people wait? Or other things too?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 455770,
+            "reply_to": "M4",
+            "text": "Good question. For the initial mapping in T1, we need a clear baseline. Let's agree on the minimum dataset: 1) Average wait time (peak and off-peak), 2) Top 5 transaction types and their duration, and 3) Number of customers who leave the queue. That should give us what we need for A1.",
+            "mentions": [
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 73292,
+            "reply_to": "M5",
+            "text": "That works. I can create a simple log sheet for that, which will help with T5 later. For the pilot branches, are we still thinking Main Street, North Plaza, and the new Riverside location?",
+            "mentions": [],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 455770,
+            "reply_to": "M6",
+            "text": "Yes, those three give us a good mix of customer volume and demographics. Let's lock in Main Street, North Plaza, and Riverside as the pilot scope.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 268564,
+            "reply_to": "M1",
+            "text": "Just catching up. Happy to help with any customer-facing communication once we know what the new process is!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 455770,
+            "reply_to": "M7",
+            "text": "Great. So we're aligned on scope and data points. @73292, can you lead the effort on T1 to get that baseline data from the three branches?",
+            "mentions": [
+              73292
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 73292,
+            "reply_to": "M9",
+            "text": "Yes, I'll coordinate with the teams at the other branches and get the data collection started tomorrow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D2",
+            "D1"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 73292,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalise the new triage and queue process for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M11",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Okay team, based on the initial data from T1, I've drafted a new triage flow. The idea is to separate quick transactions from complex service requests right at the door. Please review the draft guide A2 and share your feedback. We need to make this practical for the floor.",
+            "mentions": [
+              73292,
+              252240
+            ],
+            "artifact_refs": [
+              "T1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 73292,
+            "reply_to": "M11",
+            "text": "This looks like a solid start. The key will be the 'triage checklist'. For the 'quick transaction' rule, I suggest we define it as any single transaction that can be completed in under 3 minutes and doesn't require a manager's signature. That's a clear, objective rule for staff to follow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 455770,
+            "reply_to": "M12",
+            "text": "Excellent point. A time-based rule is much clearer than a subjective list. Let's formalize that. Decision: Triage rule for 'quick' transactions is <3 minutes and no signature required.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 252240,
+            "reply_to": "M13",
+            "text": "What about customers who have both? Like a quick deposit but also want to ask about a loan? That happens a lot.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 73292,
+            "reply_to": "M14",
+            "text": "That's a critical edge case. We could handle the quick transaction at the teller window and then direct them to the service desk for the loan query. Or offer a callback from the right team. We don't want the quick queue getting held up.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 455770,
+            "reply_to": "M15",
+            "text": "I prefer the callback option for anything complex like a loan query. It keeps the branch floor moving. Let's decide on this: For mixed cases, staff will handle the quick transaction and then offer the customer a scheduled callback from a specialist for the complex query. This will be our official process for handling these edge cases.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 73292,
+            "reply_to": "M16",
+            "text": "That works. It's clear and consistent. Have we run this by compliance? We need to make sure we're documenting everything correctly for T11, especially with the handoff to a callback.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 455770,
+            "reply_to": "M17",
+            "text": "Yes, I've already had a preliminary review with the compliance officer. They've given provisional approval as long as we log the callback request properly. I've documented their feedback in A7. I'll update A2 with these rules now.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 167703,
+            "reply_to": "M16",
+            "text": "So the call center will get these callback requests? We need to know what information to expect.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 455770,
+            "reply_to": "M19",
+            "text": "Correct. That's the next piece of the puzzle we'll tackle. For now, I'm focused on finalizing T2. Thanks for the input everyone.",
+            "mentions": [],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 455770,
+              "when": "EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define scripts and communication for customers and cross-sell prompts.",
+        "messages": [
+          {
+            "msg_id": "M21",
+            "speaker_id": 268564,
+            "reply_to": null,
+            "text": "Hi team, here's the first draft of the customer-facing scripts in A4. I've included a welcome message to explain the new queues and some great prompts for T7 to leverage the interaction and talk about our new credit card offers and investment products. Let me know what you think!",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 73292,
+            "reply_to": "M21",
+            "text": "Thanks for the quick turnaround. Reading through the explanation script for T4, it feels a bit long. Customers in a hurry might get impatient. Could we shorten it to just two sentences? Also, the cross-sell prompts for credit cards and investments might violate our 'under 3 minutes' rule for the quick queue. We risk slowing things down again.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thought_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 455770,
+            "reply_to": "M22",
+            "text": "I agree. The primary goal is speed and clarity. @268564, please revise the T4 script to be as concise as possible. Let's aim for something like: 'Welcome! To serve you faster, we now have separate lines for quick transactions and detailed service. If you're making a simple deposit or withdrawal, please join the Express line on the right.'",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 268564,
+            "reply_to": "M23",
+            "text": "Ok, I can do that. New version: 'Hi! To speed things up, we have an Express line for simple transactions. For deposits and withdrawals, head to the right.' Is that better?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 455770,
+            "reply_to": "M24",
+            "text": "Much better. Clear and direct. Let's approve that version for the customer-facing explanation script.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 455770,
+            "reply_to": "M22",
+            "text": "Now for the cross-sell prompts (T7). We can't risk extending queue times. The prompts must be informational and very brief. Suggesting a credit card application is too complex. What about something related to digital services?",
+            "mentions": [],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 73292,
+            "reply_to": "M26",
+            "text": "Exactly. A good prompt would be something like, 'Just so you know, you can also deposit checks using our mobile app.' It's helpful, relevant, and might reduce future visits for the same transaction. It's a win-win.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 268564,
+            "reply_to": "M27",
+            "text": "Okay, so no product sales, just channel awareness? I can create a few prompts like that. 'Did you know you can pay bills online?' or 'You can check your balance 24/7 with our app.'",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 455770,
+            "reply_to": "M28",
+            "text": "Perfect. Let's agree on those two prompts: mobile check deposit and online bill pay. They are the only cross-sell prompts allowed during quick transactions for this pilot. I'll add this to A4.",
+            "mentions": [
+              268564
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 268564,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 268564,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Set up call centre triage, callbacks, and staffing adjustments.",
+        "messages": [
+          {
+            "msg_id": "M30",
+            "speaker_id": 167703,
+            "reply_to": null,
+            "text": "Hi, I've put together the draft for the call centre playbook A3. It has a list of the issues we can handle from branch referrals. Also for T9, I think we will need to change the schedule to have more people in the afternoon for the callbacks.",
+            "mentions": [
+              455770
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 455770,
+            "reply_to": "M30",
+            "text": "Thanks for drafting this. Looking at A3, the list of issues is a good start, but we need to be more specific on the SLA for callbacks. Can we commit to a 4-hour callback window for all referrals? We need to set clear customer expectations.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 167703,
+            "reply_to": "M31",
+            "text": "4 hours? I'm not sure if we can promise that. What if it's really busy?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 73292,
+            "reply_to": "M32",
+            "text": "From the branch side, a specific timeframe is really important. If we tell a customer they'll get a call, they need to know when. Maybe we can say 'within 4 business hours' to give some flexibility?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 455770,
+            "reply_to": "M33",
+            "text": "That's a good compromise. Let's set the SLA to 'within 4 business hours'. @167703, please update the playbook A3 with this. Also, include a standard script for the start of the call, like 'Hello, I'm calling from the bank regarding the query you raised at our Main Street branch earlier today.'",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 167703,
+            "reply_to": "M34",
+            "text": "Ok, I can add that. So the playbook is approved with those changes?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 455770,
+            "reply_to": "M35",
+            "text": "Yes, with those changes, let's consider the call centre triage and callback playbook approved for the pilot.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 455770,
+            "reply_to": "M30",
+            "text": "Regarding the staffing for T9, you mentioned needing more people in the afternoon. Can you provide a quick estimate of how many extra calls you expect per day based on the branch traffic data we have?",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 167703,
+            "reply_to": "M37",
+            "text": "I'm not sure how to calculate that. I just know afternoons are busier. Maybe we can move one person from the morning shift to the afternoon shift?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 455770,
+            "reply_to": "M38",
+            "text": "Okay, let's start with that. It's a low-cost change and we can monitor the workload closely. We'll confirm the plan to adjust the schedule by shifting one agent from the morning to afternoon shift to support pilot callbacks. We can revisit if the volume is higher than expected. Please get that approved by your supervisor.",
+            "mentions": [
+              167703
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 167703,
+            "reply_to": "M39",
+            "text": "Will do. I'll talk to them today.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 167703,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 167703,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Monitor pilot progress, review metrics, and agree on final recommendations.",
+        "messages": [
+          {
+            "msg_id": "M41",
+            "speaker_id": 455770,
+            "reply_to": null,
+            "text": "Team, we've completed the first week of the pilot. I've compiled the initial data into the performance dashboard template A6 and summarized the staff feedback from T8. Please take a look. Key takeaway: overall wait times are down by 15%, but we're seeing a bottleneck in the 'complex service' queue.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 73292,
+            "reply_to": "M41",
+            "text": "I've noticed that too. The triage rule we set in D3 is sending some relatively quick tasks to the complex queue. For example, 'account balance printout with signature' is technically complex because it needs a signature, but it only takes a minute. It's backing up people who need to discuss loans or open accounts.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 252240,
+            "reply_to": "M42",
+            "text": "Yes, I had a few of those. The customers were not happy about waiting in the 'long' line for something so fast.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 455770,
+            "reply_to": "M42",
+            "text": "That's excellent, specific feedback. It sounds like we need to refine our triage rule. What if we amend D3 to be: 'Quick transactions are <3 minutes AND either require no signature OR only require a standard transaction signature (not new account paperwork)'?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 73292,
+            "reply_to": "M44",
+            "text": "That's a much better rule. It's still clear and would solve the bottleneck we're seeing. I support that change.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 455770,
+            "reply_to": "M45",
+            "text": "Great. Let's make that adjustment. Decision: We are officially revising the triage rules as discussed to better classify quick signature-based tasks. I'll update the process guide.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 167703,
+            "reply_to": "M41",
+            "text": "The number of callbacks seems about right. The new schedule is working for us.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 268564,
+            "reply_to": "M41",
+            "text": "Are we getting any feedback on the app promotion scripts? It would be good to know if people are using it more.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 455770,
+            "reply_to": "M48",
+            "text": "That's out of scope for this pilot's measurement, but we can pass the feedback to the digital team. Let's stay focused on the queue metrics. Apart from the triage rule, is the pilot scope across the three branches still feeling right? Any outliers?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 73292,
+            "reply_to": "M49",
+            "text": "The scope seems fine. All three branches are reporting similar issues and successes. The problem was the process, not the location.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 455770,
+            "reply_to": "M50",
+            "text": "Excellent. Then we'll reconfirm the pilot scope is correct and continue as is. I'll start compiling these findings for the final pilot report A8 as part of T12. Let's keep monitoring with the new rule in place.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "T12"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D1"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 455770,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "is_valid": false,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Threads TH1 (13 messages), TH2 (15 messages), and TH3 (15 messages) have fewer messages than the expected minimum of 16 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T12 is mandatory for TH5 according to the blueprint, but it is missing from the artifact_refs in that thread."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants lack distinct voices. The dialogue is highly structured and robotic, with one sales assistant (246501) acting as a formal project manager, repeatedly summarizing decisions (e.g., 'D1 confirmed', 'D2 confirmed') in an unnatural way for a Slack chat among peers."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 2,
+    "voice_diversity_1_5": 2
+  }
+}

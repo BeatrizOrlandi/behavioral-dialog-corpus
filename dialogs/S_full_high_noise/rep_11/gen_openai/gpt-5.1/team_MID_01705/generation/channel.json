@@ -1,0 +1,1647 @@
+{
+  "channel": {
+    "channel_id": "proj-warehouse-move-metal-line",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, roles and overall move schedule before work starts.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 542601,
+            "reply_to": null,
+            "text": "Kicking off the Warehouse Move and Metal Line Reconfiguration project for project_pack_ref: Warehouse Move & Metal Line Reconfiguration. Scope is full relocation of the warehouse inventory in the affected zones plus the metal drawing line, within the two-weekend window and with no safety incidents. I have drafted the first version of the move schedule and equipment booking in A1, covering T1 and T2 at a high level. Please review the weekend windows, sequence, and equipment sharing assumptions. We also need to confirm who is coordinating on site for each move window before we lock this in.",
+            "mentions": [
+              294961,
+              323962,
+              326777,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 534242,
+            "reply_to": "M1",
+            "text": "Thanks for putting A1 together. I walked through the steps for T1 and T2 and the overall flow makes sense to me. One concern: the first Saturday morning block for unloading the metal line overlaps with the heaviest pallet traffic in the narrow aisle. We might want to swap that with the second block or add a buffer. Also, for on-site coordination, I can take the lead during the first weekend if everyone is ok with that, but we should have a clear backup named for each window.",
+            "mentions": [
+              542601,
+              326777
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 326777,
+            "reply_to": "M1",
+            "text": "From the metal drawing line side, I checked A1 and the proposed shutdown and move slot lines up with what we usually need, but it is tight. For T6 and later T8, I need at least 3 hours for controlled shutdown, securing, and handover to the movers, plus 4 hours on the other side for positioning and checks before test runs. If we keep the current weekend windows, I suggest we lock the metal line move to the first weekend so we have the second weekend as contingency if something slips.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 294961,
+            "reply_to": "M1",
+            "text": "I went through A1 but I am not fully sure I read the layout part right. For T1, are we moving all racks from zone C to the new area in one go, or is that split across both weekends? It looks like some of the heavy drums are mixed in there too. If someone can confirm the order, I will make sure I am on the right pallets when we start.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 542601,
+            "reply_to": "M4",
+            "text": "Good catch. For T1, zone C is split: light and medium pallets go in the first weekend, heavy drums and anything flagged as dangerous goods stay for the second weekend. I will update A1 to make that clearer in the step list and color code the rows. For you that means first weekend you focus on the standard pallets from C, second weekend we handle the drums with the extra controls from the safety checklist.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 323962,
+            "reply_to": "M1",
+            "text": "I checked the time slots in A1 for T2. The forklift sharing with the other team on Sunday afternoon might be tight if we have to re-stack any loads. I do not have a better proposal yet, but maybe we can add a small buffer or confirm with logistics that the second forklift is really free in that window. I can help call them if needed.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 534242,
+            "reply_to": "M6",
+            "text": "Agree on the forklift risk. I will reach out to logistics to double-check the second unit availability and then adjust A1 if needed. For now, assume we keep the same weekend structure but add a 30-minute buffer before the shared slot. That should protect us from minor delays without pushing us outside the weekend window.",
+            "mentions": [
+              323962
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 542601,
+            "reply_to": "M2",
+            "text": "On the aisle congestion: I like the idea of swapping the heavy metal line unloading block with a lighter pallet block. That keeps the critical move but reduces traffic in the tight area. I will re-sequence those two blocks in A1 and flag it as version 2. No change to the overall two-weekend structure, just the order inside the first Saturday.",
+            "mentions": [
+              534242,
+              326777
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 326777,
+            "reply_to": "M8",
+            "text": "If we swap those blocks, I still have enough time for the metal line shutdown and securing for T6, as long as the shutdown start time in A1 stays before 10:00 on Saturday. That gives me the 3 hours I mentioned and keeps us within the 24-hour restart target for the metal line. Please keep that start time fixed when you update the schedule.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 534242,
+            "reply_to": "M3",
+            "text": "Agree that we should plan the metal line move for the first weekend. That way, if anything in T6 or T8 takes longer, we still have the second weekend to adjust without impacting production. I will reflect that in A1 and highlight the metal line tasks so everyone sees that they are locked to weekend one.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "100",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 294961,
+            "reply_to": "M5",
+            "text": "Got it on zone C being split across weekends. Once A1 is updated, I will check the list again so I do not mix the drums into the first weekend loads. For the on-site coordination, I am ok following the lead from whoever is assigned, just let us know in advance which person is the main contact each day.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 323962,
+            "reply_to": "M2",
+            "text": "If 534242 is taking the lead for the first weekend, I can support with checking that we follow the steps in A1 on the floor, especially for the pallet sequence. I will keep my phone on the whole shift so the team can reach me if something in T2 needs to be adjusted on the fly.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "handshake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 542601,
+            "reply_to": "M2",
+            "text": "On coordination: proposal is that 534242 leads on-site for both days of the first weekend, and I take the lead for the second weekend, with 323962 as support both weekends. 294961 and the rest of the crew follow the plan in A1 and check in with the lead for any deviations. If no one objects, we can treat that as our coordination setup.",
+            "mentions": [
+              534242,
+              323962,
+              294961
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 534242,
+            "reply_to": "M13",
+            "text": "I am fine taking the on-site lead for the first weekend as you described. For clarity: I will handle the quick stand-up at the start of each shift, keep an eye on progress against A1, and escalate any major changes to production or logistics. 542601 will do the same for the second weekend. That should give everyone a clear point of contact.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 326777,
+            "reply_to": "M10",
+            "text": "With the metal line locked to the first weekend in A1, I will align my detailed steps for T6 and T8 to that window. I will also prepare a short note for production so they know exactly when the line will be down and when we expect to be ready for test runs.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 542601,
+            "reply_to": "M1",
+            "text": "I have now updated A1 to version 2: swapped the heavy unloading block to reduce aisle congestion, fixed the metal line shutdown start time before 10:00, and clearly marked that all metal line work (T6 and T8) is in the first weekend. The two-weekend structure and main windows remain the same. Unless there are strong objections today, I suggest we treat this schedule as approved so we can move on to the detailed packing, safety, and inventory work.",
+            "mentions": [
+              294961,
+              323962,
+              326777,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 534242,
+            "reply_to": "M16",
+            "text": "I reviewed A1 version 2 and it reflects all the changes we discussed. From my side, I am ok to go ahead with this as the baseline schedule for T1 and T2. Let us keep any further changes as exceptions and log them in the incident log later if they impact timing.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 323962,
+            "reply_to": "M13",
+            "text": "No objections from me on the coordination setup. I will support both weekends and keep an eye on the steps in A1 so we stay aligned with the plan. If anything looks off during the move, I will flag it to the on-site lead right away.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 294961,
+            "reply_to": "M13",
+            "text": "I am ok with that setup too. Just share the final A1 link and I will follow the instructions from the on-site lead each day.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 534242,
+              "when": "today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 542601,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and agree on packing, labeling and inventory procedures.",
+        "messages": [
+          {
+            "msg_id": "M20",
+            "speaker_id": 534242,
+            "reply_to": null,
+            "text": "While working through the layout for T1 and the move steps in T2, a question came up on how we label mixed pallets and machine parts for the new layout. For example, some pallets will have both standard stock and small metal parts from the metal line. I have drafted a first version of the packing and labeling standards in A2 and linked it to T4, but I want to confirm the label format and color coding before we print anything. Also, we need to align this with the pre-move inventory list in A4 for T5 so counts stay consistent.",
+            "mentions": [
+              294961,
+              323962,
+              326777,
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "label",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 542601,
+            "reply_to": "M20",
+            "text": "In A2 I proposed that every pallet label shows three things: destination zone, rack and level; pallet sequence number; and a short content description. For mixed pallets, the idea is to list the main category plus a note like mixed small parts. Color coding in the draft is: yellow for standard inventory, red for dangerous goods, blue for metal line parts. Please check if this is practical on the floor or if we should simplify.",
+            "mentions": [
+              294961,
+              323962
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 323962,
+            "reply_to": "M21",
+            "text": "From a handling point of view, the three colors in A2 seem ok to me. I just want to be sure the text on the labels is big enough to read from a bit of distance. For mixed pallets, I like the idea of writing mixed small parts, but I might forget to add the note if it is busy. Maybe we can have a simple checklist at the packing station so we do not miss any fields.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 294961,
+            "reply_to": "M21",
+            "text": "I am ok with the colors in A2, but I am not sure about the rack and level part. Sometimes I do not know the exact rack when we are still packing. For T4, can we allow writing just the destination zone first and then add the rack and level later when we know it, or would that break the link with the inventory list in A4?",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 534242,
+            "reply_to": "M23",
+            "text": "Good point. To keep A4 consistent, we at least need the destination zone on every label at packing time. Rack and level can be added later during put-away as long as we update A4 at the same time. I will adjust A2 so rack and level are optional at packing and mandatory at final placement. That should make T4 easier to follow without losing traceability.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 326777,
+            "reply_to": "M20",
+            "text": "For the metal line parts, I suggest we always use the blue labels from A2 and add the machine ID in the content description. That way, when we reinstall for T8, it is easy to see which crate belongs to which section of the line. For mixed pallets that include metal parts, maybe we should avoid mixing them if possible, but if we have to, we should still use blue labels so they do not get lost among standard stock.",
+            "mentions": [
+              534242,
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 542601,
+            "reply_to": "M25",
+            "text": "I like the idea of always using blue labels for any pallet that contains metal line parts. To keep it simple, we can say: if there is at least one metal line part on the pallet, use a blue label and write mixed plus the machine ID. That way, during T8 we can quickly pull all blue pallets to the metal line area.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 323962,
+            "reply_to": "M24",
+            "text": "The change you propose for A2 sounds good to me. At packing, I can always write the destination zone and pallet sequence number. Then, during put-away, we can add rack and level and update A4. That should make T5 easier because we do not have to guess the final rack while we are still loading the truck.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 294961,
+            "reply_to": "M24",
+            "text": "Thanks for clarifying. With that change in A2, I feel more comfortable filling out the labels. I will focus on getting the zone and sequence right during packing and then check with the lead when we add rack and level so A4 stays correct.",
+            "mentions": [
+              534242,
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 534242,
+            "reply_to": "M20",
+            "text": "On the inventory side, we need to agree on the cut-off time for the pre-move stock count in A4 for T5. My suggestion is that we freeze movements in the affected zones at 16:00 on the Friday before each move weekend. After that, we complete the count and update A4 so the baseline is fixed. Any urgent picks after that would need to be logged manually so we can adjust the list.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 542601,
+            "reply_to": "M29",
+            "text": "Freezing movements at 16:00 on the Friday before each move weekend works for me. It gives us a few hours to complete the count and clean up A4 before the move starts. We just need to align this with the warehouse supervisor so they are ok with that freeze. If there are no objections here, we can treat 16:00 as our internal target and then get formal confirmation.",
+            "mentions": [
+              294961,
+              323962
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 323962,
+            "reply_to": "M29",
+            "text": "I am ok with the 16:00 cut-off. It will help us avoid last-minute surprises when we start loading. Just let us know which zones are frozen each Friday so we do not move anything by mistake while we are preparing for T5.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 294961,
+            "reply_to": "M29",
+            "text": "No issue from my side with the 16:00 freeze. Once you confirm which racks are included, I will avoid touching them and focus on other tasks until the count for A4 is done.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 534242,
+            "reply_to": "M21",
+            "text": "To close on the label format and color coding in A2: based on the feedback, I will lock in the three colors (yellow standard, red dangerous goods, blue any pallet with metal line parts), keep the three fields (destination zone mandatory at packing, rack and level added at put-away, plus content description), and add a simple checklist at the packing station so we do not miss any fields. Unless someone disagrees today, we will treat this as the standard for T4 and use it for printing labels.",
+            "mentions": [
+              542601,
+              326777
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 542601,
+            "reply_to": "M33",
+            "text": "I am aligned with that label standard. It is clear enough for the team and keeps A4 traceable. Let us go ahead and print a first batch of labels and the packing checklist so we can start using them during the first pre-move packing sessions.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 534242,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 542601,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Clarify safety rules and hazard controls for heavy and dangerous goods.",
+        "messages": [
+          {
+            "msg_id": "M35",
+            "speaker_id": 294961,
+            "reply_to": null,
+            "text": "I have a concern about one of the batches we are moving. There is a row of dangerous goods drums in the narrow aisle near zone C, and with the current plan in A1 we will be moving other heavy pallets through there at the same time. I know we are working on the safety checklist in A3 for T3, but I am not sure how many spotters we need or if we should block that aisle completely when we move those drums. Can we clarify the rules before the first weekend?",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 542601,
+            "reply_to": "M35",
+            "text": "Thanks for raising this. In the draft A3 for T3, I listed extra controls for dangerous goods, but I did not yet specify which loads need additional spotters or restricted zones. For that narrow aisle, my first thought is to block it for any other traffic while we move the drums and assign at least one spotter at each end. Let us hear from the rest of the team and then we can finalize A3.",
+            "mentions": [
+              294961,
+              534242
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 534242,
+            "reply_to": "M35",
+            "text": "I agree that the aisle with the drums is a higher risk area. Based on the hazards we know, I would propose we treat any pallet with dangerous goods (red labels from A2) as requiring two spotters when moving in tight spaces: one at the front and one at the back. For that specific aisle, we should also set up temporary barriers and signs so no one walks through while the forklift is handling those loads.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 323962,
+            "reply_to": "M36",
+            "text": "For me it helps if A3 clearly says when we need one spotter and when we need two. Sometimes I am not sure if a load is considered critical or not. Maybe we can list examples in A3, like drums in narrow aisles always need two spotters, while standard pallets in wide aisles need one or none depending on visibility.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 326777,
+            "reply_to": "M35",
+            "text": "From the metal line side, we also have some heavy machine parts that are awkward to handle. They are not dangerous goods, but they are high and can block the driver view. In A3, maybe we should include a rule that any tall or unstable load, even if not dangerous goods, needs at least one spotter and reduced speed. For the metal line crates in T7, I will make sure we plan the route to avoid the narrowest aisles where possible.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 542601,
+            "reply_to": "M37",
+            "text": "Summarizing what we have so far for A3: 1) Any pallet with red labels (dangerous goods) in tight areas requires two spotters and a restricted access zone while moving. 2) Tall or unstable loads, even if not dangerous goods, require at least one spotter and reduced speed. 3) Standard pallets in wide aisles follow normal rules, with spotters as needed based on visibility. I will add these rules to A3 and mark the drums aisle as a restricted zone during their move in the schedule.",
+            "mentions": [
+              294961,
+              323962,
+              534242
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A6",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 294961,
+            "reply_to": "M40",
+            "text": "That helps a lot. With those rules in A3, I will know when to ask for a second spotter. For the drums aisle, I will wait until the barriers are in place and the spotters are ready before I start moving any of the red-labeled pallets.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 323962,
+            "reply_to": "M40",
+            "text": "Once A3 is updated, can we do a short safety reminder post before each move window, just listing the key points for dangerous goods and tall loads? That would help me remember the rules when the shift gets busy.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speaking_head_in_silhouette",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 534242,
+            "reply_to": "M42",
+            "text": "Yes, we can do that. As on-site lead for the first weekend, I will post a short reminder before each shift, summarizing the key checks from A3 and any specific restricted zones for that day. If we see any near misses or issues, we will log them in A6 so we can adjust quickly.",
+            "mentions": [
+              323962
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 326777,
+            "reply_to": "M39",
+            "text": "For the metal line crates, I will also add a note in the T6 and T7 instructions that we should avoid stacking them too high and keep the center of gravity low. That should reduce the chance of tipping when we move them through any uneven floor sections.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 542601,
+            "reply_to": "M35",
+            "text": "I have now updated A3 with the spotter rules, restricted zones for the drums aisle, and the guidance on tall loads. Before we call it final, I will send it to the health and safety officer for a quick review, since they need to sign off on the checklist. Assuming they are ok with it, we will use this version for the move.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "page_facing_up",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 534242,
+            "reply_to": "M45",
+            "text": "Once the health and safety officer confirms A3, we should also clearly list which specific loads require the extra controls. Proposal: 1) All red-labeled pallets in narrow aisles get two spotters and restricted access; 2) Any load above a certain height or with poor visibility gets at least one spotter; 3) Metal line crates that are tall or heavy follow the same rule. If everyone agrees, we can treat these as the loads that always need extra attention.",
+            "mentions": [
+              294961,
+              323962,
+              326777
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 323962,
+            "reply_to": "M46",
+            "text": "I am ok with that list. It is clear enough for me to know when to ask for extra spotters or to block an area. I will also help remind others on the floor when we see those types of loads.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 294961,
+            "reply_to": "M46",
+            "text": "Works for me too. With A3 updated and the examples you gave, I feel more confident about handling the drums and other tricky loads without missing any steps.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A3",
+              "T7"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 542601,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 534242,
+              "when": "first move weekend"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate metal drawing line shutdown, relocation and test runs.",
+        "messages": [
+          {
+            "msg_id": "M49",
+            "speaker_id": 326777,
+            "reply_to": null,
+            "text": "Sharing the draft shutdown and startup steps for the metal drawing line, based on A5 and aligned with the schedule in A1. For T6, the sequence is: 1) Stop production and run out current material; 2) Save current controller settings and back them up; 3) Power down and lock out main feeds; 4) Secure moving parts and label all connections; 5) Hand over to movers for loading. For T8, after relocation we will: 1) Position machines according to the new layout; 2) Reconnect power and services; 3) Restore controller settings; 4) Run a dry test; 5) Run a short production test and check quality and cycle time. Please review and confirm the time window and any extra checks you want to see before we declare the line operational.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "gear",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 542601,
+            "reply_to": "M49",
+            "text": "Thanks for laying this out. In A1 we currently have the metal line shutdown starting at 09:30 on the first Saturday, with a 3-hour block for T6 and a 4-hour block for positioning and reconnection before T8. Does that give you enough buffer for unexpected issues, or should we shift the shutdown earlier? We need to stay within the 24-hour restart target, but we also do not want to rush the checks.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 534242,
+            "reply_to": "M49",
+            "text": "From the move side, the 09:30 shutdown in A1 works with the rest of the schedule, but if we can start a bit earlier without impacting production, that would give us more room for loading and positioning. Maybe we can target 09:00 for the actual shutdown steps in T6, with production stopping slightly before that.",
+            "mentions": [
+              326777,
+              542601
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 326777,
+            "reply_to": "M50",
+            "text": "If we can start the controlled shutdown at 09:00 instead of 09:30, that would be better. I need time to save and verify the controller settings and to label all connections properly. With a 09:00 start, I am more confident we can complete T6 without cutting corners and still have enough time for T8 and the test runs before the 24-hour mark.",
+            "mentions": [
+              542601,
+              534242
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 323962,
+            "reply_to": "M49",
+            "text": "For the loading part of T6, do you need anything special from us besides following the usual lifting rules and the safety checklist? I saw in A5 that some parts are more sensitive, but I am not sure which ones we should treat as critical when we strap them down.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 326777,
+            "reply_to": "M53",
+            "text": "Good question. The controller cabinet and the main drive units are the most sensitive. In A5 I marked them as critical components. For T6, I will tag those parts with blue labels and a note saying handle with extra care. When you see those, please use additional padding and avoid stacking anything on top. I will also be present during loading to guide the sequence.",
+            "mentions": [
+              323962
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 294961,
+            "reply_to": "M49",
+            "text": "On the test runs in T8, what exactly are we checking before we say the line is good to go? I know we have to run a short production test, but I do not know what counts as acceptable quality or cycle time. It would help if we had a simple pass or fail rule written down.",
+            "mentions": [
+              326777,
+              542601
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 326777,
+            "reply_to": "M55",
+            "text": "For the test run criteria, I propose we use the current baseline from A5: 1) Dimensions and surface quality within normal tolerance on at least the first 20 pieces; 2) Cycle time within plus or minus 5 percent of the pre-move average; 3) No abnormal alarms or vibrations during the run. If we meet all three, we can declare the line operational. If not, we pause and troubleshoot before handing back to production.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 542601,
+            "reply_to": "M52",
+            "text": "Let us then adjust A1 to set the official shutdown start at 09:00 on the first Saturday. I will confirm with the production manager that they can stop feeding new material a bit earlier so you can start the T6 steps on time. This should still keep us well within the 24-hour restart target while giving you more room for careful checks.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 534242,
+            "reply_to": "M57",
+            "text": "Once A1 is updated with the 09:00 shutdown, I will adjust the move sequence around the metal line so we do not overload that area while T6 is in progress. We will keep the heavy pallet traffic away from the line until the critical components are secured and ready for loading.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 542601,
+            "reply_to": "M56",
+            "text": "I am aligned with the three test run criteria you proposed. They are clear and measurable, and they match what production usually expects. I will add them to A5 under T8 so everyone knows what we are aiming for when we restart the line.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 323962,
+            "reply_to": "M56",
+            "text": "Those criteria make sense to me. If we see any alarms or strange noises during the test run, I will make sure we log them and stop instead of pushing through just to finish.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 294961,
+            "reply_to": "M56",
+            "text": "Thanks for spelling that out. With the criteria in A5, it is clearer when we can say the line is ready. I will stay available during the test run in case you need help moving any extra material or adjusting pallets around the area.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 326777,
+              "when": "first move weekend"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 326777,
+              "when": "after relocation"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review move results, inventory accuracy and lessons learned.",
+        "messages": [
+          {
+            "msg_id": "M62",
+            "speaker_id": 542601,
+            "reply_to": null,
+            "text": "Now that both move weekends are complete, let us close out the Warehouse Move and Metal Line Reconfiguration project. T7 and T8 are done, and the updated inventory verification for the moved zones is in A4. A6 has the incidents and near misses logged. I would like everyone to confirm that their areas are complete, highlight any inventory differences that still worry you, and share at least one lesson learned for T10 so we can improve next time.",
+            "mentions": [
+              294961,
+              323962,
+              326777,
+              534242
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T7",
+              "T8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 534242,
+            "reply_to": "M62",
+            "text": "From the warehouse side, T9 is mostly complete. We did random checks in each new zone and compared them with A4. We found a few small discrepancies: three pallets with swapped rack levels and one missing box of small parts that we later found in the staging area. All of these have been corrected in A4. I do not see any open gaps that would block us from closing the move.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 323962,
+            "reply_to": "M62",
+            "text": "I helped with the checks for T9 in zones B and C. The counts matched A4 after we fixed the swapped rack levels that 534242 mentioned. I did not see any damaged goods, and the labels from A2 were still readable after the move.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 294961,
+            "reply_to": "M62",
+            "text": "On my side, I checked the drums aisle and the nearby racks. All the dangerous goods pallets we moved with the extra spotters are in the right zones and match A4. One lesson learned for T10: the barriers and clear signs around the restricted aisle helped a lot. Next time, I would set them up a bit earlier before the shift starts so we do not have to stop and adjust while forklifts are already moving.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 326777,
+            "reply_to": "M62",
+            "text": "From the metal line perspective, T8 is complete. We positioned the machines according to the new layout, reconnected all services, and ran the test according to A5. The first 20 pieces were within normal tolerance, and the cycle time was within 3 percent of the pre-move average. No abnormal alarms or vibrations were observed. I have noted this in A6 as a successful restart with no quality issues.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 542601,
+            "reply_to": "M63",
+            "text": "Good to hear that the discrepancies you found in A4 were minor and already corrected. From a risk point of view, I am comfortable with that level of difference, as long as we do not have any missing or damaged items left unresolved. Can anyone confirm if there are still open items in A6 that need follow-up, or are all incidents closed with actions taken?",
+            "mentions": [
+              534242,
+              326777
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 534242,
+            "reply_to": "M67",
+            "text": "I reviewed A6 this morning. We had two near misses logged: one forklift entering a restricted zone before the barrier was fully in place, and one pallet that was not strapped correctly on the first attempt. Both were corrected on the spot, and we added reminders in the pre-shift briefings. There are no open actions left in A6 from my side.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 323962,
+            "reply_to": "M67",
+            "text": "I was involved in the pallet strapping near miss in A6. We fixed it right away and rechecked the other pallets in that truck. For T10, my lesson learned is that having a quick visual checklist at the loading area would help us catch loose straps before the forklift leaves the dock.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 326777,
+            "reply_to": "M67",
+            "text": "On the metal line side, there were no incidents or near misses recorded in A6 during T6 and T8. The only note I added was a reminder to allow extra time for labeling cables before disconnection, which we already applied during the move.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T6",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 542601,
+            "reply_to": "M68",
+            "text": "Given that all discrepancies in A4 have been resolved and A6 has no open incidents, I suggest we consider the remaining inventory differences acceptable and close T9. If anyone disagrees or knows of an unresolved issue, please speak up now.",
+            "mentions": [
+              294961,
+              323962,
+              326777,
+              534242
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 294961,
+            "reply_to": "M71",
+            "text": "No open issues from my side. The counts I checked match A4 now, and I did not see any damaged drums or pallets left aside.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 323962,
+            "reply_to": "M71",
+            "text": "Same here, nothing open. I am ok with closing T9 based on the current A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 326777,
+            "reply_to": "M62",
+            "text": "For T10, one improvement idea from the metal line side is to prepare a standard kit for future moves: pre-printed cable tags, spare fasteners, and a small tool set dedicated to the line. That would reduce the time we spent looking for tools and labels during T6 and T8.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6",
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 534242,
+            "reply_to": "M62",
+            "text": "Collecting the main lessons for T10 so far: 1) Set up barriers and restricted zones earlier before the shift; 2) Add a quick visual checklist at the loading area for strapping; 3) Prepare a standard kit for the metal line with tags and tools; 4) Keep the label colors and format from A2, but print a few extra spares for last-minute pallets. I propose we treat these as the top improvement actions to carry into the next relocation project.",
+            "mentions": [
+              294961,
+              323962,
+              326777
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "A4",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 542601,
+            "reply_to": "M75",
+            "text": "I agree with that list of improvement actions. I will document them in T10 and share the summary with the warehouse supervisor and production manager so we can reuse these practices in future moves.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [
+              "D9",
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 534242,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 542601,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

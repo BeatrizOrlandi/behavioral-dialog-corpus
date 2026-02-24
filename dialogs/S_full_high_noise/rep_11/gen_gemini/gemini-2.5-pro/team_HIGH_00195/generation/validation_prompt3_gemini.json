@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Messages M67 and M71 incorrectly include decisions 'D7' and 'D8' in their artifact_refs array. The artifact_refs array must only contain artifact (A*) or task (T*) IDs, whereas decisions should be placed in decision_refs."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The text contains the forbidden word 'label'/'labels' (e.g., in M27, M28, M29, M30, M76), which is explicitly prohibited by the prompt instructions regarding explicit mentions of 'label', even if it is contextually relevant to the pharmacy domain."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 15 messages, which is slightly below the target_messages_range of [17, 25] specified in the blueprint, although it is within the absolute min/max limits."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

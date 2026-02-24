@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads are significantly below the minimum required message count of 15. The counts are: TH1 has 9, TH2 has 11, TH3 has 9, TH4 has 12, and TH5 has 13 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M21 contains the forbidden term 'score' in the phrase 'client satisfaction score'."
+    },
+    {
+      "severity": "LOW",
+      "code": "INCONSISTENCY",
+      "detail": "Several threads reference artifacts not listed in their respective `artifacts_to_reference` plan in the blueprint. For example, TH1 references A2/T2, and TH4 references A3/A2."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 1,
+    "voice_diversity_1_5": 5
+  }
+}

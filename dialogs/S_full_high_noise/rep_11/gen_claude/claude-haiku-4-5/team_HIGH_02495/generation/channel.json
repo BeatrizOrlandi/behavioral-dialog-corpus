@@ -1,0 +1,1593 @@
+{
+  "channel": {
+    "channel_id": "C-proj-payroll-docs-standardisation",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state mapping and target payroll workflow design.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 107378,
+            "reply_to": null,
+            "text": "Hi team, let's kick off the payroll standardisation project. I'd like everyone to walk through how they currently handle payroll processing and document intake. This will help us map the current state before we design the new workflow. Can each of you share your main steps, handoff points, and any bottlenecks you see? We'll use this to build A1 (End-to-End Payroll Workflow Description) and T1 (current payroll mapping).",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 319449,
+            "reply_to": "M1",
+            "text": "Good timing. From the office side, we receive absence forms, overtime sheets, and HR correspondence daily. Right now I route them manually to whoever I think needs them—sometimes payroll, sometimes HR. There's no standard list, so things get lost or delayed. I've also noticed we don't have a consistent naming convention for archived documents, which makes retrieval slow. Happy to help design T4 (routing rules) and T7 (archiving structure) if that helps.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 107378,
+            "reply_to": "M2",
+            "text": "That's exactly what we need to fix. On payroll side, I collect those forms, validate them against timesheets, and feed them into the wage calculation. The issue is I often get incomplete data or forms arrive late, which pushes the payroll close. I'd say the biggest bottleneck is the lack of a clear checklist for what needs to happen before we can confirm payroll. We should create T3 (monthly payroll close checklist) to lock down the sequence and deadlines.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 408577,
+            "reply_to": "M3",
+            "text": "I agree on the checklist. From my end, I also handle some of the data entry and reconciliation. One thing I notice is that we don't have a shared tracking sheet, so I can't always see if someone else is working on the same item. Would help to have T5 (shared tracking sheet) set up early so we can all see status in real time.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 330756,
+            "reply_to": "M4",
+            "text": "Yes, the tracking sheet would help. I sometimes don't know if a form has already been processed or if it's still waiting. Also, I'm not always sure which documents are confidential and who should see them. We need clear rules on that.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 421608,
+            "reply_to": "M5",
+            "text": "I'll help with the confidentiality side. Payroll docs are sensitive, so we should have a clear policy. I think we need to document who can access what and how to store things securely. That's part of T6 (confidentiality guideline).",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 107378,
+            "reply_to": "M6",
+            "text": "Good. So to summarize what I'm hearing: we need a clear sequence of payroll steps (D1), defined roles for each step (D2), and supporting templates and tracking. Let me draft the workflow sequence based on what you've all shared. I'll map out the current state first, then we can design the target state. Should have something for review by EOD tomorrow.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 319449,
+            "reply_to": "M7",
+            "text": "Sounds good. While you're drafting A1, I can start on T2 (absence and overtime template). I'll use the existing office suite and make sure it captures all the fields payroll needs. Should I include approval sign-off on the template itself, or keep that separate?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 107378,
+            "reply_to": "M8",
+            "text": "Include the approval field on the template. That way the form is self-contained and we can track who signed off. Also, please add a date field so we know when it was submitted. That'll help with the checklist timing.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 408577,
+            "reply_to": "M9",
+            "text": "One more thing—should the template have a field for the employee ID or name? That would help me match it to the payroll system when I'm entering data.",
+            "mentions": [
+              319449,
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 319449,
+            "reply_to": "M10",
+            "text": "Yes, definitely. I'll add employee ID, name, and department. That way there's no ambiguity when it reaches payroll.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 107378,
+            "reply_to": "M11",
+            "text": "Perfect. Let's reconvene tomorrow afternoon to review the draft workflow (A1) and the template (T2). Once we agree on the sequence and roles, we can lock in D1 and D2. Then we'll move to the routing and archiving rules in the next thread.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 421608,
+            "reply_to": "M12",
+            "text": "I'll be ready. Looking forward to seeing the draft.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 107378,
+            "reply_to": null,
+            "text": "Draft of A1 is ready. Here's the current payroll sequence: (1) Office receives absence/overtime forms by 5th of month, (2) Payroll validates against timesheets, (3) Data entry into system, (4) Tax and deduction calculations, (5) Manager approval, (6) Payment processing, (7) Archiving and reconciliation. For the new workflow, I propose we add a validation checkpoint after step 2 and a final sign-off before step 6. Roles: office clerk owns steps 1–2, payroll clerk owns 3–5, finance manager approves step 5. Does this align with what you all see?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              },
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 319449,
+            "reply_to": "M14",
+            "text": "This looks solid. One question: who handles the reconciliation in step 7? Is that payroll or office? Also, should we add a step for logging any discrepancies we find? That ties into T11 (escalation path for discrepancies).",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 107378,
+            "reply_to": "M15",
+            "text": "Good catch. Reconciliation should be payroll clerk's responsibility, but office clerk supports by pulling archived documents if needed. And yes, we should add a step for logging discrepancies—that becomes part of T3 (the checklist). I'll update A1 to reflect that.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "A1",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 330756,
+            "reply_to": "M16",
+            "text": "I'm still a bit unclear on the validation checkpoint in step 2. What exactly should I be checking? Is it just that all fields are filled, or do I need to verify the numbers too?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 107378,
+            "reply_to": "M17",
+            "text": "Good question. For now, just check that all required fields are filled and the form is signed. Payroll will verify the numbers. We can add more detail to T3 (the checklist) to make this crystal clear.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 408577,
+            "reply_to": "M18",
+            "text": "That makes sense. So the office side is really about intake and basic completeness, and payroll does the detailed validation. I can work with that.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 107378,
+            "reply_to": "M19",
+            "text": "Exactly. Okay, I think we have alignment on D1 (the sequence) and D2 (the roles). Let me finalize A1 with the updated steps and role assignments. I'll also start drafting T3 (the monthly checklist) with specific dates and owners. Should be ready by tomorrow EOD.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 319449,
+            "reply_to": "M20",
+            "text": "Great. I'll have the template (T2) finalized by then too. Once we lock in the workflow, we can move to the routing and archiving rules.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 421608,
+            "reply_to": "M21",
+            "text": "I'll review the draft checklist once it's posted. Want to make sure the tax and compliance steps are clear.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 107378,
+            "reply_to": "M22",
+            "text": "Perfect. That's exactly what we need. Alright, let's confirm: D1 and D2 are locked pending final review of A1 and T3 tomorrow. Everyone good with that?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A1",
+              "T3"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 330756,
+            "reply_to": "M23",
+            "text": "Yes, sounds good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 107378,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 319449,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 107378,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define document routing, archiving structure, and templates.",
+        "messages": [
+          {
+            "msg_id": "M25",
+            "speaker_id": 319449,
+            "reply_to": null,
+            "text": "Now that we have the workflow locked in, let's tackle document routing and archiving. I've drafted some routing rules based on document type and urgency. Here's the outline: (1) Absence forms go to payroll immediately, (2) Overtime sheets go to payroll with manager approval, (3) HR correspondence goes to HR unless it mentions payroll, (4) Invoices go to finance. For archiving, I'm proposing a folder structure by month and document type. Can you all review and give feedback? This feeds into T4 (routing rules), T7 (archiving structure), and A3 (routing guideline).",
+            "mentions": [
+              107378,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 107378,
+            "reply_to": "M25",
+            "text": "This is a good start. One thing I'd add: we need a rule for documents that mention both payroll and HR, like leave requests with tax implications. Should those go to payroll first or HR first? Also, for archiving, can you clarify the naming convention? We need consistency so anyone can find a document quickly.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 319449,
+            "reply_to": "M26",
+            "text": "Good points. For dual-purpose documents, I'd say payroll gets first look since they need to calculate impact. For naming, I'm thinking: [YYYY-MM]_[DocumentType]_[EmployeeID or Description]. So a January absence form for John Doe would be: 2024-01_Absence_JohnDoe. Clear enough?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 408577,
+            "reply_to": "M27",
+            "text": "That naming convention works for me. One question: should we also include a version number if a document gets updated? Like if someone submits a corrected absence form?",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 319449,
+            "reply_to": "M28",
+            "text": "Yes, good idea. We can add _v1, _v2, etc. at the end. And we should keep the original version in the archive for audit purposes. I'll update the naming convention in T7.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 330756,
+            "reply_to": "M29",
+            "text": "What about documents that don't fit neatly into a category? Like general correspondence or memos?",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 319449,
+            "reply_to": "M30",
+            "text": "Good catch. We can have a 'General' category for those. I'll add that to T4 and T7. Also, I should create T9 (quick reference guide for office clerks) so everyone knows exactly where each form type goes and how to name it.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 107378,
+            "reply_to": "M31",
+            "text": "Perfect. T9 should also include expected processing times for each document type. That way office clerks know when to follow up if something hasn't been processed. And it ties into the escalation path we'll define later.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 421608,
+            "reply_to": "M32",
+            "text": "I have a question about the archiving structure. Should we have separate folders for confidential documents, or just rely on access controls? I'm thinking about payroll data that shouldn't be visible to everyone.",
+            "mentions": [
+              107378,
+              319449
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 107378,
+            "reply_to": "M33",
+            "text": "That's a good question, but it ties into T6 (confidentiality guideline) and A5 (access policy). Let's address that in the next thread. For now, let's assume we'll use access controls rather than separate folders, but we'll confirm once we finalize the access rules.",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [
+              "T6",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 319449,
+            "reply_to": "M34",
+            "text": "Agreed. So to summarize the routing rules: (1) Absence forms → Payroll, (2) Overtime sheets → Payroll (with manager approval), (3) HR correspondence → HR (unless payroll-related, then payroll first), (4) Invoices → Finance, (5) General → General folder. And archiving uses [YYYY-MM]_[Type]_[ID]_v[N] naming. Does everyone agree with D3 (approve routing rules)?",
+            "mentions": [
+              107378,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 330756,
+            "reply_to": "M35",
+            "text": "I think so, but I'm still a bit worried about the dual-purpose documents. What if I misclassify something? Should there be a way to flag it for review?",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 319449,
+            "reply_to": "M36",
+            "text": "That's a fair concern. Let's add a note to T9 (quick reference) that says: if you're unsure, route to payroll and add a note explaining why. Payroll can then forward to HR if needed. That way nothing gets lost.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 107378,
+            "reply_to": "M37",
+            "text": "Good solution. Okay, I think we're ready to lock in D3. Let me also confirm: for D4 (select final template versions), we have the absence and overtime template from T2. Are there any other templates we need to standardize?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 408577,
+            "reply_to": "M38",
+            "text": "I think we should also have a standard form for reporting discrepancies or corrections. That ties into the escalation path we'll define later.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 107378,
+            "reply_to": "M39",
+            "text": "Good idea. That can be part of T11 (escalation path). For now, let's finalize the absence and overtime templates as D4. I'll review T2 one more time and confirm it's ready to go.",
+            "mentions": [
+              319449,
+              408577
+            ],
+            "artifact_refs": [
+              "T2",
+              "T11"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 319449,
+            "reply_to": "M40",
+            "text": "The template is ready. I've included all the fields we discussed: employee ID, name, department, dates, hours, approval sign-off, and submission date. It's in the shared folder under 'Templates'.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 107378,
+            "reply_to": "M41",
+            "text": "Perfect. So D3 and D4 are locked: routing rules approved, templates finalized. Now I need to finalize A3 (routing guideline) and T9 (quick reference) by EOD tomorrow. Then we move to confidentiality and escalation in the next thread.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 421608,
+            "reply_to": "M42",
+            "text": "Sounds good. I'll be ready to review the confidentiality side next.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 330756,
+            "reply_to": "M43",
+            "text": "Thanks for walking through this. The routing rules make a lot more sense now.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 319449,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 319449,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 319449,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "A3",
+              "owner_id": 319449,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock in confidentiality, access levels, and escalation paths.",
+        "messages": [
+          {
+            "msg_id": "M45",
+            "speaker_id": 421608,
+            "reply_to": null,
+            "text": "Alright, let's tackle confidentiality and escalation. I've drafted a confidentiality guideline (T6) and an escalation path for discrepancies (T11). Here's the outline for T6: (1) Payroll documents are confidential and restricted to payroll, HR, and finance manager, (2) Storage must be in a secure folder with limited access, (3) Sharing requires explicit approval, (4) Retention follows legal requirements (typically 7 years). For T11, I'm proposing: (1) Minor discrepancies (e.g., missing hours) go to payroll clerk for review, (2) Wage calculation errors go to payroll clerk and finance manager, (3) Compliance issues go to HR and finance manager. Can you review and give feedback?",
+            "mentions": [
+              107378,
+              319449,
+              330756,
+              408577
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 107378,
+            "reply_to": "M45",
+            "text": "This is solid. One thing I'd add to T6: we should specify what 'secure folder' means. Is it just a password-protected folder, or do we need encryption? Also, for T11, what's the response time for each escalation level? We need to set expectations.",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 421608,
+            "reply_to": "M46",
+            "text": "Good points. For 'secure folder', I think password protection is sufficient for now, but we should review with IT to confirm. For response times, I'm thinking: minor discrepancies within 1 business day, wage errors within 4 hours, compliance issues within 2 hours. Does that seem reasonable?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 107378,
+            "reply_to": "M47",
+            "text": "Those timelines work for me. The 4-hour window for wage errors is tight but necessary. For compliance issues, 2 hours is good. Let me also ask: should we log all escalations in the tracking sheet (A2)? That way we have an audit trail.",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 421608,
+            "reply_to": "M48",
+            "text": "Absolutely. Every escalation should be logged with the issue, who reported it, who it was escalated to, and the resolution. That's part of T11 and also feeds into the monthly checklist (T3).",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T11",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 319449,
+            "reply_to": "M49",
+            "text": "I have a question about T6. If someone from another department needs to see a payroll document for a legitimate reason, how do they request access? Should there be a formal approval process?",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 421608,
+            "reply_to": "M50",
+            "text": "Good question. I think we should require a written request to the payroll clerk or HR, with a business justification. The payroll clerk or HR can then grant temporary access or provide a redacted version. I'll add that to T6.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 330756,
+            "reply_to": "M51",
+            "text": "What about when we're archiving old documents? Do we need to do anything special to protect them?",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 421608,
+            "reply_to": "M52",
+            "text": "Yes, archived documents should follow the same access rules as current documents. They should be stored in the same secure folder structure, just organized by year. I'll clarify that in T6.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 107378,
+            "reply_to": "M53",
+            "text": "Okay, I think we're ready to lock in D5 (confidentiality rules). Let me also confirm D6 (escalation path). The three levels are: minor (1 day), wage errors (4 hours), compliance (2 hours). Everyone agree?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 408577,
+            "reply_to": "M54",
+            "text": "I agree, but I want to make sure the escalation path is clear in T11. Like, who exactly do I contact for each level? Names or roles?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 421608,
+            "reply_to": "M55",
+            "text": "Good point. I'll use roles rather than names, since people change. So: minor → payroll clerk, wage errors → payroll clerk + finance manager, compliance → HR + finance manager. I'll add contact info in the guideline.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 319449,
+            "reply_to": "M56",
+            "text": "That's clear. One more thing: should we have a template for reporting discrepancies? Like a standard form that includes all the info needed for escalation?",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 421608,
+            "reply_to": "M57",
+            "text": "Yes, that's a good idea. I'll create a simple discrepancy report form as part of T11. It'll have fields for: issue description, who found it, when, impact, and proposed resolution.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 107378,
+            "reply_to": "M58",
+            "text": "Perfect. So D5 and D6 are locked: confidentiality rules and escalation path finalized. I'll update A5 (access policy) and make sure it aligns with T6. Should be ready by EOD tomorrow. Then we move to the pilot phase.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 421608,
+            "reply_to": "M59",
+            "text": "I'll finalize T6 and T11 by EOD tomorrow as well. Then we can move forward with confidence.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 330756,
+            "reply_to": "M60",
+            "text": "Thanks for walking through this. The escalation path is really helpful.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 421608,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 421608,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "A5",
+              "owner_id": 107378,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Prepare and execute the pilot payroll cycle using the new workflow.",
+        "messages": [
+          {
+            "msg_id": "M62",
+            "speaker_id": 107378,
+            "reply_to": null,
+            "text": "Alright, we've locked in the workflow, routing, and confidentiality rules. Now it's time to pilot the new process. I'm proposing we use the next payroll cycle (starting next week) as our pilot. We'll use the new workflow end-to-end and log any issues in A7 (pilot issue log). We'll also use A2 (tracking sheet) to monitor progress. Before we start, I need everyone to confirm: (1) Are you ready to use the new templates and routing rules? (2) Do you have access to the shared folders? (3) Any last-minute concerns?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 319449,
+            "reply_to": "M62",
+            "text": "I'm ready. I've reviewed all the templates and routing rules. One thing: should we do a dry run first, or just jump in? I'm leaning toward a dry run with a sample dataset to catch any issues before the real cycle.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 107378,
+            "reply_to": "M63",
+            "text": "That's a good idea. Let's do a dry run this week with sample data. That way we can catch any issues before the real payroll cycle. I'll set up a test folder and sample data by EOD today. Can you walk through the process and log any issues?",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 408577,
+            "reply_to": "M64",
+            "text": "I'm ready too. I've got access to the shared folders and I've reviewed the templates. One question: for the tracking sheet (A2), should I update it in real time as I process documents, or at the end of the day?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 107378,
+            "reply_to": "M65",
+            "text": "Good question. For the pilot, let's update it at the end of each day. That way we can see the full flow and identify any bottlenecks. Once we go live, we can adjust the frequency based on what we learn.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 330756,
+            "reply_to": "M66",
+            "text": "I'm ready too. I've got the templates and I understand the routing rules. I'm a bit nervous about the archiving part, but I think I can handle it with the naming convention we agreed on.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 107378,
+            "reply_to": "M67",
+            "text": "Don't worry, we'll walk through it together during the dry run. If you get stuck, just ask. That's what the pilot is for.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 421608,
+            "reply_to": "M68",
+            "text": "I'm ready. I've reviewed the confidentiality rules and escalation path. One thing: should we have a backup plan if something goes wrong during the pilot? Like, do we fall back to the old process?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 107378,
+            "reply_to": "M69",
+            "text": "Good thinking. Yes, we should have a fallback. If something critical breaks, we can revert to the old process for that specific step. But let's try to work through issues first. That's the whole point of the pilot. I'll document the fallback steps in T8 (pilot workflow document).",
+            "mentions": [
+              421608
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 319449,
+            "reply_to": "M70",
+            "text": "Okay, so here's what I'm hearing: (1) Dry run this week with sample data, (2) Real pilot cycle next week, (3) Log all issues in A7, (4) Update A2 daily, (5) Fallback plan documented. Does that cover everything?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 107378,
+            "reply_to": "M71",
+            "text": "Yes, that's it. But I also need to confirm D7 and D8. D7 is: which payroll cycle will be the pilot? I'm proposing the cycle starting next Monday. D8 is: what are the success criteria? I'm thinking: (1) All documents processed on time, (2) No data loss, (3) No more than 3 critical issues, (4) Team agrees the new process is workable. Does that sound right?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 330756,
+            "reply_to": "M72",
+            "text": "I agree with the success criteria. The 3 critical issues threshold seems reasonable.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 408577,
+            "reply_to": "M73",
+            "text": "Yes, I'm good with that. Next Monday works for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 421608,
+            "reply_to": "M74",
+            "text": "I agree. Let's do it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 107378,
+            "reply_to": "M75",
+            "text": "Great. So D7 and D8 are locked: pilot cycle is next Monday, success criteria are (1) on-time processing, (2) no data loss, (3) max 3 critical issues, (4) team agreement. Now let me set up the dry run. I'll create a test folder with sample data by EOD today. Everyone should have access by tomorrow morning. Let's do the dry run tomorrow and Friday, then we'll be ready for the real cycle on Monday.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 319449,
+            "reply_to": "M76",
+            "text": "Perfect. I'll walk through the dry run tomorrow and log any issues. I'll also test the tracking sheet (A2) to make sure it works as expected.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 107378,
+            "reply_to": "M77",
+            "text": "Good. Also, I need to finalize T5 (tracking sheet setup) and T10 (invoice alignment) before the pilot. Let me get those done by EOD tomorrow. Then we'll be all set.",
+            "mentions": [
+              319449
+            ],
+            "artifact_refs": [
+              "T5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 330756,
+            "reply_to": "M78",
+            "text": "What about the training session (T12)? Should we do that before the pilot?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 107378,
+            "reply_to": "M79",
+            "text": "Good point. Yes, let's do a quick training session on Friday afternoon, after the dry run. That way everyone is fresh on the process before Monday. I'll prepare T12 (training outline) by EOD tomorrow.",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 421608,
+            "reply_to": "M80",
+            "text": "Sounds good. I'll be ready for the training.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 107378,
+            "reply_to": "M81",
+            "text": "Alright, let's recap: (1) Dry run tomorrow and Friday, (2) Training session Friday afternoon, (3) Real pilot cycle starts Monday, (4) Log all issues in A7, (5) Update A2 daily, (6) Post-pilot review next Friday. Everyone clear?",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 319449,
+            "reply_to": "M82",
+            "text": "Clear. Let's do this.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 107378,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 107378,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 107378,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 107378,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 319449,
+              "when": "tomorrow and Friday"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

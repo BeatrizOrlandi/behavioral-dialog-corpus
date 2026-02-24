@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "The number of threads is 2, which is outside the expected range of [0, 0]."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "The number of messages in threads is outside the expected range of [10, 30]. Thread TH1 has 7 messages. Thread TH2 has 5 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Decisions (D1, D2, D3, D4) are referenced in messages and declared in outcomes, but they are not defined in the blueprint's threads_plan."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Artifacts (A1, A2, A3, A4, A5) and Tasks (T1, T2, T3, T4) are referenced, but the provided project_pack does not contain any artifacts or backlog tasks, making these references invalid."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

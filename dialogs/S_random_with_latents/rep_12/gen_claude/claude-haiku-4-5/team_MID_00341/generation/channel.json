@@ -1,0 +1,690 @@
+{
+  "channel": {
+    "channel_id": "C_DENTAL_PROD_SETUP",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Initiate project kickoff and align on facility requirements, timeline, and key dependencies for the dental appliance production line setup.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "Team, we're launching the in-house dental appliance production line and need to move fast—30 days to pilot. I've drafted an initial scope covering layout, equipment, process flow, and compliance. We need to lock down facility constraints early and validate equipment specs before we commit budget. Let's start with a site survey and confirm what the space can actually support.",
+            "mentions": [
+              49409,
+              255537,
+              518065,
+              526084
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 255537,
+            "reply_to": "M1",
+            "text": "I can do the site survey. Need to check power capacity, ventilation setup, and floor load limits. Once I see the space, I'll know if we need to adjust equipment placement or if there are any blockers. When can we schedule that?",
+            "mentions": [
+              48820,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 518065,
+            "reply_to": "M2",
+            "text": "I'll coordinate with building management. We need to confirm lease terms don't restrict production use, and I'll pull the existing utility specs. The site survey should happen this week—I can arrange access tomorrow. 255537, send me a checklist of what you need to inspect and I'll make sure we have the right people on-site.",
+            "mentions": [
+              255537,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 49409,
+            "reply_to": "M1",
+            "text": "On the equipment side, I need to validate that whatever we install meets dental lab standards and regulatory requirements. Before we purchase anything, I should review the specs against our compliance checklist. What's the procurement timeline looking like?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 48820,
+            "reply_to": "M4",
+            "text": "Good point. We need to move on equipment selection, but you're right—we can't just buy and hope. 49409, can you pull together a spec validation checklist by EOD tomorrow? That way when we get quotes, we're checking them against actual requirements, not guessing. I'll start reaching out to vendors on our approved list.",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 49409,
+            "reply_to": "M5",
+            "text": "I'll have that ready. I'm thinking we need to cover material compatibility, sterilization capability, precision tolerances, and traceability for the appliances. I'll also flag any regulatory gaps so we don't miss something during inspection.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 526084,
+            "reply_to": "M3",
+            "text": "518065, I'll back you up on the lease review. I want to make sure we're not creating any issues with the landlord or other tenants. Once we have the site survey results, we should also map out the fit-out timeline and any permits we need. That's often where delays creep in.",
+            "mentions": [
+              518065,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 48820,
+            "reply_to": "M7",
+            "text": "Agreed. Let's treat permits and approvals as a critical path item. 526084, can you own the permit tracking and give us a weekly status? I want to catch any delays early. We're also going to need a health and safety sign-off before we go live, so let's build that into the schedule now.",
+            "mentions": [
+              526084
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1: Dental technician to prepare equipment spec validation checklist by EOD tomorrow",
+            "D2: Real estate manager to own permit tracking and provide weekly status updates"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 255537,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 49409,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 518065,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 526084,
+              "when": "ongoing weekly"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review site survey findings and confirm facility constraints; adjust layout and equipment strategy based on technical limitations.",
+        "messages": [
+          {
+            "msg_id": "M9",
+            "speaker_id": 255537,
+            "reply_to": null,
+            "text": "Site survey is done. Power capacity is 63A at 400V—that's tight if we run multiple pieces simultaneously. Ventilation is ducted but not rated for lab-grade air handling. Floor is concrete, 5kN/m² load limit. I've documented everything. The layout we're thinking about won't work as-is because the main equipment cluster would exceed the power budget.",
+            "mentions": [
+              48820,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 48820,
+            "reply_to": "M9",
+            "text": "That's a significant constraint. So we either need to stagger equipment operation, upgrade the power supply, or downsize the equipment set. 255537, what's the cost and timeline for a power upgrade? And can we operate in phases—like, run the main production line and keep finishing equipment on a separate circuit?",
+            "mentions": [
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 255537,
+            "reply_to": "M10",
+            "text": "Power upgrade would need building approval and an electrician—probably 2-3 weeks and 15k+ in cost. Phased operation is possible, but we'd need to sequence the workflow carefully. I'd recommend we talk to the equipment vendors about lower-power alternatives or see if we can rent some items instead of buying.",
+            "mentions": [
+              48820,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 49409,
+            "reply_to": "M11",
+            "text": "Renting could work for the pilot phase, but we need to make sure rental equipment meets the same quality and compliance standards as what we'd buy. I don't want to validate a process on rental gear and then find out the production equipment behaves differently. Can we get spec sheets for both options and compare?",
+            "mentions": [
+              48820,
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 48820,
+            "reply_to": "M12",
+            "text": "Good catch. Let me reach out to vendors and ask for rental + purchase options with full specs. 49409, once you have those, cross-check them against your validation checklist. We need to decide on the equipment strategy by end of week so we can lock in procurement. 255537, can you also sketch out a revised layout that works with the power constraint?",
+            "mentions": [
+              49409,
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 255537,
+            "reply_to": "M13",
+            "text": "I'll revise the layout. One more thing—the ventilation system isn't lab-grade. We might need to add a secondary filter or upgrade the ducting. That's another cost and timeline hit. I'll include that in my revised plan.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 518065,
+            "reply_to": "M14",
+            "text": "Ventilation upgrades need building approval too. I'll check with management on what's feasible and what timeline we're looking at. If it's a major upgrade, we might need to negotiate with the landlord or find a workaround. Let me know the scope and I'll get clarity.",
+            "mentions": [
+              255537,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 48820,
+            "reply_to": "M15",
+            "text": "Okay, so we have three parallel workstreams: equipment specs and procurement, layout revision with power constraints, and ventilation/building approvals. Let's sync again Friday with updated info. If we can't solve the power issue cheaply, we may need to revisit the pilot scope or timeline. I want to flag that risk now.",
+            "mentions": [
+              255537,
+              49409,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3: Obtain rental and purchase equipment options with full specs by end of week",
+            "D4: Risk flagged—power and ventilation constraints may impact pilot scope or timeline; sync Friday with updates"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 48820,
+              "when": "EOD this week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 49409,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 255537,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 518065,
+              "when": "Friday"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define production process workflow, quality control checkpoints, and compliance requirements for pilot batch.",
+        "messages": [
+          {
+            "msg_id": "M17",
+            "speaker_id": 49409,
+            "reply_to": null,
+            "text": "I've started mapping the production workflow for the pilot batch. We need to define material intake, processing steps, quality gates, and final testing. I'm also pulling together the regulatory checklist—dental appliances fall under medical device rules, so we need traceability, documentation, and batch testing. Let me share a draft by tomorrow.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 48820,
+            "reply_to": "M17",
+            "text": "Good. While you're doing that, I want to think about lean principles—how do we minimize waste and rework? We should also define KPIs for the pilot: cost per unit, defect rate, cycle time. Once we have the workflow, we can identify where we need automated checks vs. manual inspection.",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 49409,
+            "reply_to": "M18",
+            "text": "Agreed. I'll include quality gates at each step—material verification, in-process checks, and final compliance testing. For the pilot, I'm thinking we do 100% inspection on the first batch to validate the process. Once we're confident, we can move to statistical sampling.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 48820,
+            "reply_to": "M19",
+            "text": "That makes sense. 100% inspection for the pilot is the right call. I'll work on the cost model—material costs, labor, overhead, equipment depreciation. We need a baseline cost per unit so we can track efficiency gains. Can you give me the expected cycle time and labor hours per appliance once you have the workflow locked?",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 49409,
+            "reply_to": "M20",
+            "text": "I'll estimate that. One thing I want to confirm—do we have a health and safety officer assigned to this? We need someone to review the workflow for hazards, especially around material handling and equipment operation. That's not my area.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 48820,
+            "reply_to": "M21",
+            "text": "Good question. We don't have an HSO on the core team, but we need one. I'll reach out to corporate HSE and get someone assigned. They'll need to audit the workflow and the facility before we go live. Let me flag that as a dependency.",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 255537,
+            "reply_to": "M22",
+            "text": "While you're coordinating with HSE, they should also check the equipment installation and maintenance procedures. I'll need to document how to safely operate and maintain each piece of equipment. That's part of the compliance package.",
+            "mentions": [
+              48820,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 48820,
+            "reply_to": "M23",
+            "text": "Absolutely. 255537, can you prepare equipment operation and maintenance manuals as part of the installation? And 49409, your workflow document should include safety steps and hazard controls. We'll bundle all of that for the HSE audit. Let's aim to have the draft workflow and equipment docs ready by mid-week.",
+            "mentions": [
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5: Pilot batch will use 100% inspection protocol; move to statistical sampling after validation",
+            "D6: Corporate HSE to assign health and safety officer for workflow audit and facility compliance review",
+            "D7: Equipment operation and maintenance manuals to be prepared by 255537; workflow document to include safety steps and hazard controls"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 49409,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 48820,
+              "when": "mid-week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 255537,
+              "when": "mid-week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 48820,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Consolidate budget, timeline, and risk mitigation; confirm go-live readiness and pilot batch schedule.",
+        "messages": [
+          {
+            "msg_id": "M25",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "We're at day 10 of the 30-day window. I want to consolidate where we stand: facility constraints are being addressed, equipment procurement is in progress, workflow is being drafted, and HSE is being brought in. But we have some cost and timeline risks. Let me walk through the budget and see if we're still on track for a 30-day pilot launch.",
+            "mentions": [
+              49409,
+              255537,
+              518065,
+              526084
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 48820,
+            "reply_to": "M25",
+            "text": "Here's what I'm seeing: equipment procurement is on track if we go with rental for the pilot. Fit-out and power upgrades are the wild card. 518065 and 526084, what's the status on permits and building approvals? That's our critical path.",
+            "mentions": [
+              518065,
+              526084
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 526084,
+            "reply_to": "M26",
+            "text": "Permits are moving. Building management approved the basic fit-out, but the power upgrade needs a formal electrical inspection—that's 5-7 days. Ventilation upgrade is still under review with the landlord. If we can't get ventilation approved quickly, we may need to use portable air filtration as a workaround for the pilot. That's not ideal but it's feasible.",
+            "mentions": [
+              48820,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 518065,
+            "reply_to": "M27",
+            "text": "I'm pushing the landlord on the ventilation. If they won't approve a permanent upgrade, we can propose a temporary solution for the pilot phase and revisit for full production. That might get us approval faster. I'll have a decision from them by Friday.",
+            "mentions": [
+              526084,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 49409,
+            "reply_to": "M28",
+            "text": "Portable filtration could work for the pilot if it meets lab standards. I'll check the specs against our compliance requirements. But we need to know soon so we can factor it into the workflow and testing plan.",
+            "mentions": [
+              518065,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 48820,
+            "reply_to": "M29",
+            "text": "Okay, so the timeline is: permits by Friday, equipment procurement locked by end of week, workflow and HSE audit by mid-week next week. That gives us about 10 days for installation, testing, and pilot production. It's tight but doable if we don't hit any surprises. 255537, can you commit to equipment installation and acceptance testing in 5 days once gear arrives?",
+            "mentions": [
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 255537,
+            "reply_to": "M30",
+            "text": "If the equipment is delivered on time and the site is ready, yes. But I need the power and ventilation sorted first. Once those are done, I can install and test in 5 days. I'll also need 49409 to be on-site for acceptance testing to confirm the equipment meets the specs.",
+            "mentions": [
+              48820,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 49409,
+            "reply_to": "M31",
+            "text": "I'll be there. I'll bring the spec validation checklist and we'll run through every requirement. If anything doesn't pass, we flag it immediately and work with the vendor on a fix or replacement.",
+            "mentions": [
+              255537,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 48820,
+            "reply_to": "M32",
+            "text": "Good. Let me summarize the critical path: permits and building approvals by Friday, equipment delivery by day 20, installation and testing by day 25, HSE audit by day 27, pilot production days 28-30. If we slip on any of these, we miss the 30-day window. I'm going to track this weekly and escalate any blockers immediately. Everyone clear on their piece?",
+            "mentions": [
+              255537,
+              49409,
+              518065,
+              526084
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 526084,
+            "reply_to": "M33",
+            "text": "Clear. I'll own the permit and approval tracking. Weekly updates to you, and I'll flag any delays immediately. If the landlord pushes back on ventilation, I'll have a contingency plan ready.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8: Critical path confirmed—permits by Friday, equipment delivery by day 20, installation/testing by day 25, HSE audit by day 27, pilot production days 28-30. Weekly tracking and escalation protocol activated."
+          ],
+          "next_steps": [
+            {
+              "task_id": "T13",
+              "owner_id": 526084,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T14",
+              "owner_id": 518065,
+              "when": "Friday"
+            },
+            {
+              "task_id": "T15",
+              "owner_id": 48820,
+              "when": "weekly"
+            },
+            {
+              "task_id": "T16",
+              "owner_id": 255537,
+              "when": "day 20"
+            },
+            {
+              "task_id": "T17",
+              "owner_id": 49409,
+              "when": "day 20"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

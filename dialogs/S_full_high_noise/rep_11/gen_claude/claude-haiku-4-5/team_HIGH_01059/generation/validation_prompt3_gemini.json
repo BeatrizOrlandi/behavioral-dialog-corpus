@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In TH2, the blueprint requires referencing artifacts A1, T3, and T5, but they are missing from the artifact_refs of all messages in the thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The text contains forbidden terms such as 'Performance' (M1), 'score' (M3, M6, M7, M8, M12, M58, M59, M72, M74), and 'scenario' (M38, M44)."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants frequently use the exact same robotic phrasing to confirm tasks and agreements (e.g., 'Confirmed. I'll...', 'Ready. I'll...'), lacking distinct voices."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 2
+  }
+}

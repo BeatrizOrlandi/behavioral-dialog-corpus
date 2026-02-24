@@ -1,0 +1,1407 @@
+{
+  "channel": {
+    "channel_id": "proj-churn-model-dashboard",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on churn definition, KPIs, and initial project scope.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Hi team, welcome to the official kickoff for the Customer Churn Prediction project! The main goal is to build a model and dashboard to help our commercial teams get ahead of customer attrition. I've created a draft 'Churn Problem Definition' in A1 and the high-level roadmap in A8. Let's start by aligning on the most critical part of T1: how we actually define 'churn'. My initial proposal in A1 is: 'A customer is considered churned if they do not renew their active subscription within 30 days of its expiration date'. What are your thoughts?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wave",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 80886,
+            "reply_to": "M1",
+            "text": "Thanks @122466. That definition is a good starting point. A key question from a modeling perspective: what is our prediction horizon? Are we trying to predict this 30-day-post-expiry event 60 days before expiry? 90 days? This will significantly influence our feature engineering.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 568638,
+            "reply_to": "M2",
+            "text": "Good point. And from a data availability standpoint, do we have clean, reliable 'subscription expiration date' fields for all customer types? I can do a preliminary check on that today as part of T2.",
+            "mentions": [],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 16404,
+            "reply_to": "M2",
+            "text": "Agree with both points. We need to be very precise about the timing to avoid any data leakage from the future into our training set.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 138753,
+            "reply_to": "M1",
+            "text": "What about customers who downgrade their plan? Is that considered churn for this project?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 122466,
+            "reply_to": "M5",
+            "text": "Great questions all. @80886, let's start with a 60-day prediction horizon for the MVP. It feels like a good balance between giving the team enough time to act and model accuracy. @138753, for this first version, let's keep the scope tight and define churn as a full non-renewal. We can explicitly list downgrades and service pauses as 'out of scope' in A1 to be clear.",
+            "mentions": [
+              80886,
+              138753
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 80886,
+            "reply_to": "M6",
+            "text": "A 60-day horizon works for me. That's a solid, actionable timeframe.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 138753,
+            "reply_to": "M6",
+            "text": "Ok, but how will the sales team know the difference? If a customer is at risk of downgrading, the dashboard won't show that?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 122466,
+            "reply_to": "M8",
+            "text": "That's a valid point for future iterations. For the MVP, the dashboard will focus exclusively on the binary churn/no-churn prediction. We need to solve that first before adding more complexity. We can capture this as a requirement for V2.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 568638,
+            "reply_to": "M3",
+            "text": "Quick update: I've done a spot check on the main subscription tables. The expiration dates look reliable for >95% of active accounts. There's a legacy plan type with a different date format that will need transformation, but it's manageable. I'll detail this in the full data quality report A2.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 80886,
+            "reply_to": "M10",
+            "text": "Thanks @568638, that's great news and very proactive. We can definitely handle the date transformation in the data prep pipeline (T3).",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 122466,
+            "reply_to": "M10",
+            "text": "Awesome, thanks for checking that so quickly. Okay, let's formalize the churn definition then. Any objections to this?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 122466,
+            "reply_to": "M12",
+            "text": "Proposal: Churn is defined as a customer not renewing their primary subscription within 30 days of its expiration date. We will predict this event 60 days before the expiration date.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 16404,
+            "reply_to": "M13",
+            "text": "No objections from me. It's clear and measurable.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 568638,
+            "reply_to": "M13",
+            "text": "Works for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 138753,
+            "reply_to": "M13",
+            "text": "I'm fine with that.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 122466,
+            "reply_to": "M13",
+            "text": "Great, D1 is confirmed. Now for KPIs, also part of T1. I've put some thoughts in A1. We need both technical model metrics and a clear business success metric.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 16404,
+            "reply_to": "M17",
+            "text": "For model metrics, I suggest we track AUC, Precision, and Recall. For the business KPI, maybe something like 'percentage of churners correctly identified in the top 20% of scores'?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 80886,
+            "reply_to": "M18",
+            "text": "I'd refine that slightly. The business cost of a false negative (missing a real churner) is high, so we should prioritize Recall. Let's focus on capturing a high percentage of churners in the top decile of scores, while ensuring Precision isn't so low that the team wastes time on false alarms.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 122466,
+            "reply_to": "M19",
+            "text": "I love that framing. It connects directly to the commercial team's capacity. They can't contact everyone. So, how about this for the primary business KPI? 'Capture at least 70% of future churners (Recall) within the top 10% of riskiest customers, while maintaining at least 30% Precision in that group'.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 138753,
+            "reply_to": "M20",
+            "text": "What does precision mean again?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 80886,
+            "reply_to": "M21",
+            "text": "@138753 It means that out of every 10 customers we flag as 'high risk', at least 3 of them will actually churn. It's a measure of how efficient our alerts are.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 138753,
+            "reply_to": "M22",
+            "text": "Oh, ok. Thanks.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 122466,
+            "reply_to": "M20",
+            "text": "Thanks @80886. So, are we all agreed on that KPI definition?",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 16404,
+            "reply_to": "M24",
+            "text": "Yes, that's a solid, actionable KPI. I'm on board.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 122466,
+            "reply_to": "M24",
+            "text": "Excellent. I'll finalize A1 with D1 and D2. This concludes T1. I've also finished the initial project roadmap for T11, which you can find in A8. Please take a look when you have a moment. Next up is the data deep dive.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T11",
+              "A8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 568638,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review data inventory and decide on data sources and quality fixes.",
+        "messages": [
+          {
+            "msg_id": "M27",
+            "speaker_id": 568638,
+            "reply_to": null,
+            "text": "Hi all, as promised, the first version of the 'Customer Data Inventory and Quality Report' (A2) is ready for review. This is the main deliverable for T2. Key findings: we have three main potential data sources (CRM, Billing, Product Analytics). The biggest issues I found are ~20% nulls in the CRM 'last contact date' and inconsistent 'plan type' names between the CRM and the Billing system. Let me know your thoughts.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 80886,
+            "reply_to": "M27",
+            "text": "Thanks for putting this together @568638, this is a great overview. I'm reading through A2 now. The missing 'last contact date' is concerning, as that's likely to be a highly predictive feature. The plan type inconsistency is also critical; we need a single source of truth for what a customer has subscribed to.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 16404,
+            "reply_to": "M28",
+            "text": "I agree. Looking at the report, the Billing system seems to have more complete and structured data for plan types and subscription dates. I'd propose we use that as the primary source for any subscription-related information.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 122466,
+            "reply_to": "M29",
+            "text": "From a business process standpoint, that makes sense. Billing is the system of record for what customers are paying for. The CRM data on plans can sometimes be out of sync if a sales rep forgets to update it. Let's go with Billing as the source of truth.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 568638,
+            "reply_to": "M30",
+            "text": "Okay, so we'll use the Billing system for all subscription features. That simplifies things. What about the Product Analytics data?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 80886,
+            "reply_to": "M31",
+            "text": "The product usage data is rich, but the schema looks complex. To meet our MVP timeline, I suggest we keep it out of scope for now and focus on getting the CRM and Billing data right. We can add it in V2. Let's formalize this.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 80886,
+            "reply_to": "M32",
+            "text": "Proposal: For the MVP, we will use the Billing database as the source of truth for subscription data and the CRM for customer attributes and contact history. Product Analytics data will be out of scope for the initial model.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 122466,
+            "reply_to": "M33",
+            "text": "Agreed. That's a sensible way to de-risk the timeline. Now, let's talk about the quality issues in A2 that are in scope.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 568638,
+            "reply_to": "M34",
+            "text": "The top issues are: 1) The ~20% nulls in CRM 'last contact date', 2) The inconsistent plan names (which we just solved), and 3) Some free-text 'notes' fields in the CRM that would be hard to parse.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 138753,
+            "reply_to": "M35",
+            "text": "Can't we just remove the customers with the missing contact dates from the model?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 80886,
+            "reply_to": "M36",
+            "text": "We could, but we'd lose 20% of our data, which is a lot. Also, the fact that a contact date is missing might be a signal in itself - perhaps those customers are being neglected. A better approach for T3 would be to impute a value or create a binary 'was_contacted' flag.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 16404,
+            "reply_to": "M37",
+            "text": "The binary flag is a good, simple solution. For the free-text fields, I agree with @568638, let's ignore them for the MVP. Too much effort for uncertain gain.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 122466,
+            "reply_to": "M38",
+            "text": "Agreed on all fronts. Let's focus our effort where it matters most. The 'last contact date' issue is clearly the top priority.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 80886,
+            "reply_to": "M39",
+            "text": "Okay, let's lock that in. Proposal: The top data quality priority for T3 is to develop a handling strategy (e.g., imputation or flagging) for the nulls in the CRM 'last contact date' field. Free-text fields are out of scope for MVP.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 122466,
+            "reply_to": "M40",
+            "text": "Perfect. That gives us a clear plan for data preparation. @568638, please update A2 to reflect these decisions.",
+            "mentions": [
+              568638
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 568638,
+            "reply_to": "M41",
+            "text": "Will do.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 16404,
+            "reply_to": "M40",
+            "text": "Okay, I'll start sketching out the data prep script for T3 based on this. I'll begin by joining the Billing and CRM data and then tackle the 'last contact date' feature.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 80886,
+            "reply_to": "M43",
+            "text": "Sounds good. I'll take a deeper look at the distributions of the other key features in A2 and flag any other potential issues for T3. I'll leave comments directly in the sheet.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 16404,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 80886,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Discuss baseline model results and choose the model to take forward.",
+        "messages": [
+          {
+            "msg_id": "M45",
+            "speaker_id": 80886,
+            "reply_to": null,
+            "text": "Hi team, I've completed the first round of modeling for T4 and T5. All results, parameters, and code are tracked in the 'Model Experiment Tracking Log' (A5). I've built two models: a simple Logistic Regression for a baseline, and a Gradient Boosting (XGBoost) model. The short summary is that the GB model is performing significantly better, especially on Recall, but it's more of a 'black box'.",
+            "mentions": [],
+            "artifact_refs": [
+              "T4",
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 16404,
+            "reply_to": "M45",
+            "text": "Nice work. Looking at A5 now. The GB model's Recall of 74% in the top decile is a great result, it already hits the KPI we set in D2. The baseline is only at 55%.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 122466,
+            "reply_to": "M45",
+            "text": "Thanks for the update, this is great progress. A 74% Recall is a strong start. What's the Precision for that model? And can you elaborate on 'black box'? Does that mean we can't explain to the sales team why a customer has a high score?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 80886,
+            "reply_to": "M47",
+            "text": "The Precision is 38%, so also above our 30% target. And yes, that's the challenge. By default, it's hard to interpret. However, we can use post-hoc explanation techniques like SHAP to identify the top drivers for each individual prediction. It's an extra step, but it would allow us to provide those reasons. This is a key consideration for the compliance documentation in A3.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 138753,
+            "reply_to": "M48",
+            "text": "What is SHAP?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 16404,
+            "reply_to": "M49",
+            "text": "@138753 It's a method that assigns an importance value to each feature for an individual prediction. So for Customer X, we could say their high score was driven by 'low product usage' (+0.3), 'no recent contact' (+0.2), and 'is on a legacy plan' (+0.15). It helps us explain the 'why'.",
+            "mentions": [
+              138753
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 122466,
+            "reply_to": "M50",
+            "text": "That's exactly what we need. The commercial teams won't adopt a tool based on a score they can't understand. If we can provide the top 3 reasons for a high score, that would be a game-changer for them.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 80886,
+            "reply_to": "M51",
+            "text": "We can definitely do that with the GB model. I'll factor that into the production pipeline. The baseline model is simpler to explain at a high level, but its performance is just not good enough.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 568638,
+            "reply_to": "M51",
+            "text": "From a dashboard perspective, showing the top 3 reasons next to the churn score would be very powerful. We can easily build a component for that if the data is available in the model's output.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 122466,
+            "reply_to": "M52",
+            "text": "Okay, it sounds like the GB model is the clear winner, provided we can deliver on the explainability. Are we comfortable setting its current performance as the minimum bar for the MVP?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 16404,
+            "reply_to": "M54",
+            "text": "I think so. It meets the goals we set in D2. We can always iterate and improve it in V2.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 80886,
+            "reply_to": "M54",
+            "text": "I agree. Let's set these as the floor. Proposal: The minimum acceptable performance for the MVP model is 70% Recall and 30% Precision in the top risk decile. The current GB model exceeds this.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 122466,
+            "reply_to": "M56",
+            "text": "I support that. It's a strong but achievable benchmark.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 138753,
+            "reply_to": "M56",
+            "text": "Sounds good to me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 80886,
+            "reply_to": "M57",
+            "text": "Great. Then the next decision is which model to proceed with for the dashboard integration.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 122466,
+            "reply_to": "M59",
+            "text": "Given the superior performance and our plan for explainability, I vote for the Gradient Boosting model.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 16404,
+            "reply_to": "M60",
+            "text": "Same here. The performance uplift justifies the extra work on the SHAP values.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 568638,
+            "reply_to": "M60",
+            "text": "Agreed, as long as the prediction pipeline can generate those reasons for me to display.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 80886,
+            "reply_to": "M62",
+            "text": "It will. I'll build that into the production script. Okay, decision made.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 80886,
+            "reply_to": "M63",
+            "text": "Final decision: We will select the Gradient Boosting model (version 0.2 in A5) for the initial dashboard integration, with the requirement to include SHAP-based explanations for each prediction.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 122466,
+            "reply_to": "M64",
+            "text": "Excellent progress team. @80886 and @16404, please start documenting the methodology in A3. I'll use the score distribution from this model to start drafting the risk segmentation proposal for T6.",
+            "mentions": [
+              80886,
+              16404
+            ],
+            "artifact_refs": [
+              "A3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 80886,
+              "when": "this week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 122466,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define churn risk bands, dashboard layout, and user journeys.",
+        "messages": [
+          {
+            "msg_id": "M66",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Hi team, following up on T6, I've analyzed the score distribution from our selected model and have drafted a proposal for the churn risk bands. I've also created a simple wireframe for the dashboard. Both are in the draft 'Churn Risk Segmentation and Action Playbook' (A4). Would love your feedback.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 568638,
+            "reply_to": "M66",
+            "text": "Thanks @122466. Looking at the wireframe in A4 now. It's clean and straightforward. I like the main view with the prioritized list of high-risk customers and their top churn reasons. That's very actionable.",
+            "mentions": [
+              122466
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 80886,
+            "reply_to": "M66",
+            "text": "The score thresholds proposed in A4 for Low/Medium/High risk look solid. They align well with the deciles we discussed. The 'High-risk' band (top 10% of scores) correctly captures the majority of the predicted churners.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 138753,
+            "reply_to": "M66",
+            "text": "I'm looking at A4. It says 'High Risk: Score > 0.8'. But what if a customer has a score of 0.79? They are almost high risk, do we just ignore them?",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 122466,
+            "reply_to": "M69",
+            "text": "That's a great question. The bands are primarily to help the teams prioritize their workload. A manager might look at the 'High Risk' list daily, and the 'Medium Risk' list weekly. The exact score will still be visible on the dashboard, so a user can see the 0.79 and decide to act. The playbook (T9) will provide guidance on this.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 80886,
+            "reply_to": "M70",
+            "text": "Exactly. The thresholds are for bucketing and triggering specific plays in A4, not to be absolute cutoffs for action. We should make that clear in the training materials.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 122466,
+            "reply_to": "M71",
+            "text": "Good feedback. I'll add a note about that in A4. So, are we comfortable with these thresholds for the MVP? Proposal: Approve the churn risk thresholds as defined in A4: High (Score > 0.8), Medium (Score 0.5-0.8), Low (Score < 0.5).",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 568638,
+            "reply_to": "M72",
+            "text": "The thresholds work for me. They create reasonably sized groups to display on the dashboard.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 80886,
+            "reply_to": "M72",
+            "text": "They are statistically sound. I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 138753,
+            "reply_to": "M72",
+            "text": "Ok, I understand now. Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 122466,
+            "reply_to": "M72",
+            "text": "Great, D7 is settled. Now for the dashboard layout in A4, which is the plan for T7. I've proposed three main views: 1) A summary page with overall churn risk, 2) A 'High Risk Customers' list to act on, and 3) A customer deep-dive page showing their score, reasons, and key metrics.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 568638,
+            "reply_to": "M76",
+            "text": "This is buildable. For the deep-dive page, we'll need to pull in data from a few different tables. I'll need to sync with @80886 to make sure the prediction pipeline output includes the customer IDs in a way I can easily join with.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 80886,
+            "reply_to": "M77",
+            "text": "No problem. The pipeline already produces a customer ID with each score. I'll make sure the format is exactly what you need.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 16404,
+            "reply_to": "M76",
+            "text": "Just a thought - should we add a trendline to the summary page? To see if overall churn risk is going up or down over time.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 122466,
+            "reply_to": "M79",
+            "text": "I love that idea. But to keep the MVP scope tight, let's park it for V2. The main goal is to get an actionable list into the hands of the commercial teams ASAP. Let's add it to our backlog and focus on the three core views for now.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 16404,
+            "reply_to": "M80",
+            "text": "Fair enough. Makes sense.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 138753,
+            "reply_to": "M76",
+            "text": "What about filters? Can they filter by sales rep?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 122466,
+            "reply_to": "M82",
+            "text": "Yes! The wireframe includes filters for sales rep, customer segment, and plan type. That's a must-have. It's all part of the 'Dashboard Design and Release Checklist' (A6).",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 568638,
+            "reply_to": "M83",
+            "text": "Yep, those filters are planned. The data is available for me to use.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 122466,
+            "reply_to": "M84",
+            "text": "Okay, so with the V2 suggestion noted, are we ready to sign off on the proposed layout for the first release?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 122466,
+            "reply_to": "M85",
+            "text": "Proposal: Sign off on the dashboard layout with the three core views (Summary, High-Risk List, Customer Deep-Dive) and key filters as defined in the A4 wireframe.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M87",
+            "speaker_id": 80886,
+            "reply_to": "M86",
+            "text": "Signed off.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M88",
+            "speaker_id": 568638,
+            "reply_to": "M86",
+            "text": "Signed off. I can start building this for T7.",
+            "mentions": [],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M89",
+            "speaker_id": 122466,
+            "reply_to": "M88",
+            "text": "Fantastic. This concludes T6 and gives a clear path for T7. I'll start filling out the rest of the playbook (A4/T9) with these details.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6",
+              "T7",
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 568638,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Close out MVP, confirm monitoring plan, and plan training rollout.",
+        "messages": [
+          {
+            "msg_id": "M90",
+            "speaker_id": 122466,
+            "reply_to": null,
+            "text": "Team, we're in the home stretch for our MVP deadline. Let's do a final readiness check for go-live. I've updated the 'Stakeholder Roadmap' (A8) to reflect that we're green across the board, but want to confirm here.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M91",
+            "speaker_id": 80886,
+            "reply_to": "M90",
+            "text": "From the modeling side, we're ready. The final model is in production, and the full 'Model Documentation' (A3) is complete, which covers T8. I've also implemented the monitoring scripts for T10, and the draft 'Model Monitoring Procedure' is in A7 for review.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "T8",
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M92",
+            "speaker_id": 568638,
+            "reply_to": "M90",
+            "text": "The dashboard is built and has passed UAT with our two pilot users. Their feedback was very positive. I've also completed the data refresh validation for T12, and the pipeline is running successfully every night.",
+            "mentions": [],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M93",
+            "speaker_id": 16404,
+            "reply_to": "M91",
+            "text": "I've reviewed the monitoring plan in A7. The thresholds for data drift and performance decay look solid. Who gets the alerts if a threshold is breached?",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M94",
+            "speaker_id": 80886,
+            "reply_to": "M93",
+            "text": "Good question. Per A7, the alerts will post to this channel and also email the data platform owner and myself. We can add others if needed.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M95",
+            "speaker_id": 122466,
+            "reply_to": "M94",
+            "text": "That works perfectly. It keeps the core team informed. Thanks for being so thorough with the documentation in A3, @80886. The compliance officer will be very pleased.",
+            "mentions": [
+              80886
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M96",
+            "speaker_id": 138753,
+            "reply_to": "M90",
+            "text": "When is the training for the sales team?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M97",
+            "speaker_id": 122466,
+            "reply_to": "M96",
+            "text": "I'm glad you asked. I've scheduled two sessions for next week, and the calendar invites will be going out this afternoon. The playbook and training materials are finalized, so T9 is complete.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M98",
+            "speaker_id": 568638,
+            "reply_to": "M97",
+            "text": "Will you need a technical person in those training sessions to answer any data or dashboard questions?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M99",
+            "speaker_id": 122466,
+            "reply_to": "M98",
+            "text": "It would be great if one of the data scientists could join each session, just in case any deep model questions come up. I'll add you all as optional to the invites.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M100",
+            "speaker_id": 80886,
+            "reply_to": "M99",
+            "text": "I can join the first session on Tuesday.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M101",
+            "speaker_id": 16404,
+            "reply_to": "M99",
+            "text": "I can take the second one on Thursday.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M102",
+            "speaker_id": 122466,
+            "reply_to": "M101",
+            "text": "Perfect, thank you both.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M103",
+            "speaker_id": 138753,
+            "reply_to": "M90",
+            "text": "So are we done? What happens next?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M104",
+            "speaker_id": 122466,
+            "reply_to": "M103",
+            "text": "For the MVP, yes, we are in a launch-ready state. The next steps are to support the rollout, monitor adoption, and keep a close eye on model performance. I've already started a backlog for V2 features based on our discussions.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M105",
+            "speaker_id": 80886,
+            "reply_to": "M104",
+            "text": "I'll be watching the monitoring dashboard from T10 daily for the first couple of weeks. I suggest we schedule a formal model performance review in 30 days to see how it's holding up against the benchmarks we set.",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M106",
+            "speaker_id": 568638,
+            "reply_to": "M104",
+            "text": "And I'll be watching the dashboard usage stats to see which teams are adopting it and if they are using the filters we built.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M107",
+            "speaker_id": 122466,
+            "reply_to": "M105",
+            "text": "Excellent. This has been a fantastic team effort. We delivered a high-quality product on a tight timeline. Let's prepare for the stakeholder update tomorrow where we'll demo the dashboard and share the final A8.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 80886,
+              "when": "ongoing"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 122466,
+              "when": "next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

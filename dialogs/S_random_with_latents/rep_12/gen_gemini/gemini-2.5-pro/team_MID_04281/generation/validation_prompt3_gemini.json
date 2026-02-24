@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 13 messages, which is below the minimum required of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "In thread TH4, the 'next_steps' array contains an entry with 'task_id': 'A8'. A8 is an artifact_id from the project pack, not a valid task_id."
+    },
+    {
+      "severity": "MID",
+      "code": "COUNT",
+      "detail": "Multiple threads are below their target message ranges specified in the blueprint. Specifically: TH2 has 17 messages (target [20, 30]), TH4 has 17 messages (target [18, 26]), and TH5 has 15 messages (target [17, 25])."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

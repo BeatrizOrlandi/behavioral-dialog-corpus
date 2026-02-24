@@ -1,0 +1,1737 @@
+{
+  "channel": {
+    "channel_id": "proj-predictive-maintenance-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on pilot scope, asset selection, and success criteria.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Kicking off the predictive maintenance rollout for our plants. For the pilot, we need to lock scope, asset list, and success criteria within this week so we stay inside the 21-day window for Cross-Plant Predictive Maintenance Rollout for Production Lines.\nI have a first pass of the asset list in the Asset Criticality and Pilot Equipment Matrix (A1), based on the criteria from T1. Proposal: start with two production lines in Plant A, focusing on the main forming line and the downstream packaging line.\nCan you all review the current entries in A1 and comment on:\n- Any assets that must be in or out for the pilot\n- Any missing risk notes per asset (required for T1)\n- Initial thoughts on 3–5 KPIs we should track in A6 as part of T7\nPlan is to close the pilot asset list and KPIs in this thread, then I will formalize D1 and D2.\nTagging for input: operations, maintenance, and garage perspectives.",
+            "mentions": [
+              36422,
+              18383,
+              237177,
+              560411,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 36422,
+            "reply_to": "M1",
+            "text": "Thanks for framing this. I went through A1 and filtered by downtime impact and changeover sensitivity.\nFrom an operations standpoint, I strongly recommend we include:\n- Line A1: main forming press, upstream conveyor, and the primary cooling unit\n- Line A2 (packaging): case packer and palletizer\nThese are the spots where unplanned stops hit our delivery commitments hardest.\nI added comments in A1 on historical stoppages and a quick risk note per asset to support T1.\nOn KPIs for A6 and T7, my initial list:\n- Unplanned downtime (minutes per week) on pilot assets\n- Number of maintenance-related line stops\n- MTBF per pilot asset\nWe can add one compliance metric and one quality-related metric if others agree.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 18383,
+            "reply_to": "M1",
+            "text": "I reviewed A1 as well and cross-checked with what we can realistically instrument under T4 and T11.\nA couple of points:\n- The main forming press and case packer are good candidates; we already have some vibration and current data, so we can reuse existing wiring.\n- The palletizer in Plant A has limited spare IO in the control panel. Adding more sensors there might push us close to panel capacity.\nI added a column in A1 with a rough instrumentation feasibility flag so we do not pick assets that will require major panel upgrades during this pilot.\nBefore we finalize D1, I suggest we confirm that the selected assets can be covered with minimal new hardware, given the capex constraint.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A1",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 560411,
+            "reply_to": "M2",
+            "text": "Building on what was shared, I added a tab in A6 to sketch how we could track the KPIs for T7.\nMy proposal for the 3–5 core KPIs:\n1) Unplanned downtime on pilot assets (minutes per week)\n2) MTBF per pilot asset\n3) Percentage of maintenance tasks completed as planned vs deferred\n4) Number of predictive alerts generated vs acted upon\n5) First-time fix rate for interventions triggered by predictive alerts\nWe can probably keep 4 and 5 as secondary if we want to stay closer to three main KPIs.\nData sources are mostly CMMS and existing line logs; I documented assumptions in A6 so IT can validate later.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 237177,
+            "reply_to": "M1",
+            "text": "From the garage and aftersales side, I checked our recent service cases.\nThe assets that show up most often in customer complaints are related to the forming press and the cooling units. When those fail here, we see similar patterns in the field later.\nI added a short note in A1 for each of those assets about downstream customer impact, to support T1.\nOn KPIs, I would like us to keep at least one metric that we can later connect to warranty or service incidents, even if we only track it qualitatively during the pilot.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 55217,
+            "reply_to": "M2",
+            "text": "I went through the proposed list for the two lines and compared it with our production bottlenecks.\nOne question: should we also include the secondary conveyor on Line A2? It has caused a few short stops recently, but I am not sure it meets the bar for this first pilot.\nI added a comment in A1 with the last three incidents I could find. If we keep it out for now, we should at least document the rationale in T1 so we can revisit later.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 36422,
+            "reply_to": "M6",
+            "text": "On the secondary conveyor: looking at the last quarter, those stops were short and usually tied to upstream issues.\nGiven the 21-day constraint and limited sensor budget, I would keep it out of the initial pilot and just track it in the background using existing logs.\nI added that rationale into the risk notes column in A1 so T1 has a clear trail.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 18383,
+            "reply_to": "M3",
+            "text": "I double-checked the palletizer panel capacity. We are close to the limit, but if we restrict ourselves to one additional vibration channel and reuse an existing temperature input, we should be fine.\nI updated the feasibility flag in A1 and added a note that a detailed load check will be completed under T11 before installation.\nSo from my side, the forming press, case packer, palletizer, and cooling unit are all feasible for the pilot without major rework.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 560411,
+            "reply_to": "M4",
+            "text": "On the KPI list, I suggest we treat these as the primary three for D2:\n- Unplanned downtime on pilot assets\n- MTBF per pilot asset\n- Percentage of maintenance tasks completed as planned\nThen we keep predictive alerts generated vs acted upon as a learning metric in A6, without making it a formal success criterion yet.\nI updated the KPI tab in A6 accordingly and aligned the definitions with what we will need later in T10.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 237177,
+            "reply_to": "M9",
+            "text": "Agree with that split. For the customer angle, I will just keep a simple log linked to A6 so that when we do T12 we can see if there is any visible change in service incidents tied to these assets.\nNo need to add it as a formal KPI now, but we should not lose the link.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 53841,
+            "reply_to": "M9",
+            "text": "Thanks all, this is converging.\nLet me summarize the proposed pilot scope before we lock D1 and D2:\nLines: two lines in Plant A (forming and packaging).\nAssets in scope:\n- Forming press (Line A1)\n- Upstream conveyor (Line A1)\n- Primary cooling unit (Line A1)\n- Case packer (Line A2)\n- Palletizer (Line A2)\nSecondary conveyor on Line A2 is out of scope for now, with rationale documented in A1 and T1.\nProposed primary KPIs in A6 for T7:\n1) Unplanned downtime on pilot assets\n2) MTBF per pilot asset\n3) Percentage of maintenance tasks completed as planned\nPredictive alerts generated vs acted upon will be tracked as a learning metric only.\nIf anyone has strong objections, please raise them today; otherwise I will formalize D1 and D2 in this thread tomorrow morning.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 55217,
+            "reply_to": "M11",
+            "text": "No objections from my side. The selected assets match our main bottlenecks, and keeping the secondary conveyor out for now makes sense.\nJust a note: once we have a few weeks of data in A6, we should revisit whether any other assets need to be added before scale-up, and capture that in T10.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 36422,
+            "reply_to": "M11",
+            "text": "From operations, I am aligned with both the asset list and the KPI set.\nThe only ask is that we make sure the downtime and MTBF definitions in A6 match what the production planning team already uses, so there is no confusion when we report.\nI added a short note in T7 to sync with them during the next weekly check-in.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 18383,
+            "reply_to": "M11",
+            "text": "No concerns from electrical. The selected assets are all feasible with the current control systems, assuming we proceed with the checks under T11.\nI will make sure the sensor plan under T4 lines up with this final list in A1.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 560411,
+            "reply_to": "M11",
+            "text": "Aligned as well. I will start drafting the process and training implications in parallel so that T3, T6, and T10 use the same asset and KPI scope.\nNo further changes suggested for D1 or D2.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T3",
+              "T6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 237177,
+            "reply_to": "M11",
+            "text": "All good from garage and aftersales. I will align our service tracking with the pilot asset list so that T12 can plug into A6 later.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 53841,
+            "reply_to": "M11",
+            "text": "Closing the loop here.\nDecision D1: We approve the pilot asset list as summarized above for the two lines in Plant A, with the secondary conveyor on Line A2 explicitly out of scope for this phase. A1 and T1 are updated accordingly.\nDecision D2: We agree on the following primary KPIs for the pilot, to be tracked in A6 under T7:\n1) Unplanned downtime on pilot assets\n2) MTBF per pilot asset\n3) Percentage of maintenance tasks completed as planned\nPredictive alerts generated vs acted upon will be tracked as a learning metric only.\nI will use this scope and KPI set as the baseline for the rest of the rollout planning.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 36422,
+            "reply_to": "M17",
+            "text": "Thanks for closing this. I will brief the production planning team so they understand which assets and KPIs we will be reporting on during the pilot.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 53841,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 36422,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalize the standardized predictive maintenance workflow.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "As discussed, here is the draft to-be predictive maintenance process for review.\nI based it on the as-is workflows we mapped under T2 and the new requirements for T3. The detailed flow is in the Standardized Predictive Maintenance Process and Escalation Guide (A2).\nKey points:\n- Alerts originate from sensors and CMMS rules, then go into a triage step.\n- There is a first-level review on shift, then escalation to maintenance or garage depending on asset type.\n- We have defined three severity levels with different response times.\nBefore we sign off D3 and D4, I need your feedback on:\n1) Whether the triage step is in the right place and not overloading the shift teams.\n2) Whether the escalation paths and roles per asset class make sense.\nPlease comment directly in A2 and use this thread for any bigger concerns.",
+            "mentions": [
+              53841,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 560411,
+            "reply_to": "M19",
+            "text": "I went through A2 and compared it with the asset list we agreed in TH1.\nObservations:\n- The alert-to-resolution flow is clear, but we should explicitly show where predictive alerts differ from reactive breakdown calls.\n- For T3, I added a swimlane view that separates operator actions, maintenance actions, and garage actions.\nOn triage: I suggest we keep first-level triage with the line supervisor, supported by a simple checklist, and only escalate to maintenance when the alert crosses a defined threshold.\nI proposed thresholds in A2 based on severity and asset criticality; please check if they are realistic from your side.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 53841,
+            "reply_to": "M19",
+            "text": "Thanks for pulling this together.\nFrom a production perspective, I like that the process distinguishes between predictive alerts and urgent breakdowns.\nOne concern: the current draft in A2 has the line supervisor logging details in two different systems during triage. That will slow them down.\nCould we simplify that step so that they only log once, and the CMMS sync handles the rest? If that is not feasible now, we should at least document the risk in T3 and plan a later integration.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 18383,
+            "reply_to": "M19",
+            "text": "I reviewed the parts of A2 that touch electrical and control systems.\nFor the alert generation step, we should be careful not to flood operators with low-value warnings.\nI added a note in T3 suggesting we group some sensor conditions into a single combined alert per asset, instead of separate alerts for each signal.\nOn escalation: for any alert that suggests a potential electrical safety issue, I recommend automatic escalation to the electrical team, even if the severity is medium. I marked those cases in the escalation table in A2.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 237177,
+            "reply_to": "M19",
+            "text": "Looking at A2 from the garage and aftersales angle.\nI see that for some assets, the final escalation step is to the garage team when the issue could affect field reliability.\nI added a comment that when we reach that step, we should also capture a short note that can be shared with aftersales later, to support T12.\nI am not fully sure about the timing of that handover, so please check if what I suggested in A2 fits with the rest of the flow.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 55217,
+            "reply_to": "M19",
+            "text": "I compared the new process in A2 with how we currently handle breakdowns on the lines.\nThe main change is the structured triage and the predictive alert path.\nOne question: in the draft, who exactly closes the loop in the system once the intervention is done? In some plants it is the technician, in others the supervisor.\nFor standardization under T2 and T3, I think we should pick one default owner for closing the work order, otherwise our KPI data in A6 will be inconsistent.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 36422,
+            "reply_to": "M24",
+            "text": "Good catch. For consistency, I propose that the maintenance technician who performs the work closes the work order, and the line supervisor only verifies completion in the shift report.\nI updated A2 and T3 to reflect that, and added a note that this is the default for all plants unless local rules require otherwise.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 560411,
+            "reply_to": "M21",
+            "text": "On the double-logging issue: in the short term, we cannot change the CMMS integration, so we will have to live with one manual step.\nTo reduce the burden, I simplified the triage checklist in A2 so that the supervisor only records a few key fields, and the technician fills in the rest when closing the work order.\nI documented this as a known limitation in T3, with a note to revisit once IT can support a better integration.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 18383,
+            "reply_to": "M22",
+            "text": "I also added a small section in A2 describing how we will validate new alert rules before turning them on, to avoid noise.\nThis includes a short test period where alerts are monitored but not yet triggering work orders, which we can manage under T3.\nPlease check if that fits with the operations expectations.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 237177,
+            "reply_to": "M23",
+            "text": "I refined the garage escalation step in A2 based on feedback.\nNow, when an issue is escalated to the garage team, we log a short summary that can later be used in T12 to connect to customer-facing incidents.\nIf this adds too much admin work, we can trim it back, but I think it will help us later when we write the pilot report in A7.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "T12",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 53841,
+            "reply_to": "M19",
+            "text": "From my review, the overall flow in A2 now looks workable for the pilot.\nI like that we have clear severity levels and that the technician closes the work order.\nOn roles for triage and response (for D4), my view is:\n- Line supervisor: first-level triage and initial safety checks\n- Maintenance technician: detailed diagnosis and repair for plant assets\n- Garage team: follow-up on issues with potential field impact\nWe should confirm if everyone is comfortable with this split before we finalize D3 and D4.",
+            "mentions": [
+              36422,
+              560411,
+              237177,
+              18383
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 36422,
+            "reply_to": "M29",
+            "text": "I am aligned with that role split.\nTo make it explicit for D4, I added a table in A2 under T3 that lists, per asset class, who owns triage, who owns the intervention, and who owns final closure.\nFor the pilot, we will keep it simple and avoid any shared ownership on a single step.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 560411,
+            "reply_to": "M29",
+            "text": "Agree with the proposed responsibilities.\nI also added a short RACI-style note in A2 so that when we build training materials in A5 under T6, the roles are consistent.\nFrom my side, the process is ready for sign-off once we capture any last comments today.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 18383,
+            "reply_to": "M29",
+            "text": "No objections from electrical.\nThe automatic escalation for potential electrical issues is reflected in the table in A2, and the responsibilities are clear.\nI will make sure the alert configuration under T4 and T11 matches this process.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 237177,
+            "reply_to": "M29",
+            "text": "I am ok with the garage role as described.\nWe will focus on the cases that have potential impact on field reliability and support T12 later.\nNo further changes requested from my side.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 55217,
+            "reply_to": "M29",
+            "text": "Aligned as well. The standardized closure by the technician should help keep the data in A6 clean for T7 and T10.\nI do not see any blockers to signing off the process for the pilot.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 36422,
+            "reply_to": "M19",
+            "text": "Given the feedback so far, I propose we move to sign-off.\nDecision D3: We approve the standardized predictive maintenance process and escalation paths as documented in A2 under T3, including the triage checklist, severity levels, and validation step for new alert rules.\nDecision D4: We confirm that line supervisors own first-level triage, maintenance technicians own diagnosis and repair plus work order closure, and the garage team owns follow-up on issues with potential field impact.\nIf there are any minor wording tweaks, we can still adjust A2, but the structure is now fixed for the pilot.",
+            "mentions": [
+              53841,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 53841,
+            "reply_to": "M35",
+            "text": "Confirmed from my side. We will use this process as the reference for the pilot and for the training content in A5.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 560411,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 36422,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock down sensor specs, installation plan, and safety procedures.",
+        "messages": [
+          {
+            "msg_id": "M37",
+            "speaker_id": 18383,
+            "reply_to": null,
+            "text": "I have drafted the sensor and data collection proposal for the pilot assets we agreed in TH1.\nDetails are in the Data Collection and Integration Specification (A4), linked to T4, and the first version of the Sensor Installation and Safety Checklist (A3) for T8 and T11.\nFor each asset, A4 lists:\n- Signals to capture (vibration, temperature, current, etc.)\n- Sampling frequencies\n- Proposed wiring approach and panel connections\nBefore we finalize D5 and D6, I need your input on:\n1) Whether the proposed signals and sampling rates are sufficient for the predictive use cases.\n2) Whether the installation steps and lockout/tagout instructions in A3 are clear and realistic for the maintenance windows.\nPlease review and comment directly in A3 and A4.",
+            "mentions": [
+              36422,
+              53841,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4",
+              "T8",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 560411,
+            "reply_to": "M37",
+            "text": "I reviewed A4 with the process and KPI needs in mind.\nFor the forming press and case packer, the proposed vibration and current signals at the suggested sampling rates should be enough for basic anomaly detection.\nOne suggestion: for the cooling unit, can we add a simple pressure signal if we have spare capacity? It would help distinguish between mechanical and process-related issues.\nI added comments in A4 under T4 with this suggestion and flagged the data fields that will feed into A6.",
+            "mentions": [
+              18383,
+              53841
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 36422,
+            "reply_to": "M37",
+            "text": "From an operations standpoint, the main concern is fitting installation into the agreed maintenance windows under T5 and T9.\nLooking at A3, the steps seem thorough, but I am not sure we can complete all of them for all assets in a single off-peak shift.\nCould you estimate the time per asset for the installation checklist? If needed, we might split the work across two windows.\nI added a note in T8 to capture this as a risk.",
+            "mentions": [
+              18383,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 237177,
+            "reply_to": "M37",
+            "text": "I checked the safety and lockout/tagout parts of A3.\nThe general steps look ok, but I think we should make the wording more explicit for the garage team, especially around who signs off before re-energizing equipment.\nI added a couple of comments in A3 and suggested that we have the health and safety officer review the final version as required in T8.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 55217,
+            "reply_to": "M39",
+            "text": "On installation timing, I did a quick pass based on similar work we did last year.\nFor each asset, I estimated rough durations and added them as a column in A3.\nMy view: we can probably complete the forming press and cooling unit in one window, but the packaging line assets might need a second window to avoid impacting production.\nWe should reflect that in T5 and T9 when we finalize the schedule.",
+            "mentions": [
+              36422,
+              18383
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 18383,
+            "reply_to": "M38",
+            "text": "On the cooling unit pressure signal: we have limited spare IO, but I checked the panel and we can repurpose one unused analog input.\nI updated A4 to include a pressure signal with a moderate sampling rate, and added wiring notes under T4.\nThis should not significantly increase installation time, but I will reflect the extra step in A3.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 18383,
+            "reply_to": "M39",
+            "text": "I went through A3 and added estimated durations per step, based on typical work.\nRoughly:\n- Forming press: about half a shift\n- Cooling unit: about a quarter shift\n- Case packer and palletizer: together close to a full shift\nSo I agree we should plan at least two maintenance windows for the packaging line.\nI updated T8 with these estimates and noted that we will validate them during the first installation.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 560411,
+            "reply_to": "M42",
+            "text": "Thanks for adding the pressure signal.\nI updated A4 to tag which signals are mandatory for the pilot analytics and which are nice-to-have, so if we hit time constraints during installation, we know what can be deferred.\nThis is also referenced in T4 so we keep scope under control.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 36422,
+            "reply_to": "M43",
+            "text": "Given those durations, I propose the following for D6:\n- Window 1: forming press and cooling unit\n- Window 2: case packer and palletizer\nBoth within existing off-peak shifts, coordinated under T5 and T9.\nI added this proposal into A3 and T9. Please confirm if this works from your side.",
+            "mentions": [
+              53841,
+              18383,
+              55217
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 53841,
+            "reply_to": "M45",
+            "text": "This split across two windows looks reasonable and should not affect committed volumes, as long as we stick to the off-peak slots already discussed.\nI will sync with production planning to confirm there are no last-minute order changes and update T5 accordingly.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 237177,
+            "reply_to": "M40",
+            "text": "I refined the sign-off section in A3 so it clearly states who signs before re-energizing equipment, both in the plant and in the garage area.\nOnce the health and safety officer reviews it, we should be covered for T8.\nNo further changes from my side.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 18383,
+            "reply_to": "M37",
+            "text": "I also completed the electrical safety and integration checks for the proposed sensor list.\nIn A4 and T11, I documented:\n- Compatibility with existing control panels\n- Load and interference checks\n- Any constraints on cable routing\nThere are no blocking issues; a few minor routing constraints are noted but manageable within the current design.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 560411,
+            "reply_to": "M48",
+            "text": "With the safety and integration checks done, I think we are ready to lock D5.\nThe current sensor set in A4 covers the key failure modes we want to monitor for the pilot, and the installation steps in A3 align with the process in A2.\nUnless anyone sees a gap, we should freeze the spec so we can focus on execution.",
+            "mentions": [
+              18383,
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 55217,
+            "reply_to": "M45",
+            "text": "I am ok with the two-window plan and the current checklist in A3.\nWe just need to make sure the pre-maintenance window checks are done so that technicians do not lose time looking for tools or permits.\nI added a short pre-check section in A3 and linked it to T8.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 36422,
+            "reply_to": "M49",
+            "text": "Ok, let us formalize.\nDecision D5: We approve the final sensor and data collection specification for the pilot assets as documented in A4 under T4 and validated in T11.\nDecision D6: We agree on the installation schedule and safety checklist in A3 under T8, using two maintenance windows (Window 1 for forming press and cooling unit, Window 2 for case packer and palletizer), coordinated via T5 and T9.\nWe will not add new signals for this pilot unless a critical gap emerges during installation.",
+            "mentions": [
+              53841,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4",
+              "T5",
+              "T8",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 53841,
+            "reply_to": "M51",
+            "text": "Confirmed. We will now use this spec and schedule as the baseline for the pilot rollout and reflect it in the overall roadmap.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 237177,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 18383,
+              "when": "before first window"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate pilot go-live, training, and daily status updates.",
+        "messages": [
+          {
+            "msg_id": "M53",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "We are one week out from the pilot go-live for Cross-Plant Predictive Maintenance Rollout for Production Lines.\nThis thread is for coordinating the rollout: maintenance windows, training, and daily status updates.\nBased on T5, T6, and T9, and the decisions in TH1–TH3, here is the current proposal:\n- Pilot go-live date: next Monday, after both installation windows are complete.\n- Maintenance windows: Window 1 on Thursday night, Window 2 on Saturday night.\n- Training: short sessions for operators, maintenance, and garage teams using A5.\nWe need to confirm D7 (go-live date and windows) and D8 (training dates and attendees) here.\nPlease check the shared calendar and A5, and flag any conflicts.",
+            "mentions": [
+              53841,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 53841,
+            "reply_to": "M53",
+            "text": "I checked the production plan for next week.\nThursday and Saturday night windows are acceptable and do not conflict with confirmed orders, as long as we stick to the durations we estimated in A3.\nI updated T5 with this confirmation and added the proposed go-live date.\nFrom my side, D7 looks feasible, but we should keep a small buffer in case installation overruns.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 18383,
+            "reply_to": "M53",
+            "text": "On the installation side, I have the teams lined up for both windows.\nI walked through the checklist in A3 with them and confirmed tool and material availability under T8.\nThe only risk is if we encounter unexpected panel issues; in that case, we might need to defer one non-critical signal, but that would not block go-live.\nI will post a short status update in this thread after each window as part of T9.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 560411,
+            "reply_to": "M53",
+            "text": "For training, I drafted role-specific outlines and slides in A5 under T6.\nProposal for D8:\n- Operators: 45-minute session on Thursday afternoon (before Window 1), focused on what alerts they will see and how to respond.\n- Maintenance: 60-minute session on Friday morning, covering the new process from A2 and how to close work orders.\n- Garage team: 30-minute remote session on Friday afternoon, focused on escalation cases and T12.\nPlease confirm if these slots work and if we have the right people identified.",
+            "mentions": [
+              36422,
+              53841,
+              237177
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 237177,
+            "reply_to": "M56",
+            "text": "Friday afternoon works for the garage team.\nI will make sure the key supervisors join the remote session and that they have A5 printed or accessible.\nFor T12, I will also prepare a simple template so they can log any issues that might later connect to customer incidents.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A5",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 55217,
+            "reply_to": "M53",
+            "text": "I checked the staffing for the two windows.\nWe have enough technicians for Thursday night, but Saturday night is a bit tight.\nI added a note in T9 suggesting we assign one backup technician from another line, just in case.\nThis should not affect D7, but we need to confirm availability by midweek.",
+            "mentions": [
+              36422,
+              18383
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 36422,
+            "reply_to": "M58",
+            "text": "Thanks for flagging. I will coordinate with HR and the other line supervisors to secure a backup technician for Saturday night and update T9 once confirmed.\nThis should keep the risk low without changing the windows.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 18383,
+            "reply_to": "M55",
+            "text": "Quick update after Window 1 (forming press and cooling unit):\n- All sensors installed as per A3 and A4.\n- No issues with panel capacity; T11 checks passed.\n- We had a minor delay due to a missing bracket, but it did not extend beyond the window.\nI updated T9 with the actual times and a short note for lessons learned.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T9",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 560411,
+            "reply_to": "M56",
+            "text": "Training update:\n- Operator session completed; attendance was good and questions focused mainly on how alerts will appear.\n- Maintenance session is scheduled for tomorrow morning; slides in A5 are final.\nI added a short training log in T6 with attendees and any follow-up actions.\nSo far, no reason to adjust D8.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 237177,
+            "reply_to": "M57",
+            "text": "Garage training just finished.\nWe walked through the escalation part of A2 and the logging template for T12.\nA few questions came up about how quickly they will be notified of relevant alerts; I pointed them to the process in A2 and noted their concerns in T6 so we can monitor during the pilot.",
+            "mentions": [
+              560411,
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 18383,
+            "reply_to": "M60",
+            "text": "Update after Window 2 (case packer and palletizer):\n- Installation completed as per A3.\n- One non-critical signal on the palletizer was deferred due to access constraints, as allowed by the priority list in A4.\n- All safety steps followed; no incidents.\nI logged details in T9 and updated A4 to mark the deferred signal for potential future work.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 53841,
+            "reply_to": "M63",
+            "text": "Thanks for the updates.\nGiven that both windows are complete and training sessions are done, I see no blockers for the proposed go-live date.\nI updated T5 and T9 to reflect the final status and confirmed that there is no impact on production commitments.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 36422,
+            "reply_to": "M53",
+            "text": "With installations and training completed, I propose we confirm:\nDecision D7: Pilot go-live on next Monday, with the two maintenance windows already executed (Thursday and Saturday nights) as recorded in T5 and T9.\nDecision D8: Training completed as per A5 and T6 for operators, maintenance, and garage teams, with no additional sessions required before go-live.\nDaily status updates during the first week will be posted in this channel and logged in A6.",
+            "mentions": [
+              53841,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 560411,
+            "reply_to": "M65",
+            "text": "Confirmed from my side. I will monitor the first week of alerts and make sure the process from A2 is followed, capturing any issues in T10.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T10"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 36422,
+              "when": "go-live week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 560411,
+              "when": "before go-live"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 53841,
+              "when": "before go-live"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results, customer impact, and decide on rollout roadmap.",
+        "messages": [
+          {
+            "msg_id": "M67",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "We have completed the initial pilot period for Cross-Plant Predictive Maintenance Rollout for Production Lines.\nI have drafted the Pilot Implementation and Lessons Learned Report (A7) based on data from the Pilot KPI and Downtime Tracking Sheet (A6) and the inputs to T10 and T12.\nHeadline results:\n- Unplanned downtime on pilot assets reduced by around 18 percent vs baseline.\n- MTBF improved on the forming press and case packer; smaller change on the palletizer.\n- Maintenance task completion rate improved but still below our long-term target.\nIn this thread, we need to:\n- Review the results and customer impact.\n- Decide whether to keep or adjust the pilot asset scope for scale-up (D1 revisit).\n- Confirm long-term ownership of alert triage and escalation (D4 revisit).\nPlease review A6, A7, and the draft Cross-Functional Rollout Roadmap (A8), then share your views.",
+            "mentions": [
+              36422,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 36422,
+            "reply_to": "M67",
+            "text": "I went through A6 and A7.\nFrom an operations perspective, the forming press and case packer clearly delivered value; we saw fewer disruptive stops and more predictable maintenance.\nThe palletizer shows some improvement, but less pronounced, partly because one signal was deferred.\nFor D1, I would keep the current asset set for the next phase and add the deferred palletizer signal when we have a window, but I would not expand to additional assets yet.\nOn D4, the current ownership model worked reasonably well, though line supervisors needed some coaching on triage early on.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 560411,
+            "reply_to": "M67",
+            "text": "Looking at the data in A6 and the process adherence notes in T10:\n- The predictive alerts generated vs acted upon ratio improved over the pilot, which suggests the process in A2 is settling in.\n- Most deviations came from incomplete triage notes or delayed work order closure.\nFor D4, I recommend we keep the same role split but strengthen training and quick reference materials in A5 for line supervisors and technicians.\nFor D1, I agree with keeping the same assets and focusing on deepening the setup (including the missing palletizer signal) before adding more equipment.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "A2",
+              "A5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 18383,
+            "reply_to": "M67",
+            "text": "From the electrical side, the sensor setup in A4 performed as expected.\nWe had a few minor noise issues on one of the vibration channels, which I documented in T10 and A7, but they did not affect the overall conclusions.\nI support the idea of adding the deferred palletizer signal when we get a suitable window.\nNo need to change the core asset scope for now; better to stabilize what we have before scaling.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A4",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 237177,
+            "reply_to": "M67",
+            "text": "On customer impact, I used the template we discussed to collect feedback for T12.\nFindings summarized in A7:\n- We saw a small reduction in service incidents related to forming press issues, but the sample is still small.\n- No clear change yet on cooling unit or palletizer-related complaints.\nGiven the limited timeframe, I would not use this alone to expand scope, but it supports keeping the current assets in focus for the next phase.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 55217,
+            "reply_to": "M67",
+            "text": "I compared the pilot assets with other bottlenecks in the plant.\nThe improvements we saw on the forming press and case packer are meaningful enough that I would prioritize rolling this approach to similar assets in other lines later, as outlined in A8.\nHowever, for the immediate next step, I agree with keeping the current scope and focusing on stabilizing the process and data quality.\nOn D4, I think the current ownership model is fine, but we should clarify in A2 who steps in when a supervisor is not available, to avoid gaps.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 36422,
+            "reply_to": "M72",
+            "text": "Good point on coverage.\nI added a note in A2 and T3 that when a line supervisor is not available, the acting supervisor or shift lead takes over triage responsibilities.\nThis should close the gap without changing the core ownership model for D4.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 560411,
+            "reply_to": "M69",
+            "text": "To support the next phase, I propose we update A5 with a short refresher module focused on triage quality and timely closure, and schedule brief refresh sessions.\nI added this as a recommendation in A7 and as a follow-up item in T6 and T10.\nThis keeps D4 intact while addressing the weak spots we saw in the pilot.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "T6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 18383,
+            "reply_to": "M70",
+            "text": "I also recommend we standardize a quick sensor health check as part of routine maintenance, to avoid noise issues creeping in.\nI added a suggestion in A7 and T3 for a simple periodic check, which can be rolled into the broader rollout in A8.",
+            "mentions": [
+              53841,
+              560411
+            ],
+            "artifact_refs": [
+              "A7",
+              "T3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 237177,
+            "reply_to": "M71",
+            "text": "For the next phase, I will keep extending the T12 tracking so that when we scale to more assets, we have a clearer picture of how plant reliability improvements translate into fewer field issues.\nI added this as a medium-term action in A8.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T12",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 53841,
+            "reply_to": "M67",
+            "text": "Thanks for all the input.\nLet me summarize the emerging direction before we formalize D1 and D4 for the rollout phase:\n- Asset scope: keep the current pilot assets, add the deferred palletizer signal at the next suitable window, and do not add new assets yet.\n- Ownership: keep the existing triage and escalation roles, with clarified coverage when supervisors are absent.\n- Focus areas: improve triage quality, timely closure, and sensor health checks; refine training materials in A5.\nIf there are any objections to this direction, please raise them today; otherwise I will record the decisions and update A8 accordingly.",
+            "mentions": [
+              36422,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 36422,
+            "reply_to": "M77",
+            "text": "No objections from operations.\nThis approach gives us a solid base to scale from without overextending the teams.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 560411,
+            "reply_to": "M77",
+            "text": "Aligned. I will start adjusting A5 and A8 to reflect the training and rollout recommendations once the decisions are recorded.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 18383,
+            "reply_to": "M77",
+            "text": "No concerns from electrical.\nI will plan the additional palletizer signal for the next available maintenance window and log it under T4 and T11.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 237177,
+            "reply_to": "M77",
+            "text": "Ok from garage and aftersales.\nI will continue the T12 tracking and feed results into future updates of A7 and A8.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T12",
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 55217,
+            "reply_to": "M77",
+            "text": "No objections. The focus on stabilizing the current assets before expanding makes sense given our resource constraints.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 53841,
+            "reply_to": "M77",
+            "text": "Closing the decisions for the rollout roadmap.\nDecision D1 (revisited): We keep the existing pilot asset scope for the next phase, adding only the previously deferred palletizer signal when a suitable maintenance window is available. No new assets are added at this stage. A6, A7, and T10 are updated to reflect this.\nDecision D4 (revisited): We confirm long-term ownership of alert triage and escalation as defined in A2 and T3 (line supervisors or acting supervisors for triage, maintenance technicians for diagnosis and closure, garage team for field-impact follow-up), with additional training and quick references in A5 to strengthen execution.\nI will update A8 with these decisions and the recommended next steps for scale-up.",
+            "mentions": [
+              36422,
+              560411,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "T3",
+              "T10"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 36422,
+            "reply_to": "M83",
+            "text": "Thanks for summarizing. I will brief the broader operations team on the decisions and the rollout roadmap in A8.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 53841,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 237177,
+              "when": "ongoing"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "next maintenance window"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

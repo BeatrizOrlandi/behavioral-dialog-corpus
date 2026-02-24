@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'scenario' (as 'scenarios') is used in messages M4 and M58. Additionally, 'low' and 'high' are used to describe attributes ('attendance is low' in M24 and M33, 'High-risk' in M6)."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Multiple characters use the exact same robotic phrasing to conclude discussions, such as 'So the sequence is...' (M17, M27, M61, M77), 'So to summarize...' (M34, M67, M89), and 'So the timeline is...' (M55), making them sound like the same persona."
+    },
+    {
+      "severity": "LOW",
+      "code": "COUNT",
+      "detail": "Thread TH2 contains 16 messages, which falls below the blueprint's target_messages_range of [20, 30]."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 2
+  }
+}

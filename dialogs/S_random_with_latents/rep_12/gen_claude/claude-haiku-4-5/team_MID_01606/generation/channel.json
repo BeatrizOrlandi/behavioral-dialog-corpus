@@ -1,0 +1,1465 @@
+{
+  "channel": {
+    "channel_id": "C-proj-subscription-analytics-launch",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, target customers, and success metrics for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 22473,
+            "reply_to": null,
+            "text": "Hi team, I've drafted the MVP vision and scope for our subscription analytics product. I've captured the target segments, core features, and initial success metrics in A1. The goal is to lock this down so we can move forward with requirements and planning. Please review and share feedback—especially on whether the feature set feels right for a 30-day pilot. I want to make sure we're not overcommitting.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 94563,
+            "reply_to": "M1",
+            "text": "Thanks for getting this started. I've reviewed A1 and I see we're targeting mid-market SaaS companies initially. That makes sense given our existing customer base. One thing I want to flag: the feature list includes real-time dashboards, but I'm not sure if our current data pipelines can handle that latency. Should we validate with the infrastructure team before we lock this in?",
+            "mentions": [
+              22473,
+              123347
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 123347,
+            "reply_to": "M2",
+            "text": "Good catch. I'm running the infrastructure assessment now (T3). Early findings suggest our current pipelines can support near-real-time updates with a 5-10 minute lag, but true real-time would require additional work. I'll have a full feasibility summary by EOD tomorrow. For now, I'd recommend we scope the MVP to near-real-time and defer true real-time to a later phase.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 132848,
+            "reply_to": "M1",
+            "text": "I've also looked at A1. The target segment and feature prioritization look solid. One question: what's our baseline for success metrics? I see we have adoption rate and NPS, but I want to make sure we have clear thresholds that define 'success' vs. 'needs iteration' for the pilot. This will help us decide whether to expand after 30 days.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 22473,
+            "reply_to": "M4",
+            "text": "That's a fair point. I've set initial targets, but they're rough. Let me work with you and 94563 to refine the success metrics and add clear thresholds. I'll update A1 by tomorrow EOD with those details. In the meantime, should we assume near-real-time is acceptable for the MVP, or do we need to revisit the feature list?",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 242297,
+            "reply_to": "M5",
+            "text": "From an operations perspective, near-real-time works fine for the pilot. Our customer success team can work with that latency. What I need to understand is: who are the actual pilot customers we're targeting? I see the segment definition, but I need a concrete list so we can start planning onboarding and support workflows.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 94563,
+            "reply_to": "M6",
+            "text": "That's part of T8—pilot customer selection. I'm working on the criteria and candidate list now. I'll have a shortlist of 5-8 prospects by end of week, with rationale for each. We'll need sales input to validate these are realistic targets and that we can get them to commit in the next 2 weeks.",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 132848,
+            "reply_to": "M7",
+            "text": "Before we finalize the customer list, I want to make sure the pricing model aligns with the segment we're targeting. I'm working on T4 and T5 in parallel. The financial model and tier design will influence which customers are the best fit. Can we sync on this before we lock in the pilot customer list?",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 22473,
+            "reply_to": "M8",
+            "text": "Absolutely. Let's do a sync call tomorrow afternoon to align on segment, pricing, and customer list. I want to make sure we're not creating conflicts. In the meantime, let me propose we move forward with the near-real-time feature scope and mid-market SaaS as the primary segment. Does everyone agree we can lock those in as D1 and D2?",
+            "mentions": [
+              132848,
+              94563,
+              123347,
+              242297
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 94563,
+            "reply_to": "M9",
+            "text": "I'm good with locking the feature scope and segment. That gives us a clear boundary for requirements work (T2). I'll start drafting the detailed user stories and acceptance criteria once we confirm this.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 123347,
+            "reply_to": "M9",
+            "text": "Confirmed. Near-real-time scope works for infrastructure planning. I'll align my T3 and T9 assessments with that assumption.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 242297,
+            "reply_to": "M9",
+            "text": "Good. Mid-market SaaS is a segment we know well. That helps with onboarding planning. I'll use this to start mapping out the customer success workflows.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 132848,
+            "reply_to": "M9",
+            "text": "Locked in. This gives me a clear target for the financial model. I'll make sure the pricing tiers reflect the value we're delivering to mid-market SaaS companies.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 22473,
+            "reply_to": "M13",
+            "text": "Great. So to summarize: we've locked D1 (MVP feature scope = near-real-time dashboards + core analytics) and D2 (primary segment = mid-market SaaS). Next steps: I'll refine success metrics in A1 by tomorrow EOD. 94563, can you have the customer shortlist ready by Friday? 132848, when can we expect the pricing model draft?",
+            "mentions": [
+              94563,
+              132848
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 132848,
+            "reply_to": "M14",
+            "text": "I'll have a draft pricing model and tier proposal ready by Thursday EOD. That gives us time to review before the sync call tomorrow.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 94563,
+            "reply_to": "M14",
+            "text": "Friday EOD for the shortlist. I'll include selection criteria and rationale for each candidate so we can validate with sales.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 22473,
+            "reply_to": "M16",
+            "text": "Perfect. That gives us a solid foundation for the next phase. Let's reconvene on this thread once we have the pricing model and customer list, and we can finalize the go-to-market strategy.",
+            "mentions": [
+              94563,
+              132848
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 22473,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 94563,
+              "when": "after D1 locked"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 94563,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 132848,
+              "when": "Thursday EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Validate technical feasibility and agree on infrastructure changes for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M18",
+            "speaker_id": 123347,
+            "reply_to": null,
+            "text": "I've completed the initial infrastructure assessment (T3). Here's what I found: our current data pipelines can support near-real-time analytics with a 5-10 minute lag. We have three existing data sources that feed into our warehouse, and they're stable. However, to support the KPI dashboard we're planning (A8), we'll need to add a new aggregation layer and optimize query performance. I've documented the gaps and risks in the feasibility summary. The question is: which of these infrastructure changes are we committing to for the pilot timeline?",
+            "mentions": [
+              22473,
+              94563,
+              132848,
+              242297
+            ],
+            "artifact_refs": [
+              "T3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 94563,
+            "reply_to": "M18",
+            "text": "Thanks for the detailed assessment. The 5-10 minute lag is acceptable for our use case. But I want to understand the effort and risk for the aggregation layer. How long would that take to implement, and what's the risk if we don't have it ready by day 30?",
+            "mentions": [
+              123347
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 123347,
+            "reply_to": "M19",
+            "text": "The aggregation layer would take about 2 weeks to build and test. If we don't have it, the dashboard queries will be slow—probably 30-60 second load times instead of sub-5-second. That's not ideal for a pilot, but it's workable if we set customer expectations. Alternatively, we could scope the dashboard to a smaller set of KPIs initially and add more later.",
+            "mentions": [
+              94563
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 132848,
+            "reply_to": "M20",
+            "text": "From a business perspective, slow dashboard performance could hurt the pilot experience. Customers expect responsive analytics tools. I'd recommend we prioritize the aggregation layer. Can we get it done in 2 weeks if we start now?",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 123347,
+            "reply_to": "M21",
+            "text": "Yes, if we start this week and have clear requirements from the product team. I'll need the final KPI list and dashboard spec (A8) by end of this week so I can scope the work accurately. I've also documented the rollback plan in case we hit issues.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 22473,
+            "reply_to": "M22",
+            "text": "I'll make sure the KPI dashboard spec is finalized by Friday. 94563, can you help me lock down the KPI list and data sources? We need to make sure everything we're tracking is actually available in the current pipelines.",
+            "mentions": [
+              94563,
+              123347
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 94563,
+            "reply_to": "M23",
+            "text": "I'll review the KPI list against our data sources and flag any gaps. I can have that done by Thursday so we have time to adjust before the spec is finalized.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 242297,
+            "reply_to": "M22",
+            "text": "From an operations standpoint, I need to know: once the aggregation layer is live, what's the support burden? Will we need to monitor it, or is it hands-off?",
+            "mentions": [
+              123347
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 123347,
+            "reply_to": "M25",
+            "text": "It will need monitoring initially—probably daily checks for the first 2 weeks, then we can move to weekly. I'll document the monitoring checklist and escalation path in T9. Once it's stable, it's mostly hands-off.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 22473,
+            "reply_to": "M26",
+            "text": "Okay, so here's what I'm hearing: we need to commit to the aggregation layer (D3) to ensure good dashboard performance. And we need to confirm that our current data pipelines can support the KPIs we're tracking (D4). 123347, can you confirm that the existing pipelines support the KPI list once we finalize it?",
+            "mentions": [
+              123347,
+              94563
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 123347,
+            "reply_to": "M27",
+            "text": "Yes, I can confirm that. Once 94563 and I align on the final KPI list, I'll do a quick validation against our data sources. I'm confident we can support the core metrics. Any custom or complex metrics might need some work, but the standard ones are covered.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 132848,
+            "reply_to": "M28",
+            "text": "Good. So we're committing to the aggregation layer and confirming data pipeline support. That means we can move forward with confidence on the analytics features. I'll make sure the business case reflects the infrastructure investment.",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 22473,
+            "reply_to": "M29",
+            "text": "Perfect. Let me summarize: D3 is locked—we're building the aggregation layer as part of the pilot prep. D4 is confirmed—current pipelines support our KPIs. Next steps: 94563 validates KPI list by Thursday, I finalize A8 by Friday, and 123347 starts the aggregation layer work this week. Does that work for everyone?",
+            "mentions": [
+              94563,
+              123347
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 123347,
+              "when": "completed"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 123347,
+              "when": "this week"
+            },
+            {
+              "task_id": "A8",
+              "owner_id": 22473,
+              "when": "Friday EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Converge on pricing, subscription tiers, and discount rules.",
+        "messages": [
+          {
+            "msg_id": "M31",
+            "speaker_id": 132848,
+            "reply_to": null,
+            "text": "I've drafted the financial model (A2) and initial pricing proposal for the subscription product. I'm proposing three tiers: Starter ($500/month), Professional ($1,500/month), and Enterprise (custom). The model assumes 10 pilot customers in month 1, growing to 30 by month 3. I've also drafted discount guidelines (A5) that allow up to 20% discounts for annual commitments and require approval for anything deeper. Let me know your thoughts on the tier structure, pricing levels, and discount thresholds.",
+            "mentions": [
+              22473,
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 94563,
+            "reply_to": "M31",
+            "text": "I've reviewed A2 and the tier structure looks reasonable. But I want to validate the pricing against our target segment. Mid-market SaaS companies typically have tight budgets. Have we tested these price points with any customers, or are these based on market research?",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 132848,
+            "reply_to": "M32",
+            "text": "Good question. The pricing is based on competitive analysis and our cost structure, but you're right—we should validate with actual customers. I'd recommend we test these price points with 2-3 prospects from the pilot list before we finalize. That's part of the customer validation risk mitigation.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 22473,
+            "reply_to": "M33",
+            "text": "Agreed. Once we have the pilot customer shortlist, we can do a quick pricing validation call with a few of them. But for now, should we move forward with these tiers as our working hypothesis? We can adjust based on feedback.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 242297,
+            "reply_to": "M34",
+            "text": "From a sales perspective, I like the three-tier structure. It gives us flexibility to position different value propositions. But I have a question on the discount policy (A5): the 20% threshold for annual commitments seems tight. In my experience, we often need to go deeper to close deals, especially in a pilot. Can we make that more flexible?",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 132848,
+            "reply_to": "M35",
+            "text": "I understand the concern, but we need to protect margin during the pilot. If we go too deep on discounts, we won't have a realistic picture of unit economics. How about this: we allow up to 25% for annual commitments, and anything deeper requires approval from me and the finance team. That gives sales some flexibility while keeping us disciplined.",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 242297,
+            "reply_to": "M36",
+            "text": "That works better. 25% for annual is reasonable, and the approval gate for deeper discounts makes sense. I can work with that.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 94563,
+            "reply_to": "M36",
+            "text": "One more thing: should we have different discount rules for different tiers? For example, maybe we're more flexible on Starter tier discounts but stricter on Enterprise?",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 132848,
+            "reply_to": "M38",
+            "text": "That's a good idea. Let me revise A5 to include tier-specific discount rules. Starter can go up to 30%, Professional up to 25%, and Enterprise requires case-by-case approval. That gives us more flexibility at the lower end while protecting margin on higher-value deals.",
+            "mentions": [
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 22473,
+            "reply_to": "M39",
+            "text": "Good. So we're converging on: three tiers (Starter $500, Professional $1,500, Enterprise custom), tier-specific discount rules (30/25/case-by-case), and we'll validate pricing with pilot customers. Should we lock D5 (tier selection) and D6 (discount thresholds) now, or do we want to wait for customer feedback?",
+            "mentions": [
+              132848,
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 132848,
+            "reply_to": "M40",
+            "text": "I'd recommend we lock the tier structure and discount rules now (D5 and D6), but flag that pricing levels are subject to validation. That gives us a framework to work with while we test with customers.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 242297,
+            "reply_to": "M41",
+            "text": "Works for me. I can start positioning the tiers to prospects with the caveat that pricing is preliminary.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 94563,
+            "reply_to": "M41",
+            "text": "Agreed. Locking the structure now gives us a clear framework for the business requirements (T2). I can use this to define feature mapping for each tier.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 22473,
+            "reply_to": "M43",
+            "text": "Perfect. So D5 and D6 are locked: three-tier structure with tier-specific discounts. 132848, can you finalize A5 with the tier-specific rules by tomorrow? And let's plan a pricing validation call with 2-3 pilot prospects by next week.",
+            "mentions": [
+              132848,
+              242297
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 132848,
+            "reply_to": "M44",
+            "text": "A5 will be updated by tomorrow EOD. I'll also prepare a pricing validation script for the customer calls so we're consistent in how we test.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 132848,
+              "when": "completed"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 132848,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define onboarding process and internal responsibilities for pilot customers.",
+        "messages": [
+          {
+            "msg_id": "M46",
+            "speaker_id": 242297,
+            "reply_to": null,
+            "text": "I've drafted the onboarding process and RACI matrix for the pilot (T6 and T11). The process has 6 steps: account setup, data integration, dashboard configuration, user training, go-live, and post-launch support. I've assigned owners for each step and documented the escalation paths. I've also created A4, the onboarding checklist, so we have a consistent process for all pilot customers. Please review and let me know if there are gaps or if any team needs clarification on their responsibilities.",
+            "mentions": [
+              22473,
+              94563,
+              123347,
+              132848
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 94563,
+            "reply_to": "M46",
+            "text": "I've reviewed the RACI and the process looks solid. One question: for the data integration step, who owns the customer side of that? We need to make sure customers understand what data they need to provide and in what format.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 242297,
+            "reply_to": "M47",
+            "text": "Good catch. I've assigned that to customer success, but we need to provide them with clear documentation. 123347, can you create a data integration guide that explains what data we need and how customers should format it? That should be part of the onboarding pack.",
+            "mentions": [
+              123347,
+              94563
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 123347,
+            "reply_to": "M48",
+            "text": "I can do that. I'll create a simple guide with examples and common formats. I'll have it ready by end of week so it can be included in the onboarding pack.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 22473,
+            "reply_to": "M48",
+            "text": "Good. I also want to make sure the dashboard configuration step is clear. Who's responsible for that—customer success or product?",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 242297,
+            "reply_to": "M50",
+            "text": "I've assigned that to customer success with support from product. The idea is that customer success does the initial setup based on customer requirements, and product is available for questions or custom configurations. Does that work?",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 22473,
+            "reply_to": "M51",
+            "text": "That works, but I want to make sure we have clear escalation paths. If a customer has a complex configuration request, who decides if it's in scope for the pilot or if it needs to be deferred?",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 242297,
+            "reply_to": "M52",
+            "text": "I've documented that in the escalation path: customer success escalates to me, I assess if it's in scope, and if not, I escalate to you. That way we have a clear decision point.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 132848,
+            "reply_to": "M53",
+            "text": "I like the escalation structure. One thing I want to flag: we need to track onboarding metrics so we can measure success. How are we capturing data on onboarding time, customer satisfaction, and any blockers?",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 242297,
+            "reply_to": "M54",
+            "text": "Good point. I'll add a tracking section to A4 that captures onboarding start date, completion date, any blockers, and a post-onboarding satisfaction check. That gives us data to measure the process and identify improvements.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 94563,
+            "reply_to": "M55",
+            "text": "That's helpful. I can use that data to refine the onboarding process for the next phase. Also, I want to make sure the user training step is clear. What's the format—live session, recorded video, documentation?",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 242297,
+            "reply_to": "M56",
+            "text": "I'm proposing a combination: we provide recorded videos for self-paced learning, and we offer a live Q&A session for each customer. That way customers can learn at their own pace but also get direct support.",
+            "mentions": [
+              94563
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 22473,
+            "reply_to": "M57",
+            "text": "That sounds good. So here's what I'm hearing: we have a clear 6-step onboarding process with assigned owners, escalation paths, and tracking. The RACI is documented, and we'll have supporting materials like the data integration guide and training videos. Should we lock D7 now—approve the onboarding checklist and owner assignments?",
+            "mentions": [
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 242297,
+            "reply_to": "M58",
+            "text": "I'm ready to lock D7. I'll finalize A4 with the tracking section and tier-specific onboarding variations by tomorrow EOD. Then we can brief the customer success team on the process.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 123347,
+            "reply_to": "M59",
+            "text": "I'll have the data integration guide ready by Friday. That should give customer success time to review before we start onboarding pilots.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 94563,
+            "reply_to": "M59",
+            "text": "Locked. D7 is approved. I'll use this process as the baseline for the business requirements (T2) so we're aligned on what the product needs to support.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4",
+              "T2"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 22473,
+            "reply_to": "M61",
+            "text": "Perfect. D7 is locked. Next steps: 242297 finalizes A4 by tomorrow EOD, 123347 delivers the data integration guide by Friday, and we schedule a customer success team briefing for next week. Does that work?",
+            "mentions": [
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 242297,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 242297,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "A4",
+              "owner_id": 242297,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on next-phase roadmap.",
+        "messages": [
+          {
+            "msg_id": "M63",
+            "speaker_id": 22473,
+            "reply_to": null,
+            "text": "We've completed the pilot phase with 8 customers over 30 days. I've compiled the early KPI results and customer feedback summary. Here's what we're seeing: adoption rate is 87.5% (target was 80%), NPS is 42 (target was 35), and we've had zero churn. On the feature side, customers loved the dashboard but asked for more customization options. There were some onboarding friction points that we can address. I've documented all of this in the pilot learnings summary. Now we need to decide: do we expand, iterate, or pause?",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 132848,
+            "reply_to": "M63",
+            "text": "These are strong results. 87.5% adoption and 42 NPS are both above target. From a business perspective, this validates the product-market fit for the segment. The question is: what's the unit economics? Are we hitting the revenue targets from the financial model (A2)?",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 22473,
+            "reply_to": "M64",
+            "text": "Good question. We're tracking slightly below the model on month 1 revenue due to discounts we offered to close deals, but the trend is positive. By month 3, we're projecting to hit the model. The unit economics look healthy once we account for the infrastructure investment.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 94563,
+            "reply_to": "M65",
+            "text": "From a product perspective, the feedback is clear: customers want more dashboard customization and better data export options. These are features we deferred to phase 2. Should we prioritize these for the next release, or do we want to expand to more customers first?",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 242297,
+            "reply_to": "M66",
+            "text": "From a customer success perspective, the onboarding process worked well. We had some friction on the data integration step, but once customers got past that, adoption was smooth. I'd recommend we expand to more customers and use the feedback to refine the onboarding process.",
+            "mentions": [
+              94563
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 123347,
+            "reply_to": "M67",
+            "text": "The infrastructure held up well. We had one minor performance issue in week 2, but the aggregation layer we built (T9) handled the load. I'd say we're ready to scale to 30-50 customers without additional infrastructure work.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 22473,
+            "reply_to": "M68",
+            "text": "So the consensus seems to be: expand to more customers, iterate on the features based on feedback, and refine the onboarding process. That means D8 is: expand the product to a broader customer base with a phased feature roadmap. Does everyone agree?",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 132848,
+            "reply_to": "M69",
+            "text": "I agree, but I want to make sure we have a clear roadmap for the next 2-3 releases. 22473, can you document the feature priorities and timeline in T12? That will help us plan resource allocation and communicate to customers.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 22473,
+            "reply_to": "M70",
+            "text": "I'll document the roadmap in T12 by end of week. I'll prioritize the features based on customer feedback and business impact. The top priorities are dashboard customization, data export, and advanced filtering.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 94563,
+            "reply_to": "M71",
+            "text": "Those are good priorities. I'll use that roadmap to refine the business requirements for the next phase. I can also start gathering more detailed requirements from the pilot customers on what customization options they want.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 242297,
+            "reply_to": "M72",
+            "text": "I'll also schedule a customer advisory board call with the pilot customers to get their input on the roadmap. That will help us validate priorities and build loyalty.",
+            "mentions": [
+              94563
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 22473,
+            "reply_to": "M73",
+            "text": "Great. So D8 is locked: expand the product with a phased feature roadmap. Next steps: I'll document the roadmap in T12 by Friday, 94563 will gather detailed requirements, and 242297 will schedule the customer advisory board. We'll reconvene next week to finalize the expansion plan.",
+            "mentions": [
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 132848,
+            "reply_to": "M74",
+            "text": "Locked. I'll update the financial model to reflect the expansion scenario and present it to leadership next week. This is a strong validation of the business case.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 22473,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 94563,
+              "when": "ongoing"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

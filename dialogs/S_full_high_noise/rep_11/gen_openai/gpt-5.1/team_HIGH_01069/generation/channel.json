@@ -1,0 +1,1538 @@
+{
+  "channel": {
+    "channel_id": "proj-support-portal-mvp",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, key workflows, and initial backlog for the support portal.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 109718,
+            "reply_to": null,
+            "text": "Kicking off the unified support portal work.\n\nGoal for this thread: align on MVP scope, key workflows, and what we pull into the first sprint.\n\nGiven the 21-day window, my first pass for MVP is:\n- Agent dashboard with ticket search and creation (backed by minimal APIs)\n- Integrated knowledge base search for agents\n- Basic customer self-service: FAQs and ticket status\n\nFrom the backlog, that suggests we definitely need T1, T2, T3, T4 in motion right away, and we can track them in the MVP sheet in A3.\n\nCan we use A1 to lock the initial workflows (top 10 call types) and then confirm which features are truly day-one vs later iteration?\n\nWould love input from everyone on what is absolutely non-negotiable for the pilot.",
+            "mentions": [
+              6869,
+              337175,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 6869,
+            "reply_to": "M1",
+            "text": "From the call floor side, the non-negotiables for the pilot are:\n- Fast ticket search by customer identifier and phone number\n- Clear view of customer history on the same screen as the script\n- Knowledge base suggestions that are actually relevant to the call type\n\nFor T1, I can start filling A1 with:\n- Current pain points (we jump between 3 tools today)\n- Top 10 call types and their steps\n\nFor MVP scope, I would keep it to:\n1) Agent dashboard with ticket search and creation (T3 + T4)\n2) Embedded knowledge base search for agents (T6 feeding into T4)\n3) Very simple customer FAQ page and ticket status (T11) so we can show self-service, even if limited.\n\nThings I would push to later:\n- Advanced reporting\n- Any complex telephony pop-ups beyond basic integration.\n\nDoes that fit with what you had in mind?",
+            "mentions": [
+              109718,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T3",
+              "T4",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 377231,
+            "reply_to": "M1",
+            "text": "On the web side, that breakdown works.\n\nFor T2 and T4, I suggest we define the MVP experience as:\n- Single agent dashboard page with ticket list, search, and a right-hand panel for customer details and knowledge base suggestions\n- Separate but linked customer FAQ and ticket status pages (T11 later, but we can design with that in mind now)\n\nI will start drafting the site map and key flows in A5 and keep them aligned with the workflows you capture in A1.\n\nOne question: for the pilot, do agents need to create new customers, or can we assume customers already exist in the ticketing system? That impacts how heavy the forms get in the first iteration.",
+            "mentions": [
+              6869,
+              109718
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 337175,
+            "reply_to": "M1",
+            "text": "From backend side, for T3 I can keep the MVP API surface small:\n- ticketSearch: by ticket id, customer id, phone number\n- ticketCreate: minimal fields only\n\nWe can integrate these with the existing ticketing sandbox and log any integration issues in A8.\n\nFor the first sprint, I would not expose advanced filters or bulk updates. That should help us stay within the 21 days.\n\nI will also start a draft of T10 so we have a staging environment early, but I agree T3 and T6 are the main priorities for now.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A8",
+              "T3",
+              "T6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 109718,
+            "reply_to": "M2",
+            "text": "This matches what I was thinking.\n\nTo make it explicit, candidate MVP feature list for the pilot:\n- Agent dashboard with ticket search and creation (T3 + T4)\n- Embedded knowledge base search and suggestions for agents (T6 + T4)\n- Customer FAQ and ticket status pages (T11, minimal)\n- Basic role-based access (agents vs customers)\n\nOut of scope for MVP:\n- Advanced reporting\n- Complex telephony pop-ups\n- Full-blown admin console\n\nIf we agree on this, we can log it in A3 as the MVP scope and then confirm owners and dates for T1–T4.\n\nAny strong objections before we call this the core MVP feature set?",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A3",
+              "T1",
+              "T2",
+              "T3",
+              "T4",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 561396,
+            "reply_to": "M5",
+            "text": "No objections from me.\n\nFrom a front-end perspective, this is a manageable slice:\n- One main agent dashboard (T4)\n- Two simple customer pages (FAQ and ticket status, T11)\n\nWe can design the layout so that adding more modules later does not require a redesign.\n\nFor the knowledge base suggestions, as long as T6 exposes a search endpoint with relevance ranking, we can start with a simple query based on call type and ticket tags.",
+            "mentions": [
+              377231,
+              337175
+            ],
+            "artifact_refs": [
+              "T4",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 6869,
+            "reply_to": "M5",
+            "text": "From the agent side, that MVP list is workable for a pilot.\n\nThe only nuance: for ticket creation, we need at least these fields in the first version:\n- Customer identifier (number we already use)\n- Contact channel (phone, email, chat)\n- Call type (from the top 10 list in T1)\n- Short description\n\nIf we keep it to that, agents will not feel slowed down.\n\nI will reflect this in A1 when I document the workflows for T1.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 337175,
+            "reply_to": "M3",
+            "text": "On the question about creating new customers: for MVP, I suggest we assume customers already exist in the ticketing system.\n\nWe can add a simple link or placeholder for customer creation that points back to the existing tool. That keeps T3 smaller and avoids data model surprises.\n\nIf everyone is ok with that, I will design the ticketCreate endpoint accordingly and note the dependency in A3.",
+            "mentions": [
+              377231,
+              109718,
+              6869
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 377231,
+            "reply_to": "M8",
+            "text": "Assuming existing customers for the pilot works for UX as well.\n\nI will design the agent dashboard so that:\n- Search pulls up existing customers and tickets\n- There is a clear link to the legacy customer creation tool\n\nWe can revisit in a later iteration when we have more time to model customer onboarding properly.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 109718,
+            "reply_to": "M5",
+            "text": "Sounds like we have convergence.\n\nI will record in A3 that the core MVP features are:\n- Agent dashboard with ticket search and creation\n- Integrated knowledge base search for agents\n- Customer FAQ and ticket status pages\n- Basic role-based access\n\nWe will explicitly mark reporting, complex telephony pop-ups, and admin console as post-MVP.\n\nWith that, I propose we treat this as our agreed MVP feature list for the pilot.",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 6869,
+            "reply_to": "M10",
+            "text": "Works for me. I will start T1 today:\n- Capture current pain points and desired features from a few senior agents\n- Document the top 10 call types and workflows in A1\n\nI can have a first draft ready for review by end of day tomorrow so that web and backend can validate flows before going too far on T2 and T3.",
+            "mentions": [
+              377231,
+              337175
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 377231,
+            "reply_to": "M11",
+            "text": "Perfect. For T2, I will:\n- Draft the site map and main navigation flows in A5\n- Create low-fidelity wireframes for the agent dashboard and customer FAQ/ticket status\n\nTarget: share the first draft in this channel by end of day tomorrow as well, so we can iterate quickly.\n\nI will also check with you that the flows cover the top 10 call types once T1 is in A1.",
+            "mentions": [
+              6869
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 337175,
+            "reply_to": "M11",
+            "text": "For T3, I will:\n- Define the ticketSearch and ticketCreate endpoints\n- Hook them up to the ticketing sandbox\n- Add basic logging and error handling\n\nI will log any integration issues in A8 and keep A3 updated with status.\n\nTimeline: first working version in staging in three days, assuming no major surprises from the legacy APIs.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T3",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 561396,
+            "reply_to": "M12",
+            "text": "I will pair on T4 with you:\n- Implement the responsive agent dashboard layout\n- Connect it to the T3 endpoints once they are available\n- Ensure it works well on desktop and tablet and meets basic accessibility checks\n\nI will also keep an eye on T11 so that the customer pages reuse as much of the same components as possible.",
+            "mentions": [
+              377231,
+              337175
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "handshake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 109718,
+            "reply_to": "M10",
+            "text": "To close the loop on ownership and timing for the first sprint:\n- T1: owned by 6869, first draft in A1 by tomorrow end of day\n- T2: owned by 377231, first draft of IA and wireframes in A5 by tomorrow end of day\n- T3: owned by 337175, first working endpoints in staging in three days\n- T4: owned by 561396, initial dashboard wired to mock data in two days, then to real APIs once T3 is ready\n\nI will reflect this in A3 so we can track progress.\n\nUnless anyone disagrees, let us confirm this as the plan for T1–T4 in the initial sprint.",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A3",
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 6869,
+            "reply_to": "M15",
+            "text": "Plan looks good from my side. Having T2 and T4 drafts quickly will help me make sure the scripts and workflows line up with what agents will actually see on screen.",
+            "mentions": [
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 377231,
+            "reply_to": "M15",
+            "text": "All good for me as well. I will post a separate thread once the first IA and wireframes in A5 are ready so we can review navigation and flows in detail.",
+            "mentions": [
+              109718,
+              6869
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 337175,
+            "reply_to": "M15",
+            "text": "Confirmed on T3 and T10. I will share an update in the integration and security thread once the sandbox connection is stable.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "T3",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 6869,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 377231,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 337175,
+              "when": "in three days"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 561396,
+              "when": "in two days"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Lock in information architecture, UX flows, and agent scripts.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 377231,
+            "reply_to": null,
+            "text": "As promised, here is the first draft of the site map and wireframes.\n\nI have uploaded the details into A5 under the project title.\n\nHighlights for T2 and T4:\n- Agent dashboard: single-page layout with ticket list, search bar, customer details panel, and knowledge base suggestions panel\n- Customer side: FAQ page grouped by category and a simple ticket status page\n\nFlows are based on the top 10 call types captured so far in A1 from T1.\n\nI would like feedback on:\n1) Does the navigation cover the main agent workflows?\n2) Are there any missing steps that would make scripts in A2 hard to follow?\n\nOnce we are comfortable, we can treat this IA as the baseline and move to detailed UI and scripts (T5).",
+            "mentions": [
+              6869,
+              109718,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A5",
+              "A1",
+              "A2",
+              "T1",
+              "T2",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 6869,
+            "reply_to": "M19",
+            "text": "I went through the flows in A5 and compared them with the draft workflows in A1.\n\nFor the top 10 call types, the navigation mostly works. A few comments:\n- For password reset calls, agents need a quick link from the ticket to the relevant knowledge base article, not just generic suggestions.\n- For billing disputes, we often need to open a second ticket type. Right now the flow assumes a single ticket per call.\n\nFor T5, when I draft scripts in A2, I will:\n- Reference the exact dashboard sections you defined\n- Call out when agents should use the quick links vs search\n\nCould we add a simple 'create related ticket' action to the dashboard, even if it just opens a pre-filtered create form?",
+            "mentions": [
+              377231
+            ],
+            "artifact_refs": [
+              "A5",
+              "A1",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 561396,
+            "reply_to": "M20",
+            "text": "We can add a 'create related ticket' action without too much complexity.\n\nImplementation idea for T4:\n- Button on the ticket details panel\n- When clicked, it opens the ticket creation form with customer and call type pre-filled\n\nThis should support the billing dispute scenario without changing the underlying data model.\n\nFor the password reset case, we can allow scripts in A2 to include a direct link to a specific knowledge base article, and the dashboard can render that as a pinned suggestion.",
+            "mentions": [
+              377231,
+              337175
+            ],
+            "artifact_refs": [
+              "T4",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 337175,
+            "reply_to": "M20",
+            "text": "From the backend side, the 'create related ticket' action is feasible for T3.\n\nWe can:\n- Accept an optional parentTicketId in the ticketCreate endpoint\n- Use that to link tickets in the existing system, assuming the legacy API supports it\n\nIf the legacy API does not support explicit linking, we can at least store a reference in a custom field. I will confirm this when I work through the integration and log any constraints in A8.",
+            "mentions": [
+              561396,
+              377231
+            ],
+            "artifact_refs": [
+              "T3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hammer_and_wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 109718,
+            "reply_to": "M19",
+            "text": "I like the overall IA in A5. It is simple and focused.\n\nA couple of small suggestions:\n- On the agent dashboard, group navigation into 'My work' (tickets, queues) and 'Knowledge' (articles, scripts) to keep it intuitive.\n- On the customer side, keep the top 5 FAQ topics visible without scrolling on mobile.\n\nIf we incorporate the 'create related ticket' action and the pinned article links mentioned above, I think we are in good shape to call this the initial IA for MVP.\n\nAny other concerns before we lock this in as the baseline for T2 and T4?",
+            "mentions": [
+              6869,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 377231,
+            "reply_to": "M23",
+            "text": "I can incorporate all of that into A5:\n- Add 'create related ticket' to the ticket details panel\n- Add pinned article links for specific scripts\n- Adjust navigation labels to 'My work' and 'Knowledge'\n\nOnce I update the wireframes, I will mark this version as 'MVP baseline' in A5 so we know what we approved.",
+            "mentions": [
+              109718,
+              6869
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 6869,
+            "reply_to": "M23",
+            "text": "From the script-writing angle, this IA works.\n\nFor T5 in A2, I will structure each script as:\n- Entry condition (how the call starts)\n- Navigation steps in the portal (using the labels from A5)\n- Key questions and phrases\n- When to open a related ticket or follow-up\n\nThe only thing I need is a stable naming convention for dashboard sections so that scripts and UI stay in sync.",
+            "mentions": [
+              377231
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 377231,
+            "reply_to": "M25",
+            "text": "Good point on naming.\n\nI will add a small glossary section in A5 with the exact labels for:\n- Ticket list\n- Customer details\n- Knowledge suggestions\n- Related ticket action\n\nYou can then reuse those terms directly in A2 when drafting T5.",
+            "mentions": [
+              6869
+            ],
+            "artifact_refs": [
+              "A5",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 109718,
+            "reply_to": "M24",
+            "text": "Given the feedback and the planned tweaks, I suggest we formally treat the IA and main navigation flows in A5 as approved for the MVP.\n\nWe will still refine visuals, but the structure and flows for T2 and T4 should now be stable enough for implementation and script drafting.",
+            "mentions": [
+              6869,
+              377231,
+              561396,
+              337175
+            ],
+            "artifact_refs": [
+              "A5",
+              "T2",
+              "T4"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 6869,
+            "reply_to": "M27",
+            "text": "Works for me. With the IA locked, I will now focus on T5.\n\nPlan for scripts in A2:\n- Draft scripts for the top 10 call types from A1\n- Make sure each step references a specific part of the dashboard or customer pages\n- Keep them short enough to be usable during live calls\n\nI will share the first batch of scripts for review in two days.",
+            "mentions": [
+              109718,
+              377231
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 561396,
+            "reply_to": "M28",
+            "text": "When you draft the scripts, if you can flag any steps that feel slow or clunky in the UI, we can adjust T4 accordingly.\n\nFor example, if a script requires three clicks to reach a common action, we should probably streamline that before the pilot.",
+            "mentions": [
+              6869,
+              377231
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 337175,
+            "reply_to": "M28",
+            "text": "Also, if any script in A2 assumes data we do not currently have in the ticketing system, please call that out explicitly.\n\nWe may need to add fields to T3 or adjust how we map to the legacy system, and it is better to catch that before we finalise the pilot scope.",
+            "mentions": [
+              6869
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 6869,
+            "reply_to": "M29",
+            "text": "Good call. I will add a small section to each script in A2:\n- Portal friction points (if any)\n\nThat should give you concrete items to tweak in T4 before we go into pilot training.",
+            "mentions": [
+              561396
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 109718,
+            "reply_to": "M28",
+            "text": "Before we close this thread, we should agree on the final list of scripts to prepare for the pilot under T5.\n\nProposal based on A1:\n1) Password reset\n2) Account lockout\n3) Billing dispute\n4) New service activation\n5) Service cancellation\n6) Address change\n7) Contact details update\n8) Outage inquiry\n9) Complaint escalation\n10) General inquiry\n\nIf we agree on these 10, 6869 can focus T5 on them in A2 and we can treat that as the pilot script set.",
+            "mentions": [
+              6869,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "list",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 6869,
+            "reply_to": "M32",
+            "text": "That list matches what we see most often on the floor.\n\nI will use exactly those 10 for T5 in A2. If we discover a gap during pilot feedback, we can add more later, but this is a solid starting set.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 109718,
+            "reply_to": "M33",
+            "text": "Great, then we will treat those 10 as the final script list for the pilot.\n\nI will note this under T5 in A3 so it is clear what is in scope.",
+            "mentions": [
+              6869,
+              377231
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 377231,
+              "when": "today"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 561396,
+              "when": "this week"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 6869,
+              "when": "in two days"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Resolve technical integration and security approach for MVP.",
+        "messages": [
+          {
+            "msg_id": "M35",
+            "speaker_id": 337175,
+            "reply_to": null,
+            "text": "Quick update on API integration and security for the MVP.\n\nFor T3 and T6:\n- Ticketing sandbox: basic connectivity is working, ticketSearch and ticketCreate are returning data\n- Knowledge base: initial data model is in place, and a simple search endpoint is running in the test environment\n\nI have logged two issues in A8:\n1) Ticketing API rate limits are lower than expected\n2) Telephony system API requires additional authentication steps\n\nOn security (T8 and A4), I have started a draft checklist covering authentication, authorisation, logging, and data protection, but we need to agree on:\n- Which ticketing and telephony integrations are in scope for MVP\n- How strict we want to be on logging and audit trails in the first release\n\nWould like to use this thread to make those calls and then finalise A4.",
+            "mentions": [
+              109718,
+              377231,
+              561396,
+              6869
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "A8",
+              "T3",
+              "T6",
+              "T8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 109718,
+            "reply_to": "M35",
+            "text": "Thanks for the update.\n\nOn integration scope for MVP, my suggestion is:\n- Ticketing: full integration for search and creation via T3 (sandbox now, production later)\n- Telephony: keep it minimal for MVP, just enough to identify the caller and maybe open the dashboard with a parameter\n\nGiven the rate limits and extra auth steps you mentioned in A8, I would avoid deep telephony integration in the first 21 days.\n\nOn logging and audit trails, I think we should follow A4 as closely as we can, but if something is too heavy for MVP, we should at least have a clear plan to add it before broader rollout.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "A4",
+              "A8",
+              "T3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 561396,
+            "reply_to": "M35",
+            "text": "From the front-end side, we can support a light telephony integration by:\n- Accepting a caller identifier as a URL parameter\n- Using that to pre-fill the search field on the agent dashboard\n\nThis keeps T4 and T11 simple and avoids tight coupling to the telephony system for now.\n\nAnything beyond that (like full screen-pop flows) feels risky within the MVP timeline.",
+            "mentions": [
+              337175,
+              377231
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 6869,
+            "reply_to": "M35",
+            "text": "From the agent perspective, a light telephony integration is fine for the pilot.\n\nIf the call comes in and the dashboard opens with the caller id already in the search box, that is already a big improvement.\n\nWe do not need full call control in the portal for the first round, as long as the workflow is stable and does not slow us down.",
+            "mentions": [
+              109718,
+              337175
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 337175,
+            "reply_to": "M36",
+            "text": "That aligns with what I am seeing technically.\n\nFor MVP, I propose we define integration scope as:\n- Ticketing: search and create via T3, fully wired to sandbox and then production\n- Telephony: URL-based handoff with caller identifier only, no deep integration\n\nI will document this in A3 and A8 so it is clear what is in and out.\n\nIf we agree, we can treat this as the official MVP integration scope.",
+            "mentions": [
+              109718,
+              561396,
+              377231,
+              6869
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T3",
+              "T10"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 377231,
+            "reply_to": "M39",
+            "text": "Works for me. On the web side, that means we just need to:\n- Read the caller identifier from the URL\n- Trigger a search on page load if it is present\n\nNo extra UI complexity for T4 or T11 beyond that.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 109718,
+            "reply_to": "M39",
+            "text": "Agreed on the integration scope.\n\nOn the security checklist in A4 for T8, can you outline the main items you have so far? I want to make sure we are covering the basics required by ICT security legislation without overcomplicating the MVP.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 337175,
+            "reply_to": "M41",
+            "text": "Current draft of A4 for T8 includes:\n- Authentication: single sign-on for agents, separate login for customers\n- Authorisation: role-based access (agent vs customer vs content editor)\n- Logging: record login events, ticket view and update actions, and admin changes\n- Data protection: HTTPS everywhere, no sensitive data in URLs, basic data retention notes\n\nI still need to:\n- Align the checklist with the latest internal ICT security guidelines\n- Schedule an early review with the security contact\n\nFor MVP, I suggest we treat these items as mandatory, and anything beyond (like advanced anomaly detection) as post-MVP.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 561396,
+            "reply_to": "M42",
+            "text": "From the front-end side, this is all doable for MVP:\n- We can ensure all calls go over HTTPS\n- We can avoid putting sensitive data in URLs\n- We can surface clear session timeout messages so agents are not surprised\n\nFor logging, we will rely on backend events, but we can make sure we send enough context (user id, ticket id) with each call.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 6869,
+            "reply_to": "M42",
+            "text": "On the agent side, the only thing I would flag is session timeouts.\n\nIf the portal logs us out too aggressively, it will hurt call handling time. As long as the timeout is reasonable and clearly communicated, the rest of the checklist sounds fine.",
+            "mentions": [
+              337175,
+              561396
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 109718,
+            "reply_to": "M42",
+            "text": "This looks like a solid baseline.\n\nI suggest we:\n- Finalise A4 with these items as mandatory for MVP\n- Mark anything else as 'next iteration' so we do not lose track\n\nWe will still need the internal security officer to sign off, but as a team we can treat this checklist as our go-live baseline.",
+            "mentions": [
+              337175,
+              561396,
+              377231,
+              6869
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 337175,
+            "reply_to": "M45",
+            "text": "Agreed.\n\nI will:\n- Update A4 to clearly mark the MVP baseline items\n- Add a short 'post-MVP' section for advanced controls\n- Share A4 with the internal security contact for early feedback\n\nFrom our side, we can consider this checklist as the baseline for go-live readiness, pending that external review.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 337175,
+            "reply_to": "M35",
+            "text": "On T10, I have started setting up the staging environment:\n- Environment is provisioned and reachable internally\n- Basic build and deploy pipeline is in place, but rollback steps still need to be documented\n\nOnce rollback is documented, we can start deploying T3 and T6 changes there regularly and use it for security testing against A4.",
+            "mentions": [
+              109718,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "T10",
+              "T3",
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 109718,
+            "reply_to": "M47",
+            "text": "Nice. Once rollback is documented, let us add a quick checklist item in A3 so that we do not forget to verify it before the pilot.\n\nAlso, please flag in A8 any integration issues that might affect the pilot timeline so we can adjust scope if needed.",
+            "mentions": [
+              337175
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 337175,
+            "reply_to": "M48",
+            "text": "Will do. I will update A3 with a line item for rollback verification under T10 and keep A8 current as we test more edge cases.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 337175,
+              "when": "this week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 337175,
+              "when": "this week"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 337175,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 337175,
+              "when": "in two days"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Prepare and confirm the pilot plan, training, and feedback loop.",
+        "messages": [
+          {
+            "msg_id": "M50",
+            "speaker_id": 6869,
+            "reply_to": null,
+            "text": "Starting a thread on the pilot plan, training, and feedback.\n\nI have a first draft of the pilot training plan and quick-start guide in progress for T9.\n\nOutline so far in A2 and A6:\n- Training agenda: portal overview, agent dashboard walkthrough, top 10 scripts from T5, hands-on practice\n- Quick-start guide: screenshots of the main flows, plus a one-page cheat sheet\n- Governance: who owns knowledge base updates and how often we review content (based on A6)\n\nWe need to agree on:\n1) Pilot start date\n2) Which agent group will participate\n3) How we will collect and prioritise feedback (T12, A7)\n\nSharing this now so we can lock those decisions and adjust T7, T9, T11, and T12 accordingly.",
+            "mentions": [
+              109718,
+              337175,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T5",
+              "T7",
+              "T9",
+              "T11",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 109718,
+            "reply_to": "M50",
+            "text": "Thanks for kicking this off.\n\nGiven the 21-day MVP window and current progress on T1–T4 and T3/T6/T10, I think a realistic pilot start date is the beginning of week 4, right after we have a few days of internal testing.\n\nProposal:\n- Finish core development and basic testing by end of day on day 18\n- Use days 19–20 for internal dry runs\n- Start the pilot with a small group of agents on day 21\n\nDoes that align with what you need for T9 and T12?",
+            "mentions": [
+              6869,
+              337175,
+              377231,
+              561396
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 377231,
+            "reply_to": "M51",
+            "text": "From the web side, that timeline is tight but doable if we keep scope stable.\n\nT4 and T11 should be in a good enough state for training by day 18, assuming no major surprises from integration.\n\nWe will need at least one day to fix any usability issues that come out of the internal dry runs, but we can do that in parallel with finalising the quick-start guide.",
+            "mentions": [
+              109718,
+              6869
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 337175,
+            "reply_to": "M51",
+            "text": "Backend is on track for that schedule as well.\n\nT3, T6, and T10 should be stable enough for a pilot by day 18, with logging and basic monitoring in place.\n\nWe will keep A8 updated with any issues that might affect the pilot so we can decide quickly whether to fix or work around them.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "T3",
+              "T6",
+              "T10",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 6869,
+            "reply_to": "M51",
+            "text": "That timeline works for training.\n\nFor T9, I can:\n- Run a 2-hour training session with the pilot group on day 20\n- Use the quick-start guide as a handout\n- Do a short follow-up Q and A on day 21 after the first live calls\n\nOn the pilot group, I suggest:\n- 8–10 agents from different shifts\n- Mix of experienced and newer agents\n\nI can coordinate with the support manager to confirm names and shifts and record them under T9 in A3.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 109718,
+            "reply_to": "M54",
+            "text": "Great. Let us tentatively set the pilot start date to day 21 with that 8–10 agent group, pending confirmation from the support manager.\n\nOnce you have the list of names, we can treat that as the official pilot group for T9 and T12.",
+            "mentions": [
+              6869
+            ],
+            "artifact_refs": [
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 561396,
+            "reply_to": "M50",
+            "text": "On the quick-start guide, if you share a draft of A2 with screenshots, I can help make sure the images match the latest UI from T4 and T11.\n\nWe should freeze the guide layout a couple of days before training so we are not chasing last-minute UI tweaks.",
+            "mentions": [
+              6869,
+              377231
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 6869,
+            "reply_to": "M56",
+            "text": "Good idea. I will share a draft of the quick-start guide in A2 by day 17 so you can align screenshots with the latest build.\n\nI will also include a short section on knowledge base governance from A6 so agents know how to flag outdated articles during the pilot.",
+            "mentions": [
+              561396
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 377231,
+            "reply_to": "M50",
+            "text": "On T7, we will make sure the knowledge base management UI is ready for support staff before the pilot:\n- Editors can create, edit, publish, and archive articles\n- Role-based access is enforced\n\nThis ties into A6 so that the governance rules are actually enforceable in the tool.",
+            "mentions": [
+              6869,
+              109718
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "books",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 109718,
+            "reply_to": "M50",
+            "text": "We also need to agree on how we will collect and prioritise pilot feedback for T12.\n\nProposal:\n- Use A7 as the central feedback log\n- Collect feedback via a short survey after the first week plus a few quick interviews\n- For each item in A7, tag it as 'usability', 'bug', or 'feature request'\n- At the end of the pilot, identify the top 5 improvement items and feed them back into A3 for the next iteration\n\nDoes that sound workable?",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A7",
+              "A3",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 6869,
+            "reply_to": "M59",
+            "text": "Yes, that works.\n\nDuring the pilot, I can:\n- Encourage agents to log issues and suggestions in A7 after each shift\n- Run a short survey at the end of the first week\n- Do 3–4 quick interviews to dig into the biggest pain points\n\nThen I will summarise the top 5 improvements for T12 and share them with you all for prioritisation.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "clipboard",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 337175,
+            "reply_to": "M59",
+            "text": "From the backend side, if you can flag in A7 which feedback items are blocking vs nice-to-have, that will help us decide what to tackle first in the next iteration.\n\nWe can then map the top 5 items into concrete changes on T3, T6, or new tasks in A3.",
+            "mentions": [
+              6869,
+              109718
+            ],
+            "artifact_refs": [
+              "A7",
+              "A3",
+              "T3",
+              "T6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 561396,
+            "reply_to": "M60",
+            "text": "On the web side, we can react quickly to usability items that show up in A7, especially if they are simple layout or wording tweaks.\n\nFor anything bigger, we will coordinate with you and 109718 to make sure we do not destabilise the portal during the pilot.",
+            "mentions": [
+              6869,
+              109718
+            ],
+            "artifact_refs": [
+              "A7",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 109718,
+            "reply_to": "M54",
+            "text": "To summarise what we have so far:\n- Pilot start date: day 21\n- Pilot group: 8–10 agents across shifts, to be confirmed with the support manager\n- Training: 2-hour session on day 20 plus follow-up Q and A on day 21\n- Feedback: A7 as the central log, survey and interviews feeding into T12\n\nIf everyone is aligned, we can treat this as our pilot plan and feedback approach.",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A7",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 6869,
+            "reply_to": "M63",
+            "text": "Aligned from my side.\n\nI will confirm the pilot agent list with the support manager and update A3 under T9 and T12 once we have names and shifts.",
+            "mentions": [
+              109718
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 109718,
+            "reply_to": "M63",
+            "text": "Given the agreement here, let us formally confirm:\n- Pilot start date: day 21\n- Participating group: 8–10 agents across shifts, as coordinated under T9\n\nI will record this in A3 so it is visible alongside the rest of the MVP plan.",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A3",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 109718,
+            "reply_to": "M60",
+            "text": "And on the feedback side, we will:\n- Use A7 as the single source of truth for pilot feedback\n- Collect input via survey and interviews\n- Identify and agree on the top 5 improvement items for T12 and the next iteration backlog in A3\n\nLet us treat that as our agreed feedback collection and prioritisation approach.",
+            "mentions": [
+              6869,
+              377231,
+              337175,
+              561396
+            ],
+            "artifact_refs": [
+              "A7",
+              "A3",
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 377231,
+              "when": "before day 18"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 6869,
+              "when": "day 20"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 561396,
+              "when": "before day 18"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 6869,
+              "when": "during pilot week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

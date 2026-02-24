@@ -1,0 +1,1882 @@
+{
+  "channel": {
+    "channel_id": "proj-self-service-portal-mvp",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, success metrics, and responsibilities.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 472507,
+            "reply_to": null,
+            "text": "Kicking off the unified self-service support portal work here. We have 30 days to get an MVP live that actually reduces inbound calls and works well on web and mobile. I have started a draft of the MVP scope and metrics in Self-Service Portal MVP Scope and Metrics and linked it to task T1. Proposal for MVP features: 1) Home page with clear entry points to top tasks and FAQs, 2) Search across the knowledge base, 3) FAQ listing with categories and filters, 4) Contact options that nudge to self-service first, 5) Basic analytics hooks. Non-goals for MVP: no logged-in account management flows, no new CRM features, no custom chatbot. Before we lock this in, I would like everyone to react and comment on what feels missing or risky, especially around content volume and training. We will use this thread to converge on the final list and success metrics, then capture them in A1 under T1.",
+            "mentions": [
+              561463,
+              6370,
+              59590,
+              75507,
+              448709
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 561463,
+            "reply_to": "M1",
+            "text": "Thanks for framing this. From a content side, the MVP list looks workable as long as we keep the initial article set tight. For T1 and later T6 and T7, I suggest we cap MVP content at something like 25 FAQs and 10 how-to guides, focused on the top call drivers. Anything beyond that can go into a post-launch backlog. One question: do we want any basic announcements area in MVP, for example a small banner on the home page for outages or known issues, or should that wait until after launch?",
+            "mentions": [
+              472507,
+              6370
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 6370,
+            "reply_to": "M1",
+            "text": "From the call floor perspective, the features you listed cover most of what would help deflect calls. For T2 I am already pulling the top call reasons so we can map them into A2. My only concern is contact options. If we push too hard to self-service without a clear path to an agent, customers might just call anyway and be more frustrated. Maybe for MVP we keep a simple contact us link but place it under the FAQs and search results, so people see answers first.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 75507,
+            "reply_to": "M1",
+            "text": "On navigation and layout for T3 and A4, the proposed MVP scope fits a simple structure: Home, FAQs, Search, and Contact. I would like to keep the top navigation minimal for launch, then expand later if needed. For mobile, I will design a bottom nav or hamburger menu so that search and FAQs are always one tap away. If we agree on these core sections, I can move ahead with the site map and user flows and share wireframes for review.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 448709,
+            "reply_to": "M1",
+            "text": "From the build side for T5 and T9, the MVP list seems ok, but I want to check expectations on search. Are we talking about a simple keyword search over the FAQ content only, or do we need anything more advanced in MVP, like typo tolerance or suggestions? A basic implementation is fine in the 30-day window, but anything more complex might push timelines unless we reuse an existing search service.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 59590,
+            "reply_to": "M1",
+            "text": "For T1 and T11, I can help frame the success metrics and training outcomes. Suggesting three primary metrics for MVP: 1) Percentage of support contacts that start in the portal vs phone, 2) Call volume change on the top 10 drivers covered by FAQs, 3) Portal task completion rate for key journeys like password reset or billing questions. We can refine the exact targets once A7 is configured, but it would be good to agree on these categories now so we can align training and comms.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T1",
+              "T11",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 472507,
+            "reply_to": "M5",
+            "text": "On search for T9, I recommend we keep MVP to a straightforward keyword search over the FAQ and how-to content only, with basic relevance ranking. We can log search queries into A7 so we can see where people struggle and iterate later. Anything like typo handling or suggestions can go into the post-launch backlog. This keeps T5 and T9 achievable within the 30 days.",
+            "mentions": [
+              448709,
+              561463
+            ],
+            "artifact_refs": [
+              "T9",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 561463,
+            "reply_to": "M2",
+            "text": "On the announcements question, I suggest we include a very lightweight banner component in MVP, but limit its use to a single short message at a time. That way we can handle major incidents without building a full news section. I can define a simple template for that under T6 and document it in A3 so content editors know how to use it. Anything like a full news archive can wait.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T6",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mega",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 6370,
+            "reply_to": "M3",
+            "text": "Agree on keeping contact visible but not dominant. For the metrics that 59590 suggested, I can help by tagging which calls are from customers who say they tried the portal first once we go live. That will give us some qualitative context alongside A7. For now, I will make sure the top call drivers I list in A2 are clearly grouped so we can map them to the 25 FAQs and 10 how-tos.",
+            "mentions": [
+              59590,
+              561463
+            ],
+            "artifact_refs": [
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 75507,
+            "reply_to": "M4",
+            "text": "I will reflect the announcements banner and the contact us placement in the wireframes for A4. For MVP, I will keep the banner area small and non-intrusive, and place contact options below search results and FAQs as discussed. Once I have the first pass of the site map and flows ready for T3, I will share them here for feedback before we call them final for MVP.",
+            "mentions": [
+              561463,
+              472507
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "art",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 448709,
+            "reply_to": "M7",
+            "text": "Got it on search scope. I will plan T5 and T9 around a simple keyword search over the content repository only. Once A4 is stable, I will align the navigation and page structure with the wireframes so we do not overbuild. For analytics events, I will wait for your plan under T10 so we wire them correctly from the start.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 59590,
+            "reply_to": "M6",
+            "text": "To make the metrics more concrete for A1, how about we set initial targets like: 1) At least 20 percent of support interactions starting via the portal within the first month, 2) 10 percent reduction in calls on the top 10 drivers covered by FAQs, 3) 70 percent completion rate on key self-service tasks. These can be refined later, but having numbers now will help us design training under T11 and align expectations with the support manager.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A1",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 472507,
+            "reply_to": "M12",
+            "text": "Those targets look reasonable for MVP. Unless anyone objects today, I propose we adopt: 1) share of support interactions starting via the portal, 2) reduction in calls on top 10 drivers covered by FAQs, 3) completion rate on key self-service tasks, with the initial numeric targets you suggested. I will capture these in A1 under T1. That would give us our 2 to 3 primary success metrics for launch.",
+            "mentions": [
+              59590,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 561463,
+            "reply_to": "M13",
+            "text": "No objections from me. The three metrics you listed are clear and I can align content planning and governance under T6 and A8 to support them. For example, we can prioritise FAQs that map directly to the top 10 call drivers and track their performance in A7. I will also make sure the content templates in A3 include fields that help us measure task completion where possible.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T6",
+              "A8",
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 6370,
+            "reply_to": "M13",
+            "text": "Metrics sound good to me as well. As I work on T2 and later review T7, I will focus on the call reasons that tie directly to those metrics, especially the ones that cause long or repeat calls. That should help us see an impact on the top 10 drivers once the portal is live.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T2",
+              "T7"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 472507,
+            "reply_to": "M8",
+            "text": "Summarising the MVP scope based on this thread so far for A1 and T1: In scope for MVP: 1) Home page with entry points to top tasks and FAQs, plus a simple announcements banner, 2) FAQ listing with categories and basic filters, 3) Keyword search over FAQ and how-to content, 4) Contact options that are visible but secondary to self-service, 5) Basic analytics events for key actions. Out of scope for MVP and explicitly parked: 1) Logged-in account management flows, 2) Advanced search features like suggestions and typo handling, 3) Full news or announcements archive, 4) Any new CRM capabilities. If there are no strong objections, I will mark this as our approved MVP feature list and log the parked items in a post-launch backlog.",
+            "mentions": [
+              561463,
+              75507,
+              448709,
+              6370,
+              59590
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 75507,
+            "reply_to": "M16",
+            "text": "This scope works for design. I will proceed with IA and wireframes under T3 and T8 using this as the boundary, and I will note the parked items so we do not accidentally design for them in MVP. Once I share A4, we can do a quick check against A1 to confirm alignment.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T3",
+              "T8",
+              "A4",
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "art",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 59590,
+            "reply_to": "M16",
+            "text": "All good from my side. With the MVP scope and metrics now clear in A1, I will start drafting the training outline under T11 so that support teams understand what is in the portal at launch and what is intentionally coming later. That should help manage expectations and avoid confusion about the parked items.",
+            "mentions": [
+              472507,
+              6370
+            ],
+            "artifact_refs": [
+              "A1",
+              "T11"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 59590,
+              "when": "today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 75507,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 6370,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Prioritise top call drivers and confirm initial FAQ set.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 6370,
+            "reply_to": null,
+            "text": "I have pulled the latest four weeks of support logs for T2 and drafted the initial mapping in Top Call Drivers and FAQ Mapping. Quick summary of the top 20 call reasons and how I grouped them: 1) Access and login issues (password reset, locked account, username reminder), 2) Billing and payments (view bill, payment methods, failed payment, refunds), 3) Service status and outages, 4) Plan changes and upgrades, 5) General how-to questions (update contact details, change notification settings). For each, I suggested FAQ topics and flagged which ones feel like must-have for MVP vs nice-to-have. Would love feedback from everyone, especially on whether the MVP set feels realistic for T7.",
+            "mentions": [
+              561463,
+              472507,
+              59590
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 561463,
+            "reply_to": "M19",
+            "text": "Thanks for pulling this together. I have reviewed A2 and started sketching how it would translate into the 25 FAQs and 10 how-tos for T7. My initial thought for MVP: 1) Cover all access and login issues with around 6 FAQs plus 2 short how-tos, 2) For billing and payments, 6 to 8 FAQs and 3 how-tos, 3) At least 3 FAQs for service status and outages, 4) 3 to 4 FAQs for plan changes and upgrades, 5) The remaining slots for the most frequent general how-to questions. That should keep us within the MVP content volume we discussed in TH1. Does anyone see any critical gap in this distribution?",
+            "mentions": [
+              6370,
+              472507
+            ],
+            "artifact_refs": [
+              "T7",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 59590,
+            "reply_to": "M19",
+            "text": "Looking at A2 with the metrics from A1 in mind, I would prioritise anything that drives repeat calls or long handle times. From what I see, access and login plus billing issues are the biggest pain points. For MVP, I suggest we treat those two categories as non-negotiable and, if needed, trim general how-to topics to stay within the 25 plus 10 target. We can always add more how-tos post-launch once we see usage patterns in A7.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A2",
+              "A1",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 472507,
+            "reply_to": "M19",
+            "text": "From a technical and UX angle, the categories you proposed map well to the IA we are planning in A4. One thing to watch is that we do not create too many overlapping FAQs that confuse search relevance for T9. For example, instead of separate entries for every small variation of a password issue, we could have one main FAQ with clear sections. That will also keep T7 more manageable within the timeline.",
+            "mentions": [
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "A4",
+              "T9",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 75507,
+            "reply_to": "M22",
+            "text": "Agree on consolidating related questions. For IA under T3, I will group access and login into a single category with a few strong FAQs rather than many small ones. Same for billing. That should make the FAQ page easier to scan and help search results. Once we finalise the MVP FAQ list here, I will reflect it in A4 so navigation and content stay aligned.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "art",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 448709,
+            "reply_to": "M20",
+            "text": "From the build side, the distribution you suggested is fine. For T5 and T9, it does not matter much whether we have 20 or 30 FAQs, but fewer, better-structured articles will make it easier to test search and filters. I just need to know the final categories and approximate counts per category so I can set up the templates and filters correctly.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 6370,
+            "reply_to": "M20",
+            "text": "On the floor, the most frustrating calls are usually: 1) Password reset loops where customers do not receive the email, 2) Confusion about partial payments and due dates, 3) Not knowing whether an outage is local or general. I would like to see at least one FAQ each that clearly explains: how password reset works and what to do if the email does not arrive, how billing cycles and partial payments work, and where to check current service status. If we have to cut somewhere, I would cut some of the less frequent general how-tos first.",
+            "mentions": [
+              561463,
+              59590
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 561463,
+            "reply_to": "M25",
+            "text": "That is helpful. Based on A2 and your input, here is a concrete MVP FAQ set proposal for T7: 1) Access and login: 6 FAQs (password reset, not receiving reset email, locked account, username reminder, multi-device login, security tips) plus 2 how-tos, 2) Billing and payments: 7 FAQs (how billing cycles work, payment methods, failed payments, partial payments, refunds, late fees, updating billing details) plus 3 how-tos, 3) Service status and outages: 3 FAQs (how to check status, what to do during an outage, planned maintenance), 4) Plan changes and upgrades: 4 FAQs, 5) General how-to: 5 FAQs and 5 how-tos focused on contact details, notification settings, and similar. That totals 25 FAQs and 10 how-tos. If we agree, I will treat this as the MVP FAQ set.",
+            "mentions": [
+              6370,
+              472507,
+              59590
+            ],
+            "artifact_refs": [
+              "T7",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 59590,
+            "reply_to": "M26",
+            "text": "This breakdown looks balanced and lines up with the metrics we set in A1. I support using this as the initial MVP FAQ set. For training under T11, I will highlight the access, billing, and outage FAQs as the primary ones agents should reference during calls, so we reinforce portal usage.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A1",
+              "T11",
+              "T7"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 472507,
+            "reply_to": "M26",
+            "text": "No concerns from me. The proposed set fits within the MVP scope in A1 and should be manageable for T7. Let us treat the 25 plus 10 list you outlined as the approved MVP FAQ set and log any additional topics from A2 into a post-launch backlog. That will help us avoid scope creep while still capturing ideas for later.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T7"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 75507,
+            "reply_to": "M26",
+            "text": "With this list confirmed, I will structure the FAQ categories and filters in A4 to match: Access and login, Billing and payments, Service status, Plan changes, and General help. That should make it easy for users to find the right area quickly. If we add more topics later, we can keep them within these same categories.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "art",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 6370,
+            "reply_to": "M27",
+            "text": "I am happy with this set as well. It covers the main reasons people call us and gives agents something concrete to point to. For ownership under T7 and A8, I assume 561463 will own the content, and I can act as reviewer for accuracy on anything related to call flows and edge cases.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "handshake",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 561463,
+            "reply_to": "M30",
+            "text": "Yes, that works. For content ownership under T7 and A8, proposal: 1) I own drafting and maintaining all FAQs and how-tos, 2) 6370 reviews for accuracy and clarity on anything tied to call drivers, 3) 59590 reviews key articles for training alignment, 4) For technical constraints or links into systems, we loop in 472507 as needed. I will document this in A8 so it is clear who owns what after launch.",
+            "mentions": [
+              6370,
+              59590,
+              472507
+            ],
+            "artifact_refs": [
+              "T7",
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 472507,
+            "reply_to": "M31",
+            "text": "That ownership model sounds good and keeps decisions close to the people who know the content and customers best. I am fine being pulled in when there are technical dependencies. Let us treat this as our agreed content ownership approach for the MVP FAQ set and capture it in A8.",
+            "mentions": [
+              561463,
+              6370,
+              59590
+            ],
+            "artifact_refs": [
+              "A8",
+              "T7"
+            ],
+            "decision_refs": [
+              "D4",
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 561463,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 6370,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock in information architecture, UX approach, and visual style.",
+        "messages": [
+          {
+            "msg_id": "M33",
+            "speaker_id": 75507,
+            "reply_to": null,
+            "text": "I have uploaded the first draft of the information architecture and wireframes into Portal Information Architecture and User Flows for T3 and T8. Structure is: 1) Home: search bar, quick links to top categories, announcements banner, 2) FAQs: category list (Access and login, Billing and payments, Service status, Plan changes, General help) with filters and search, 3) Article page: content area, related articles, clear next steps, 4) Contact: options listed after a short prompt to try search or FAQs first. For mobile, navigation collapses into a simple menu with Home, FAQs, and Contact. I have also started a basic style direction in line with A3, focusing on high contrast and large tap targets. Please review and comment on navigation, key flows, and any accessibility or mobile requirements we should lock in now.",
+            "mentions": [
+              472507,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3",
+              "T8",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 472507,
+            "reply_to": "M33",
+            "text": "Thanks for sharing A4. From a flow perspective, the main journeys we need to support for MVP are: 1) Customer lands on Home and searches, 2) Customer browses FAQs by category, 3) Customer reads an article and either resolves the issue or escalates via Contact. The current IA supports these. For accessibility, we must ensure keyboard navigation, proper heading structure, and sufficient color contrast from day one. For mobile, I would like us to assume at least half of traffic will be on phones, so we should design mobile-first layouts for T5.",
+            "mentions": [
+              75507,
+              448709
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 561463,
+            "reply_to": "M33",
+            "text": "From a content perspective, the IA in A4 works well with the FAQ set we agreed in TH2. I like that each category has a clear landing area. For T6 and T7, it would help if the article template includes: 1) Short summary at the top, 2) Step-by-step instructions, 3) Clear call to action if the steps do not work. That will also support accessibility guidelines in A3, especially for users who rely on screen readers.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T7",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 6370,
+            "reply_to": "M33",
+            "text": "Looking at the flows in A4, I like that search is prominent on Home. One suggestion from the call side: on the article page, can we add a small section that says something like 'Still need help' with a link to Contact? That way, when agents guide customers to an article, they can also point them to that section if the steps do not solve the issue. It might reduce repeat calls.",
+            "mentions": [
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 448709,
+            "reply_to": "M34",
+            "text": "From the build side for T5 and T9, the IA is straightforward. I just want to confirm: for mobile, do we want the search bar visible on every page, or only on Home and FAQs? Always-visible search is doable but will take a bit more layout work. Also, for accessibility, I will need a clear list of requirements from A3 so I can bake them into the components early.",
+            "mentions": [
+              75507,
+              472507
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 75507,
+            "reply_to": "M37",
+            "text": "For mobile, I suggest we keep search visible on Home and FAQs, and add a search icon in the header on article pages that opens the search bar. That keeps the layout clean but still makes search easy to reach. I will update A4 and the T8 prototypes to reflect this. For accessibility, I will extract a short checklist from A3 and share it so we are aligned.",
+            "mentions": [
+              448709,
+              472507
+            ],
+            "artifact_refs": [
+              "A4",
+              "T8",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "mag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 59590,
+            "reply_to": "M33",
+            "text": "From a training and adoption angle for T11, the IA looks intuitive. The only thing I would emphasise is consistency between what agents see and what customers see. For example, if we call a category 'Billing and payments' in the portal, we should use the same wording in training materials and scripts. That will make it easier for agents to guide customers through the flows you have in A4.",
+            "mentions": [
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "T11",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 75507,
+            "reply_to": "M36",
+            "text": "Good point on the 'Still need help' section. I will add a standard block at the end of each article in the T8 prototypes, with a short prompt and a link to Contact. We can also include a quick feedback option like 'Was this helpful' if that fits into the analytics plan in A7. That will give us more insight into where content is not resolving issues.",
+            "mentions": [
+              6370,
+              472507
+            ],
+            "artifact_refs": [
+              "T8",
+              "A4",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 472507,
+            "reply_to": "M37",
+            "text": "On accessibility requirements for A3 and T5, let us standardise on: 1) WCAG AA contrast ratios, 2) Full keyboard navigation for all interactive elements, 3) Clear focus states, 4) Semantic HTML with proper headings and landmarks, 5) Alt text for icons where needed. For mobile responsiveness, we should support common breakpoints from small phones up to desktop, with layouts tested at each. If we agree, we can treat these as baseline requirements for MVP.",
+            "mentions": [
+              448709,
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "A3",
+              "T5"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 561463,
+            "reply_to": "M41",
+            "text": "Those requirements work for content as well. I will make sure templates under T6 and A3 support proper headings, lists, and alt text guidance. For the 'Was this helpful' feedback you mentioned in A7, I can add a short note in the style guide so editors know how to phrase it consistently.",
+            "mentions": [
+              472507,
+              75507
+            ],
+            "artifact_refs": [
+              "T6",
+              "A3",
+              "A7"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 448709,
+            "reply_to": "M41",
+            "text": "Confirmed on my side. I will set up the base components in T5 with those accessibility and responsive requirements in mind. Once the T8 prototypes are final, I will align spacing and breakpoints to match. For the 'Was this helpful' block, I will wire it so we can send events into A7 later as part of T10.",
+            "mentions": [
+              472507,
+              75507
+            ],
+            "artifact_refs": [
+              "T5",
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 75507,
+            "reply_to": "M34",
+            "text": "Given the feedback, I propose we lock in the navigation structure in A4 as: 1) Top-level: Home, FAQs, Contact, 2) FAQ categories: Access and login, Billing and payments, Service status, Plan changes, General help, 3) Article template with summary, steps, 'Still need help' block, and optional feedback. Mobile will use a simple header with a menu and search icon. If everyone is comfortable with this, I will treat the IA and key flows as final for MVP and move T8 into visual refinement.",
+            "mentions": [
+              472507,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A4",
+              "T3",
+              "T8"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 6370,
+            "reply_to": "M44",
+            "text": "This structure makes sense to me and should be easy to explain to customers on calls. Having clear categories and a simple Contact page will help when we walk people through the portal step by step.",
+            "mentions": [
+              75507
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 59590,
+            "reply_to": "M44",
+            "text": "I am aligned as well. With the IA and accessibility requirements now clear in A4 and A3, I can start drafting simple diagrams for T11 that show agents how to navigate the portal during calls. That should support adoption from day one.",
+            "mentions": [
+              75507,
+              472507
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 472507,
+            "reply_to": "M44",
+            "text": "To close this out: we are approving the navigation structure and key user flows as described in A4, and we are confirming the accessibility and mobile responsiveness requirements outlined earlier as baseline for MVP. I will reference these in the technical plan so T5 and T9 are built against the agreed IA and standards.",
+            "mentions": [
+              75507,
+              448709,
+              561463
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T9",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 75507,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 448709,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Confirm technical architecture, integrations, and analytics setup.",
+        "messages": [
+          {
+            "msg_id": "M48",
+            "speaker_id": 472507,
+            "reply_to": null,
+            "text": "I have drafted the technical architecture and analytics approach in Technical Architecture and Integration Plan for T4 and T10. High-level: 1) Front-end: responsive web app built on our existing web stack, consuming content via the current CMS, 2) Auth: reuse existing single sign-on for any authenticated views, but MVP content is mostly public, 3) CRM: simple integration to log contact us submissions as cases, no new CRM features, 4) Analytics: events for page views, search queries, FAQ views, 'Was this helpful' responses, and clicks on Contact. Data will feed into Portal Analytics and Call Deflection Dashboard. Please review and flag any concerns, especially around feasibility for T5 and T9 within the 30-day window.",
+            "mentions": [
+              448709,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4",
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 448709,
+            "reply_to": "M48",
+            "text": "I have gone through A5. For T5 and T9, the front-end approach is fine. I just want to confirm that we are not expected to build any custom search engine. I plan to use the existing CMS search API for MVP, wired into the FAQ page and search bar. For analytics, I can add the event hooks you listed, but I will need a clear naming convention from T10 so we do not end up with inconsistent data in A7.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5",
+              "T9",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "grey_question",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 561463,
+            "reply_to": "M48",
+            "text": "From the content side, reusing the current CMS works well for T6 and T7. I just need to make sure the templates we define align with the fields you expect for analytics in A7, for example, article type, category, and whether it is FAQ or how-to. That will help us slice the data later. Also, for the 'Was this helpful' feedback, do you want a simple yes or no, or a more detailed scale?",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T6",
+              "T7",
+              "A7",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 6370,
+            "reply_to": "M48",
+            "text": "Looking at the analytics events in A5 and A7, it would be useful if we can see which FAQs are most viewed before a call. I know that might be hard to link directly, but even seeing which topics get a lot of 'Was this helpful' no responses would help us know where customers still end up calling. That way we can adjust content under T7.",
+            "mentions": [
+              561463,
+              472507
+            ],
+            "artifact_refs": [
+              "A7",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 59590,
+            "reply_to": "M48",
+            "text": "For T11 and our success metrics in A1, the events you listed cover what we need. I would add one more: track when users click from an FAQ to Contact. That will help us understand where self-service is not enough and where training or content updates might be needed. We can review these patterns in the weekly metrics review using A7.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T11",
+              "A1",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 472507,
+            "reply_to": "M49",
+            "text": "Correct, for MVP we will reuse the existing CMS search API and not build a custom engine. For T10, I will define a simple naming convention like portal_page_view, portal_search, portal_faq_view, portal_feedback, portal_contact_click, and share it in A5 so you can wire events consistently. That should keep A7 clean and easy to read.",
+            "mentions": [
+              448709
+            ],
+            "artifact_refs": [
+              "T10",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 472507,
+            "reply_to": "M50",
+            "text": "On feedback granularity, I suggest we keep MVP to a simple yes or no for 'Was this helpful', plus an optional free-text comment. That keeps T5 and T10 simpler while still giving us useful signals in A7. For content fields, if you can ensure we have article id, type, category, and language in T6 templates, that will be enough for the first version of the dashboard.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T6",
+              "T10",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 448709,
+            "reply_to": "M53",
+            "text": "Understood. I will implement the event hooks in T5 and T9 using the naming convention you outlined and pass the article metadata from the CMS where available. Once you have the first version of A7 wired, I can run a few test sessions so we can validate that events are flowing correctly.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 561463,
+            "reply_to": "M54",
+            "text": "Simple yes or no plus optional comment works for me. I will add those fields into the templates under T6 and document how to use them in A3 and A8 so editors know when to review feedback and update content. That should help us keep articles fresh after launch.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T6",
+              "A3",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 472507,
+            "reply_to": "M52",
+            "text": "Good call on tracking clicks from FAQ to Contact. I will add a portal_contact_from_faq event to the T10 spec in A5 so we can see where self-service breaks down. Combined with the 'Was this helpful' responses, that should give us a solid view in A7 for the weekly reviews.",
+            "mentions": [
+              59590,
+              448709
+            ],
+            "artifact_refs": [
+              "T10",
+              "A5",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 6370,
+            "reply_to": "M51",
+            "text": "Once A7 is live, I can help interpret which topics are still driving calls. For example, if we see a lot of no responses on a billing FAQ and agents still get many calls on that topic, we can flag it for review under T7. That feedback loop will be important in the first few weeks after launch.",
+            "mentions": [
+              561463,
+              472507
+            ],
+            "artifact_refs": [
+              "A7",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 472507,
+            "reply_to": "M48",
+            "text": "On the integration side in A5, just to be explicit: 1) We will reuse existing SSO for any authenticated views, but MVP content is public, 2) Contact us form will create cases in the current CRM via the existing API, no schema changes, 3) No new background jobs or batch processes for MVP. If there are no objections, I would like to treat this as our approved technical architecture and integration approach for T4.",
+            "mentions": [
+              448709,
+              561463
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 448709,
+            "reply_to": "M59",
+            "text": "No objections from me. Keeping to existing SSO and CRM APIs will make T5 and T9 much more straightforward. I will proceed assuming no new backend components are needed for MVP.",
+            "mentions": [
+              472507
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9",
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 59590,
+            "reply_to": "M57",
+            "text": "With the event set now clear in A5 and A7, I propose we agree on a simple reporting cadence: weekly review of portal usage, search behaviour, and call deflection indicators for the first eight weeks after launch. I can help prepare a short summary for each review so we can decide on content or training tweaks under T7 and T11.",
+            "mentions": [
+              472507,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A7",
+              "T11",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 472507,
+            "reply_to": "M61",
+            "text": "I like that plan. Let us formalise it as: weekly post-launch metrics review for at least the first eight weeks, using A7 as the source, with a short summary prepared ahead of each session. That will be our agreed reporting cadence for T10 and the analytics events we have defined.",
+            "mentions": [
+              59590,
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 561463,
+            "reply_to": "M62",
+            "text": "Works for me. I will plan to review feedback and article performance ahead of those weekly sessions so we can come with concrete proposals for content updates under T7.",
+            "mentions": [
+              59590,
+              472507
+            ],
+            "artifact_refs": [
+              "T7",
+              "A7"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 472507,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 472507,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 448709,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan pre-launch checks, training, and go-live date.",
+        "messages": [
+          {
+            "msg_id": "M64",
+            "speaker_id": 561463,
+            "reply_to": null,
+            "text": "I have drafted a pre-launch checklist and timeline in Pre-Launch Content and UX Review Checklist for T12, and updated Knowledge Base Governance and Workflow for T6 and A8. The checklist covers: 1) Content accuracy and completeness checks, 2) UX walkthrough across key flows, 3) Accessibility spot checks, 4) Analytics event validation, 5) Training completion for support teams. Proposed timeline: complete content and UX review one week before go-live, fix critical issues within three days, then do a final smoke test. Please review and comment, and we should also reconfirm the MVP scope and readiness criteria from A1 here.",
+            "mentions": [
+              472507,
+              59590,
+              6370
+            ],
+            "artifact_refs": [
+              "A6",
+              "T12",
+              "T6",
+              "A8",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 472507,
+            "reply_to": "M64",
+            "text": "Thanks for pulling this together. From a technical side, I would add to A6: 1) Verify that all pages load correctly on key devices and browsers, 2) Confirm that search and filters work as expected, 3) Validate that analytics events defined in T10 are firing and visible in A7. For readiness, I suggest we only consider go-live once the MVP scope in A1 is fully met and there are no open critical issues from the checklist.",
+            "mentions": [
+              561463,
+              448709
+            ],
+            "artifact_refs": [
+              "A6",
+              "T10",
+              "A7",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 448709,
+            "reply_to": "M64",
+            "text": "On T5 and T9, I can own the technical parts of the A6 checklist: cross-browser checks, search and filter validation, and basic performance checks. I will need a day or two after the final content load to run through everything and fix any issues we find.",
+            "mentions": [
+              472507,
+              561463
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "wrench",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 59590,
+            "reply_to": "M64",
+            "text": "For T11, I have started drafting the training deck and quick-reference guide. Proposal: 1) Run two short virtual training sessions for support teams in the week before go-live, 2) Share the quick-reference guide with screenshots of the main flows from A4, 3) Include a short quiz or checklist so agents can confirm they know how to find the top FAQs. I will also align the training content with the MVP scope in A1 so expectations are clear.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "T11",
+              "A4",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 6370,
+            "reply_to": "M67",
+            "text": "I can help with T11 by reviewing the training materials and quick-reference guide to make sure they match what we see in real calls. It would be good to include a few example call scenarios where agents guide customers through the portal, especially for login and billing issues.",
+            "mentions": [
+              59590
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 75507,
+            "reply_to": "M64",
+            "text": "For the UX walkthrough in A6, I can pair with 6370 to run through the main flows from A4: search, browse by category, read an article, and escalate to Contact. We can capture any confusing steps or visual issues and feed them back into T8 and T12. I will also do a quick accessibility pass based on A3.",
+            "mentions": [
+              6370,
+              561463
+            ],
+            "artifact_refs": [
+              "A6",
+              "A4",
+              "T8",
+              "T12",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "art",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 561463,
+            "reply_to": "M65",
+            "text": "I have updated A6 with the technical checks you suggested and assigned owners: 1) 448709 for technical validation, 2) 75507 and 6370 for UX walkthrough, 3) Myself for content accuracy and governance checks under T6, T7, and T12. For readiness, I agree we should only go live once all MVP items in A1 are done and there are no open critical issues. Minor issues can be logged for post-launch fixes.",
+            "mentions": [
+              472507,
+              448709,
+              6370,
+              75507
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6",
+              "T7",
+              "T12",
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 472507,
+            "reply_to": "M70",
+            "text": "To restate the readiness criteria using A1 and A6: 1) All MVP features agreed in A1 are implemented and tested, 2) No open critical issues from the pre-launch checklist, 3) Analytics events from T10 are validated in A7, 4) Support training under T11 is completed. If we all agree, we can treat this as the final go-live readiness definition.",
+            "mentions": [
+              561463,
+              59590,
+              448709,
+              6370
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T10",
+              "A7",
+              "T11"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 59590,
+            "reply_to": "M71",
+            "text": "Those criteria work for me. I will schedule the two training sessions for the week before the target go-live and make sure attendance is tracked. Once training is done, I will confirm in this channel that T11 is complete so it is clear we have met that part of the readiness checklist.",
+            "mentions": [
+              472507,
+              6370
+            ],
+            "artifact_refs": [
+              "T11",
+              "A6"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 6370,
+            "reply_to": "M70",
+            "text": "I am aligned with the readiness criteria. For the UX walkthrough under T12, I will focus on whether the flows match how customers describe their issues on calls. If I spot any gaps, I will flag them as either critical or post-launch improvements so we keep the go-live date realistic.",
+            "mentions": [
+              75507,
+              561463
+            ],
+            "artifact_refs": [
+              "T12",
+              "A6"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 561463,
+            "reply_to": "M70",
+            "text": "On content ownership after launch, A8 now states: 1) I own ongoing content updates and governance, 2) 6370 reviews high-impact articles regularly for accuracy, 3) 59590 reviews content that ties directly into training or policy changes, 4) We use A7 and the feedback captured via 'Was this helpful' to prioritise updates. Can we confirm that everyone is comfortable with this so we can say content owners are ready for post-launch maintenance?",
+            "mentions": [
+              6370,
+              59590,
+              472507
+            ],
+            "artifact_refs": [
+              "A8",
+              "A7",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 59590,
+            "reply_to": "M74",
+            "text": "I am comfortable with that model. I will plan to review training-related content at least once a month in the first quarter after launch, using A7 to see which topics need more clarity. That should keep T11 and T7 aligned over time.",
+            "mentions": [
+              561463,
+              6370
+            ],
+            "artifact_refs": [
+              "A7",
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 6370,
+            "reply_to": "M74",
+            "text": "Works for me as well. I will set aside time each week after launch to review feedback and call patterns and suggest content tweaks under T7. That should help keep the portal aligned with what customers are actually asking.",
+            "mentions": [
+              561463
+            ],
+            "artifact_refs": [
+              "T7",
+              "A7"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 472507,
+            "reply_to": "M71",
+            "text": "Given the checklist in A6, the readiness criteria we just agreed, and the content ownership model in A8, I am comfortable saying we have a clear path to go-live within the 30-day window as long as we stick to the MVP scope in A1. I will share this summary with the project stakeholders so they know what to expect from the launch.",
+            "mentions": [
+              561463,
+              59590,
+              6370,
+              448709
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8",
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 561463,
+              "when": "next week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 59590,
+              "when": "next week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 561463,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

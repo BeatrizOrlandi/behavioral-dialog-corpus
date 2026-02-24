@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH5 has 14 messages, which is below the global minimum of 15 messages per thread. Additionally, threads TH2 (16 msgs), TH4 (16 msgs), and TH5 (14 msgs) fall below their respective blueprint target message ranges."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH4, the mandatory artifact 'T8' is missing from artifact_refs across all messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'score' is used in the text of multiple messages (e.g., M2, M6, M13)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 5
+  }
+}

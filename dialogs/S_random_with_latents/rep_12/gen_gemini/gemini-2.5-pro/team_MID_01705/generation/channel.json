@@ -1,0 +1,804 @@
+{
+  "channel": {
+    "channel_id": "proj-warehouse-move-metal-line",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, roles and overall move schedule before work starts.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 294961,
+            "reply_to": null,
+            "text": "Team, let's kick off the Warehouse Move & Metal Line Reconfiguration project. The main goal is to get this done over two weekends with zero incidents. I've put together a draft schedule in A1. Please review it and let's lock it in. This covers T1 and T2.",
+            "mentions": [
+              323962,
+              326777,
+              534242,
+              542601
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 534242,
+            "reply_to": "M1",
+            "text": "Checked A1. The timeline looks tight, especially the forklift booking on Saturday morning. Is the maintenance team's preventative work on the other side of the plant confirmed to be finished by then? If not, we'll have a bottleneck for the main lift.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 542601,
+            "reply_to": "M1",
+            "text": "Looks good. We should probably try to move the metal line on the first weekend. That way if something goes wrong we have a buffer. We can do the general inventory the second weekend.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 294961,
+            "reply_to": "M2",
+            "text": "Good point. I've just confirmed with the maintenance supervisor. They are scheduled to finish Friday EOD. I've added a note in A1 to re-confirm with them on Friday afternoon. That mitigates the risk.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 294961,
+            "reply_to": "M3",
+            "text": "Moving the metal line first is a good thought, but the production manager was clear that the line needs to be the last thing to move and the first to be operational. The current sequence in A1 reflects that dependency. We need to stick to that.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 323962,
+            "reply_to": "M1",
+            "text": "The schedule in A1 seems ok to me. Who is going to be the main contact person on the floor for each weekend?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 542601,
+            "reply_to": "M5",
+            "text": "Ah, right. Forgot about that. The current plan in A1 is fine then.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 294961,
+            "reply_to": "M6",
+            "text": "Good question. I can take the lead for the first weekend. For the second weekend, how about you @534242? You have a good handle on the technical details if any issues come up.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 534242,
+            "reply_to": "M8",
+            "text": "Works for me. I can coordinate the second window.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 294961,
+            "reply_to": "M9",
+            "text": "Great. So, to summarize: \n1. The overall move schedule in A1 is approved. (D1)\n2. I will lead on-site coordination for the first weekend, and @534242 will lead the second. (D2)\n\nIf there are no other comments, let's move forward with this plan.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 534242,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 294961,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define and agree on packing, labeling and inventory procedures.",
+        "messages": [
+          {
+            "msg_id": "M11",
+            "speaker_id": 323962,
+            "reply_to": null,
+            "text": "Quick question on T4. For the metal line parts, some boxes will have mixed components. How should we label those to make sure they go to the right spot in the new layout and are easy to find for reassembly?",
+            "mentions": [],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 534242,
+            "reply_to": "M11",
+            "text": "We should use a color-coded system. I can draft something for A2. For example: Red for electrical components, Blue for mechanical fasteners, Yellow for hydraulic fittings. And each label must have the destination zone code from the new layout map. That avoids any confusion.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 542601,
+            "reply_to": "M12",
+            "text": "We could also add QR codes to each label that link to a picture of the contents. I saw that in another warehouse, it's super fast.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 294961,
+            "reply_to": "M13",
+            "text": "That's a neat idea, but for the timeline we have, setting up a QR system might be too complex. The color-coding proposed by @534242 is simple and effective. Let's stick with that. @534242 can you update the Packing and Labeling Standards Guide A2 with that format?",
+            "mentions": [
+              534242,
+              542601
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 534242,
+            "reply_to": "M14",
+            "text": "Sure, I've just updated A2 with the color definitions and a sample label format. Everyone please take a look and confirm if it's clear enough.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 326777,
+            "reply_to": "M15",
+            "text": "The format in A2 looks good. The colors for electrical and hydraulic are clear. This will help a lot during reassembly.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 294961,
+            "reply_to": "M16",
+            "text": "Perfect. Then we have an agreement on the label format and color coding as described in A2. (D3). Now, related to this is T5, the pre-move inventory count. We need to finish this before we start packing. I propose we set the cut-off for any changes to the inventory list A4 for Thursday EOD, the day before the first move weekend. Does that work?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "A4"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 323962,
+            "reply_to": "M17",
+            "text": "Thursday EOD is fine for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 534242,
+            "reply_to": "M17",
+            "text": "Thursday EOD works. That gives us Friday morning to print the final lists and labels.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 294961,
+            "reply_to": "M19",
+            "text": "Excellent. Decision is made: cut-off for completing the pre-move inventory in A4 is Thursday EOD. (D4). I'll update the main schedule.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 534242,
+              "when": "today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 294961,
+              "when": "Thursday EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Clarify safety rules and hazard controls for heavy and dangerous goods.",
+        "messages": [
+          {
+            "msg_id": "M21",
+            "speaker_id": 323962,
+            "reply_to": null,
+            "text": "I was looking at the move path and I'm a bit concerned about moving the solvent drums. The aisle near the west exit is pretty tight, and we'll be using the forklift there. What's the procedure for that?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 534242,
+            "reply_to": "M21",
+            "text": "That's a valid concern. For any dangerous goods, especially in tight spaces, we must have a dedicated spotter. I'd also recommend we completely restrict access to that aisle for the 15 minutes it takes to move those drums. No other foot or vehicle traffic.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "safety_vest",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 294961,
+            "reply_to": "M22",
+            "text": "I agree. That's a critical safety measure. I've updated the draft Safety and Hazard Checklist A3 to include a specific point for 'Loads requiring spotters and restricted access zones'. This will be part of our pre-lift briefing. Please review A3, as this will be our guide for T3 and T7.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 542601,
+            "reply_to": "M23",
+            "text": "What about the main transformer for the metal line? That thing is heavy and needs special handling. We should probably have two spotters for that one.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 326777,
+            "reply_to": "M24",
+            "text": "The transformer is heavy but it's not classified as dangerous goods. It's a standard heavy lift. The main risk is mechanical, not chemical or electrical once it's disconnected. The standard procedure with one spotter should be sufficient as long as the path is clear.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 294961,
+            "reply_to": "M25",
+            "text": "Thanks for clarifying, @326777. So let's define the specific loads that require the extra precautions. Based on the discussion, it's the batch of solvent drums. Any others? If not, we can formalize this.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 534242,
+            "reply_to": "M26",
+            "text": "Just the solvent drums. The other heavy lifts are straightforward. The checklist in A3 looks comprehensive now. I'm good to approve it.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 294961,
+            "reply_to": "M27",
+            "text": "Okay, hearing no objections, let's finalize this. \n1. The final version of the safety checklist A3 is approved for this move. (D5)\n2. The solvent drum load is confirmed to require an additional spotter and a restricted access zone during the move. (D6)\nAny incidents will be logged in A6.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 294961,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate metal drawing line shutdown, relocation and test runs.",
+        "messages": [
+          {
+            "msg_id": "M29",
+            "speaker_id": 326777,
+            "reply_to": null,
+            "text": "Hi all, I've drafted the shutdown and startup procedure for the metal drawing line in A5. This covers the steps for T6. Please review. I need to know the exact time window we have for shutdown on the second weekend so I can coordinate with maintenance for the power cut.",
+            "mentions": [
+              294961,
+              534242
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 294961,
+            "reply_to": "M29",
+            "text": "Thanks @326777. I'm checking the main schedule A1. We have the line relocation planned for Saturday afternoon. To give you enough buffer, can we schedule the shutdown for Saturday at 12:00 PM sharp? That gives the morning shift time to finish their run.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 326777,
+            "reply_to": "M30",
+            "text": "Saturday at 12:00 PM works perfectly. I'll book the maintenance support for then.",
+            "mentions": [
+              294961
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 534242,
+            "reply_to": "M29",
+            "text": "Read through A5. The steps are clear. For the test run part of T8, what are the specific quality and cycle time targets we need to hit before we can say the line is fully operational? We should define those upfront to avoid any ambiguity.",
+            "mentions": [
+              326777
+            ],
+            "artifact_refs": [
+              "A5",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 326777,
+            "reply_to": "M32",
+            "text": "Good question. For the test run, we need to produce a batch of 100 units with a dimensional tolerance of +/- 0.05mm and maintain a cycle time of no more than 45 seconds per unit. If we can hold that for the full batch, we're good to go. I'll add this to A5.",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 542601,
+            "reply_to": "M33",
+            "text": "Should we also check the power consumption? Sometimes after a move the motors draw more current if the alignment is slightly off.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 534242,
+            "reply_to": "M34",
+            "text": "The cycle time and quality checks would indirectly catch any major alignment issues that affect performance. A direct power consumption check is more of a maintenance task, let's keep the operational sign-off focused on production output to avoid delays.",
+            "mentions": [
+              542601
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 294961,
+            "reply_to": "M35",
+            "text": "Agreed, let's stick to the production metrics. So, let's lock in these decisions:\n1. The metal drawing line will be shut down at 12:00 PM on the second Saturday of the move. (D7)\n2. The test run is approved when the line produces 100 units within +/- 0.05mm tolerance and under 45s cycle time. (D8)\nI've updated A1 with the precise time.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 326777,
+              "when": "this week"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 326777,
+              "when": "second move weekend"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review move results, inventory accuracy and lessons learned.",
+        "messages": [
+          {
+            "msg_id": "M37",
+            "speaker_id": 294961,
+            "reply_to": null,
+            "text": "Team, the move is complete! Great work everyone. Let's wrap this up. Please take a look at the post-move inventory verification in A4. We have a few small discrepancies. Also, please add your thoughts for T10, lessons learned.",
+            "mentions": [
+              323962,
+              326777,
+              534242,
+              542601
+            ],
+            "artifact_refs": [
+              "A4",
+              "T10",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 542601,
+            "reply_to": "M37",
+            "text": "The move went well but we had a near-miss on Saturday when the small forklift almost hit a pallet because the aisle wasn't marked clearly. We should use floor tape next time. I logged it in A6. Also, we ran out of medium-sized boxes.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 534242,
+            "reply_to": "M37",
+            "text": "I've analyzed the inventory differences in A4. They are all below 1% and seem to be related to unit of measure conversions (e.g., counted as 'box' instead of 'each'). I don't see any evidence of lost items. I'd say the variance is acceptable and we can close T9.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 323962,
+            "reply_to": "M37",
+            "text": "I agree, the move felt smooth. The color-coded labels were very helpful.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 294961,
+            "reply_to": "M39",
+            "text": "Thanks for that analysis, @534242. That's reassuring. Does everyone agree that the inventory differences in A4 are acceptable and require no further investigation?",
+            "mentions": [
+              534242
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 326777,
+            "reply_to": "M41",
+            "text": "Yes, acceptable from my side. The metal line parts were all accounted for.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 294961,
+            "reply_to": "M42",
+            "text": "Okay, that's a decision then. (D9) The inventory differences are acceptable. For T10, let's capture the top improvement ideas. Based on the feedback so far:\n1. Keep the color-coded labeling system.\n2. Use floor tape to mark temporary high-traffic zones.\n3. Order 20% more packing materials than estimated.\nAny objections to making these our official recommendations?",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 534242,
+            "reply_to": "M43",
+            "text": "Those three points are solid. They cover the main lessons. I agree.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 294961,
+            "reply_to": "M44",
+            "text": "Excellent. We'll formalize those as our top improvement actions. (D10). I'll write up the final report for T10. Thanks again for a successful project, team!",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 294961,
+              "when": "EOW"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,770 @@
+{
+  "channel": {
+    "channel_id": "C_DENTAL_PROD_SETUP",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on facility layout, equipment specs, and initial site survey requirements for the dental appliance production line.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "Team, we have 30 days to get the pilot batch running. I've drafted a high-level production workflow and equipment checklist. Before we lock in specs, we need a site survey to confirm power, ventilation, and floor load capacity. 518065, can you coordinate with building management this week? 255537, I'll need your input on mechanical constraints once we have the site data. 49409, please review the appliance quality criteria and flag any equipment gaps early.",
+            "mentions": [
+              518065,
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 518065,
+            "reply_to": "M1",
+            "text": "I'll reach out to building management today. Do we have a preferred layout direction, or should I ask them what's feasible first?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 48820,
+            "reply_to": "M2",
+            "text": "Ask them first—we need to know constraints before we propose. Once we have their feedback, I'll sketch a layout that fits the lease footprint and minimizes disruption to other tenants. That's D1: site survey and building alignment by EOD Thursday.",
+            "mentions": [
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 255537,
+            "reply_to": "M1",
+            "text": "Understood. I'll prepare a checklist of electrical, hydraulic, and pneumatic requirements for the main equipment. Once you have the site survey, I can cross-check against building specs and flag any gaps. Should I also estimate installation time and any temporary shutdowns we might need?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 48820,
+            "reply_to": "M4",
+            "text": "Yes, please include installation timeline and any downtime windows. We need to avoid disrupting other operations. That's part of the fit-out plan we'll finalize by day 10.",
+            "mentions": [
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 49409,
+            "reply_to": "M1",
+            "text": "I'll review the quality criteria. Just to confirm—are we targeting ISO 13485 compliance for the appliances, or is there a specific standard we need to follow?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 48820,
+            "reply_to": "M6",
+            "text": "Good question. We need to align with healthcare and lab regulations—I'll confirm the exact standards with compliance and get back to you by tomorrow. In the meantime, assume ISO 13485 and dental lab best practices. We'll validate equipment specs against those once confirmed.",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 518065,
+              "when": "EOD Thursday"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 255537,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 48820,
+              "when": "day 10"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define equipment specifications, validate against quality standards, and initiate procurement process.",
+        "messages": [
+          {
+            "msg_id": "M8",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "Following up on the site survey—we now have the building constraints. 255537 and 49409, I need you to validate the equipment specs against our quality and regulatory requirements. I've listed the candidate machines and their key parameters. 49409, please confirm these meet dental appliance standards. 255537, check mechanical fit and installation feasibility.",
+            "mentions": [
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 49409,
+            "reply_to": "M8",
+            "text": "I've looked at the specs. The milling machine looks okay, but I'm not sure about the sintering oven—the temperature tolerance range seems tight. Can we get more detail on that, or should we look at alternatives?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 48820,
+            "reply_to": "M9",
+            "text": "Good catch. I'll request the full spec sheet from the vendor and cross-check against ISO 13485 requirements. If it doesn't meet tolerance, we'll explore alternatives. Can you also test the milling machine specs against your material selection criteria?",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 255537,
+            "reply_to": "M8",
+            "text": "I've reviewed the layout against the site survey. The main production area fits, but we need to upgrade the electrical panel and add a dedicated ventilation line for the sintering oven. I've estimated the cost and timeline—should be doable within the capex budget if we move fast. I can coordinate with the building electrician next week.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 48820,
+            "reply_to": "M11",
+            "text": "Excellent. Please schedule the electrical work for week 2, after we confirm equipment orders. That's D2: equipment specs validated and procurement initiated by end of day 5. 255537, coordinate with the electrician and get a quote. 49409, finalize your quality checklist by tomorrow EOD.",
+            "mentions": [
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 49409,
+            "reply_to": "M12",
+            "text": "Will do. I'll have the quality checklist ready tomorrow. Just want to make sure—once equipment arrives, do we run acceptance tests before installation, or after?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 48820,
+            "reply_to": "M13",
+            "text": "Before installation. We validate on delivery, then install. That way we catch any issues early and don't waste time on faulty equipment. 255537, can you support the acceptance testing?",
+            "mentions": [
+              49409,
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 255537,
+            "reply_to": "M14",
+            "text": "Yes, I'll be there for delivery and acceptance. I'll bring test equipment and documentation. We should have a sign-off sheet ready before the machines arrive.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 49409,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 255537,
+              "when": "week 2"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 48820,
+              "when": "end of day 5"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Establish health and safety compliance checklist and schedule pre-inspection walkthrough.",
+        "messages": [
+          {
+            "msg_id": "M16",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "We need a comprehensive HSE checklist before go-live. This includes electrical safety, ventilation, hazardous waste disposal, and lab-specific protocols. 518065, can you draft the initial checklist based on building requirements? We'll also need to schedule an internal pre-inspection walkthrough before the pilot batch starts.",
+            "mentions": [
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 518065,
+            "reply_to": "M16",
+            "text": "I can start on that. Do we have a specific HSE framework we should follow, or should I use the standard building safety procedures?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 48820,
+            "reply_to": "M17",
+            "text": "Use the standard building procedures as a baseline, then add healthcare lab-specific requirements. I'll send you the regulatory references. 255537, you'll need to review the electrical and mechanical safety sections. 49409, review the material handling and waste disposal sections.",
+            "mentions": [
+              518065,
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 255537,
+            "reply_to": "M18",
+            "text": "Understood. I'll review electrical and mechanical safety. I'll also check that all equipment has proper grounding and emergency stops are accessible.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 49409,
+            "reply_to": "M18",
+            "text": "I'll check the material handling and waste sections. One thing—do we need special disposal procedures for dental materials, or is standard lab waste protocol sufficient?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 48820,
+            "reply_to": "M20",
+            "text": "Good question. Dental materials may include metals and ceramics—we'll need to confirm disposal requirements with compliance. I'll get that info to you by tomorrow. D3: HSE checklist drafted and reviewed by day 12, pre-inspection scheduled for day 28.",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 518065,
+            "reply_to": "M21",
+            "text": "I'll have the draft checklist ready by day 10. Once 255537 and 49409 review their sections, I'll consolidate and we can schedule the walkthrough.",
+            "mentions": [
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 518065,
+              "when": "day 10"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 255537,
+              "when": "day 12"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 49409,
+              "when": "day 12"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 48820,
+              "when": "day 28"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define production process workflow, quality control procedures, and cost-per-unit baseline.",
+        "messages": [
+          {
+            "msg_id": "M23",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "Now that equipment is locked in, I need to finalize the end-to-end production process and quality control workflow. 49409, I'll need your input on appliance testing and acceptance criteria. 255537, please document equipment maintenance and troubleshooting procedures. We also need to establish cost-per-unit baseline after the pilot batch.",
+            "mentions": [
+              49409,
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 49409,
+            "reply_to": "M23",
+            "text": "I can outline the testing procedures. We'll need to check dimensional accuracy, material integrity, and surface finish. How many appliances should we produce in the pilot batch to get a reliable cost baseline?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 48820,
+            "reply_to": "M24",
+            "text": "Good question. I'd suggest 50 units minimum to capture process variability and labor learning curve. That gives us enough data for cost analysis. 49409, can you estimate testing time per unit?",
+            "mentions": [
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 49409,
+            "reply_to": "M25",
+            "text": "Roughly 15-20 minutes per unit for full testing, depending on complexity. So 50 units would take about 12-16 hours of testing time. I'll document the exact procedure and acceptance criteria by day 15.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 255537,
+            "reply_to": "M23",
+            "text": "I'll prepare the maintenance schedule and troubleshooting guide. I'll also track equipment runtime and any issues during the pilot batch so we can refine procedures. Should I set up a log for that?",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 48820,
+            "reply_to": "M27",
+            "text": "Yes, please. Log all runtime, maintenance, and any downtime. That data feeds into the cost-per-unit calculation. D4: production workflow and QC procedures finalized by day 18, cost baseline calculated after pilot batch completion.",
+            "mentions": [
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 48820,
+            "reply_to": "M28",
+            "text": "I'll also apply lean principles to identify any process bottlenecks during the pilot. Once we have the cost baseline, we can optimize further. 49409 and 255537, please flag any inefficiencies you notice during the run.",
+            "mentions": [
+              49409,
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T11",
+              "owner_id": 49409,
+              "when": "day 15"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 255537,
+              "when": "day 18"
+            },
+            {
+              "task_id": "T13",
+              "owner_id": 48820,
+              "when": "day 30"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Coordinate facility fit-out, equipment delivery, and installation timeline.",
+        "messages": [
+          {
+            "msg_id": "M30",
+            "speaker_id": 255537,
+            "reply_to": null,
+            "text": "Equipment orders are confirmed. Delivery is scheduled for day 8. I need to coordinate with 518065 on the electrical upgrade and with building management on installation windows. 48820, should we plan for a full day of installation, or stagger it?",
+            "mentions": [
+              518065,
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 48820,
+            "reply_to": "M30",
+            "text": "Stagger it if possible to minimize disruption. Day 8 for delivery and acceptance testing, day 9-10 for installation and calibration. 518065, can you confirm the electrical work is complete by day 8?",
+            "mentions": [
+              255537,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 518065,
+            "reply_to": "M31",
+            "text": "I'll check with the electrician. The upgrade should be done by day 7, but I need to confirm the exact timeline with building management. I'll have an update by tomorrow.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 255537,
+            "reply_to": "M32",
+            "text": "Once electrical is confirmed, I'll finalize the installation schedule with the equipment vendor. I'll also prepare the acceptance test checklist and coordinate with 49409 for the quality sign-off.",
+            "mentions": [
+              518065,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 49409,
+            "reply_to": "M33",
+            "text": "I'll be ready for the acceptance testing on day 8. I'll bring the quality checklist and test any samples if needed.",
+            "mentions": [
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 48820,
+            "reply_to": "M34",
+            "text": "D5: Equipment delivery and acceptance testing day 8, installation and calibration days 9-10. 255537, send me a daily status update during installation. Any issues, we escalate immediately.",
+            "mentions": [
+              255537
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T14",
+              "owner_id": 518065,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T15",
+              "owner_id": 255537,
+              "when": "day 8"
+            },
+            {
+              "task_id": "T16",
+              "owner_id": 49409,
+              "when": "day 8"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH6",
+        "thread_goal": "Monitor budget, track approvals, and manage risks throughout the project.",
+        "messages": [
+          {
+            "msg_id": "M36",
+            "speaker_id": 48820,
+            "reply_to": null,
+            "text": "We're at day 5. Let's do a quick status check on budget, approvals, and risks. 518065, where are we on building permits and lease alignment? 255537, any equipment delays? 49409, any quality concerns so far?",
+            "mentions": [
+              518065,
+              255537,
+              49409
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 518065,
+            "reply_to": "M36",
+            "text": "Building management approved the layout and electrical upgrade. Permits are in process—should be finalized by day 7. Lease terms are aligned, no issues there.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 255537,
+            "reply_to": "M36",
+            "text": "Equipment is on schedule for day 8 delivery. No delays reported. Electrical upgrade is on track for day 7. All good on the mechanical side.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 49409,
+            "reply_to": "M36",
+            "text": "Quality checklist is done. No concerns yet, but I'm still waiting on the final spec sheet for the sintering oven to confirm tolerance ranges.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 48820,
+            "reply_to": "M39",
+            "text": "I'll follow up with the vendor on the oven spec sheet today. Budget is tracking well—we're within 5% of the capex estimate. Main risk now is the HSE pre-inspection on day 28. 518065, make sure the checklist is complete by day 25 so we have time to address any gaps.",
+            "mentions": [
+              49409,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 518065,
+            "reply_to": "M40",
+            "text": "Understood. I'll consolidate the HSE checklist by day 25 and schedule the pre-inspection for day 28. That gives us a 2-day buffer before pilot production starts on day 30.",
+            "mentions": [
+              48820
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 48820,
+            "reply_to": "M41",
+            "text": "Good. Let's plan a final team sync on day 27 to confirm everything is ready for the pilot batch. 255537, 49409, 518065—please have your sections complete and any outstanding issues flagged by then.",
+            "mentions": [
+              255537,
+              49409,
+              518065
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T17",
+              "owner_id": 48820,
+              "when": "today"
+            },
+            {
+              "task_id": "T18",
+              "owner_id": 518065,
+              "when": "day 25"
+            },
+            {
+              "task_id": "T19",
+              "owner_id": 48820,
+              "when": "day 27"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

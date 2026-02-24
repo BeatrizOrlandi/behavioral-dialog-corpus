@@ -1,0 +1,1163 @@
+{
+  "channel": {
+    "channel_id": "proj-outpatient-checkin-triage-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current workflow, main issues, and project scope before design work.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 196511,
+            "reply_to": null,
+            "text": "Hi team, welcome to the outpatient check-in and triage rollout project. We have 21 days to design and implement a standardized process that reduces waiting times and improves data quality. Let's start by mapping what we do today. Can everyone share how check-in and triage currently work on your shifts, and what the main pain points are? This will feed into A1 and T1.",
+            "mentions": [
+              189450,
+              313168,
+              435140,
+              437517,
+              438229
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 313168,
+            "reply_to": "M1",
+            "text": "Good to start here. From the nursing side, we see patients arriving and waiting for triage. Right now, we don't have a clear escalation path for urgent cases, and sometimes the front desk doesn't flag high-risk patients early enough. Also, consent forms are inconsistent—some patients skip sections. We need clarity on who does what and when.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 438229,
+            "reply_to": "M1",
+            "text": "From front desk, we're juggling paper forms, digital entry, and phone calls at the same time. Patients get confused about what to fill out first. We also don't have a standard way to handle no-shows or late arrivals. Forms are in English only right now, which is a barrier for some patients.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 189450,
+            "reply_to": "M1",
+            "text": "I can help document the current workflow, but I'll need time to observe each shift and talk to staff. There are differences between morning and afternoon—afternoon is busier. I'll start mapping this week.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 437517,
+            "reply_to": "M2",
+            "text": "The escalation and consent issues are critical for quality. We need to track where errors happen—are they at intake, triage, or data entry? Once we have the current map, I can design a checklist that catches these gaps early.",
+            "mentions": [
+              313168
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 196511,
+            "reply_to": "M3",
+            "text": "Language support and form clarity are non-negotiable per the project constraints. Let's agree on two things: (D1) our main success metrics should be reduced check-in time, zero consent gaps, and consistent data entry. (D2) We'll keep the existing appointment system and EHR structure unchanged in the first rollout—we're only redesigning check-in and triage steps. Does that align?",
+            "mentions": [
+              438229,
+              313168,
+              437517
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 313168,
+            "reply_to": "M6",
+            "text": "Agreed. Those metrics make sense. I'd add one more: triage accuracy—we need to measure if the right patients are flagged for escalation. That's where clinical safety matters most.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 437517,
+            "reply_to": "M6",
+            "text": "Confirmed on D2. Keeping the EHR and appointments stable reduces risk. I'll make sure the QC checklist aligns with that scope.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 438229,
+            "reply_to": "M6",
+            "text": "Yes, that works for us. I'll coordinate with the team to make sure we capture all the variations in how we currently handle things.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 196511,
+            "reply_to": "M7",
+            "text": "Perfect. Triage accuracy is in. So D1 is now: reduce check-in time, zero consent gaps, consistent data entry, and triage accuracy. Let me document that. Next, we need the current workflow map by end of week so we can start design work. 189450, can you have a first draft of T1 by Friday?",
+            "mentions": [
+              189450,
+              313168
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 189450,
+            "reply_to": "M10",
+            "text": "I'll do my best. I'll need to schedule time with each shift—morning, afternoon, and maybe evening if there's coverage. I'll reach out to coordinate.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 313168,
+            "reply_to": "M10",
+            "text": "I can help brief 189450 on the clinical side of triage so the map captures the right details. Let me know when you're ready.",
+            "mentions": [
+              189450
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 196511,
+            "reply_to": "M12",
+            "text": "Great. So to recap: D1 and D2 are locked. 189450 will draft T1 by Friday with support from 313168. Once we have the current state map, we'll move to design phase in TH2. Everyone clear on next steps?",
+            "mentions": [
+              189450,
+              313168,
+              438229,
+              437517
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 189450,
+              "when": "Friday EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and validate the new workflow, forms, and triage protocol.",
+        "messages": [
+          {
+            "msg_id": "M14",
+            "speaker_id": 196511,
+            "reply_to": null,
+            "text": "Now that we have the current workflow map from T1, let's move to design. I've prepared initial drafts: A1 updated with the proposed workflow, A2 with standardized intake and consent forms in English and Spanish, and A3 with a triage protocol. Please review and flag any gaps or concerns.",
+            "mentions": [
+              313168,
+              438229,
+              437517
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 313168,
+            "reply_to": "M14",
+            "text": "I've reviewed A2 and A3. The forms look good overall, but I have a concern: the consent section doesn't explicitly ask about data sharing with specialists. That's a compliance gap. Also, in A3, the escalation criteria for 'moderate risk' is vague. We need clearer thresholds so every nurse applies the same standard.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 438229,
+            "reply_to": "M14",
+            "text": "The workflow in A1 looks clearer than what we do now. One thing: the forms are longer than I expected. Will this slow down check-in? We're already tight on time during peak hours.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 437517,
+            "reply_to": "M15",
+            "text": "Good catch on the consent gap. That's a compliance risk. For the escalation criteria, I agree—we need specific vital sign thresholds or symptom combinations, not subjective language. Can we add examples to A3?",
+            "mentions": [
+              313168
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 196511,
+            "reply_to": "M16",
+            "text": "Fair point on form length. Let me check: are there fields in A2 that are 'nice to have' vs. 'must have'? If we trim to essentials, we can speed up intake without losing data quality.",
+            "mentions": [
+              438229
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 313168,
+            "reply_to": "M18",
+            "text": "From a clinical view, the must-haves are: patient ID, chief complaint, current medications, allergies, and consent. Everything else can be collected during the visit or added to the EHR later. That cuts the form in half.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 438229,
+            "reply_to": "M19",
+            "text": "That's much better. If we keep it to those five items plus the consent section, I think we can do check-in in under 3 minutes.",
+            "mentions": [
+              313168
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 196511,
+            "reply_to": "M20",
+            "text": "Okay, I'll revise A2 to include only must-haves and add the data-sharing consent language. For A3, I'll add specific escalation examples. But I need to confirm: are we also updating how data flows into the EHR? That's T6. Who's taking that?",
+            "mentions": [
+              313168,
+              437517
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 438229,
+            "reply_to": "M21",
+            "text": "I can help with T6 if someone with EHR experience leads it. I know the front-desk side, but the technical mapping needs someone who understands the system better.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 196511,
+            "reply_to": "M22",
+            "text": "We don't have a dedicated IT person in this thread, but I can coordinate with IT support to map the EHR fields. I'll document the sequence and share it back for review. That covers T6.",
+            "mentions": [
+              438229
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 437517,
+            "reply_to": "M21",
+            "text": "Once A2 and A3 are finalized, I'll make sure the QC checklist in T4 aligns with the new forms and escalation criteria. That way, audits will catch any deviations early.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 313168,
+            "reply_to": "M24",
+            "text": "Good. So to confirm D3: the revised A2 with must-haves only and explicit data-sharing consent is approved once I review the update. And D4: A3 with specific escalation thresholds and examples is approved once I validate the clinical criteria. Can we target end of week for those revisions?",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 196511,
+            "reply_to": "M25",
+            "text": "Yes, I'll have revised A2 and A3 ready by Thursday for your review. Once approved, we move to training and pilot planning in TH4. 437517, can you have a draft QC checklist ready by Friday based on the final forms and protocol?",
+            "mentions": [
+              313168,
+              437517
+            ],
+            "artifact_refs": [
+              "A2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 437517,
+            "reply_to": "M26",
+            "text": "I'll have the draft ready. I'll also start thinking about how to measure check-in time and triage accuracy during the pilot so we can validate against D1 metrics.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "T4"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 196511,
+              "when": "Thursday EOD"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 313168,
+              "when": "Thursday EOD"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 196511,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 437517,
+              "when": "Friday EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define quality control approach and how audits and incidents will be handled.",
+        "messages": [
+          {
+            "msg_id": "M28",
+            "speaker_id": 437517,
+            "reply_to": null,
+            "text": "Here's the first draft of A4, the daily QC checklist, and a template for A6, the incident and improvement log. The checklist covers the key steps from A1 and A3: patient ID verification, consent completion, triage category assignment, and escalation routing. The log template has sections for incident type, severity, and suggested fix. Please review and let me know what's missing.",
+            "mentions": [
+              196511,
+              313168
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "A1",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 313168,
+            "reply_to": "M28",
+            "text": "The checklist looks comprehensive. One addition: we should track whether escalated patients were seen within the target time. That's a safety metric. Also, the log template is good, but we need a field for 'root cause' so we can spot patterns—is it training, process, or system?",
+            "mentions": [
+              437517
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 196511,
+            "reply_to": "M28",
+            "text": "Good start. I have a question: who does the audit each day? And how do we handle it if someone finds a compliance gap—do we stop the process or log it and fix it later?",
+            "mentions": [
+              437517
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 437517,
+            "reply_to": "M30",
+            "text": "Good questions. For D5, I propose: each shift has a designated auditor—could be a senior admin or nurse. They spot-check 5-10 patient records per shift using A4. If they find a critical gap like missing consent, we flag it immediately and the patient is contacted. Non-critical issues go into the log for the weekly review.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 438229,
+            "reply_to": "M31",
+            "text": "Who decides what's 'critical' vs. 'non-critical'? I want to make sure we're consistent.",
+            "mentions": [
+              437517
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 313168,
+            "reply_to": "M32",
+            "text": "From a clinical standpoint: critical = anything that affects patient safety or consent (missing escalation flag, incomplete consent, wrong triage category). Non-critical = minor data entry errors or formatting issues. We can add that to A4 as a legend.",
+            "mentions": [
+              438229
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 437517,
+            "reply_to": "M33",
+            "text": "Perfect. I'll add that to A4. For D6, I propose: non-critical issues go into A6 daily. We review the log twice a week—Tuesdays and Fridays—to spot trends. If we see the same issue three times, we escalate it for immediate process adjustment or retraining.",
+            "mentions": [
+              313168
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 196511,
+            "reply_to": "M34",
+            "text": "That's a solid approach. Twice-weekly reviews keep us agile without being reactive to every single issue. I like the 'three strikes' rule for escalation. Does everyone agree with D5 and D6?",
+            "mentions": [
+              313168,
+              437517,
+              438229
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 313168,
+            "reply_to": "M35",
+            "text": "Agreed. This gives us early warning without creating extra burden on staff.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 438229,
+            "reply_to": "M35",
+            "text": "Yes, makes sense. I'll make sure the front desk knows who the auditor is each shift and how to log issues.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 437517,
+            "reply_to": "M35",
+            "text": "Confirmed. I'll finalize A4 and A6 with the critical/non-critical legend and root-cause field by tomorrow. Then we can use these in T9 when we set up the audit routine during pilot.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 196511,
+            "reply_to": "M38",
+            "text": "Great. So D5 and D6 are locked. 437517 will finalize A4 and A6 by tomorrow. Next, we need to plan training and pilot in TH4. Let's move there once everyone's ready.",
+            "mentions": [
+              437517,
+              313168,
+              438229
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 437517,
+              "when": "tomorrow EOD"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 437517,
+              "when": "tomorrow EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan training, communication, and pilot rollout details.",
+        "messages": [
+          {
+            "msg_id": "M40",
+            "speaker_id": 196511,
+            "reply_to": null,
+            "text": "Now for the final push: training, SOP, and pilot. I've drafted A5 with training slides and quick-reference sheets for front-desk and nursing staff separately. A7 is a draft SOP that ties together the workflow, forms, protocol, and QC checklist. A8 is patient-facing communication about the new check-in process. Let's review and finalize.",
+            "mentions": [
+              313168,
+              435140,
+              438229
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 435140,
+            "reply_to": "M40",
+            "text": "I've reviewed A5. The content is clear, but I'd suggest adding a scenario-based exercise to each module. For example, 'A patient arrives with chest pain and incomplete consent—what do you do?' That helps staff apply the protocol in real situations. I can help refine the exercises if needed.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 313168,
+            "reply_to": "M40",
+            "text": "A7 looks good overall. One thing: the SOP should reference the EHR data entry steps from T6 so staff know exactly which fields to fill and in what order. Also, A8 is clear, but can we add a note about wait times? Patients want to know how long check-in will take.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 438229,
+            "reply_to": "M40",
+            "text": "A5 is helpful. I'm wondering about the training schedule—when will we do this? We can't pull everyone off the desk at once. And do we need to train everyone before the pilot, or can we do it in waves?",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A5",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 196511,
+            "reply_to": "M43",
+            "text": "Good point. For D7, I propose: we run two 30-minute training sessions per role—one for morning shift, one for afternoon. Sessions are mandatory. We schedule them for next week, before the pilot. 435140, can you help finalize A5 with the scenario exercises? And I'll coordinate T7 to schedule the sessions.",
+            "mentions": [
+              435140,
+              438229
+            ],
+            "artifact_refs": [
+              "A5",
+              "T7"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 435140,
+            "reply_to": "M44",
+            "text": "I can add the scenarios. I'll have them ready by end of week. But I should mention: I'm new to this clinic's workflow, so I'll need input from 313168 and 438229 to make sure the scenarios are realistic.",
+            "mentions": [
+              313168,
+              438229
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 313168,
+            "reply_to": "M45",
+            "text": "Happy to help. I can provide clinical scenarios and edge cases. 438229, can you add admin scenarios?",
+            "mentions": [
+              435140,
+              438229
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 438229,
+            "reply_to": "M46",
+            "text": "Yes, I'll send some examples of tricky situations we see at the desk—language barriers, incomplete forms, angry patients, etc.",
+            "mentions": [
+              313168
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 196511,
+            "reply_to": "M44",
+            "text": "For D8, I propose: pilot starts Monday of next week, runs for one week, covers all shifts. We'll measure check-in time, consent completion, and triage accuracy against D1 metrics. We'll use A6 to log any issues. Patient communication via A8 goes out Friday before pilot. Does that work?",
+            "mentions": [
+              313168,
+              437517,
+              438229
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [
+              "D8",
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 313168,
+            "reply_to": "M48",
+            "text": "One week is tight, but doable. I'll make sure nursing staff are briefed on the escalation criteria before we start. And I'll be available during the first few days to answer questions.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 437517,
+            "reply_to": "M48",
+            "text": "I'll set up the audit routine for T9 before pilot starts. I'll assign auditors per shift and make sure they have A4 and A6 ready. I'll also track the metrics you mentioned so we have data by end of week.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 196511,
+            "reply_to": "M48",
+            "text": "Perfect. So D7 is: two 30-minute mandatory training sessions per role, scheduled for next week. D8 is: pilot runs Monday–Friday of the following week, all shifts, with metrics tracking and daily audits. 435140, can you finalize A5 with scenarios by Friday? And I'll update A7 with EHR steps and A8 with wait-time info by Friday too.",
+            "mentions": [
+              435140,
+              313168,
+              437517
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 435140,
+            "reply_to": "M51",
+            "text": "I'll have A5 with scenarios ready by Friday. I'll also draft a summary of the SOP for T10 so there's a clean reference document for staff.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 196511,
+            "reply_to": "M52",
+            "text": "Excellent. So to recap: D7 and D8 are locked. By Friday, we'll have final versions of A5, A7, A8, and a draft of T10. Training happens next week, pilot the week after. 437517, you'll set up T9 and T12 before pilot. Everyone clear?",
+            "mentions": [
+              435140,
+              313168,
+              437517,
+              438229
+            ],
+            "artifact_refs": [
+              "A5",
+              "A7",
+              "A8",
+              "T10",
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 5
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 313168,
+            "reply_to": "M53",
+            "text": "Clear. I'll also prepare a brief clinical briefing for the team before pilot starts, just to reinforce the escalation criteria and consent requirements.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 437517,
+            "reply_to": "M53",
+            "text": "Confirmed. I'll have the audit routine and incident log ready to go. Looking forward to seeing how the new process performs.",
+            "mentions": [
+              196511
+            ],
+            "artifact_refs": [
+              "T9",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 435140,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 196511,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 435140,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 196511,
+              "when": "Friday EOD"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 313168,
+              "when": "next Monday"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 437517,
+              "when": "next Monday"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

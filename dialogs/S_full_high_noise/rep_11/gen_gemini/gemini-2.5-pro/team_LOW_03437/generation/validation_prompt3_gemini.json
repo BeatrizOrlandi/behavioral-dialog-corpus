@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads fall short of the expected minimum of 16 messages per thread. TH1 has 10, TH2 has 9, TH3 has 8, TH4 has 5, and TH5 has 10 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task 'T2' is listed in artifacts_to_reference for thread TH3 but does not appear in the artifact_refs of any message within that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Message M10 includes 'D2' in its artifact_refs, but 'D2' is a decision ID, not a valid artifact or task ID from the project pack."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M12 contains the forbidden term 'Class'. Message M33 contains the forbidden terms 'performance' and 'throughput'."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

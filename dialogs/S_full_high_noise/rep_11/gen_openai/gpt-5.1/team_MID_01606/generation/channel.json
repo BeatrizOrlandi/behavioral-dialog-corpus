@@ -1,0 +1,1814 @@
+{
+  "channel": {
+    "channel_id": "proj-subscription-analytics-launch",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on MVP scope, target customers, and success metrics for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 22473,
+            "reply_to": null,
+            "text": "Kicking off the unified analytics subscription work. I have a first pass at the MVP vision in A1, loosely mapped to T1. The idea is a subscription that gives customers a unified view of their usage and commercial data, with basic self-service onboarding and a simple tier structure. For the pilot, I am assuming we focus on existing mid-market customers with at least one current analytics add-on. Success metrics I drafted: pilot conversion rate from offer to signed subscription, 90-day retention, and uplift in recurring revenue vs current contracts. Before we lock anything, I would like your feedback on three points: 1) Is this the right primary segment for the pilot? 2) Are these metrics enough for T1, or are we missing anything obvious? 3) For scope, I kept advanced predictive features out of the MVP to stay within the 30-day window. Does that feel too conservative?",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 94563,
+            "reply_to": "M1",
+            "text": "Thanks for sharing the draft. I went through A1 and cross-checked with what we need to deliver in T1 and T2. On target segment: mid-market existing customers with at least one analytics add-on makes sense, but I would narrow further to those with active CSM coverage and at least 6 months of historical usage data. That will help when we define KPIs and later T10. On metrics, I suggest we add: time-to-first-insight (for example, first dashboard viewed) and number of active users per account in the first 30 days. Both are leading indicators for retention. On scope, excluding predictive features for the pilot seems reasonable given the 30-day constraint, as long as we clearly state that in A1 so expectations are managed.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 132848,
+            "reply_to": "M1",
+            "text": "I had a quick look at A1 as well. From a business case angle that we will detail in T4, I wonder if we should not also consider enterprise customers in the pilot, since they usually bring higher revenue. Maybe we can have two primary segments instead of one? Also, for success metrics, should we include something like total revenue booked in the pilot period? That would help when we build A2 later.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 242297,
+            "reply_to": "M1",
+            "text": "From an operations and onboarding standpoint, focusing on one clear primary segment will make T6 and T11 much easier to execute in 30 days. If we mix mid-market and enterprise in the first wave, we will likely need different onboarding paths and more internal coordination. I would support the narrower segment that 94563 suggested, and we can plan a second wave for enterprise once we have the basics running. On metrics, I agree we should track revenue, but I would treat that as a reporting dimension rather than a core success metric for T1.",
+            "mentions": [
+              132848,
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 123347,
+            "reply_to": "M1",
+            "text": "On the data side, if we go with customers that have at least 6 months of usage data, that will simplify T3 and T9. We already have stable pipelines for that cohort, and it will be easier to support the KPIs later in A8. If we add enterprise customers now, we might run into more custom integrations that are harder to stabilise in the pilot window.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 94563,
+            "reply_to": "M3",
+            "text": "On the question of including enterprise in the pilot: from the analysis we did last quarter, enterprise deals have longer sales cycles and more bespoke requirements. For T8, if we try to cover both segments at once, we risk diluting the learning. I would propose we define the primary pilot segment as mid-market customers with: 1) at least one analytics add-on, 2) 6+ months of usage data, 3) active CSM coverage. We can still include 1 or 2 enterprise accounts as exceptions if sales leadership insists, but they should not drive the MVP scope in A1.",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "T8",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 132848,
+            "reply_to": "M6",
+            "text": "That makes sense. I was mainly thinking about revenue impact for T4 and T5. If we can still include a couple of enterprise accounts as exceptions, I am comfortable with the primary segment being mid-market as you described. For metrics, I agree we can treat total revenue as a supporting metric rather than a core success measure.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 22473,
+            "reply_to": "M2",
+            "text": "Thanks all, this is helpful. Let me try to summarise where we are: 1) Segment: leaning toward mid-market customers with at least one analytics add-on, 6+ months of usage data, and active CSM coverage, with a small number of enterprise exceptions if needed. 2) Metrics: pilot conversion rate, 90-day retention, time-to-first-insight, active users per account in first 30 days, plus revenue tracked but not as a primary success metric. 3) Scope: keep advanced predictive features out of MVP, focus on unified reporting, basic segmentation, and self-service onboarding. If there are no strong objections, I will update A1 and T1 accordingly and we can treat this as our working direction.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 242297,
+            "reply_to": "M8",
+            "text": "No objections from my side. The scope you outlined is compatible with what we can support in onboarding and internal training in the next 30 days. Keeping predictive features out of the first wave will also simplify the enablement content that will go into A6.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 123347,
+            "reply_to": "M8",
+            "text": "From infrastructure, I am aligned with excluding predictive features for the pilot. That keeps T3 and T9 focused on existing data sources and avoids new heavy processing. For the KPIs you listed, our current pipelines should be able to support them, but I will confirm in the technical thread.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 94563,
+            "reply_to": "M8",
+            "text": "Aligned here as well. Once you update A1, I will adjust T2 and T8 so that user stories and pilot selection criteria reflect the agreed segment and metrics. I will also list any remaining open questions in A3.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T2",
+              "T8",
+              "A3",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 132848,
+            "reply_to": "M8",
+            "text": "I am good with this direction. For T4 and T5, I will assume the primary segment definition you summarised and model revenue scenarios accordingly in A2. If we later add more enterprise accounts, we can treat that as upside rather than a core assumption.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 22473,
+            "reply_to": "M9",
+            "text": "Great, I will go ahead and update A1 now with: 1) the refined primary segment definition, 2) the agreed success metrics, and 3) the MVP feature list that excludes predictive capabilities and other lower-priority items like custom exports. Those will be explicitly marked as out of scope for the pilot so we can keep T1 and T2 focused. Once that is done, I suggest we formally treat this as our MVP definition and move remaining feature ideas into a backlog section for later phases.",
+            "mentions": [
+              94563,
+              132848
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 94563,
+            "reply_to": "M13",
+            "text": "Confirming on my side: with the updates you described for A1, I consider the MVP feature set approved for the pilot, with predictive analytics and custom exports explicitly deferred. I will reflect that in A3 and in the backlog entries for T2. On the segment, I will document the mid-market definition and the criteria we discussed so that T8 has a clear reference.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A3",
+              "T2",
+              "T8",
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 242297,
+            "reply_to": "M14",
+            "text": "Adding my agreement: primary pilot segment is mid-market customers with at least one analytics add-on, 6+ months of usage data, and active CSM coverage, with a small number of enterprise exceptions if needed. That will be the basis for onboarding design in T6 and internal alignment in T11.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 123347,
+            "reply_to": "M14",
+            "text": "From the data side, I will treat that segment definition as final for the pilot and use it to scope T3 and T9. That will also help when we validate the KPIs in A8 later.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 132848,
+            "reply_to": "M13",
+            "text": "I will mark predictive analytics and custom exports as post-pilot items in the pricing and packaging work for T5, so that sales does not oversell them during the pilot. That will be reflected in A5.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "page_facing_up",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 22473,
+            "reply_to": "M14",
+            "text": "Closing the loop on this thread: A1 is now updated with the agreed MVP scope, primary segment, and success metrics. I will share the link in the channel summary and we can use it as the single reference for T1, T2, and T8 going forward.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T2",
+              "T8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 22473,
+              "when": "today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 94563,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 94563,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Validate technical feasibility and agree on infrastructure changes for the pilot.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 123347,
+            "reply_to": null,
+            "text": "Sharing a summary of the infrastructure assessment for the analytics subscription pilot, based on T3. For the agreed pilot segment, we already have stable ingestion from core product events and billing data into the warehouse. The main findings: 1) Existing pipelines can support the core KPIs we outlined in A8, but we need to add two new derived tables for account-level aggregation. 2) Dashboard refresh latency is currently around 4 hours; for the pilot, I assume this is acceptable, but we should confirm expectations. 3) For self-service onboarding, we will need a lightweight integration between the subscription system and the analytics workspace provisioning. I drafted a list of required changes and a tentative schedule in T9. I would like feedback on which changes are must-have for the pilot vs what we can push to post-pilot.",
+            "mentions": [
+              22473,
+              94563,
+              132848,
+              242297
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 94563,
+            "reply_to": "M19",
+            "text": "Thanks for the summary. Looking at the KPIs we defined in A1 and A8, the two new derived tables sound essential for T10, since we need account-level metrics like active users and time-to-first-insight. On latency, 4 hours should be fine for the pilot as long as we set that expectation in A6 and in the onboarding materials. For the self-service onboarding integration, can you clarify if we need real-time provisioning, or if a batched job (for example, hourly) would be enough for the pilot?",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 22473,
+            "reply_to": "M19",
+            "text": "From a product perspective, I agree the derived tables are must-have for the pilot. On latency, I had initially assumed something closer to hourly, but given the 30-day constraint, I am ok with 4 hours if we are transparent. For onboarding, my preference would be near real-time provisioning so that customers can log in shortly after signing up, but if that is too heavy for T9, we can start with a scheduled job. I will defer to your view on what is realistic in the timeframe.",
+            "mentions": [
+              123347
+            ],
+            "artifact_refs": [
+              "T9",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 242297,
+            "reply_to": "M19",
+            "text": "For onboarding operations in T6, the key is that we can reliably tell customers when their workspace will be ready. If we go with a batched job, we should bake that timing into the onboarding checklist in A4 and into the communication templates. I would rather have a predictable hourly or twice-daily process than a fragile real-time integration for the pilot.",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 132848,
+            "reply_to": "M19",
+            "text": "From the commercial side, as long as we can commit to a clear activation window in A5 and A6, a few hours delay between contract signature and analytics access should be acceptable. I would avoid any infrastructure changes that risk delaying the pilot, especially if they are only about shaving latency from 4 hours to 1 hour.",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 123347,
+            "reply_to": "M20",
+            "text": "On provisioning: real-time would require new event-driven integration work that we cannot safely deliver and test within the pilot window. An hourly batch job is much more realistic for T9 and still gives a good experience if we set expectations in A4 and A6. For latency, keeping the current 4-hour refresh avoids re-architecting pipelines in T3. We can still optimise later if the pilot proves the value.",
+            "mentions": [
+              94563,
+              22473,
+              242297
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "gear",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 94563,
+            "reply_to": "M24",
+            "text": "That sounds reasonable. For T10, as long as the derived tables are in place and refreshed on the same schedule as the dashboards, we can design the KPI views accordingly. I will note in A8 that the pilot operates with up to 4-hour data freshness and hourly provisioning of workspaces.",
+            "mentions": [
+              123347
+            ],
+            "artifact_refs": [
+              "T10",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 22473,
+            "reply_to": "M24",
+            "text": "Given the constraints, I am comfortable treating the following as in-scope for the pilot: 1) creation of the two derived tables for account-level metrics, 2) hourly batch provisioning of analytics workspaces after subscription activation, 3) keeping the current 4-hour dashboard refresh. Anything beyond that, such as real-time provisioning or lower latency, we can treat as post-pilot improvements. If everyone agrees, we can lock this as the infrastructure scope for T9.",
+            "mentions": [
+              123347,
+              94563,
+              242297,
+              132848
+            ],
+            "artifact_refs": [
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 242297,
+            "reply_to": "M26",
+            "text": "Aligned. I will update the onboarding checklist in A4 and the RACI in T11 to reflect hourly provisioning and 4-hour data freshness, so that customer-facing teams know what to communicate.",
+            "mentions": [
+              22473,
+              123347
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 132848,
+            "reply_to": "M26",
+            "text": "No objections. I will make sure A5 and the pricing decks do not promise anything beyond hourly provisioning and 4-hour freshness for the pilot. We can position any future improvements as roadmap items.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 94563,
+            "reply_to": "M26",
+            "text": "On the question of whether current pipelines can support the defined KPIs: based on your assessment in T3 and the derived tables you plan in T9, I do not see gaps for the metrics we listed in A1 and A8. We should be able to compute conversion, retention, time-to-first-insight, and active users per account with the existing data sources.",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A1",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 123347,
+            "reply_to": "M29",
+            "text": "Confirming: with the two new derived tables, current pipelines can support all the KPIs defined so far. We will not need new external data sources for the pilot. I will document this explicitly in the T3 summary and in the technical notes attached to A8.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "T3",
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 22473,
+            "reply_to": "M30",
+            "text": "Thanks for confirming. With that, I think we can state that the current data pipelines, plus the two derived tables, are sufficient for the pilot KPIs. I will reference this in A1 and in the pilot readiness checklist.",
+            "mentions": [
+              123347,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 94563,
+            "reply_to": "M31",
+            "text": "I will also update T10 to reflect the agreed infrastructure scope and data freshness, so that the dashboard specification in A8 is aligned with what we can deliver in the pilot.",
+            "mentions": [
+              22473,
+              123347
+            ],
+            "artifact_refs": [
+              "T10",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 123347,
+            "reply_to": "M26",
+            "text": "I will adjust the T9 plan to clearly separate in-scope pilot changes (derived tables, hourly provisioning, monitoring) from post-pilot improvements (lower latency, real-time provisioning). That should help avoid scope creep as we get closer to launch.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 123347,
+              "when": "this week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 123347,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 94563,
+              "when": "early next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Converge on pricing, subscription tiers, and discount rules.",
+        "messages": [
+          {
+            "msg_id": "M34",
+            "speaker_id": 132848,
+            "reply_to": null,
+            "text": "I have put together an initial pricing and tiering proposal for the analytics subscription, based on the early business case work in T4 and T5 and the financial model in A2. In short: three tiers for the pilot segment: 1) Core: basic unified dashboards and limited seats, 2) Plus: additional seats and advanced segmentation, 3) Premium: includes priority support and roadmap access, but excludes predictive analytics for now as agreed in A1. Pricing bands are set to target a 20 to 25 percent uplift vs current analytics add-ons. Discount guidelines in A5 are still rough; I assumed up to 15 percent discount for annual commitments, with anything above that needing approval. I would appreciate feedback on whether three tiers are too many for the pilot and whether the discount thresholds feel realistic for sales.",
+            "mentions": [
+              22473,
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "T4",
+              "T5",
+              "A2",
+              "A5",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 94563,
+            "reply_to": "M34",
+            "text": "Looking at the pilot scope in A1 and the target segment we defined, three tiers might be a bit heavy for the first 30 days. For T8, it will be easier to select and compare pilot customers if we limit the options. I would suggest we start with two tiers: Core and Plus, and treat Premium as a post-pilot option. We can still test willingness to pay for Premium features qualitatively during the pilot. On discounts, 15 percent for annual commitments sounds reasonable, but we should clarify in A5 whether that is list-to-net or stackable with other promotions.",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "A1",
+              "T8",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 22473,
+            "reply_to": "M34",
+            "text": "I share the concern about complexity. For the pilot, I would prefer two clear tiers that map directly to the MVP feature set in A1. Maybe we can define Core as the baseline dashboards and a small number of seats, and Plus as everything in Core plus more seats and advanced segmentation. Premium, with priority support and roadmap access, feels more like a second-phase offering once we have more evidence from T12.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 242297,
+            "reply_to": "M34",
+            "text": "From an operational and enablement standpoint, two tiers will be much easier to explain and support in A6 and in the onboarding flows in A4. Each additional tier adds complexity for training, support scripts, and internal approvals. I would support the idea of Core and Plus only for the pilot, with Premium as a future enhancement.",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "A6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 132848,
+            "reply_to": "M35",
+            "text": "Understood. I can simplify the proposal to two tiers for the pilot. For pricing, would you be comfortable if we keep the same overall uplift target from A2 but compress the value into Core and Plus? That might mean a slightly higher price for Plus than originally drafted. On discounts, I had assumed the 15 percent cap was on the total discount, but I did not specify that clearly in A5 yet.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 94563,
+            "reply_to": "M38",
+            "text": "Yes, keeping the same uplift target while simplifying to two tiers makes sense. For A5, I strongly recommend we define the 15 percent as the total maximum discount from list price, including any promotions. Anything above that should require approval from a designated approver. We should also define a lower threshold, for example up to 5 percent, that sales can apply without additional approvals to handle small negotiations.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 22473,
+            "reply_to": "M38",
+            "text": "Agree with 94563. For the pilot, I would propose: 1) Two tiers: Core and Plus, aligned with the MVP features in A1. 2) Discount rules: up to 5 percent discretionary for sales, 5 to 15 percent requiring manager approval, and anything above 15 percent needing director-level approval. We should capture this clearly in A5 so that sales has a simple reference.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 242297,
+            "reply_to": "M40",
+            "text": "Those thresholds look workable from an approval workflow standpoint. We just need to make sure the RACI in T11 reflects who is responsible for each approval band, and that the process is clear in A6 for sales and customer success.",
+            "mentions": [
+              22473,
+              132848
+            ],
+            "artifact_refs": [
+              "T11",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 132848,
+            "reply_to": "M40",
+            "text": "I can update T5 and A5 with: two tiers (Core and Plus) for the pilot, and the discount bands you suggested. One question: for the pilot customers we already identified in T8, do we want to restrict them to a specific tier mix, for example half on Core and half on Plus, so that T12 has a cleaner comparison later?",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "T5",
+              "A5",
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 94563,
+            "reply_to": "M42",
+            "text": "Good point. For T8, I can aim for a balanced mix, for example roughly 50 percent of pilot accounts on Core and 50 percent on Plus, while keeping the overall sample size manageable. That will give us enough variation for T12 without overcomplicating the selection.",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 22473,
+            "reply_to": "M42",
+            "text": "I like the idea of a balanced mix. As long as we do not force customers into a tier that does not fit their needs, we can use that as a guideline for T8. For now, I suggest we finalise the pilot offering as two tiers and lock the discount rules you outlined. We can refine the exact tier mix as we progress with customer selection.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 132848,
+            "reply_to": "M44",
+            "text": "To make sure we are aligned, let me restate the decisions I will encode in A5 and T5: 1) Pilot will use two tiers: Core and Plus, with Premium deferred to post-pilot. 2) Discount rules: up to 5 percent discretionary for sales, 5 to 15 percent requiring manager approval, above 15 percent requiring director-level approval. If that matches your understanding, I will update A2, A5, and the T4 business case accordingly.",
+            "mentions": [
+              22473,
+              94563,
+              242297
+            ],
+            "artifact_refs": [
+              "A5",
+              "T5",
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 94563,
+            "reply_to": "M45",
+            "text": "That matches my understanding. I will make sure the user stories in A3 and the pilot selection criteria in T8 reference only Core and Plus tiers, and that we capture the discount rules as constraints for any pricing experiments.",
+            "mentions": [
+              132848
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 242297,
+            "reply_to": "M45",
+            "text": "Aligned as well. I will incorporate the two-tier structure and the approval thresholds into the enablement materials in A6 and the RACI in T11 so that sales and CS know who to go to for approvals.",
+            "mentions": [
+              132848,
+              22473
+            ],
+            "artifact_refs": [
+              "A6",
+              "T11"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 22473,
+            "reply_to": "M45",
+            "text": "Confirming on my side: for the pilot, we are going with two tiers (Core and Plus) and the discount rules you summarised. I will reference this in A1 and in the go-to-market messaging so that we keep the story consistent.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 132848,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 132848,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define onboarding process and internal responsibilities for pilot customers.",
+        "messages": [
+          {
+            "msg_id": "M49",
+            "speaker_id": 242297,
+            "reply_to": null,
+            "text": "I have drafted the end-to-end onboarding process for pilot customers, mapped to T6 and T11, and captured the steps in A4 and the RACI. The flow is: 1) Deal closed and subscription created, 2) Hourly batch job provisions analytics workspace (per TH2 decisions), 3) Welcome email with access instructions and key value messages from A6, 4) Optional kickoff call for Plus tier customers, 5) 30-day check-in to review usage and KPIs. Roles: sales owns step 1, data and infra own step 2, CS owns steps 3 to 5, with product supporting messaging. I would like feedback on whether this is lightweight enough for the pilot and if any responsibilities are unclear.",
+            "mentions": [
+              22473,
+              94563,
+              132848,
+              123347
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11",
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 94563,
+            "reply_to": "M49",
+            "text": "The flow looks coherent with the MVP scope in A1 and the infrastructure decisions in T9. For T10 and A8, it would help if we explicitly add a step where CS or product reviews early usage data around day 7 to catch any onboarding issues before the 30-day check-in. That could be a quick internal review rather than a customer-facing touchpoint.",
+            "mentions": [
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "T9",
+              "T10",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 123347,
+            "reply_to": "M49",
+            "text": "On step 2, hourly provisioning is aligned with what we planned in T9. For the RACI in T11, I suggest we make data and infra accountable for monitoring the provisioning job and data freshness, but CS should be responsible for communicating any delays to customers. I can also add a simple monitoring dashboard to A8 so that CS can see provisioning status at a glance.",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "T9",
+              "T11",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "gear",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 22473,
+            "reply_to": "M49",
+            "text": "From a product side, I like that the flow is simple. For the welcome email and kickoff call, we should make sure the messaging aligns with A6 and does not oversell features that are out of scope, like predictive analytics or Premium tier benefits. I can help review the templates once you have a draft.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A6",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 132848,
+            "reply_to": "M49",
+            "text": "One question from the commercial side: for Plus tier customers, do we want to make the kickoff call mandatory during the pilot, or optional? Mandatory calls could help us gather richer feedback for T12, but they also add load on CS. This might affect how we position Plus in A6.",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "T12",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 242297,
+            "reply_to": "M53",
+            "text": "Given the limited number of pilot customers in T8, I would lean toward making the kickoff call mandatory for Plus tier accounts during the pilot. That will give us better insight for T12 and help reduce the risk of churn due to onboarding issues. We can revisit this after the pilot once we see the load on CS.",
+            "mentions": [
+              132848,
+              94563
+            ],
+            "artifact_refs": [
+              "T8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "telephone_receiver",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 94563,
+            "reply_to": "M50",
+            "text": "On the day-7 internal review, I can help define a small set of indicators in A8 and T10, such as logins, dashboards viewed, and time-to-first-insight. That way CS has a clear checklist for that internal touchpoint.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T10",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 242297,
+            "reply_to": "M50",
+            "text": "Good suggestion. I will add a step 4a in A4: internal day-7 usage review, owned by CS with support from product and data. That should help us catch low engagement early and trigger outreach before the 30-day check-in.",
+            "mentions": [
+              94563,
+              123347
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 123347,
+            "reply_to": "M56",
+            "text": "Once you add that step, I will make sure the monitoring view in A8 highlights the day-7 indicators so CS can quickly see which accounts need attention.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 132848,
+            "reply_to": "M54",
+            "text": "If we make the kickoff call mandatory for Plus tier in the pilot, I will reflect that in A6 and in the tier descriptions in A5, so that sales sets the right expectations. We should also make sure the RACI in T11 clearly assigns ownership for scheduling those calls.",
+            "mentions": [
+              242297,
+              22473
+            ],
+            "artifact_refs": [
+              "A6",
+              "A5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 22473,
+            "reply_to": "M49",
+            "text": "One more detail: for the welcome email, can we include a short section that points customers to the key dashboards that map to the success metrics in A1? That will help drive early engagement and make the day-7 review more meaningful.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 242297,
+            "reply_to": "M59",
+            "text": "Yes, I will work with you to align the welcome email content with A6 and the metrics in A1. I will add a checklist item in A4 for CS to confirm that customers have accessed those key dashboards within the first week.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 94563,
+            "reply_to": "M49",
+            "text": "From a documentation standpoint, once you finalise the steps and RACI, I will cross-check T6 and T11 against the pilot selection in T8 to ensure we have coverage for all pilot accounts and that there are no gaps in ownership.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 242297,
+            "reply_to": "M61",
+            "text": "Thanks. To summarise the adjustments: 1) Hourly provisioning with data and infra accountable for monitoring, CS responsible for communication. 2) Mandatory kickoff call for Plus tier during the pilot. 3) New internal day-7 usage review step with clear KPIs from A8. 4) Welcome email aligned with A6 and pointing to key dashboards tied to A1 metrics. If there are no objections, I will treat this as the final onboarding checklist for the pilot and mark A4 and T6 as ready for sign-off.",
+            "mentions": [
+              22473,
+              94563,
+              132848,
+              123347
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "A8",
+              "A6",
+              "A1"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 22473,
+            "reply_to": "M62",
+            "text": "Aligned with that summary. From product, I consider the onboarding checklist and ownership model approved for the pilot. We can revisit after we collect feedback in T12.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A4",
+              "T12"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 123347,
+            "reply_to": "M62",
+            "text": "Confirmed on the infra side as well. I will make sure the monitoring hooks needed for the day-7 review are in place as part of T9.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 132848,
+            "reply_to": "M62",
+            "text": "I will update A6 and A5 to reflect the mandatory kickoff for Plus tier and the onboarding expectations, so that sales and CS are aligned.",
+            "mentions": [
+              242297
+            ],
+            "artifact_refs": [
+              "A6",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 242297,
+              "when": "today"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 242297,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on next-phase roadmap.",
+        "messages": [
+          {
+            "msg_id": "M66",
+            "speaker_id": 22473,
+            "reply_to": null,
+            "text": "We now have the first full cycle of pilot data and feedback. I pulled a summary from the KPI dashboard spec in A8 and the tracking work in T10 and T12. Headline numbers: 1) Pilot conversion rate: 32 percent of targeted accounts signed up, slightly above our initial assumption. 2) 60-day retention so far is 95 percent, with only one churned account. 3) Time-to-first-insight median is 3 hours after workspace provisioning, and average active users per account is 4.2. Qualitative feedback: customers like the unified view but are asking for more flexible exports and some basic forecasting. On the downside, a few Plus tier customers found the 4-hour data freshness confusing. We need to decide whether we expand the product beyond the pilot, iterate with another pilot wave, or pause and rework. I am leaning toward expanding with a few targeted improvements, but I would like your views.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 94563,
+            "reply_to": "M66",
+            "text": "Looking at these numbers against the success metrics in A1, the pilot is performing well: conversion and early retention are both strong, and engagement metrics are healthy. The main friction points seem to be around exports and data freshness expectations. My initial recommendation would be to expand cautiously: open the subscription to a broader slice of the same segment while planning a short iteration to address the top issues in T12. I do not see a reason to pause given the current data.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A1",
+              "T12",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 132848,
+            "reply_to": "M66",
+            "text": "From the financial model in A2 and the early revenue numbers, the pilot is tracking slightly above the mid-case scenario we modelled in T4. If we expand to more mid-market accounts with similar conversion, we should hit the targets we set for the first year. I would support expanding, but I would like us to tighten the discount discipline from A5 as we scale, since a few pilot deals pushed close to the upper discount band.",
+            "mentions": [
+              22473,
+              94563
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "moneybag",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 242297,
+            "reply_to": "M66",
+            "text": "Operationally, the onboarding process in A4 and T6 held up well. The mandatory kickoff for Plus tier helped catch configuration issues early, and the day-7 review flagged a few low-engagement accounts that CS could recover. The main pain point for the team was explaining the 4-hour data freshness; some customers expected near real-time updates. If we expand, we should either improve the latency or make the expectation even clearer in A6 and the welcome materials.",
+            "mentions": [
+              22473,
+              123347
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 123347,
+            "reply_to": "M66",
+            "text": "On the infra side, the pipelines defined in T3 and T9 have been stable. We had one incident where the provisioning job lagged, but monitoring in A8 caught it quickly. To improve the experience, we could consider reducing dashboard latency from 4 hours to 2 hours for the next phase, but that will require some optimisation work and careful planning. Real-time is still out of reach without a larger project.",
+            "mentions": [
+              22473,
+              242297
+            ],
+            "artifact_refs": [
+              "T3",
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "gear",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 94563,
+            "reply_to": "M70",
+            "text": "If we can move to 2-hour latency in the next phase, that would address a good portion of the feedback without requiring a full re-architecture. For T12, I suggest we frame the roadmap as: 1) short-term improvements (exports, clearer freshness messaging, potential 2-hour latency), 2) medium-term items (basic forecasting), 3) longer-term items (more advanced predictive features).",
+            "mentions": [
+              123347,
+              22473
+            ],
+            "artifact_refs": [
+              "T12",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 132848,
+            "reply_to": "M71",
+            "text": "That structure works from a business case perspective. In A2 and T4, we can treat the short-term improvements as part of the base plan for expansion, while forecasting and advanced features remain upside. For exports, we should be careful not to overbuild; maybe start with a few standard export formats that map to the most common customer requests.",
+            "mentions": [
+              94563,
+              22473
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 242297,
+            "reply_to": "M71",
+            "text": "On exports, CS feedback suggests that a small set of standard exports would already solve most issues. We can incorporate those into the onboarding checklist in A4 and training in A6 without major changes to the process. If we expand, we will need to scale the kickoff calls, so we should also look at whether we keep them mandatory for all Plus accounts or only for higher-value ones.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 22473,
+            "reply_to": "M67",
+            "text": "Based on the data and your inputs, I am inclined to propose that we expand the product to the broader mid-market segment we defined in A1, while planning a focused iteration. The iteration would include: 1) standard exports, 2) clearer communication of data freshness in A6 and the UI, 3) exploring a move to 2-hour latency if feasible. We would keep predictive features and more advanced forecasting as future roadmap items in T12.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 94563,
+            "reply_to": "M74",
+            "text": "I support that direction. From an analysis standpoint, the pilot has validated the core value proposition, and the issues we saw are incremental rather than fundamental. Expanding with a targeted iteration seems like the right balance between momentum and risk management.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 132848,
+            "reply_to": "M74",
+            "text": "Aligned. I will update A2 and T4 to reflect an expansion scenario as the main path, with the iteration items you listed as required investments. We should also revisit A5 to see if any adjustments to discount rules are needed as we scale, but I would keep the current thresholds for now.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A2",
+              "T4",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "money_with_wings",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 123347,
+            "reply_to": "M74",
+            "text": "From infra, I can scope the work needed to move from 4-hour to 2-hour latency and add it as a separate work item linked to T9. We can then decide, based on effort, whether it fits into the immediate iteration or needs to be phased.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 242297,
+            "reply_to": "M74",
+            "text": "Operationally, I am comfortable scaling the current onboarding model to more mid-market accounts, as long as we monitor CS workload. For the next phase, I suggest we keep kickoff calls mandatory for Plus accounts above a certain contract value and optional for smaller ones. I will reflect that in A4 and T6.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 22473,
+            "reply_to": "M74",
+            "text": "To close this out, I propose we formally decide to expand the product beyond the pilot to the broader mid-market segment, with a short iteration focused on exports, clarity on data freshness, and a potential latency improvement. Predictive and advanced forecasting will remain on the roadmap for later phases. Unless there are strong objections, I will document this decision in T12 and update A1 and A6 accordingly.",
+            "mentions": [
+              94563,
+              132848,
+              242297,
+              123347
+            ],
+            "artifact_refs": [
+              "T12",
+              "A1",
+              "A6"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 94563,
+            "reply_to": "M79",
+            "text": "Confirmed from my side: expand with a focused iteration, not pause or run a completely separate second pilot. I will capture the key learnings and the phased roadmap in T12.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 132848,
+            "reply_to": "M79",
+            "text": "Agreed. I will align the business case in T4 and the financial model in A2 with the expansion decision and share an updated summary with leadership.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T4",
+              "A2"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 242297,
+            "reply_to": "M79",
+            "text": "Aligned as well. I will adjust A4, T6, and T11 to support the expanded scope and make sure CS and sales are briefed on the updated processes and expectations.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 123347,
+            "reply_to": "M79",
+            "text": "I will plan the latency optimisation work and any additional monitoring needed as part of the next-phase infra plan in T9, aligned with the expansion decision.",
+            "mentions": [
+              22473
+            ],
+            "artifact_refs": [
+              "T9",
+              "A8"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 94563,
+              "when": "this week"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 132848,
+              "when": "next week"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 123347,
+              "when": "next sprint"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

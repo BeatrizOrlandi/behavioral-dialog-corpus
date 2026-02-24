@@ -1,0 +1,1863 @@
+{
+  "channel": {
+    "channel_id": "proj-predictive-maintenance-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on pilot scope, asset selection, and success criteria.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Kicking off the cross-plant predictive maintenance rollout for our production lines. For the pilot, we need to lock in scope, asset list, and success criteria within the 21-day window for project_title. I have a first pass of the Asset Criticality and Pilot Equipment Matrix in A1 and a draft list for T1. Proposal: start with two lines in Plant A, focusing on the top 10 assets by criticality and downtime impact. Can you review the A1 entries and comment on any must-have or must-not-have assets for the pilot? We also need to start shaping KPIs for T7 so we can configure A6 early.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 36422,
+            "reply_to": "M1",
+            "text": "Thanks for sharing A1. From an operations standpoint, I agree with starting on two lines in Plant A. Looking at the matrix, I would definitely include the main forming press and the upstream conveyor drive on Line 1, plus the packaging sealer and case erector on Line 2. Those four have the highest impact on order fulfillment when they go down. I would avoid adding the small auxiliary pumps in this first wave; they are low impact and will eat into our limited maintenance windows. For KPIs in T7 and A6, I suggest we at least track unplanned downtime hours per line, MTBF for the selected assets, and maintenance compliance against the new plan. We can add one or two more once we hear from the rest of you.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 18383,
+            "reply_to": "M1",
+            "text": "I went through A1 and cross-checked with recent electrical incidents. From a reliability and instrumentation angle, I recommend we include: Line 1 main press motor and its feeder, Line 1 conveyor drive, and Line 2 sealer heaters and motion drive. These already have some basic signals available, which helps with the constraint to reuse existing infrastructure. The case erector is a good candidate, but we will likely need at least one extra vibration or current sensor to get meaningful predictive signals. That has implications for T4 and T11. If we keep the pilot to 6–8 assets total, we can stay within the limited capex and still get a good spread of failure modes.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A1",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 560411,
+            "reply_to": "M1",
+            "text": "From the process side, I like the idea of focusing on a small number of high-impact assets first. For T1, could we clarify if we are ranking purely on downtime impact, or also including safety and quality risk? For example, the sealer has a big quality impact when it drifts, even if it does not always stop the line. That might influence how we weight it in A1. On KPIs for T7 and A6, I would add first-time-fix rate for maintenance interventions on pilot assets, so we can see if the new process is helping technicians resolve issues more effectively.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 237177,
+            "reply_to": "M1",
+            "text": "Looking at this from the garage and aftersales angle, I checked our recent service tickets. The assets that cause the most customer complaints when they fail are the forming press and the sealer, because they lead to late shipments or packaging issues. So I support including those in the pilot list in A1. For KPIs, could we also note any impact on rush repair calls or emergency work orders related to these assets? That would help when we later work on T12 and link this pilot to customer-facing outcomes.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 55217,
+            "reply_to": "M1",
+            "text": "I had a quick look at A1. I agree with focusing on the main press and the sealer. One question: are we considering any of the raw material feed systems for the pilot, or is that out of scope for T1 right now? I am asking because we had some issues with material quality that also caused stops, and I am not sure if that should be part of this first phase or a later one.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 53841,
+            "reply_to": "M6",
+            "text": "Good question on the raw material feed systems. For this first pass of T1, I suggest we keep them out of scope and focus on the core mechanical and packaging assets already mentioned. We can add a second wave later once we have the basic predictive maintenance process running. I will update A1 to reflect that and clearly mark feed systems as candidates for phase two. On the weighting question from 560411, my proposal is to use three criteria in A1: impact on unplanned downtime, impact on safety, and impact on quality. We can assign simple high/medium/low ratings and use that to finalize the pilot list.",
+            "mentions": [
+              55217,
+              560411
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 36422,
+            "reply_to": "M7",
+            "text": "I am aligned with the three-criteria approach in A1. To keep things simple and fast for T1, I suggest we cap the pilot at 8 assets total: Line 1 press motor and feeder, Line 1 conveyor drive, Line 2 sealer heaters and motion drive, Line 2 case erector, plus one more slot we can use if we see a clear candidate. That should be manageable within our maintenance windows and avoid disrupting committed volumes. If no one objects, I would like to close the asset list by tomorrow so we can move on to T4 and T5 planning.",
+            "mentions": [
+              53841,
+              18383
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 18383,
+            "reply_to": "M8",
+            "text": "From an electrical and instrumentation standpoint, that list of 7–8 assets is feasible. The only one that may need extra hardware is the case erector, as mentioned earlier. I can reflect that in the gap analysis for T4 and T11. No concerns regarding load or interference at this stage, but I will confirm once we detail the signals in A4. So I am fine with closing the pilot list as you proposed.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 560411,
+            "reply_to": "M8",
+            "text": "No objections from my side. With that asset list, we will have a good mix of failure modes to design the predictive maintenance process around for T3 and the training content for T6. On KPIs, I would like to propose the following short list for T7 and A6: unplanned downtime hours per pilot line, MTBF for each pilot asset, maintenance compliance to the new predictive tasks, and first-time-fix rate on pilot asset work orders. If we want a fifth, we could add number of alerts generated versus number of interventions, to see if the signals are actionable.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T3",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 237177,
+            "reply_to": "M10",
+            "text": "I like that KPI set. Could we make sure that unplanned downtime is broken down by cause code in A6, so we can later link it to customer impact for T12 and the final report? That will help us show if the pilot is actually reducing the types of failures that lead to missed deliveries or quality complaints.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "raised_hands",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 55217,
+            "reply_to": "M10",
+            "text": "The KPI list looks good to me. I just want to check if we have the data sources ready for all of them in T7, especially first-time-fix rate. Do we already capture that in the CMMS, or will we need to adjust how technicians close work orders? If it is a big change, maybe we phase that in after the first week of the pilot.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 36422,
+            "reply_to": "M12",
+            "text": "Good call. We already capture most of what we need in the CMMS, but first-time-fix is not consistently filled in. For T7, I suggest we still include it as a KPI, but we will treat the first week as a data quality ramp-up. I will brief the maintenance leads so they reinforce this in their teams. The other KPIs are straightforward with our current setup. Unless there are strong objections, I propose we lock in these 4 primary KPIs plus the optional alerts-versus-interventions metric.",
+            "mentions": [
+              55217,
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 53841,
+            "reply_to": "M8",
+            "text": "Summarizing where we are: for T1, we will pilot on two lines in Plant A with the following assets in A1: Line 1 press motor and feeder, Line 1 conveyor drive, Line 2 sealer heaters and motion drive, and Line 2 case erector, with one optional slot reserved if we see a clear candidate in the next day. Raw material feed systems are explicitly out of scope for this first phase. For T7 and A6, we will track: unplanned downtime hours per pilot line, MTBF per pilot asset, maintenance compliance to the new predictive tasks, first-time-fix rate on pilot asset work orders, and alerts generated versus interventions as a supporting metric. Unless anyone disagrees by end of day, I will treat this as our agreed pilot scope and KPI set.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A1",
+              "A6",
+              "T1",
+              "T7"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 18383,
+            "reply_to": "M14",
+            "text": "No objections from me. The asset list and KPIs are clear, and I will use them as the basis for T4 and T11 work. Having MTBF and alerts-versus-interventions in A6 will also help us tune the sensor thresholds later.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 560411,
+            "reply_to": "M14",
+            "text": "Aligned here as well. I will incorporate the final asset list and KPI set into the process design for T3 and the training outline for T6, so operators and technicians see the direct link between the new routines and the metrics in A6.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 36422,
+            "reply_to": "M14",
+            "text": "All good from operations. I will start aligning maintenance windows in T5 based on this scope and make sure production planning is aware that these are the assets in focus for the pilot.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 237177,
+            "reply_to": "M14",
+            "text": "Confirmed from the garage side. I will keep an eye on any related service tickets so we can later feed that into T12 and the pilot report.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 53841,
+              "when": "today"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 36422,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalize the standardized predictive maintenance workflow.",
+        "messages": [
+          {
+            "msg_id": "M19",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "I have drafted the to-be predictive maintenance process and escalation paths in A2, based on the asset list we agreed in A1 and the as-is workflows from T2. The flow covers: data capture and alert generation, initial triage, on-site verification, corrective action, and feedback into A6. For T3, I need your review on two points: 1) who should own first-line triage of alerts, and 2) at what thresholds we escalate to production management or the garage. Please take a look at A2 and comment on any gaps or role conflicts you see.",
+            "mentions": [
+              560411,
+              53841,
+              18383,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "A1",
+              "A6",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 560411,
+            "reply_to": "M19",
+            "text": "I reviewed A2. Overall the flow is clear and lines up with what we captured in T2. For T3, my suggestion is that first-line triage sits with the maintenance planner or reliability technician on shift, since they are closest to the CMMS and can quickly check history. Operators would still acknowledge alarms on the HMI, but they would not decide on the maintenance action. For escalation thresholds, we could use three levels: low severity alerts logged and reviewed in the daily meeting, medium severity requiring intervention within the next maintenance window, and high severity requiring immediate coordination with operations to avoid unplanned downtime. We can map these levels to specific signals per asset in a separate annex to A2.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 18383,
+            "reply_to": "M19",
+            "text": "From the electrical side, the structure in A2 works. For T3, we just need to be careful that the triage role understands the technical meaning of the signals we will define in A4. For example, a small increase in motor current might be low severity on the press but high severity on the sealer drive, depending on baseline. I propose we include in A2 a simple table per asset class that links signal patterns to the three severity levels that 560411 mentioned. That will also help when we validate the process with the plant electrical safety representative as part of T11.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 53841,
+            "reply_to": "M19",
+            "text": "Looking at A2 with a production hat on, I like that the default path is to schedule work into existing maintenance windows unless the alert is clearly high severity. For T3, I would ask that any high severity alert that could impact committed orders triggers an immediate check-in between the triage role and the line supervisor. That way we can weigh the risk of running to the next window versus taking a short planned stop. Could we add that explicit step into the escalation section of A2?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 237177,
+            "reply_to": "M19",
+            "text": "From the garage and aftersales side, I see in A2 that some alerts could lead to changes in how we prepare spare parts or tools. For example, repeated medium severity alerts on the sealer might mean we should pre-stage certain kits. I do not see a clear step in T3 where this information is shared with the garage team. Could we add a weekly summary of pilot asset alerts and interventions that is sent to us, so we can adjust our stock and be ready if a failure does occur?",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 55217,
+            "reply_to": "M19",
+            "text": "I have a question on the as-is mapping from T2. In A2, the new process shows operators logging a short note when they see an alert. Right now, in some shifts, they just call maintenance by phone and do not log anything. Do we expect them to change that immediately at pilot start, or will there be a transition period? I am asking because it might affect how realistic the early data in A6 will be.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 36422,
+            "reply_to": "M24",
+            "text": "Good point. For the pilot, we will ask operators on the selected lines to start logging a brief note for any predictive alert from day one, but we will treat the first week as a learning period. I will make sure this is covered in the training plan for T6. In A2, I will add a note that early data quality in A6 may be lower and that we will review and coach during the daily stand-ups.",
+            "mentions": [
+              55217,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 560411,
+            "reply_to": "M23",
+            "text": "I like the idea of a weekly summary for the garage. We can build that into the feedback loop in T3: after each week, the triage owner exports a simple list from A6 with alerts, interventions, and any parts used, and shares it with the garage team. I will add that as a step in A2 under continuous improvement.",
+            "mentions": [
+              237177,
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 18383,
+            "reply_to": "M20",
+            "text": "On the triage ownership: I agree that the maintenance planner or reliability technician is the right first line. However, we should define a backup for off-shifts when that role is not present. In A2, could we specify that on night shifts, the on-call electrician takes the triage role, with clear guidance from A4 on what to do for each severity level? That will avoid confusion when an alert comes in at 2 a.m.",
+            "mentions": [
+              560411,
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 53841,
+            "reply_to": "M20",
+            "text": "On escalation thresholds, I suggest we tie the high severity definition to a combination of signal deviation and proximity to a critical production window. For example, a medium deviation on the press motor current might be treated as high severity if we are within 4 hours of a major shipment. We can capture that rule in A2 and make sure the triage role checks the production schedule before deciding. This will keep T3 aligned with our no-disruption constraint.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 237177,
+            "reply_to": "M26",
+            "text": "The weekly summary from A6 will be very helpful. Could we also include any notes on near-misses, where an alert led to an intervention that prevented a failure? That will help us explain the value of the pilot to customer-facing teams later on.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 36422,
+            "reply_to": "M19",
+            "text": "Let me summarize the roles and responsibilities as I understand them for T3, based on your feedback: 1) First-line triage of predictive alerts is owned by the maintenance planner or reliability technician on shift; on night shifts, the on-call electrician takes this role. 2) Operators acknowledge alerts on the HMI and log a brief note, but they do not decide on maintenance actions. 3) High severity alerts that could impact committed orders trigger an immediate discussion between the triage role and the line supervisor to decide whether to stop or run to the next window. 4) The garage team receives a weekly summary from A6 with alerts, interventions, parts used, and near-misses. If everyone is comfortable with this, I will update A2 accordingly and we can move toward sign-off.",
+            "mentions": [
+              18383,
+              560411,
+              53841,
+              237177
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 560411,
+            "reply_to": "M30",
+            "text": "That summary matches my understanding. Once you update A2, I will run a quick validation session with the operations and garage leads to make sure the steps are workable on the floor, and then we can call T3 complete.",
+            "mentions": [
+              36422,
+              237177
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 18383,
+            "reply_to": "M30",
+            "text": "Aligned from my side. Please just make sure the annex in A2 clearly references the signal definitions in A4, so the triage role and on-call electrician have a single source of truth. Once that is in place, I am comfortable signing off on the process from an electrical perspective.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "A4",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 53841,
+            "reply_to": "M30",
+            "text": "No further comments from production. With the added step to check the production schedule for high severity alerts, A2 reflects how we want to run the pilot. I am fine to sign off once you incorporate the edits discussed.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 237177,
+            "reply_to": "M30",
+            "text": "From the garage side, the weekly summary and near-miss notes will give us what we need. I am ok with the responsibilities as described.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 36422,
+            "reply_to": "M30",
+            "text": "Thanks all. I will finalize A2 with the agreed roles, severity levels, and feedback loops today. Once that is done, we can consider the standardized predictive maintenance process and escalation paths approved for the pilot.",
+            "mentions": [
+              560411,
+              53841,
+              18383,
+              237177
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 36422,
+              "when": "today"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 560411,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock down sensor specs, installation plan, and safety procedures.",
+        "messages": [
+          {
+            "msg_id": "M36",
+            "speaker_id": 18383,
+            "reply_to": null,
+            "text": "I have put together a proposed sensor and data collection list for the pilot assets in A4, along with a first draft of wiring and installation notes for T4. For each asset, A4 lists required signals, sampling frequencies, and whether we can reuse existing instrumentation. I also reviewed the current Sensor Installation and Safety Checklist in A3 and started adapting it for our lines as part of T8 and T11. Before we freeze the spec, I need your feedback on: 1) feasibility within the maintenance windows, and 2) any safety or access concerns you see on the shop floor or in the garage.",
+            "mentions": [
+              36422,
+              53841,
+              237177,
+              560411,
+              55217
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T4",
+              "T8",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 36422,
+            "reply_to": "M36",
+            "text": "Looking at A4, the signal set for the press and conveyor looks reasonable. My main concern is the installation time for the additional vibration sensor on the case erector. For T4 and T5, we need to make sure that work fits into the off-peak windows without risking production. Can you estimate how long each asset will take to instrument, including lockout/tagout steps from A3? That will help us build a realistic schedule.",
+            "mentions": [
+              18383,
+              53841
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 53841,
+            "reply_to": "M36",
+            "text": "From a production planning view, the spec in A4 is fine as long as we can keep each line down for no more than the agreed maintenance windows in T5. We also need to avoid any surprises with control system integration. For T11, can you confirm that the additional sensors will not overload existing control panels or interfere with current safety circuits? If there is any doubt, we should plan a quick bench test before touching the live equipment.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 237177,
+            "reply_to": "M36",
+            "text": "On A3 and T8, I noticed the checklist mentions general lockout/tagout, but it does not yet call out some of the tight access points around the sealer and case erector. In the garage we have had a few near-misses when working around those guards. Could we add specific steps to verify guarding is properly removed and reinstalled, and maybe a reminder to check for any loose tools before restarting? That will help keep the team safe during installation.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 560411,
+            "reply_to": "M36",
+            "text": "From the process side, the sampling frequencies in A4 look adequate for the failure modes we are targeting. For T4, I would just ask that we keep the configuration as simple as possible for the technicians: standard connector types, clear labeling, and photos in the installation notes. That will also make it easier to explain during training in T6.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 55217,
+            "reply_to": "M36",
+            "text": "I have a basic question on A4. For the conveyor drive, we are adding both vibration and current monitoring. Is that necessary for the pilot, or could we start with just one of them to save time during installation? I am thinking about the limited windows in T5 and the fact that our team is still getting used to this type of work.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 18383,
+            "reply_to": "M37",
+            "text": "On installation time: based on similar work, I estimate roughly 45 minutes per asset for wiring and mounting when we are only tapping existing signals, and up to 90 minutes for assets where we add new sensors, like the case erector. That includes lockout/tagout and basic functional checks from A3. I will add these estimates into T4 so we can feed them into T5 scheduling.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 18383,
+            "reply_to": "M38",
+            "text": "On T11: I have checked the current control panel loads and there is enough capacity to add the proposed sensors without overloading the power supplies. The new devices will be connected through an auxiliary junction box and will not interfere with existing safety circuits. I will still run a quick interference check during installation and document the results in T11. If we see any unexpected behavior, we will stop and consult the plant electrical safety representative before proceeding.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 18383,
+            "reply_to": "M39",
+            "text": "Good catch on the guarding. I will update A3 and T8 to include explicit steps for removing and reinstalling guards around the sealer and case erector, plus a final sweep for loose tools before restart. I will also add a reminder to verify that all interlocks are functioning after reassembly.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 18383,
+            "reply_to": "M41",
+            "text": "On the conveyor drive signals: for the pilot, we can simplify. If we have to choose, I recommend we keep current monitoring and drop the additional vibration sensor for now. Current gives us a good early indication of mechanical and electrical issues with minimal extra hardware. I will adjust A4 accordingly so we stay within the time constraints in T5.",
+            "mentions": [
+              55217,
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 36422,
+            "reply_to": "M42",
+            "text": "Those installation time estimates help a lot. With 45–90 minutes per asset, we can fit two assets per maintenance window without touching production. I will use that in T5 to propose a schedule that spreads the work over three off-peak shifts. We should also build in a small buffer in case we hit any surprises.",
+            "mentions": [
+              18383,
+              53841
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 560411,
+            "reply_to": "M45",
+            "text": "Simplifying the conveyor instrumentation makes sense for the first phase. From a process monitoring perspective, current alone will still give us useful trends. We can always add vibration later if the pilot shows a strong case. Please just make sure A4 clearly notes which assets have partial instrumentation so we interpret A6 correctly during analysis.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 237177,
+            "reply_to": "M44",
+            "text": "Thanks for updating A3 and T8. Could we also add a quick briefing step before each installation window, where the team walks through the checklist together? In the garage we have seen that a short verbal run-through reduces mistakes.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 18383,
+            "reply_to": "M48",
+            "text": "Good idea. I will add a pre-job briefing step at the top of A3 and T8, with a note that the supervisor or lead technician should walk through the checklist with the team before starting work.",
+            "mentions": [
+              237177,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 53841,
+            "reply_to": "M36",
+            "text": "From my side, with the simplified conveyor instrumentation and the clarified safety steps in A3, I am comfortable that we can execute the installation within the agreed windows in T5 without impacting production. As long as T11 confirms no issues during the interference checks, I am fine to approve the sensor and data spec for the pilot.",
+            "mentions": [
+              18383,
+              36422
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T5",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 36422,
+            "reply_to": "M50",
+            "text": "Agreed. With the current version of A4 and the updated A3, the plan is workable. I will align the detailed installation schedule in T5 with production planning and share it in the go-live coordination thread.",
+            "mentions": [
+              53841,
+              18383
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 18383,
+            "reply_to": "M36",
+            "text": "To wrap up: we will go ahead with the sensor and data collection spec in A4, with current monitoring only on the conveyor drive and the other assets as originally proposed. A3 and T8 now include detailed guarding steps, a pre-job briefing, and explicit lockout/tagout instructions. I will finalize the low-level wiring notes for T4 and complete the electrical safety validation for T11 during the first installation window. Unless there are last-minute concerns, I will treat the spec and checklist as approved for the pilot.",
+            "mentions": [
+              36422,
+              53841,
+              237177,
+              560411
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T4",
+              "T8",
+              "T11"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 237177,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 18383,
+              "when": "first installation window"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate pilot go-live, training, and daily status updates.",
+        "messages": [
+          {
+            "msg_id": "M53",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "We are one week out from the pilot go-live for project_title, so opening this thread to coordinate rollout. Based on T5 and the agreed spec in A4, I propose we target pilot go-live next Wednesday, with installation work spread over the three preceding off-peak shifts. A5 and T6 contain the draft training pack and plan, and A6 is set up to capture KPIs from day one. In this thread we need to: 1) confirm the go-live date and maintenance windows, 2) agree on training dates and attendees per session, and 3) align on daily status update routines for T9.",
+            "mentions": [
+              53841,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A6",
+              "T5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 53841,
+            "reply_to": "M53",
+            "text": "I checked with production planning. Next Wednesday works as a pilot go-live date, provided we keep the installation work within the off-peak windows you outlined in T5. For Line 1, we can use the late shift on Monday and Tuesday; for Line 2, the early shift on Tuesday. I will block those windows in the shared calendar and reference them in T5. On daily status for T9, I suggest a short async update in this channel at the end of each installation and pilot day: what was done, any issues, and readiness for the next day.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 18383,
+            "reply_to": "M53",
+            "text": "From the electrical side, the proposed windows are sufficient to complete the installations according to A3 and A4. I will prepare the detailed task list for each shift and share it with the technicians, including the pre-job briefing from T8. For T9, I can own the technical part of the daily status updates during installation week: which assets were instrumented, any deviations from plan, and any safety observations.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4",
+              "T8",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "electric_plug",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 560411,
+            "reply_to": "M53",
+            "text": "On training (A5 and T6), I propose three sessions: 1) Operators on the two pilot lines: focus on recognizing predictive alerts, logging notes, and basic do and do not actions. 2) Maintenance technicians and planners: focus on the new process in A2, triage responsibilities, and how to use A6. 3) Garage and aftersales reps: focus on how pilot data will be shared and how it links to customer impact. We can run sessions 1 and 2 on Monday and Tuesday before go-live, and session 3 later in the week once we have a day or two of data to show.",
+            "mentions": [
+              36422,
+              237177
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "books",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 237177,
+            "reply_to": "M56",
+            "text": "The training plan in T6 works for the garage team. For session 3, it would be helpful if we could include one or two examples from A6, even if they are simulated, to show how alerts and interventions will appear. That will make it easier for the team to connect the dots to T12 later.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A6",
+              "T6",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 55217,
+            "reply_to": "M53",
+            "text": "I want to confirm the operator coverage for training. On Line 1 we have some temporary staff on the late shift. Do we expect them to attend the same session as the permanent operators, or will there be a shorter briefing for them? I am asking because it might be hard to get everyone in the room at once without affecting production.",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 36422,
+            "reply_to": "M58",
+            "text": "For the temporary staff, I suggest we include at least one representative in the main operator session and then use the quick reference guides from A5 for short on-the-job briefings. That way we do not pull everyone off the line at once. We can note this approach in T6 so it is clear who is responsible for those briefings.",
+            "mentions": [
+              55217,
+              560411
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 53841,
+            "reply_to": "M53",
+            "text": "On the go-live date: with the windows you proposed and the confirmation from electrical, I am comfortable committing to next Wednesday as pilot start, assuming no last-minute production changes. I will add a note in T5 that any major rush order could force us to shift by one day, but for now we will plan around Wednesday.",
+            "mentions": [
+              36422,
+              18383
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 18383,
+            "reply_to": "M60",
+            "text": "Understood. I will prepare the teams assuming Wednesday go-live and keep some flexibility in the installation sequence in case we need to swap a window. Any change in the schedule should still allow us to complete T11 checks before we start collecting live data in A6.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T11",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 560411,
+            "reply_to": "M58",
+            "text": "For the operator training, I can design the session so that the core content fits into 45 minutes, with an optional 15-minute Q and A. That should make it easier to schedule around production. For temporary staff, we can create a short script based on A5 for supervisors to use during shift handovers. I will add that to T6.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 36422,
+            "reply_to": "M53",
+            "text": "On daily status for T9, here is a concrete proposal: during installation week and the first two weeks of the pilot, each day by 16:00 we post a short update in this channel with three bullets: 1) work completed, 2) any incidents or near-misses, 3) any impact on production or KPIs in A6. I can own the overall coordination and ask each role to add their part as needed.",
+            "mentions": [
+              53841,
+              18383,
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "spiral_notepad",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 237177,
+            "reply_to": "M63",
+            "text": "That daily update format works for us. I will make sure the garage team adds any relevant notes on parts usage or service calls related to the pilot assets, so we can track those in parallel with A6.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 55217,
+            "reply_to": "M62",
+            "text": "Thanks for adjusting the training format. With a 45-minute core session and the quick reference guides from A5, I am confident we can get the operators up to speed without disrupting the lines.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 53841,
+            "reply_to": "M56",
+            "text": "On attendees: for session 1, we should include all operators on the two pilot lines plus at least one relief operator. For session 2, all maintenance technicians who might be called to those lines, plus the maintenance planner and on-call electrician. For session 3, the garage manager and one or two aftersales reps. If we capture this list in T6, it will be easier to track who has been trained.",
+            "mentions": [
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 560411,
+            "reply_to": "M66",
+            "text": "Agreed. I will update T6 with the detailed attendee lists and add a simple sign-in sheet to A5 so we can document participation.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A5",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 36422,
+            "reply_to": "M53",
+            "text": "Let me summarize what we have agreed so far: 1) Pilot go-live is planned for next Wednesday, with installation work on the three preceding off-peak shifts as captured in T5. 2) Training sessions: operators and maintenance on Monday and Tuesday, garage and aftersales later in the week, with details and attendee lists in T6 and materials in A5. 3) Daily status updates for T9: short async posts by 16:00 covering work done, incidents, and any impact on A6 KPIs. If there are no objections by tomorrow morning, I will treat this as confirmed and communicate it to the wider stakeholder group.",
+            "mentions": [
+              53841,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A5",
+              "A6",
+              "T5",
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 18383,
+            "reply_to": "M68",
+            "text": "No objections from me. I will align the installation crews with the confirmed windows and make sure they are aware of the daily status expectations in T9.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 237177,
+            "reply_to": "M68",
+            "text": "All good from the garage side. I will confirm attendance for session 3 and make sure we are ready to contribute to the daily updates once the pilot starts.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T6",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 53841,
+              "when": "today"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 560411,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 36422,
+              "when": "pilot week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results, customer impact, and decide on rollout roadmap.",
+        "messages": [
+          {
+            "msg_id": "M71",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "We have completed the initial pilot period on the two lines, so I have drafted the Pilot Implementation and Lessons Learned Report in A7, using data from A6 and inputs from T10 and T12. Overall, unplanned downtime on the pilot assets dropped by about 18 percent, and we saw an improvement in maintenance compliance. However, not all assets contributed equally. In this thread we need to: 1) review the results and customer impact, 2) decide whether to keep or adjust the pilot asset scope for scale-up, and 3) confirm long-term ownership of alert triage and escalation for the broader rollout, which will feed into A8.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bar_chart",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 36422,
+            "reply_to": "M71",
+            "text": "Looking at A6 and A7, the biggest gains came from the press and the sealer. The conveyor and case erector showed some improvement, but less pronounced. From an operations standpoint, I would keep all current pilot assets in scope for the next phase and consider adding one or two more high-impact assets per line, especially where we have good existing signals. I would not expand beyond that yet, to avoid overloading the teams. For T10, we should highlight that the process changes around triage and scheduling were as important as the sensors themselves.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 18383,
+            "reply_to": "M71",
+            "text": "From the electrical side, the data in A6 confirms that the current monitoring on the conveyor was useful but not as predictive as on the press and sealer. For the scale-up, I would keep the conveyor in scope but prioritize adding similar current monitoring to other large motors before we invest in more complex vibration setups. I will capture this recommendation in T10 and in the technical section of A7.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "electric_plug",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 560411,
+            "reply_to": "M71",
+            "text": "On process performance, A6 shows that maintenance compliance improved significantly once the triage role stabilized, but first-time-fix rate only improved modestly. In A7 I suggested that for the rollout we invest more in targeted training for technicians on interpreting the alerts and common failure modes. For asset scope, I agree with keeping the current set and adding a small number of additional assets per line, focusing on those with clear failure patterns and existing data. That will make the next wave of T3 and T6 work more manageable.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 237177,
+            "reply_to": "M71",
+            "text": "From the customer and aftersales side, T12 shows a small but noticeable reduction in rush repair calls and late shipment complaints linked to the pilot assets. The near-miss notes in A7 were particularly helpful in explaining the value to the sales and service teams. For the rollout, I would like to see us keep the current assets and add any others that have a history of causing customer issues, even if their internal downtime impact is moderate. That will help us tell a stronger story externally.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 55217,
+            "reply_to": "M71",
+            "text": "I noticed in A6 that some of the smaller issues on the case erector were still handled outside the new process, with operators calling maintenance directly. That might explain why the improvement there was smaller. For the rollout, should we adjust the scope to focus more on assets where the process was followed consistently, or do we keep the case erector and work on better adherence?",
+            "mentions": [
+              36422,
+              560411
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 36422,
+            "reply_to": "M76",
+            "text": "Good observation. I would keep the case erector in scope but treat it as a priority area for coaching rather than dropping it. The issues we saw there are more about behavior than technology. For the rollout, we can include a specific action in A8 to reinforce the process on that asset type, and track adherence more closely in A6.",
+            "mentions": [
+              55217,
+              560411
+            ],
+            "artifact_refs": [
+              "A6",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 18383,
+            "reply_to": "M72",
+            "text": "If we add one or two more assets per line, I recommend we choose ones where we can reuse the same sensor types and wiring approaches already documented in A4. That will keep the additional T4 and T11 work light. We should avoid introducing new sensor technologies in the next wave unless there is a very strong case.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A4",
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 560411,
+            "reply_to": "M77",
+            "text": "On long-term ownership of triage and escalation, the pilot confirmed that having the maintenance planner or reliability technician as first-line triage works well, with the on-call electrician covering off-shifts. I would keep that model for the rollout and formalize it in A2 and A8. We might need to adjust staffing slightly in some plants, but I would not move triage to operations or the garage at this stage.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 237177,
+            "reply_to": "M79",
+            "text": "I agree with keeping triage with maintenance. From the garage side, what worked well was receiving the weekly summaries and near-miss notes. For the rollout, I would like to see that practice standardized across plants and captured explicitly in A8, so we do not lose that link to customer impact.",
+            "mentions": [
+              560411,
+              36422
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 53841,
+            "reply_to": "M72",
+            "text": "Summarizing the asset scope discussion: there seems to be consensus to keep all current pilot assets in scope for the next phase, including the case erector, and to add a small number of additional high-impact assets per line where we can reuse existing sensor approaches. We will also consider adding assets that have a strong link to customer issues, as highlighted in T12, even if their internal downtime impact is moderate. I will reflect this in T10 and in the asset roadmap section of A8.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 36422,
+            "reply_to": "M79",
+            "text": "On ownership of triage and escalation, I am aligned with keeping the maintenance planner or reliability technician as first-line triage, with the on-call electrician covering off-shifts, and line supervisors involved for high severity decisions. For the long term, we should document this clearly in A2 and A8 and make sure each plant identifies named individuals for these roles. I will add this to the governance section of A8.",
+            "mentions": [
+              53841,
+              560411
+            ],
+            "artifact_refs": [
+              "A2",
+              "A8"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 18383,
+            "reply_to": "M81",
+            "text": "That scope direction works for me. For the additional assets, I will prepare a short list of candidates per plant based on motor size and existing instrumentation, and feed that into the next iteration of A4 and T4 once A8 is finalized.",
+            "mentions": [
+              53841,
+              36422
+            ],
+            "artifact_refs": [
+              "A4",
+              "A8",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 560411,
+            "reply_to": "M82",
+            "text": "I will update A2 to reflect the confirmed long-term ownership model and adjust the training materials in A5 and T6 so that new plants understand who does what when we roll out. That will also help keep the KPIs in A6 comparable across sites.",
+            "mentions": [
+              36422,
+              53841
+            ],
+            "artifact_refs": [
+              "A2",
+              "A5",
+              "A6",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 237177,
+            "reply_to": "M81",
+            "text": "For T12, I will extend the customer impact tracking to the new assets we add in the next phase and make sure the aftersales teams in other plants are briefed on how to use the data from A6 and A7 when talking to customers.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6",
+              "A7",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 53841,
+            "reply_to": "M71",
+            "text": "To close this out: A7 will be updated with the final data from A6 and the agreed recommendations. For scale-up, we will keep the current pilot assets, add a limited number of additional high-impact and customer-relevant assets per line, and reuse the proven sensor and process patterns. Long-term, triage and escalation will remain with maintenance planners or reliability technicians, with on-call electricians and line supervisors in defined roles, as captured in A2 and A8. I will finalize T10 and A8 this week and share the rollout roadmap for sign-off.",
+            "mentions": [
+              36422,
+              18383,
+              560411,
+              237177,
+              55217
+            ],
+            "artifact_refs": [
+              "A2",
+              "A6",
+              "A7",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 53841,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 237177,
+              "when": "next cycle"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

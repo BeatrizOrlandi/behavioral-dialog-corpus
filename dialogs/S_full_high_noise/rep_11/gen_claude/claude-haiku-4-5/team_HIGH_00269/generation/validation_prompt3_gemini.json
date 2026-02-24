@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 contains 12 messages, which is below the expected minimum of 15 messages per thread and outside the blueprint's target_messages_range of 15-22."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T3 is required by the blueprint to be referenced in TH2, but it is missing from the artifact_refs of all messages in that thread."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants use repetitive and robotic phrasing to confirm decisions (e.g., 'D1 is locked', 'D3 is locked', 'D7 is locked') and acknowledge tasks, lacking distinct natural voices."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 3,
+    "voice_diversity_1_5": 3
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 contains 15 messages (M19 to M33), which is below the expected minimum of 16 messages per thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Messages M71 and M73 explicitly mention levels/labels ('low, medium, and high engagement'), which violates the anti-leakage rule against using high/medium/low when referring to attributes. Additionally, the forbidden term 'class' is used extensively throughout the text (e.g., M13, M14), although it is used in the context of a school classroom."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

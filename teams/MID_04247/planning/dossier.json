@@ -1,0 +1,435 @@
+{
+  "affinity_band": "MID",
+  "planning_output": {
+    "project_pack": {
+      "project": {
+        "title": "Cloud-Native Platform Hardening and Sustainability Initiative",
+        "objective": "Design and roll out a secure, compliant, and greener cloud-native platform baseline across key services, with clear governance and automation.",
+        "deliverables": [
+          "Cloud security and risk governance framework for production workloads",
+          "Hardened cloud-native reference architecture and deployment patterns",
+          "Automated CI/CD security and compliance controls with runbooks",
+          "Green ICT assessment and optimization plan for cloud workloads",
+          "Executive roadmap and KPI dashboard for security and sustainability",
+          "Training and onboarding materials for engineering and operations teams"
+        ],
+        "constraints": [
+          "Initial rollout limited to two major cloud environments and core services",
+          "Must comply with internal ICT security policies and relevant legislation",
+          "Minimal downtime for existing production workloads during migration",
+          "Security controls must be automatable via existing CI/CD tooling",
+          "Sustainability improvements must be measurable with agreed metrics"
+        ],
+        "stakeholders": [
+          "Chief information officer",
+          "Cybersecurity risk manager",
+          "Cloud DevOps engineer",
+          "Software developer",
+          "Green ICT consultant",
+          "Service owner"
+        ],
+        "deadline_days": 30,
+        "risks": [
+          {
+            "risk": "Engineering teams resist adopting new security and sustainability standards.",
+            "mitigation": "Involve key engineers early, provide clear benefits, phased rollout, and targeted training."
+          },
+          {
+            "risk": "Automated controls introduce deployment friction or pipeline failures.",
+            "mitigation": "Pilot in non-critical services, add feature flags and rollback paths, monitor and tune thresholds."
+          },
+          {
+            "risk": "Inadequate visibility into current cloud usage and emissions baselines.",
+            "mitigation": "Integrate cloud cost and usage data, define proxy metrics, and validate with sample workloads."
+          },
+          {
+            "risk": "Regulatory or policy requirements are misinterpreted in technical design.",
+            "mitigation": "Cybersecurity risk manager reviews all controls, and legal/compliance sign off key decisions."
+          },
+          {
+            "risk": "Timeline slips due to competing priorities for platform and product teams.",
+            "mitigation": "CIO sponsors project, sets clear milestones, and negotiates capacity with team leads."
+          }
+        ]
+      },
+      "themes": [
+        {
+          "theme": "Cloud security baselines",
+          "why_relevant": "Defines minimum controls for all services and guides architecture and automation choices."
+        },
+        {
+          "theme": "Risk and compliance alignment",
+          "why_relevant": "Ensures platform changes meet ICT security legislation and internal governance needs."
+        },
+        {
+          "theme": "DevOps automation and tooling",
+          "why_relevant": "Security and sustainability controls must be integrated into CI/CD and runtime automation."
+        },
+        {
+          "theme": "Green ICT and cost optimization",
+          "why_relevant": "Aligns cloud usage with sustainability goals and reduces wasteful resource consumption."
+        },
+        {
+          "theme": "Change management and adoption",
+          "why_relevant": "Success depends on teams understanding, accepting, and consistently using the new baseline."
+        }
+      ],
+      "backlog": [
+        {
+          "task_id": "T1",
+          "task": "Define cloud security and risk governance framework for production workloads",
+          "owner_role": "cybersecurity risk manager",
+          "definition_of_done": [
+            "Framework document approved by CIO and security stakeholders",
+            "Roles, responsibilities, and decision rights clearly defined",
+            "Risk assessment and exception handling processes documented",
+            "Shared in central repository and communicated to platform teams"
+          ]
+        },
+        {
+          "task_id": "T2",
+          "task": "Design hardened cloud-native reference architecture for core services",
+          "owner_role": "cloud DevOps engineer ",
+          "definition_of_done": [
+            "Architecture diagrams and patterns created for target cloud environments",
+            "Security controls mapped to governance framework requirements",
+            "Scalability, resilience, and observability patterns documented",
+            "Reviewed by cybersecurity risk manager and CIO"
+          ]
+        },
+        {
+          "task_id": "T3",
+          "task": "Implement CI/CD security gates and compliance checks",
+          "owner_role": "cloud DevOps engineer ",
+          "definition_of_done": [
+            "Static and dependency scanning integrated into pipelines",
+            "Infrastructure as code validated against security policies",
+            "Pipeline templates updated and documented for reuse",
+            "Pilot service successfully deployed using new gates"
+          ]
+        },
+        {
+          "task_id": "T4",
+          "task": "Develop runtime security monitoring and incident runbooks",
+          "owner_role": "cybersecurity risk manager",
+          "definition_of_done": [
+            "Key runtime security alerts defined and configured",
+            "Incident triage and escalation runbooks drafted",
+            "Runbooks validated in tabletop exercise with platform team",
+            "Runbooks stored in central knowledge base"
+          ]
+        },
+        {
+          "task_id": "T5",
+          "task": "Assess current cloud workloads for energy and resource efficiency",
+          "owner_role": "green ICT consultant",
+          "definition_of_done": [
+            "Baseline report on resource utilization and emissions proxies created",
+            "Top inefficient workloads and patterns identified",
+            "Findings validated with DevOps and development teams",
+            "Prioritized list of optimization opportunities agreed"
+          ]
+        },
+        {
+          "task_id": "T6",
+          "task": "Define green ICT optimization guidelines for cloud workloads",
+          "owner_role": "green ICT consultant",
+          "definition_of_done": [
+            "Guidelines covering right-sizing, scheduling, and storage created",
+            "Alignment with ICT security and compliance requirements checked",
+            "Examples tailored for common application patterns included",
+            "Guidelines published and shared with engineering teams"
+          ]
+        },
+        {
+          "task_id": "T7",
+          "task": "Update application code and infrastructure to align with new baseline",
+          "owner_role": "software developer",
+          "definition_of_done": [
+            "Target pilot service refactored to use reference architecture",
+            "Security and green ICT guidelines applied where relevant",
+            "All automated tests and security checks passing in CI/CD",
+            "Deployment to staging and production completed without major incidents"
+          ]
+        },
+        {
+          "task_id": "T8",
+          "task": "Define executive roadmap, KPIs, and reporting cadence",
+          "owner_role": "chief information officer",
+          "definition_of_done": [
+            "Roadmap with milestones for security and sustainability rollout created",
+            "KPIs for risk reduction and efficiency agreed with stakeholders",
+            "Reporting format and cadence defined for leadership reviews",
+            "Roadmap communicated to impacted teams"
+          ]
+        },
+        {
+          "task_id": "T9",
+          "task": "Create training materials for engineers on new platform baseline",
+          "owner_role": "software developer",
+          "definition_of_done": [
+            "Slide deck and short reference guide drafted",
+            "Examples include CI/CD changes and coding best practices",
+            "Content reviewed by cybersecurity risk manager and green ICT consultant",
+            "Training sessions scheduled and announced"
+          ]
+        },
+        {
+          "task_id": "T10",
+          "task": "Prioritize and approve initial set of services for migration",
+          "owner_role": "chief information officer",
+          "definition_of_done": [
+            "Selection criteria for candidate services defined",
+            "List of initial services agreed with service owners",
+            "Risks and dependencies for each service documented",
+            "Migration plan aligned with overall roadmap"
+          ]
+        },
+        {
+          "task_id": "T11",
+          "task": "Document exception handling and temporary waivers process",
+          "owner_role": "cybersecurity risk manager",
+          "definition_of_done": [
+            "Criteria for exceptions and waivers clearly defined",
+            "Approval workflow and time limits documented",
+            "Template for exception requests created",
+            "Process communicated to engineering and product teams"
+          ]
+        },
+        {
+          "task_id": "T12",
+          "task": "Set up shared dashboard for security and sustainability KPIs",
+          "owner_role": "cloud DevOps engineer ",
+          "definition_of_done": [
+            "Dashboard connected to CI/CD, runtime, and cost data sources",
+            "Key metrics for risk posture and efficiency visualized",
+            "Access granted to CIO, risk, and engineering leads",
+            "Dashboard link added to project documentation"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "A1",
+          "type": "doc",
+          "title": "Cloud Security and Risk Governance Framework",
+          "used_for": "Defines roles, processes, and minimum security requirements for cloud workloads."
+        },
+        {
+          "artifact_id": "A2",
+          "type": "doc",
+          "title": "Hardened Cloud-Native Reference Architecture",
+          "used_for": "Provides standard patterns and diagrams for secure, scalable deployments."
+        },
+        {
+          "artifact_id": "A3",
+          "type": "guideline",
+          "title": "Green ICT Optimization Guidelines for Cloud Workloads",
+          "used_for": "Guides teams on reducing resource usage and emissions while staying compliant."
+        },
+        {
+          "artifact_id": "A4",
+          "type": "checklist",
+          "title": "CI/CD Security and Compliance Gate Checklist",
+          "used_for": "Ensures all required security checks are implemented in pipelines before go-live."
+        },
+        {
+          "artifact_id": "A5",
+          "type": "sheet",
+          "title": "Cloud Workload Baseline and Efficiency Assessment",
+          "used_for": "Captures current usage, risk level, and optimization opportunities per service."
+        },
+        {
+          "artifact_id": "A6",
+          "type": "guideline",
+          "title": "Exception and Waiver Request Process",
+          "used_for": "Standardizes how teams request and track temporary deviations from the baseline."
+        },
+        {
+          "artifact_id": "A7",
+          "type": "doc",
+          "title": "Executive Roadmap and KPI Dashboard Overview",
+          "used_for": "Summarizes milestones, KPIs, and reporting for leadership and stakeholders."
+        },
+        {
+          "artifact_id": "A8",
+          "type": "other",
+          "title": "Engineer Training Pack for Secure and Green Cloud Baseline",
+          "used_for": "Provides training slides and examples for adopting the new platform standards."
+        }
+      ]
+    },
+    "blueprint": {
+      "channel_name_hint": "proj-cloud-secure-green-baseline",
+      "threads_plan": [
+        {
+          "thread_id": "TH1",
+          "thread_goal": "Align on scope, success metrics, and initial services for the baseline rollout.",
+          "trigger": "CIO posts project kickoff summary and asks for feedback on scope and priorities.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D1",
+              "decision": "Confirm and, if needed, adjust the project scope and success metrics in A7."
+            },
+            {
+              "decision_id": "D2",
+              "decision": "Approve the initial list of services for migration as defined in T10."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A7",
+            "T8",
+            "T10"
+          ]
+        },
+        {
+          "thread_id": "TH2",
+          "thread_goal": "Agree on the cloud security governance framework and exception process.",
+          "trigger": "Cybersecurity risk manager shares draft governance framework and asks for comments.",
+          "target_messages_range": [
+            20,
+            30
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D3",
+              "decision": "Approve the Cloud Security and Risk Governance Framework in A1."
+            },
+            {
+              "decision_id": "D4",
+              "decision": "Finalize the exception and waiver process described in A6 and T11."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A1",
+            "A6",
+            "T1",
+            "T11"
+          ]
+        },
+        {
+          "thread_id": "TH3",
+          "thread_goal": "Lock in the hardened reference architecture and CI/CD security gates.",
+          "trigger": "Cloud DevOps engineer posts proposed reference architecture and pipeline changes.",
+          "target_messages_range": [
+            22,
+            32
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D5",
+              "decision": "Sign off on the hardened cloud-native reference architecture in A2."
+            },
+            {
+              "decision_id": "D6",
+              "decision": "Agree on the mandatory CI/CD security checks listed in A4 and their rollout plan."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A2",
+            "A4",
+            "T2",
+            "T3",
+            "T12"
+          ]
+        },
+        {
+          "thread_id": "TH4",
+          "thread_goal": "Prioritize green ICT optimizations and align with development plans.",
+          "trigger": "Green ICT consultant shares baseline assessment and draft optimization guidelines.",
+          "target_messages_range": [
+            18,
+            26
+          ],
+          "mandatory_decisions": [
+            {
+              "decision_id": "D7",
+              "decision": "Approve the Green ICT Optimization Guidelines in A3."
+            },
+            {
+              "decision_id": "D8",
+              "decision": "Select top optimization opportunities from A5 to include in the first rollout wave."
+            }
+          ],
+          "artifacts_to_reference": [
+            "A3",
+            "A5",
+            "T5",
+            "T6",
+            "T7"
+          ]
+        },
+        {
+          "thread_id": "TH5",
+          "thread_goal": "Plan training, communication, and adoption support for engineering teams.",
+          "trigger": "Software developer posts draft training pack and proposes training schedule.",
+          "target_messages_range": [
+            15,
+            23
+          ],
+          "mandatory_decisions": [],
+          "artifacts_to_reference": [
+            "A8",
+            "T7",
+            "T9"
+          ]
+        }
+      ],
+      "talk_distribution_by_role": [
+        {
+          "role": "chief information officer",
+          "share": 0.24
+        },
+        {
+          "role": "cloud DevOps engineer ",
+          "share": 0.23
+        },
+        {
+          "role": "cybersecurity risk manager",
+          "share": 0.21
+        },
+        {
+          "role": "software developer",
+          "share": 0.18
+        },
+        {
+          "role": "green ICT consultant",
+          "share": 0.14
+        }
+      ],
+      "channel_rituals": [
+        "Twice-weekly async standup where each role posts progress, blockers, and next steps.",
+        "Weekly architecture and risk review thread to discuss design changes and approvals.",
+        "Bi-weekly KPI snapshot post linking to dashboards and summarizing key trends.",
+        "Post-milestone retrospective thread after each migration wave to capture learnings.",
+        "Ad-hoc incident review mini-threads when security or deployment issues occur."
+      ]
+    },
+    "participants": [
+      {
+        "_id": 43802,
+        "role": "cybersecurity risk manager"
+      },
+      {
+        "_id": 61642,
+        "role": "cloud DevOps engineer "
+      },
+      {
+        "_id": 69398,
+        "role": "green ICT consultant"
+      },
+      {
+        "_id": 96849,
+        "role": "chief information officer"
+      },
+      {
+        "_id": 506822,
+        "role": "software developer"
+      }
+    ]
+  }
+}

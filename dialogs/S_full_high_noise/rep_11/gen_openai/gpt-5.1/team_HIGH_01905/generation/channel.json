@@ -1,0 +1,2115 @@
+{
+  "channel": {
+    "channel_id": "proj-omnichannel-playbook",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, success metrics, and initial call type mapping for the playbook.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 504375,
+            "reply_to": null,
+            "text": "Kicking off the Omnichannel Customer Service Playbook for Retail Contact Centre project_title. Goal over the next 21 days is to get a usable v1 for phone, chat, and in-store teams, then pilot. To get started, we need two things in place: 1) a clear list of top customer scenarios across contact centre and stores, and 2) initial success metrics and data sources. For scenarios, T1 is about mapping top call types and escalation paths, and A2 will be our sheet for call types, volumes, and escalation. For metrics, T12 will capture how we track satisfaction and first-contact resolution with existing reports. Can each of you share the top 5 interaction types you see most often, plus any pain points or odd cases that we should not miss? Please also mention which metrics you already look at day to day so we can reuse data where possible.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 291562,
+            "reply_to": "M1",
+            "text": "From the contact centre side, the most frequent call types I see are: 1) order status and delivery tracking, 2) returns and exchanges, 3) payment issues, 4) product availability and reservations, and 5) account access or password reset. For T1, I can start listing these in A2 with rough volumes based on last month and note where escalations usually happen. Pain points: returns rules are not always applied the same way by different supervisors, and payment issues often bounce between us and the payment provider. On metrics, we mainly look at average handling time, abandonment rate, and a basic post-call survey score. I am not sure which report is the best source for first-contact resolution, so I will need help from reporting or ops to confirm that for T12.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 7284,
+            "reply_to": "M1",
+            "text": "Adding from the agent view: 1) customers asking about promo conditions or discount codes, 2) changes to delivery address after order, 3) complaints about damaged or missing items, 4) questions about product features before buying, and 5) follow-up on existing tickets where they feel nothing moved. For T1, I can help refine the descriptions in A2 and flag where we see repeated back-and-forth or unclear escalation rules. On metrics, I check queue dashboard for wait time and service level, and we get a weekly summary of survey comments. We do not have a simple way to see if an issue was solved on first contact, but we could approximate using repeat contacts on the same order or ticket if reporting can pull that for T12.",
+            "mentions": [
+              291562,
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 52506,
+            "reply_to": "M1",
+            "text": "From the in-store specialised seller side, the main interactions are: 1) product advice and comparisons, 2) checking stock in other stores or online, 3) handling exchanges or refunds for store purchases, 4) support with online orders picked up in store, and 5) warranty or after-sales questions. Pain points: we often do not have the same view of order history as the contact centre, so customers repeat information. For T1, I suggest we treat in-store exchanges and online order pickups as separate interaction types in A2, because the steps and expectations differ. On metrics, we mostly track sales conversion and some mystery shopping scores, not so much first-contact resolution, so we will need to align how that translates for stores in T12.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 125944,
+            "reply_to": "M1",
+            "text": "For the bookshop, the top interactions are a bit different: 1) recommendations based on reading preferences, 2) checking availability of specific titles or editions, 3) placing special orders for out-of-stock or niche publications, 4) questions about events or author signings, and 5) handling returns for books bought in store or online. Pain points: special orders can be confusing when customers started the process online and then come to the shop, and we need to be careful with customer data when taking contact details for order notifications. For T1 and A2, I propose we add at least two bookshop-specific interaction types: recommendations and special orders. For metrics, we look at sales per category and some informal feedback from regular customers, but nothing structured yet. For T12, we should define a simple way to capture satisfaction in the bookshop, maybe a short card or QR survey that fits with current tools.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 504375,
+            "reply_to": "M2",
+            "text": "Thanks all, this is already more than 10 interaction types if we list them separately. For T1 in A2, I will group and propose a draft top 10 list combining contact centre, store, and bookshop views. Tentative grouping: 1) order status and delivery tracking, 2) returns and exchanges (store and online, but we can note channel differences), 3) payment and billing issues, 4) product information and advice, 5) promo and discount questions, 6) account access and login issues, 7) delivery address or order changes, 8) damaged or missing items, 9) special orders and reservations (including bookshop), 10) in-store support for online orders and pickups. Does this cover your main cases, or are we missing any critical scenario that would impact first-contact resolution strongly?",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 291562,
+            "reply_to": "M6",
+            "text": "This list looks good from my side. The only thing I am not sure about is whether we should split returns and exchanges into separate items, because the rules and approvals can be different. But for a top 10, grouping them might be fine as long as we capture both flows in A2. I will start filling in volumes and current escalation rules for the first five items in the list for T1, and we can refine later if we see that one category is too broad.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 7284,
+            "reply_to": "M6",
+            "text": "From the agent perspective, I would add that complaints about service quality often come on top of another issue, like delivery or payment. Maybe we do not need a separate interaction type for complaints, but in A2 we could flag which of the top 10 tend to escalate into complaints so we design stronger first-contact handling there. Otherwise, the list matches what I see on the phones and chat. I can help document pain points and examples for items 1, 2, 3, and 8 in T1.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 52506,
+            "reply_to": "M6",
+            "text": "The grouping works for stores as well. For in-store, I would just highlight that product information and advice is a big bucket. In A2, under that item, we should distinguish between simple factual questions and more consultative conversations, especially where cross-sell is relevant. That will help later when we work on scripts and checklists. But I agree it can stay as one of the top 10 for T1.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 125944,
+            "reply_to": "M6",
+            "text": "For the bookshop, I am comfortable with special orders and reservations being one combined interaction type in the top 10, as long as we explicitly call out bookshop-specific steps in A2. For recommendations, they fit under product information and advice, but I would like us to tag them as a sub-type in T1 so we can later design tailored guidance in the bookshop guide. No additional interaction types to add from my side.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 504375,
+            "reply_to": "M10",
+            "text": "Great, sounds like we are converging. Unless anyone objects, I suggest we lock the top 10 interaction types as listed in my earlier message, with the understanding that A2 under T1 will capture sub-types like recommendations and different return flows. That will give us a stable scope for the first version of scripts and workflows. Please react here if you disagree or see a blocker.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 7284,
+            "reply_to": "M11",
+            "text": "No objections from me. Having a fixed top 10 will help when we start drafting openings and closings for each scenario. I will use that list when I work on T2 later.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 291562,
+            "reply_to": "M11",
+            "text": "I am fine with locking the list as proposed. I will keep an eye on any new patterns in the queue, but for now this covers the majority of our volume. For T1, I will focus on documenting current escalation rules for each of the 10 items in A2.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A2",
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 504375,
+            "reply_to": "M13",
+            "text": "Noted, we will treat that as our agreed top 10 list for now. On success metrics for T12, based on what you all shared, I propose we start with: 1) customer satisfaction score from existing post-contact surveys where available, 2) a proxy for first-contact resolution using repeat contacts on the same order or ticket within 7 days, 3) average handling time for calls and chats, and 4) for stores and bookshop, a simple short feedback score plus a basic view of repeat visits or complaints. Data sources would be our current contact centre reporting tool, store sales system, and a lightweight feedback form for bookshop and stores. We will need support from reporting and maybe customer experience to confirm feasibility. Thoughts before we confirm this as our initial metric set?",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 52506,
+            "reply_to": "M14",
+            "text": "This metric set makes sense to me. For stores, we can probably get a simple satisfaction score by adding a short question at the end of the interaction, maybe via QR code or a small card, as long as it uses existing survey tools. For first-contact resolution, the 7-day repeat contact proxy seems reasonable. We just need to be clear in T12 about how we will match store and contact centre interactions when the same customer moves between channels.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 125944,
+            "reply_to": "M14",
+            "text": "Agree with the proposal. For the bookshop, I can help design a very short feedback question that fits with our current till process and does not slow down queues. For repeat contacts, we might need to rely on simple indicators like customers coming back with the same issue, but we can at least capture that in a small log and feed it into T12.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 7284,
+            "reply_to": "M14",
+            "text": "From the agent side, I am ok with these metrics. One suggestion: when we look at average handling time, we should be careful not to push for shorter calls at the expense of solving the issue. Maybe in T12 we can note that first-contact resolution and satisfaction are the primary indicators, and handling time is more of a supporting one.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "raised_hands",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 291562,
+            "reply_to": "M14",
+            "text": "I agree with the metric set as well. I will check with our reporting contact which existing dashboards can give us the repeat contact view and survey scores, and then update T12 with confirmed data sources. If something is not possible with current tools, I will flag it so we can adjust.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 504375,
+            "reply_to": "M18",
+            "text": "Thanks all. Based on the feedback, we will go ahead with that metric set and the data sources you mentioned as our starting point for T12. We can refine thresholds and targets once we see baseline numbers from reporting and store data. I will document this in the T12 draft and share a quick summary in our next check-in.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 291562,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 7284,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 52506,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T1",
+              "owner_id": 125944,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 291562,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Draft and iterate on standard call handling and quality monitoring approach.",
+        "messages": [
+          {
+            "msg_id": "M20",
+            "speaker_id": 504375,
+            "reply_to": null,
+            "text": "Following up on the scope alignment, I am sharing the first draft of standard call handling scripts and the quality monitoring approach. For scripts, T2 now has a basic structure for greeting, verification, and closing for both phone and chat, aligned with the top 10 interaction types we captured in A2. For quality monitoring, T3 is a draft scorecard, and A3 will hold the final rubric once we agree on criteria. I have also sketched how these could feed into quick-reference checklists under T8 and A6. Please review the draft scripts and scorecard and share comments on tone, missing steps, and anything that might be hard to apply in real calls.",
+            "mentions": [
+              7284,
+              291562,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "A6",
+              "T2",
+              "T3",
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 7284,
+            "reply_to": "M20",
+            "text": "I went through the T2 draft. Overall structure works, but a few points from the agent side: 1) The greeting is a bit long for high-volume queues; we might want a shorter default and an extended version for complex cases. 2) For verification, we need to be explicit about what is mandatory for compliance versus what is nice to have, otherwise people will skip steps under pressure. 3) The closing script could include a quick recap of what we did and what the customer can expect next, especially for escalations. I added comments in A1 and suggested a shorter variant for chat where customers already see our name. For T8, these shorter versions could be highlighted in the checklist for quick reference.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "speech_balloon",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 291562,
+            "reply_to": "M20",
+            "text": "I reviewed the T3 scorecard draft. The criteria cover greeting, verification, problem solving, and closing, plus a basic compliance check. I am not fully sure how to weight each area, though. Right now they are all equal, but maybe compliance and resolution should count more than greeting. I added a note in A3 asking if we have any existing policy on this. For T3, I can start adding examples of good and weak behaviours for each criterion, but I might need guidance from customer experience or training on the final weighting.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 52506,
+            "reply_to": "M20",
+            "text": "From a store and previous supervisor perspective, the structure in T2 and T3 looks familiar. For the scorecard in A3, I would suggest we separate soft skills into two parts: building rapport and managing expectations. That will help coaching conversations be more specific. Also, for the scripts in A1, we should check that the tone works both for contact centre and for in-store phone calls, so we do not end up with two different styles. I left a couple of tone suggestions in comments.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A3",
+              "T2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 125944,
+            "reply_to": "M20",
+            "text": "Looking at the scripts in A1, I like that the greeting and closing are simple. For bookshop-related calls, we might need a small tweak to the verification step when customers are just asking for recommendations and not sharing order details. In T2, could we add a lighter verification path for general advice, where we only ask for personal data if we need to place an order or follow up? That will also help with data privacy and keep conversations more natural.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 504375,
+            "reply_to": "M21",
+            "text": "Thanks for the detailed comments. I will adjust T2 so that we have: 1) a standard greeting and a shorter variant for high-volume queues and chat, 2) a clear split between mandatory and optional verification elements, and 3) a closing that always includes a brief recap and next steps. For T8 and A6, we can highlight the shorter variants and mandatory checks in bold so they stand out in the one-page checklist. I will also incorporate the lighter verification path for general advice that was suggested for bookshop and similar scenarios.",
+            "mentions": [
+              7284,
+              125944
+            ],
+            "artifact_refs": [
+              "T2",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 504375,
+            "reply_to": "M22",
+            "text": "On the scorecard weighting in T3 and A3, I agree that compliance and resolution should carry more weight than greeting. A simple approach could be: compliance 30 percent, resolution 30 percent, soft skills 25 percent, and structure (greeting, verification, closing) 15 percent. This keeps the focus on solving the issue correctly while still valuing how we communicate. If no one objects, I will update T3 with these weights and add examples as you suggested.",
+            "mentions": [
+              291562,
+              52506,
+              7284
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 7284,
+            "reply_to": "M26",
+            "text": "Those weights sound reasonable to me. As long as the rubric in A3 makes it clear what counts as resolved versus partially resolved, agents will know what to aim for. Maybe we can add a note in T3 that a call can still be considered resolved even if there is a follow-up email, as long as the customer does not need to contact us again.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 52506,
+            "reply_to": "M26",
+            "text": "I support that weighting as well. For soft skills in A3, I will draft a couple of examples that show good rapport building without making the call too long, and some that show over-promising, so supervisors can coach on managing expectations. I will add these under T3 later today.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 291562,
+            "reply_to": "M26",
+            "text": "I am ok with the proposed weights. I will update T3 with them and start filling in the examples section in A3. If customer experience or training has any standard wording, I will incorporate that once they review.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 504375,
+            "reply_to": "M24",
+            "text": "Good point on lighter verification for general advice. I will add a separate path in T2 for non-order-specific queries, where we only ask for personal data if we need to place an order, check an account, or arrange follow-up. That should also make it easier to keep scripts compliant when we later run T11 on the full playbook.",
+            "mentions": [
+              125944
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 7284,
+            "reply_to": "M25",
+            "text": "I have re-read the updated T2 draft. The shorter greeting and chat variant feel much more natural, and the mandatory verification items are clearly marked now. The closing with recap and next steps will help avoid customers calling back just to confirm what will happen. From my side, I am comfortable using these scripts in a pilot, and I can help test them with a couple of colleagues when we build the T8 checklist in A6.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T2",
+              "T8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 291562,
+            "reply_to": "M31",
+            "text": "I also reviewed the latest T2 version and the scorecard in A3. The scripts now align well with the scorecard criteria, which will make coaching easier. I do not see any major gaps for the top 10 interaction types. I suggest we treat this as version 1.0 for the standard opening, verification, and closing, and refine after the pilot feedback.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T2",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 504375,
+            "reply_to": "M32",
+            "text": "Agreed. We will mark the current T2 scripts as version 1.0 for opening, verification, and closing, and use them as the base for T8 checklists and A6. Any further changes will come from pilot learnings. On the scorecard, with the weights and examples now in A3, I propose we also confirm this as our standard quality monitoring approach for calls and chats, again with the understanding that we can fine-tune after the first month of data.",
+            "mentions": [
+              7284,
+              291562,
+              52506
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 52506,
+            "reply_to": "M33",
+            "text": "From my side, the scorecard in A3 is ready to use. The criteria and examples are clear enough for supervisors to start calibrating. I would just suggest we schedule a short calibration session before the pilot so different supervisors apply the rubric consistently, but that can be handled under training planning.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 7284,
+            "reply_to": "M33",
+            "text": "I am ok with using the current scorecard as our standard. It reflects what we already try to do on good calls, just more structured. As long as we keep space in A3 for notes from the pilot, I think this is a solid starting point.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 504375,
+            "reply_to": "M35",
+            "text": "Thanks all. We will treat the current A3 scorecard and T3 rubric as our agreed standard for calls and chats going into the pilot. I will note in the document that we will revisit criteria and examples after the first month of results.",
+            "mentions": [
+              291562,
+              7284,
+              52506
+            ],
+            "artifact_refs": [
+              "A3",
+              "T3"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 504375,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 291562,
+              "when": "this week"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 7284,
+              "when": "next week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define in-store specialised seller and bookshop-specific guidelines.",
+        "messages": [
+          {
+            "msg_id": "M37",
+            "speaker_id": 52506,
+            "reply_to": null,
+            "text": "Starting a thread on in-store specialised seller and bookshop-specific guidelines. I have drafted initial sales and cross-sell scripts for common in-store scenarios under T4, and they are stored in A5. They cover greeting, needs discovery, main recommendation, and a light cross-sell prompt. For the bookshop, T5 is the task for recommendation and special order guidelines, and A4 will hold the final guide. I would like feedback on whether the scripts feel natural in your day-to-day conversations and how we can keep them consistent with the contact centre tone while still reflecting the store environment.",
+            "mentions": [
+              125944,
+              504375,
+              7284,
+              291562
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A6",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 125944,
+            "reply_to": "M37",
+            "text": "I reviewed the book-related parts of A5 and the outline for T5. The structure for needs discovery and recommendation works well for the bookshop, but we should add more specific prompts about reading preferences, such as favourite authors, genres, and reading purpose. For T5, I suggest we build a checklist in A4 that starts with a few quick questions, then suggests how to narrow down options and when to propose a special order. We also need a clear step-by-step for taking special orders, including what customer data we collect and how we store it, to stay aligned with legal and privacy requirements.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 7284,
+            "reply_to": "M37",
+            "text": "From my previous time as a specialised seller, the scripts in A5 feel close to how we talk in store, but a couple of things: 1) The cross-sell prompts might be a bit too direct in some cases; maybe we can soften them by linking to the original need, for example suggesting accessories that genuinely help with the main product. 2) It would help to have a short version of the script for busy times, similar to what we did in T2. For T4, I added comments with alternative phrasing that might sound more natural on a crowded shop floor.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shopping_bags",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 291562,
+            "reply_to": "M37",
+            "text": "Looking at A5 from a supervisor angle, I think the scripts are clear, but we should make sure they align with the tone we use in the contact centre scripts in A1. For example, using similar ways of confirming understanding and summarising next steps. I am not fully sure how to best phrase the cross-sell part without sounding pushy, so I will rely on your store experience there. For T4, I can help check that the structure matches the quality criteria we defined in A3, so we have a consistent coaching approach across channels.",
+            "mentions": [
+              52506,
+              504375
+            ],
+            "artifact_refs": [
+              "A5",
+              "A1",
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 504375,
+            "reply_to": "M37",
+            "text": "Thanks for pulling this together. From an omnichannel view, I like that A5 follows the same general flow as the contact centre scripts. For T4, I would suggest we explicitly tag which parts are mandatory (for example, checking if the main need is fully addressed before offering anything else) and which are optional, so sellers can adapt to store traffic. For T5 and A4, we should also make sure the special order process lines up with what the contact centre does when placing orders on behalf of customers, so we do not create conflicting promises.",
+            "mentions": [
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A5",
+              "A4",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "link",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 52506,
+            "reply_to": "M38",
+            "text": "Good points. I will update T4 and A5 so that book-related scripts include more specific reading preference prompts, and I will work with you on T5 to build that checklist in A4. For special orders, I will draft a simple flow that covers: checking availability, explaining timelines, collecting only necessary customer details, and confirming how they will be notified. We can then run that past compliance when we do the broader playbook review.",
+            "mentions": [
+              125944
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 52506,
+            "reply_to": "M39",
+            "text": "On the cross-sell tone, I agree we should keep it linked to the original need. I will adjust the prompts in A5 so they sound more like helpful suggestions than add-ons, for example by framing them as ways to get more value from the main product. I will also add a shorter version of the script in T4 for peak times, similar to what we did for call scripts.",
+            "mentions": [
+              7284
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 125944,
+            "reply_to": "M42",
+            "text": "I can help refine the reading preference checklist in A4. For T5, I will add examples of questions we already use in the bookshop, like asking about the last book they enjoyed or whether they prefer stand-alone stories or series. I will also draft a couple of sample dialogues for special orders, showing how we explain timelines and data use clearly.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "pencil2",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 7284,
+            "reply_to": "M43",
+            "text": "I like the idea of framing cross-sell as getting more value from the main product. That usually lands better with customers. Once you update A5, I can sanity-check a couple of scenarios from the perspective of someone who used to work on the floor and now hears customer reactions on the phone.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 291562,
+            "reply_to": "M41",
+            "text": "I will compare the updated A5 scripts with the contact centre scripts in A1 and the scorecard in A3, to make sure we are not asking for very different behaviours in store versus on the phone. For T4, I will flag any big differences so we can decide whether they are intentional or need alignment.",
+            "mentions": [
+              52506,
+              504375
+            ],
+            "artifact_refs": [
+              "A5",
+              "A1",
+              "A3",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 52506,
+            "reply_to": "M46",
+            "text": "Thanks, that cross-check will be helpful. I have now updated A5 with the softer cross-sell prompts, short script variants, and clearer transitions between needs discovery and recommendation. For T4, I think we now cover at least five common scenarios: general product advice, specific product request, price or promo questions, add-on recommendations, and handling a concern or hesitation. Please let me know if any key scenario is missing.",
+            "mentions": [
+              291562,
+              7284,
+              125944
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 125944,
+            "reply_to": "M47",
+            "text": "I have gone through the latest A5 version and the draft A4 content for T5. The flow for recommendations and cross-sell feels natural for the bookshop, and the special order steps are now clear and respectful of customer data. I added a few more example dialogues in A4 to cover different customer types, like someone who is unsure what they want versus someone with a very specific title in mind.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 7284,
+            "reply_to": "M47",
+            "text": "I checked the updated A5 scripts. The cross-sell prompts now feel much more customer-focused, and the short versions will be handy when the store is busy. From my side, I would be comfortable using these as the standard scripts for specialised sellers, with the understanding that people can adapt wording slightly as long as they keep the structure.",
+            "mentions": [
+              52506
+            ],
+            "artifact_refs": [
+              "A5",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 291562,
+            "reply_to": "M48",
+            "text": "After comparing A5 with A1 and A3, I do not see any major conflicts. The way we confirm understanding and summarise next steps is similar, which is good. I think we can treat the current A5 scripts as our core set for specialised sellers, and we can coach to them using the same principles as in the contact centre.",
+            "mentions": [
+              52506,
+              504375
+            ],
+            "artifact_refs": [
+              "A5",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 504375,
+            "reply_to": "M50",
+            "text": "Agreed, we will mark the current A5 content under T4 as the approved core scripts for specialised sellers going into the pilot. Any further tweaks can be logged as part of pilot feedback. On the bookshop side, with the checklist, special order flow, and example dialogues now in A4 under T5, are we comfortable treating this as the initial guideline set for the pilot as well?",
+            "mentions": [
+              125944,
+              52506
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "T4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 125944,
+            "reply_to": "M51",
+            "text": "From the bookshop perspective, I am comfortable using the current A4 guideline for the pilot. It gives enough structure for new colleagues while still allowing experienced sellers to bring their own style. The special order process is clear and should reduce confusion for customers who move between online and the shop.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 52506,
+            "reply_to": "M51",
+            "text": "I agree. The A4 guideline under T5 now covers the checklist for reading preferences, the special order process, and several example dialogues. We can refine wording after we see how it works in practice, but it is ready for a first rollout in the pilot.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A4",
+              "T5"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 52506,
+              "when": "this week"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 125944,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Consolidate the omnichannel playbook and align on shared principles.",
+        "messages": [
+          {
+            "msg_id": "M54",
+            "speaker_id": 504375,
+            "reply_to": null,
+            "text": "We now need to bring everything together into the main playbook and align on shared service principles. I have drafted a table of contents for A1, covering call scripts, in-store scripts, bookshop guidelines, quality scorecard, and quick-reference checklists. Under T6, I started a list of omnichannel service principles, and T7 is about compiling the full playbook v1.0. I also linked A2, A3, A4, and A5 where relevant. Please review the table of contents and the draft principles and call out any gaps, overlaps, or contradictions you see between channels.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "T6",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 291562,
+            "reply_to": "M54",
+            "text": "I checked the table of contents in A1. It is quite comprehensive. One thing I noticed is that the escalation rules from A2 are currently only referenced in the contact centre section. For T6, maybe we should have a shared principle about transparency on what happens after an escalation, and then link to both contact centre and store-specific steps. That way, customers get a similar explanation regardless of channel.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 7284,
+            "reply_to": "M54",
+            "text": "From the agent side, the structure in A1 is easy to navigate. For T6, I would propose a principle around owning the customer issue end-to-end, even if we need to involve another team. That would help reduce the feeling of being passed around. We can then show in A2 and the scripts how we communicate handovers clearly, including expected timelines.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 52506,
+            "reply_to": "M54",
+            "text": "Looking at A1 and T6, I think we should include a principle about using simple, jargon-free language across all channels. That will help new hires and also make it easier for customers who move between store and contact centre. Another principle could be about proactively checking if there is anything else we can help with, but we should phrase it carefully so it does not feel like a push for more sales.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 125944,
+            "reply_to": "M54",
+            "text": "From the bookshop perspective, I would add a principle in T6 about tailoring recommendations while respecting customer preferences and time. For example, offering one or two well-chosen options rather than a long list. This can apply to other product categories as well. Also, we should include a principle about handling customer data consistently across channels, which will link later to the compliance review in T11.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 504375,
+            "reply_to": "M58",
+            "text": "These are all good suggestions. I will update T6 with a draft set of shared principles along these lines: 1) own the customer issue end-to-end, 2) be transparent about what happens next, especially on escalations, 3) use clear, simple language, 4) tailor recommendations to the customer and respect their time, 5) protect customer data and explain why we collect it, and 6) close interactions with a brief recap and check if anything else is needed, without pressure. Once updated, we can check if any channel needs specific adaptations documented in A1.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 291562,
+            "reply_to": "M59",
+            "text": "That list of principles in T6 works for me. For the contact centre sections in A1, I will add a short note under each script showing which principle it supports, so agents can see the connection. I will also check that the escalation explanations in A2 match the transparency principle.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 7284,
+            "reply_to": "M59",
+            "text": "I like the principle about owning the issue. Maybe we can add in T6 that if we do need to hand over, we should tell the customer who will contact them and by when. That is already in some of the scripts in A1, but having it as a principle will reinforce it.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 52506,
+            "reply_to": "M59",
+            "text": "Agree with the list. For stores, I will add a short section in A1 under in-store scripts explaining how to apply each principle on the shop floor, for example how to keep language simple when there is background noise or when customers are in a hurry.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 125944,
+            "reply_to": "M59",
+            "text": "From the bookshop side, I am happy with these principles. I will make sure A4 references them explicitly, especially around tailored recommendations and data handling, so the bookshop guide is clearly part of the same framework.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A4",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 504375,
+            "reply_to": "M63",
+            "text": "Great, I will incorporate the extra detail on handovers and then finalise the T6 list in A1 as our shared omnichannel principles. Unless there are objections by tomorrow, we will treat them as final for v1.0 and only adjust if compliance or customer experience raises concerns.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 291562,
+            "reply_to": "M64",
+            "text": "No objections from me. I will start using the T6 principles when reviewing calls and coaching, so we can already build habits before the full rollout.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 504375,
+            "reply_to": "M65",
+            "text": "Thanks. On consolidating the playbook under T7, I have now pulled together the latest versions of scripts, guidelines, scorecard, and checklists into A1, with links to A2, A3, A4, and A5. The remaining step before we call it v1.0 is the compliance and data privacy review under T11. I will send the current A1 package to our compliance contact and ask them to review scripts, escalation rules, and data collection steps.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 291562,
+            "reply_to": "M66",
+            "text": "Once compliance has reviewed A1 and given feedback, I can help apply any required changes in the contact centre sections and update T11 with the sign-off. I will also double-check that any non-compliant phrasing is removed from A2 and A3 if needed.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 125944,
+            "reply_to": "M66",
+            "text": "For the bookshop parts in A4 and the related sections in A1, I am happy to adjust any wording that compliance flags, especially around how we explain data collection for special orders. Just let me know once you have their comments.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shield",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 504375,
+            "reply_to": "M68",
+            "text": "Compliance has now reviewed the draft A1 and confirmed that, with a few small wording tweaks on data collection and consent, the scripts and workflows are in line with current requirements. I have applied their comments to A1, A2, A3, and A4, and updated T11 with the sign-off reference. With that in place, I propose we treat the current A1 as playbook v1.0 content for the pilot rollout.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 7284,
+            "reply_to": "M69",
+            "text": "From the agent side, I am comfortable with A1 as it stands. The structure is clear, and the scripts and checklists are easy to find. I think it is ready to test in the pilot.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 52506,
+            "reply_to": "M69",
+            "text": "I agree. The in-store and specialised seller sections in A1 are consistent with what we discussed, and the links to A5 and A6 make it practical to use on the floor. I support treating this as v1.0 for the pilot.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A5",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 125944,
+            "reply_to": "M69",
+            "text": "The bookshop content in A1 and A4 looks good after the compliance tweaks. I am happy to use this version in the pilot and gather feedback from the team.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 291562,
+            "reply_to": "M69",
+            "text": "I also support using the current A1 as v1.0. We can track any issues or improvement ideas during the pilot and feed them into the next version.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A1",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "ok_hand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 504375,
+            "reply_to": "M73",
+            "text": "Thanks everyone. With the shared principles in T6 agreed and compliance sign-off recorded in T11, we will formally mark A1 as playbook v1.0 for the pilot rollout. Any changes from here will go into a tracked list for v1.1 after we review pilot feedback.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A1",
+              "T6",
+              "T7",
+              "T11"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 504375,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 504375,
+              "when": "this week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 291562,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan pilot training, collect feedback, and define next iteration.",
+        "messages": [
+          {
+            "msg_id": "M75",
+            "speaker_id": 504375,
+            "reply_to": null,
+            "text": "With playbook v1.0 ready in A1, we need to plan the pilot training and feedback loop. Under T9, I have drafted a pilot training plan and added it to A7, including a proposal for which contact centre teams and stores participate first. T10 will cover how we collect and summarise pilot feedback, and A8 will be the feedback and improvement log. For T12, we will reuse the success metrics we agreed earlier. Please review the proposed pilot scope and training dates in A7 and share if they work for your areas, or if we need to adjust.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T9",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 291562,
+            "reply_to": "M75",
+            "text": "I checked A7. The proposed pilot includes one contact centre team for phone, one for chat, and two stores. From a scheduling point of view, the suggested dates next week are possible, but we need to avoid overlapping with a planned system maintenance window. I will confirm exact time slots with workforce management and update T9. For training content, I suggest we focus on the key changes in A1 and how they affect daily work, rather than going through every page.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "A1",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 7284,
+            "reply_to": "M75",
+            "text": "From the agent side, the proposed training slots in A7 look fine. It would help if we include a short practice segment where we role-play a couple of the top 10 scenarios using the new scripts and checklists from A6. That will make it easier to apply right after the session. For T10, I suggest we also ask agents to share one thing that felt easier and one thing that felt harder after using the playbook for a few days.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 52506,
+            "reply_to": "M75",
+            "text": "For stores, the dates in A7 are workable, but we should schedule sessions either before opening or just after closing to avoid impacting customers. I can coordinate with the two pilot stores listed in T9 to confirm which option is better. In the training, we should highlight how the in-store scripts in A5 connect to the omnichannel principles, so it does not feel like a separate initiative.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "A5",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 125944,
+            "reply_to": "M75",
+            "text": "For the bookshop, I am happy for our team to be part of the pilot. The dates in A7 work if we keep the session to about an hour and include time for questions. I can also help collect feedback from the bookshop team using the template in A8 under T10, focusing on how practical the recommendation checklist and special order process are.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 504375,
+            "reply_to": "M79",
+            "text": "Thanks for the input. I will adjust T9 and A7 to reflect: 1) contact centre sessions scheduled around the maintenance window, 2) store sessions before opening or after closing, and 3) a dedicated bookshop session with extra time for questions. For T10 and A8, I will add fields for what felt easier and harder, as suggested, and a section to capture any issues with applying the omnichannel principles in real interactions.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "T9",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M81",
+            "speaker_id": 291562,
+            "reply_to": "M80",
+            "text": "I have now confirmed with workforce management that the proposed times in A7 avoid the maintenance window. I updated T9 with the final schedule and target teams. From my side, the pilot scope and dates are good to go.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 52506,
+            "reply_to": "M80",
+            "text": "I spoke with the two pilot stores, and they confirmed they can attend at the times listed in the updated A7. I will brief the store managers on what to expect and encourage them to share concrete examples during the session.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 125944,
+            "reply_to": "M80",
+            "text": "The bookshop team is also aligned with the updated schedule in A7. I will prepare a couple of typical customer scenarios to use in the training so we can practice the new guidelines from A4 and A1.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A7",
+              "A4",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "calendar",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 504375,
+            "reply_to": "M83",
+            "text": "Great, with these confirmations, we can lock the pilot scope and training dates as per T9 and A7. I will send calendar invites and a short pre-read pointing to the relevant sections in A1 and A6.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A7",
+              "A1",
+              "A6",
+              "T9"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 7284,
+            "reply_to": "M84",
+            "text": "After the first contact centre training session, I noted a few immediate reactions from agents and added them to A8 under T10. People liked the clarity of the verification steps but found it a bit hard to remember all the closing elements without the checklist. We might want to emphasise the closing recap more in the training or simplify it slightly.",
+            "mentions": [
+              504375,
+              291562
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 291562,
+            "reply_to": "M85",
+            "text": "I added some supervisor observations to A8 as well. In the first few monitored calls, agents using the checklist from A6 tended to have clearer structure, but some skipped the part about setting expectations for follow-up. For T10, I suggested we add a specific question about which parts of the script are most often skipped and why.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M87",
+            "speaker_id": 52506,
+            "reply_to": "M84",
+            "text": "From the store pilot sessions, I captured feedback in A8 that sellers appreciate the structure in A5 but sometimes feel the cross-sell prompts are still a bit long when the store is busy. They suggested having one ultra-short version for peak times. I also noted that the omnichannel principles are well received, especially the one about owning the issue end-to-end.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A5",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "shopping_bags",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M88",
+            "speaker_id": 125944,
+            "reply_to": "M84",
+            "text": "For the bookshop, I added feedback to A8 that the recommendation checklist in A4 is very helpful for new colleagues, but experienced sellers would like a bit more flexibility. We might consider marking some steps as optional for experienced staff. Also, the special order process is clearer now, but we need a small reminder in A6 or A4 about how to explain data use in simple terms.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A4",
+              "A6",
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "book",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M89",
+            "speaker_id": 504375,
+            "reply_to": "M88",
+            "text": "Thanks for capturing all this. Looking at A8, I see a few clear improvement themes: 1) simplify or further shorten some closing and cross-sell prompts, 2) emphasise expectation-setting in closings, 3) mark optional steps for experienced sellers, and 4) add a simple reminder on explaining data use. For T12, we will also track how these changes affect satisfaction and first-contact resolution once we have a few weeks of data. Before we decide what goes into playbook v1.1, are there any other strong themes we should consider?",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M90",
+            "speaker_id": 7284,
+            "reply_to": "M89",
+            "text": "From the agent feedback in A8, another theme is that the quick-reference checklists in A6 are very useful, but some people would like them in a slightly different layout, with the most critical steps at the top. That might be a small formatting change for v1.1 but could have a big impact on adoption.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M91",
+            "speaker_id": 52506,
+            "reply_to": "M89",
+            "text": "In stores, a recurring comment in A8 is that examples really help. For v1.1, I would prioritise adding a few more short example dialogues for tricky situations, like when customers resist cross-sell or are frustrated about a previous experience. That should not change the structure in A5, just make it easier to apply.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M92",
+            "speaker_id": 125944,
+            "reply_to": "M89",
+            "text": "For the bookshop, the main additional theme is around time. Some colleagues mentioned in A8 that they worry about longer conversations during peak times. For v1.1, I would suggest we add a short section in A4 on how to adapt the recommendation flow when there is a queue, while still following the principles.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "hourglass_flowing_sand",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M93",
+            "speaker_id": 291562,
+            "reply_to": "M89",
+            "text": "From the early metrics we have for T12, there is a small improvement in satisfaction scores in the pilot teams, but it is too early to draw strong conclusions on first-contact resolution. I would not change the core structure yet, just apply the targeted improvements you listed from A8 and then reassess after a longer period.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M94",
+            "speaker_id": 504375,
+            "reply_to": "M93",
+            "text": "Based on the themes in A8 and the early T12 data, I propose that for playbook v1.1 we focus on: 1) simplifying and shortening some closing and cross-sell prompts, 2) updating A6 layout to highlight critical steps, 3) marking optional steps for experienced sellers in A4 and A5, 4) adding a simple reminder on explaining data use, and 5) adding a few more example dialogues for tricky situations. We will keep the overall structure and principles unchanged for now. If everyone agrees, I will log these as the confirmed improvement items for v1.1.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A6",
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "memo",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M95",
+            "speaker_id": 7284,
+            "reply_to": "M94",
+            "text": "That list matches what I am hearing from agents. I support focusing v1.1 on those targeted improvements rather than bigger structural changes.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M96",
+            "speaker_id": 52506,
+            "reply_to": "M94",
+            "text": "Agreed from the store side as well. These changes will make the playbook easier to use without creating confusion between versions.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M97",
+            "speaker_id": 125944,
+            "reply_to": "M94",
+            "text": "I am aligned with that plan. The adjustments you listed will address the main concerns from the bookshop team without requiring retraining from scratch.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "A4",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M98",
+            "speaker_id": 291562,
+            "reply_to": "M94",
+            "text": "I also agree. We can implement these improvements and then monitor T12 metrics over the next few months to see if further changes are needed.",
+            "mentions": [
+              504375
+            ],
+            "artifact_refs": [
+              "T12",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M99",
+            "speaker_id": 504375,
+            "reply_to": "M98",
+            "text": "Thanks all. I will record these agreed improvements in A8 under T10 as the items to include in playbook v1.1 and coordinate the updates to A4, A5, and A6. We will keep tracking T12 metrics and pilot feedback to inform any further iterations.",
+            "mentions": [
+              291562,
+              7284,
+              52506,
+              125944
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5",
+              "A6",
+              "A8",
+              "T10",
+              "T12"
+            ],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 291562,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 52506,
+              "when": "this week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 125944,
+              "when": "this week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 291562,
+              "when": "next month"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

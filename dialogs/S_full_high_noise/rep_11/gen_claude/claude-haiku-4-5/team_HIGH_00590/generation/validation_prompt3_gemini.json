@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "SCHEMA",
+      "detail": "In message M41, speaker_id is formatted as a string (\"136230\") instead of an integer."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 contains only 12 messages, which violates the global minimum of 15 messages per thread and is significantly below its target range of 20-30."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Blueprint requires artifact T2 to be referenced in thread TH4, but it is missing from all artifact_refs in that thread."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants exhibit very similar, highly professional and structured communication styles with little variation in tone or vocabulary."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 5,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 2
+  }
+}

@@ -1,0 +1,1376 @@
+{
+  "channel": {
+    "channel_id": "proj-click-collect-rollout",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on overall click-and-collect process and role responsibilities.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 403118,
+            "reply_to": null,
+            "text": "Hi team, let's kick off the Click-and-Collect Service Rollout project. I've created a first draft of the end-to-end process map, you can find it in A1. This is based on the initial requirements in T1. Please review, especially the handoffs between roles, and share your feedback.",
+            "mentions": [
+              140484,
+              27468,
+              128135,
+              213765
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 140484,
+            "reply_to": "M1",
+            "text": "Thanks! I've taken a quick look. The flow from order intake to back-office tracking seems logical. I can start setting up the tracking sheet based on this structure.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 128135,
+            "reply_to": "M1",
+            "text": "Read it. The part for movers seems clear: we get a notification, pick up bulky or fragile items, and move them to the staging area. My main question is, who sends that notification to us?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 27468,
+            "reply_to": "M1",
+            "text": "Hi. Where is the staging area going to be? The map in A1 doesn't show the location.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 213765,
+            "reply_to": "M1",
+            "text": "I see a step for 'special handling'. For flowers, we can't just leave them in a general staging area. They need water and can't be in a hot, dry stockroom.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 403118,
+            "reply_to": "M3",
+            "text": "@128135 Good question. The idea is the office clerk who confirms the order in the system triggers the notification. @27468 We'll define the exact location as part of T11, for now let's focus on the process flow. @213765 Excellent point. We'll need specific rules for perishables, which is covered in T6. For now, does the general flow of 'identify special item -> stage appropriately' work for you?",
+            "mentions": [
+              128135,
+              27468,
+              213765
+            ],
+            "artifact_refs": [
+              "T11",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 140484,
+            "reply_to": "M6",
+            "text": "Regarding notifications, the map in A1 shows the final step is 'Customer Notified for Pickup', but it's not assigned to a role. I assume the office clerk does it when they mark the order 'Ready' in the system?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 27468,
+            "reply_to": "M7",
+            "text": "But what if the customer comes to the counter and asks about their order? Do we tell them to wait for an email? Sometimes we are the ones who see the order is ready first.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 403118,
+            "reply_to": "M8",
+            "text": "@140484 that's the key question. To avoid confusion and ensure consistency, we need one source of truth. My proposal is that the office clerk sends the official 'Ready for Pickup' notification. This ensures it's only sent when all items are confirmed and staged. Sales assistants can then check the system status if a customer asks at the counter. How does that sound?",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 128135,
+            "reply_to": "M9",
+            "text": "Makes sense. We just need to know our trigger. So, office confirms order -> we get a task -> we move the item -> we confirm the move is done. Then the office handles the rest.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 140484,
+            "reply_to": "M9",
+            "text": "I agree. The office should send the final confirmation. It centralizes communication and lets us track it properly. Let's make that the official process.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 27468,
+            "reply_to": "M11",
+            "text": "Ok, so we just check the computer before saying anything. Got it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 403118,
+            "reply_to": "M11",
+            "text": "Great. Let's lock that in. Decision: The Office Clerk is responsible for sending the final pickup confirmation to customers. I'll update the process map A1 to reflect this.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "✅",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 213765,
+            "reply_to": "M13",
+            "text": "So when I get an order for a bouquet, I prepare it, and then what? Do I tell the office it's ready?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 140484,
+            "reply_to": "M14",
+            "text": "Yes, you'd update the status on the order slip or in the system, then the office clerk sees that all items for that order are ready, and we send the final notification.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 403118,
+            "reply_to": "M15",
+            "text": "Exactly. The process map in A1 shows these handoffs. Any other major concerns with the overall flow as documented?",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 128135,
+            "reply_to": "M16",
+            "text": "Looks fine for my part.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 140484,
+            "reply_to": "M16",
+            "text": "I'm good with it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 27468,
+            "reply_to": "M16",
+            "text": "I think I understand it now.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 403118,
+            "reply_to": "M16",
+            "text": "Excellent. Then let's formally approve the high-level end-to-end process flow. I'll mark T1 as ready for final review based on this. Thanks everyone.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "👏",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 213765,
+            "reply_to": "M20",
+            "text": "ok",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 140484,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 27468,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define practical staging, storage, and handling rules for different product types.",
+        "messages": [
+          {
+            "msg_id": "M22",
+            "speaker_id": 27468,
+            "reply_to": null,
+            "text": "Hi, for T2, I was thinking we can just write the customer name on the bag with a marker. And for storage, we can use the empty shelves behind checkout counter 3.",
+            "mentions": [],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 140484,
+            "reply_to": "M22",
+            "text": "That could work for simple orders, but what about order numbers? And we need to track the pickup deadline. Maybe a printed label is better? I can mock one up based on our invoice format.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 403118,
+            "reply_to": "M23",
+            "text": "Good start @27468. Building on @140484's point, a standard label is crucial for avoiding mix-ups, which is a key project risk. The label should include: Order ID, Customer Name, Number of Items, and Pickup-by Date. This will also help with the Order Staging and Handover Checklist (A8).",
+            "mentions": [
+              27468,
+              140484
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 128135,
+            "reply_to": "M24",
+            "text": "For bulky items, we can't use the shelves behind the counter. We need a designated floor space. We should zone it: 'Bulky', 'Fragile', and 'General'. A simple sign system would work.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 213765,
+            "reply_to": "M25",
+            "text": "Flowers can't go in the main stockroom with everything else. They need to be kept near the window in our section until the last minute. I am working on the rules for this in T6.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 403118,
+            "reply_to": "M26",
+            "text": "All great points. It seems we need a hybrid approach. Let's decide on this: Standard printed labels for all orders (with the fields I mentioned), and a zoned storage system: a general area behind the counter, a designated floor space for bulky items, and special in-department staging for perishables like flowers. Does everyone agree with this approach for labeling and zoning?",
+            "mentions": [
+              128135,
+              213765
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 27468,
+            "reply_to": "M27",
+            "text": "A printed label is ok. Who prints it?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 140484,
+            "reply_to": "M28",
+            "text": "The office clerk can print it when the order is confirmed, and attach it to the order paperwork that goes to the floor.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 128135,
+            "reply_to": "M27",
+            "text": "The zoning plan works for me. I'll draft the layout for the bulky area as part of T9.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 213765,
+            "reply_to": "M27",
+            "text": "Ok, as long as my flowers stay in my area until pickup.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 403118,
+            "reply_to": "M27",
+            "text": "Perfect. Decision made on the labeling format and zoning approach. I'll document this. Now for handling rules, T3. @128135, you're the owner. Any thoughts on the draft for A3?",
+            "mentions": [
+              128135
+            ],
+            "artifact_refs": [
+              "T3",
+              "A3"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "✅",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 128135,
+            "reply_to": "M32",
+            "text": "I've started the draft for A3. For fragile items like electronics, we should keep them in original packaging and use 'Fragile' tape. For perishables, I need input from the specialists.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 140484,
+            "reply_to": "M33",
+            "text": "From my time in the bakery, all baked goods must be in a closed box, not a bag, and stored flat. They can't be stacked.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 403118,
+            "reply_to": "M34",
+            "text": "Good point. My experience with A/V equipment is similar - never stack, and keep away from magnetic sources. We should add that to A3.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 213765,
+            "reply_to": "M33",
+            "text": "For T6, I wrote that flowers need to be in water, and arrangements must be transported upright. I can share my draft for A4 soon.",
+            "mentions": [],
+            "artifact_refs": [
+              "T6",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 128135,
+            "reply_to": "M36",
+            "text": "This is all good info. I will incorporate these points into the main handling guideline A3. So the rule will be: follow general rules in A3, but for special items like flowers, refer to the specific guideline like A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 27468,
+            "reply_to": "M37",
+            "text": "So we have to read two documents?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 403118,
+            "reply_to": "M38",
+            "text": "Not necessarily. The main checklist (A8) will point to the right guideline. For example: 'Item is a plant? See A4'. This keeps it simple for the person at the counter. The detailed guide A3 is mostly for the movers and backroom staff.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 128135,
+            "reply_to": "M39",
+            "text": "I'm fine with that structure. I'll finalize the draft of A3 with all this feedback.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 403118,
+            "reply_to": "M40",
+            "text": "Great. So we agree on the final handling rules: a general document (A3) with specific instructions for fragile/bulky items, which will reference specialized guides like A4 for things like flowers. Let's approve that.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 140484,
+            "reply_to": "M41",
+            "text": "+1",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 128135,
+            "reply_to": "M41",
+            "text": "Sounds good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 27468,
+            "reply_to": "M41",
+            "text": "ok",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 128135,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 213765,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Finalize order tracking and documentation workflow for office clerks.",
+        "messages": [
+          {
+            "msg_id": "M45",
+            "speaker_id": 140484,
+            "reply_to": null,
+            "text": "Hi all, here is the draft for the Order Tracking Sheet (A2) as part of T5. I've included columns for Order ID, Customer, Items, Status, and Pickup Deadline. For status codes, I'm proposing: NEW, IN_PROGRESS, STAGED, READY, PICKED_UP, CANCELLED. Feedback welcome!",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "📄",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 403118,
+            "reply_to": "M45",
+            "text": "Thanks @140484, this is a great, clean start. The status codes look comprehensive. One thought: should we add a 'PARTIAL_PICKUP' status to cover the process from T8? Also, a 'Notes' column could be useful for exceptions, linking to our issue reference guide A7.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "T8",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 128135,
+            "reply_to": "M46",
+            "text": "A 'Notes' column would be good. We could use it to log if packaging was damaged on arrival, for example.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 27468,
+            "reply_to": "M45",
+            "text": "What does IN_PROGRESS mean? Is that when we are getting the items from the shelves?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 140484,
+            "reply_to": "M48",
+            "text": "Yes, exactly. It means the order is confirmed and staff are gathering the items. @403118, good ideas. I'll add 'PARTIAL_PICKUP' and a 'Notes' column.",
+            "mentions": [
+              403118
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 403118,
+            "reply_to": "M49",
+            "text": "Perfect. With those additions, I think the fields and status codes are solid. Any objections to approving this version for A2?",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 128135,
+            "reply_to": "M50",
+            "text": "Looks good to me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 27468,
+            "reply_to": "M50",
+            "text": "I'm ok with it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 140484,
+            "reply_to": "M50",
+            "text": "Great, I'll finalize it now. Decision: Approve the fields and status codes for the tracking sheet A2.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "✅",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 403118,
+            "reply_to": "M53",
+            "text": "Now for the second part, T12, which is about archiving. I've drafted some simple rules: Digital copies of the order and pickup confirmation must be saved as PDF in the shared drive under 'ClickCollect/YYYY-MM/OrderID.pdf'. Paper copies should be filed in the back office and held for 60 days, then shredded. Does this align with our current store policies?",
+            "mentions": [],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 140484,
+            "reply_to": "M54",
+            "text": "The 60-day retention for paper copies sounds right, that's what we do for most daily paperwork. The digital folder structure is clear and easy to follow. My experience with managing digital docs tells me this will work well.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 27468,
+            "reply_to": "M54",
+            "text": "We have to scan the paper? The scanner in the back is always breaking.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 403118,
+            "reply_to": "M56",
+            "text": "Good point on the hardware. The order confirmation will likely be a digital file already from our e-commerce system. The only thing to scan would be the customer's signed pickup slip. We need to ensure that scanner is reliable before launch. I'll add that to our readiness checklist.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 140484,
+            "reply_to": "M57",
+            "text": "I can test the scanner tomorrow and log a support ticket if needed. The process itself is fine.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 403118,
+            "reply_to": "M58",
+            "text": "Thanks @140484. So, are we all in agreement on these archiving rules for T12?",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 128135,
+            "reply_to": "M59",
+            "text": "We don't handle paperwork, so it's fine by me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 140484,
+            "reply_to": "M59",
+            "text": "Yes, agreed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 403118,
+            "reply_to": "M59",
+            "text": "Excellent. Decision confirmed for the digital and paper archiving rules. I'll add this to our main SOP document.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "✅",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T12",
+              "owner_id": 403118,
+              "when": "today"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 140484,
+              "when": "this week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Align on customer communication templates and exception handling.",
+        "messages": [
+          {
+            "msg_id": "M63",
+            "speaker_id": 403118,
+            "reply_to": null,
+            "text": "Team, for T4, I've drafted the customer communication templates and put them in A5. It includes messages for 'Order Confirmed', 'Ready for Pickup', and 'Order Delayed'. Please review the wording for clarity.",
+            "mentions": [],
+            "artifact_refs": [
+              "T4",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 140484,
+            "reply_to": "M63",
+            "text": "Read them. They are clear and professional. The 'Ready for Pickup' message correctly states the pickup window and what ID to bring. This is good.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 27468,
+            "reply_to": "M63",
+            "text": "What if the customer doesn't have ID? Do we still give them the order?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 403118,
+            "reply_to": "M65",
+            "text": "That's a store policy question. For now, the template reflects the standard procedure. We can add a note in our internal guide (A7) on how to handle that exception, maybe by verifying other order details. But the external message should set the correct expectation.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 213765,
+            "reply_to": "M63",
+            "text": "The delay notice is important for flowers. If there's a supply issue, we need to tell them quickly. The template looks ok.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 403118,
+            "reply_to": "M66",
+            "text": "Thanks for the feedback. If there are no other concerns, can we approve these templates in A5 to be used at launch?",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 140484,
+            "reply_to": "M68",
+            "text": "Approved from my side.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 27468,
+            "reply_to": "M68",
+            "text": "ok",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 403118,
+            "reply_to": "M68",
+            "text": "Great. Decision: Customer communication templates are approved. Now for the tricky part: exception handling (T8). @140484, you were looking into this.",
+            "mentions": [
+              140484
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "✅",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 140484,
+            "reply_to": "M71",
+            "text": "Yes. For cancellations, it's simple: if the order isn't picked, we process a refund through the existing POS system and restock the items. For partial pickups, it's more complex. I suggest we don't allow them for launch to keep things simple. The customer either takes the whole order or cancels it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 27468,
+            "reply_to": "M72",
+            "text": "But what if one item is wrong and they want the rest? It happens all the time.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 403118,
+            "reply_to": "M73",
+            "text": "@27468 raises a valid point. A 'no partials' rule might cause customer friction. What if we treat it like this: if an item is missing or wrong, we process the full order as picked up, and then immediately process a return/refund for that specific item. It's a two-step process at the POS but gets the job done.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 128135,
+            "reply_to": "M74",
+            "text": "From our side, we just need to know what to do with the returned item. Does it go back to the shelf right away?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 140484,
+            "reply_to": "M75",
+            "text": "The process @403118 described is workable. It uses existing refund functions. Yes @128135, the sales assistant would be responsible for restocking the returned item.",
+            "mentions": [
+              403118,
+              128135
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M77",
+            "speaker_id": 403118,
+            "reply_to": "M76",
+            "text": "So, let's define the process for T8: Cancellations are a full refund. Delays trigger the A5 template. For partial pickups or item issues, we process the full pickup then an immediate partial refund at the POS. Does this sound like a solid plan?",
+            "mentions": [],
+            "artifact_refs": [
+              "T8",
+              "A5"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M78",
+            "speaker_id": 27468,
+            "reply_to": "M77",
+            "text": "So I just do a return for the one item? I can do that.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M79",
+            "speaker_id": 140484,
+            "reply_to": "M77",
+            "text": "Yes, this process works. I'll document it for our quick reference guide A7.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M80",
+            "speaker_id": 403118,
+            "reply_to": "M79",
+            "text": "Excellent. Decision made on the exception handling process. Thanks everyone for working through this.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "👏",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 140484,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Plan training, daily routines, and go-live readiness check.",
+        "messages": [
+          {
+            "msg_id": "M81",
+            "speaker_id": 27468,
+            "reply_to": null,
+            "text": "Here is the training checklist for T7. I listed looking up orders, getting items, and giving to customer. What else should be on it?",
+            "mentions": [],
+            "artifact_refs": [
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M82",
+            "speaker_id": 403118,
+            "reply_to": "M81",
+            "text": "Thanks for starting this, @27468. This is a good foundation. We need to expand it to be role-specific, as per the T7 definition. I suggest we add sections for: Office Clerks (using the tracking sheet, sending comms), Sales Assistants (the steps you have, plus handling returns/exceptions, using the handover checklist A8), and Movers (responding to notifications, following handling rules). I can help you structure the document A6 this way.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [
+              "T7",
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M83",
+            "speaker_id": 128135,
+            "reply_to": "M82",
+            "text": "For movers, the training should include the daily route plan from T9. I'm still working on the exact times, but we need to practice it once to see if it clashes with peak customer traffic.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M84",
+            "speaker_id": 140484,
+            "reply_to": "M82",
+            "text": "The office clerk section should definitely include a test run of the whole process, from a new order to a final pickup, using mock orders. We need to make sure everyone knows which button to click and when.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M85",
+            "speaker_id": 27468,
+            "reply_to": "M82",
+            "text": "Ok, I can add those sections. Where is the handover checklist A8?",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M86",
+            "speaker_id": 403118,
+            "reply_to": "M85",
+            "text": "A8 is still a draft, it will be based on the decisions we made in TH2 about labeling and staging. It will be a simple step-by-step list for the final handover. Let's add a placeholder for it in the training plan A6.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M87",
+            "speaker_id": 213765,
+            "reply_to": "M82",
+            "text": "Will there be special training for our department?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M88",
+            "speaker_id": 403118,
+            "reply_to": "M87",
+            "text": "The training will cover the general process (A1), and then each department lead will be responsible for briefing their team on the specifics, like the floral staging rules in A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M89",
+            "speaker_id": 27468,
+            "reply_to": "M88",
+            "text": "I also started thinking about T11, the pickup point. We could put a sign near the main entrance.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M90",
+            "speaker_id": 403118,
+            "reply_to": "M89",
+            "text": "Good thought on T11. The location needs to be clear but also can't block traffic. Let's propose the area next to customer service. It has space and is easy to direct people to. We'll need clear signage.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M91",
+            "speaker_id": 128135,
+            "reply_to": "M90",
+            "text": "That spot works. It's out of the main aisles so we won't be in the way when moving bulky items there.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M92",
+            "speaker_id": 140484,
+            "reply_to": "M90",
+            "text": "I agree, that's the most logical place.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "👍",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M93",
+            "speaker_id": 403118,
+            "reply_to": "M92",
+            "text": "Ok, let's proceed with that location for T11. Now, back to the timeline. The project deadline is 21 days. We've made great progress on the process. I propose we aim to have all documentation finalized in one week, conduct training sessions next week, and go live the week after. That gives us a few days of buffer.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M94",
+            "speaker_id": 128135,
+            "reply_to": "M93",
+            "text": "That timeline seems realistic for my tasks (T3, T9).",
+            "mentions": [],
+            "artifact_refs": [
+              "T3",
+              "T9"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M95",
+            "speaker_id": 140484,
+            "reply_to": "M93",
+            "text": "I can get my office-related tasks done in that timeframe.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M96",
+            "speaker_id": 27468,
+            "reply_to": "M93",
+            "text": "I will need help with the training checklist A6.",
+            "mentions": [],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M97",
+            "speaker_id": 403118,
+            "reply_to": "M96",
+            "text": "Of course, I'll work with you on that this afternoon. We'll get it done.",
+            "mentions": [
+              27468
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M98",
+            "speaker_id": 213765,
+            "reply_to": "M93",
+            "text": "I need to finish A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M99",
+            "speaker_id": 403118,
+            "reply_to": "M97",
+            "text": "Ok team, sounds like we have a plan. Let's focus on finalizing our assigned tasks and documents. We'll have a readiness check two days before the proposed go-live date.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "🚀",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M100",
+            "speaker_id": 140484,
+            "reply_to": "M99",
+            "text": "Sounds like a plan!",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 27468,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 128135,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 27468,
+              "when": "end of week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

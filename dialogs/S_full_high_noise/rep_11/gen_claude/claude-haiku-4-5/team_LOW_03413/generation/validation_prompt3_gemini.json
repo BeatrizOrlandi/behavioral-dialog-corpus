@@ -1,0 +1,30 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads have between 10 and 12 messages, which is below the expected minimum of 15 messages per thread and outside the blueprint target ranges."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T9 is required in TH4 but is missing from the artifact_refs of all messages in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Artifact A7 is required in TH5 but is missing from the artifact_refs of all messages in that thread."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden word 'scenario' is used multiple times in the text (e.g., M1, M2, M3, M4, M12, M13, M14, M17, M24, M25, M34, M38)."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

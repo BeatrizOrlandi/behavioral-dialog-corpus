@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Four out of five threads are below the minimum message count of 16. TH1 has 12, TH2 has 13, TH3 has 13, and TH4 has 12 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "There is a systemic failure to reference any of the mandatory task artifacts (T*) in the messages. For example, TH1 is missing T1 and T2; TH2 is missing T1 and T5; TH3 is missing T3, T4, and T8; TH4 is missing T6 and T7; TH5 is missing T9, T10, T11, and T12."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH4 fails to reference the mandatory artifact A8."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 2,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

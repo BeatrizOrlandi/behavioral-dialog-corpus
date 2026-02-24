@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All threads fall below the minimum required message count of 15 and their respective blueprint target_messages_range. TH1 has 12 messages, TH2 has 11, TH3 has 13, TH4 has 11, and TH5 has 10."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "The forbidden term 'performance' appears in the text of messages M44 and M45. Furthermore, explicit level labels 'high' and 'medium' are used in messages M3 and M49."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Message M47 contains 'D7' in its artifact_refs list, which is a decision ID rather than a valid artifact (A*) or task (T*) ID."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 4,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 4
+  }
+}

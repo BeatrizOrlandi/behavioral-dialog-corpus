@@ -1,0 +1,425 @@
+{
+  "participants": [
+    {
+      "_id": 16404,
+      "role": "data scientist"
+    },
+    {
+      "_id": 80886,
+      "role": "data scientist"
+    },
+    {
+      "_id": 122466,
+      "role": "business analyst"
+    },
+    {
+      "_id": 138753,
+      "role": "business analyst"
+    },
+    {
+      "_id": 568638,
+      "role": "data analyst"
+    }
+  ],
+  "project_pack": {
+    "project": {
+      "title": "Customer Churn Prediction and Insights Dashboard",
+      "objective": "Design, build, and validate a churn prediction model and self-service dashboard to help commercial teams reduce customer attrition.",
+      "deliverables": [
+        "Documented churn problem definition and target metric",
+        "Clean, model-ready customer dataset with data dictionary",
+        "Production-ready churn prediction model with performance report",
+        "Interactive churn insights and segmentation dashboard",
+        "Playbook for commercial teams on using churn scores",
+        "Monitoring plan for model performance and data quality"
+      ],
+      "constraints": [
+        "All modelling must use only approved, anonymised customer data",
+        "Initial MVP model and dashboard needed within 21 days",
+        "Solutions must integrate with existing BI and data warehouse stack",
+        "Documentation must be understandable by non-technical stakeholders",
+        "Model decisions must be explainable for compliance and audit",
+        "Limit manual data preparation to repeatable, automated steps"
+      ],
+      "stakeholders": [
+        "Head of Customer Success",
+        "Sales manager",
+        "Marketing manager",
+        "Data platform owner",
+        "Compliance officer"
+      ],
+      "deadline_days": 21,
+      "risks": [
+        {
+          "risk": "Customer data is incomplete or inconsistent across systems.",
+          "mitigation": "Prioritise key sources, run data profiling early, define and implement minimum data quality rules."
+        },
+        {
+          "risk": "Model is accurate but not trusted or adopted by commercial teams.",
+          "mitigation": "Involve business stakeholders in feature selection, provide clear explanations and use cases, run pilot with feedback loop."
+        },
+        {
+          "risk": "Tight timeline leads to over-engineered model and delayed delivery.",
+          "mitigation": "Deliver a simple baseline model first, timebox experiments, and clearly separate MVP from nice-to-have features."
+        },
+        {
+          "risk": "Regulatory or compliance concerns about using certain features.",
+          "mitigation": "Review feature list with compliance early, exclude sensitive attributes, document rationale for included variables."
+        },
+        {
+          "risk": "Dashboard performance issues with large datasets.",
+          "mitigation": "Pre-aggregate key metrics, optimise queries, and validate performance with realistic data volumes."
+        }
+      ]
+    },
+    "themes": [
+      {
+        "theme": "Data sourcing and quality",
+        "why_relevant": "Reliable churn predictions depend on consistent, well-understood customer data from multiple systems."
+      },
+      {
+        "theme": "Model design and evaluation",
+        "why_relevant": "The team must agree on target definition, features, algorithms, and performance thresholds."
+      },
+      {
+        "theme": "Business alignment and adoption",
+        "why_relevant": "Outputs must match how sales and customer success teams work to ensure real-world impact."
+      },
+      {
+        "theme": "Explainability and compliance",
+        "why_relevant": "Stakeholders need transparent reasoning behind churn scores to satisfy governance requirements."
+      },
+      {
+        "theme": "Dashboard UX and storytelling",
+        "why_relevant": "Insights must be presented clearly so non-technical users can act quickly on churn risks."
+      }
+    ],
+    "backlog": [
+      {
+        "task_id": "T1",
+        "task": "Define churn use case, target variable, and success metrics with business stakeholders",
+        "owner_role": "business analyst",
+        "definition_of_done": [
+          "Churn definition agreed and documented",
+          "Primary and secondary KPIs defined and approved",
+          "Scope of customers and time horizon clarified",
+          "Assumptions and out-of-scope items listed in a shared doc"
+        ]
+      },
+      {
+        "task_id": "T2",
+        "task": "Profile and assess quality of core customer and subscription data sources",
+        "owner_role": "data analyst",
+        "definition_of_done": [
+          "Key data sources and tables inventoried",
+          "Data quality report created with missingness and anomalies",
+          "Critical data issues prioritised and shared with team",
+          "Data dictionary draft created for core fields"
+        ]
+      },
+      {
+        "task_id": "T3",
+        "task": "Design and implement data preparation pipeline for churn modelling dataset",
+        "owner_role": "data scientist",
+        "definition_of_done": [
+          "Feature list and transformations documented",
+          "Reproducible scripts or queries created and versioned",
+          "Model-ready dataset generated and validated against source",
+          "Data preparation steps reviewed by data analyst"
+        ]
+      },
+      {
+        "task_id": "T4",
+        "task": "Develop baseline churn prediction model and benchmark performance",
+        "owner_role": "data scientist",
+        "definition_of_done": [
+          "Baseline model trained using agreed dataset",
+          "Train/validation split and evaluation methodology documented",
+          "Performance metrics computed and shared",
+          "Limitations and improvement ideas captured in model report"
+        ]
+      },
+      {
+        "task_id": "T5",
+        "task": "Iterate on model features and algorithms to improve performance and stability",
+        "owner_role": "data scientist",
+        "definition_of_done": [
+          "At least two alternative models evaluated",
+          "Feature importance and stability analysis completed",
+          "Selected model justified against baseline",
+          "Final model parameters and artefacts stored in repository"
+        ]
+      },
+      {
+        "task_id": "T6",
+        "task": "Define business-friendly segments and thresholds for churn risk levels",
+        "owner_role": "business analyst",
+        "definition_of_done": [
+          "Risk bands (e.g., low/medium/high) defined with score thresholds",
+          "Impact analysis for each band documented",
+          "Stakeholder review completed with sign-off",
+          "Segments mapped to recommended actions in playbook"
+        ]
+      },
+      {
+        "task_id": "T7",
+        "task": "Design and build churn insights dashboard for commercial teams",
+        "owner_role": "data analyst",
+        "definition_of_done": [
+          "Dashboard wireframe agreed with business stakeholders",
+          "Dashboard built in existing BI tool using model outputs",
+          "Key filters, segments, and drill-downs implemented",
+          "Usability tested with at least two end users and feedback applied"
+        ]
+      },
+      {
+        "task_id": "T8",
+        "task": "Document model, data lineage, and usage guidelines for compliance and audit",
+        "owner_role": "data scientist",
+        "definition_of_done": [
+          "Model documentation completed with methodology and assumptions",
+          "Data lineage from source to model outputs mapped",
+          "List of excluded sensitive features documented",
+          "Compliance officer review feedback addressed"
+        ]
+      },
+      {
+        "task_id": "T9",
+        "task": "Create churn playbook and training materials for sales and customer success",
+        "owner_role": "business analyst",
+        "definition_of_done": [
+          "Playbook drafted with scenarios and recommended actions",
+          "Screenshots and examples from dashboard included",
+          "Training session agenda and slides prepared",
+          "Pilot group feedback incorporated into final version"
+        ]
+      },
+      {
+        "task_id": "T10",
+        "task": "Set up monitoring for model performance and data drift",
+        "owner_role": "data scientist",
+        "definition_of_done": [
+          "Key monitoring metrics and thresholds defined",
+          "Monitoring queries or scripts implemented",
+          "Alerting process agreed with data platform owner",
+          "Monitoring plan documented and shared"
+        ]
+      },
+      {
+        "task_id": "T11",
+        "task": "Align project roadmap, milestones, and communication plan",
+        "owner_role": "business analyst",
+        "definition_of_done": [
+          "High-level roadmap with milestones created",
+          "Dependencies and owners identified for each milestone",
+          "Communication cadence agreed with stakeholders",
+          "Roadmap shared in channel and stored in project folder"
+        ]
+      },
+      {
+        "task_id": "T12",
+        "task": "Validate data refresh process and dashboard update schedule",
+        "owner_role": "data analyst",
+        "definition_of_done": [
+          "Data refresh frequency agreed with business",
+          "Test refresh run completed without errors",
+          "Dashboard reflects latest model scores after refresh",
+          "Update schedule documented in monitoring plan"
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "A1",
+        "type": "doc",
+        "title": "Churn Problem Definition and KPI Brief",
+        "used_for": "Captures agreed churn definition, scope, and success metrics for the project."
+      },
+      {
+        "artifact_id": "A2",
+        "type": "sheet",
+        "title": "Customer Data Inventory and Quality Report",
+        "used_for": "Lists data sources, fields, and quality issues to prioritise fixes and feature selection."
+      },
+      {
+        "artifact_id": "A3",
+        "type": "guideline",
+        "title": "Churn Model Documentation and Compliance Notes",
+        "used_for": "Explains model design, features, and compliance considerations for audit and review."
+      },
+      {
+        "artifact_id": "A4",
+        "type": "doc",
+        "title": "Churn Risk Segmentation and Action Playbook",
+        "used_for": "Provides risk bands, example scenarios, and recommended actions for commercial teams."
+      },
+      {
+        "artifact_id": "A5",
+        "type": "sheet",
+        "title": "Model Experiment Tracking Log",
+        "used_for": "Tracks model versions, parameters, and performance metrics across experiments."
+      },
+      {
+        "artifact_id": "A6",
+        "type": "checklist",
+        "title": "Dashboard Design and Release Checklist",
+        "used_for": "Ensures all UX, data, and validation steps are completed before dashboard go-live."
+      },
+      {
+        "artifact_id": "A7",
+        "type": "guideline",
+        "title": "Model Monitoring and Data Drift Procedure",
+        "used_for": "Describes how to monitor model performance, thresholds, and escalation steps."
+      },
+      {
+        "artifact_id": "A8",
+        "type": "other",
+        "title": "Stakeholder Roadmap and Communication Plan",
+        "used_for": "Outlines milestones, owners, and communication cadence for the project."
+      }
+    ]
+  },
+  "blueprint": {
+    "channel_name_hint": "proj-churn-model-dashboard",
+    "threads_plan": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on churn definition, KPIs, and initial project scope.",
+        "trigger": "Kickoff message announcing the churn project and asking for agreement on problem framing.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D1",
+            "decision": "Agree on the operational definition of churn and the prediction horizon."
+          },
+          {
+            "decision_id": "D2",
+            "decision": "Confirm primary KPIs to evaluate model and business impact."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A1",
+          "T1",
+          "T11",
+          "A8"
+        ]
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Review data inventory and decide on data sources and quality fixes.",
+        "trigger": "Data analyst posts first version of data inventory and quality findings.",
+        "target_messages_range": [
+          16,
+          24
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D3",
+            "decision": "Select which customer and subscription data sources will be in scope for MVP."
+          },
+          {
+            "decision_id": "D4",
+            "decision": "Prioritise top data quality issues to fix before modelling."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A2",
+          "T2",
+          "T3"
+        ]
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Discuss baseline model results and choose the model to take forward.",
+        "trigger": "Data scientist shares baseline and experiment results from the model log.",
+        "target_messages_range": [
+          20,
+          28
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D5",
+            "decision": "Agree on minimum acceptable model performance thresholds for MVP."
+          },
+          {
+            "decision_id": "D6",
+            "decision": "Select the model version to integrate with the dashboard."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A5",
+          "T4",
+          "T5",
+          "A3"
+        ]
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Define churn risk bands, dashboard layout, and user journeys.",
+        "trigger": "Business analyst posts proposal for risk segmentation and dashboard wireframes.",
+        "target_messages_range": [
+          18,
+          26
+        ],
+        "mandatory_decisions": [
+          {
+            "decision_id": "D7",
+            "decision": "Approve churn risk thresholds and segment definitions."
+          },
+          {
+            "decision_id": "D8",
+            "decision": "Sign off on dashboard layout and key views for first release."
+          }
+        ],
+        "artifacts_to_reference": [
+          "A4",
+          "A6",
+          "T6",
+          "T7",
+          "T9"
+        ]
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Close out MVP, confirm monitoring plan, and plan training rollout.",
+        "trigger": "Approaching deadline, team reviews readiness for go-live and next steps.",
+        "target_messages_range": [
+          15,
+          23
+        ],
+        "mandatory_decisions": [],
+        "artifacts_to_reference": [
+          "A3",
+          "A7",
+          "T8",
+          "T10",
+          "T12",
+          "A8"
+        ]
+      }
+    ],
+    "talk_distribution_by_role": [
+      {
+        "role": "data scientist",
+        "share": 0.4
+      },
+      {
+        "role": "business analyst",
+        "share": 0.35
+      },
+      {
+        "role": "data analyst",
+        "share": 0.25
+      }
+    ],
+    "channel_rituals": [
+      "Async standup three times per week where each person posts yesterday/today/blockers.",
+      "Weekly modelling review to discuss experiment results and next hypotheses.",
+      "Bi-weekly stakeholder update summarising progress, risks, and upcoming milestones.",
+      "Pre-release checklist review before any major dashboard or model change goes live."
+    ]
+  }
+}

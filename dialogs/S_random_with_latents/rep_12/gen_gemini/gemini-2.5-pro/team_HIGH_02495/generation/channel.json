@@ -1,0 +1,967 @@
+{
+  "channel": {
+    "channel_id": "proj-payroll-docs-standardisation",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on current-state mapping and target payroll workflow design.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 408577,
+            "reply_to": null,
+            "text": "Team, let's get started on standardizing the payroll workflow. To begin with T1, can everyone please outline their current key steps for processing payroll and handling related documents? I want to map out what we have before we design the new process.",
+            "mentions": [
+              107378,
+              319449,
+              330756,
+              421608
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 330756,
+            "reply_to": "M1",
+            "text": "Good idea. On the office side, we receive timesheets and absence forms, check them for manager signatures, and then pass the whole batch to payroll. It's usually a physical folder.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 421608,
+            "reply_to": "M1",
+            "text": "Thanks. For us in payroll, first step is getting that folder. Then we manually enter the hours/absences into the system. After that, it's running the pre-calculation, checking for errors, and so on.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 107378,
+            "reply_to": "M1",
+            "text": "An important point on T1 is to also map the 'informal' steps. For example, the follow-up calls we have to make when a timesheet is missing information. That's a major bottleneck.",
+            "mentions": [],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 408577,
+            "reply_to": "M4",
+            "text": "Great point, let's add that. I've started a draft in a shared doc to capture this, I'll link it here soon. It will become our initial version of A1.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 319449,
+            "reply_to": "M3",
+            "text": "We also get a lot of emails with corrections after the folder has been sent. We forward them, but I'm not sure if they are always tracked.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 107378,
+            "reply_to": "M6",
+            "text": "That's a significant risk. A verbal or emailed correction that gets missed can lead to payment errors. The new workflow must have a single, traceable channel for corrections before a cutoff date.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "warning",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 330756,
+            "reply_to": "M7",
+            "text": "Exactly. What if we propose a flow where all approved forms are scanned and uploaded to a shared folder by a certain date? That becomes the single source of truth. Payroll then works from that digital folder. This would also help with archiving later.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 421608,
+            "reply_to": "M8",
+            "text": "I like that. It eliminates the physical handoff. We could structure the new workflow around key stages: 1. Document Submission (digital), 2. Data Entry & Validation, 3. Pre-processing & Review, 4. Final Approval, 5. Payment & Reporting.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 408577,
+            "reply_to": "M9",
+            "text": "That's a solid foundation. Let's refine that. @107378, does that sequence cover the necessary compliance checks?",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 107378,
+            "reply_to": "M10",
+            "text": "Mostly. We need to explicitly add a 'Reconciliation' step before 'Payment & Reporting'. This is crucial for the monthly close checklist in T3. It's where we'd cross-check the final numbers against the inputs.",
+            "mentions": [],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 330756,
+            "reply_to": "M11",
+            "text": "Makes sense. So the sequence is: 1. Digital Submission, 2. Data Entry & Validation, 3. Pre-processing & Review, 4. Final Approval, 5. Reconciliation, 6. Payment & Reporting. I think this works.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "white_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 408577,
+            "reply_to": "M12",
+            "text": "Okay, I'm capturing this. This looks like our agreed-upon sequence.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 107378,
+            "reply_to": "M13",
+            "text": "Perfect. Now for ownership. Step 1 is clearly with the office clerks. Steps 2-6 are with payroll, but who specifically owns the 'Final Approval' sign-off? That needs to be defined.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 421608,
+            "reply_to": "M14",
+            "text": "Typically the finance manager gives the final sign-off after we present the reconciliation report. So, Payroll prepares, Finance Manager approves.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 330756,
+            "reply_to": "M14",
+            "text": "And on our side, the office clerks are responsible for ensuring all documents in the submission folder are complete and signed. We can own that quality check.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 319449,
+            "reply_to": "M16",
+            "text": "Agreed. We can manage the digital submission folder.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 107378,
+            "reply_to": "M17",
+            "text": "Excellent. So to summarize: Office Clerks own Step 1 (Submission & initial check). Payroll Clerks own Steps 2, 3, 5, 6 (Processing, Reconciliation, Reporting). The Finance Manager (external stakeholder) owns Step 4 (Final Approval). This confirms the ownership model.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "clap",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 408577,
+            "reply_to": "M18",
+            "text": "Great. I've updated the draft A1 with this flow and the ownership breakdown. I'll finish cleaning it up based on our discussion of T1. Next up will be T3, creating the detailed checklist from this.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 408577,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 107378,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Define document routing, archiving structure, and templates.",
+        "messages": [
+          {
+            "msg_id": "M20",
+            "speaker_id": 330756,
+            "reply_to": null,
+            "text": "Hi team, I've drafted the document routing rules for T4 and a proposed folder structure for T7. Please take a look and give feedback. The goal is to have clear, simple rules for handling all incoming payroll-related mail and forms.",
+            "mentions": [
+              107378,
+              319449,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "T4",
+              "T7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 408577,
+            "reply_to": "M20",
+            "text": "Thanks @330756, this looks like a great start. Quick question on the routing: for an urgent request, the rule says 'email payroll clerk group'. Should we have a single point of contact to avoid confusion?",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 330756,
+            "reply_to": "M21",
+            "text": "Good point. A group email ensures someone is available, but I see the risk of multiple people acting on it. Maybe the rule should be 'email group, and the first available clerk assigns themselves in the tracking sheet'?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 421608,
+            "reply_to": "M22",
+            "text": "That works. It creates a clear audit trail. The tracking sheet is key.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 107378,
+            "reply_to": "M20",
+            "text": "Regarding the archiving structure in T7, the naming convention 'YYYY-MM_DocumentType_EmployeeName' is good. However, for sensitive documents like medical notes, we should consider a sub-folder with restricted access. This ties into our work on A5 later.",
+            "mentions": [],
+            "artifact_refs": [
+              "T7",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 330756,
+            "reply_to": "M24",
+            "text": "Excellent catch, @107378. I'll add a 'Confidential' subfolder to the structure and a note in the routing rules (A3) that such documents go there directly.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 408577,
+            "reply_to": "M25",
+            "text": "This is looking solid. Let's move on to the templates for T2. @330756, do you have a draft for the absence and overtime forms?",
+            "mentions": [
+              330756
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 330756,
+            "reply_to": "M26",
+            "text": "Yes, I've created simple spreadsheets for both. They include fields for dates, hours, reason, and manager approval. I've put them in the same folder for review.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 421608,
+            "reply_to": "M27",
+            "text": "I just checked the overtime template. Can we add a field to specify the 'Pay Rate Multiplier' (e.g., 1.5x, 2x)? Sometimes it's different for holidays vs. regular overtime, and having it on the form would prevent errors.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 319449,
+            "reply_to": "M27",
+            "text": "The layout is a bit cluttered. We could merge the 'Start Time' and 'End Time' fields into one 'Time Range' column to make it cleaner.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 330756,
+            "reply_to": "M29",
+            "text": "Both great suggestions. @421608, I'll add the multiplier. @319449, good call on simplifying the layout, I'll make that change. Any other feedback on the templates?",
+            "mentions": [
+              421608,
+              319449
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 107378,
+            "reply_to": "M30",
+            "text": "They look good. Once finalized, we should make them read-only templates so people have to 'Save As' a new copy. This prevents the master from being overwritten.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "lock",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 408577,
+            "reply_to": "M31",
+            "text": "Perfect. So are we ready to approve these?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 330756,
+            "reply_to": "M32",
+            "text": "I believe so. I'll make the requested changes now. To confirm: we're approving the document routing rules and archiving structure as discussed, and we're approving the absence and overtime templates with the latest modifications.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 421608,
+            "reply_to": "M33",
+            "text": "+1 from me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 107378,
+            "reply_to": "M33",
+            "text": "Agreed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 319449,
+            "reply_to": "M33",
+            "text": "Yes.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 330756,
+            "reply_to": "M33",
+            "text": "Great. I'll finalize these and then start on the quick reference guide (T9) which will summarize all of this for the office clerk team, creating A6.",
+            "mentions": [],
+            "artifact_refs": [
+              "T9",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 330756,
+              "when": "today"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 330756,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock in confidentiality, access levels, and escalation paths.",
+        "messages": [
+          {
+            "msg_id": "M38",
+            "speaker_id": 107378,
+            "reply_to": null,
+            "text": "Team, I've drafted the 'Confidentiality and Access Guideline' for T6 and the 'Escalation Path for Discrepancies' for T11. The documents are linked here for your review. They will become A5 and A8 respectively.",
+            "mentions": [
+              319449,
+              330756,
+              408577,
+              421608
+            ],
+            "artifact_refs": [
+              "T6",
+              "T11",
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 421608,
+            "reply_to": "M38",
+            "text": "Thanks @107378. I've read through them. The escalation path (A8) is very clear. It defines the first point of contact and the 48-hour response SLA. This is exactly what we need.",
+            "mentions": [
+              107378
+            ],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 408577,
+            "reply_to": "M38",
+            "text": "Looks good to me too. On the access guideline (A5), it says 'Payroll Clerks have read/write access to all payroll folders'. This is fine, but should we specify that the Finance Manager has read-only access for auditing purposes?",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 107378,
+            "reply_to": "M40",
+            "text": "That's a crucial addition. Yes, I'll add that role with read-only permissions. It strengthens our internal controls. Thanks, @408577.",
+            "mentions": [
+              408577
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 330756,
+            "reply_to": "M38",
+            "text": "I have a question from the office clerk perspective on T11. When an employee reports a discrepancy to us, what is the standard initial response we should give them while we escalate it internally?",
+            "mentions": [],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 107378,
+            "reply_to": "M42",
+            "text": "Excellent question. The response should be something like: 'Thank you for letting us know. I have logged your query, and a member of the payroll team will investigate and get back to you within two business days'. This manages expectations without giving specific details immediately.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 330756,
+            "reply_to": "M43",
+            "text": "Perfect, that's very helpful. I'll make sure that's communicated to our team. It avoids speculation.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 421608,
+            "reply_to": "M43",
+            "text": "We should also ensure every logged discrepancy in the escalation path is tracked in our shared sheet (A2) with a status, so we have a record of the investigation and resolution.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 107378,
+            "reply_to": "M45",
+            "text": "Agreed. I'll add a line in the A8 guideline to make that a mandatory step in the process.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 319449,
+            "reply_to": "M38",
+            "text": "The confidentiality rules in A5 look complete.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 408577,
+            "reply_to": "M46",
+            "text": "So, with the addition of the Finance Manager access and the note about logging escalations, are we ready to approve these?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 107378,
+            "reply_to": "M48",
+            "text": "I believe so. I'll make those two amendments right now. So, we are formally approving the confidentiality and access rules for payroll documents and the standard escalation path for discrepancies.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 421608,
+            "reply_to": "M49",
+            "text": "I approve.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 330756,
+            "reply_to": "M49",
+            "text": "Looks good. Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 408577,
+            "reply_to": "M49",
+            "text": "Approved.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 107378,
+            "reply_to": "M49",
+            "text": "Decisions are locked. I will publish the final versions of A5 and A8 to our shared policy folder by end of day.",
+            "mentions": [],
+            "artifact_refs": [
+              "A5",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 107378,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 107378,
+              "when": "EOD"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Prepare and execute the pilot payroll cycle using the new workflow.",
+        "messages": [
+          {
+            "msg_id": "M54",
+            "speaker_id": 421608,
+            "reply_to": null,
+            "text": "Alright everyone, with the core processes defined, it's time to plan our pilot run for T8. I propose we use the upcoming monthly payroll cycle, which starts next week. Is everyone ready for that?",
+            "mentions": [
+              107378,
+              319449,
+              330756,
+              408577
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 330756,
+            "reply_to": "M54",
+            "text": "The office clerk team is ready. We have the new templates and routing rules (A3) and are prepared to use the digital submission process.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 408577,
+            "reply_to": "M54",
+            "text": "Payroll is ready. I've already set up the Payroll and Document Tracking Sheet (A2) as per T5. I've populated it with some placeholder tasks based on the new monthly checklist (A4).",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 107378,
+            "reply_to": "M54",
+            "text": "Before we commit, we need to define what success looks like. What are we measuring? I propose our success criteria should be: 1) 100% of documents submitted digitally before the deadline, 2) The A4 checklist is completed with no steps missed, and 3) All issues, even minor ones, are logged in the Pilot Issue Log (A7).",
+            "mentions": [],
+            "artifact_refs": [
+              "A4",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 330756,
+            "reply_to": "M57",
+            "text": "Those are great, clear criteria. I'd add a fourth: 4) A post-cycle survey with clerks shows a positive or neutral sentiment on the new workflow's clarity.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 421608,
+            "reply_to": "M58",
+            "text": "I like that, it gives us qualitative feedback. So we have four success criteria. And for the issue log (A7), let's agree to log not just errors, but also any 'near misses' or points of confusion. That data is just as valuable.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 408577,
+            "reply_to": "M59",
+            "text": "Agreed. More data is better. I'll add a 'Type' column to A7 to distinguish between 'Error', 'Delay', and 'Query'.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 319449,
+            "reply_to": "M54",
+            "text": "Confirming readiness. The criteria seem right.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 107378,
+            "reply_to": "M59",
+            "text": "We also need to consider T10. The invoice issuing process has a touchpoint with payroll for commissions. We need to make sure that part of the workflow is also tested.",
+            "mentions": [],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 421608,
+            "reply_to": "M62",
+            "text": "Good point. I've already spoken with the finance manager about it. For the pilot, the commission report will be one of the documents submitted digitally via the new process. So it's covered.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 408577,
+            "reply_to": "M63",
+            "text": "Okay, sounds like we have a plan. Let's lock in the decisions.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 421608,
+            "reply_to": "M64",
+            "text": "Great. So we are all agreed: we will use the next payroll cycle for the pilot. And we've also agreed on the success criteria and what needs to be logged in A7.",
+            "mentions": [],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 107378,
+            "reply_to": "M65",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 330756,
+            "reply_to": "M65",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 408577,
+            "reply_to": "M65",
+            "text": "Confirmed. Let's do it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 319449,
+            "reply_to": "M65",
+            "text": "Confirmed.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 421608,
+            "reply_to": "M65",
+            "text": "Excellent. The pilot is a go. Everyone please ensure you are using the new tracking sheet A2 for all related tasks starting Monday.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 421608,
+              "when": "next week"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 408577,
+              "when": "today"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

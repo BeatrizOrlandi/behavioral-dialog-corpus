@@ -1,0 +1,45 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH1 has 10 messages, which is below the minimum required of 16."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 has 15 messages, which is below the minimum required of 16."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T4 was not referenced in any message within thread TH2, but it was required by the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T8 was not referenced in any message within thread TH3, but it was required by the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Tasks T9 and T11 were not referenced in any message within thread TH4, but they were required by the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Task T10 was not referenced in any message within thread TH5, but it was required by the blueprint."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M7 in thread TH1 contains the forbidden term 'throughput'."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 1,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

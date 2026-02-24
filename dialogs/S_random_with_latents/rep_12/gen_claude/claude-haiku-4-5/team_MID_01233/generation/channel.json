@@ -1,0 +1,1500 @@
+{
+  "channel": {
+    "channel_id": "C-PRED-MAINT-001",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on pilot scope, asset selection, and success criteria.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Team, we're kicking off the Cross-Plant Predictive Maintenance Rollout. The goal is to design and deploy a standardized program across key production lines within 21 days. We need to lock down which assets go into the pilot and what success looks like. I've started working on T1 to define criticality criteria—let's use A1 to rank equipment and finalize our pilot scope. Looking for input from ops, maintenance, and the garage on which two lines we should target.",
+            "mentions": [
+              36422,
+              237177
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 36422,
+            "reply_to": "M1",
+            "text": "Good framing. From operations side, I'd suggest we focus on Line 3 and Line 5—both have consistent downtime issues and the teams there are open to change. Line 3 had three unplanned stops last month alone. Before we finalize, we need to make sure the maintenance windows don't conflict with our committed orders. I can pull the production calendar and cross-check with T5 next.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 237177,
+            "reply_to": "M2",
+            "text": "Line 3 and 5 work from the garage perspective. We've seen recurring bearing and seal failures on the packaging equipment in Line 3. If we can get predictive data on those, we'll catch issues before they cascade. One thing though—installation will need at least a 4-hour window per line, and we'll need to coordinate with your production schedule carefully.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 55217,
+            "reply_to": "M3",
+            "text": "I agree on the lines. Just want to flag that we should also check the compressor and hydraulic systems on Line 5—those are critical to throughput. Will the criticality matrix in A1 include failure impact and frequency data? That'll help us prioritize which specific assets get sensors first.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 53841,
+            "reply_to": "M4",
+            "text": "Yes, A1 will include impact (production loss per hour), frequency (historical failure rate), and criticality score. I'm building that now with input from maintenance records. Should have a draft by EOD tomorrow. Once we lock the assets, we can move to defining KPIs. I'm thinking downtime reduction, MTBF improvement, and maintenance compliance—but let's align on 3–5 that matter most to the business.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 36422,
+            "reply_to": "M5",
+            "text": "For KPIs, I'd add mean time to repair (MTTR) and maintenance cost per asset. Those directly tie to our operational budget and customer delivery. We should also track how often we catch issues before they become failures—that's the real win. T7 should define these clearly so we can build A6 (the tracking sheet) with the right formulas.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T7",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 560411,
+            "reply_to": "M6",
+            "text": "Adding to the KPI discussion—we should also measure data quality and alert accuracy. If the predictive model is throwing false positives, the team will lose trust fast. I'd suggest we track 'alerts investigated vs. alerts that led to actual maintenance' as a ratio. That way we can tune the thresholds during the pilot.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 53841,
+            "reply_to": "M7",
+            "text": "Excellent point. So our primary KPIs are: (1) unplanned downtime hours, (2) MTBF, (3) MTTR, (4) maintenance cost per asset, (5) alert accuracy ratio. I'll add those to T7 and A6. Now, on asset selection—are we agreed on Line 3 and Line 5 as our pilot lines, with focus on packaging equipment (Line 3) and compressor/hydraulic systems (Line 5)?",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "T7",
+              "A6"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 36422,
+            "reply_to": "M8",
+            "text": "Confirmed from ops. Line 3 and 5 are locked. I'll pull the production calendar and send over the available maintenance windows by tomorrow EOD. We need to make sure we don't overlap with any customer commitments.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 237177,
+            "reply_to": "M9",
+            "text": "Garage is ready. Once we have the windows, I'll coordinate with my team on the installation prep. We'll need the sensor specs from the electrical team soon so we can stage materials and train the technicians.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 55217,
+            "reply_to": "M10",
+            "text": "One more thing—let's make sure the criticality matrix also documents the risks of including each asset. For example, if a sensor install requires a full line shutdown, that's a different risk profile than a quick retrofit. I want to see that in A1 before we finalize.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 53841,
+            "reply_to": "M11",
+            "text": "Good catch. I'll add a 'installation risk' column to A1—covering shutdown duration, safety considerations, and any dependencies on other systems. That'll help us sequence the work and identify any blockers early.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 18383,
+            "reply_to": "M12",
+            "text": "I'll have the sensor specs ready by end of week. Need to do a quick feasibility check on the existing control systems first, but I don't expect major issues. Will coordinate with T4 and T11 to make sure we're aligned on electrical safety and integration.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 53841,
+            "reply_to": "M13",
+            "text": "Perfect. So to summarize where we are: D1 is locked—Lines 3 and 5, with packaging equipment and compressor/hydraulic systems as priority assets. D2 is locked—five KPIs: downtime, MTBF, MTTR, maintenance cost, and alert accuracy. Next steps: I'll finalize A1 with risk assessment by EOD tomorrow. 36422, you'll send production windows by EOD tomorrow. 18383, sensor specs by end of week. 237177, start staging materials. Everyone good?",
+            "mentions": [
+              36422,
+              18383,
+              237177
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 36422,
+            "reply_to": "M14",
+            "text": "Confirmed. I'll also start mapping the current maintenance workflows on both lines as part of T2—that'll feed into the standardization work in the next thread.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 53841,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 36422,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 36422,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and finalize the standardized predictive maintenance workflow.",
+        "messages": [
+          {
+            "msg_id": "M16",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "Alright, I've mapped the current maintenance workflows on Lines 3 and 5 as part of T2. The as-is diagrams show some inconsistencies—Line 3 uses a reactive checklist, Line 5 has a mix of preventive and reactive. I've drafted a to-be process that standardizes the flow from alert detection through resolution. The key question is: who owns triage and escalation? We need clear role definitions before we can finalize A2.",
+            "mentions": [
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "T2",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 560411,
+            "reply_to": "M16",
+            "text": "I've reviewed your draft. The process flow is solid, but I'd suggest we add a data validation step right after alert generation. Before we escalate, we should confirm the alert is real and not a sensor glitch. That's where the alert accuracy KPI comes in. Once validated, I'd propose: operations manager triages severity, maintenance lead decides on immediate vs. scheduled action, garage manager executes.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 237177,
+            "reply_to": "M17",
+            "text": "That makes sense. From the garage side, we need clear escalation thresholds. For example, if a bearing temperature is trending up but still within limits, that's a 'monitor and schedule' action. If it spikes suddenly, that's 'stop and investigate.' Can we define those thresholds per asset class in A2?",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 36422,
+            "reply_to": "M18",
+            "text": "Yes, that's exactly what T3 should cover. I'll work with 560411 to define escalation thresholds for each asset class—bearing temps, hydraulic pressure, vibration, etc. We'll tie those to the maintenance windows and production impact. The goal is to make the decision logic transparent so anyone can follow it.",
+            "mentions": [
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 560411,
+            "reply_to": "M19",
+            "text": "I'll draft the escalation thresholds by tomorrow. I'm thinking we use a simple matrix: asset class, parameter, normal range, warning range, critical range, and recommended action for each. That way it's easy to train people and hard to misinterpret.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 18383,
+            "reply_to": "M20",
+            "text": "One thing to consider—the sensor data will come in at different frequencies depending on the asset. Vibration might be sampled every second, temperature every minute. Make sure the escalation logic accounts for that. I'll document the sampling rates in A4 so the process design aligns with what the data actually looks like.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 36422,
+            "reply_to": "M21",
+            "text": "Good point. 560411, when you draft the thresholds, make sure to note the sampling frequency for each parameter. That'll help the team understand why some alerts are real-time and others are delayed.",
+            "mentions": [
+              560411,
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 55217,
+            "reply_to": "M22",
+            "text": "I want to make sure the escalation process also considers production impact. If we're in the middle of a critical order, the decision to stop the line is different than if we're in a maintenance window. Can we add a 'production context' field to the escalation matrix?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 560411,
+            "reply_to": "M23",
+            "text": "Absolutely. I'll add a column for 'production impact' and 'recommended timing'—so the matrix will show: if this alert happens during a maintenance window, do X; if it happens during production, do Y. That way the decision is context-aware.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 237177,
+            "reply_to": "M24",
+            "text": "This is shaping up well. One last thing—we need to make sure the garage team knows when to call in external support. For example, if a bearing needs replacement and we don't have stock, that's a different escalation path. Should that be in A2 as well?",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 36422,
+            "reply_to": "M25",
+            "text": "Yes, that's part of the escalation guide. We'll include a 'resource check' step—if parts are needed, escalate to procurement. If external expertise is needed, escalate to the vendor. I'll make sure A2 covers all those paths. So, are we aligned on the process flow and role definitions? Operations triages, maintenance decides, garage executes, with clear escalation thresholds and resource checks?",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 560411,
+            "reply_to": "M26",
+            "text": "Confirmed. I'll finalize the escalation matrix with thresholds, production context, and resource checks by EOD tomorrow. 36422, you'll integrate that into A2 and get it reviewed by the team?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 36422,
+            "reply_to": "M27",
+            "text": "Yes, I'll have A2 finalized and ready for sign-off by end of week. D3 and D4 are locked: standardized process with clear escalation paths, and roles are operations triage, maintenance decision, garage execution. Next steps: 560411 drafts thresholds by EOD tomorrow, I integrate into A2 by end of week, and we get final sign-off from the team.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 560411,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T2",
+              "owner_id": 36422,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 36422,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Lock down sensor specs, installation plan, and safety procedures.",
+        "messages": [
+          {
+            "msg_id": "M29",
+            "speaker_id": 18383,
+            "reply_to": null,
+            "text": "I've drafted the sensor list for the pilot assets. For Line 3 packaging equipment, we need temperature, vibration, and pressure sensors. For Line 5 compressor and hydraulics, we need temperature, pressure, and flow rate sensors. I've also done a quick feasibility check on the existing control systems—no major compatibility issues, but I need to verify load and interference. Full spec is in A4. Before we finalize, I need feedback on budget constraints and installation feasibility.",
+            "mentions": [
+              237177,
+              36422
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 237177,
+            "reply_to": "M29",
+            "text": "From the garage perspective, the sensor list looks reasonable. Temperature and vibration are straightforward to install. Pressure sensors might need some custom mounting on the hydraulic lines, but that's doable. My concern is the timeline—we have 21 days to go live. Can we get all the sensors in time, or do we need to prioritize?",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 18383,
+            "reply_to": "M30",
+            "text": "Good question. I've checked with suppliers—temperature and vibration sensors are in stock and can ship within 3 days. Pressure sensors have a 7-day lead time. If we order today, we'll have everything by day 10, which gives us a 11-day buffer before go-live. That should be enough for testing and installation prep.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 36422,
+            "reply_to": "M31",
+            "text": "Timeline works. But I want to make sure we're not overcomplicating the install. 237177, what's the realistic installation time per asset? And do we need to shut down the line, or can we do it during normal maintenance windows?",
+            "mentions": [
+              237177,
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 237177,
+            "reply_to": "M32",
+            "text": "For temperature sensors, about 30 minutes per asset if we do it during a maintenance window. Vibration sensors are similar. Pressure sensors are trickier—we'll need to depressurize the hydraulic lines, which means a full shutdown. That's about 2 hours per asset. So for the pilot, we're looking at roughly 6–8 hours total across both lines if we do it in one maintenance window.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 55217,
+            "reply_to": "M33",
+            "text": "6–8 hours is tight but doable if we coordinate with production. We have a scheduled maintenance window on Line 3 next week (Tuesday, 6 PM to 2 AM) and Line 5 the following week (Thursday, 6 PM to 2 AM). That gives us enough time. But we need a detailed installation checklist to make sure nothing gets missed.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 237177,
+            "reply_to": "M34",
+            "text": "Agreed. I'll work with 18383 to create A3—the installation checklist. It needs to cover step-by-step procedures, safety lockout/tagout steps, and verification checks. I'll also make sure it includes a pre-install readiness check so we don't discover missing parts or tools at the last minute.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 18383,
+            "reply_to": "M35",
+            "text": "I'll draft the technical sections of A3 by tomorrow—wiring diagrams, sensor placement, and integration steps. 237177, you add the safety and lockout/tagout procedures. We should also include a post-install verification checklist to confirm everything is working before we close out the window.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 560411,
+            "reply_to": "M36",
+            "text": "One thing—make sure the checklist includes a step to test the sensor data integration with the monitoring system. We need to confirm that the data is flowing correctly before we declare the install complete. That ties to T11 (electrical safety validation).",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 18383,
+            "reply_to": "M37",
+            "text": "Good catch. I'll add a data validation step to A3. I'll also run the electrical safety checks as part of T11—compatibility with control panels, load checks, interference checks. I'll need sign-off from the plant electrical safety rep before we go live.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "A3",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 36422,
+            "reply_to": "M38",
+            "text": "Alright, so on D5—are we approving the sensor spec in A4 as-is, or do we need adjustments? And on D6—are we locking the installation schedule for Tuesday and Thursday next week with the checklist from A3?",
+            "mentions": [
+              18383,
+              237177
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 18383,
+            "reply_to": "M39",
+            "text": "A4 is ready to approve. I've verified compatibility and lead times. The only caveat is that we're using standard industrial sensors—nothing custom. If we need higher precision later, we can upgrade, but for the pilot, these will give us good baseline data.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 237177,
+            "reply_to": "M40",
+            "text": "I'm ready to lock the installation schedule. Tuesday for Line 3, Thursday for Line 5. I'll have A3 finalized by Monday EOD so the team can review and prep. We'll do a pre-install readiness check on Monday afternoon to make sure everything is staged.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 36422,
+            "reply_to": "M41",
+            "text": "Perfect. D5 is locked—A4 sensor spec approved. D6 is locked—installation schedule Tuesday and Thursday next week, with A3 checklist finalized by Monday EOD. 18383, you'll complete T11 (electrical safety validation) by end of week. 237177, you'll finalize A3 by Monday EOD. Everyone clear?",
+            "mentions": [
+              18383,
+              237177
+            ],
+            "artifact_refs": [
+              "A4",
+              "A3"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 18383,
+            "reply_to": "M42",
+            "text": "Confirmed. I'll have T4 (sensor spec) and T11 (electrical safety) done by end of week.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T4",
+              "T11"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 237177,
+            "reply_to": "M43",
+            "text": "And I'll have T8 (installation checklist) finalized by Monday EOD. We're on track.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T11",
+              "owner_id": 18383,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 237177,
+              "when": "Monday EOD"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 18383,
+              "when": "order sensors today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Coordinate pilot go-live, training, and daily status updates.",
+        "messages": [
+          {
+            "msg_id": "M45",
+            "speaker_id": 36422,
+            "reply_to": null,
+            "text": "We're one week out from go-live. Time to lock down the final coordination. I need to confirm: (1) pilot go-live date and maintenance windows for both lines, (2) training schedule and attendance. Let's also set up daily async check-ins starting Monday so we can catch any blockers early. Who's ready to walk through the go-live plan?",
+            "mentions": [
+              53841,
+              237177,
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 53841,
+            "reply_to": "M45",
+            "text": "Go-live is locked for next Tuesday (Line 3) and Thursday (Line 5). I've confirmed with production planning—no customer orders conflict with those windows. The maintenance windows are 6 PM to 2 AM both nights, which gives us 8 hours per line. That's tight but doable based on the installation timeline we discussed.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 237177,
+            "reply_to": "M46",
+            "text": "Confirmed from the garage. We'll have the team staged and ready by 5:30 PM both nights. All materials are pre-staged, and we've done a dry run of the installation on a test rig. The team is confident we can complete the work within the window.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 560411,
+            "reply_to": "M47",
+            "text": "Good. Now on training—we need to get operators, maintenance, and garage staff up to speed on the new process and KPIs. I've drafted T6 (training materials). We should run three sessions: one for operators (Monday 2 PM), one for maintenance leads (Monday 4 PM), and one for garage technicians (Tuesday 3 PM, before the install). Each session is 1.5 hours. Does that work?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 36422,
+            "reply_to": "M48",
+            "text": "That schedule works. But I want to make sure the training covers the escalation process and KPIs clearly. Can you add a section on 'what to do when you see an alert' and 'how we'll measure success'? That'll help people understand why we're doing this.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 560411,
+            "reply_to": "M49",
+            "text": "Already in there. A5 (training pack) includes role-specific guides, the escalation matrix, and KPI definitions. I'll also include a quick reference card that people can keep at their workstation. The goal is to make it easy to follow the process without having to dig through documentation.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 55217,
+            "reply_to": "M50",
+            "text": "I want to make sure the training also covers what happens if something goes wrong during the install. For example, if a sensor fails during the window, what's the fallback? Do we abort and reschedule, or do we continue with partial coverage?",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 237177,
+            "reply_to": "M51",
+            "text": "Good question. We've built contingency into the plan. If a sensor fails during install, we have spares on hand. If the install itself runs over, we have a 2-hour buffer built into the maintenance window. If something catastrophic happens, we abort and reschedule for the following week. I'll add that to A3 (the installation checklist) so everyone knows the decision tree.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 36422,
+            "reply_to": "M52",
+            "text": "Alright, so D8 is locked—training dates are Monday 2 PM (operators), Monday 4 PM (maintenance), Tuesday 3 PM (garage). A5 will include escalation matrix and KPI definitions. Now, on daily check-ins—I want to start Monday morning. Each person posts: yesterday's progress, today's plan, and any blockers. We'll use a simple format to keep it quick. Sound good?",
+            "mentions": [
+              237177,
+              560411
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 560411,
+            "reply_to": "M53",
+            "text": "I'll post the first check-in template by EOD today so everyone knows what to include. We'll keep it to 3–4 bullet points per person so it doesn't become a burden.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 237177,
+            "reply_to": "M54",
+            "text": "Works for me. I'll also set up a pre-install readiness check on Monday afternoon—final walkthrough of materials, tools, and procedures. If anything is missing, we'll have time to source it before Tuesday.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 53841,
+            "reply_to": "M55",
+            "text": "Perfect. So D7 is locked—go-live Tuesday and Thursday, maintenance windows 6 PM to 2 AM. D8 is locked—training Monday and Tuesday as outlined. Next steps: 560411 finalizes A5 and posts check-in template by EOD today. 237177 does pre-install readiness check Monday afternoon. Everyone starts daily check-ins Monday morning. We're on track for go-live.",
+            "mentions": [
+              560411,
+              237177
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 18383,
+            "reply_to": "M56",
+            "text": "I'll be on standby during both installation windows in case there are any electrical issues. I'll also monitor the data integration to make sure the sensors are feeding data correctly.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 36422,
+            "reply_to": "M57",
+            "text": "Good. I'll coordinate the overall timeline and make sure we're hitting our milestones. 53841, you'll track KPI data starting Wednesday (day after Line 3 install) and build A6 (the tracking sheet) with real data. That'll give us a baseline for the pilot period.",
+            "mentions": [
+              53841,
+              18383
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 53841,
+            "reply_to": "M58",
+            "text": "Confirmed. I'll start collecting downtime, MTBF, MTTR, maintenance cost, and alert accuracy data on Wednesday. A6 will be updated daily during the pilot period so we can see trends in real time.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 36422,
+            "reply_to": "M59",
+            "text": "Perfect. We're locked and loaded. Go-live is Tuesday and Thursday. Training is Monday and Tuesday. Daily check-ins start Monday. A6 tracking starts Wednesday. Let's make this pilot a success.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [
+              "D7",
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T6",
+              "owner_id": 560411,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 53841,
+              "when": "confirmed"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 36422,
+              "when": "Tuesday and Thursday"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 560411,
+              "when": "Monday and Tuesday training"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results, customer impact, and decide on rollout roadmap.",
+        "messages": [
+          {
+            "msg_id": "M61",
+            "speaker_id": 53841,
+            "reply_to": null,
+            "text": "Pilot period is complete. I've compiled the results and lessons learned. Overall, the pilot was successful—we reduced unplanned downtime by 35% on Line 3 and 28% on Line 5 over the 14-day pilot period. MTBF improved, and we caught three potential failures before they became critical. However, we also had some challenges: alert accuracy was 72% (we had false positives on vibration sensors), and the escalation process needed some tweaking. I've drafted A7 (lessons learned report) with recommendations for scale-up. Let's review and decide on next steps.",
+            "mentions": [
+              36422,
+              237177
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 36422,
+            "reply_to": "M61",
+            "text": "Excellent results. 35% and 28% downtime reduction is significant. On the false positives—that's expected with new sensors. Did we identify the root cause? Was it sensor calibration, threshold settings, or something else?",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 18383,
+            "reply_to": "M62",
+            "text": "I reviewed the data. The vibration sensors were picking up normal operational noise that we hadn't accounted for in the baseline. Once we recalibrated the thresholds based on the first week of data, accuracy improved to 88%. The lesson is that we need a 'learning period' for the model to adapt to each line's normal operating signature.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 237177,
+            "reply_to": "M63",
+            "text": "From the garage side, the escalation process worked well once we got the thresholds right. The team appreciated the clear decision logic. One thing we learned: we need better communication between the monitoring system and the garage. Sometimes alerts came in but the team didn't see them immediately. We should add a notification system—maybe a dashboard or SMS alerts.",
+            "mentions": [
+              18383
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 560411,
+            "reply_to": "M64",
+            "text": "Good feedback. I'll add that to A7 as a recommendation for scale-up. We should also document the 'learning period' concept—that the first 1–2 weeks of data are used to calibrate thresholds, and then the model becomes more accurate. That's important for managing expectations when we roll out to other lines.",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 55217,
+            "reply_to": "M65",
+            "text": "I want to revisit the asset scope for scale-up. We started with packaging equipment and compressor/hydraulics. Based on the pilot results, should we expand to other asset classes, or should we stick with these and perfect the process first?",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 53841,
+            "reply_to": "M66",
+            "text": "Good question. The data shows that the approach works well for rotating equipment (compressors, motors) and hydraulic systems. Packaging equipment is more complex because it has multiple sub-systems. For scale-up, I'd recommend we focus on rotating equipment and hydraulics first—that's where we got the best results. We can add packaging equipment once we've refined the process further.",
+            "mentions": [
+              55217
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M68",
+            "speaker_id": 36422,
+            "reply_to": "M67",
+            "text": "That makes sense. So for scale-up, we're focusing on rotating equipment and hydraulics across all production lines. That's a clear scope. Now, on ownership of alert triage and escalation—did the current role assignments work, or do we need to adjust?",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M69",
+            "speaker_id": 237177,
+            "reply_to": "M68",
+            "text": "The role assignments worked, but we found that operations manager was sometimes unavailable for triage. We need a backup or a more distributed model. Maybe maintenance lead can do initial triage and escalate to operations only if it's a production-impacting decision?",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M70",
+            "speaker_id": 36422,
+            "reply_to": "M69",
+            "text": "That's a good adjustment. So the revised model is: maintenance lead does initial triage (is this a real alert?), then decides on action (immediate vs. scheduled). Operations manager is looped in only if the decision impacts production timing. That reduces bottlenecks and keeps things moving. Does that work for everyone?",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M71",
+            "speaker_id": 560411,
+            "reply_to": "M70",
+            "text": "That works. I'll update A2 (the escalation guide) to reflect the revised role assignments. Maintenance lead is the primary decision-maker, operations manager is consulted for production impact, garage manager executes.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M72",
+            "speaker_id": 237177,
+            "reply_to": "M71",
+            "text": "Also, we should document the customer impact. During the pilot, we had fewer field failures on the equipment we were monitoring. That's a win for aftersales. I'll work with the service team to capture that feedback for T12.",
+            "mentions": [
+              560411
+            ],
+            "artifact_refs": [
+              "T12"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M73",
+            "speaker_id": 53841,
+            "reply_to": "M72",
+            "text": "Good. So to summarize: D1 is adjusted—we're focusing on rotating equipment and hydraulics for scale-up, not packaging equipment yet. D4 is adjusted—maintenance lead is primary decision-maker, operations manager consulted for production impact. A7 will include all lessons learned, recommendations, and the revised role model. A8 (rollout roadmap) will outline the next phases. Are we ready to move forward with scale-up planning?",
+            "mentions": [
+              237177
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M74",
+            "speaker_id": 36422,
+            "reply_to": "M73",
+            "text": "Yes. Next steps: 53841, finalize A7 and A8 by end of week. 237177, capture customer impact feedback for T12 by end of week. 560411, update A2 with revised role assignments by end of week. Then we'll schedule a cross-functional review to present the pilot results and get buy-in on the scale-up roadmap.",
+            "mentions": [
+              53841,
+              237177,
+              560411
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M75",
+            "speaker_id": 53841,
+            "reply_to": "M74",
+            "text": "Confirmed. I'll have A7 and A8 ready by end of week. The roadmap will outline: phase 1 (next 30 days) is rolling out to the remaining production lines with rotating equipment and hydraulics. Phase 2 (60–90 days) is refining the process and adding packaging equipment. Phase 3 (90+ days) is full standardization across all plants. We'll also include resource requirements and budget estimates.",
+            "mentions": [
+              36422
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M76",
+            "speaker_id": 36422,
+            "reply_to": "M75",
+            "text": "Perfect. Pilot is complete, lessons are captured, and we're ready to scale. Great work, team. Let's reconvene next week to review A7 and A8 and finalize the scale-up plan.",
+            "mentions": [
+              53841
+            ],
+            "artifact_refs": [
+              "A7",
+              "A8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T10",
+              "owner_id": 53841,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 237177,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 53841,
+              "when": "scale-up planning next week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

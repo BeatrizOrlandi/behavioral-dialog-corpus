@@ -1,0 +1,1180 @@
+{
+  "channel": {
+    "channel_id": "proj-hosp-cross-sell-playbook",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, segments, and pilot account list for the cross-sell playbook.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 4133,
+            "reply_to": null,
+            "text": "Hey team, kicking off the Cross-Sell Playbook project for hospitality tech clients. We have 21 days to design and roll out a structured playbook that works for both day and night shifts. The goal is to increase revenue and improve guest experience without touching core billing or PMS systems.\n\nKey deliverables: segmented account list with scoring, call/email scripts, guest-journey offer matrix, activity tracking dashboard structure, and pilot results summary.\n\nLet's start by aligning on how we segment our pilot accounts and what scoring criteria make sense. I'll be working on T1 to define segments and tag our top 30 pilot accounts. Need input from everyone on what customer characteristics matter most for cross-sell potential.\n\nA1 (Pilot Hospitality Account Segmentation Sheet) is where we'll track this. Who has thoughts on segments?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 59593,
+            "reply_to": "M1",
+            "text": "Good kickoff. From the night shift perspective, I'm thinking about which accounts are most likely to respond well to offers during late-night or early-morning touchpoints. We need to be careful not to interrupt guests during sensitive times. I can help map out the guest journey touchpoints for T3 once we know which segments we're targeting. What's the timeline for finalizing the segment list?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 464310,
+            "reply_to": "M1",
+            "text": "I think we should segment by property size and current product adoption. Larger properties with multiple locations might have more cross-sell appetite. Also, accounts that already use our core platform heavily probably have higher intent. Should we also look at historical support ticket volume as a signal?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 473437,
+            "reply_to": "M3",
+            "text": "Support ticket volume is interesting, but I'd caution that high volume could mean either high engagement or high frustration. Maybe we weight it differently depending on ticket sentiment. Also, we should consider geographic region—some markets might be more receptive to upsell outreach than others due to local business practices.",
+            "mentions": [
+              464310,
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 4133,
+            "reply_to": "M4",
+            "text": "Good points. Let me propose a scoring framework: property size (weight 30%), product adoption depth (weight 35%), support engagement quality (weight 20%), and region receptiveness (weight 15%). We'll tag accounts as Tier 1 (high potential), Tier 2 (medium), and Tier 3 (exploratory). Does this feel right to everyone?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              },
+              {
+                "emoji": "thumbsup",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 569461,
+            "reply_to": "M5",
+            "text": "The framework looks reasonable. One question—how are we defining 'product adoption depth'? Is it number of modules, frequency of use, or something else? I want to make sure we're consistent when we score the accounts.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 4133,
+            "reply_to": "M6",
+            "text": "Good catch. Adoption depth = number of active modules + monthly active user count + feature usage breadth. I'll document the exact formula in A1 so it's repeatable. I'm pulling the data today and should have the top 30 accounts scored by EOD tomorrow. Then we assign owners to each account for the pilot.",
+            "mentions": [
+              569461
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 59593,
+            "reply_to": "M7",
+            "text": "Once you have the list, I can review it from a night shift feasibility angle. Some accounts might be in time zones or have guest profiles where late-night outreach just won't work. I'll flag those so we can adjust expectations or timing.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 4133,
+            "reply_to": "M8",
+            "text": "Perfect. So the plan: I finalize scoring and list by tomorrow EOD, 4133 reviews for night shift feasibility, then we lock in D1 (segmentation criteria) and D2 (pilot account list) by end of week. That gives us time to start on scripts and touchpoint mapping in parallel. Sound good?",
+            "mentions": [
+              59593
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 464310,
+            "reply_to": "M9",
+            "text": "Works for me. I'll be ready to help with T2 (scripts) once we have the final segment definitions locked. Should we also think about which accounts get assigned to which rep for outreach?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "T2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 4133,
+            "reply_to": "M10",
+            "text": "Yes, account ownership is part of D2. I'll propose assignments based on existing relationships and rep capacity. We can refine in the next sync. For now, let's confirm the segmentation framework is locked—does everyone agree with the four criteria and weights I outlined?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 473437,
+            "reply_to": "M11",
+            "text": "Agreed. One small note: when we document assumptions in A1, let's be explicit about data sources and any limitations (e.g., if adoption data is from the last 90 days vs. all-time). That'll help us interpret results later.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 4133,
+            "reply_to": "M12",
+            "text": "Will do. I'll add a 'Data Sources & Assumptions' section to A1 before I share the scored list. Alright, I'm moving forward with T1 and T8 (pilot planning). I'll post the account list and ownership assignments by tomorrow EOD for final review.",
+            "mentions": [
+              473437
+            ],
+            "artifact_refs": [
+              "A1",
+              "T1",
+              "T8"
+            ],
+            "decision_refs": [
+              "D1",
+              "D2"
+            ],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 4133,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T8",
+              "owner_id": 4133,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Co-create and finalize scripts, offer matrix, and guest touchpoints.",
+        "messages": [
+          {
+            "msg_id": "M14",
+            "speaker_id": 4133,
+            "reply_to": null,
+            "text": "Sharing the first draft of A2 (Cross-Sell Playbook and Script Draft) with initial call and email script variants, plus a rough offer matrix. I've included talking points for common guest scenarios, but I need feedback from the team—especially from 59593 on night shift feasibility and from the other reps on what feels natural to say.\n\nThe scripts are intentionally short to keep reps from feeling overwhelmed. I've also drafted some objection responses, but I'm sure we're missing scenarios.\n\nPlease review and comment directly in the doc. Key questions:\n1. Do the scripts sound authentic and not too salesy?\n2. Are there guest scenarios we're missing in the offer matrix?\n3. What objections have you heard that we should address?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "eyes",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M15",
+            "speaker_id": 59593,
+            "reply_to": "M14",
+            "text": "Thanks for the draft. I've reviewed the night shift section. A few concerns: the call script assumes guests are available and receptive, but at 2 AM, most are sleeping. I'd suggest we focus night outreach on check-in/check-out moments and early morning (6–7 AM) when guests are planning their day. I'm working on T3 (guest journey touchpoints) and will map out the best windows by shift. The email template is good—that's less intrusive.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 464310,
+            "reply_to": "M14",
+            "text": "I've read through the call script. It's cleaner than what I usually do, which is good. One thing: the objection 'We don't have budget' is addressed, but I've found that 'We're already using a competitor for that' is more common. Maybe add a response that acknowledges their current solution and positions ours as complementary rather than replacement?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 473437,
+            "reply_to": "M16",
+            "text": "Good point. Also, I noticed the email template doesn't have a clear call-to-action. It reads more like an FYI. Should we add a line like 'Let's schedule 15 minutes to explore how this could work for your property'? And maybe a link to a calendar or a simple reply prompt?",
+            "mentions": [
+              4133,
+              464310
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 4133,
+            "reply_to": "M17",
+            "text": "Both good catches. I'll add the competitor objection response and strengthen the email CTA. For the night shift timing, 59593, once you finish T3, we can align the scripts to those touchpoints. That way, the call script becomes more of a 'day shift primary' tool and night shift uses the checklist approach. Does that work?",
+            "mentions": [
+              59593,
+              473437,
+              464310
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 59593,
+            "reply_to": "M18",
+            "text": "Yes, that makes sense. I'm mapping out the touchpoints now. I'm seeing: check-in (high suitability for day, medium for night), room service order (medium for day, low for night due to timing), checkout (high for both), and early morning concierge calls (medium for night, high for day). I'll have the full T3 list with suitability ratings by tomorrow. Then we can create T6 (the night shift quick-reference checklist) based on those windows.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "T3",
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 569461,
+            "reply_to": "M19",
+            "text": "One thing to consider: room service orders might actually be a good moment for upsell if we're offering something that enhances their stay (like a spa package or late-night dining upgrade). But you're right that timing matters. Maybe it depends on the property's service model.",
+            "mentions": [
+              59593
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 59593,
+            "reply_to": "M20",
+            "text": "Good point. I'll note that in T3 as a 'conditional' touchpoint—high suitability if the property offers premium room service, lower if it's basic. That way, reps can use their judgment based on the account profile.",
+            "mentions": [
+              569461
+            ],
+            "artifact_refs": [
+              "T3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 4133,
+            "reply_to": "M21",
+            "text": "Perfect. So the plan: I'll update A2 with the competitor objection and stronger email CTA by EOD today. 59593 finishes T3 by tomorrow with touchpoint suitability ratings. Then I'll create the offer matrix (T4) that links products to those touchpoints. Once that's locked, we can finalize T6 (night shift checklist). Does everyone feel good about the script direction for D3?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3",
+              "T4",
+              "T6"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 464310,
+            "reply_to": "M22",
+            "text": "I'm good with the direction. One more thing: should we include a 'do not call' list or opt-out mechanism in the scripts? I want to make sure we're not reaching out to accounts that have explicitly said no to cross-sell.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 4133,
+            "reply_to": "M23",
+            "text": "Good catch. That ties into T7 (compliance and data protection). I'll make sure the scripts include a simple opt-out line and we'll document the do-not-call list in A5 (Data Protection and Consent Guidelines). We need to lock that down before we start the pilot anyway.",
+            "mentions": [
+              464310
+            ],
+            "artifact_refs": [
+              "T7",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 473437,
+            "reply_to": "M24",
+            "text": "Agreed. I'll review A5 once you draft it to make sure the compliance language is clear and doesn't make the scripts feel too legal. We want reps to feel confident using them, not like they're reading a disclaimer.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 4133,
+            "reply_to": "M25",
+            "text": "Will do. Alright, I'm locking in the script updates and moving to T4 (offer matrix). Once 59593 shares T3, I'll map products to touchpoints and guest scenarios. We should have D3 (scripts locked) and D4 (touchpoints and offer matrix approved) by end of week. That keeps us on track for pilot launch next week.",
+            "mentions": [
+              59593,
+              473437
+            ],
+            "artifact_refs": [
+              "T4",
+              "T3"
+            ],
+            "decision_refs": [
+              "D3",
+              "D4"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T2",
+              "owner_id": 4133,
+              "when": "EOD today"
+            },
+            {
+              "task_id": "T3",
+              "owner_id": 59593,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "T4",
+              "owner_id": 4133,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T6",
+              "owner_id": 59593,
+              "when": "end of week"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define CRM tracking, compliance guardrails, and activity logging.",
+        "messages": [
+          {
+            "msg_id": "M27",
+            "speaker_id": 464310,
+            "reply_to": null,
+            "text": "Quick question: how are we tracking cross-sell activities without making changes to the core CRM system? We need to log outreach, offers made, responses, and outcomes. I'm thinking we need a simple tagging system and maybe a few custom fields, but I want to make sure we're not overcomplicating it. What's the minimal set of fields we need for T5?",
+            "mentions": [
+              4133,
+              59593
+            ],
+            "artifact_refs": [
+              "T5"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 4133,
+            "reply_to": "M27",
+            "text": "Good question. I'm thinking: (1) 'Cross-Sell Pilot' tag to mark accounts in the pilot, (2) 'Outreach Date' field, (3) 'Offer Type' dropdown (call, email, in-person), (4) 'Product Offered' field, (5) 'Response Status' (no response, declined, interested, accepted), and (6) 'Follow-up Date' for next steps. That's it. We log everything in A4 (Cross-Sell Activity and Outcome Tracker) as a backup. Does that feel minimal enough?",
+            "mentions": [
+              464310
+            ],
+            "artifact_refs": [
+              "T5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 59593,
+            "reply_to": "M28",
+            "text": "That's clean. One addition: maybe a 'Shift' field (day/night) so we can track which shift made the outreach? That'll help us understand what works when. Also, should we add a 'Guest Feedback' field for qualitative notes?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 4133,
+            "reply_to": "M29",
+            "text": "Good adds. I'll include 'Shift' and 'Notes' (for qualitative feedback). That gives us enough data to analyze what works without bloating the system. Now, for compliance: we need to make sure all outreach respects opt-in rules and data protection. I'm drafting T7 (compliance guidelines) and A5 (Data Protection and Consent Guidelines). The scripts need to include a simple consent check and opt-out option.",
+            "mentions": [
+              59593
+            ],
+            "artifact_refs": [
+              "T7",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M31",
+            "speaker_id": 473437,
+            "reply_to": "M30",
+            "text": "Before we finalize the CRM fields, I want to make sure we're not storing any data we shouldn't. What personal data are we capturing, and where is it stored? I know we're not changing core systems, but we need to be clear on what A4 contains and how it's secured.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 4133,
+            "reply_to": "M31",
+            "text": "Good point. A4 will contain: account name, contact name, outreach date, offer type, response, and follow-up date. No sensitive personal data beyond what's already in our CRM. We're not storing payment info, health data, or anything like that. A5 will document exactly what data we're using and why, plus the opt-in/opt-out rules. I'll have both ready for review by tomorrow.",
+            "mentions": [
+              473437
+            ],
+            "artifact_refs": [
+              "A4",
+              "A5"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 569461,
+            "reply_to": "M32",
+            "text": "One more thing: should we have a field in A4 for 'Consent Status'? Like, did we confirm the contact opted in before we reached out? That way, we have a clear audit trail.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 4133,
+            "reply_to": "M33",
+            "text": "Absolutely. I'll add 'Consent Confirmed' (yes/no) to A4. That way, we have a clear record. Alright, so for D5, I'm proposing: the seven CRM fields I mentioned (Cross-Sell Pilot tag, Outreach Date, Offer Type, Product Offered, Response Status, Follow-up Date, Shift) plus the additions from 59593 and 569461 (Notes, Consent Confirmed). Does everyone agree that's the minimal set for D5?",
+            "mentions": [
+              59593,
+              569461,
+              464310,
+              473437
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 464310,
+            "reply_to": "M34",
+            "text": "Looks good. And for D6, I assume we're confirming that the scripts and process comply with data protection rules? I want to make sure we're not missing any regulatory requirements before we launch the pilot.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 4133,
+            "reply_to": "M35",
+            "text": "Yes, D6 is the compliance sign-off. I'll draft A5 with all the data protection rules, consent language, and opt-out procedures. Once 473437 reviews it for legal clarity, we'll lock it in. The scripts will be updated to include the consent check and opt-out line. I'll have everything ready for review by EOD tomorrow, and we can finalize D5 and D6 by end of week.",
+            "mentions": [
+              473437
+            ],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D5",
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 59593,
+            "reply_to": "M36",
+            "text": "Sounds good. I'll make sure the night shift checklist (T6) includes a reminder about consent and opt-out rules. That way, night staff know they need to confirm before reaching out.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "T6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T5",
+              "owner_id": 4133,
+              "when": "EOD tomorrow"
+            },
+            {
+              "task_id": "T7",
+              "owner_id": 4133,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Run the pilot, share quick updates, and capture live feedback.",
+        "messages": [
+          {
+            "msg_id": "M38",
+            "speaker_id": 4133,
+            "reply_to": null,
+            "text": "Pilot is live! Starting today with our 30 pilot accounts from A1. Quick reminder of the key rules:\n\n1. Use the scripts from A2—keep it natural, not robotic.\n2. Only reach out during the touchpoints mapped in T3 (day shift: check-in, checkout, concierge calls; night shift: check-in, early morning, checkout).\n3. Log every outreach in A4 (Cross-Sell Activity and Outcome Tracker)—date, offer type, response, follow-up date.\n4. Confirm consent before reaching out (see A5 for rules).\n5. Use the night shift checklist (A3) if you're working nights.\n\nWe'll do quick async standups twice a week (Tuesdays and Fridays) to share what's working and flag blockers. I'll post a weekly check-in thread on Mondays with A4 metrics and qualitative notes.\n\nLet's make this work. Questions?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A1",
+              "A2",
+              "T3",
+              "A4",
+              "A5",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 59593,
+            "reply_to": "M38",
+            "text": "Got it. I'm starting with the night shift accounts tonight. I've reviewed A3 (the checklist) and it's clear. One quick note: I'm seeing that some guests are more receptive to offers during early morning (6–7 AM) than late night. I'll log that in A4 and we can adjust timing if needed.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 464310,
+            "reply_to": "M38",
+            "text": "Starting with my assigned accounts today. Quick question: if a guest says they're interested but wants to think about it, should I log that as 'interested' or 'no response' in A4?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 4133,
+            "reply_to": "M40",
+            "text": "Log it as 'interested' and set a follow-up date in A4. That way, we can track how many interested leads convert. Also, add a note about what they want to think about—that'll help us refine the pitch.",
+            "mentions": [
+              464310
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 473437,
+            "reply_to": "M38",
+            "text": "I'm ready to start. Just confirming: if I reach an account and they say they're not interested, I should still log it in A4, right? And should I ask why they're not interested, or just move on?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M43",
+            "speaker_id": 4133,
+            "reply_to": "M42",
+            "text": "Yes, log it as 'declined' in A4. If they volunteer a reason, jot it down in the notes. Don't push if they say no—respect the boundary. But if they say something like 'not right now' or 'maybe later,' that's different from a hard no. Use your judgment and log accordingly.",
+            "mentions": [
+              473437
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 569461,
+            "reply_to": "M38",
+            "text": "Starting outreach today. One thing I'm noticing: some of the accounts in my list don't have clear contact info. Should I spend time hunting for the right person, or should I flag it and move on?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 4133,
+            "reply_to": "M44",
+            "text": "Good question. If contact info is missing, spend 10 minutes max trying to find it (LinkedIn, company website, etc.). If you can't find it, flag it in A4 with a note 'Contact info incomplete' and move to the next account. We can do a data cleanup pass after the pilot.",
+            "mentions": [
+              569461
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 59593,
+            "reply_to": "M45",
+            "text": "First night shift update: I've reached out to 5 accounts so far. 2 interested, 2 declined, 1 no response yet. The interested ones both mentioned they'd like to see pricing. I'm logging everything in A4. Will share more details in the Tuesday standup.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 4133,
+            "reply_to": "M46",
+            "text": "Great start! For the interested leads asking about pricing, send them the pricing doc from A2 (it's in the appendix) or schedule a quick call. Don't leave them hanging. Keep the momentum going.",
+            "mentions": [
+              59593
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 464310,
+            "reply_to": "M46",
+            "text": "Nice work. I'm at 3 outreaches so far, 1 interested, 1 declined, 1 no response. The interested one is a larger property—they want to discuss integration with their existing system. I'm setting up a call for next week.",
+            "mentions": [
+              59593
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 4133,
+            "reply_to": "M48",
+            "text": "Excellent. That's exactly the kind of lead we want to nurture. Make sure you log the call in A4 and capture any technical requirements they mention. We might need to loop in product or support for the integration discussion.",
+            "mentions": [
+              464310
+            ],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T8",
+              "owner_id": 4133,
+              "when": "ongoing"
+            },
+            {
+              "task_id": "T9",
+              "owner_id": 59593,
+              "when": "end of pilot"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Review pilot results and agree on next steps for scaling or iterating.",
+        "messages": [
+          {
+            "msg_id": "M50",
+            "speaker_id": 4133,
+            "reply_to": null,
+            "text": "Pilot wrap-up. We've completed outreach to all 30 pilot accounts over the past two weeks. Here's the summary from A4 (Cross-Sell Activity and Outcome Tracker):\n\nTotal outreach: 30 accounts\nResponses: 18 interested, 8 declined, 4 no response\nConversion rate (interested to accepted): 11 of 18 interested = 61%\nTotal accepted offers: 11\nAverage follow-up time: 3.2 days\n\nKey learnings:\n1. Day shift outreach had higher conversion (65%) than night shift (55%).\n2. Email follow-ups after calls increased conversion by 20%.\n3. Larger properties (Tier 1) had higher acceptance rates (70%) vs. Tier 2 (50%).\n4. Pricing transparency upfront reduced objections.\n\nNow I need input from the team: Should we scale this to all hospitality customers, extend the pilot with more accounts, or pause for refinements? I'm leaning toward scaling with some tweaks, but I want to hear from everyone. 59593, can you share feedback from the night shift perspective?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A4",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "chart_with_upwards_trend",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 59593,
+            "reply_to": "M50",
+            "text": "Good results overall. From the night shift side: the checklist (A3) worked well—staff felt confident using it. The main challenge was timing. Early morning (6–7 AM) was much better than late night. I'd recommend we adjust the playbook to emphasize early morning outreach for night shift and maybe reduce late-night attempts. Also, guests appreciated the brief, non-intrusive approach. I'm capturing all this in A6 (Pilot Feedback and Iteration Notes).",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A3",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 464310,
+            "reply_to": "M50",
+            "text": "The scripts felt natural to use. I made a few tweaks on the fly (like the competitor objection response we added), and that helped. One thing: I'd like to see more product bundles in the offer matrix. Some guests asked about combinations we didn't have ready. Also, the follow-up process could be smoother—maybe a template for follow-up emails?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 473437,
+            "reply_to": "M50",
+            "text": "I agree with scaling. The 61% conversion rate on interested leads is solid. My feedback: the data quality issues we worried about didn't materialize—the accounts we selected were clean. But I'd recommend we do a quick data audit on the full customer base before scaling to all accounts. Also, the compliance process worked smoothly—no issues with consent or opt-out.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 569461,
+            "reply_to": "M50",
+            "text": "I'm also in favor of scaling. The playbook is trainable and repeatable. One suggestion: we should create a simple training module (maybe a 30-minute video walkthrough) so new reps can get up to speed quickly. Right now, it's mostly self-serve, which works for experienced reps but might be harder for newer ones.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M55",
+            "speaker_id": 4133,
+            "reply_to": "M54",
+            "text": "Good point. Training is important for scaling. So here's my proposal for D8: Scale the playbook to all hospitality customers, with these refinements:\n\n1. Adjust night shift timing to emphasize early morning (6–7 AM) per 59593's feedback.\n2. Expand the offer matrix with 3–5 new product bundles (464310's suggestion).\n3. Add follow-up email templates to A2.\n4. Create a simple training video (569461's suggestion).\n5. Run a data audit on the full customer base before full rollout (473437's suggestion).\n\nTimeline: refinements by end of next week, training video by the week after, full rollout the following week. Does this feel right?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 59593,
+            "reply_to": "M55",
+            "text": "I'm good with that plan. I can help with the training video—I can walk through the night shift checklist and timing best practices. Also, I'll finalize A6 (Pilot Feedback and Iteration Notes) with all the specific changes we discussed.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 464310,
+            "reply_to": "M55",
+            "text": "I can help expand the offer matrix with new bundles. I'll work with product to identify the top 3–5 combinations that make sense. Should I add those to A2 or create a separate doc?",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 4133,
+            "reply_to": "M57",
+            "text": "Add them directly to A2 in the offer matrix section. Keep everything in one place for easy reference. I'll coordinate with product to make sure the bundles don't conflict with any ongoing promotions.",
+            "mentions": [
+              464310
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 473437,
+            "reply_to": "M55",
+            "text": "I'll handle the data audit on the full customer base. I'll check for completeness on key fields (contact info, property size, product adoption) and flag any accounts that need cleanup before we reach out. Should take about 3–4 days.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 4133,
+            "reply_to": "M59",
+            "text": "Perfect. So to lock in D8: we're scaling the playbook with the refinements I outlined. 59593 will help with training video, 464310 will expand the offer matrix, 473437 will run the data audit, and I'll coordinate everything and update A2. We'll have everything ready for full rollout in three weeks. Everyone good with that?",
+            "mentions": [
+              59593,
+              464310,
+              473437,
+              569461
+            ],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 4
+              }
+            ]
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 569461,
+            "reply_to": "M60",
+            "text": "Sounds good. I'll be ready to support the rollout and help with any questions from reps. Great work, team. This playbook is going to drive real revenue.",
+            "mentions": [
+              4133
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 2
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 59593,
+              "when": "end of week"
+            },
+            {
+              "task_id": "T10",
+              "owner_id": 4133,
+              "when": "end of week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "channel": {
+    "channel_id": "proj-quarter-close-streamline",
+    "threads": [
+      {
+        "thread_id": "TH1",
+        "thread_goal": "Align on scope, key pain points, and confirm the quarter-end close workflow map.",
+        "messages": [
+          {
+            "msg_id": "M1",
+            "speaker_id": 440036,
+            "reply_to": null,
+            "text": "Hi team, kicking off the Quarter-End Financial Close Process Streamlining project. The main goal is to standardize and speed up our close. To start on T1, let's map the current process. What are the biggest pain points or bottlenecks you face each quarter? All input is welcome.",
+            "mentions": [
+              5553,
+              75794,
+              98074,
+              326471
+            ],
+            "artifact_refs": [
+              "T1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M2",
+            "speaker_id": 5553,
+            "reply_to": "M1",
+            "text": "For me, it's the manual reconciliation of accruals. We spend a lot of time chasing down supporting documents from different departments right before the deadline.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "raised_hands",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M3",
+            "speaker_id": 75794,
+            "reply_to": "M1",
+            "text": "I agree, there are communication issues. Sometimes I'm not sure which version of a spreadsheet is the final one.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M4",
+            "speaker_id": 98074,
+            "reply_to": "M1",
+            "text": "The way we post journal entries is not very consistent. Different people use different descriptions which makes the review process harder.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M5",
+            "speaker_id": 440036,
+            "reply_to": "M2",
+            "text": "Thanks, all. These are great points. Document chasing, version control, and inconsistent JEs. Let's make sure the new workflow in A1 addresses these specifically.",
+            "mentions": [
+              5553,
+              75794,
+              98074
+            ],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M6",
+            "speaker_id": 326471,
+            "reply_to": "M5",
+            "text": "One more critical point: the inter-company transaction reconciliation. It's a major dependency for almost everything else, but it's not formally tracked as a distinct step. This causes a cascade of delays if it's not completed on day one. We should map it as a priority task.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M7",
+            "speaker_id": 440036,
+            "reply_to": "M6",
+            "text": "Excellent point, that's a huge one. I've added it to the list. So, for the initial map for T1, I've listed these activities: \n1. Inter-company reconciliations\n2. Accrual & provision calculations\n3. Fixed asset depreciation runs\n4. Bank & cash reconciliation\n5. Revenue recognition checks\n6. Final trial balance review\nDoes this list seem complete for now? We can refine it in A1.",
+            "mentions": [
+              326471
+            ],
+            "artifact_refs": [
+              "T1",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M8",
+            "speaker_id": 75794,
+            "reply_to": "M7",
+            "text": "What about checking invoices?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M9",
+            "speaker_id": 5553,
+            "reply_to": "M8",
+            "text": "I think that's part of the accrual and revenue checks, right?",
+            "mentions": [
+              75794
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M10",
+            "speaker_id": 440036,
+            "reply_to": "M9",
+            "text": "Exactly, let's keep it at this level for the main workflow. We can detail sub-tasks later. If everyone is okay with this list, we can lock it in.",
+            "mentions": [
+              5553
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D1"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M11",
+            "speaker_id": 440036,
+            "reply_to": "M10",
+            "text": "Great, that's a decision then. For mapping the 'as-is' process and for our later simulation, we need a reference period. I propose we use last quarter's close (Q2). It had enough complexity to be a good test case. Any objections?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M12",
+            "speaker_id": 326471,
+            "reply_to": "M11",
+            "text": "Q2 is a good choice. It included that large one-time asset disposal, which will be a solid test for our exception handling process.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M13",
+            "speaker_id": 98074,
+            "reply_to": "M11",
+            "text": "Q2 works for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M14",
+            "speaker_id": 440036,
+            "reply_to": "M13",
+            "text": "Perfect. We'll use Q2 as our reference. That's our second decision. I'll start drafting the workflow in A1 based on this and will share it for review by EOD tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1"
+            ],
+            "decision_refs": [
+              "D2"
+            ],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D1",
+            "D2"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T1",
+              "owner_id": 440036,
+              "when": "EOD tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH2",
+        "thread_goal": "Design and iterate on templates, checklists, and the close calendar.",
+        "messages": [
+          {
+            "msg_id": "M15",
+            "speaker_id": 98074,
+            "reply_to": null,
+            "text": "Hi all, as part of T2 I've created a first draft of the standard journal entry template. You can find it in the shared drive as A8. Please let me know your thoughts.",
+            "mentions": [
+              5553,
+              326471,
+              440036,
+              75794
+            ],
+            "artifact_refs": [
+              "T2",
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M16",
+            "speaker_id": 5553,
+            "reply_to": "M15",
+            "text": "Thanks for sharing. It looks clean. One question: for the 'Description' field, are there any specific guidelines on what to include?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M17",
+            "speaker_id": 75794,
+            "reply_to": "M15",
+            "text": "Where is the template stored?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M18",
+            "speaker_id": 440036,
+            "reply_to": "M17",
+            "text": "It's in the project folder, I've just added a direct link to the channel description. Let's try to keep all artifacts there.",
+            "mentions": [
+              75794
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M19",
+            "speaker_id": 326471,
+            "reply_to": "M15",
+            "text": "This is a good start. However, for audit purposes, we absolutely need a mandatory field to link to supporting documentation. Without it, we'll fall back into the same problem of chasing documents. It should be a requirement for posting.",
+            "mentions": [
+              98074
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "point_up",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M20",
+            "speaker_id": 98074,
+            "reply_to": "M19",
+            "text": "That's a good point. I missed that. I will add a 'Supporting Document Link' field and make it mandatory. I'll upload the new version now.",
+            "mentions": [
+              326471
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M21",
+            "speaker_id": 440036,
+            "reply_to": "M20",
+            "text": "Perfect. While that's being updated, I've created a draft of the Quarter-End Close Calendar (A2) based on our T4 task. I've put in tentative dates and cut-off times. Please take a look and let me know if there are any major conflicts.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2",
+              "T4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M22",
+            "speaker_id": 5553,
+            "reply_to": "M21",
+            "text": "The calendar looks tight but manageable. The cut-off for final entries on Day+2 seems achievable with the new templates.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M23",
+            "speaker_id": 98074,
+            "reply_to": "M20",
+            "text": "Ok, A8 is updated with the new field.",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M24",
+            "speaker_id": 440036,
+            "reply_to": "M23",
+            "text": "Thanks. The new version of A8 looks solid. Can we get a final agreement to approve this template for quarter-end use?",
+            "mentions": [],
+            "artifact_refs": [
+              "A8"
+            ],
+            "decision_refs": [
+              "D3"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M25",
+            "speaker_id": 326471,
+            "reply_to": "M24",
+            "text": "Approved. It meets the requirements.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M26",
+            "speaker_id": 5553,
+            "reply_to": "M24",
+            "text": "I approve as well.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M27",
+            "speaker_id": 440036,
+            "reply_to": "M26",
+            "text": "Great, D3 is confirmed. Now, back to the calendar in A2. Any other comments on the dates before we lock them in? This is for D4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A2"
+            ],
+            "decision_refs": [
+              "D4"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M28",
+            "speaker_id": 98074,
+            "reply_to": "M27",
+            "text": "The dates look fine to me. They align with our statutory filing deadlines.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M29",
+            "speaker_id": 440036,
+            "reply_to": "M28",
+            "text": "Excellent. With no objections, we'll consider the calendar dates in A2 locked. That's D4 done. Next up, T3: creating the reconciliation checklist. @5553, can you take the lead on drafting A3 based on the key accounts?",
+            "mentions": [
+              5553
+            ],
+            "artifact_refs": [
+              "A2",
+              "T3",
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M30",
+            "speaker_id": 5553,
+            "reply_to": "M29",
+            "text": "Yes, I can get a draft of A3 ready by tomorrow.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D3",
+            "D4"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T3",
+              "owner_id": 5553,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH3",
+        "thread_goal": "Define exception handling, compliance checks, and sign-off responsibilities.",
+        "messages": [
+          {
+            "msg_id": "M31",
+            "speaker_id": 98074,
+            "reply_to": null,
+            "text": "Hello team, I've drafted the exception handling guideline for late adjustments as part of T5. The document is A4 in the project folder. Please review.",
+            "mentions": [
+              5553,
+              326471,
+              440036,
+              75794
+            ],
+            "artifact_refs": [
+              "T5",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M32",
+            "speaker_id": 5553,
+            "reply_to": "M31",
+            "text": "Thanks. The draft says all late adjustments need approval from the Accounting Manager. That seems straightforward.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M33",
+            "speaker_id": 326471,
+            "reply_to": "M32",
+            "text": "A single approval path could create a bottleneck for minor corrections. We should introduce a materiality threshold. For example, adjustments under a certain amount could be approved by the team lead, while only significant ones go to the manager. This would be more efficient and is standard practice.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "thinking_face",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "msg_id": "M34",
+            "speaker_id": 440036,
+            "reply_to": "M33",
+            "text": "That's a great suggestion. It protects senior time for what matters. How about this for an approval flow: Level 1 (under $1,000) approved by Bookkeeping Team Lead; Level 2 (over $1,000) approved by Accounting Manager. Does that sound reasonable to everyone?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D5"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M35",
+            "speaker_id": 98074,
+            "reply_to": "M34",
+            "text": "Yes, that makes sense. I can add that to the guideline in A4.",
+            "mentions": [],
+            "artifact_refs": [
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M36",
+            "speaker_id": 5553,
+            "reply_to": "M34",
+            "text": "I agree with that flow.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M37",
+            "speaker_id": 440036,
+            "reply_to": "M36",
+            "text": "Okay, D5 is confirmed. @98074 please update A4. On a related note, T7 requires a compliance review of the new process. Have you had a chance to check our new workflow in A1 and the templates against tax and commercial law?",
+            "mentions": [
+              98074
+            ],
+            "artifact_refs": [
+              "A4",
+              "T7",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M38",
+            "speaker_id": 98074,
+            "reply_to": "M37",
+            "text": "Yes, I've reviewed them against our internal policies and they look fine.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M39",
+            "speaker_id": 326471,
+            "reply_to": "M38",
+            "text": "Just to be certain, did that review include the recent updates to IFRS 16 regarding lease accounting? Our new reconciliation checklist needs to reflect the new disclosure requirements. It's a common audit focus area.",
+            "mentions": [
+              98074
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M40",
+            "speaker_id": 98074,
+            "reply_to": "M39",
+            "text": "Ah, I didn't specifically check against the IFRS 16 updates. I will need to do another pass on that.",
+            "mentions": [
+              326471
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M41",
+            "speaker_id": 440036,
+            "reply_to": "M40",
+            "text": "Good catch @326471. @98074 please prioritize that review. For now, let's confirm that the process passes the compliance review, pending this final check. We need this to finalize the process documentation in T10.",
+            "mentions": [
+              326471,
+              98074
+            ],
+            "artifact_refs": [
+              "T10"
+            ],
+            "decision_refs": [
+              "D6"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M42",
+            "speaker_id": 98074,
+            "reply_to": "M41",
+            "text": "Understood. I will complete the IFRS 16 check by end of day.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D5",
+            "D6"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T7",
+              "owner_id": 98074,
+              "when": "EOD"
+            },
+            {
+              "task_id": "T5",
+              "owner_id": 98074,
+              "when": "today"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH4",
+        "thread_goal": "Plan and debrief the pilot simulation of the streamlined close process.",
+        "messages": [
+          {
+            "msg_id": "M43",
+            "speaker_id": 5553,
+            "reply_to": null,
+            "text": "Hi team, I think we're ready to schedule the pilot simulation for T8. How about we block time next Tuesday to run through the new process using the Q2 data?",
+            "mentions": [
+              440036,
+              326471,
+              98074,
+              75794
+            ],
+            "artifact_refs": [
+              "T8"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M44",
+            "speaker_id": 75794,
+            "reply_to": "M43",
+            "text": "Do we have to do everything from Q2? That seems like a lot.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M45",
+            "speaker_id": 440036,
+            "reply_to": "M44",
+            "text": "Good question. To keep it focused, I suggest we simulate a few key task paths instead of the entire close. My proposal: \n1. Post 3-4 complex journal entries using A8.\n2. Complete 2 key reconciliations from the new checklist A3 (e.g., Bank and Inter-company).\n3. Run one test case through the new exception handling process A4.\nThis covers the major changes. What does everyone think?",
+            "mentions": [
+              75794
+            ],
+            "artifact_refs": [
+              "A8",
+              "A3",
+              "A4"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M46",
+            "speaker_id": 326471,
+            "reply_to": "M45",
+            "text": "That's a pragmatic scope. It tests the highest-risk areas without requiring a full-scale dry run. I support this plan. Tuesday works for me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "heavy_check_mark",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M47",
+            "speaker_id": 5553,
+            "reply_to": "M45",
+            "text": "The scope and date work for me too.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M48",
+            "speaker_id": 440036,
+            "reply_to": "M47",
+            "text": "Great. Let's lock in next Tuesday for the pilot with that defined scope. I'll send out a calendar invite.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D7"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M49",
+            "speaker_id": 5553,
+            "reply_to": "M48",
+            "text": "Hi all, we've completed the pilot. Overall it went well, but we found a few issues. The wording on one of the checklist items in A3 was unclear, and we had some trouble with linking large files as supporting evidence in A8. I've started logging these in A6.",
+            "mentions": [],
+            "artifact_refs": [
+              "A3",
+              "A8",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M50",
+            "speaker_id": 75794,
+            "reply_to": "M49",
+            "text": "I also had trouble finding the right checklist.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M51",
+            "speaker_id": 440036,
+            "reply_to": "M50",
+            "text": "Thanks for the feedback, this is exactly why we do a pilot. I've updated the issue log A6. Here are the proposed follow-up actions:\n1. @5553 to rephrase the confusing item in A3.\n2. @98074 to investigate alternative ways to link large files in A8.\n3. I will add a direct link to A3 in the main process doc A1.\nAny other findings?",
+            "mentions": [
+              5553,
+              98074
+            ],
+            "artifact_refs": [
+              "A6",
+              "A3",
+              "A8",
+              "A1"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M52",
+            "speaker_id": 326471,
+            "reply_to": "M51",
+            "text": "The handoff from reconciliation completion to management review felt ambiguous. We should add an explicit notification step in the workflow in A1 and the calendar A2 to signal that all reconciliations are ready for review.",
+            "mentions": [],
+            "artifact_refs": [
+              "A1",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "bulb",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M53",
+            "speaker_id": 440036,
+            "reply_to": "M52",
+            "text": "Excellent point. That closes a potential gap. I'll add that as a fourth action item and take it myself. So, we agree on these four improvements based on the pilot results. This will make the process much smoother.",
+            "mentions": [
+              326471
+            ],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D8"
+            ],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 3
+              }
+            ]
+          },
+          {
+            "msg_id": "M54",
+            "speaker_id": 440036,
+            "reply_to": "M53",
+            "text": "I've assigned the owners and timelines in our tracker. Let's also start thinking about T11 and how we'll use A6 to track issues in the live close.",
+            "mentions": [],
+            "artifact_refs": [
+              "T11",
+              "A6"
+            ],
+            "decision_refs": [],
+            "reactions": []
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D7",
+            "D8"
+          ],
+          "next_steps": [
+            {
+              "task_id": "A3",
+              "owner_id": 5553,
+              "when": "tomorrow"
+            },
+            {
+              "task_id": "A8",
+              "owner_id": 98074,
+              "when": "this week"
+            },
+            {
+              "task_id": "A1",
+              "owner_id": 440036,
+              "when": "tomorrow"
+            }
+          ]
+        }
+      },
+      {
+        "thread_id": "TH5",
+        "thread_goal": "Finalize communication plan and rollout for the next quarter-end close.",
+        "messages": [
+          {
+            "msg_id": "M55",
+            "speaker_id": 440036,
+            "reply_to": null,
+            "text": "Hi team, we're approaching the finish line. Per T9, I've drafted a Quick Reference Guide (A5) and a communication plan for the rollout. They are in the project folder for your review. The guide links to all our final artifacts like A1, A2, and A7.",
+            "mentions": [
+              5553,
+              326471,
+              98074,
+              75794
+            ],
+            "artifact_refs": [
+              "T9",
+              "A5",
+              "A1",
+              "A2",
+              "A7"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "sparkles",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M56",
+            "speaker_id": 5553,
+            "reply_to": "M55",
+            "text": "This looks fantastic. It's very clear and easy to follow. The links all work correctly.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M57",
+            "speaker_id": 75794,
+            "reply_to": "M55",
+            "text": "It seems a bit long.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M58",
+            "speaker_id": 440036,
+            "reply_to": "M57",
+            "text": "Thanks for the feedback. It is comprehensive, but you're right, a summary would help. I'll add a 'Top 5 Changes' section at the beginning for a quick overview.",
+            "mentions": [
+              75794
+            ],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M59",
+            "speaker_id": 98074,
+            "reply_to": "M55",
+            "text": "How are we planning to share this with the team?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M60",
+            "speaker_id": 440036,
+            "reply_to": "M59",
+            "text": "My proposal is to send an email to the full finance team next Monday with the guide A5 attached, and I'll also pin it here in the channel. We can also hold a short, optional 15-minute Q&A session on Tuesday for anyone who wants a walkthrough. Does this distribution plan work?",
+            "mentions": [],
+            "artifact_refs": [
+              "A5"
+            ],
+            "decision_refs": [
+              "D9"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M61",
+            "speaker_id": 326471,
+            "reply_to": "M60",
+            "text": "The multi-channel approach is good. It ensures everyone sees it. I approve of the plan.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "+1",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M62",
+            "speaker_id": 5553,
+            "reply_to": "M60",
+            "text": "Sounds good to me.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M63",
+            "speaker_id": 440036,
+            "reply_to": "M62",
+            "text": "Excellent, D9 is confirmed. I'll finalize the guide with the summary section. That brings us to the final and most important question: Are we all in agreement to officially adopt this new process, with all the supporting artifacts, starting with the next quarter-end close?",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [
+              "D10"
+            ],
+            "reactions": []
+          },
+          {
+            "msg_id": "M64",
+            "speaker_id": 326471,
+            "reply_to": "M63",
+            "text": "The process is significantly more robust and clear now. The pilot helped iron out the critical issues. I fully support the rollout.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "rocket",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "msg_id": "M65",
+            "speaker_id": 98074,
+            "reply_to": "M63",
+            "text": "Yes, I agree. Let's move forward with it.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M66",
+            "speaker_id": 5553,
+            "reply_to": "M63",
+            "text": "I'm on board. Looking forward to a smoother close.",
+            "mentions": [],
+            "artifact_refs": [],
+            "decision_refs": [],
+            "reactions": []
+          },
+          {
+            "msg_id": "M67",
+            "speaker_id": 440036,
+            "reply_to": "M66",
+            "text": "It's unanimous! D10 is confirmed. The new process is officially a go for next quarter. I'll also start working on T12 to align our new A2 calendar with the annual budget timelines. Thank you all for your hard work and valuable contributions to this project!",
+            "mentions": [
+              5553,
+              326471,
+              98074,
+              75794
+            ],
+            "artifact_refs": [
+              "T12",
+              "A2"
+            ],
+            "decision_refs": [],
+            "reactions": [
+              {
+                "emoji": "tada",
+                "count": 3
+              }
+            ]
+          }
+        ],
+        "thread_outcome": {
+          "decisions_made": [
+            "D9",
+            "D10"
+          ],
+          "next_steps": [
+            {
+              "task_id": "T9",
+              "owner_id": 440036,
+              "when": "next Monday"
+            },
+            {
+              "task_id": "T12",
+              "owner_id": 440036,
+              "when": "this week"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

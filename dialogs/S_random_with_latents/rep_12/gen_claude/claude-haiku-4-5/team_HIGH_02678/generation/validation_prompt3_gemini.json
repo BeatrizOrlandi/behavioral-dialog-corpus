@@ -1,0 +1,60 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH1 has 14 messages, which is below the minimum of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH2 has 13 messages, which is below the minimum of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 has 11 messages, which is below the minimum of 15."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH1 is missing a reference to artifact T2 in the messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH1 is missing a reference to artifact T6 in the messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH2 is missing a reference to artifact A1 in the messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Thread TH3 is missing a reference to artifact T7 in the messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INCONSISTENCY",
+      "detail": "In thread TH5, the blueprint's mandatory decision is 'D1' but the goal is a 'go/no-go' decision. The conversation correctly discusses the go/no-go, but the thread_outcome incorrectly lists 'D1', which is about customer segments from TH1."
+    },
+    {
+      "severity": "HIGH",
+      "code": "DECISION_MISSING",
+      "detail": "In thread TH5, the actual go/no-go decision is discussed but is never formally referenced in any message's decision_refs list."
+    },
+    {
+      "severity": "HIGH",
+      "code": "INVALID_REF",
+      "detail": "Message M47 in thread TH4 references decision D3, which is not part of that thread's blueprint plan."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 1,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}

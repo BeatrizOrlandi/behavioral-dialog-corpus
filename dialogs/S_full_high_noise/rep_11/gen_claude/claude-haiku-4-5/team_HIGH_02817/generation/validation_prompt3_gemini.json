@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "Thread TH3 contains 14 messages, which is below the expected minimum of 16 messages per thread. Additionally, Thread TH2 contains 16 messages, which falls below its blueprint target range of 20-30."
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "Multiple threads fail to include mandatory artifact references in their messages: TH1 is missing A5; TH2 is missing T2, T3, and T12; TH3 is missing T4 and T11; TH4 is missing T5 and T7; TH5 is missing T8, T9, and T10."
+    },
+    {
+      "severity": "MID",
+      "code": "VOICE_SIMILARITY",
+      "detail": "Participants exhibit repetitive and robotic confirmation patterns, particularly at the end of TH5 (messages M89 to M92), where everyone replies with almost identical phrasing, lacking distinct voices."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 3,
+    "realism_1_5": 4,
+    "voice_diversity_1_5": 3
+  }
+}

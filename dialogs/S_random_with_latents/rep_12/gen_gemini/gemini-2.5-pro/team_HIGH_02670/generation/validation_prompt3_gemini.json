@@ -1,0 +1,25 @@
+{
+  "is_valid": true,
+  "issues": [
+    {
+      "severity": "HIGH",
+      "code": "COUNT",
+      "detail": "All 5 threads are below the minimum message count of 16. Thread TH1 has 11, TH2 has 10, TH3 has 9, TH4 has 9, and TH5 has 11 messages."
+    },
+    {
+      "severity": "HIGH",
+      "code": "LEAK",
+      "detail": "Message M7 contains the forbidden term 'score': '...A qualitative team satisfaction score (1-5 scale).'"
+    },
+    {
+      "severity": "HIGH",
+      "code": "ARTIFACT_MISSING",
+      "detail": "In thread TH2, the mandatory artifact 'T2' from the blueprint is not referenced in any message's artifact_refs list."
+    }
+  ],
+  "rubrics": {
+    "coherence_1_5": 3,
+    "realism_1_5": 5,
+    "voice_diversity_1_5": 5
+  }
+}
